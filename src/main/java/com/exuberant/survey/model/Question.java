@@ -3,7 +3,6 @@ package com.exuberant.survey.model;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.stream.Collectors;
 
 /**
  * Created by rakesh on 22-Sep-2017.
@@ -11,11 +10,12 @@ import java.util.stream.Collectors;
 public class Question {
     private String fileName;
     private String number;
-    private String question = "";
+    private StringBuilder question = new StringBuilder();
     private Options options = new Options();
     private String errorMessage;
     private Exception exception;
     private String answer;
+    private String submittedAnswer = new String();
     private Collection<Object> waste = new ArrayList<>();
 
     public Options getOptions() {
@@ -32,7 +32,11 @@ public class Question {
     }
 
     public boolean isCorrect(String... answers) {
-        return options.giveCorrectAnswers().stream().map(answer -> answer.getTag()).collect(Collectors.toList()).containsAll(Arrays.asList(answers));
+        return options.isCorrect(answers);
+    }
+
+    public boolean isAnsweredCorrectly() {
+        return options.isCorrect(submittedAnswer.split(","));
     }
 
     public void addOption(Option option) {
@@ -57,8 +61,12 @@ public class Question {
         options.addAnswer(Arrays.asList(answers));
     }
 
+    public String getAnswer() {
+        return answer;
+    }
+
     public void appendQuestion(String question) {
-        this.question += (question + "\n");
+        this.question.append(question).append("\n");
     }
 
     public String getErrorMessage() {
@@ -84,14 +92,18 @@ public class Question {
         this.answer = answer;
     }
 
+    public void setSubmittedAnswer(String submittedAnswer) {
+        this.submittedAnswer = submittedAnswer != null ? submittedAnswer.toUpperCase() : "";
+    }
+
     public void printWaste() {
-        if(waste.size()>0){
+        if (waste.size() > 0) {
             System.err.println("File Name: " + fileName + ", " + number);
             for (Object o : waste) {
                 System.err.println(o);
             }
         }
-        if (exception != null){
+        if (exception != null) {
             System.err.println("File Name: " + fileName + ", " + number);
             System.err.println("Exception: " + exception.getMessage());
         }
@@ -108,10 +120,18 @@ public class Question {
         return number != null ? number.equals(question.number) : question.number == null;
     }
 
+    public boolean hasAnsweredCorrectly() {
+        return options.isCorrect(submittedAnswer.split(","));
+    }
+
     @Override
     public int hashCode() {
         int result = fileName != null ? fileName.hashCode() : 0;
         result = 31 * result + (number != null ? number.hashCode() : 0);
         return result;
+    }
+
+    public String getSubmittedAnswer() {
+        return submittedAnswer;
     }
 }

@@ -1,0 +1,312 @@
+Question: 1
+The SAS data set SASUSER.HOUSES contains a variable PRICE which has been
+assigned a permanent label of “Asking Price”. Which SAS program temporarily
+replaces the label “Asking Price” with the label “Sale Price” in the output?
+A. proc print data = sasuser.houses; label price = “Sale Price”; run;
+B. proc print data = sasuser.houses label; label price “Sale Price”; run;
+C. proc print data = sasuser.houses label; label price = “Sale Price”; run;
+D. proc print data = sasuser.houses; price = “Sale Price”; run;
+Answer: C
+Question: 2
+The following GAS program is submitted:
+data work.empsalary;
+set work.people (in = inemp)
+work.money (in = insal);
+if insal and inemp;
+run;
+The SAS data set WORKPEOPLE has 5 observations, and the data set WORKMONEY
+has 7 observations. How many observations will the data set WORK.EMPSALARY
+contain?
+A. 0
+B. 5
+C. 7
+D. 12
+Answer: A
+Question: 3
+The following SAS program is submitted:
+data work.accounting;
+set work.dept1 work.dept2;
+jobcode = ‘FA1’; length jobcode $ 8; run;
+A character variable named JOBCODE is contained in both the WORK.DEPT1 and
+WORK.DEPT2 SAS data sets. The variable JOBCODE has a length of 5 in the
+WORK.DEPT1 data set and a length of 7 in the WORK.DEPT2 data set. What is the
+length of the variable JOBCODE in the output data set?
+A. 3
+B. 5
+A00-211
+2 http://www.certmagic.com
+C. 7
+D. 8
+Answer: B
+Question: 4
+Given the SAS data set SASDATA.TWO:
+SASDATA.TWO
+XY
+----
+52
+31
+56
+The following SAS program is submitted:
+data sasuser.one two sasdata.three;
+set sasdata two;
+if x = 5 then output sasuser.one;
+else output sasdata two;
+run;
+What is the result?
+A. data set SASUSER.ONE has 5 observations data set SASUSER.TWO has 5
+observations data set WORK.OTHER has 3 observations
+B. data set SASUSER.ONE has 2 observations data set SASUSER.TWO has 2
+observations data set WORK.OTHER has 1 observations
+C. data set SASUSER.ONE has 2 observations data set SASUSER.TWO has 2
+observations data set WORK.OTHER has 5 observations
+D. No data sets are output.
+The DATA step fails execution due to syntax errors.
+Answer: A
+Question: 5
+The following SAS program is submitted:
+footnote 1 ‘Sales Report for Last Month’; footnote2 ‘Selected Products Only’; footnote3
+‘All Regions’;
+footnote4 ‘All Figures in Thousands of Dollars’;
+proc print data = sasuser.shoes;
+footnote2 ‘All Products’;
+run;
+Which footnote(s) is/are displayed in the report?
+A. All Products
+A00-211
+3 http://www.certmagic.com
+B. Sales Report for Last Month All Products
+C. All Products All Regions All Figures in Thousands of Dollars
+D. Sales Report for Last Month All Products All Regions All Figures in Thousands of
+Dollars
+Answer: B
+Question: 6
+Given the raw data record DEPT:
+----|----10---|----20---|----30
+Printing 750
+The following SAS program is submitted:
+data bonus;
+infile ‘dept’;
+inputdept$ 1-11 number 13- 15;
+<insert statement here>
+run;
+Which SAS statement completes the program and results in a value of ‘Printing750’ for
+the DEPARTMENT variable?
+A. department = dept II number;
+B. department = left(dept) II number;
+C. department = trim(dept) number;
+D. department = trim(dept) put(number,3.);
+Answer: D
+Question: 7
+The following SAS program is submitted:
+data one;
+addressl = ‘214 London Way’;
+run;
+data one;
+set one;
+address = tranwrd(address1, ‘Way’, ‘Drive’); run;
+What are the length and value of the variable ADDRESS?
+A. Length is 14; value is ‘214 London Dri’.
+B. Length is 14; value is ‘214 London Way’.
+C. Length is 16; value is ‘214 London Drive’.
+D. Length is 200; value is ‘214 London Drive’.
+A00-211
+4 http://www.certmagic.com
+Answer: D
+Question: 8
+The following SAS program is submitted:
+data work.sets;
+do until (prod gt 6);
+prod + 1;
+end;
+run;
+What is the value of the variable PROD in the output data set?
+A. 6
+B. 7
+C. 8
+D. (missing numeric)
+Answer: B
+Question: 9
+The SAS data sets WORK.EMPLOYEE and WORK.SALARY are shown below:
+WORK.EMPLOYEE WORK.SALARY
+fname age name salary
+Bruce 30 Bruce 25000
+Dan 40 Bruce 35000
+Dan 25000
+The following SAS program is submitted:
+data work.empdata;
+by fname; totsal + salary; run;
+Which one of the following statements completes the merge of the two data sets by the
+FNAME variable?
+A. merge work.employee work.salary (fname = name);
+B. merge work.employee work.salary (name = fname);
+C. merge work.employee
+work.salary (rename = (fname = name));
+D. merge work.employee work.salary (rename = (name = fname));
+Answer: D
+Question: 10
+Which program displays a listing of all data sets in the SASUSER library?
+A00-211
+5 http://www.certmagic.com
+A. proc contents lib = sasuser.all; run;
+B. proc contents data = sasuser.all; run;
+C. proc contents lib = sasuser._alI_; run;
+D. proc contents data = sasuser._all_; run;
+Answer: D
+Question: 11
+The following SAS program is submitted:
+proc sort data = work.employee;
+by descending fname;
+proc sort data = work.salary;
+by descending fname; data work.empdata; merge work.employee work.salary;
+by fname;
+run;
+Why does the program rail to execute?
+A. The SORT procedures contain invalid syntax.
+B. The merged data sets are not permanent SAS data sets.
+C. The RUN statement was omitted alter each or the SORT procedures.
+D. The data sets were not merged in the order by which they were sorted.
+Answer: D
+Question: 12
+The following SAS program is submittad:
+data work.sales; do year = 1 to 5; do month=1 to 12; x+1;
+output end; end; run;
+How many observations are written the WORK SALES data set?
+A. 0
+B. 1
+C. 5
+D. 60
+Answer: D
+Question: 13
+Given the following raw data record:
+----I----10---I----20---I----30
+A00-211
+6 http://www.certmagic.com
+son Travis,
+The following output is desired:
+Obs relation firstname
+1 son Travis
+Which SAS program correctly reads in the raw data?
+A. data family ( dIm = ‘,’); infile ‘tile specification’; input relation $ firstname $; run;
+B. options dIm = ‘,’; data family; infile ‘file specification’; input relation $ firstname $;
+run;
+C. data family; infile ‘file specification’ dIm = ‘,’; input relation $ firstname $; run;
+D. data family; infile ‘file specification’; input relation $ firstname $ / dim = ‘,’; run;
+Answer: C
+Question: 14
+Given the SAS data set AGES:
+AGES
+AGE
+---------
+The variable AGE contains character values. The following SAS program is submitted:
+data subset;
+set ages;
+where age> 12;
+run;
+How many observations are written out to the data set SUBSET?
+A. 0
+B. 1
+C. 2
+D. 3
+Answer: A
+Question: 15
+Given the SAS data set PRICES:
+PRICES
+prodid price K12S5.10producttype NETWORKsales
+15returns
+2
+B132S 2.34HARDWARE30010
+R18KY21.29SOFTWARE255
+3KL8BY 6.37HARDWARE12515
+DY65DW 5.60HARDWARE455
+A00-211
+7 http://www.certmagic.com
+DGTY23 4.55HARDWARE672
+The following SAS program is submitted:
+data hware inter soft;
+set prices (keep = producttype price);
+if price le 5.00;
+if producttype = ‘HARDWARE’ then output HWARE; else if producttype =
+‘NETWORK’ then output INTER; else if producttype = ‘SOFTWARE’ then output
+SOFT; run;
+How many observations does the HWARE data set contain?
+A. 0
+B. 2
+C. 3
+D. 4
+Answer: B
+Question: 16
+The following SAS program is submitted:
+data work.accounting; set work.department; length jobcode $ 12; jobcode=’FAl’;
+run;
+The WORK.DEPARTMENT data set contains a character variable named JOBCODE
+with a length of 5. What is the result?
+A. The length of the variable JOBCODE is 3.
+B. The length of the variable JOBCODE is 5.
+C. The length of the variable JOSBODE is 12.
+D. The program fails to execute due to errors.
+Answer: B
+Question: 17
+Which ODS statement option terminates output being written to an HTML rile?
+A. END
+B. QUIT
+C. STOP
+D. CLOSE
+Answer: D
+A00-211
+8 http://www.certmagic.com
+Question: 18
+The SAS data set PETS is sorted by the variables TYPE and BREED.
+The following SAS program is submitted:
+proc print data = pets;
+var type breed; sum number; run;
+What is the result?
+A. The SUM statement produces only a grand total of NUMBER.
+B. The SUM statement produces only subtotals of NUMBER for each value of TYPE.
+C. The SUM statement produces both a grand total of NUMBER and subtotals of
+NUMBER for each value of TYPE.
+D. Nothing is produced by the SUM statement; the program fails to execute.
+Answer: A
+Question: 19
+The following SAS program is submitted:
+data work.passengers;
+if OrigPassengers = then OrigPassengers = 100; TransPassengers = 100; OrigPassengers
+=
+TotalPassengers = sum (OrigPassengers, TransPassengers) +0;
+run;
+What is the value of the TOTALPASSENGERS variable in the output data set?
+A. 0
+B. 100
+C. 200
+D. (missing numeric value)
+Answer: B
+Question: 20
+Given the SAS data set PRICES:
+PRICES
+Prodid priceproducttypesalesreturns
+K1255.10NETWORK152
+B132S 2.34HARDWARE30010
+R18KY2 1.29SOFTWARE255
+3KL8BY 6.37HARDWARE12515
+DY65DW 5.60HARDWARE455
+DGTY23 4.55HARDWARE672
+The following SAS program is submitted:
+A00-211
+9 http://www.certmagic.com
+data hware inter cheap;
+set prices(keep = productype price);
+if producttype = ‘HARDWARE’ then output hware; else if producttype = ‘NETWORK’
+then output
+inter; if price le 5.00;
+run;
+if producttype = ‘HARDWARE’ then output hware; else if producttype = ‘NETWORK’
+then output
+inter; if price le 5.00;
+run;
+How many observations does the HWARE data set contain?
+A. 0
+B. 2
+C. 3
+D. 4
+Answer: D
+A00-211
+10 http://www.certmagic.com

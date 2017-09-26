@@ -1,0 +1,783 @@
+SAS Institute A00-211
+SAS Base Programming for SAS 9
+Question: 1
+After a SAS program is submitted,thefollowing is written to the SAS log:
+What issue generated the error in the log?
+A. The syntax of the drop statement does not use an equals sign.
+B. There should have been commas between the variable names.
+C. The list of variables should have been enclosed in parentheses.
+D. A drop statement and a keep= data set option cannotboth be used at the same time.
+Answer: A
+Explanation:
+Question: 2
+Given the SAS data set WORK.PRODUCTS:
+2
+How many variables does the WORK.REVENUE data set contain?
+A. 2
+B. 3
+C. 4
+D. 6
+Answer: A
+Explanation:
+Question: 3
+Given the SAS data set WORK.PRODUCTS:
+How many observations does the WORK.OUTDOOR data set contain?
+A. 1
+B. 2
+C. 3
+D. 6
+Answer: B
+Explanation:
+Question: 4
+3
+The following SAS program is submitted:
+What will the data set WORK.TEST contain?
+4
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: A
+Explanation:
+Question: 5
+Which statement is true concerning the SAS automatic variable _ERROR_?
+A. It cannot be used in an if/then condition.
+B. It cannot be used in an assignment statement.
+C. It can be put into a keep statement or keep= option.
+D. It is automatically dropped.
+Answer: D
+Explanation:
+5
+Question: 6
+The following SAS program is submitted:
+What is produced as output?
+A. A file named test.csv that can only be opened in Excel.
+B. A text file named test.csv that can be opened in Excel or in any text editor.
+C. A text file named test.csv that can only be opened in a text editor.
+D. A file named test.csv that can only be opened by SAS.
+Answer: B
+Explanation:
+Question: 7
+The following SAS program is submitted:
+What is the value of the variable X?
+A. the numeric value 0
+B. the character value "01011960"
+C. a missing value due to syntax errors
+D. the step will not compile because ofthe character argument in the mdy() function.
+Answer: A
+Explanation:
+6
+Question: 8
+The following SAS program is submitted:
+If the value for the variable Jobcode is: PILOT2, what is the value of the variable Description?
+A. ' ' (missing character value)
+B. Unknown
+C. Senior Pilot
+D. SENIOR PILOT
+Answer: B
+Explanation:
+Question: 9
+The following SAS program is submitted:
+How will the Exam variable value be displayed in the FREQ procedure output?
+A. Fail
+B. Pass
+C. 50.5
+D. (missing numeric value)
+7
+Answer: C
+Explanation:
+Question: 10
+Given the raw data record in the file phone.txt:
+Which SAS statement completes the program and results in a value of "James Stevens" for the
+variable FullName?
+A. FullName=CATX(' ',EmpFName,EmpLName);
+B. FullName=CAT(' ',EmpFName,EmpLName);
+C. FullName=EmpFName!!EmpLName;
+D. FullName=EmpFName + EmpLName;
+Answer: A
+Explanation:
+Question: 11
+The following code was modified to generate the results further below:
+8
+The following results were generated to display only specific statistics and limit the decimals with
+the modification:
+Which statement below was modified or added to generate the results above:
+A. var Height / nobs min max mean maxdec=1;
+B. proc means data=SASHELP.CLASS maxdec=1 ;
+C. proc means data=SASHELP.CLASS min max mean maxdec=1;
+D. output nobs min max mean maxdec=1;
+Answer: C
+Explanation:
+Question: 12
+Given the contents of the raw data file 'EMPLOYEE.TXT'
+Which SAS informat correctly completes the program?
+9
+A. date9
+B. mmddyy10
+C. ddmmyy10
+D. mondayyr10
+Answer: B
+Explanation:
+Question: 13
+Which is a valid LIBNAME statement?
+A. libname "_SAS_data_library_location_";
+B. libname mysasdata "_SAS_data_library_location_";
+C. libname sasdata "_SAS_data_library_location_";
+D. libname work "_SAS_data_library_location_";
+Answer: C
+Explanation:
+Question: 14
+The following SAS program is submitted:
+The program fails execution due to syntax errors. What is the cause of the syntax error?
+A. An array cannot be referenced on a keep= data set option.
+B. The keep= data set option should be (keep=MonthSales*).
+C. An array can only be referenced in a KEEP statement
+not within a keep= data set option.
+D. The keep= data set option should be (keep=MonthSales).
+10
+Answer: A
+Explanation:
+Question: 15
+Given the SAS data set WORK.P2000:
+Andthe SAS data set WORK.P2008:
+The following output is desired:
+Which SAS program correctly combines the data?
+11
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: C
+Explanation:
+Question: 16
+The following SAS program is submitted:
+12
+What is the value of the second variable in the data set WORK.AUTHORS?
+A. Hemingway
+B. Hemingwa
+C. ' ' (a missing value)
+D. The program contains errors. No variables are created.
+Answer: B
+Explanation:
+Question: 17
+After a SAS program is submitted, the following is written to the SAS log:
+What changes should be made to the KEEP statement to correct the errors in the LOG?
+A. keep=(Product Sales);
+B. keep Product, Sales;
+C. keep=Product, Sales;
+D. keep Product Sales;
+Answer: D
+Explanation:
+Question: 18
+13
+The following SAS program is submitted:
+What value will SAS assign to Pos?
+A. 0
+B. 1
+C. 2
+D. 12
+Answer: D
+Explanation:
+Question: 19
+!!!This question is under review!!!
+The following SAS program is submitted:
+proc means data=SASUSER.SHOES;
+    where Product in ('Sandal', 'Slipper', 'Boot');
+run;
+Which ODS statements inserted, respectively, in the two location indicated above creates a report
+stored in an html file?
+A. ods html open='sales.html';
+   ods html close;
+B. ods file open='sales.html' type=html;
+   ods file close;
+C. ods file open='sales.html' type=html;
+   ods file close;
+D. ods file html='sales.html';
+   ods html close;
+Answer: C
+Explanation:
+Question: 20
+The following SAS program is submitted:
+What is the initial value of the variable Total in the listed program?
+A. 0
+B. Missing
+C. The value of the first observations Wagerate
+D. Cannot be determined from the information given
+15
+Answer: B
+Explanation:
+Question: 21
+The following SAS program is submitted:
+Which statement is true about the output data set?
+A. The type of the variable CharEmpid is numeric.
+B. The type of the variable CharEmpid is unknown.
+C. The type of the variable CharEmpid is character.
+D. The program fails to execute due to errors.
+Answer: D
+Explanation:
+Question: 22
+Given the SAS data set WORK.EMP_NAME:
+Given the SAS data set WORK.EMP_DEPT:
+16
+The following program is submitted:
+How many observations are in data set WORK.ALL after submitting the program?
+A. 1
+B. 2
+C. 3
+D. 5
+Answer: B
+Explanation:
+Question: 23
+Which statement specifies that records 1 through 10 are to be read from the raw data file
+customer.txt?
+A. infile 'customer.txt' obs=1-10;
+B. input 'customer.txt' end=10;
+C. infile 'customer.txt' obs=10;
+D. input 'customer.txt' stop=10;
+Answer: C
+Explanation:
+Question: 24
+The following output is created by the FREQUENCY procedure:
+17
+Which TABLES statement was used to completed the following program that produced the output?
+proc freq data=sales;
+run;
+A. tables region product;
+B. tables region,product;
+C. tables region by product;
+D. tables region*product;
+Answer: D
+Explanation:
+Question: 25
+Which of the following choices is an unacceptable ODS destination for producing output that can
+be viewed in Microsoft Excel?
+A. MSOFFICE2K
+B. EXCELXP
+C. CSVALL
+D. WINXP
+18
+Answer: D
+Explanation:
+Question: 26
+The following SAS program is submitted:
+What is the value of the variable Prod in the output data set?
+A. . (missing)
+B. 6
+C. 7
+D. Undetermined, infinite loop.
+Answer: C
+Explanation:
+Question: 27
+Given the SAS data set WORK.TEMPS:
+The following program is submitted:
+19
+Which output is correct?
+20
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: C
+Explanation:
+21
+Question: 28
+The following SAS program is submitted:
+What is the value of the variable Prod in the output data set?
+A. 6
+B. 7
+C. 8
+D. . (missing numeric)
+Answer: B
+Explanation:
+Question: 29
+The following SAS program is submitted:
+What is the result?
+A. The value of the variable Discount in the output data set is 2000.No messages are written to
+the SAS log.
+B. The value of the variable Discount in the output data set is 2000.A note that conversion has
+taken place is written to the SAS log.
+C. The value of the variable Discount in the output data set is missing.A note in the SAS log refers
+to invalid numeric data.
+D. The variable Discount in the output data set is set to zero.No messages are written to the SAS
+22
+log.
+Answer: C
+Explanation:
+Question: 30
+Given the SAS data set WORK.ONE:
+What value will SAS assign to Total?
+A. 3
+B. 1.6
+C. 4.8
+D. The program fails to execute due to errors.
+Answer: B
+Explanation:
+Question: 31
+The following program is submitted:
+23
+Why does the program fail?
+A. The PAGENO option is invalid in the OPTIONS statement.
+B. The RUN statement is missing after the FORMAT procedure.
+C. The format name contains a period in the VALUE statement.
+D. The LABEL option is missing from the PROC PRINT statement.
+Answer: C
+Explanation:
+Question: 32
+Consider the following data step:
+The variable Count is created using a sum statement. Which statement regarding this variable is
+true?
+A. It is assigned a value 0 after the data step begins execution.
+B. It is assigned a value of missing after the data step begins execution.
+C. It is assigned a value 0 at compile time.
+D. It is assigned a value of missing at compile time.
+24
+Answer: C
+Explanation:
+Question: 33
+The following output is created by the FREQUENCY procedure:
+Which TABLES option(s) would be used to eliminate the row and column counts and just see the
+frequencies and percents?
+A. norowcount nocolcount
+B. freq percent
+C. norow nocol
+D. nocounts
+Answer: C
+Explanation:
+Question: 34
+The following SAS program is submitted:
+25
+The SAS data set WORK.SALARY is currently ordered by Gender within Department. Which
+inserted code will accumulate subtotals for each Gender within Department?
+A. Gender
+B. Department
+C. Gender Department
+D. Department Gender
+Answer: A
+Explanation:
+Question: 35
+The following SAS program is submitted:
+What new variables are created?
+A. Difcount1, Difcount2 and Difcount3
+B. Diff1, Diff2 and Diff3
+C. Janpt, Febpt, and Marpt
+D. Patients1, Patients2 and Patients3
+Answer: A
+Explanation:
+Question: 36
+26
+The SAS data set Fed.Banks contains a variable Open_Date which has been assigned a
+permanent label of "Open Date". Which SAS program temporarily replaces the label "Open Date"
+with the label "Starting Date" in the output?
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: B
+Explanation:
+Question: 37
+Which statement describes a characteristic of the SAS automatic variable _ERROR_?
+A. The _ERROR_ variable maintains a count of thenumber of data errors in a DATA step.
+B. The _ERROR_ variable is added to the program datavector and becomes part of the data set
+being created.
+C. The _ERROR_ variable can only be used in expressionsin the DATA step.
+D. The _ERROR_ variable contains the number of theobservation that caused the data error.
+27
+Answer: C
+Explanation:
+Question: 38
+Given the SAS data set WORK.ONE:
+The following SAS program is submitted:
+Which report is produced?
+28
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: B
+Explanation:
+Question: 39
+Which step displays a listing of all the data sets in the WORK library?
+29
+A. proc contents lib=WORK
+run;
+B. proc contents lib=WORK.all;
+run;
+C. proc contents data=WORK._all_;
+run;
+D. proc contents data=WORK _ALL_;
+run;
+Answer: C
+Explanation:
+Question: 40
+Consider the following data step:
+The computed variables City and State have their values assigned using two different methods, a
+RETAIN statement and an Assignment statement. Which statement regarding this program is
+true?
+A. The RETAIN statement is fine, but the valueof City will be truncated to 8 bytes as the
+LENGTHstatement has been omitted.
+B. Both the RETAIN and assignment statement arebeing used to initialize new variables and are
+equallyefficient. The method used is only a matter ofprogrammer preference.
+C. The assignment statement is fine, but thevalue of City will be truncated to 8 bytes as the
+LENGTHstatement has been omitted.
+D. City's value will be assigned one time, State'svalue 5 times.
+Answer: D
+Explanation:
+Question: 41
+The following SAS program is submitted:
+30
+How many observations are written to the WORK.SALES data set?
+A. 0
+B. 1
+C. 5
+D. 60
+Answer: B
+Explanation:
+Question: 42
+The following SAS program is submitted:
+data ONE TWO SASUSER.TWO
+    set SASUSER.ONE
+run;
+Assuming that SASUSER.ONE exists, how many temporary and permanent SAS data sets are
+created?
+A. 2 temporary and 1 permanent SAS data sets are created
+B. 3 temporary and 2 permanent SAS data sets are created
+C. 2 temporary and 2 permanent SAS data sets are created
+D. there is an error and no new data sets are created
+Answer: D
+Explanation:
+Question: 43
+The following program is submitted:
+31
+Which of the following is true concerning the submitted program?
+A. The descending option applies to the variable Code.
+B. The variable Code is sorted by ascending order.
+C. The PSORT data set is stored in the SASUSER library.
+D. The descending option applies to the Date and Cost variables.
+Answer: B
+Explanation:
+Question: 44
+The following SAS program is submitted:
+Which statement is true about the output data set?
+A. The label of the variable Jobcode is Job (only the first word).
+B. The label of the variable Jobcode is Job Desc (only the first 8 characters).
+C. The label of the variable Jobcode is Job Description.
+D. Labels can only be defined in PROC steps. The program fails to executedue to errors and the
+data set is not created.
+Answer: C
+Explanation:
+Question: 45
+Given the SAS data set WORK.ONE:
+32
+Andthe SAS data set WORK.TWO:
+The following program is submitted:
+What is the first observation in the SAS data set WORK.BOTH?
+33
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: A
+Explanation:
+Question: 46
+The following SAS program is submitted:
+How many raw data records are read during each iteration of the DATA step?
+A. 1
+B. 2
+C. 3
+D. 4
+Answer: B
+Explanation:
+Question: 47
+Given the SAS data set WORK.ONE:
+The following SAS program is submitted:
+34
+The data set WORK.TWO is created, where Day would be 1 for Sunday, 2 for Monday, 3 for
+Tuesday, ... :
+Which expression successfully completed the program and creates the variable DAY?
+A. day(BeginDate)
+B. weekday(BeginDate)
+C. dayofweek(BeginDate)
+D. getday(BeginDate,today())
+Answer: B
+Explanation:
+Question: 48
+The Excel workbook QTR1.XLS contains the followingthree worksheets:
+JAN
+FEB
+MAR.
+Which statement correctly assigns a library reference to the Excel workbook?
+A. libname qtrdata 'qtr1.xls';
+B. libname 'qtr1.xls' sheets=3;
+C. libname jan feb mar 'qtr1.xls';
+D. libname mydata 'qtr1.xls' WORK.sheets=(jan,feb,mar);
+35
+Answer: A
+Explanation:
+Question: 49
+The following SAS program is submitted:
+What variable X contains what value?
+A. the numeric value 0
+B. the character value "01Jan1960"
+C. the date value 01011960
+D. the code contains a syntax error and does not execute.
+Answer: D
+Explanation:
+Question: 50
+The following SAS program is submitted:
+What types of variables are DayOfMonth, MonthOfYear, and Year?
+A. DayOfMonth, Year, and MonthOfYear are character.
+B. DayOfMonth, Year, and MonthOfYear are numeric.
+C. DayOfMonth and Year are numeric. MonthOfYear is character.
+D. DayOfMonth, Year, and MonthOfYear are date values.
+36
+Answer: B
+Explanation:
+Question: 51
+Consider the data step:
+Which of the following assignment statements for variable group are functionally equivalent to the
+original statement used in the above data step?
+A. if Age not in(15,16) then Group=1; else Group=2;
+B. if (Age NE 16) or (Age NE 15) then Group=1; else Group=2;
+C. where Age not between 15 and 16 then Group=1; else Group=2;
+D. both A or C will work.
+Answer: A
+Explanation:
+Question: 52
+Given the following raw data records in TEXTFILE.TXT:
+The following output is desired:
+37
+Which SAS program correctly produces the desired output?
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: C
+Explanation:
+38
+Question: 53
+Given the following raw data records in DATAFILE.TXT:
+Which output is correct based on the submitted program?
+39
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: C
+Explanation:
+Question: 54
+Given the SAS data set WORK.ORDERS:
+The variable Order_id is numeric; Customer is character; and Ship_date is a numeric containing a
+SAS date value.
+A programmer would like to create a new variable called Note, that shows a character value with
+the Order_id and Ship_date shown with a date9. format. For the first observation, Note would look
+like the following: "Order 9341 shipped on 02FEB2009".
+Which of the following statement will correctly create the value and assign it to Note?
+A. note=catx(' ','Order',order_id,'shipped on',input(ship_date,date9.));
+B. note=catx(' ','Order',order_id,'shipped on',char(ship_date,date9.));
+C. note=catx(' ','Order',order_id,'shipped on',transwrd(ship_date,date9.));
+D. note=catx(' ','Order',order_id,'shipped on',put(ship_date,date9.));
+Answer: D
+Explanation:
+Question: 55
+Given the following data step:
+40
+After data step execution, what will data set WORK.GEO contain?
+41
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: A
+Explanation:
+Question: 56
+The SAS data set named WORK.SALARY contains 10 observations for each department, and is
+currently ordered by Department. The following SAS program is submitted:
+Which statement is true?
+A. The by statement in the DATA step causes a syntax error.
+B. The statement Payroll+(MonthlyWageRate*12); in the datastep causes a syntax error.
+C. The values of the variable Payroll represent the monthlytotal for each department in the
+WORK.SALARY data set.
+D. The values of the variable Payroll represent a monthlytotal for all values of WAGERATE in the
+WORK.SALARY data set.
+Answer: C
+Explanation:
+Question: 57
+Given the SAS data set SASDATA.TWO:
+42
+The following SAS program is submitted: data
+What is the result?
+A. data set SASUSER.ONE has 5 observations
+data set SASUSER.TWO has 5 observations
+data set WORK.OTHER has 3 observations
+B. data set SASUSER.ONE has 2 observations
+data set SASUSER.TWO has 2 observations
+data set WORK.OTHER has 1 observations
+C. data set SASUSER.ONE has 2 observations
+data set SASUSER.TWO has 2 observations
+data set WORK.OTHER has 5 observations
+D. No data sets are output.
+The DATA step fails execution due to syntax errors.
+Answer: A
+Explanation:
+Question: 58
+A user-defined format has been created using the FORMAT procedure. How is it stored?
+A. in a SAS catalog
+B. in a memory resident lookup table
+C. in a SAS data set in the WORK library
+D. in a SAS data set in a permanent SAS data library
+Answer: A
+Explanation:
+Question: 59
+43
+The following program is submitted:
+Which statement best describes the output from the submitted program?
+A. The output displays only a list of the SAS data setsthat are contained in the WORK library.
+B. The output displays only the contents of the SAS data setsthat are contained in the WORK
+library.
+C. The output displays only the variables in the SAS data setsthat are contained in the WORK
+library.
+D. The output displays a list of the SAS data sets that arecontained in the WORK library and
+displays their contents.
+Answer: D
+Explanation:
+Question: 60
+You're attempting to read a raw data file and you see the following messages displayed in the
+SAS Log:
+What does it mean?
+A. A compiler error, triggered by an invalid characterfor the variable Salary.
+B. An execution error, triggered by an invalid characterfor the variable Salary.
+C. The 1st of potentially many errors, this one occurringon the 4th observation.
+D. An error on the INPUT statement specification forreading the variable Salary.
+Answer: B
+Explanation:
+44
+Question: 61
+Given the following raw data records:
+The following output is desired:
+Which SAS program correctly reads in the raw data?
+45
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: D
+Explanation:
+Question: 62
+Given the contents of the raw data file TYPECOLOR.DAT:
+The following SAS program is submitted:
+46
+What are the values of the variables Type and Color?
+A. Type=daisy, Color=yellow
+B. Type=daisy, Color=w
+C. Type=daisy, Color=daisyyellow
+D. Type=daisy, Color=
+Answer: D
+Explanation:
+Question: 63
+The data set WORK.REALESTATE has the variable LocalFee with a format of 9. and a variable
+CountryFee with a format of 7.;
+The following SAS program is submitted:
+data WORK.FEE_STRUCTURE;
+    format LocalFee CountryFee percent7.2;
+    set WORK.REALESTATE;
+    LOCALFee=LocalFee/100;
+    CountryFee=CountryFee/100;
+run;
+What are the formats of the variables LOCALFEE and COUNTRYFEE in the output data set?
+A. LocalFee has format of 9. and CountryFee has a format of 7.
+B. LocalFee has format of 9. and CountryFee has a format of percent7.2
+C. Both LocalFee and CountryFee have a format of percent7.2
+D. The data step fails execution; there is no format for LocalFee.
+Answer: C
+Explanation:
+47
+Question: 64
+Given the data set WORK.EMPDATA:
+Which one of the following where statements would display observations with job titles containing
+the word 'Manager'?
+A. where substr(Job_Title,(length(Job_Title)-6))='Manager';
+B. where upcase(scan(Job_Title,-1,' '))='MANAGER';
+C. where Job_Title='% Manager ';
+D. where Job_Title like '%Manager%';
+Answer: D
+Explanation:
+Question: 65
+Given the following code:
+How many observations will be displayed?
+A. 11
+B. 15
+C. 10 or fewer
+D. 11 or fewer
+Answer: D
+48
+Explanation:
+Question: 66
+Which of the following programs correctly invokes the DATA Step Debugger?
+A. Option A
+B. Option B
+49
+C. Option C
+D. Option D
+Answer: C
+Explanation:
+Question: 67
+The SAS data set WORK.ONE contains a numeric variable named Num and a character variable
+named Char:
+The following SAS program is submitted:
+What is output?
+50
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+Answer: D
+Explanation:
+Question: 68
+Which step sorts the observations of a permanent SAS data set by two variables and stores the
+sorted observations in a temporary SAS data set?
+A. proc sort data=SASUSER.EMPLOYEES out=EMPSORT;
+by Lname, Fname;
+run;
+B. proc sort data=SASUSER.EMPLOYEES out=EMPSORT;
+by Lname Fname;
+run;
+C. proc sort data=SASUSER.EMPLOYEES out=TEMPORARY.EMPSORT;
+by Lname, Fname;
+run;
+D. proc sort data=SASUSER.EMPLOYEES out=TEMPORARY.EMPSORT;
+51
+by Lname Fname;
+run;
+Answer: B
+Explanation:
+Question: 69
+Consider the following data step:
+In filtering the values of the variable X in data set WORK.OLD, what new value would be assigned
+to X if its original value was a missing value?
+A. X would get a value of 1.
+B. X would get a value of 3.
+C. X would retain its original value of missing.
+D. This step does not run because of syntax errors.
+Answer: A
+Explanation:
+Question: 70
+The Excel workbook REGIONS.XLS contains the following four worksheets:
+EAST
+WEST
+NORTH
+SOUTH
+The following program is submitted:
+52
+libname MYXLS 'regions.xls';
+Which PROC PRINT step correctly displays the NORTH worksheet?
+A. proc print data=MYXLS.NORTH.XLS;
+run;
+B. proc print data=MYXLS.NORTH$;
+run;
+C. proc print data=MYXLS.'NORTH'e;
+run;
+D. proc print data=MYXLS.'NORTH$'n;
+run;
+Answer: D
+Explanation:
+53

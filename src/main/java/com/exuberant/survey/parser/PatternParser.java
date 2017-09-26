@@ -1,4 +1,4 @@
-package com.exuberant.survey.service;
+package com.exuberant.survey.parser;
 
 /**
  * Created by rakesh on 23-Sep-2017.
@@ -14,4 +14,6 @@ public interface PatternParser {
     String extractQuestionNumber(String line);
 
     String stripQuestionNumber(String line);
+
+    boolean ignoreLine(String line);
 }

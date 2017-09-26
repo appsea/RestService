@@ -1,0 +1,2502 @@
+Question: 1
+The SAS data set SASUSER.HOUSES contains a variable PRICE which has been assigned a
+permanent label of “Asking Price”. Which SAS program temporarily replaces the label “Asking
+Price” with the label “Sale Price” in the output?
+A. proc print data = sasuser.houses; label price = “Sale Price”; run;
+B. proc print data = sasuser.houses label; label price “Sale Price”; run;
+C. proc print data = sasuser.houses label; label price = “Sale Price”; run;
+D. proc print data = sasuser.houses; price = “Sale Price”; run;
+Answer: C
+Question: 2
+The following GAS program is submitted:
+data work.empsalary;
+set work.people (in = inemp)
+work.money (in = insal);
+if insal and inemp;
+run;
+The SAG data set WORKPEOPLE has 5 observations, and the data set WORKMONEY has 7
+observations. How many observations will the data set WORK.EMPSALARY contain?
+A. 0
+B. 5
+C. 7
+D. 12
+Answer: A
+Question: 3
+The following SAS program is submitted:
+data work.accounting;
+set work.dept1 work.dept2;
+jobcode = ‘FA1’;
+length jobcode $ 8;
+run;
+A character variable named JOBCODE is contained in both the WORK.DEPT1 and
+WORK.DEPT2 SAS data sets. The variable JOBCODE has a length of 5 in the WORK.DEPT1
+data set and a length of 7 in the WORK.DEPT2 data set. What is the length of the variable
+JOBCODE in the output data set?
+A. 3
+B. 5
+C. 7
+D. 8
+Answer: B
+Question: 4
+Given the SAS data set SASDATA.TWO:
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 2 of 57
+SASDATA.TWO
+X Y
+-- __
+5 2
+3 1
+5 6
+The following SAS program is submitted:
+data sasuser.one two sasdata.three;
+set sasdata two;
+if x = 5 then output sasuser.one;
+else output sasdata two;
+run;
+What is the result?
+A. data set SASUSER.ONE has 5 observations
+data set SASUSER.TWO has 5 observations
+data set WORK.OTHER has 3 observations
+B. data set SASUSER.ONE has 2 observations
+data set SASUSER.TWO has 2 observations
+data set WORK.OTHER has 1 observations
+C. data set SASUSER.ONE has 2 observations
+data set SASUSER.TWO has 2 observations
+data set WORK.OTHER has 5 observations
+D. No data sets are output.
+The DATA step fails execution due to syntax errors.
+Answer: A
+Question: 5
+The following SAS program is submitted:
+footnote 1 ‘Sales Report for Last Month’;
+footnote2 ‘Selected Products Only’;
+footnote3 ‘All Regions’;
+footnote4 ‘All Figures in Thousands of Dollars’;
+proc print data = sasuser.shoes;
+footnote2 ‘All Products’;
+run;
+Which footnote(s) is/are displayed in the report?
+A. All Products
+B. Sales Report for Last Month All Products
+C. All Products All Regions All Figures in Thousands of Dollars
+D. Sales Report for Last Month All Products All Regions All Figures in Thousands of Dollars
+Answer: B
+Question: 6
+Given the raw data record DEPT:
+----|----10---|----20---|----30
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 3 of 57
+Printing 750
+The following SAS program is submitted:
+data bonus;
+infile ‘dept’;
+inputdept$ 1-11 number 13- 15;
+<insert statement here>
+run;
+Which SAS statement completes the program and results in a value of ‘Printing750’ for the
+DEPARTMENT variable?
+A. department = dept II number;
+B. department = left(dept) II number;
+C. department = trim(dept) number;
+D. department = trim(dept) put(number,3.);
+Answer: D
+Question: 7
+The following SAS program is submitted:
+data one;
+addressl = ‘214 London Way’;
+run;
+data one;
+set one;
+address = tranwrd(address1, ‘Way’, ‘Drive’); run;
+What are the length and value of the variable ADDRESS?
+A. Length is 14; value is ‘214 London Dri’.
+B. Length is 14; value is ‘214 London Way’.
+C. Length is 16; value is ‘214 London Drive’.
+D. Length is 200; value is ‘214 London Drive’.
+Answer: D
+Question: 8
+The following SAS program is submitted:
+data work.sets;
+do until (prod gt 6);
+prod + 1;
+end;
+run;
+What is the value of the variable PROD in the output data set?
+A. 6
+B. 7
+C. 8
+D. (missing numeric)
+Answer: B
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 4 of 57
+Question: 9
+Given the SAS data sets EMPLOYEE and SALARY:
+EMPLOYEE SALARY
+Fname age name salary
+Bruce 30 Bruce 25000
+Dan 40 Bruce 35000
+Dan 25000
+The following SAS program is submitted:
+data work.empdata;
+<insert MERGE statement here>
+by fname;
+totsal + salary;
+run;
+Which MERGE statement correctly completes the program?
+A. merge employee
+salary rename = fname = name;
+B. merge employee
+salary rename(name = fname);
+C. merge employee
+salary (rename = (fname = name));
+D. merge employee
+salary (rename = (name = fname));
+Answer: D
+Question: 10
+Which program displays a listing of all data sets in the SASUSER library?
+A. proc contents lib = sasuser.all; run;
+B. proc contents data = sasuser.all; run;
+C. proc contents lib = sasuser._alI_; run;
+D. proc contents data = sasuser._all_; run;
+Answer: D
+Question: 11
+The following SAS program is submitted:
+proc sort data = work.employee;
+by descending fname;
+proc sort data = work.salary;
+by descending fname;
+data work.empdata;
+merge work.employee
+work.salary;
+by fname;
+run;
+Why does the program rail to execute?
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 5 of 57
+A. The SORT procedures contain invalid syntax.
+B. The merged data sets are not permanent SAS data sets.
+C. The RUN statement was omitted alter each or the SORT procedures.
+D. The data sets were not merged in the order by which they were sorted.
+Answer: D
+Question: 12
+The following SAS program Is submittad:
+data work.sales;
+do year = 1 to 5;
+do month=1 to 12;
+x+1;
+output
+end;
+end;
+run;
+How many observations are written the WORK SALES data set?
+A. 0
+B. 1
+C. 5
+D. 60
+Answer: D
+Question: 13
+Given the following raw data record:
+----I----10---I----20---I----30
+son Travis,
+The following output is desired:
+Obs relation firstname
+1 son Travis
+Which SAS program correctly reads in the raw data?
+A. data family ( dIm = ‘,’); infile ‘tile specification’; input relation $ firstname $; run;
+B. options dIm = ‘,’; data family; infile ‘file specification’; input relation $ firstname $; run;
+C. data family; infile ‘file specification’ dIm = ‘,’; input relation $ firstname $; run;
+D. data family; infile ‘file specification’; input relation $ firstname $ / dim = ‘,’; run;
+Answer: C
+Question: 14
+Given the SAS data set AGES:
+AGES
+AGE
+---------
+The variable AGE contains character values. The following SAS program is submitted:
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 6 of 57
+data subset;
+set ages;
+where age> 12;
+run;
+How many observations are written out to the data set SUBSET?
+A. 0
+B. 1
+C. 2
+D. 3
+Answer: A
+Question: 15
+Given the SAS data set PRICES:
+PRICES
+prodid price producttype sales returns
+K12S 5.10 NETWORK 15 2
+B132S 2.34 HARDWARE 300 10
+R18KY21.29 SOFTWARE 25 5
+3KL8BY 6.37 HARDWARE 125 15
+DY65DW 5.60 HARDWARE 45 5
+DGTY23 4.55 HARDWARE 67 2
+The following SAS program is submitted:
+data hware inter soft;
+set prices (keep = producttype price);
+if price le 5.00;
+if producttype = ‘HARDWARE’ then output HWARE;
+else if producttype = ‘NETWORK’ then output INTER;
+else if producttype = ‘SOFTWARE’ then output SOFT;
+run;
+How many observations does the HWARE data set contain?
+A. 0
+B. 2
+C. 3
+D. 4
+Answer: B
+Question: 16
+The following SAS program is submitted:
+data work.accounting;
+set work.department;
+length jobcode $ 12;
+jobcode=’FAl’;
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 7 of 57
+The WORK.DEPARTMENT data set contains a character variable named JOBCODE with a
+length of 5.
+What is the result?
+A. The length of the variable JOBCODE is 3.
+B. The length of the variable JOBCODE is 5.
+C. The length of the variable JOSBODE is 12.
+D. The program fails to execute due to errors.
+Answer: B
+Question: 17
+Which ODS statement option terminates output being written to an HTML rile?
+A. END
+B. QUIT
+C. STOP
+D. CLOSE
+Answer: D
+Question: 18
+The SAS data set PETS is sorted by the variables TYPE and BREED.
+The following SAS program is submitted:
+proc print data = pets;
+var type breed;
+sum number;
+run;
+What is the result?
+A. The SUM statement produces only a grand total of NUMBER.
+B. The SUM statement produces only subtotals of NUMBER for each value of TYPE.
+C. The SUM statement produces both a grand total of NUMBER and subtotals of NUMBER for
+each value of TYPE.
+D. Nothing is produced by the SUM statement; the program fails to execute.
+Answer: A
+Question: 19
+The following SAS program is submitted:
+data work.passengers;
+if OrigPassengers = then
+OrigPassengers = 100;
+TransPassengers = 100;
+OrigPassengers =
+TotalPassengers = sum (OrigPassengers, TransPassengers) +0;
+run;
+What is the value of the TOTALPASSENGERS variable in the output data set?
+A. 0
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 8 of 57
+B. 100
+C. 200
+D. (missing numeric value)
+Answer: B
+Question: 20
+Given the SAS data set PRICES:
+PRICES
+Prodid price producttype sales returns
+K125 5.10 NETWORK 15 2
+B132S 2.34 HARDWARE 300 10
+R18KY2 1.29 SOFTWARE 25 5
+3KL8BY 6.37 HARDWARE 125 15
+DY65DW 5.60 HARDWARE 45 5
+DGTY23 4.55 HARDWARE 67 2
+The following SAS program is submitted:
+data hware inter cheap;
+set prices(keep = productype price);
+if producttype = ‘HARDWARE’ then output hware; else if producttype = ‘NETWORK’ then output
+inter; if price le 5.00;
+run;
+How many observations does the HWARE data set contain?
+A. 0
+B. 2
+C. 3
+D. 4
+Answer: D
+Question: 21
+The following SAS program is submitted:
+data work.sales;
+do year = 1 to 5;
+do month = 1 to 12;
+x+ 1;
+end;
+end;
+run;
+How many observations are written to the WORK.SALES data set?
+A. 0
+B. 1
+C. 5
+D. 60
+Answer: B
+Question: 22
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 9 of 57
+The following SAS program is submitted:
+data work.totalsales (keep = monthsales{12});
+set work.monthlysales (keep = year product sales);
+array monthsales{12);
+do i = 1 to 12; monthsales{i) = sales;
+end;
+run;
+The program fails execution due to syntax errors. What is the cause of the syntax error?
+A. The variable MONTHSALES does not exist.
+B. An array cannot be referenced on a KEEP data set option.
+C. The KEEP= data set option should be (KEEP = MONTHSALES).
+D. The KEEP= data set option should be the statement KEEP MONTHSALES{12}.
+Answer: B
+Question: 23
+Given the SAS data set EMPLOYEES:
+EMPLOYEES
+NAME SALARY
+-------- ------------
+Innis 60000
+Jolli 50000
+Ellis 55000
+Liu 45000
+The following SAS program is submitted:
+proc print data = employees; where name like ‘_i%’;
+run;
+What is contained in the output?
+A. Liu only
+B. Innis and Ellis only
+C. Innis, Ellis, and Liu only
+D. Innis, Jolli, Ellis, and Liu
+Answer: A
+Question: 24
+Given the SAS data set ONE:
+ONE
+Obs Dte
+----- --------
+1 09JAN2005
+2 12JAN2005
+The following SAS program is submitted:
+data two;
+set one;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 10 of 57
+day = <insert expression here>;
+format dte date9.;
+run;
+The data set TWO is created:
+TWO
+Obs Dte Day
+1 09JAN2005 1
+12 JAN2005 4
+Which expression successfully completed the program and created the variable DAY?
+A. day(dte)
+B. weekday(dte)
+C. dayofweek(dte)
+D. datdif(dte,’01jan2005’d,’act/act’)
+Answer: B
+Question: 25
+Read the table:
+Given the SAS data set SASUSER.HOUSES:
+Obs style bedrooms baths price sqteet street
+1 CONDO 2 1.5 80050 1200 MAIN
+2 CONDO 3 2.5 79350 1300 ELM
+3 CONDO 4 2.5 127150 1400 OAK
+4 CONDO 2 2.0 110700 1100 FIFTH
+5 TWOSTORY 4 3.0 107250 2100 SECOND
+6 TWOSTORY 2 1.0 55650 1600 WEST
+7 TWOSTORY 2 1.0 69250 1450 NORTH
+6 TWOSTORY 4 2.5 102950 2000 SOUTH
+The following SAS program is submitted:
+proc report data = sasuser.houses nowd headline;
+column style price;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 11 of 57
+where price It 100000;
+<insert DEFINE statement here>
+define price / mean width = 9 format = dollar12.;
+title;
+run;
+The following output is desired:
+style price
+------- ------
+CONDO $79,700
+TWOSTORY $62550
+Which DEFINE statement completes the program and produces the desired output?
+A. define style / width = 9,
+B. define style / orderwidth = 9;
+C. define style / group width = 9;
+D. define style / display width = 9;
+Answer: C
+Question: 26
+Given the SAS data set WORKAWARDS:
+WORK.AWARDS
+FNAME POINTS MONTH
+----------- ------------ -----------
+Amy 2 4
+Amy 1 7
+Gerard 3 3
+Wang 3 3
+Wang 1 12
+Wang 1 8
+The following SAS program is submitted:
+proc sort data = work.awards;
+by descending fname points;
+run;
+How are the observations sorted?
+A. ENAME POINTS MONTH
+Wang 3 3
+Wang 1 12
+Wang 1 8
+Gerard 3 3
+Amy 2 4
+Amy 1 7
+B. ENAME POINTS MONTH
+Amy 2 4
+Amy 1 7
+Gerard 3 3
+Wang 3 3
+Wang 1 8
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 12 of 57
+Wang 1 12
+C. ENAME POINTS MONTH
+Wang 3 3
+Wang 1 8
+Wang 1 12
+Gerard 3 3
+Amy 2 4
+Amy 1 7
+D. ENAME POINTS MONTH
+Wang 1 12
+Wang 1 8
+Wang 3 3
+Gerard 3 3
+Amy 1 7
+Amy 2 4
+Answer: D
+Question: 27
+The following SAS program is submitted:
+libname temp ‘SAS data library’;
+data work.new;
+set temp.jobs;
+format newdate mmddw10.;
+mdate = month(newdate);
+ddate = weekday(newdate);
+run;
+proc print data = work.new; run;
+The variable NEWDATE contains the SAS date value for April 15. 2005. What output is produced
+if April 15, 2005 falls on a Friday?
+A. Obsnewdate mdate ddate
+104/15/2005 APR 6
+B. Obs newdate mdate ddate
+104/15/2005 4 6
+C. Obs newdate mdate ddate
+104/15/2005 APR 7
+D. Obs newdate mdate ddate
+104/15/2005 4 7
+Answer: B
+Question: 28
+Given the contents of the raw data file PRODUCT:
+----I----10---I----20---I----30
+24613 $25.31
+The following SAS program is submitted:
+data inventory;
+infile ‘product’;
+input idnum 5. @10 price;
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 13 of 57
+What is the value of the PRICE variable?
+A. 25.31
+B. $25.31
+C. . (missing numeric value)
+D. No value is stored.
+Answer: C
+Question: 29
+The following SAS program is submitted:
+proc contents data = sashelp.class varnum; quit;
+What does the VARNUM option print?
+A. a list of variable names
+B. the total number of variables
+C. a list of the variables in alphabetic order
+D. a list of the variables in the order they were created
+Answer: D
+Question: 30
+The following SAS program is submitted:
+data test;
+set chemists;
+itjobcode = ‘Chem2’
+then description = ‘Senior Chemist’;
+else description = ‘Unknown’;
+run;
+The value for the variable JOBCODE is:
+JOBCODE
+-------------
+chem2
+What is the value of the variable DESCRIPTION?
+A. chem2
+B. Unknown
+C. Senior Chemist
+D. ‘ ‘ (missing character value)
+Answer: B
+Question: 31
+Given the AIRPLANES data set
+AlRPLANES
+TYPE MPG
+-------- ------
+F-18 105
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 14 of 57
+C-130 25
+Harrier 75
+A-6 110
+The following SAS program is submitted:
+data gt100;
+set airplanes(keep = type mpg load);
+load = mpg * 150;
+run;
+The program fails to execute due to syntax errors.
+What is the cause of the syntax error?
+A. MPG is not a numeric variable.
+B. LOAD is not a variable in the data set GT100.
+C. LOAD is not variable in the data set AIRPLANES.
+D. LOAD must be defined prior to the SET statement.
+Answer: C
+Question: 32
+Given the raw data file EMPLOYEE:
+----I----1 0---I----20---I----30
+Ruth 39 11
+Jose 32 22
+Sue 30 33
+John 40 44
+The following SAS program is submitted:
+data test;
+infile ‘employee’;
+input employee_name $ 1-4;
+if employee_name = ‘Ruth’ then input idnum 10-11;
+else input age 7-8;
+run;
+What value does the variable IDNUM contain when the name of the employee is “Ruth”?
+A. 11
+B. 22
+C. 33
+D. (missing numeric value)
+Answer: B
+Question: 33
+The following SAS program is submitted:
+data temp.x;
+set sasuser.y;
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 15 of 57
+What must be submitted prior to this SAS program for the program to execute successfully?
+A. A LIBNAME statement for the libref TEMP only must be submitted.
+B. A LIBNAME statement for the libref SASUSER only must be submitted.
+C. LIBNAME statements for the librefs TEMP and SASUSER must be submitted.
+D. No LIBNAME statement needs to be submitted.
+Answer: A
+Question: 34
+The data set RALESTATE has the variable LOCALFEE with a format or 9. and a variable
+COUNTRYFEE with a format or 7.;
+The following SAS program is submitted:
+data history;
+format local fee country fee percent6.;
+set realestate;
+local fee = local fee / 100;
+country fee = country fee / 100;
+run;
+What are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?
+A. LOCALFEE has format of 9. and COUNTRYFEE has a format of 7.
+B. LOCALFEE has format of 9. and COUNTRYFEE has a format of percent6.
+C. LOCALFEE has format of percent6. and COUNTRYFEE has a format of percent6.
+D. The data step fails execution; there is no format for LOCALFEE
+Answer: C
+Question: 35
+The following SAS program is submitted:
+proc freq data = class;
+tables gender * age / <insert option here>;
+run;
+The following report is created:
+The FREQ Procedure
+Table of gender by age
+Row Column
+Gender age Frequency Percent Percent Percent
+F 11 1 10.00 20.00 50.00
+12 2 20.00 40.00 40.00
+13 2 20.00 40.00 66.67
+Total 5 50.00 100.00
+M 11 1 10.00 20.00 50.00
+12 3 30.00 60.00 60,00
+13 1 10.00 20.00 33.33
+Total 5 50.00 100.00
+----------------------------------------------------------------------------------
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 16 of 57
+Total 11 2 20.00 100.00
+12 5 50.00 100.00
+13 3 30.00 100.00
+Total 10 100.00
+Which option correctly completes the program and creates the report?
+A. LIST
+B. NOCOLS
+C. CROSSLIST
+D. NOCROSSTAB
+Answer: C
+Question: 36
+The value 110700 is stored in a numeric variable named SALARY.
+Which FORMAT statement displays the value as $110,700.00 in a report?
+A. format salary comma11.2;
+B. format salary dollar8.2;
+C. format salary dollar11.2;
+D. format salary comma8.2 dollar8.2;
+Answer: C
+Question: 37
+Given the raw data file YEARAMT:
+----|---10---|---20---|----30
+1901 2
+1905 1
+1910 6
+1925 .
+1941 1
+The following SAS program is submitted:
+data coins;
+infile ‘yearamt’;
+input year quantity;
+<insert statement(s) here>
+run;
+Which statement(s) completed the program and produced a non-missing value for the variable
+TOTQUANTITY in the final observation of the output data set?
+A. totquantity + quantity;
+B. totquantity = sum(totquantity + quantity);
+C. retain totquantity; totquantity = totquantity + quantity;
+D. retain totquantity0; totquantity = totquantity + quantity;
+Answer: A
+Question: 38
+Given the SAS data set EMPLOYEE INFO:
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 17 of 57
+EMPLOYEE_INFO
+IDNumber Expenses
+2542 100.00
+3612 133.15
+2198 234.34
+2198 111.12
+The following SAS program is submitted:
+proc sort data = employee_info;
+<insert BY statement here>
+run;
+Which BY statement completes the program and sorts the data sequentially by ascending
+expense values within each ascending IDNUMBER value?
+A. by Expenses IDNumber;
+B. by IDNumber Expenses;
+C. by ascending Expenses IDNumber;
+D. by ascending IDNumber ascending Expenses;
+Answer: B
+Question: 39
+The following SAS program is submitted:
+proc format
+value score 1 - 50 = ‘Fail’
+51 - 100 = ‘Pass’;
+run;
+proc report data = work.courses nowd;
+column exam;
+define exam / display format = score.;
+run;
+The variable EXAM has a value of 50.5.
+How will the EXAM variable value be displayed in the REPORT procedure output?
+A. Fail
+B. Pass
+C. 50.5
+D. . (missing numeric value)
+Answer: C
+Question: 40
+What is the purpose or the MISSOVER option on the INFILE statement?
+A. It prevents SAS from loading a new record when the end of the current record is reached.
+B. It enables SAS to scan the input data records until the character string that is specified in the
+@‘character-string’ expression is round.
+C. It enables SAS to continue to read the next input data record if it does not find values in the
+current input tine for all the variables in the statement.
+D. It causes the DATA step to stop processing if an INPUT statement reaches the end of the
+current record without finding values for all variables in the statement.
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 18 of 57
+Answer: A
+Question: 41
+The following SAS program is submitted:
+data work.test;
+set work.staff (keep = jansales febsales marsales);
+array diff_sales{3} difsales1 - difsales3;
+array monthly{3} jansales febsales marsales;
+run;
+What new variables are created?
+A. JANSALES, FEBSALES and MARSALES
+B. MONTHLY1, MONTHLY2 and MONTHLY3
+C. DIFSALES1, DIFSALES2 and DIFSALES3
+D. DIFF_SALES1, DIFF_SALES2 and DIFF_SALES3
+Answer: C
+Question: 42
+What describes the SAS automatic _ERRDR_ variable?
+A. The _ERROR_ variable contains the values ‘TRUE’ or ‘FALSE.’
+B. The _ERROR variable maintains a count of the number of data errors.
+C. The _ERROR_ variable can be used in expressions or calculations in the DATA step.
+D. The ERROR_variable contains the number or the observation that caused the error.
+Answer: C
+Question: 43
+Given the following raw data record:
+07Jan20 05
+Which INFOFRMAT reads this raw data and stores it as a SAS date value?
+A. dmy9.
+B. date9.
+C. ddMMMyy9.
+D. ddmmmyyyy9.
+Answer: B
+Question: 44
+Which statement correctly computes the average of four numerical values?
+A. average = mean(num1, num4);
+B. average = mean(num1 - num4);
+C. average = mean(ofnum1 - num4)
+D. average = mean(num1 num2 num3 num4);
+Answer: C
+Question: 45
+The following SAS program is submitted:
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 19 of 57
+libname temp ‘SAS data library’;
+data temp.sales;
+merge temp sales
+work.receipt;
+by names;
+run;
+The input data files are sorted by the NAMES variable:
+What is the result?
+A. The program executes successfully and a temporary SAS data set is created.
+B. The program executes successfully and a permanent SAS data set is created.
+C. The program fails execution because the same SAS data set is referenced for both read and
+write operations.
+D. The program fails execution because the SAS data sets on the MERGE statement are in two
+different libraries.
+Answer: B
+Question: 46
+Given the contents of the raw data file TYPECOLOR:
+----I----10---I----20---I----30
+Daisyyellow
+The following SAG program is submitted:
+data flowers;
+infile ‘typecolor’;
+input type$ 1-5+1 color$;
+run;
+What are the values of the variables TYPE and COLOR?
+A. type color
+daisyyellow
+B. type color
+daisyyellow
+C. type color
+daisyyellow” “(missing character value)
+D. No values are stored for the TYPE and COLOR variables.
+Answer: B
+Question: 47
+A user-defined format has been created using the FORMAT procedure. Where is it stored?
+A. in a SAS catalog
+B. in an external binary file
+C. in a SAS dataset in the WORK library
+D. in a SAS dataset in a permanent SAS data library
+Answer: A
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 20 of 57
+Question: 48
+The following SAS program is submitted:
+data work.flights;
+destination = ‘cph’;
+select(destination);
+when(’LHR’) city = ‘London’;
+when(’CPH’) city = ‘Copenhagen’;
+otherwise city = ‘Other’;
+end;
+run;
+What is the value of the CITY variable?
+A. Other
+B. Copenh
+C. Copenhagen
+D. ‘‘(missing character value)
+Answer: A
+Question: 49
+The following SAS program is submitted:
+data work.new;
+length word $7;
+amount = 4;
+it amount = 4 then word = ‘FOUR’;
+else if amount = 7
+then word = ‘SEVEN’;
+else word = ‘NONE!!!’;
+amount = 7;
+run;
+What are the values of the AMOUNT and WORD variables in SAS dataset work.new?
+A. amount word
+4 FOUR
+B. amount word
+4 NONE!!!
+C. amount word
+7 FOUR
+D. amount word
+7 SEVEN
+Answer: C
+Question: 50
+The following SAS program is submitted, creating the SAS data set ONE:
+data one;
+infile ‘file specification’;
+input num chars$;
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 21 of 57
+ONE
+NUM CHAR
+------- ---------
+1 23
+3 23
+1 77
+The following SAS program is submitted:
+proc print data = one;
+where char = 23;
+run;
+What is output?
+A. NUM CHAR
+1 77
+2
+B. NUM CHAR
+1 23
+3 23
+C. NUM CHAR
+1 23
+3 23
+1 77
+D. No output is generated.
+Answer: D
+Question: 51
+The following SAS program is submitted:
+data work.retail;
+cost = ‘20000’;
+total= .10* cost
+run;
+What is the result?
+A. The value of the variable TOTAL in the output data set is 2000. No messages are written to
+the SAS log.
+B. The value of the variable TOTAL in the output data set is 2000. A note that conversion has
+taken place is written to the SAS log.
+C. The value of the variable TOTAL in the output data set is missing. An error message is written
+to the SAS log.
+D. The variable TOTAL in the output data set has no value. The program fails to execute due to
+a syntax error.
+Answer: C
+Question: 52
+The following SAS program is submitted:
+Data_null_;
+set old;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 22 of 57
+put sales 1 sales2;
+run;
+Where is the output written?
+A. to the SAS log
+B. to the SAS data set _NULL_
+C. to the SAS output window or to an output file
+D. to the raw data file that was most recently opened
+Answer: A
+Question: 53
+The following SAS program is submitted:
+data work.test;
+array items{3} _temporary_;
+run;
+What are the names of the variable(s) in the WORKTEST data set?
+A. ITEMS
+B. ITEMS1, ITEMS2, ITEMS3
+C. No variables are created because it is a temporary array.
+D. The program fails to execute because there are no variables listed on the ARRAY statement.
+Answer: C
+Question: 54
+Read the table
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 23 of 57
+The following SAS program is submitted:
+proc freq data = sales;
+<insert TABLES statement here>
+run;
+The following output is created by the FREQUENCY procedure:
+The FREQ Procedure
+Table of region by product
+region product
+Frequency
+Percent
+Row Pct
+Col Pct corn cotton oranges Total
+EAST 2 1 1 4
+22.22 11.11 11.11 44.44
+50.00 25.00 25.00
+50.00 33.33 50.00
+SOUTH 2 2 1 5
+22.22 22.22 11.11 55.56
+40.00 40.00 20.00
+50.00 66.67 50.00
+Total 4 3 2 9
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 24 of 57
+4444 33.33 22.22 100.00
+Which TABLES statement(s) completed the program and produced the output?
+A. tables region product;
+B. tables region * product;
+C. tables product * region;
+D. tables product; tables region;
+Answer: B
+Question: 55
+The following SAS program is submitted:
+data one;
+date = ‘04juI2005’d;
+format date weekdate.; run;
+proc print data = one; run;
+What output is generated?
+A. Obs date
+1 Monday, July 4, 2005
+B. Obs date
+1 July4, 2005
+C. Obs date
+1 04Jul2005
+D. Obs date
+1 Monday, 07/04/2005
+Answer: A
+Question: 56
+The following SAS program is submitted:
+data test;
+set sasuser.employees;
+if 2 le years_service le 10 then
+amount = 1000;
+else amount = 0;
+amount_per_year = years_service / amount
+run;
+What is the value of the variable AMOUNT_PER_YEAR if an employee has been with the
+company for one year?
+A. 0
+B. 0.001
+C. 1
+D. . (missing numeric value)
+Answer: D
+Question: 57
+Given the SAS data set PERM.STUDENTS:
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 25 of 57
+PERM.STUDENTS
+NAME AGE
+--------- -------
+Alfred 14
+Alice 13
+Barbara 13
+Carol 14
+The following SAS program is submitted:
+libname perm ‘SAS data library’;
+data students;
+set perm.students;
+file ‘file specification’;
+put name $ age;
+<insert statement here>
+run;
+The following double-spaced file is desired as output
+Alfred 14
+Alice 13
+Barbara 13
+Carol 14
+Which statement completes the program and creates the desired file?
+A. put
+B. put/;
+C. double;
+D. put _null_;
+Answer: A
+Question: 58
+The following SAS program is submitted:
+data work.total;
+set work.salary(keep = department wagerate);
+by department;
+if first.department
+then payroll = 0;
+payroll + wagerate;
+if last.department;
+run;
+The SAS data set named WORKSALARY contains 10 observations for each department, and is
+currently ordered by DEPARTMENT.
+Which statement is true?
+A. The BY statement in the DATA step causes a syntax error.
+B. The statement payroll + wagerate; in the DATA step causes a syntax error.
+C. The values of the variable PAYROLL represent the total for each department in the
+WORK.SALARY data set.
+D. The values of the variable PAYROLL represent a total for all values of WAGERATE in the
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 26 of 57
+WORKSALARY data set.
+Answer: C
+Question: 59
+Given the contents of the raw data file EMPLOYEE:
+----|----10----|----20----|----30
+Alan 19/2/2004 ACCT
+Rob 22/5/2004 MKTG
+MaryJane 14/3/2004 EDUC
+The following SAS program is submitted:
+data emps;
+infile ‘employee’;
+input@1 name$
+@15 date <insert INFORMAT here>
+@25 department$;
+run;
+Which INFORMAT correctly completes the program?
+A. date9.
+B. ddmmyyyy9.
+C. ddmmyy10.
+D. ddmmyyyy10.
+Answer: C
+Question: 60
+The following SAS program is submitted:
+data test;
+infile ‘file specification’;
+input name $ amount@@;
+run;
+Which of the following is true?
+A. Two @@ together are the same as one c.
+B. Two @@ hold the data records until the bottom of the DATA step.
+C. Two @@ hold the raw data record across iterations of the DATA step.
+D. Two @@ are invalid syntax and will cause the program to fail to execute.
+Answer: C
+Question: 61
+Given the SAS data set QTR 1_REVENUE:
+destination revenue
+YYZ 53634
+FRA 62129
+FRA 75962
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 27 of 57
+RDU 76254
+YYZ 82174
+The following SAS program is submitted:
+proc sort data = qtr1_revenue;
+by destination descending revenue; run;
+What is the first observation in the output data set?
+A. destination revenue
+FRA 62129
+B. destination revenue
+FRA 75962
+C. destination revenue
+YYZ 53634
+D. destination revenue
+YYZ 82174
+Answer: B
+Question: 62
+The following SAS program is submitted:
+data numrecords;
+infile ‘file specification’;
+input@1 patient $15.
+relative$ 16-26@;
+if relative = ‘children’ then
+input @54 diagnosis $15. @;
+else if relative = ‘parents’ then
+input @28 doctor $15.
+clinic $ 44-53
+@54 diagnosis $15. @;
+input age;
+run;
+How many raw data records are read during each iteration of the DATA step execution?
+A. 1
+B. 2
+C. 3
+D. 4
+Answer: B
+Question: 63
+Given the SAS data set ONE:
+ONE
+X Y Z
+--- --- ---
+1 A 27
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 28 of 57
+1 A 33
+1 B 45
+2 A 52
+2 B 69
+3 B 70
+4 A 62
+4 C 91
+The following SAS program is submitted:
+data two;
+set one;
+by x y;
+if first.y;
+run;
+proc print data = two noobs;
+run;
+4Which report is produced?
+A. X Y Z
+1 A 27
+1 B 45
+2 A 52
+2 B 69
+3 B 70
+4 A 82
+4 C 91
+B. X Y Z
+1 A 33
+1 B 45
+2 A 52
+2 B 69
+3 B 70
+4 A 82
+4 C 91
+C. X Y Z
+1 B 45
+2 A 52
+2 B 69
+3 B 70
+4 A 82
+4 C 91
+D. The PRINT procedure tails because the data set TWO is not created in the DATA step.
+Answer: A
+Question: 64
+After a SAS program is submitted, the following is written to the SAS log:
+105 data january;
+106 set allmonths(keep = product month num_sold cost);
+107 if month = ‘Jan’ then output january;
+108 sales = cost * num_sold;
+109 keep = product sales;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 29 of 57
+------
+22
+ERROR 22-322: Syntax error, expecting one of the following:!,
+!!, &, *,**, +, -,/, <,< =, <>, =, >, ><, >=,
+AND, EQ, GE, GT, IN, LE, LT, MAX, MIN, NE, NG, NL,
+NOTIN, OR,^=,|,II,
+110 run;
+What changes should be made to the KEEP statement to correct the errors in the LOG?
+A. keep product sales;
+B. keep product, sales;
+C. keep = product, sales;
+D. keep = (product sales);
+Answer: A
+Question: 65
+The following SAS program is submitted:
+data combine;
+prefix=’505’;
+middle=’6465 ‘;
+end=’09090’;
+<insert statement here>;
+run;
+Which statement successfully completes the program so that TOTAL has a value of 505-6465-
+09090?
+A. total = cat(’-’, prefix, middle, end);
+B. total = catx(’-’, prefix, middle, end);
+C. total = prefix !!’-’!! middle ‘‘!!’-’!! end;
+D. total = prefix!!’-’!! left(middle)!!’-’!! end;
+Answer: B
+Question: 66
+The following SAS program is submitted:
+<insert ODS statement here>
+proc means data = sasuser.shoes;
+where product in (‘Sandal’ , ‘Slipper’ , ‘Boot’);
+run;
+<insert ODS statement here>
+Which ODS statements complete the program and send the report to an HTML file?
+A. ods html = ‘sales.html’; ods html close;
+B. ods file = ‘sales.html’; ods file close;
+C. ods file html = ‘sales.html’; ods file close;
+D. ods html file = ‘sales.html’; ods html close;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 30 of 57
+Answer: D
+Question: 67
+Given the raw data file AMOUNT:
+----I---- 10---I----20---I----30
+$1,234
+The following SAS program is submitted:
+data test;
+infile ‘amount’;
+input@1 salary 6.;
+if_error_then description = ‘Problems’;
+else description = ‘No Problems’;
+run;
+What is the result?
+A. The value of the DESCRIPTION variable is No Probl.
+B. The value of the DESCRIPTION variable is Problems.
+C. The value of the DESCRIPTION variable is No Problems.
+D. The value of the DESCRIPTION variable can not be determined.
+Answer: B
+Question: 68
+Given the SAS data set PEPM.STUDENTS:
+PERM.STUDENTS
+NAME AGE
+--------- ------
+Alfred 14
+Alice 13
+Barbara 13
+Carol 14
+The following SAS program is submitted:
+libname perm ‘SAS data library’;
+data students;
+set perm.students;
+file ‘file specification’;
+put name $15. @5 age 2.;
+run;
+What is written to the output raw data file?
+A. ----I----10---I----20---I----30
+Alfred 14
+Alice 13
+Barbara 13
+Carol 14
+B. ----I----10---I----20---I----30
+Alfr14
+Alic13
+Barb13a
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 31 of 57
+Carol 4
+C. ----I----10---I----20---I----30
+Alfr14ed
+Alic130
+Barb13ara
+Caro141
+D. ----I----10---I----20---I----30
+Alfred14
+Alice13
+Barbara13
+Carol14
+Answer: B
+Question: 69
+The following SAS program is submitted:
+data work.total;
+set work.salary(keep = department wagerate);
+by department;
+if first.department
+then payroll = 0;
+payroll + wagerate;
+if last.department
+run;
+The SAS data set WORK.SALARY, currently ordered by DEPARTMENT, contains 100
+observations for each of 5 departments.
+What is the result?
+A. The WORK.TOTAL data set contains 5 observations.
+B. The WORKTDTAL data set contains 100 observations.
+C. The WORKTOTAL data set contains 500 observations.
+D. The program fails to execute due to errors.
+Answer: A
+Question: 70
+The following SAS program is submitted;
+data combine;
+country = ‘Italy, Russia, ireland’;
+found = find(country, ‘i’);
+run;
+What is the value of the variable FOUND in the output data set?
+A. 1
+B. 12
+C. Italy
+D. Russia
+Answer: B
+Question: 71
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 32 of 57
+Given the following code:
+proc print data=SASHELP.CLASS(firstobs=5 obs=15);
+where Sex='M';
+run;
+How many observations will be displayed?
+A. 11
+B. 15
+C. 10 or fewer
+D. 11 or fewer
+Answer: D
+Question: 72
+The SAS data set named WORK.SALARY contains 10 observations for each department, and is
+currently ordered by Department. The following SAS program is submitted:
+data WORK.TOTAL;
+set WORK.SALARY(keep=Department MonthlyWageRate);
+by Department;
+if First.Department=1 then Payroll=0;
+Payroll+(MonthlyWageRate*12);
+if Last.Department=1;
+run;
+Which statement is true?
+A. The by statement in the DATA step causes a syntax error.
+B. The statement Payroll+(MonthlyWageRate*12); in the data step causes a syntax error.
+C. The values of the variable Payroll represent the monthly total for each department in the
+WORK.SALARY data set.
+D. The values of the variable Payroll represent a monthly total for all values of WAGERATE in the
+WORK.SALARY data set.
+Answer: C
+Question: 73
+Given the contents of the raw data file TYPECOLOR.DAT:
+----+----10---+----20---+----30 daisyyellow The following SAS program is submitted:
+data FLOWERS;
+infile 'TYPECOLOR.DAT' truncover;
+length
+Type $ 5
+Color $ 11;
+input
+Type $
+Color $;
+run;
+What are the values of the variables Type and Color?
+A. Type=daisy, Color=yellow
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 33 of 57
+B. Type=daisy, Color=w
+C. Type=daisy, Color=daisyyellow
+D. Type=daisy, Color=
+Answer: D
+Question: 74
+The following SAS program is submitted:
+data WORK.TEST;
+set WORK.MEASLES(keep=Janpt Febpt Marpt);
+array Diff{3} Difcount1-Difcount3;
+array Patients{3} Janpt Febpt Marpt;
+run;
+What new variables are created?
+A. Difcount1, Difcount2 and Difcount3
+B. Diff1, Diff2 and Diff3
+C. Janpt, Febpt, and Marpt
+D. Patients1, Patients2 and Patients3
+Answer: A
+Question: 75
+Given the raw data record in the file phone.txt:
+----|----10---|----20---|----30---|
+Stevens James SALES 304-923-3721 14
+The following SAS program is submitted:
+data WORK.PHONES;
+infile phone.txt;
+input EmpLName $ EmpFName $ Dept $ Phone $ Extension;
+<_insert_code_>
+run;
+Which SAS statement completes the program and results in a value of "James Stevens" for the
+variableFullName?
+A. FullName=CATX(' ',EmpFName,EmpLName);
+B. FullName=CAT(' ',EmpFName,EmpLName);
+C. FullName=EmpFName!!EmpLName;
+D. FullName=EmpFName + EmpLName;
+Answer: A
+Question: 76
+Which statement specifies that records 1 through 10 are to be read from the raw data file
+customer.txt?
+A. infile 'customer.txt' 1-10;
+B. input 'customer.txt' stop@10;
+C. infile 'customer.txt' obs=10;
+D. input 'customer.txt' stop=10;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 34 of 57
+Answer: C
+Question: 77
+The following SAS program is submitted:
+data WORK.ONE;
+Text='Australia, US, Denmark';
+Pos=find(Text,'US','i',5);
+run;
+What value will SAS assign to Pos?
+A. 0
+B. 1
+C. 2
+D. 12
+Answer: D
+Question: 78
+Given the following raw data records in DATAFILE.TXT:
+----|----10---|----20---|----30
+Kim,Basketball,Golf,Tennis
+Bill,Football
+Tracy,Soccer,Track
+The following program is submitted:
+data WORK.SPORTS_INFO;
+length Fname Sport1-Sport3 $ 10;
+infile 'DATAFILE.TXT' dlm=',';
+input Fname $ Sport1 $ Sport2 $ Sport3 $;
+run;
+proc print data=WORK.SPORTS_INFO;
+run;
+Which output is correct based on the submitted program?
+A. Obs Fname Sport1 Sport2 Sport3
+1 Kim Basketball Golf Tennis
+2 Bill Football
+3 Tracy Soccer Track
+B. Obs Fname Sport1 Sport2 Sport3
+1 Kim Basketball Golf Tennis
+2 Bill Football Football Football
+3 Tracy Soccer Track Track
+C. Obs Fname Sport1 Sport2 Sport3
+1 Kim Basketball Golf Tennis
+2 Bill Football Tracy Soccer
+D. Obs Fname Sport1 Sport2 Sport3
+1 Kim Basketball Golf Tennis
+2 Bill Football
+Answer: C
+Question: 79
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 35 of 57
+The SAS data set WORK.ONE contains a numeric variable named Num ana character variable
+named Char:
+WORK.ONE
+Num Char
+------ ------
+1 23
+3 23
+1 77
+The following SAS program is submitted:
+proc print data=WORK.ONE;
+where Num='1';
+run;
+What is output?
+A. Num Char
+--- ----
+1 23
+B. Num Char
+--- ----
+1 23
+1 77
+C. Num Char
+--- ----
+1 23
+3 23
+1 77
+D. No output is generated.
+Answer: D
+Question: 80
+The following output is created by the FREQUENCY procedure:
+Which TABLES statement was used to completed the following program that produced the
+output?
+proc freq data=sales;
+<_insert_code_>
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 36 of 57
+A. tables region product;
+B. tables region,product
+C. tables region/product;
+D. tables region*product;
+Answer: D
+Question: 81
+The following SAS program is submitted:
+<_insert_ods_code_>
+proc means data=SASUSER.SHOES;
+where Product in ('Sandal' , 'Slipper' , 'Boot');
+run;
+<_insert_ods_code_>
+Which ODS statements inserted, respectively, in the two location above creates a report stored in
+an html file?
+A. ods html open='sales.html';
+ods html close;
+B. ods file='sales.html' / html;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 37 of 57
+ods file close;
+C. ods html file='sales.html';
+ods html close;
+D. ods file html='sales.html';
+ods file close;
+Answer: C
+Question: 82
+Given the following data step:
+data WORK.GEO;
+infile datalines;
+input City $20.;
+if City='Tulsa' then
+State='OK';
+Region='Central';
+if City='Los Angeles' then
+State='CA'
+Region='Western';
+datalines;
+Tulsa
+Los Angeles
+Bangor
+;
+run;
+After data step execution, what will data set WORK.GEO contain?
+A. City State Region
+----------- ----- -------
+Tulsa OK Western
+Los Angeles CA Western
+Bangor Western
+B. City State Region
+----------- ----- -------
+Tulsa OK Western
+Los Angeles CA Western
+Bangor
+C. City State Region
+----------- ----- -------
+Tulsa OK Central
+Los Angeles CA Western
+Bangor Western
+D. City State Region
+----------- ----- -------
+Tulsa OK Central
+Los CA Western
+Bangor
+Answer: A
+Question: 83
+Which of the following choices is an unacceptable ODS destination for producing output that can
+be viewed in Microsoft Excel?
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 38 of 57
+A. MSOFFICE2K
+B. EXCELXP
+C. CSVALL
+D. WINXP
+Answer: D
+Question: 84
+Which statement describes a characteristic of the SAS automatic variable _ERROR_?
+A. The _ERROR_ variable maintains a count of the number of data errors in a DATA step.
+B. The _ERROR_ variable is added to the program data vector and becomes part of the data set
+being created.
+C. The _ERROR_ variable can be used in expressions in the DATA step.
+D. The _ERROR_ variable contains the number of the observation that caused the data error.
+Answer: C
+Question: 85
+The Excel workbook REGIONS.XLS contains the following four worksheets:
+EAST
+WEST
+NORTH
+SOUTH
+The following program is submitted:
+libname MYXLS 'regions.xls';
+Which PROC PRINT step correctly displays the NORTH worksheet?
+A. proc print data=MYXLS.NORTH;
+run;
+B. proc print data=MYXLS.NORTH$;
+run;
+C. proc print data=MYXLS.'NORTH'e;
+run;
+D. proc print data=MYXLS.'NORTH$'n;
+run;
+Answer: D
+Question: 86
+Given the data set WORK.EMPDATA:
+Employee_ Manager_
+ID Job_Title Department ID
+------- ---------------------- --------------------- ----------------
+120101 Director Sales Management 120261
+120102 Sales Manager Sales Management 120101
+120103 Sales Manager II Sales Management 120101
+120104 Administration Manager Administration 120101
+120105 Secretary I Administration 120101
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 39 of 57
+Which one of the following where statements would display observations with job titles containing
+the word 'Manager'?
+A. where substr(Job_Title,(length(Job_Title)-6))='Manager';
+B. where upcase(scan(Job_Title,-1,' '))='MANAGER';
+C. where Job_Title='% Manager ';
+D. where Job_Title like '%Manager%';
+Answer: D
+Question: 87
+The following SAS program is submitted:
+data WORK.DATE_INFO;
+X="01Jan1960" D ;
+run;
+What variable X contains what value?
+A. the numeric value 0
+B. the character value "01Jan1960"
+C. the date value 01011960
+D. the code contains a syntax error and does not execute.
+Answer: D
+Question: 88
+Given the SAS data set WORK.EMP_NAME:
+Name EmpID
+------- --------
+Jill 1864
+Jack 2121
+Joan 4698
+John 5463
+Given the SAS data set WORK.EMP_DEPT:
+EmpID Department
+-------- --------------
+2121 Accounting
+3567 Finance
+4698 Marketing
+5463 Accounting
+The following program is submitted:
+data WORK.ALL;
+merge WORK.EMP_NAME(in=Emp_N)
+WORK.EMP_DEPT(in=Emp_D);
+by Empid;
+if (Emp_N and not Emp_D) or (Emp_D and not Emp_N);
+run;
+How many observations are in data set WORK.ALL after submitting the program?
+A. 1
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 40 of 57
+B. 2
+C. 3
+D. 5
+Answer: B
+Question: 89
+The following program is submitted:
+proc contents data=_all_;
+run;
+Which statement best describes the output from the submitted program?
+A. The output contains only a list of the SAS data sets that are contained in the WORK library.
+B. The output displays only the contents of the SAS data sets that are contained in the WORK
+library.
+C. The output displays only the variables in the SAS data sets that are contained in the WORK
+library.
+D. The output contains a list of the SAS data sets that are contained in the WORK library and
+displays the contents of those data sets.
+Answer: D
+Question: 90
+The following SAS program is submitted:
+proc format;
+value score
+1 - 50 = 'Fail'
+51 - 100 = 'Pass';
+run;
+proc freq data=WORK.COURSES ;
+table Exam;
+format Exam score.;
+run;
+The variable Exam has a value of 50.5.
+How will the Exam variable value be displayed in the FREQ procedure output?
+A. Fail
+B. Pass
+C. 50.5
+D. . (missing numeric value)
+Answer: C
+Question: 91
+The following program is submitted:
+proc sort data=SASUSER.PROJECTS out=PSORT;
+by Code descending Date Cost;
+run;
+Which of the following is true concerning the submitted program?
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 41 of 57
+A. The descending option applies to the variable Code.
+B. The variable Code is sorted by ascending order.
+C. The PSORT data set is stored in the SASUSER library.
+D. The descending option applies to the Date and Cost variables.
+Answer: B
+Question: 92
+The following code was modified to generate the results further below:
+proc format;
+value agegrp
+low-12 ='Pre-Teen'
+13-high = 'Teen';
+run;
+proc means data=SASHELP.CLASS;
+var Height;
+class Sex Age;
+format Age agegrp.;
+run;
+The following results were generated to display only specific statistics and limit the decimals with
+the modification: Which statement below was modified or added to generate the results above:
+A. var Height / nobs min max mean maxdec=1;
+B. proc means data=SASHELP.CLASS maxdec=1 ;
+C. proc means data=SASHELP.CLASS min max mean maxdec=1;
+D. output nobs min max mean maxdec=1;
+Answer: C
+Question: 93
+The following SAS program is submitted:
+data WORK.DATE_INFO;
+X='04jul2005'd;
+DayOfMonth=day(x);
+MonthOfYear=month(x);
+Year=year(x);
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 42 of 57
+What types of variables are DayOfMonth, MonthOfYear, and Year?
+A. DayOfMonth, Year, and MonthOfYear are character.
+B. DayOfMonth, Year, and MonthOfYear are numeric.
+C. DayOfMonth and Year are numeric. MonthOfYear is character.
+D. DayOfMonth, Year, and MonthOfYear are date values.
+Answer: B
+Question: 94
+The following SAS program is submitted:
+data ONE TWO SASUSER.TWO
+set SASUSER.ONE;
+run;
+Assuming that SASUSER.ONE exists, how many temporary and permanent SAS data sets are
+created?
+A. 2 temporary and 1 permanent SAS data sets are created
+B. 3 temporary and 2 permanent SAS data sets are created
+C. 2 temporary and 2 permanent SAS data sets are created
+D. there is an error and no new data sets are created
+Answer: D
+Question: 95
+Which statement is true concerning the SAS automatic variable _ERROR_?
+A. It cannot be used in an if/then condition.
+B. It cannot be used in an assignment statement.
+C. It can be put into a keep statement or keep= option.
+D. It is automatically dropped.
+Answer: D
+Question: 96
+Given the SAS data set WORK.TEMPS:
+Day Month Temp
+--- --------- -------
+1 May 75
+15 May 70
+15 June 80
+3 June 76
+2 July 85
+14 July 89
+The following program is submitted:
+proc sort data=WORK.TEMPS;
+by descending Month Day;
+run;
+proc print data=WORK.TEMPS;
+run;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 43 of 57
+Which output is correct?
+A. Obs Day Month Temp
+--- --- ----- ----
+1 2 July 85
+2 14 July 89
+3 3 June 76
+4 15 June 80
+5 1 May 75
+6 15 May 7
+B. Obs Day Month Temp
+--- --- ----- ----
+1 1 May 75
+2 2 July 85
+3 3 June 76
+4 14 July 89
+5 15 May 70
+6 15 June 80
+C. Obs Day Month Temp
+--- --- ----- ----
+1 1 May 75
+2 15 May 70
+3 3 June 76
+4 15 June 80
+5 2 July 85
+6 14 July 89
+D. Obs Day Month Temp
+--- --- ----- ----
+1 15 May 70
+2 1 May 75
+3 15 June 80
+4 3 June 76
+5 14 July 89
+6 2 July 85
+Answer: C
+Question: 97
+The following SAS program is submitted:
+data WORK.ACCOUNTING;
+set WORK.DEPARTMENT;
+label Jobcode='Job Description';
+run;
+Which statement is true about the output dataset?
+A. The label of the variable Jobcode is Job (only the first word).
+B. The label of the variable Jobcode is Job Desc (only the first 8 characters).
+C. The label of the variable Jobcode is Job Description.
+D. The program fails to execute due to errors. Labels must be defined in a PROC step.
+Answer: C
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 44 of 57
+Question: 98
+Which is a valid LIBNAME statement?
+A. libname "_SAS_data_library_location_";
+B. sasdata libname "_SAS_data_library_location_";
+C. libname sasdata "_SAS_data_library_location_";
+D. libname sasdata sas "_SAS_data_library_location_";
+Answer: C
+Question: 99
+The following output is created by the FREQUENCY procedure:
+Which TABLES option(s) would be used to eliminate the row and column counts and just see the
+frequencies and percents?
+A. norowcount nocolcount
+B. freq percent
+C. norow nocol
+D. nocounts
+Answer: C
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 45 of 57
+Question: 100
+The Excel workbook QTR1.XLS contains the following three worksheets:
+JAN
+FEB
+MAR
+Which statement correctly assigns a library reference to the Excel workbook?
+A. libname qtrdata 'qtr1.xls';
+B. libname 'qtr1.xls' sheets=3;
+C. libname jan feb mar 'qtr1.xls';
+D. libname mydata 'qtr1.xls' WORK.heets=(jan,feb,mar);
+Answer: A
+Question: 101
+The following SAS program is submitted:
+ods csvall file='c:\test.cvs';
+proc print data=WORK.ONE;
+var Name Score Grade;
+by IdNumber;
+run;
+ods csvall close;
+What is produced as output?
+A. A file named test.cvs that can only be opened in Excel.
+B. A text file named test.cvs that can be opened in Excel or in any text editor.
+C. A text file named test.cvs that can only be opened in a text editor.
+D. A file named test.cvs that can only be opened by SAS.
+Answer: B
+Question: 102
+You're attempting to read a raw data file and you see the following messages
+displayed in the SAS Log:
+NOTE: Invalid data for Salary in line 4 15-23.
+RULE: ----+----1----+----2----+----3----+----4----+----5--
+4 120104 F 46#30 11MAY1954 33
+Employee_Id=120104 employee_gender=F Salary=. birth_date=-2061 _ERROR_=1 _N_=4
+NOTE: 20 records were read from the infile 'c:\employees.dat'.
+The minimum record length was 33.
+The maximum record length was 33.
+NOTE: The data set WORK.EMPLOYEES has 20 observations and 4 variables.
+What does it mean?
+A. A compiler error, triggered by an invalid character for the variable Salary.
+B. An execution error, triggered by an invalid character for the variable Salary.
+C. The 1st of potentially many errors, this one occurring on the 4th observation.
+D. An error on the INPUT statement specification for reading the variable Salary.
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 46 of 57
+Answer: B
+Question: 103
+The following SAS program is submitted:
+data WORK.TEST;
+drop City;
+infile datalines;
+input
+Name $ 1-14 /
+Address $ 1-14 /
+City $ 1-12 ;
+if City='New York ' then input @1 State $2.;
+else input;
+datalines;
+Joe Conley
+123 Main St.
+Janesville
+WI
+Jane Ngyuen
+555 Alpha Ave.
+New York
+NY Jennifer Jason
+666 Mt. Diablo
+Eureka
+CA ;
+What will the data set WORK.TEST contain?
+A. Name Address State
+-------------- ---------------- ------
+Joe Conley 123 Main St.
+Jane Ngyuen 555 Alpha Ave. NY
+Jennifer Jason 666 Mt. Diablo
+B. Name Address City State
+-------------- ---------------- ----------- ------
+Joe Conley 123 Main St. Janesville
+Jane Ngyuen 555 Alpha Ave. New York NY
+Jennifer Jason 666 Mt. Diablo Eureka
+C. Name Address State
+-------------- ---------------- ------
+Jane Ngyuen 555 Alpha Ave. NY
+D. O observations,
+there is a syntax error in the data step.
+Answer: A
+Question: 104
+Given the SAS data set WORK.ONE:
+Id Char1
+--- -----
+111 A
+158 B
+329 C
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 47 of 57
+644 D
+and the SAS data set WORK.TWO:
+Id Char2
+--- -----
+111 E
+538 F
+644 G
+The following program is submitted:
+data WORK.BOTH;
+set WORK.ONE WORK.TWO;
+by Id;
+run;
+What is the first observation in SAS data set WORK.BOTH?
+A. Id Char1 Char2
+--- ----- -----
+111 A
+B. Id Char1 Char2
+--- ----- -----
+111 E
+C. Id Char1 Char2
+--- ----- -----
+111 A E
+D. Id Char1 Char2
+--- ----- -----
+644 D G
+Answer: A
+Question: 105
+The following SAS program is submitted:
+data WORK.DATE_INFO;
+Day="01" ;
+Yr=1960 ;
+X=mdy(Day,01,Yr) ;
+run;
+What is the value of the variable X?
+A. the numeric value 0
+B. the character value "01011960"
+C. a missing value due to syntax errors
+D. the step will not compile because of the character argument in the mdy function.
+Answer: A
+Question: 106
+The following SAS program is submitted:
+data WORK.AUTHORS;
+array Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 48 of 57
+run;
+What is the value of the second variable in the dataset WORK.AUTHORS?
+A. Hemingway
+B. Hemingwa
+C. ' ' (a missing value)
+D. The program contains errors. No variables are created.
+Answer: B
+Question: 107
+The SAS data set Fed.Banks contains a variable Open_Date which has been assigned a
+permanent label of "Open Date". Which SAS program temporarily replaces the label "Open
+Date" with the label "Starting Date" in the output?
+A. proc print data=SASUSER.HOUSES label;
+label Open_Date "Starting Date";
+run;
+B. proc print data=SASUSER.HOUSES label;
+label Open_Date="Starting Date";
+run;
+C. proc print data=SASUSER.HOUSES;
+label Open_Date="Starting Date";
+run;
+D. proc print data=SASUSER.HOUSES;
+Open_Date="Starting Date";
+run;
+Answer: B
+Question: 108
+Consider the following data step:
+data WORK.NEW;
+set WORK.OLD(keep=X);
+if X < 10 then X=1;
+else if X >= 10 AND X LT 20 then X=2;
+else X=3;
+run;
+In filtering the values of the varibale X in data set WORK.OLD, what value new value would be
+assigned to X if its original value was a missing value?
+A. X would get a value of 1.
+B. X would get a value of 3.
+C. X would retain its original value of missing.
+D. This step does not run because of syntax errors.
+Answer: A
+Question: 09
+The following program is submitted:
+proc format;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 49 of 57
+value salfmt.
+0 -< 50000 = 'Less than 50K'
+50000 - high = '50K or Greater';
+options fmterr nodate pageno=1;
+title 'Employee Report';
+proc print data=work.employees noobs;
+var fullname salary hiredate;
+format
+salary salfmt.
+hiredate date9.;
+label
+fullname='Name of Employee'
+salary='Annual Salary'
+hiredate='Date of Hire';
+run;
+Why does the program fail?
+A. The PAGENO option is invalid in the OPTIONS statement.
+B. The RUN statement is missing after the FORMAT procedure.
+C. The format name contains a period in the VALUE statement.
+D. The LABEL option is missing from the PROC PRINT statement.
+Answer: C
+Question: 110
+Given the SAS data set WORK.PRODUCTS:
+ProdId Price ProductType Sales Returns
+--------- ------- ------ -------- ----- ----------
+K12S 95.50 OUTDOOR 15 2
+B132S 2.99 CLOTHING 300 10
+R18KY2 51.99 EQUIPMENT 25 5
+3KL8BY 6.39 OUTDOOR 125 15
+DY65DW 5.60 OUTDOOR 45 5
+DGTY23 34.55 EQUIPMENT 67 2
+The following SAS program is submitted:
+data WORK.OUTDOOR WORK.CLOTH WORK.EQUIP;
+set WORK.PRODUCTS;
+if Sales GT 30;
+if ProductType EQ 'OUTDOOR' then output WORK.OUTDOOR;
+else if ProductType EQ 'CLOTHING' then output WORK.CLOTH;
+else if ProductType EQ 'EQUIPMENT' then output WORK.EQUIP;
+run;
+How many observations does the WORK.OUTDOOR data set contain?
+A. 1
+B. 2
+C. 3
+D. 6
+Answer: B
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 50 of 57
+Question: 111
+Given the following raw data records in TEXTFILE.TXT:
+----|----10---|----20---|----30
+John,FEB,13,25,14,27,Final
+John,MAR,26,17,29,11,23,Current
+Tina,FEB,15,18,12,13,Final
+Tina,MAR,29,14,19,27,20,Current
+The following output is desired:
+Obs Name Month Status Week1 Week2 Week3 Week4 Week5
+1 John FEB Final $13 $25 $14 $27 .
+2 John MAR Current $26 $17 $29 $11 $23
+3 Tina FEB Final $15 $18 $12 $13 .
+4 Tina MAR Current $29 $14 $19 $27 $20
+Which SAS program correctly produces the desired output?
+A. data WORK.NUMBERS;
+length Name $ 4 Month $ 3 Status $ 7;
+infile 'TEXTFILE.TXT' dsd;
+input Name $ Month $;
+if Month='FEB' then input Week1 Week2 Week3 Week4 Status $;
+else if Month='MAR' then input Week1 Week2 Week3 Week4 Week5 Status $;
+format Week1-Week5 dollar6.;
+run;
+proc print data=WORK.NUMBERS;
+run;
+B. data WORK.NUMBERS;
+length Name $ 4 Month $ 3 Status $ 7;
+infile 'TEXTFILE.TXT' dlm=',' missover;
+input Name $ Month $;
+if Month='FEB' then input Week1 Week2 Week3 Week4 Status $;
+else if Month='MAR' then input Week1 Week2 Week3 Week4 Week5 Status $;
+format Week1-Week5 dollar6.;
+run;
+proc print data=WORK.NUMBERS;
+run;
+C. data WORK.NUMBERS;
+length Name $ 4 Month $ 3 Status $ 7;
+infile 'TEXTFILE.TXT' dlm=',';
+input Name $ Month $ @;
+if Month='FEB' then input Week1 Week2 Week3 Week4 Status $;
+else if Month='MAR' then input Week1 Week2 Week3 Week4 Week5 Status $;
+format Week1-Week5 dollar6.;
+run;
+proc print data=WORK.NUMBERS;
+run;
+D. data WORK.NUMBERS;
+length Name $ 4 Month $ 3 Status $ 7;
+infile 'TEXTFILE.TXT' dsd @;
+input Name $ Month $;
+if Month='FEB' then input Week1 Week2 Week3 Week4 Status $;
+else if Month='MAR' then input Week1 Week2 Week3 Week4 Week5 Status $;
+format Week1-Week5 dollar6.;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 51 of 57
+run;
+proc print data=WORK.NUMBERS;
+run;
+Answer: C
+Question: 112
+Given the SAS data set WORK.PRODUCTS:
+ProdId Price ProductType Sales Returns
+------ ---------- --------------- ------- ----------
+K12S 95.50 OUTDOOR 15 2
+B132S 2.99 CLOTHING 300 10
+R18KY2 51.99 EQUIPMENT 25 5
+3KL8BY 6.39 OUTDOOR 125 15
+DY65DW 5.60 OUTDOOR 45 5
+DGTY23 34.55 EQUIPMENT 67 2
+The following SAS program is submitted:
+data WORK.REVENUE(drop=Sales Returns Price);
+set WORK.PRODUCTS(keep=ProdId Price Sales Returns);
+Revenue=Price*(Sales-Returns);
+run;
+How many variables does the WORK.REVENUE data set contain?
+A. 2
+B. 3
+C. 4
+D. 6
+Answer: A
+Question: 113
+The following SAS program is submitted:
+data WORK.TOTAL_SALARY;
+retain Total;
+set WORK.SALARY;
+by Department;
+if First.Department
+then Total=0;
+Total=sum(Total, Wagerate);
+if Last.Total;
+run;
+What is the initial value of the variable Total in the following program?
+A. 0
+B. Missing
+C. The value of the first observations Wagerate
+D. Cannot be determined from the information given
+Answer: B
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 52 of 57
+Question: 114
+Consider the following data step:
+data WORK.NEW;
+set WORK.OLD;
+Count+1;
+run;
+The varaible Count is created using a sum statement. Which statement regarding this variable is
+true?
+A. It is assigned a value 0 when the data step begins execution.
+B. It is assigned a value of missing when the data step begins execution.
+C. It is assigned a value 0 at compile time.
+D. It is assigned a value of missing at compile time.
+Answer: C
+Question: 115
+The data set WORK.REALESTATE has the variable LocalFee with a format of 9. and a variable
+CountryFee with a format of 7.;
+The following SAS program is submitted:
+data WORK.FEE_STRUCTURE;
+format LocalFee CountryFee percent7.2;
+set WORK.REALESTAT;
+LocalFee=LocalFee/100;
+CountryFee=CountryFee/100;
+run;
+What are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?
+A. LocalFee has format of 9. and CountryFee has a format of 7.
+B. LocalFee has format of 9. and CountryFee has a format of percent7.2
+C. Both LocalFee and CountryFee have a format of percent7.2
+D. The data step fails execution; there is no format for LocalFee.
+Answer: C
+Question: 116
+Given the following raw data records:
+----|----10---|----20---|----30
+Susan*12/29/1970*10
+Michael**6
+The following output is desired:
+Obs employee bdate years
+1 Susan 4015 10
+2 Michael . 6
+Which SAS program correctly reads in the raw data?
+A. data employees;
+infile 'file specification' dlm='*';
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 53 of 57
+input employee $ bdate : mmddyy10. years;
+run;
+B. data employees;
+infile 'file specification' dsd='*';
+input employee $ bdate mmddyy10. years;
+run;
+C. data employees;
+infile 'file specification' dlm dsd;
+input employee $ bdate mmddyy10. years;
+run;
+D. data employees;
+infile 'file specification' dlm='*' dsd;
+input employee $ bdate : mmddyy10. years;
+run;
+Answer: D
+Question: 117
+Which of the following programs correctly invokes the DATA Step Debugger:
+A. data WORK.TEST debug;
+set WORK.PILOTS;
+State=scan(cityState,2,' ');
+if State='NE' then description='Central';
+run;
+B. data WORK.TEST debugger;
+set WORK.PILOTS;
+State=scan(cityState,2,' ');
+if State='NE' then description='Central';
+run;
+C. data WORK.TEST / debug;
+set WORK.PILOTS;
+State=scan(cityState,2,' ');
+if State='NE' then description='Central';
+run;
+D. data WORK.TEST / debugger;
+set WORK.PILOTS;
+State=scan(cityState,2,' ');
+if State='NE' then description='Central';
+run;
+Answer: C
+Question: 118
+Which step sorts the observations of a permanent SAS data set by two variables and stores the
+sorted observations in a temporary SAS data set?
+A. proc sort out=EMPLOYEES data=EMPSORT;
+by Lname and Fname;
+run;
+B. proc sort data=SASUSER.EMPLOYEES out=EMPSORT;
+by Lname Fname;
+run;
+C. proc sort out=SASUSER.EMPLOYEES data=WORK.EMPSORT;
+by Lname Fname;
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 54 of 57
+run;
+D. proc sort data=SASUSER.EMPLOYEES out=SASUSER.EMPSORT;
+by Lname and Fname;
+run;
+Answer: B
+Question: 119
+Consider the data step:
+data WORK.TEST;
+infile 'c:\class1.csv' dsd;
+input Name $ Sex $ Age Height Weight;
+if Age NE 16 and Age NE 15 then Group=1;
+else Group=2;
+Which of the following assignment statements for variable group are functionally equivalent to the
+original statement used in the above data step?
+A. if Age not in(15,16) then Group=1; else Group=2;
+B. if (Age NE 16) or (Age NE 15) then Group=1; else Group=2;
+C. where Age not between 15 and 16 then Group=1; else Group=2;
+D. both A or C will work.
+Answer: A
+Question: 120
+The following SAS program is submitted:
+data WORK.ACCOUNTING;
+set WORK.DEPARTMENT;
+length EmpId $6;
+CharEmpid=EmpId;
+run;
+If data set WORK.DEPARTMENT has a numeric variable EmpId. Which statement is true about
+the output dataset?
+A. The type of the variable CharEmpid is numeric.
+B. The type of the variable CharEmpid is unknown.
+C. The type of the variable CharEmpid is character.
+D. The program fails to execute due to errors.
+Answer: D
+Question: 121
+The following SAS program is submitted:
+data WORK.OUTDS;
+do until(Prod GT 6);
+Prod + 1;
+end;
+run;
+What is the value of the variable Prod in the output data set?
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 55 of 57
+A. . (missing)
+B. 6
+C. 7
+D. Undetermined, infinite loop.
+Answer: C
+Question: 122
+The following SAS program is submitted:
+data WORK.TOTAL;
+set WORK.SALARY;
+by Department Gender;
+if First.<_insert_code_> then Payroll=0;
+Payroll+Wagerate;
+if Last.<_insert_code_>;
+run;
+The SAS data set WORK.SALARY is currently ordered by Gender within Department. Which
+inserted code will accumulate subtotals for each Gender within Department?
+A. Gender
+B. Department
+C. Gender Department
+D. Department Gender
+Answer: A
+Question: 123
+Which step displays a listing of all the data sets in the WORK library?
+A. proc contents lib=WORK
+run;
+B. proc contents lib=WORK.all;
+run;
+C. proc contents data=WORK._all_;
+run;
+D. proc contents data=WORK _ALL_;
+run;
+Answer: C
+Question: 124
+Given the SAS data set WORK.ORDERS:
+WORK.ORDERS
+order_id customer shipped
+---------- ------------ -----------
+9341 Josh Martin 02FEB2009
+9874 Rachel Lords 14MAR2009
+10233 Takashi Sato 07JUL2009
+The variable order_id is numeric; customer is character; and shipped is numeric, contains a SAS
+date value, and is shown with the DATE9. format. A programmer would like to create a new
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 56 of 57
+variable, ship_note, that shows a character value with the order_id, shipped date, and customer
+name. For example, given the first observation ship_note would have the value "Order 9341
+shipped on 02FEB2009 to Josh Martin".
+Which of the following statement will correctly create the value and assign it to ship_note?
+A. ship_note=catx(' ','Order',order_id,'shipped on',input(shipped,date9.),'to',customer);
+B. ship_note=catx(' ','Order',order_id,'shipped on',char(shipped,date9.),'to',customer);
+C. ship_note=catx(' ','Order',order_id,'shipped on',transwrd(shipped,date9.),'to',customer);
+D. ship_note=catx(' ','Order',order_id,'shipped on',put(shipped,date9.),'to',customer);
+Answer: D
+Question: 125
+After a SAS program is submitted, the following is written to the SAS log:
+105 data WORK.JANUARY;
+106 set WORK.ALLYEAR(keep=Product Month Quantity Cost);
+107 if Month='JAN' then output WORK.JANUARY;
+108 Sales=Cost * Quantity;
+109 drop=Month Quantity Cost;
+-----
+22
+ERROR 22-322: Syntax error, expecting one of the following: !,
+!!, , *, **, +, -,
+, <=, <>, =, >, >=,
+AND, EQ, GE, GT, IN, LE, LT, MAX, MIN, NE, NG, NL,
+NOTIN, OR, ^=, |, ||, ~=.
+110 run;
+What data set option could be attached to WORK.JANUARY to replace the DROP statement that
+generated the error in the log?
+A. (drop Month Quantity Cost)
+B. (drop Month, Quantity, Cost)
+C. (drop=Month, Quantity, Cost)
+D. (drop=Month Quantity Cost)
+Answer: A
+Question: 126
+Consider the following data step:
+data WORK.TEST;
+set SASHELP.CLASS(obs=5);
+retain City 'Beverly Hills';
+State='California';
+run;
+The computed variables City and State have their values assigned using two different methods, a
+RETAIN statement and an Assignment statement. Which statement regarding this program is
+true?
+A. The RETAIN statement is fine, but the value of City will be truncated to 8 bytes as the
+LENGTH statement has been omitted.
+Exam Name: SAS Base Programming for SAS (r) 9
+Exam Type: SAS
+Exam Code: A00-211 Total Questions: 127
+Page 57 of 57
+B. Both the RETAIN and assignment statement are being used to initialize new variables and are
+equally efficient. Method used is a matter of programmer preference.
+C. The assignment statement is fine, but the value of City will be truncated to 8 bytes as the
+LENGTH statement has been omitted.
+D. City's value will be assigned one time, State's value 5 times.
+Answer: D
+Question: 127
+Given the SAS data set WORK.ONE:
+Obs Revenue2008 Revenue2009 Revenue2010
+--- ---------------- ---------------- ----------------
+1 1.2 1.6 2.0
+The following SAS program is submitted:
+data WORK.TWO;
+set WORK.ONE;
+Total=mean(of Rev:);
+run;
+What value will SAS assign to Total?
+A. 3
+B. 1.6
+C. 4.8
+D. The program fails to execute due to errors.
+Answer: B
+End of Document

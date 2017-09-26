@@ -1020,10 +1020,6 @@ Which one of the following SAS DATA steps saves the temporary data set named MYD
 permanent data set?
 A. libname sasdata ‘SAS-data-Iibrary’;
 data sasdata.mydata; copy mydata; run;
-Exam Name: SAS base programming exam
-Exam Type: SAS Institute
-Exam Code: A00-201 Total Questions: 140
-Page 25 of 59
 B. libname sasdata ‘SAS-data-Iibrary’; data sasdata.mydata;
 keep mydata; run;
 C. libname sasdata ‘SAS-data-Iibrary’; data sasdata.mydata;
@@ -1685,13 +1681,13 @@ A. proc print data = sasuser.houses;
 where price It 60000;
 where price gt 100000;
 run;
-A. proc print data = sasuser.houses;
+B. proc print data = sasuser.houses;
 where price It 60000 or price gt 100000;
 run;
-A. proc print data = sasuser.houses;
+C. proc print data = sasuser.houses;
 where price It 60000 and price gt 100000;
 run;
-A. proc print data = sasuser.houses;
+D. proc print data = sasuser.houses;
 where price It 60000 or where price gt 100000;
 run;
 Answer: C
@@ -1711,10 +1707,10 @@ Exam Type: SAS Institute
 Exam Code: A00-201 Total Questions: 140
 Page 41 of 59
 Which one of the following statements explains why the program failed execution?
-The SORT procedures contain invalid syntax.
-The merged data sets are not permanent SAS data sets.
-The data sets were not merged in the order by which they were sorted.
-The RUN statements were omitted after each of the SORT procedures.
+A. The SORT procedures contain invalid syntax.
+B. The merged data sets are not permanent SAS data sets.
+C. The data sets were not merged in the order by which they were sorted.
+D. The RUN statements were omitted after each of the SORT procedures.
 Answer: C
 Question: 98
 The following SAS program is submitted:
@@ -1975,10 +1971,10 @@ if style = ‘CONDO’ or style = ‘RANCH’;
 input sqfeet bedrooms baths street $ price : dollar10.;
 run;
 How many observations will the output data set contain?
-0
-3
-5
-7
+A. 0
+B. 3
+C. 5
+D. 7
 Answer: B
 Question: 113
 The following SAS program is submitted:
@@ -2010,10 +2006,10 @@ Page 49 of 59
 run;
 Which one of the following statements completes the program above and computes the duration
 of the project in days as of today’s date?
-duration = today( ) - put(date,ddmmyy10.);
-duration = today( ) - put(date,yymmdd10.);
-duration = today( ) - input(date,ddmmyy10.);
-duration = today( ) - input(date,yymmdd10.);
+A. duration = today( ) - put(date,ddmmyy10.);
+B. duration = today( ) - put(date,yymmdd10.);
+C. duration = today( ) - input(date,ddmmyy10.);
+D. duration = today( ) - input(date,yymmdd10.);
 Answer: D
 Question: 115
 In the following SAS program, the input data files are sorted by the NAMES variable:
@@ -2124,10 +2120,10 @@ end;
 run;
 Which one of the following DO statements completes the program and processes the elements of
 the WEEKLY array?
-do I = 1 to 5;
-do weekly{i) = 1 to 5;
-do i = mon tue wed thu fri;
-A DO loop cannot be used because the variables referenced do not end in a digit.
+A. do I = 1 to 5;
+B. do weekly{i) = 1 to 5;
+C. do i = mon tue wed thu fri;
+D. A DO loop cannot be used because the variables referenced do not end in a digit.
 Answer: A
 Question: 122
 The following SAS program is submitted:

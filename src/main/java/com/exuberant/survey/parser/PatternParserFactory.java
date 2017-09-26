@@ -1,19 +1,19 @@
-package com.exuberant.survey.service;
+package com.exuberant.survey.parser;
 
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by rakesh on 23-Sep-2017.
- */
 public class PatternParserFactory {
 
     private static Map<String, PatternParser> patternParsersForFile = new HashMap<>();
 
     static {
-        patternParsersForFile.put("A00-211qa204-20170130-17520396.txt", getFirstPatternParser());
-        patternParsersForFile.put("1A00-201-Q&A-CertMagic-20170130-175206262.txt", getSecondPatternParser());
-        patternParsersForFile.put("A00-201-Fx-20170130-175207599.txt", getThirdPatternParser());
+        patternParsersForFile.put("Q1-A00-211qa204-20170130-17520396.txt", getFirstPatternParser());
+        patternParsersForFile.put("Q2-1A00-201-Q&A-CertMagic-20170130-175206262.txt", getSecondPatternParser());
+        patternParsersForFile.put("Q3-A00-201-Fx-20170130-175207599.txt", getThirdPatternParser());
+        patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
+        patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
+        patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
     }
 
     public static PatternParser getPatternParser(String fileName){
@@ -38,7 +38,6 @@ public class PatternParserFactory {
     private static PatternParser getThirdPatternParser(){
         String newQuestionRegex = "^Question:\\s\\d+";
         String optionRegex = "^[A-D][.]\\s.*";
-        //language=RegExp
         String answerRegex = "^Answer. .*";
         return new CommonPatternParser(newQuestionRegex, optionRegex, answerRegex);
     }
