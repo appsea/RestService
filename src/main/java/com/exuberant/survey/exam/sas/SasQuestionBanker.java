@@ -4,6 +4,7 @@ import com.exuberant.survey.QuestionBank;
 import com.exuberant.survey.exam.question.QuestionBanker;
 import com.exuberant.survey.model.Question;
 import com.exuberant.survey.parser.QuestionParser;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,6 +13,7 @@ import java.util.List;
 /**
  * Created by rakesh on 26-Sep-2017.
  */
+@Service
 public class SasQuestionBanker implements QuestionBanker {
     private final QuestionParser questionParser;
 

@@ -51,4 +51,8 @@ public class Options {
     public boolean isCorrect(String[] answers) {
         return this.giveCorrectAnswers().stream().map(answer -> answer.getTag()).collect(Collectors.toList()).containsAll(Arrays.asList(answers));
     }
+
+    public List<Option> getOptions() {
+        return options;
+    }
 }

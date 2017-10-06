@@ -2,6 +2,7 @@ package com.exuberant.survey.parser;
 
 import com.exuberant.survey.QuestionBank;
 import com.exuberant.survey.model.Question;
+import org.springframework.stereotype.Service;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -13,6 +14,7 @@ import java.util.Set;
 /**
  * Created by rakesh on 22-Sep-2017.
  */
+@Service
 public class QuestionParser {
 
     private PatternParser patternParser;

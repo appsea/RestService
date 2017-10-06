@@ -22,6 +22,10 @@ public class Question {
         return options;
     }
 
+    public String getQuestion() {
+        return question.toString();
+    }
+
     public Question(String fileName, String questionNumber) {
         this.fileName = fileName;
         this.number = questionNumber;
