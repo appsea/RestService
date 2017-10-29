@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
 
-@Slf4j
 @RestController
 @RequestMapping("/bookmyflights")
 public class BookMyFlightController {
