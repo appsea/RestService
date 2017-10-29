@@ -2,6 +2,8 @@ package com.exuberant.survey.parser;
 
 import com.exuberant.survey.QuestionBank;
 import com.exuberant.survey.model.Question;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
 import java.nio.file.Files;
@@ -17,6 +19,8 @@ import java.util.Set;
 @Service
 public class QuestionParser {
 
+    public static final Log log = LogFactory.getLog(QuestionParser.class);
+    
     private PatternParser patternParser;
 
     private List<Question> failedQuestions = new ArrayList<>();
@@ -83,7 +87,7 @@ public class QuestionParser {
 
     public void showIgnoredLines() {
         for (String ignoredLine : ignoredLines) {
-            System.err.println(ignoredLine);
+            log.info(ignoredLine);
         }
     }
 }

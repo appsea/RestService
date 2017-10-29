@@ -1,9 +1,15 @@
 package com.exuberant.survey.model;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  * Created by rakesh on 22-Sep-2017.
  */
 public class Option implements Comparable<Option> {
+
+    public static final Log log = LogFactory.getLog(Option.class);
+
     private String tag = "";
     private String description;
     private boolean isCorrect;
@@ -19,7 +25,7 @@ public class Option implements Comparable<Option> {
         }else if(description.startsWith("D.")){
             this.tag = "D";
         }else {
-            System.err.println("Received Invalid Description: " + description);
+            log.info("Received Invalid Description: " + description);
         }
     }
 

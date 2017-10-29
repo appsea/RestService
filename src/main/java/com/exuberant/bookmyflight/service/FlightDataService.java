@@ -9,4 +9,6 @@ import java.util.Collection;
  */
 public interface FlightDataService {
     Collection<Flight> getFlights();
+
+    Flight saveFlight(Flight flight);
 }

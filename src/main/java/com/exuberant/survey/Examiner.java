@@ -2,6 +2,8 @@ package com.exuberant.survey;
 
 import com.exuberant.survey.model.Question;
 import com.exuberant.survey.service.PaperSetter;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.util.HashSet;
 import java.util.List;
@@ -12,6 +14,8 @@ import java.util.Set;
  * Created by rakesh on 26-Sep-2017.
  */
 public class Examiner {
+
+    public static final Log log = LogFactory.getLog(Examiner.class);
 
     private final PaperSetter paperSetter;
 
@@ -29,8 +33,8 @@ public class Examiner {
         int count = 1;
         Scanner scanner = new Scanner(System.in);
         for (Question question : questionPaper) {
-            System.err.println("Question Number: " + count++ + " of " + questionPaper.size());
-            System.err.println(question);
+            log.info("Question Number: " + count++ + " of " + questionPaper.size());
+            log.info(question);
             String answer = scanner.nextLine();
             question.setSubmittedAnswer(answer);
         }
@@ -47,11 +51,11 @@ public class Examiner {
             }
         }
         for (Question wrongAnsweredQuestion : wrongAnsweredQuestions) {
-            System.err.println("Question: " + wrongAnsweredQuestion);
-            System.err.println("You Answered: " + wrongAnsweredQuestion.getSubmittedAnswer());
-            System.err.println("Correct Answer: " + wrongAnsweredQuestion.getAnswer() + "\n");
+            log.info("Question: " + wrongAnsweredQuestion);
+            log.info("You Answered: " + wrongAnsweredQuestion.getSubmittedAnswer());
+            log.info("Correct Answer: " + wrongAnsweredQuestion.getAnswer() + "\n");
         }
-        System.out.println("Answered " + correctAnsweredQuestions.size() + " correctly!!!");
-        System.out.println("Following questions were wrongly answered: Total " + wrongAnsweredQuestions.size());
+        log.info("Answered " + correctAnsweredQuestions.size() + " correctly!!!");
+        log.info("Following questions were wrongly answered: Total " + wrongAnsweredQuestions.size());
     }
 }

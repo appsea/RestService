@@ -8,7 +8,8 @@ import java.time.LocalDate;
 public class Flight {
     private int id;
     private String name;
-    private LocalDate date;
+    /*@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSz")
+    private LocalDate date;*/
     private String time;
     private String from;
     private String to;
@@ -22,7 +23,7 @@ public class Flight {
     public Flight(int id, String name, LocalDate date, String time, String from, String to, String imageUrl, String onlineUrl, Location location) {
         this.id = id;
         this.name = name;
-        this.date = date;
+      //  this.date = date;
         this.time = time;
         this.from = from;
         this.to = to;
@@ -47,14 +48,14 @@ public class Flight {
         this.name = name;
     }
 
-    public LocalDate getDate() {
+    /*public LocalDate getDate() {
         return date;
     }
 
     public void setDate(LocalDate date) {
         this.date = date;
     }
-
+*/
     public String getTime() {
         return time;
     }

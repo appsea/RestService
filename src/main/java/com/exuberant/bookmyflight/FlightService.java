@@ -15,4 +15,8 @@ public class FlightService {
     public Collection<Flight> getFlights() {
         return flightDataService.getFlights();
     }
+
+    public Flight saveFlight(Flight flight) {
+        return flightDataService.saveFlight(flight);
+    }
 }

@@ -1,5 +1,8 @@
 package com.exuberant.survey.model;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -8,6 +11,9 @@ import java.util.Collection;
  * Created by rakesh on 22-Sep-2017.
  */
 public class Question {
+
+    public static final Log log = LogFactory.getLog(Question.class);
+    
     private String fileName;
     private String number;
     private StringBuilder question = new StringBuilder();
@@ -102,14 +108,14 @@ public class Question {
 
     public void printWaste() {
         if (waste.size() > 0) {
-            System.err.println("File Name: " + fileName + ", " + number);
+            log.info("File Name: " + fileName + ", " + number);
             for (Object o : waste) {
-                System.err.println(o);
+                log.info(o);
             }
         }
         if (exception != null) {
-            System.err.println("File Name: " + fileName + ", " + number);
-            System.err.println("Exception: " + exception.getMessage());
+            log.info("File Name: " + fileName + ", " + number);
+            log.info("Exception: " + exception.getMessage());
         }
     }
 

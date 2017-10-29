@@ -2,11 +2,14 @@ package com.exuberant.bookmyflight.service;
 
 import com.exuberant.bookmyflight.model.Flight;
 import com.exuberant.bookmyflight.model.Location;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Created by rakesh on 23-Oct-2017.
@@ -14,7 +17,9 @@ import java.util.Collection;
 @Service
 public class CacheFlightDataService implements FlightDataService{
 
-    private Collection<Flight> flights = new ArrayList<>();
+    public static final Log log = LogFactory.getLog(CacheFlightDataService.class);
+
+    private List<Flight> flights = new ArrayList<>();
 
     public Collection<Flight> getFlights(){
         if(flights.size()==0){
@@ -24,5 +29,14 @@ public class CacheFlightDataService implements FlightDataService{
             flights.add(new Flight(4, "Virgin Airlines",LocalDate.now(), "8 PM", "EDN", "FRA", "/app/assets/images/ng-nl.png", "/app/assets/images/ng-nl.png", new Location("Nature Park", "Berlin", "Germany")));
         }
         return flights;
+    }
+
+    @Override
+    public Flight saveFlight(Flight flight) {
+        Integer maxId = flights.stream().reduce((first, second) -> first.getId() > second.getId() ? first : second).map(f -> f.getId()).orElse(0);
+        flight.setId(++maxId);
+        log.info("Adding Flight:" + flight);
+        flights.add(flight);
+        return flight;
     }
 }
