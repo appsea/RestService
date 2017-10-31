@@ -7,4 +7,6 @@ import java.util.List;
 public interface PaperSetter {
 
     List<Question> buildQuestionPaper() throws Exception;
+
+    Question pollNextQuestion();
 }

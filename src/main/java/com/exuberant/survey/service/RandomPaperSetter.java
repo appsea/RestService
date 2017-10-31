@@ -12,20 +12,27 @@ import java.util.*;
 @Service
 public class RandomPaperSetter implements PaperSetter {
     public static int questionCount = 2;
+    private Random random = new Random();
     private final QuestionBanker questionBanker;
+    private List<Question> questions;
 
-    public RandomPaperSetter(QuestionBanker questionBanker) {
+    public RandomPaperSetter(QuestionBanker questionBanker) throws Exception {
         this.questionBanker = questionBanker;
+        this.questions = questionBanker.getAllQuestions();
     }
 
     @Override
     public List<Question> buildQuestionPaper() throws Exception {
-        List<Question> questions = questionBanker.getAllQuestions();
-        Random random = new Random();
         Set<Question> questionPaper = new HashSet<>();
         while (questionPaper.size() < questionCount) {
             questionPaper.add(questions.get(random.nextInt(questions.size())));
         }
         return new ArrayList<>(questionPaper);
+    }
+
+    @Override
+    public Question pollNextQuestion() {
+        Question question = questions.get(random.nextInt(questions.size()));
+        return question;
     }
 }
