@@ -8,7 +8,8 @@ import java.util.regex.Pattern;
  */
 public class CommonPatternParser implements PatternParser {
 
-    public static final String IGNORE_REGEX = "^\\s*Exam Name:.*|^\\s*Exam Type:.*|^\\s*Exam Code:.*|^\\s*Page\\s[0-9]+ of []0-9]+|[0-9]|[1-9][0-9]+|A00-211|^.*\\b(http://www.certmagic.com)\\b.*$";
+    public static final String IGNORE_REGEX = "^\\s*Exam Name:.*|^\\s*Exam Type:.*|^\\s*Exam Code:.*|^\\s*Page\\s[0-9]+ of []0-9]+|[0-9]|[1-9][0-9]+|A00-211|A00-201|Question: [0-9]+|QUESTION NO: [0-9]+|^.*\\b(http://www.certmagic.com)\\b.*$";
+    public static final String reg = "Question: [0-9]+";
     private final String extractQuestionRegex;
     private Pattern newQuestionPattern;
     private Pattern extractQuestionPattern;
@@ -25,8 +26,8 @@ public class CommonPatternParser implements PatternParser {
     }
 
     public CommonPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex, String ignoreRegex) {
-        this.extractQuestionRegex = extractQuestionRegex;
         newQuestionPattern = Pattern.compile(newQuestionRegex);
+        this.extractQuestionRegex = extractQuestionRegex;
         extractQuestionPattern = Pattern.compile(extractQuestionRegex);
         optionPattern = Pattern.compile(optionRegex);
         answerPattern = Pattern.compile(answerRegex);
@@ -54,7 +55,7 @@ public class CommonPatternParser implements PatternParser {
     @Override
     public String stripQuestionNumber(String line) {
         Matcher matcher = extractQuestionPattern.matcher(line);
-        return matcher.find()?line.replaceAll(extractQuestionRegex+"."+"\\s", ""):line;
+        return matcher.replaceAll("");
     }
 
     @Override

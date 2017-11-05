@@ -5,6 +5,7 @@ import com.exuberant.survey.model.Question;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -36,12 +37,14 @@ public class QuestionParser {
         boolean hasOptionStarted = false;
         for (String line : lines) {
             try {
-                if (!patternParser.ignoreLine(line)) {
+                if (!patternParser.ignoreLine(line)||patternParser.isNewQuestion(line)) {
                     if (patternParser.isNewQuestion(line)) {
                         String questionNumber = patternParser.extractQuestionNumber(line);
                         question = new Question(fileName, questionNumber);
                         String questionString = patternParser.stripQuestionNumber(line);
-                        question.appendQuestion(questionString);
+                        if(!StringUtils.isEmpty(questionString)){
+                            question.appendQuestion(questionString.trim());
+                        }
                         hasOptionStarted = false;
                         previousOptionLine = new StringBuilder();
                     } else if (question != null) {

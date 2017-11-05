@@ -20,7 +20,7 @@ public class PatternParserFactory {
         return patternParsersForFile.get(fileName);
     }
 
-    private static PatternParser getFirstPatternParser(){
+    public static PatternParser getFirstPatternParser(){
         String newQuestionRegex = "^QUESTION NO:.*";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer. .*";
@@ -29,7 +29,8 @@ public class PatternParserFactory {
 
     private static PatternParser getSecondPatternParser() {
         String newQuestionRegex = "^[0-9]+[.]\\s.*";
-        String extractQuestionRegex = "^[0-9]+";
+        //language=RegExp
+        String extractQuestionRegex = "^[0-9]+.";
         String optionRegex = "^[A-D].\\s.*";
         String answerRegex = "^Answer. .*";
         return new CommonPatternParser(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex);
