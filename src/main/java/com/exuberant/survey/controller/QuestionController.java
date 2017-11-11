@@ -31,7 +31,7 @@ public class QuestionController {
     }
 
 
-  //  @PreAuthorize("hasRole('USER')")
+    //@PreAuthorize("hasRole('USER')")
     @CrossOrigin(origins = "http://localhost:8808")
     @RequestMapping(path="/nextquestion", method = RequestMethod.GET)
     public Question nextQuestion() throws Exception {
