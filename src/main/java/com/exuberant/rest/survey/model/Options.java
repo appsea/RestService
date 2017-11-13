@@ -26,7 +26,7 @@ public class Options {
         return options.stream().filter(option -> option.isCorrect()).collect(Collectors.toList());
     }
 
-    public int size(){
+    public int size() {
         return options.size();
     }
 

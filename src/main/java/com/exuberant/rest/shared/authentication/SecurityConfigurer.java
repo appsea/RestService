@@ -2,9 +2,11 @@ package com.exuberant.rest.shared.authentication;
 
 import com.exuberant.rest.shared.authentication.mongo.MongoAuthenticationManager;
 import com.exuberant.rest.shared.authentication.mongo.MongoAuthenticationProvider;
+import com.exuberant.rest.survey.config.SurveyConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -21,6 +23,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
+@Import(SurveyConfiguration.class)
 public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Autowired

@@ -16,15 +16,15 @@ public class Option implements Comparable<Option> {
 
     public Option(String description) {
         this.description = description;
-        if(description.startsWith("A.")){
+        if (description.startsWith("A.")) {
             this.tag = "A";
-        }else if(description.startsWith("B.")){
+        } else if (description.startsWith("B.")) {
             this.tag = "B";
-        }else if(description.startsWith("C.")){
+        } else if (description.startsWith("C.")) {
             this.tag = "C";
-        }else if(description.startsWith("D.")){
+        } else if (description.startsWith("D.")) {
             this.tag = "D";
-        }else {
+        } else {
             log.info("Received Invalid Description: " + description);
         }
     }

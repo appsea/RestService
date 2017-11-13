@@ -21,11 +21,9 @@ import java.util.Set;
 public class QuestionParser {
 
     public static final Log log = LogFactory.getLog(QuestionParser.class);
-    
-    private PatternParser patternParser;
-
-    private List<Question> failedQuestions = new ArrayList<>();
     public static final Set<String> ignoredLines = new HashSet<>();
+    private PatternParser patternParser;
+    private List<Question> failedQuestions = new ArrayList<>();
 
     public List<Question> parse(QuestionBank questionBank) throws Exception {
         List<Question> questions = new ArrayList<>();
@@ -37,12 +35,12 @@ public class QuestionParser {
         boolean hasOptionStarted = false;
         for (String line : lines) {
             try {
-                if (!patternParser.ignoreLine(line)||patternParser.isNewQuestion(line)) {
+                if (!patternParser.ignoreLine(line) || patternParser.isNewQuestion(line)) {
                     if (patternParser.isNewQuestion(line)) {
                         String questionNumber = patternParser.extractQuestionNumber(line);
                         question = new Question(fileName, questionNumber);
                         String questionString = patternParser.stripQuestionNumber(line);
-                        if(!StringUtils.isEmpty(questionString)){
+                        if (!StringUtils.isEmpty(questionString)) {
                             question.appendQuestion(questionString.trim());
                         }
                         hasOptionStarted = false;

@@ -1,17 +1,20 @@
 package com.exuberant.rest.shared.authentication;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+
 /**
  * Created by rakesh on 04-Nov-2017.
  */
 @Service
-public class CacheUserService implements UserService{
+public class CacheUserService implements UserService {
 
     @Autowired
     private CacheUserRepository cacheUserRepository;
@@ -33,6 +36,11 @@ public class CacheUserService implements UserService{
     @Override
     public void logout() {
 
+    }
+
+    @Override
+    public Collection<GrantedAuthority> getAuthorities(String userId) {
+        return cacheUserRepository.getAuthorities(userId);
     }
 
     @Override

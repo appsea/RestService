@@ -14,7 +14,7 @@ import java.util.Collection;
 public class BookMyFlightController {
 
     public static final Log log = LogFactory.getLog(BookMyFlightController.class);
-    
+
     @Autowired
     private FlightService flightService;
 
@@ -29,7 +29,7 @@ public class BookMyFlightController {
     @RequestMapping(path = "/flights/{id}", produces = "application/json; charset=UTF-8")
     public Flight flights(@PathVariable int id) throws Exception {
         log.info("Getting flight for id: " + id);
-        return flightService.getFlights().stream().filter(flight->flight.getId()== id).findFirst().orElse(null);
+        return flightService.getFlights().stream().filter(flight -> flight.getId() == id).findFirst().orElse(null);
     }
 
     @CrossOrigin(origins = "http://localhost:8808")

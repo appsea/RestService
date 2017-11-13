@@ -12,8 +12,8 @@ import java.util.*;
 @Service
 public class RandomPaperSetter implements PaperSetter {
     public static int questionCount = 2;
-    private Random random = new Random();
     private final QuestionBanker questionBanker;
+    private Random random = new Random();
     private List<Question> questions;
 
     public RandomPaperSetter(QuestionBanker questionBanker) throws Exception {

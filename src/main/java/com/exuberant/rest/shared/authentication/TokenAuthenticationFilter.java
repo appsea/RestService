@@ -1,9 +1,13 @@
 package com.exuberant.rest.shared.authentication;
 
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
+import org.springframework.stereotype.Component;
 import org.springframework.web.filter.GenericFilterBean;
 
 import javax.servlet.FilterChain;
@@ -12,9 +16,19 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
-import java.util.Arrays;
 
+import static com.exuberant.rest.util.Constants.SUB;
+
+@Component
 public class TokenAuthenticationFilter extends GenericFilterBean {
+
+    public static final Log log = LogFactory.getLog(TokenAuthenticationFilter.class);
+
+    @Autowired
+    private JwtConfig jwtConfig;
+
+    @Autowired
+    private UserService userService;
 
     @Override
     public void doFilter(final ServletRequest request, final ServletResponse response, final FilterChain chain)
@@ -22,22 +36,13 @@ public class TokenAuthenticationFilter extends GenericFilterBean {
         final HttpServletRequest httpRequest = (HttpServletRequest) request;
 
         //extract token from header
-        final String accessToken = httpRequest.getHeader("sub");
+        final String accessToken = httpRequest.getHeader(SUB);
         if (null != accessToken) {
-            System.err.println("Found Token!!!" + accessToken);
-            //get and check whether token is valid ( from DB or file wherever you are storing the token)
-
-            //Populate SecurityContextHolder by fetching relevant information using token
-            final User user = new User(
-                    "user",
-                    "password",
-                    true,
-                    true,
-                    true,
-                    true,
-                    Arrays.asList(new SimpleGrantedAuthority("USER")));
+            Jws<Claims> claims = jwtConfig.decode(accessToken);
+            String userId = claims.getBody().get(SUB).toString();
+            log.info("User logged in with token: " + userId);
             final UsernamePasswordAuthenticationToken authentication =
-                    new UsernamePasswordAuthenticationToken(user, null, user.getAuthorities());
+                    new UsernamePasswordAuthenticationToken(userId, null, userService.getAuthorities(userId));
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
 

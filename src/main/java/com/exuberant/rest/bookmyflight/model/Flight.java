@@ -23,7 +23,7 @@ public class Flight {
     public Flight(int id, String name, LocalDate date, String time, String from, String to, String imageUrl, String onlineUrl, Location location) {
         this.id = id;
         this.name = name;
-      //  this.date = date;
+        //  this.date = date;
         this.time = time;
         this.from = from;
         this.to = to;

@@ -30,9 +30,9 @@ public class QuestionController {
         return paperSetter.buildQuestionPaper();
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasRole('USER')")
     @CrossOrigin(origins = "http://localhost:8808")
-    @RequestMapping(path="/nextquestion", method = RequestMethod.GET)
+    @RequestMapping(path = "/nextquestion", method = RequestMethod.GET)
     public Question nextQuestion() throws Exception {
         log.info("Next Question...");
         return paperSetter.pollNextQuestion();

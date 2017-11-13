@@ -11,11 +11,11 @@ public class CommonPatternParser implements PatternParser {
     public static final String IGNORE_REGEX = "^\\s*Exam Name:.*|^\\s*Exam Type:.*|^\\s*Exam Code:.*|^\\s*Page\\s[0-9]+ of []0-9]+|[0-9]|[1-9][0-9]+|A00-211|A00-201|Question: [0-9]+|QUESTION NO: [0-9]+|^.*\\b(http://www.certmagic.com)\\b.*$";
     public static final String reg = "Question: [0-9]+";
     private final String extractQuestionRegex;
+    private final Pattern ignorePattern;
     private Pattern newQuestionPattern;
     private Pattern extractQuestionPattern;
     private Pattern optionPattern;
     private Pattern answerPattern;
-    private final Pattern ignorePattern;
 
     public CommonPatternParser(String newQuestionRegex, String optionRegex, String answerRegex) {
         this(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX);
@@ -49,7 +49,7 @@ public class CommonPatternParser implements PatternParser {
     @Override
     public String extractQuestionNumber(String line) {
         Matcher matcher = extractQuestionPattern.matcher(line);
-        return matcher.find()?matcher.group():line;
+        return matcher.find() ? matcher.group() : line;
     }
 
     @Override

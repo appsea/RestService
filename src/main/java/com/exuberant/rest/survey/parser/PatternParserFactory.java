@@ -16,11 +16,11 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
     }
 
-    public static PatternParser getPatternParser(String fileName){
+    public static PatternParser getPatternParser(String fileName) {
         return patternParsersForFile.get(fileName);
     }
 
-    public static PatternParser getFirstPatternParser(){
+    public static PatternParser getFirstPatternParser() {
         String newQuestionRegex = "^QUESTION NO:.*";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer. .*";
@@ -36,7 +36,7 @@ public class PatternParserFactory {
         return new CommonPatternParser(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex);
     }
 
-    private static PatternParser getThirdPatternParser(){
+    private static PatternParser getThirdPatternParser() {
         String newQuestionRegex = "^Question:\\s\\d+";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer. .*";

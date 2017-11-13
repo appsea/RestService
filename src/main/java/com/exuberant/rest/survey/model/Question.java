@@ -13,7 +13,7 @@ import java.util.Collection;
 public class Question {
 
     public static final Log log = LogFactory.getLog(Question.class);
-    
+
     private String fileName;
     private String number;
     private StringBuilder question = new StringBuilder();
@@ -24,17 +24,17 @@ public class Question {
     private String submittedAnswer = new String();
     private Collection<Object> waste = new ArrayList<>();
 
+    public Question(String fileName, String questionNumber) {
+        this.fileName = fileName;
+        this.number = questionNumber;
+    }
+
     public Options getOptions() {
         return options;
     }
 
     public String getQuestion() {
         return question.toString();
-    }
-
-    public Question(String fileName, String questionNumber) {
-        this.fileName = fileName;
-        this.number = questionNumber;
     }
 
     public boolean isComplete() {
@@ -75,6 +75,10 @@ public class Question {
         return answer;
     }
 
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
     public void appendQuestion(String question) {
         this.question.append(question).append("\n");
     }
@@ -96,14 +100,6 @@ public class Question {
 
     public void setException(Exception exception) {
         this.exception = exception;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
-    public void setSubmittedAnswer(String submittedAnswer) {
-        this.submittedAnswer = submittedAnswer != null ? submittedAnswer.toUpperCase() : "";
     }
 
     public void printWaste() {
@@ -143,5 +139,9 @@ public class Question {
 
     public String getSubmittedAnswer() {
         return submittedAnswer;
+    }
+
+    public void setSubmittedAnswer(String submittedAnswer) {
+        this.submittedAnswer = submittedAnswer != null ? submittedAnswer.toUpperCase() : "";
     }
 }

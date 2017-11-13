@@ -17,7 +17,7 @@ import java.util.List;
 public class SasQuestionBanker implements QuestionBanker {
     private final QuestionParser questionParser;
 
-    public SasQuestionBanker(QuestionParser questionParser){
+    public SasQuestionBanker(QuestionParser questionParser) {
         this.questionParser = questionParser;
     }
 
