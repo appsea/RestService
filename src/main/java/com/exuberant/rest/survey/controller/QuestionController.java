@@ -5,7 +5,6 @@ import com.exuberant.rest.survey.service.PaperSetter;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,7 +29,7 @@ public class QuestionController {
         return paperSetter.buildQuestionPaper();
     }
 
-    @PreAuthorize("hasRole('USER')")
+    //@PreAuthorize("hasRole('USER')")
     @CrossOrigin(origins = "http://localhost:8808")
     @RequestMapping(path = "/nextquestion", method = RequestMethod.GET)
     public Question nextQuestion() throws Exception {
