@@ -45,7 +45,7 @@ public class Question {
         return options.isCorrect(answers);
     }
 
-    public boolean isAnsweredCorrectly() {
+    public boolean isAnsweredCdorrectly() {
         return options.isCorrect(submittedAnswer.split(","));
     }
 

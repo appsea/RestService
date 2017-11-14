@@ -44,7 +44,7 @@ public class Examiner {
         Set<Question> wrongAnsweredQuestions = new HashSet<>();
         Set<Question> correctAnsweredQuestions = new HashSet<>();
         for (Question question : questionPaper) {
-            if (question.isAnsweredCorrectly()) {
+            if (question.isAnsweredCdorrectly()) {
                 correctAnsweredQuestions.add(question);
             } else {
                 wrongAnsweredQuestions.add(question);

@@ -16,13 +16,14 @@ import java.util.List;
 @Service
 public class SasQuestionBanker implements QuestionBanker {
     private final QuestionParser questionParser;
+    private final List<Question> allQuestions;
 
-    public SasQuestionBanker(QuestionParser questionParser) {
+    public SasQuestionBanker(QuestionParser questionParser) throws Exception {
         this.questionParser = questionParser;
+        allQuestions = readAllQuestions();
     }
 
-    @Override
-    public List<Question> getAllQuestions() throws Exception {
+    private List<Question> readAllQuestions() throws Exception {
         Collection<QuestionBank> bank = buildQuestionBank();
         List<Question> uniqueQuestions = new ArrayList<>();
         for (QuestionBank questionBank : bank) {
@@ -30,6 +31,12 @@ public class SasQuestionBanker implements QuestionBanker {
             uniqueQuestions.addAll(questions);
         }
         return uniqueQuestions;
+    }
+
+
+    @Override
+    public List<Question> getAllQuestions() throws Exception {
+        return allQuestions;
     }
 
     private Collection<QuestionBank> buildQuestionBank() {
