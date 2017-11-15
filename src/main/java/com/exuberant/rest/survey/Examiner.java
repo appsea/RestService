@@ -29,6 +29,7 @@ public class Examiner {
         showResult(questionPaper);
     }
 
+
     private void startExam(List<Question> questionPaper) {
         int count = 1;
         Scanner scanner = new Scanner(System.in);
