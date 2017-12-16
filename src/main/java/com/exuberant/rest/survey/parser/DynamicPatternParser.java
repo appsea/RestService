@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * Created by rakesh on 23-Sep-2017.
  */
-public class CommonPatternParser implements PatternParser {
+public class DynamicPatternParser implements PatternParser {
 
     public static final String IGNORE_REGEX = "^\\s*Exam Name:.*|^\\s*Exam Type:.*|^\\s*Exam Code:.*|^\\s*Page\\s[0-9]+ of []0-9]+|[0-9]|[1-9][0-9]+|A00-211|A00-201|Question: [0-9]+|QUESTION NO: [0-9]+|^.*\\b(http://www.certmagic.com)\\b.*$";
     public static final String reg = "Question: [0-9]+";
@@ -16,22 +16,26 @@ public class CommonPatternParser implements PatternParser {
     private Pattern extractQuestionPattern;
     private Pattern optionPattern;
     private Pattern answerPattern;
+    private Pattern descriptionPattern;
 
-    public CommonPatternParser(String newQuestionRegex, String optionRegex, String answerRegex) {
-        this(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX);
+    public DynamicPatternParser(String newQuestionRegex, String optionRegex, String answerRegex) {
+        this(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null);
     }
 
-    public CommonPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex) {
-        this(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX);
+    public DynamicPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex) {
+        this(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null);
     }
 
-    public CommonPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex, String ignoreRegex) {
+    public DynamicPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex, String ignoreRegex, String descriptionRegex) {
         newQuestionPattern = Pattern.compile(newQuestionRegex);
         this.extractQuestionRegex = extractQuestionRegex;
         extractQuestionPattern = Pattern.compile(extractQuestionRegex);
         optionPattern = Pattern.compile(optionRegex);
         answerPattern = Pattern.compile(answerRegex);
         ignorePattern = Pattern.compile(ignoreRegex);
+        if (null != descriptionRegex) {
+            descriptionPattern = Pattern.compile(descriptionRegex);
+        }
     }
 
     public boolean isAnswer(String line) {
@@ -59,7 +63,12 @@ public class CommonPatternParser implements PatternParser {
     }
 
     @Override
+    public boolean isDescription(String line) {
+        return descriptionPattern != null && descriptionPattern.matcher(line).matches();
+    }
+
+    @Override
     public boolean ignoreLine(String line) {
-        return ignorePattern.matcher(line).matches();
+        return line == null || "".equals(line.trim()) || ignorePattern.matcher(line).matches();
     }
 }

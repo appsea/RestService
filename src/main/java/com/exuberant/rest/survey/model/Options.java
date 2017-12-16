@@ -55,4 +55,19 @@ public class Options {
     public List<Option> getOptions() {
         return options;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Options other = (Options) o;
+
+        return options.equals(other.options);
+    }
+
+    @Override
+    public int hashCode() {
+        return options.hashCode();
+    }
 }

@@ -2,6 +2,7 @@ package com.exuberant.rest.survey.model;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,6 +18,7 @@ public class Question {
     private String fileName;
     private String number;
     private StringBuilder question = new StringBuilder();
+    private StringBuilder description = new StringBuilder();
     private Options options = new Options();
     private String errorMessage;
     private Exception exception;
@@ -27,6 +29,10 @@ public class Question {
     public Question(String fileName, String questionNumber) {
         this.fileName = fileName;
         this.number = questionNumber;
+    }
+
+    public String getId() {
+        return fileName + " " + number;
     }
 
     public Options getOptions() {
@@ -58,14 +64,17 @@ public class Question {
     }
 
     public void addOption(String option) {
-        if (!isComplete()) {
-            options.add(new Option(option));
-        } else {
-            waste.add(option);
+        if (!StringUtils.isEmpty(option)) {
+            if (!isComplete()) {
+                options.add(new Option(option));
+            } else {
+                waste.add(option);
+            }
         }
     }
 
     public void addAnswer(String tags) {
+        tags = tags.replace(".", "").trim();
         this.setAnswer(tags);
         String[] answers = tags.split(",");
         options.addAnswer(Arrays.asList(answers));
@@ -81,6 +90,10 @@ public class Question {
 
     public void appendQuestion(String question) {
         this.question.append(question).append("\n");
+    }
+
+    public void appendDescription(String description) {
+        this.description.append(description).append("\n");
     }
 
     public String getErrorMessage() {

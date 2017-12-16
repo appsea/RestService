@@ -3,6 +3,8 @@ package com.exuberant.rest.survey.parser;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.exuberant.rest.survey.parser.DynamicPatternParser.IGNORE_REGEX;
+
 public class PatternParserFactory {
 
     private static Map<String, PatternParser> patternParsersForFile = new HashMap<>();
@@ -14,6 +16,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
+        patternParsersForFile.put("Main-All-Questions.txt", getMainPatternParser());
     }
 
     public static PatternParser getPatternParser(String fileName) {
@@ -24,7 +27,7 @@ public class PatternParserFactory {
         String newQuestionRegex = "^QUESTION NO:.*";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer. .*";
-        return new CommonPatternParser(newQuestionRegex, optionRegex, answerRegex);
+        return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
     }
 
     private static PatternParser getSecondPatternParser() {
@@ -33,13 +36,21 @@ public class PatternParserFactory {
         String extractQuestionRegex = "^[0-9]+.";
         String optionRegex = "^[A-D].\\s.*";
         String answerRegex = "^Answer. .*";
-        return new CommonPatternParser(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex);
+        return new DynamicPatternParser(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex);
     }
 
     private static PatternParser getThirdPatternParser() {
         String newQuestionRegex = "^Question:\\s\\d+";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer. .*";
-        return new CommonPatternParser(newQuestionRegex, optionRegex, answerRegex);
+        return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
+    }
+
+    private static PatternParser getMainPatternParser() {
+        String newQuestionRegex = "^Question:.*";
+        String optionRegex = "^[A-D][.]\\s.*";
+        String answerRegex = "^Answer:.*";
+        String descriptionRegex = "^Description:.*";
+        return new DynamicPatternParser(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, descriptionRegex);
     }
 }

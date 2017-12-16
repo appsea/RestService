@@ -7,6 +7,8 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -29,14 +31,26 @@ public class QuestionParser {
         List<Question> questions = new ArrayList<>();
         String fileName = questionBank.getFileName();
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
-        List<String> lines = Files.readAllLines(Paths.get(getClass().getClassLoader().getResource(fileName).toURI()));
+        List<String> lines = null;
+        try {
+            lines = Files.readAllLines(Paths.get(getClass().getClassLoader().getResource(fileName).toURI()));
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException("Invalid File Path: " + fileName);
+        }
         Question question = null;
         StringBuilder previousOptionLine = new StringBuilder();
         boolean hasOptionStarted = false;
+        boolean hasDescriptionStarted = false;
         for (String line : lines) {
             try {
                 if (!patternParser.ignoreLine(line) || patternParser.isNewQuestion(line)) {
                     if (patternParser.isNewQuestion(line)) {
+                        if (question != null && question.isComplete()) {
+                            questions.add(question);
+                            question = null;
+                        }else if(question!=null && !question.isComplete()){
+                            System.err.println("Incomplete: " + question.getOptions().areValid() + " que: "+ question);
+                        }
                         String questionNumber = patternParser.extractQuestionNumber(line);
                         question = new Question(fileName, questionNumber);
                         String questionString = patternParser.stripQuestionNumber(line);
@@ -44,18 +58,26 @@ public class QuestionParser {
                             question.appendQuestion(questionString.trim());
                         }
                         hasOptionStarted = false;
+                        hasDescriptionStarted = false;
                         previousOptionLine = new StringBuilder();
                     } else if (question != null) {
-                        if (patternParser.isAnswer(line)) {
+                        if (!hasDescriptionStarted && patternParser.isAnswer(line)) {
                             question.addOption(previousOptionLine.toString());
-                            question.addAnswer(line.substring(8));
-                        } else if (patternParser.isOption(line)) {
+                            try{
+                                question.addAnswer(line.substring(8).trim());
+                            }catch (Exception e){
+                                System.err.println("Exce");
+                            }
+                        } else if (!hasDescriptionStarted && patternParser.isOption(line)) {
                             hasOptionStarted = true;
                             if (previousOptionLine.length() != 0) {
                                 question.addOption(previousOptionLine.toString());
                             }
                             previousOptionLine = new StringBuilder(line);
-                        } else if (hasOptionStarted) {
+                        } else if (patternParser.isDescription(line) || hasDescriptionStarted) {
+                            question.appendDescription(line);
+                            hasDescriptionStarted = true;
+                        } else if (!hasDescriptionStarted && hasOptionStarted) {
                             previousOptionLine.append("\n").append(line);
                         } else {
                             question.appendQuestion(line);
@@ -71,10 +93,11 @@ public class QuestionParser {
                     failedQuestions.add(question);
                 }
             }
-            if (question != null && question.isComplete()) {
-                questions.add(question);
-                question = null;
-            }
+        }
+        if (question != null && question.isComplete()) {
+            questions.add(question);
+        }else{
+            System.err.println("Last Question Not Added....");
         }
         validateQuestions(questions, questionBank.getTotalQuestions());
         return questions;

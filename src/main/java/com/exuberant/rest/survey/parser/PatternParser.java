@@ -16,4 +16,6 @@ public interface PatternParser {
     String stripQuestionNumber(String line);
 
     boolean ignoreLine(String line);
+
+    boolean isDescription(String line);
 }
