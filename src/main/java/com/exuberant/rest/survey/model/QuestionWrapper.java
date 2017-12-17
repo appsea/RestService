@@ -1,7 +1,5 @@
 package com.exuberant.rest.survey.model;
 
-import java.util.Collections;
-
 public class QuestionWrapper {
 
     private Question question;
@@ -21,7 +19,8 @@ public class QuestionWrapper {
         boolean equals = this.question.getQuestion().equals(other.question.getQuestion()) && this.question.getOptions().equals(other.question.getOptions());
         if (equals) {
             if(!this.question.getId().equals(other.question.getId())){
-                System.err.println(this.question.getId() + " = " + other.question.getId());
+                System.err.println("Repeat: " + this.question.getId() + " = " + other.question.getId());
+                System.err.println(this.question.getQuestion());
             }
         }
         return equals;

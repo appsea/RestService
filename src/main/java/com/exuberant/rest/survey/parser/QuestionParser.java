@@ -105,7 +105,7 @@ public class QuestionParser {
 
     private void validateQuestions(List<Question> questions, int expectedQuestions) throws Exception {
         if (questions.size() != expectedQuestions) {
-            throw new Exception("Expected Question were " + expectedQuestions + " but was " + questions.size());
+            System.err.println("Expected Question were " + expectedQuestions + " but was " + questions.size());
         }
     }
 

@@ -112,19 +112,6 @@ D. Length is 200; value is ‘214 London Drive’.
 A00-211
 4 http://www.certmagic.com
 Answer: D
-Question: 8
-The following SAS program is submitted:
-data work.sets;
-do until (prod gt 6);
-prod + 1;
-end;
-run;
-What is the value of the variable PROD in the output data set?
-A. 6
-B. 7
-C. 8
-D. (missing numeric)
-Answer: B
 Question: 9
 The SAS data sets WORK.EMPLOYEE and WORK.SALARY are shown below:
 WORK.EMPLOYEE WORK.SALARY
@@ -192,22 +179,6 @@ run;
 C. data family; infile ‘file specification’ dIm = ‘,’; input relation $ firstname $; run;
 D. data family; infile ‘file specification’; input relation $ firstname $ / dim = ‘,’; run;
 Answer: C
-Question: 14
-Given the SAS data set AGES:
-AGES
-AGE
----------
-The variable AGE contains character values. The following SAS program is submitted:
-data subset;
-set ages;
-where age> 12;
-run;
-How many observations are written out to the data set SUBSET?
-A. 0
-B. 1
-C. 2
-D. 3
-Answer: A
 Question: 15
 Given the SAS data set PRICES:
 PRICES
@@ -245,15 +216,6 @@ B. The length of the variable JOBCODE is 5.
 C. The length of the variable JOSBODE is 12.
 D. The program fails to execute due to errors.
 Answer: B
-Question: 17
-Which ODS statement option terminates output being written to an HTML rile?
-A. END
-B. QUIT
-C. STOP
-D. CLOSE
-Answer: D
-A00-211
-8 http://www.certmagic.com
 Question: 18
 The SAS data set PETS is sorted by the variables TYPE and BREED.
 The following SAS program is submitted:

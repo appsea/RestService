@@ -39,15 +39,6 @@ C. Option C
 D. Option D
 Answer: A
 Explanation:
-Question: 5
-Which statement is true concerning the SAS automatic variable _ERROR_?
-A. It cannot be used in an if/then condition.
-B. It cannot be used in an assignment statement.
-C. It can be put into a keep statement or keep= option.
-D. It is automatically dropped.
-Answer: D
-Explanation:
-5
 Question: 6
 The following SAS program is submitted:
 What is produced as output?
@@ -248,16 +239,6 @@ C. tables region by product;
 D. tables region*product;
 Answer: D
 Explanation:
-Question: 25
-Which of the following choices is an unacceptable ODS destination for producing output that can
-be viewed in Microsoft Excel?
-A. MSOFFICE2K
-B. EXCELXP
-C. CSVALL
-D. WINXP
-18
-Answer: D
-Explanation:
 Question: 26
 The following SAS program is submitted:
 What is the value of the variable Prod in the output data set?
@@ -333,16 +314,6 @@ D. It is assigned a value of missing at compile time.
 24
 Answer: C
 Explanation:
-Question: 33
-The following output is created by the FREQUENCY procedure:
-Which TABLES option(s) would be used to eliminate the row and column counts and just see the
-frequencies and percents?
-A. norowcount nocolcount
-B. freq percent
-C. norow nocol
-D. nocounts
-Answer: C
-Explanation:
 Question: 34
 The following SAS program is submitted:
 25
@@ -394,19 +365,6 @@ B. Option B
 C. Option C
 D. Option D
 Answer: B
-Explanation:
-Question: 39
-Which step displays a listing of all the data sets in the WORK library?
-29
-A. proc contents lib=WORK
-run;
-B. proc contents lib=WORK.all;
-run;
-C. proc contents data=WORK._all_;
-run;
-D. proc contents data=WORK _ALL_;
-run;
-Answer: C
 Explanation:
 Question: 40
 Consider the following data step:

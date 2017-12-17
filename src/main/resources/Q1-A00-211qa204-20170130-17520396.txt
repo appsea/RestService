@@ -1892,18 +1892,6 @@ B. the character value "01011960"
 C. a missing value due to syntax errors
 D. the step will not compile because of the character argument in themdy function.
 Answer: A
-QUESTION NO: 106
-The following SAS program is submitted:
-data WORK.AUTHORS;
-array Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');
-run;
-What is the value of the second variable in the dataset WORK.AUTHORS?
-A. Hemingway
-B. Hemingwa
-C. '' (a missing value)
-D. The program contains errors. No variables are created.
-Answer: B
-60
 QUESTION NO: 107
 The SAS data set Fed.Banks contains a variable Open_Date which has been assigned a
 permanent label of "Open Date". Which SAS program temporarily replaces the label "Open Date"
@@ -2064,23 +2052,6 @@ B. 3
 C. 4
 D. 6
 Answer: A
-QUESTION NO: 113
-The following SAS program is submitted:
-data WORK.TOTAL_SALARY;
-retain Total;
-set WORK.SALARY;
-by Department;
-if First.Department
-then Total=0;
-Total=sum(Total, Wagerate);
-if Last.Total;
-run;
-What is the initial value of the variable Total in the following program?
-A. 0
-B. Missing
-C. The value of the first observationsWagerate
-D. Cannot be determined from the information given
-Answer: B
 QUESTION NO: 114
 Consider the following data step:
 data WORK.NEW;
@@ -2221,23 +2192,6 @@ B. 6
 C. 7
 D. Undetermined, infinite loop.
 Answer: C
-QUESTION NO: 122
-The following SAS program is submitted:
-data WORK.TOTAL;
-set WORK.SALARY;
-69
-by Department Gender;
-if First.<_insert_code_> then Payroll=0;
-Payroll+Wagerate;
-if Last.<_insert_code_>;
-run;
-The SAS data set WORK.SALARY is currently ordered by Gender within Department. Which
-inserted code will accumulate subtotals for each Gender within Department?
-A. Gender
-B. Department
-C. Gender Department
-D. Department Gender
-Answer: A
 QUESTION NO: 123
 Which step displays a listing of all the data sets in the WORK library?
 A. proc contents lib=WORK

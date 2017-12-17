@@ -35,25 +35,6 @@ C. 401 for PROC PRINT
 D. 500 for PROC PRINT
 5000 for PROC MEANS
 Answer: B
-3. The following SAS program is submitted:
-data work.new;
-length word $7;
-amount = 7;
-if amount = 5 then word = 'CAT';
-else if amount = 7 then word = 'DOG';
-else word = 'NONE!!!';
-amount = 5;
-run;
-Which one of the following represents the values of the AMOUNT and WORD variables?
-A. amount word
-5 DOG
-B. amount word
-5 CAT
-C. amount word
-7 DOG
-D. amount word
-7 ' ' (missing character value)
-Answer: A
 4. Which one of the following is true of the SUM statement in a SAS DATA step program?
 A. It is only valid in conjunction with a SUM function.
 B. It is not valid with the SET, MERGE and UPDATE statements.
@@ -187,48 +168,6 @@ B. ,table
 C. . (missing numeric value)
 D. ' ' (missing character value)
 Answer: D
-13. A raw data file is listed below:
-RANCH,1250,2,1,Sheppard Avenue,"$64,000"
-SPLIT,1190,1,1,Rand Street,"$65,850"
-CONDO,1400,2,1.5,Market Street,"80,050"
-TWOSTORY,1810,4,3,Garris Street,"$107,250"
-RANCH,1500,3,3,Kemble Avenue,"$86,650"
-SPLIT,1615,4,3,West Drive,"94,450"
-SPLIT,1305,3,1.5,Graham Avenue,"$73,650"
-The following SAS program is submitted using the raw data file as input:
-data work.condo_ranch;
-infile 'file-specification' dsd;
-input style $ @;
-if style = 'CONDO' or style = 'RANCH' then
-input sqfeet bedrooms baths street $ price : dollar10.;
-run;
-How many observations does the WORK.CONDO_RANCH data set contain?
-A. 0
-B. 3
-C. 5
-D. 7
-Answer: D
-14. A raw data file is listed below:
-RANCH,1250,2,1,Sheppard Avenue,"$64,000"
-SPLIT,1190,1,1,Rand Street,"$65,850"
-CONDO,1400,2,1.5,Market Street,"80,050"
-TWOSTORY,1810,4,3,Garris Street,"$107,250"
-RANCH,1500,3,3,Kemble Avenue,"$86,650"
-SPLIT,1615,4,3,West Drive,"94,450"
-SPLIT,1305,3,1.5,Graham Avenue,"$73,650"
-The following SAS program is submitted using the raw data file as input:
-data work.condo_ranch;
-infile 'file-specification' dsd;
-input style $ @;
-if style = 'CONDO' or style = 'RANCH';
-input sqfeet bedrooms baths street $ price : dollar10.;
-run;
-How many observations will the output data set contain?
-A. 0
-B. 3
-C. 5
-D. 7
-Answer: B
 15. The following SAS program is submitted:
 data numrecords;
 infile 'file-specification';
@@ -342,30 +281,6 @@ B. The merged data sets are not permanent SAS data sets.
 C. The data sets were not merged in the order by which they were sorted.
 D. The RUN statements were omitted after each of the SORT procedures.
 Answer: C
-21. The following SAS SORT procedure step generates an output data set:
-proc sort data = sasuser.houses out = report;
-by style;
-run;
-In which library is the output data set stored?
-A. WORK
-A00-201
-- 8 - http://www.certmagic.com
-B. REPORT
-C. HOUSES
-D. SASUSER
-Answer: A
-22. The following SAS DATA step is submitted:
-libname temp 'SAS-data-library';
-data temp.report;
-set sasuser.houses;
-newvar = price * 1.04;
-run;
-Which one of the following statements is true regarding the program above?
-A. The program is reading from a temporary data set and writing to a temporary data set.
-B. The program is reading from a temporary data set and writing to a permanent data set.
-C. The program is reading from a permanent data set and writing to a temporary data set.
-D. The program is reading from a permanent data set and writing to a permanent data set.
-Answer: D
 23. Which one of the following SAS DATA steps saves the temporary data set named MYDATA as a permanent data set?
 A. libname sasdata 'SAS-data-library';
 data sasdata.mydata;
@@ -383,23 +298,6 @@ D. libname sasdata 'SAS-data-library';
 data sasdata.mydata;
 set mydata;
 run;
-Answer: D
-24. The following SAS DATA step is submitted:
-data sasdata.atlanta
-sasdata.boston
-work.portland
-work.phoenix;
-set company.prdsales;
-if region = 'NE' then output boston;
-if region = 'SE' then output atlanta;
-if region = 'SW' then output phoenix;
-if region = 'NW' then output portland;
-run;
-Which one of the following is true regarding the output data sets?
-A. No library references are required.
-B. The data sets listed on all the IF statements require a library reference.
-C. The data sets listed in the last two IF statements require a library reference.
-D. The data sets listed in the first two IF statements require a library reference.
 Answer: D
 25. The following SAS DATA step executes on Monday, April 25, 2000:
 data newstaff;
@@ -427,53 +325,6 @@ B. a character string with the value '03/23/2000'
 C. a numeric value of 14692, which represents the SAS date value for March 23, 2000
 D. a numeric value of 3232000, which represents the SAS date value for March 23, 2000
 Answer: C
-27. The following SAS program is submitted:
-data revenue;
-set year_1;
-var1 = mdy(1,15,1960);
-run;
-Which one of the following values does the variable named VAR1 contain?
-A. 14
-B. 15
-C. 1151960
-D. '1/15/1960'
-Answer: A
-28. The following SAS program is submitted:
-data work.report;
-set work.sales_info;
-if qtr(sales_date) ge 3;
-run;
-The SAS data set WORK.SALES_INFO has one observation for each month in the year 2000 and the variable SALES_DATE which
-contains a SAS date value for each of the twelve months.
-How many of the original twelve observations in WORK.SALES_INFO are written to the WORK.REPORT data set?
-A. 2
-B. 3
-C. 6
-D. 9
-Answer: C
-29. The following SAS program is submitted:
-libname temp 'SAS-data-library';
-data work.new;
-set temp.jobs;
-format newdate mmddyy10.;
-qdate = qtr(newdate);
-ddate = weekday(newdate);
-run;
-proc print data = work.new;
-run;
-The variable NEWDATE contains the SAS date value for April 15, 2000.
-A00-201
-- 10 - http://www.certmagic.com
-What output is produced if April 15, 2000 falls on a Saturday?
-A. Obs newdate qdate ddate
-1 APR152000 2 6
-B. Obs newdate qdate ddate
-1 04/15/2000 2 6
-C. Obs newdate qdate ddate
-1 APR152000 2 7
-D. Obs newdate qdate ddate
-1 04/15/2000 2 7
-Answer: D
 30. A raw data record is shown below:
 07Jan2002
 Which one of the following informats would read this value and store it as a SAS date value?
@@ -583,29 +434,6 @@ A00-201
 - 12 - http://www.certmagic.com
 D. the data set mentioned in the DATA statement
 Answer: A
-35. The following SAS program is submitted:
-data _null_;
-set old (keep = prod sales1 sales2);
-file 'file-specification';
-put sales1 sales2;
-run;
-Which one of the following default delimiters separates the fields in the raw data file created?
-A. : (colon)
-B. (space)
-C. , (comma)
-D. ; (semicolon)
-Answer: B
-36. The following SAS program is submitted:
-data allobs;
-set sasdata.origin (firstobs = 75 obs = 499);
-run;
-The SAS data set SASDATA.ORIGIN contains 1000 observations.
-How many observations does the ALLOBS data set contain?
-A. 424
-B. 425
-C. 499
-D. 1000
-Answer: B
 37. The SAS data set named COMPANY.PRICES is listed below:
 COMPANY.PRICES
 prodid price producttype sales returns
@@ -665,15 +493,6 @@ B. 2
 C. 3
 D. No data set is created as the program fails to execute due to errors.
 Answer: C
-40. The following SAS program is submitted:
-proc contents data = sasuser.airplanes;
-run;
-Which one of the following is produced as output?
-A. the data portion of every data set in the SASUSER library
-B. the data portion of the data set SASUSER.AIRPLANES only
-C. the descriptor portion of every data set in the SASUSER library
-D. the descriptor portion of the data set SASUSER.AIRPLANES only
-Answer: D
 41. The following SAS program is submitted:
 proc datasets lib = sasuser;
 contents data = class varnum;
@@ -684,20 +503,6 @@ B. to print the total number of variables
 C. to print a list of the variables in alphabetic order
 D. to print a list of the variables in the order they were created
 Answer: D
-42. Which one of the following SAS procedures displays the data portion of a SAS data set?
-A. PRINT
-B. FSLIST
-C. CONTENTS
-D. DATASETS
-Answer: A
-43. On which portion(s) of a SAS data set does the PRINT procedure report?
-A. the data portion only
-A00-201
-- 14 - http://www.certmagic.com
-B. the descriptor portion only
-C. the descriptor portion and the data portion
-D. neither the data portion nor the descriptor portion
-Answer: A
 44. The following SAS program is submitted:
 data work.test;
 set work.staff (keep = jansales febsales marsales);
@@ -735,12 +540,6 @@ B. do weekly{i} = 1 to 5;
 C. do i = mon tue wed thu fri;
 D. A DO loop cannot be used because the variables referenced do not end in a digit.
 Answer: A
-47. Which one of the following statements is true regarding the name of a SAS array?
-A. It is saved with the data set.
-B. It can be used in procedures.
-C. It exists only for the duration of the DATA step.
-D. It can be the same as the name of a variable in the data set.
-Answer: C
 48. The observations in the SAS data set WORK.TEST are ordered by the values of the variable SALARY.
 The following SAS program is submitted:
 proc sort data = work.test out = work.testsorted;
@@ -754,44 +553,6 @@ B. The data set WORK.TEST is stored in descending order by values of the NAME va
 C. The data set WORK.TESTSORTED is stored in ascending order by values of the NAME variable.
 D. The data set WORK.TESTSORTED is stored in descending order by values of the NAME variable.
 Answer: C
-49. The SAS data set WORK.AWARDS is listed below:
-fname points
-Amy 2
-Amy 1
-Gerard 3
-Wang 3
-Wang 1
-Wang 2
-The following SAS program is submitted:
-proc sort data = work.awards;
-by descending fname points;
-run;
-Which one of the following represents how the observations are sorted?
-A. Wang 3
-Gerard 3
-Wang 2
-Amy 2
-Wang 1
-Amy 1
-B. Wang 3
-Wang 2
-Wang 1
-Gerard 3
-Amy 2
-Amy 1
-C. Wang 3
-Wang 1
-Wang 2
-Gerard 3
-Amy 2
-Amy 1
-D. Wang 1
-Wang 2
-Wang 3
-Gerard 3
-Amy 1
-Amy 2
-Answer: D
 50. The SAS data set EMPLOYEE_INFO is listed below:
 IDNumber Expenses
 2542 100.00
@@ -864,27 +625,6 @@ B. by (IDNumber Expenses) descending;
 C. by IDNumber descending Expenses descending;
 D. by descending IDNumber descending Expenses;
 Answer: D
-A00-201
-- 17 - http://www.certmagic.com
-54. The following SAS program is submitted:
-data work.new;
-length word $7;
-amount = 4;
-if amount = 4 then word = 'FOUR';
-else if amount = 7 then word = 'SEVEN';
-else word = 'NONE!!!';
-amount = 7;
-run;
-Which one of the following represents the values of the AMOUNT and WORD variables?
-A. amount word
-7 FOUR
-B. amount word
-7 SEVEN
-C. amount word
-4 FOUR
-D. amount word
-4 ' ' (missing character value)
-Answer: A
 55. The following SAS program is submitted:
 data work.flights;
 destination = 'CPH';
@@ -962,18 +702,6 @@ airplanetype = 'Large';
 staff = 10;
 run;
 Answer: B
-58. The following SAS program is submitted:
-data work.one;
-x = 3;
-y = 2;
-z = x ** y;
-run;
-Which one of the following is the value of the variable Z in the output data set?
-A. 6
-B. 9
-C. . (missing numeric value)
-D. The program fails to execute due to errors.
-Answer: B
 59. The following SAS program is submitted:
 data work.staff;
 JobCategory = 'FA';
@@ -1018,33 +746,6 @@ B. 110
 C. 200
 D. . (missing numeric value)
 Answer: A
-62. The following SAS program is submitted:
-data work.company;
-set work.dept1(keep = jobcode)
-work.dept2(rename = (jcode = jobcode));
-run;
-Which one of the following is the result?
-A. The variable JCODE is written to the output data set.
-B. The variable JOBCODE is written to the output data set.
-C. Neither variable JCODE nor JOBCODE is written to the output data set.
-D. The program fails to execute due to errors.
-Answer: B
-63. Which one of the following SAS statements renames two variables?
-A. set work.dept1
-work.dept2(rename = (jcode = jobcode)
-(sal = salary));
-B. set work.dept1
-work.dept2(rename = (jcode = jobcode
-sal = salary));
-C. set work.dept1
-work.dept2(rename = jcode = jobcode
-A00-201
-- 20 - http://www.certmagic.com
-sal = salary);
-D. set work.dept1
-work.dept2(rename = (jcode jobcode)
-(sal salary));
-Answer: B
 64. The following SAS DATA step is submitted:
 data work.accounting;
 set work.department;
@@ -1069,20 +770,6 @@ B. 7
 C. 8
 D. 12
 Answer: A
-66. The following SAS program is submitted:
-libname sasdata 'SAS-data-library';
-data test;
-set sasdata.chemists (keep = job_code);
-if job_code = 'chem3'
-then description = 'Senior Chemist';
-run;
-The variable JOB_CODE is a character variable with a length of 6 bytes.
-Which one of the following is the length of the variable DESCRIPTION in the output data set?
-A. 6 bytes
-B. 8 bytes
-C. 14 bytes
-D. 200 bytes
-Answer: C
 67. The following SAS program is submitted:
 data work.total;
 set work.salary(keep = department wagerate);
@@ -1158,35 +845,6 @@ A00-201
 D. retain totquantity 0;
 totquantity = totquantity + quantity;
 Answer: A
-71. Which one of the following is true of the RETAIN statement in a SAS DATA step program?
-A. It can be used to assign an initial value to _N_ .
-B. It is only valid in conjunction with a SUM function.
-C. It has no effect on variables read with the SET, MERGE and UPDATE statements.
-D. It adds the value of an expression to an accumulator variable and ignores missing values.
-Answer: C
-72. The following SAS program is submitted:
-data work.test;
-First = 'Ipswich, England';
-City = substr(First,1,7);
-City_Country = City!!', '!!'England';
-run;
-Which one of the following is the value of the variable CITY_COUNTRY in the output data set?
-A. Ipswich!!
-B. Ipswich, England
-C. Ipswich, 'England'
-D. Ipswich , England
-Answer: D
-73. The following SAS program is submitted:
-data work.test;
-First = 'Ipswich, England';
-City_Country = substr(First,1,7)!!', '!!'England';
-run;
-Which one of the following is the length of the variable CITY_COUNTRY in the output data set?
-A. 6
-B. 7
-C. 17
-D. 25
-Answer: D
 74. The following SAS program is submitted:
 data work.test;
 Title = 'A Tale of Two Cities, Charles J. Dickens';
@@ -1209,19 +867,6 @@ B. C
 C. Agatha
 D. ' ' (missing character value)
 Answer: A
-A00-201
-- 23 - http://www.certmagic.com
-76. The following SAS program is submitted:
-data work.test;
-Author = 'Agatha Christie';
-First = substr(scan(author,1,' ,'),1,1);
-run;
-Which one of the following is the length of the variable FIRST in the output data set?
-A. 1
-B. 6
-C. 15
-D. 200
-Answer: D
 77. Which one of the following SAS statements correctly computes the average of four numerical values?
 A. average = mean(num1 - num4);
 B. average = mean(of num1 - num4);
@@ -1319,33 +964,6 @@ B. 1
 C. 5
 D. 60
 Answer: B
-85. The following SAS program is submitted:
-data work.pieces;
-A00-201
-- 25 - http://www.certmagic.com
-do while (n lt 6);
-n + 1;
-end;
-run;
-Which one of the following is the value of the variable N in the output data set?
-A. 4
-B. 5
-C. 6
-D. 7
-Answer: C
-86. The following SAS program is submitted:
-data work.clients;
-calls = 6;
-do while (calls le 6);
-calls + 1;
-end;
-run;
-Which one of the following is the value of the variable CALLS in the output data set?
-A. 4
-B. 5
-C. 6
-D. 7
-Answer: D
 87. The SAS data set BANKS is listed below:
 BANKS
 name rate
@@ -1594,27 +1212,6 @@ B. tables region * product;
 C. tables product region;
 D. tables product * region;
 Answer: B
-102. Which one of the following SAS system options displays the time on a report?
-A. TIME
-B. DATE
-C. TODAY
-D. DATETIME
-Answer: B
-103. The following SAS program is submitted:
-options pageno = 1;
-proc print data = sasuser.houses;
-run;
-proc means data = sasuser.shoes;
-run;
-The report created by the PRINT procedure step generates 5 pages of output.
-What is the page number on the first page of the report generated by the MEANS procedure step?
-A. 1
-B. 2
-C. 5
-D. 6
-Answer: D
-A00-201
-- 32 - http://www.certmagic.com
 104. The following SAS program is submitted:
 proc format;
 value score 1 - 50 = 'Fail'
@@ -1802,19 +1399,6 @@ A. 01012000
 B. January 1st
 C. . (missing numeric value)
 D. The value can not be determined as the program fails to execute due to errors.
-Answer: D
-115. The following SAS program is submitted:
-data work.january;
-set work.allmonths (keep = product month num_sold cost);
-if month = 'Jan' then output work.january;
-sales = cost * num_sold;
-keep = product sales;
-run;
-Which variables does the WORK.JANUARY data set contain?
-A. PRODUCT and SALES only
-B. PRODUCT, MONTH, NUM_SOLD and COST only
-C. PRODUCT, SALES, MONTH, NUM_SOLD and COST only
-D. An incomplete output data set is created due to syntax errors.
 Answer: D
 116. The following SAS program is submitted:
 data work.totalsales;

@@ -1559,24 +1559,6 @@ C. amount word
 D. amount word
 7 “ “ (missing character value)
 Answer: A
-Question: 89
-The following SAS program is submitted:
-data work.clients;
-calls = 6;
-do while (calls le 6);
-Exam Name: SAS base programming exam
-Exam Type: SAS Institute
-Exam Code: A00-201 Total Questions: 140
-Page 38 of 59
-calls + 1;
-end;
-run;
-Which one of the following is the value of the variable CALLS in the output data set?
-A. 4
-B. 5
-C. 6
-D. 7
-Answer: D
 Question: 90
 The following SAS program is submitted:
 data work.total;
@@ -1597,31 +1579,6 @@ WORK.SALARY data set.
 D. The values of the variable PAYROLL represent a total for all values of WAGERATE in the
 WORK.SALARY data set.
 Answer: C
-Question: 91
-Which one of the following SAS system options prevents the page number from appearing on a
-report?
-A. NONUM
-B. NOPAGE
-C. NONUMBER
-D. NOPAGENUM
-Answer: C
-Question: 92
-The following SAS program is submitted:
-<insert ODS statement here>
-Exam Name: SAS base programming exam
-Exam Type: SAS Institute
-Exam Code: A00-201 Total Questions: 140
-Page 39 of 59
-proc means data = sasuser.shoes;
-where product in (‘Sandal’ , ‘Slipper’ , ‘Boot’);
-run;
-Which one of the following ODS statements completes the program and sends the report to an
-HTML file?
-A. ods html = ‘sales.html’;
-B. ods file = ‘sales.html’;
-C. ods file html = ‘sales.html’;
-D. ods html file = ‘sales.html’;
-Answer: D
 Question: 93
 The following SAS DATA step executes on Monday, April 25, 2000:
 data newstaff;
@@ -1634,14 +1591,6 @@ B. a character string with the value ‘Monday, April 25, 2000’
 C. the numeric value 14725, representing the SAS date for April 25, 2000
 D. the numeric value 04252000, representing the SAS date for April 25, 2000
 Answer: C
-Question: 94
-The value 110700 is stored in a numeric variable.
-Which one of the following SAS formats is used to display the value as $110,700.00 in a report?
-A. comma8.2
-B. comma11.2
-C. dollar8.2
-D. dollar11.2
-Answer: D
 Question: 95
 A raw data record is listed below:
 ----I----10---I----20---I----30 s
@@ -1821,25 +1770,6 @@ Exam Type: SAS Institute
 Exam Code: A00-201 Total Questions: 140
 Page 45 of 59
 Answer: C
-Question: 105
-Which one of the following ODS statement options terminates output being written to an HTML
-file?
-A. END
-B. QUIT
-C. STOP
-D. CLOSE
-Answer: D
-Question: 106
-The following SAS program is submitted:
-proc datasets lib = sasuser;
-contents data = class varnum;
-quit;
-Which one of the following is the purpose of the VARNUM option?
-A. to print a list of variable names
-B. to print the total number of variables
-C. to print a list of the variables in alphabetic order
-D. to print a list of the variables in the order they were created
-Answer: D
 Question: 107
 The contents of the SAS data set named PEPM.STUDENTS are listed below:
 name age
@@ -2077,13 +2007,6 @@ B. PRODUCT, MONTH, NUM_SOLD and COST only
 C. PRODUCT, SALES, MONTH, NUM_SOLD and COST only
 D. An incomplete output data set is created due to syntax errors.
 Answer: D
-Question: 119
-On which portion(s) of a SAS data set does the PRINT procedure report?
-A. the data portion only
-B. the descriptor portion only
-C. the descriptor portion and the data portion
-D. neither the data portion nor the descriptor portion
-Answer: A
 Question: 120
 The following SAS program is submitted:
 data numrecords;
