@@ -5,7 +5,10 @@ import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -36,6 +39,17 @@ public class Main {
                 wrappers.add(newQ);
             }
         }
+        allQuestions.clear();
+        int count = 0;
+        for (QuestionWrapper wrapper : wrappers) {
+            Question question = wrapper.getQuestion();
+            question.setNumber(++count);
+            allQuestions.add(question);
+        }
+        System.err.println("TQ: " + wrappers.size());
+        System.err.println("TQ: " + allQuestions.size());
+        ObjectMapper objectMapper = new ObjectMapper();
+        Files.write(Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\screened\\","sas_questions.json"), objectMapper.writeValueAsString(allQuestions).getBytes());
     }
 
     private void startExam() throws Exception {

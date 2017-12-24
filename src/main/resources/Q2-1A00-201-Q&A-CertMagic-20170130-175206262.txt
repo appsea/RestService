@@ -17,32 +17,6 @@ B. The program executes successfully and a permanent SAS data set is created.
 C. The program fails execution because the same SAS data set is referenced for both read and write operations.
 D. The program fails execution because the SAS data sets on the MERGE statement are in two different libraries.
 Answer: B
-2. When the following SAS program is submitted, the data set SASDATA.PRDSALES contains 5000 observations:
-libname sasdata 'SAS-data-library';
-options obs = 500;
-proc print data = sasdata.prdsales (firstobs = 100);
-run;
-options obs = max;
-proc means data = sasdata.prdsales (firstobs = 500);
-run;
-How many observations are processed by each procedure?
-A. 400 for PROC PRINT
-4500 for PROC MEANS
-B. 401 for PROC PRINT
-4501 for PROC MEANS
-C. 401 for PROC PRINT
-4500 for PROC MEANS
-D. 500 for PROC PRINT
-5000 for PROC MEANS
-Answer: B
-4. Which one of the following is true of the SUM statement in a SAS DATA step program?
-A. It is only valid in conjunction with a SUM function.
-B. It is not valid with the SET, MERGE and UPDATE statements.
-C. It adds the value of an expression to an accumulator variable and ignores missing values.
-D. It does not retain the accumulator variable value from one iteration of the SAS DATA step to the next.
-Answer: C
-A00-201
-- 3 - http://www.certmagic.com
 5. The following SAS program is submitted:
 data work.sets;
 do until (prod gt 6);
@@ -281,24 +255,6 @@ B. The merged data sets are not permanent SAS data sets.
 C. The data sets were not merged in the order by which they were sorted.
 D. The RUN statements were omitted after each of the SORT procedures.
 Answer: C
-23. Which one of the following SAS DATA steps saves the temporary data set named MYDATA as a permanent data set?
-A. libname sasdata 'SAS-data-library';
-data sasdata.mydata;
-copy mydata;
-run;
-B. libname sasdata 'SAS-data-library';
-data sasdata.mydata;
-keep mydata;
-run;
-C. libname sasdata 'SAS-data-library';
-data sasdata.mydata;
-save mydata;
-run;
-D. libname sasdata 'SAS-data-library';
-data sasdata.mydata;
-set mydata;
-run;
-Answer: D
 25. The following SAS DATA step executes on Monday, April 25, 2000:
 data newstaff;
 set staff;
@@ -333,38 +289,6 @@ B. ddmonyy9.
 C. ddMMMyy9.
 D. ddmmmyyyy9.
 Answer: A
-31. The contents of the SAS data set PERM.JAN_SALES are listed below:
-VARIABLE NAME TYPE
-idnum character variable
-sales_date numeric date value
-A comma delimited raw data file needs to be created from the PERM.JAN_SALES data set. The SALES_DATE values need to be in
-a MMDDYY10 form.
-Which one of the following SAS DATA steps correctly creates this raw data file?
-A. libname perm 'SAS-data-library';
-data _null_;
-set perm.jan_sales;
-file 'file-specification' dsd = ',';
-put idnum sales_date : mmddyy10.;
-run;
-B. libname perm 'SAS-data-library';
-data _null_;
-set perm.jan_sales;
-file 'file-specification' dlm = ',';
-put idnum sales_date : mmddyy10.;
-run;
-C. libname perm 'SAS-data-library';
-data _null_;
-set perm.jan_sales;
-file 'file-specification';
-put idnum sales_date : mmddyy10. dlm = ',';
-run;
-D. libname perm 'SAS-data-library';
-data _null_;
-set perm.jan_sales;
-file 'file-specification';
-put idnum sales_date : mmddyy10. dsd = ',';
-run;
-Answer: B
 32. The contents of the SAS data set named PERM.STUDENTS are listed below:
 name age
 Alfred 14
@@ -458,24 +382,6 @@ B. 2
 C. 4
 D. 6
 Answer: B
-38. The SASDATA.BANKS data set has five observations when the following SAS program is submitted:
-libname sasdata 'SAS-data-library';
-data allobs;
-set sasdata.banks;
-capital=0;
-do year = 2000 to 2020 by 5;
-A00-201
-- 13 - http://www.certmagic.com
-capital + ((capital+2000) * rate);
-output;
-end;
-run;
-How many observations will the ALLOBS data set contain?
-A. 5
-B. 15
-C. 20
-D. 25
-Answer: D
 39. A raw data file is listed below:
 ----|----10---|----20---|----30
 John McCloskey 35 71
@@ -515,16 +421,6 @@ B. MONTHLY1, MONTHLY2 and MONTHLY3
 C. DIFSALES1, DIFSALES2 and DIFSALES3
 D. DIFF_SALES1, DIFF_SALES2 and DIFF_SALES3
 Answer: C
-45. The following SAS program is submitted:
-data work.test;
-array agents{4} $ 12 sales1 - sales4;
-run;
-Which one of the following represents the variables that are contained in the output data set?
-A. SALES1, SALES2, SALES3, SALES4
-B. AGENTS1, AGENTS2, AGENTS3, AGENTS4
-C. None, the DATA step fails because the ARRAY statement can reference only numeric data.
-D. None, the DATA step fails because the ARRAY statement can reference only pre-existing variables.
-Answer: A
 46. The following SAS program is submitted:
 data stats;
 set revenue;
@@ -746,18 +642,6 @@ B. 110
 C. 200
 D. . (missing numeric value)
 Answer: A
-64. The following SAS DATA step is submitted:
-data work.accounting;
-set work.department;
-length jobcode $ 12;
-run;
-The WORK.DEPARTMENT SAS data set contains a character variable named JOBCODE with a length of 5.
-Which one of the following is the length of the variable JOBCODE in the output data set?
-A. 5
-B. 8
-C. 12
-D. The length can not be determined as the program fails to execute due to errors.
-Answer: A
 65. The following SAS program is submitted:
 data work.accounting;
 set work.dept1 work.dept2;
@@ -896,28 +780,6 @@ B. 1001/ 5461
 C. . (missing numeric value)
 D. The value can not be determined as the program fails to execute due to errors.
 Answer: B
-80. The following SAS program is submitted:
-data work.month;
-date = input('13mar2000',date9.);
-run;
-Which one of the following represents the type and length of the variable DATE in the output data set?
-A. numeric, 8 bytes
-B. numeric, 9 bytes
-C. character, 8 bytes
-D. character, 9 bytes
-Answer: A
-81. The following SAS program is submitted:
-data work.month;
-date = put('13mar2000'd,ddmmyy10.);
-A00-201
-- 24 - http://www.certmagic.com
-run;
-Which one of the following represents the type and length of the variable DATE in the output data set?
-A. numeric, 8 bytes
-B. numeric, 10 bytes
-C. character, 8 bytes
-D. character, 10 bytes
-Answer: D
 82. A raw data record is listed below:
 ----|----10---|----20---|----30
 Printing 750

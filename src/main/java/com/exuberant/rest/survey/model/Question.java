@@ -1,5 +1,7 @@
 package com.exuberant.rest.survey.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.util.StringUtils;
@@ -31,9 +33,9 @@ public class Question {
         this.number = questionNumber;
     }
 
-    public String getId() {
+    /*public String getId() {
         return fileName + " " + number;
-    }
+    }*/
 
     public Options getOptions() {
         return options;
@@ -43,15 +45,18 @@ public class Question {
         return question.toString();
     }
 
+    @JsonIgnore
     public boolean isComplete() {
-        return question != null && options.areValid();
+        return question != null && !question.toString().equals("") && options.areValid();
     }
 
+    @JsonIgnore
     public boolean isCorrect(String... answers) {
         return options.isCorrect(answers);
     }
 
-    public boolean isAnsweredCdorrectly() {
+    @JsonIgnore
+    public boolean isAnsweredCorrectly() {
         return options.isCorrect(submittedAnswer.split(","));
     }
 
@@ -80,6 +85,7 @@ public class Question {
         options.addAnswer(Arrays.asList(answers));
     }
 
+    @JsonIgnore
     public String getAnswer() {
         return answer;
     }
@@ -96,6 +102,7 @@ public class Question {
         this.description.append(description).append("\n");
     }
 
+    @JsonIgnore
     public String getErrorMessage() {
         return errorMessage;
     }
@@ -139,6 +146,7 @@ public class Question {
         return number != null ? number.equals(question.number) : question.number == null;
     }
 
+    @JsonIgnore
     public boolean hasAnsweredCorrectly() {
         return options.isCorrect(submittedAnswer.split(","));
     }
@@ -150,11 +158,20 @@ public class Question {
         return result;
     }
 
+    @JsonIgnore
     public String getSubmittedAnswer() {
         return submittedAnswer;
     }
 
     public void setSubmittedAnswer(String submittedAnswer) {
         this.submittedAnswer = submittedAnswer != null ? submittedAnswer.toUpperCase() : "";
+    }
+
+    public void setNumber(int number) {
+        this.number = Integer.toString(number);
+    }
+
+    public String getNumber() {
+        return number;
     }
 }

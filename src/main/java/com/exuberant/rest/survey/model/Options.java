@@ -1,5 +1,7 @@
 package com.exuberant.rest.survey.model;
 
+import org.springframework.util.StringUtils;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -19,7 +21,7 @@ public class Options {
     }
 
     public boolean areValid() {
-        return options.size() == OPTION_COUNT && options.stream().filter(option -> option.isCorrect()).count() > 0;
+        return options.size() == OPTION_COUNT && options.stream().filter(option -> option.isCorrect()).count() > 0 && options.stream().filter(option -> StringUtils.isEmpty(option.getTag())).count() == 0;
     }
 
     public List<Option> giveCorrectAnswers() {

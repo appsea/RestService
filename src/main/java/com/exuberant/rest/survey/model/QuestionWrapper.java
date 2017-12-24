@@ -13,16 +13,28 @@ public class QuestionWrapper {
         return 1;
     }
 
+    public Question getQuestion() {
+        return question;
+    }
+
     @Override
     public boolean equals(Object obj) {
         QuestionWrapper other = (QuestionWrapper) obj;
-        boolean equals = this.question.getQuestion().equals(other.question.getQuestion()) && this.question.getOptions().equals(other.question.getOptions());
+        boolean equals = this.flattenIt(this.question.getQuestion()).equals(this.flattenIt(other.question.getQuestion())) && this.flattenIt(this.question.getOptions().toString()).equals(this.flattenIt(other.question.getOptions().toString()));
         if (equals) {
-            if(!this.question.getId().equals(other.question.getId())){
+            /*if(!this.question.getId().equals(other.question.getId())){
                 System.err.println("Repeat: " + this.question.getId() + " = " + other.question.getId());
+                System.err.println("-------------------------");
                 System.err.println(this.question.getQuestion());
-            }
+                System.err.println("-------------------------");
+                System.err.println(other.question.getQuestion());
+                System.err.println("-----------END--------------");
+            }*/
         }
         return equals;
+    }
+
+    public String flattenIt(String string){
+        return string.replaceAll("\n", " ").replaceAll("\\s{2,}", " ");
     }
 }
