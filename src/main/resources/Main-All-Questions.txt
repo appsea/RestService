@@ -7189,8 +7189,7 @@ Answer: C
 Description: The DATA= option specifies the data set that you are listing, and the ID statement replaces the Obs column with the specified variable. The VAR statement specifies variables and controls the order in which they appear, and the WHERE statement selects rows based on a condition. The LABEL option in the PROC PRINT statement causes the labels that are
 specified in the LABEL statement to be displayed.
 
-Question: Which of the following PROC PRINT steps is correct if labels are not stored with the
-data set?
+Question: Which of the following PROC PRINT steps is correct if labels are not stored with the data set?
 A. proc print data=allsales.totals label;
 label region8='Region 8 Yearly Totals';
 run;
@@ -7359,15 +7358,6 @@ D. PROC PRINT displays all observations and variables in the data set, a column 
 
 Answer: D
 Description: You can remove the column for observation numbers. You can also specify the variables you want, and you can select observations according to conditions.
-
-Question: Which SAS statement associates the fileref Crime with the raw data file
-C:\States\Data\Crime?
-A. filename crime 'c:\states\data\crime';
-B. filename crime c:\states\data\crime;
-C. fileref crime 'c:\states\data\crime';
-D. filename 'c:\states\data\crime' crime;
-Answer: A
-Description: Before you can read your raw data, you must reference the raw data file by creating a fileref. You assign a fileref by using a FILENAME statement in the same way that you assign a libref by using a LIBNAME statement.
 
 Question: Filerefs remain in effect until
 A. you change them.
