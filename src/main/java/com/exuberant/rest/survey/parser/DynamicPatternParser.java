@@ -38,6 +38,12 @@ public class DynamicPatternParser implements PatternParser {
         }
     }
 
+    public static DynamicPatternParser getParserWithDescription(String newQuestionRegex, String optionRegex, String answerRegex, String descriptionRegex){
+        DynamicPatternParser dynamicPatternParser = new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
+        dynamicPatternParser.setDescriptionPattern(descriptionRegex);
+        return dynamicPatternParser;
+    }
+
     public boolean isAnswer(String line) {
         return answerPattern.matcher(line).matches();
     }
@@ -70,5 +76,9 @@ public class DynamicPatternParser implements PatternParser {
     @Override
     public boolean ignoreLine(String line) {
         return line == null || "".equals(line.trim()) || ignorePattern.matcher(line).matches();
+    }
+
+    public void setDescriptionPattern(String descriptionPattern) {
+        this.descriptionPattern = Pattern.compile(descriptionPattern);
     }
 }

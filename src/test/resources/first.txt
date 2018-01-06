@@ -1,0 +1,7 @@
+Question:
+Which ODS command closes the HTML file??
+A. END
+B. QUIT
+C. STOP
+D. CLOSE
+Answer: D

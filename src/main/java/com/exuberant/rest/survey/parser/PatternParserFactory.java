@@ -46,11 +46,16 @@ public class PatternParserFactory {
         return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
     }
 
-    private static PatternParser getMainPatternParser() {
+    public static PatternParser getMainPatternParser() {
         String newQuestionRegex = "^Question:.*";
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer:.*";
         String descriptionRegex = "^Description:.*";
-        return new DynamicPatternParser(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, descriptionRegex);
+        //return new DynamicPatternParser(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, descriptionRegex);
+        return DynamicPatternParser.getParserWithDescription(newQuestionRegex, optionRegex, answerRegex, descriptionRegex);
+    }
+
+    public static void addPatternParser(String file, PatternParser patternParser){
+        patternParsersForFile.put(file, patternParser);
     }
 }

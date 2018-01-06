@@ -41,11 +41,11 @@ public class SasQuestionBanker implements QuestionBanker {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank("Q1-A00-211qa204-20170130-17520396.txt", 201));
+        /*bank.add(new QuestionBank("Q1-A00-211qa204-20170130-17520396.txt", 201));
         bank.add(new QuestionBank("Q2-1A00-201-Q&A-CertMagic-20170130-175206262.txt", 93));
         bank.add(new QuestionBank("Q3-A00-201-Fx-20170130-175207599.txt", 133));
         bank.add(new QuestionBank("Q4-A00-211-20170130-1752144.txt", 66));
-        bank.add(new QuestionBank("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", 17));
+        bank.add(new QuestionBank("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", 17));*/
         //bank.add(new QuestionBank("Q6-A00-211qa70-20170130-175156234.txt", 66));
         bank.add(new QuestionBank("Main-All-Questions.txt", 458));
         //Total were 1142 then reduced to 1034

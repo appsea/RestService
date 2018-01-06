@@ -8,7 +8,7 @@ C. proc print data = sasuser.houses label; label price = “Sale Price”; run;
 D. proc print data = sasuser.houses; price = “Sale Price”; run;
 Answer: C
 Question: 2
-The following GAS program is submitted:
+The following SAS program is submitted:
 data work.empsalary;
 set work.people (in = inemp)
 work.money (in = insal);
