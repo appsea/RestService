@@ -6653,32 +6653,28 @@ Obs	State	Pop2000	Pop2008	Difference
 2	Delaware	783595	873092	89497
 3	Wyoming	493782	532668	38886
 Which SAS program correctly combines the data?
-A.
-data compare;
+A. data compare;
 merge WORK.P2000(in=_a Location=State)
 WORK.P2008(in=_b);
 by State;
 if _a and _b;
 Difference=Pop2008-Pop2000;
 run;
-B.
-data compare;
+B. data compare;
 merge WORK.P2000(rename=(Location=State))
 WORK.P2008;
 by State;
 if _a and _b;
 Difference=Pop2008-Pop2000;
 run;
-C.
-data compare;
+C. data compare;
 merge WORK.P2000(in=_a rename=(Location=State))
 WORK.P2008(in=_b);
 by State;
 if _a and _b;
 Difference=Pop2008-Pop2000;
 run;
-D.
-data compare;
+D. data compare;
 merge WORK.P2000(in=_a) (rename=(Location=State))
 WORK.P2008(in=_b);
 by State;
@@ -6686,17 +6682,13 @@ if _a and _b;
 Difference=Pop2008-Pop2000;
 run;
 
-A. Option A
-B. Option B
-C. Option C
-D. Option D
 Answer: C
 
 Question:
 The following SAS program is submitted:
 
 data WORK.RETAIL;
-Cost=’$20.000′;
+Cost=’$20,000′;
 Discount=.10*Cost;
 run;
 
@@ -6728,29 +6720,19 @@ Answer: B
 
 Question:
 The SAS data set Fed.Banks contains a variable Open_Date which has been assigned a permanent label of "Open Date". Which SAS program temporarily replaces the label "Open Date" with the label "Starting Date" in the output?
-A.
-Proc print data=SASUSER.HOUSES label;
+A. Proc print data=SASUSER.HOUSES label;
 Label Open_date “Starting Date”;
 Run;
-B.
-Proc print data=SASUSER.HOUSES label;
+B. Proc print data=SASUSER.HOUSES label;
 Label Open_date= “Starting Date”;
 Run;
-C.
-Proc print data=SASUSER.HOUSES ;
+C. Proc print data=SASUSER.HOUSES ;
 Label Open_date “Starting Date”;
 Run;
-D.
-Proc print data=SASUSER.HOUSES ;
+D. Proc print data=SASUSER.HOUSES ;
  Open_date= “Starting Date”;
 Run;
-
-A. Option A
-B. Option B
-C. Option C
-D. Option D
 Answer: B
-
 
 Question:
 Given the SAS data set WORK.ONE:

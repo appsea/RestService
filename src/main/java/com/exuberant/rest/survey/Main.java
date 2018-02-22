@@ -49,7 +49,7 @@ public class Main {
         System.err.println("TQ: " + wrappers.size());
         System.err.println("TQ: " + allQuestions.size());
         ObjectMapper objectMapper = new ObjectMapper();
-        Files.write(Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\screened\\","sas_questions.json"), objectMapper.writeValueAsString(allQuestions).getBytes());
+        Files.write(Paths.get("C:\\Data\\Rakesh","sas_questions.json"), objectMapper.writeValueAsString(allQuestions).getBytes());
     }
 
     private void startExam() throws Exception {

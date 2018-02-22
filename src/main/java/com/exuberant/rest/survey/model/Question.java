@@ -1,7 +1,6 @@
 package com.exuberant.rest.survey.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.util.StringUtils;
@@ -19,8 +18,8 @@ public class Question {
 
     private String fileName;
     private String number;
-    private StringBuilder question = new StringBuilder();
     private StringBuilder description = new StringBuilder();
+    private StringBuilder explaination = new StringBuilder();
     private Options options = new Options();
     private String errorMessage;
     private Exception exception;
@@ -41,13 +40,13 @@ public class Question {
         return options;
     }
 
-    public String getQuestion() {
-        return question.toString();
+    public String getDescription() {
+        return description.toString();
     }
 
     @JsonIgnore
     public boolean isComplete() {
-        return question != null && !question.toString().equals("") && options.areValid();
+        return description != null && !description.toString().equals("") && options.areValid();
     }
 
     @JsonIgnore
@@ -95,11 +94,11 @@ public class Question {
     }
 
     public void appendQuestion(String question) {
-        this.question.append(question).append("\n");
+        this.description.append(question).append("\n");
     }
 
     public void appendDescription(String description) {
-        this.description.append(description).append("\n");
+        this.explaination.append(description).append("\n");
     }
 
     @JsonIgnore
@@ -113,7 +112,7 @@ public class Question {
 
     @Override
     public String toString() {
-        StringBuilder stringBuilder = new StringBuilder(question);
+        StringBuilder stringBuilder = new StringBuilder(description);
         stringBuilder.append(options);
         return stringBuilder.toString();
     }
