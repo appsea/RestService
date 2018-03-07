@@ -8,6 +8,7 @@ import com.exuberant.rest.survey.service.RandomPaperSetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -49,7 +50,9 @@ public class Main {
         System.err.println("TQ: " + wrappers.size());
         System.err.println("TQ: " + allQuestions.size());
         ObjectMapper objectMapper = new ObjectMapper();
-        Files.write(Paths.get("C:\\Data\\Rakesh","sas_questions.json"), objectMapper.writeValueAsString(allQuestions).getBytes());
+        Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
+        System.err.println("Created: " + path);
+        Files.write(path, objectMapper.writeValueAsString(allQuestions).getBytes());
     }
 
     private void startExam() throws Exception {

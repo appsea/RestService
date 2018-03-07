@@ -47,7 +47,7 @@ public class SasQuestionBanker implements QuestionBanker {
         bank.add(new QuestionBank("Q4-A00-211-20170130-1752144.txt", 66));
         bank.add(new QuestionBank("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", 17));*/
         //bank.add(new QuestionBank("Q6-A00-211qa70-20170130-175156234.txt", 66));
-        bank.add(new QuestionBank("Main-All-Questions.txt", 458));
+        bank.add(new QuestionBank("Main-All-Questions.txt", 451));
         //Total were 1142 then reduced to 1034
         return bank;
     }

@@ -114,7 +114,6 @@ B. This variable appears in output dataset
 C. Will have values “YES” or “NO”
 D. Will have values “TRUE” or “FALSE”
 
-
 Answer: A
 
 Question:
@@ -146,7 +145,8 @@ C. 13/03/2000
 D. Corresponds to days from 01 Jan 1960: 135680
 
 Answer: B
-Description: The choices mentioned in b and c points both were there. Hence I had to calculate the number of days from 01 Jan 1960.  Although a rough idea will do. There was a digit difference between 2 options
+Description: The choices mentioned in b and c points both were there. Hence I had to calculate the number of days from 01 Jan 1960.
+Although a rough idea will do. There was a digit difference between 2 options
 
 Question:
 1----5----10---	(data in file ‘asa’)
@@ -163,7 +163,7 @@ C. 14682(number of days from 1st jan 1960)
 D. 02 January
 
 Answer: C
-Description: Note: the date is stored in dataset as SAS date
+Description: The date is stored in dataset as SAS date value which starts from 01 Jan 1960
 
 Question:
 Data test;
@@ -180,12 +180,13 @@ C. 6
 D. 8
 
 Answer: C
-Description: This question will tell you that before marking any choice think twice. Actually it comes out of do while loop when n is 6 and will not execute the statement n+1;)
+Description: This question will tell you that before marking any choice think twice. Actually it comes out of do while loop when n is 6 and
+will not execute the statement n+1;
 
 Question:
 Proc Format;
-Value ag 	1-50  = ‘less’
-	51-100 = ‘greater’;
+Value ag 1-50  = ‘less’
+	 51-100 = ‘greater’;
 Run;
 Data test;
 X = 50.5;
@@ -199,7 +200,7 @@ D. 50.5
 
 Answer: D
 
-Description: ( I would suggest please try it on your PC and check for different values. Whenever SAS does not find a mapping for some value in the format it print the value as it is.)
+Description: Whenever SAS does not find a mapping for some value in the format it print the value as it is.
 
 Question:
 data test;
@@ -252,7 +253,7 @@ C. 3
 D. 4
 
 Answer: B
-(note only one execution not complete dataset)
+Description: It is only one execution because of @ sign not complete dataset
 
 Question:
 How to write comma separated file?
@@ -273,13 +274,14 @@ RAJU,SHARMA,24
 DATA temp;
 Infile ‘abc’ dsd;
 Input FNAME $ LNAME $ AGE;
- RUN;
- What will be the value of LNAME for 1st observation?
+RUN;
+What will be the value of LNAME for 1st observation?
 A. ‘,’
 B. blank character value
 C. ‘SHARMA’
 D. syntax error
 Answer: B
+Description: DSD option in infile statement consider consecutive delimiter as a blank value.
 
 Question:
 data temp;
@@ -299,7 +301,7 @@ Question:
 data temp;
 set test; /* 100 observations 20 for each ID*/
 by ID;
-if first,ID then name  = ‘RAJU’;
+if first.ID then name  = ‘RAJU’;
 else if ID = ‘RAM’ then name = ‘RAMU’;
 if last.ID;
 run;
@@ -311,6 +313,7 @@ C. 100
 D. 0
 
 Answer: A
+Description: It will give only 5 observation only for first.id and for last.id.
 
 
 
@@ -327,6 +330,7 @@ C. In datastep input is read from temporary location and output is written to pe
 D. In datastep input is read from permanent location and output is written to permanent location.
 
 Answer: D
+Description: Both data statement and set statement has libname before dataset names which assign.
 
 Question:
 What is the output of DATE9. format?
@@ -337,6 +341,7 @@ C. 31NOV2000
 D. 01NOVEMBER2000
 
 Answer: C
+
 
 Question:
  Why PROC FSLIST is used?
@@ -364,6 +369,7 @@ C. LA = name||’ ,’||TRIM(put(Age,2.));
 D. LA = put(name)||’,’||put(Age,3.);
 
 Answer: A.
+Description: TRIM function removes leading and traililng blacks from name and concatanate it with age value.
 
 Question:
 data temp;
@@ -380,6 +386,7 @@ C. ID NAME CLASS AGE
 D. Syntax error
 
 Answer: D
+Description: keep statement does not have equal to (=) sign.
 
 Question:
 data a;
@@ -398,6 +405,7 @@ C. 1 and 4
 D. 3 and 1
 
 Answer: C
+Description: do loop does not have output statement hence it will have only one observation and 4 variable. output statement gives explicit output.
 
 Question:
 What informat  should be used to read the date variable in the flat file having the values like 02NOV2003?
@@ -426,8 +434,7 @@ C. . (period)
 D. Blank value
 
 Answer: B
-
-Tip: Here the SAS goes to the 5th column and read the value. But if we specify the informat like SALARY 5. then there will be ‘.’ In the SALARY variable. Please keep in mind that if there is any data error, SAS produces blank values to those variables(i.e ‘.’ For numeric variables and blank for the character variables). SAS never stops execution when data error occurs.
+Description: Here the SAS goes to the 5th column and read the value. But if we specify the informat like SALARY 5. then there will be ‘.’ In the SALARY variable. Please keep in mind that if there is any data error, SAS produces blank values to those variables(i.e ‘.’ For numeric variables and blank for the character variables). SAS never stops execution when data error occurs.
 
 Question:
 Flat file structure is as below
@@ -447,7 +454,7 @@ D. 02/03/2000
 Answer: B
 
 Question:
- The following code is submitted
+The following code is submitted
 
 data temp;
 x=14643;
@@ -460,6 +467,7 @@ B. Length of Y is 10
 C. Length of Y is 8
 D. None
 Answer: A
+Description: put function changes type from numeric to character hence the length of variable Y is $10.
 
 Question:
 The following code is submitted
@@ -504,7 +512,7 @@ Answer: C
 
 
 Question:
-Flat file structure is as below (Very good question)
+Flat file structure is as below
 1----5----10
 vital reddy 45
 vijay 30
@@ -524,6 +532,8 @@ C. zero observations
 D. syntax error
 
 Answer: A
+Description: SAS will consider reddy as a numeric value hence generate missing numeric value for age and missing numeric value is always minimum  value availble. thus we get 3 observation.
+
 
 Question:
 The following code is submitted.
@@ -540,6 +550,7 @@ B. 2000
 C. .(period)
 D. blank
 Answer: B
+Description: SAS will consider '20000' as a numeric value and thus value of BONUS variable is 2000.
 
 Question:
 The following code is submitted.
@@ -598,12 +609,12 @@ C. senior
 D. blank characters
 
 Answer: B
-Tip: here we need to use UPCASE (jobcode) in if statement as the character comparison is case sensitive.
+Description: here we need to use UPCASE (jobcode) in if statement as the character comparison is case sensitive.
 
 
 Question:
 The TEMP dataset has the values of variables as below
-X                Y                                       Z
+X                Y                           Z
 150      less than 200 and gt 100           300
 
 which of the below code creates the dataset TEMP with above values in the variables X, Y, and Z.
@@ -651,7 +662,7 @@ Answer: A
 Question:
 Flat file structure is as below
 1----5----10
- 23 44
+23 44
 The following code is submitted.
 data temp;
 infile ‘file specification’;
@@ -685,6 +696,7 @@ C. 2
 D. 0
 
 Answer: A
+Description: both do loop does not have output statement. output statemnt gives explicit output i.e detailed output.
 
 Question:
 The dataset XYZ has 5000 observations.
@@ -758,7 +770,9 @@ B. PROC SQL
 C. PROC PRINT
 D. PROC CONTENTS
 
-Answer: B
+Answer: C
+Description: there are two portion of a data set- descriptor and data portion. the descriptor portion gives an insight into the data set and its variable attributes. whereas the data portion displays the data in listed column. the descriptor portion of the data set can be viewed through 'proc content' and the data portion can be displayed through 'proc print'.
+
 
 Question:
 What is the procedure to see the descriptor portion of the dataset?
@@ -769,6 +783,8 @@ C. PROC PRINT
 D. PROC CONTENTS
 
 Answer: D
+Description: there are two portion of a data set- descriptor and data portion. the descriptor portion gives an insight into the data set and its variable attributes. whereas the data portion displays the data in listed column.the descriptor portion of the data set can be viewed through 'proc content' and the data portion can be displayed through 'proc print'.
+
 
 Question:
 The variable JOBCODE has length $5 in the dataset TEMP. The same variable present in the dataset TEMP1 and has length $7.
@@ -776,7 +792,7 @@ data temp2;
 set temp temp1;
 run;
 
-what would be the length of the variable JOBCODE in the dataset TEMP2?
+What would be the length of the variable JOBCODE in the dataset TEMP2?
 
 A. 5
 B. 7
@@ -785,7 +801,7 @@ D. None
 
 Answer: A
 
-Tip: whenever we are concatenating the datasets which are having the same variable names but having the difference in the attributes like Label, length etc.. will be taken from the first dataset that has occurred in the SET statement. Here it is TEMP dataset.
+Description: whenever we are concatenating the datasets which are having the same variable names but having the difference in the attributes like Label, length etc.. will be taken from the first dataset that has occurred in the SET statement. Here it is TEMP dataset.
 
 
 Question:
@@ -822,7 +838,7 @@ How many observations will be there dataset b if the following datastep is submi
 Data b;
    Set a;
    Temp = qtr(input(Date,mmddyy10.));
-   If Temp LE 3;
+   If Temp LT 3;
 RUN;
 
 A. 3
@@ -848,6 +864,7 @@ C. 8
 D. 200
 
 Answer: D
+Description: Whenever a variable is created by assigning the value returned by the SCAN function, Its length is always $200 ( If it is not set explicitly using length statement).
 
 Question:
  What will be the value of variable LEN when the following code is submitted?
@@ -919,9 +936,6 @@ D. 01012000
 Answer: C
 
 Question:
-Array name related conceptual question
-
-Question 66:
 data temp;
  infile 'file';
  input relation $ @;
@@ -951,7 +965,7 @@ B. 1
 C. 2
 D. 3
 Answer: A
-Description: (syntax error - error in retain statement)
+Description: syntax error - error in retain statement
 
 Question:
 Input file has
@@ -1014,6 +1028,7 @@ C. The PROC SORT step permanently sorts the data set.
 D. The PROC SORT runs successfully, PROC PRINT generates errors
 
 Answer: B
+Description: 'By' statement in missing in proc sort.
 
 Question:
 In the DATA step, how can you reference the temporary SAS data set named Dating
@@ -1039,7 +1054,7 @@ Question:
 Which of the following contains a syntax error?
 
 A. None of these
-B. proc print data=sales.location;
+B. proc print data=sales.location label;
      label loc='Franchise Location';
      run;
 C. proc sort data=work.sales;
@@ -1085,6 +1100,7 @@ C. 0
 D. 16
 
 Answer: A
+Description: Default length of any variable is always 8.
 
 Question:
 Which time span is used to interpret two-digit values if the YEARCUTOFF= option is set to 1969?
@@ -1094,6 +1110,7 @@ B. 1969-2069
 C. 1969-2068
 D. 1870-1969
 Answer: C
+Description: Yearcutoff= option always has 100 years of span. therefor time span for yearcutoff=1969 is 1969-2068.
 
 
 Question:
@@ -1343,16 +1360,6 @@ A. A list report that displays a row for each observation in the input data set 
 B. A list report that calculates the N (frequency) statistic for character variables.
 C. A list report ordered by values of the first variable in the COLUMN statement
 D. A summary report ordered by values of the first variable in the COLUMN statement.
-
-Answer: A
-
-Question:
-When you define an order variable in PROC REPORT
-
-A. all of the above
-B. none of the above
-C. you are unable to create a summary report
-D. PROC REPORT displays only the first occurrence of each order variable in sets of rows with duplicate order variables.
 
 Answer: A
 
@@ -1643,10 +1650,33 @@ Max Cori 21 1052 87231
 
 Which piece of code reads the data without errors?
 
-A. data people; infile `people.txt'; input @21 dob @8 first $ @1 last $ @16 dues; informat dues comma5.2; informat dob julian.; run;
-B. data people; infile `people.txt'; input last $ first $ dues dob; informat dues comma4.2; informat dob julian.; run;
-C. data people; infile `people.txt'; input @21 dob @8 first @1 last dues; informat dues comma5.2; informat dob julian.; run;
-D. data people; infile `people.txt'; input last first dues dob; informat dues comma5.2; informat dob julian.; run;
+A. data people;
+infile `people.txt';
+input @21 dob @8 first $ @1 last $ @16 dues;
+informat dues comma5.2;
+informat dob julian.;
+run;
+
+B. data people;
+infile `people.txt';
+input last $ first $ dues dob;
+informat dues comma4.2;
+informat dob julian.;
+run;
+
+C. data people;
+infile `people.txt';
+input @21 dob @8 first @1 last dues;
+informat dues comma5.2;
+informat dob julian.;
+run;
+
+D. data people;
+infile `people.txt';
+input last first dues dob;
+informat dues comma5.2;
+informat dob julian.;
+run;
 
 Answer: B
 
@@ -1660,10 +1690,22 @@ Max Cori 21 1052 87231
 
 The following versions of the same data are missing some values. Which file should be read in with the MISSOVER option?
 
-A. Smith Joe 27 1892Franks Carl 24 2343 84060Well Sam 32 4569 76182Max Cori 21 1052 87231
-B. Smith Joe 27 1892 81059Franks Carl 24 2343 84060Well Sam 32 4569 76182Max Cori 21 87231
-C. Smith Joe 27 1892 81059Franks Carl 2343 84060Well Sam 32 4569 76182Max Cori 21 1052 87231
-D. Smith Joe 27 1892 81059Franks Carl 24 2343 84060Well 32 4569 76182Max Cori 21 1052 87231
+A. Smith Joe 27 1892
+   Franks Carl 24 2343 84060
+   Well Sam 32 4569 76182
+   Max Cori 21 1052 87231
+B. Smith Joe 27 1892 81059
+   Franks Carl 24 2343 84060
+   Well Sam 32 4569 76182
+   Max Cori 21 87231
+C. Smith Joe 27 1892 81059
+   Franks Carl 2343 84060
+   Well Sam 32 4569 76182
+   Max Cori 21 1052 87231
+D. Smith Joe 27 1892 81059
+   Franks Carl 24 2343 84060
+   Well 32 4569 76182
+   Max Cori 21 1052 87231
 
 Answer: A
 
@@ -1710,7 +1752,10 @@ Answer: D
 Question:
 The following is the first few lines of an input file.
 
-Smith^Joe^27^1892^81059 Franks^Carl^24^2343^84060 Well^Sam^32^4569^76182 Max^Cori^21^1052^87231
+Smith^Joe^27^1892^81059
+Franks^Carl^24^2343^84060
+Well^Sam^32^4569^76182
+Max^Cori^21^1052^87231
 
 Which statement should be used to read in the file referenced by the fileref persons?
 
@@ -1784,7 +1829,7 @@ B. _N_ _Error_ ID Name Salary
 6 2 .
 C. _N_ _Error_ ID Name Salary
 5 2 AC103 John 45330
-D. . _N_ _Error_ ID Name Salary
+D. _N_ _Error_ ID Name Salary
 6 1 .
 
 Answer: D
@@ -1792,10 +1837,54 @@ Answer: D
 Question:
 Which of the following correctly creates four variables which give the total quarterly sales for each quarter given that the dataset SALES contains twelve variables, month1 through month12?
 
-A. data Quarterly; set Sales; array quarter{4}; array month{4,3}; do i=1 to 4; quarter{i}=0; do j=1 to 4; quarter{i}+month{i,j}; output; end; end;run;
-B. data Quarterly; set Sales; array quarter{4}; array month{4,3}; do i=1 to 5; quarter{i}=0; do j=1 to 4; quarter{i}+month{i,j}; end; end;run;
-C. data Quarterly; set Sales; array quarter{4}; array month{4,3}; do i=1 to 4; quarter{i}=0; do j=1 to 3; quarter{i}+month{i,j}; end; end;run;
-D. data Quarterly; set Sales; array quarter{4}; array month{4,3}; do i=1 to dim(quarter); quarter{i}=0; do j=1 to dim(month); quarter{i}+month{i,j}; end; end;run;
+A. data Quarterly;
+set Sales;
+array quarter{4};
+array month{4,3};
+do i=1 to 4;
+quarter{i}=0;
+do j=1 to 4;
+quarter{i}+month{i,j};
+output;
+end;
+end;
+run;
+
+B. data Quarterly;
+set Sales;
+array quarter{4};
+array month{4,3};
+do i=1 to 5;
+quarter{i}=0;
+do j=1 to 4;
+quarter{i}+month{i,j};
+end;
+end;
+run;
+
+C. data Quarterly;
+set Sales;
+array quarter{4};
+array month{4,3};
+do i=1 to 4;
+quarter{i}=0;
+do j=1 to 3;
+quarter{i}+month{i,j};
+end;
+end;
+run;
+
+D. data Quarterly;
+set Sales;
+array quarter{4};
+array month{4,3};
+do i=1 to dim(quarter);
+quarter{i}=0;
+do j=1 to dim(month);
+quarter{i}+month{i,j};
+end;
+end;
+run;
 
 Answer: C
 
@@ -1816,6 +1905,7 @@ C. . (missing value)
 D. 50
 
 Answer: C
+Description: when you use a missing value with an arithmetic operator (+, - etc), it returnsa missing value. On the other hand  the sum function ignores the missing value.
 
 Question:
 Which of the following pieces of code appends the
@@ -1845,8 +1935,12 @@ When the code below is run, what is the value of the variable TotalSales for the
 data Sales;
 input Month $ Jobcode $ Sales;
 retain Totalsales 200;
-Totalsales + Sales; datalines;
-Jan EJK459 250 Feb EJK459 200 Mar EJK459 250 ;
+Totalsales + Sales;
+datalines;
+Jan EJK459 250
+Feb EJK459 200
+Mar EJK459 250
+;
 
 A. 700
 B. 200
@@ -1952,7 +2046,7 @@ Question:
 What does the following code produce? Assume gender, weight, and height are all categorical variables.
 
 proc freq data=mydata;
-tables gender weight height;
+tables gender*weight*height;
 run;
 
 A. Two tables, one for each gender, with height groups on one axis and weight groups on another. Frequency and percent are found in each cell of the table.
@@ -1961,6 +2055,7 @@ C. Two tables, one for each gender, with height groups on one axis and weight gr
 D. A single table with gender, weight, and height variables along with variables for frequency, percent, cumulative frequencies, and cumulative percents.
 
 Answer: C
+
 
 Question:
 Which of the following procedures will correctly display the label for the variable Coupon that is already permanently stored in the dataset?
@@ -1971,6 +2066,7 @@ C. proc print data=bonds; label Coupon='MyLabel'; run;
 D. proc print data=bonds label; run;
 
 Answer: D
+Description: label option in proc print shows the changed label in name in output of proc print. wihout label option in proc print sas does not show changed label in datastep.
 
 Question:
 What is the function of the FILENAME statement in SAS?
@@ -2022,16 +2118,6 @@ D. the ODS HTML statement
 Answer: D
 
 Question:
-Which informat could be use to read the date value 01MAR91?
-
-A. date7.
-B. mmddyy6.
-C. date9.
-D. weekdate6
-
-Answer: A
-
-Question:
 What does the NOOBS option do in the PROC PRINT step?
 
 A. Relentlessly mocks you for being new to SAS.
@@ -2048,7 +2134,11 @@ Consider the following code which generates a data set and creates a third varia
 data Bonds;
 input CouponRate $ ParValue $;
 datalines;
-8% $1000 9% $1200 7.8% $1500 5% $900 6% $750
+8% $1000
+9% $1200
+7.8% $1500
+5% $900
+6% $750
 ;
 data BondCoupons;
 set Bonds;
@@ -2065,17 +2155,15 @@ C. Coupon=CouponRate/100 * ParValue;
 D. Coupon=numeric(CouponRate,percent4.)*numeric(Parvalue,dollar5.);
 
 Answer: A
+Description: input function changes character value to numeric values which makes code to calculate coupon value.
 
 Question:
 The data step executes
 
 A. once for each variable in the output data set
 B. once for each observation in the input data set.
-C. until it encounters an
-OUTPUTstatement
-D. continuously if you use the
-POINT=option and the
-STOPstatement.
+C. until it encounters an OUTPUT statement
+D. continuously if you use the POINT=option and the STOPstatement.
 
 Answer: B
 
@@ -2120,9 +2208,10 @@ run;
 
 
 Answer: A
+Description: option A does not contain output statement which gives explicit output thus it gives only 1 observation.
 
 Question:
-With the following code present in my data step, if the value of the variable i is 32, which of the following values will j be?
+With the following code present in below data step, if the value of the variable i is 32, which of the following values will j be?
 
 if i < 32 then j=15;
 else if i > 32 then j=16;
@@ -2140,10 +2229,17 @@ Consider the following code which generates a data set and creates a third varia
 
 data Bonds;
 input CouponRate $ ParValue $;
-datalines; 8% $1000 9% $1200 7.8% $1500 5% $900 6% $750 ;
+datalines;
+8% $1000
+9% $1200
+7.8% $1500
+5% $900
+6% $750 ;
 
 data BondCoupons;
-set Bonds; Coupon= CouponRate/100 * ParValue; run;
+set Bonds;
+Coupon= CouponRate/100 * ParValue;
+run;
 proc print data=bondcoupons;
 run;
 
@@ -2244,6 +2340,7 @@ D. 12
 
 Answer: A
 Description: Since SAS checks the variable Job_code in DEPT1 for the first time of length of 5 Bytes. it sets the length to be 5. All the values that are read from DEPT2 are truncated to Chars.
+
 Question:
 The following SAS DATA step is submitted:
 
@@ -2270,7 +2367,7 @@ C. set work.dept1 work.dept2(rename = jcode = jobcode sal = salary);
 D. set work.dept1 work.dept2(rename = (jcode jobcode) (sal salary));
 
 Answer: B
-description:  RENAME=(old-name-1=new-name-1 old-name-2=new-name-2. . . old-name-n=new-name-n)
+Description:  RENAME=(old-name-1=new-name-1 old-name-2=new-name-2. . . old-name-n=new-name-n)
 
 
 Question:
@@ -2676,6 +2773,7 @@ A. the SAS log
 B. the raw data file that was opened last
 C. the SAS output window or an output file
 D. the data set mentioned in the DATA statement
+
 Answer: A
 
 Question:
@@ -2686,7 +2784,6 @@ idnum character variable
 sales_date numeric date value
 
 A comma delimited raw data file needs to be created from the PERM.JAN_SALES data set. The SALES_DATE values need to be in a MMDDYY10 form.
-
 Which one of the following SAS DATA steps correctly creates this raw data file?
 
 A. libname perm 'SAS-data-library';
@@ -2822,7 +2919,7 @@ C. a numeric value of 14692, which represents the SAS date value for March 23, 2
 D. a numeric value of 3232000, which represents the SAS date value for March 23, 2000
 
 Answer: C
-Description: Mdy() function returns a date numeric val
+Description: Mdy() function returns a date numeric date value.
 
 
 Question:
@@ -2841,7 +2938,7 @@ C. the numeric value 14725, representing the SAS date for April 25, 2000
 D. the numeric value 04252000, representing the SAS date for April 25, 2000
 
 Answer: C
-Description:  the numeric value 14725, representing the SAS date for April 25, 2000
+Description:  the numeric value 14725, representing the SAS date for April 25, 2000. today() function gives numeric date value representing sas date.
 
 
 Question:
@@ -2910,7 +3007,7 @@ C. 2000
 D. . (missing numeric value)
 
 Answer: D
-Description: Mathematical operations could not be performed at the following places. The results of the operations have been set to missing values.
+Description: Mathematical operations could not be performed at the following places.in operation value can not be devide by zero The results of the operations have been set to missing values.
 
 Question:
 The contents of the raw data file AMOUNT are listed below:
@@ -3009,7 +3106,7 @@ D. The program executes without errors or warnings and creates the WORK.TOTALSAL
 
 Answer: B
 Description:
-The syntax issue lies in this line of code - keep = msales{12}
+The syntax issue lies in this line of code - keep = msales{12}. You can not use array name in keep option.
 To correct the syntax issue, replace keep = msales{12} with keep = msales1-msales12
 See the errors in log window :
 
@@ -3039,6 +3136,9 @@ C. The program runs with warnings and creates the WORK.TOTALSALES data set with 
 D. The program runs without errors or warnings and creates the WORK.TOTALSALES data set with 60 observations.
 
 Answer: B
+Description:
+The syntax issue lies in this line of code - retain monthsales {12} ;. You can not use array name in retain statement.
+To correct the syntax issue, replace retain monthsales{12} with retain msales1-msales12
 
 
 Question:
@@ -3056,6 +3156,7 @@ C. PRODUCT, SALES, MONTH, NUM_SOLD and COST only
 D. An incomplete output data set is created due to syntax errors.
 
 Answer: D
+Description: keep statement does ot have '=' equal to sign. To correct the syntax issue, remove equal to sign from the keep statement
 
 Question:
 The contents of the raw data file CALENDAR are listed below:
@@ -3074,6 +3175,10 @@ C. . (missing numeric value)
 D. The value can not be determined as the program fails to execute due to errors.
 
 Answer: D
+Description: The syntax issue lies in this line of code - if date = '01012000'd ;. You can not use date time constant in IF statement.
+To correct the syntax issue, remove 'd' ie date time constant from IF statement and correct statement would be,
+if date = '01012000' then event = 'January 1st';
+
 
 Question:
 A SAS program is submitted and the following SAS log is produced:
@@ -3098,6 +3203,7 @@ C. Place quotes around the value on the IF statement.
 D. Add an END statement to conclude the IF statement.
 
 Answer: B
+Description: missin semicolon creates a syntax error thus datastep does not process further.
 
 Question:
 The contents of the raw data file SIZE are listed below:
@@ -3115,6 +3221,8 @@ C. 95
 D. . (missing numeric value)
 
 Answer: A
+Description: format for weight in input statement does not have . after 2, SAS will consider it as value for weight. to remove this error statemnt should be like, input @1 height 2. @4 weight 2.;
+
 
 Question:
 A SAS PRINT procedure output of the WORK.LEVELS data set is listed below:
@@ -3129,14 +3237,10 @@ Obs name level
 The following SAS program is submitted:
 data work.expertise;
 set work.levels;
-if level = . then
-expertise = 'Unknown';
-else if level = 1 then
-expertise = 'Low';
-else if level = 2 or 3 then
-expertise = 'Medium';
-else
-expertise = 'High';
+if level = . then expertise = 'Unknown';
+else if level = 1 then expertise = 'Low';
+else if level = 2 or 3 then expertise = 'Medium';
+else expertise = 'High';
 run;
 Which of the following values does the variable EXPERTISE contain?
 A. Low, Medium, and High only
@@ -3145,6 +3249,8 @@ C. Low, Medium, High, and Unknown only
 D. Low, Medium, High, Unknown, and ' ' (missing character value)
 
 Answer: B
+Description: this is a quit tricky question, The issue lies in this line of code - else if level = 2 or 3 then expertise = 'Medium'; hence SAS cannot diffrentiate value 2 or 3 hence consider values bigger then 3 as 2 or 3, hence give expertise value as 'Medium' for all values greater than 4.
+
 
 Question:
 The contents of the raw data file EMPLOYEE are listed below:
@@ -3200,6 +3306,8 @@ C. 50.5
 D. . (missing numeric value)
 
 Answer: D
+Description: Whenever SAS does not find a mapping for some value in the format it print the value as it is.
+
 
 Question:
 The following SAS program is submitted:
@@ -3216,6 +3324,8 @@ C. 5
 D. 6
 
 Answer: D
+Description: output of proc means procedure will start from next page ie page no 6. to reset the page no to 1 Use options statement as,
+options pageno=1;
 
 Question:
 Which one of the following SAS system options displays the time on a report?
@@ -3225,6 +3335,7 @@ C. TODAY
 D. DATETIME
 
 Answer: B
+Description: The date options specifies that the date and the time that the SAS program started.
 
 Question:
 Which one of the following SAS system options prevents the page number from appearing on a report?
@@ -3234,6 +3345,7 @@ C. NONUMBER
 D. NOPAGENUM
 
 Answer: C
+Description: number/ nonumber system options Controls whether the page number is printed on the first title line of each page of output.
 
 Question:
 The following SAS program is submitted:
@@ -3257,8 +3369,7 @@ All Regions
 All Figures in Thousands of Dollars
 
 Answer: B
-
-
+Description: if u change the FOOTNOTEn in procedure then SAS only writes footnote with leser number.in this example in proc print footnote2 is written again hence SAS writes only footenote1 and footnote2.
 
 Question:
 The following SAS program is submitted:
@@ -3272,6 +3383,7 @@ C. Add the statement FORMAT STD 7.2; in the MEANS procedure step.
 D. Add the option FORMAT = 7.2 option to the MEANS procedure statement.
 
 Answer: A
+Description: Maxdec option in the MEANS procedure statement specifies the number of decimal places for the statistics. Which only is used for display output, not dataset of output, for dataset output You need to format the variables in dataset by yourself using format statement.
 
 Question:
 Unless specified, which variables and data values are used to calculate statistics in the MEANS procedure?
@@ -3291,23 +3403,23 @@ run;
 proc print data = houses;
 
 run;
-Click on the Exhibit button to view the report produced.
+
 style bedrooms baths price
-CONDO 2 1.5 80050
-3 2.5 79350
-4 2.5 127150
-2 2.0 110700
-RANCH 2 1.0 64000
-3 3.0 86650
-3 1.0 89100
-1 1.0 34550
-SPLIT 1 1.0 65850
-4 3.0 94450
-3 1.5 73650
+CONDO	2 1.5 80050
+	3 2.5 79350
+	4 2.5 127150
+	2 2.0 110700
+RANCH	2 1.0 64000
+	3 3.0 86650
+	3 1.0 89100
+	1 1.0 34550
+SPLIT	1 1.0 65850
+	4 3.0 94450
+	3 1.5 73650
 TWOSTORY 4 3.0 107250
-2 1.0 55850
-2 1.0 69250
-4 2.5 102950
+	2 1.0 55850
+	2 1.0 69250
+	4 2.5 102950
 Which of the following SAS statement(s) create(s) the report?
 A. id style;
 B. id style;
@@ -4433,7 +4545,7 @@ D. 55
 Answer:  C
 
 Question:
-Flat file structure is as below (Very good question)
+Flat file structure is as below
  1----5----10
 vital reddy 45
 vijay 30
@@ -4517,20 +4629,6 @@ A. 1
 B. 3
 C. 2
 D. 0
-
-Answer: A
-
-Question:
-length 5 in  the dataset TEMP. The same variable present in the dataset TEMP1 and has length 5 in the dataset TEMP. The same variable present in the dataset TEMP1 and has length7.
-data temp2;
-set temp temp1;
-run;
-what would be the length of the variable JOBCODE in the dataset TEMP2?
-
-A. 5
-B. 7
-C. we can’t see the length as data set won’t be created due to errors.
-D. none
 
 Answer: A
 
@@ -5638,50 +5736,21 @@ Row Pct
 Col Pct
 	Table of Region by Product
 Region	Product
-	Corn	Cotton	Oranges	Total
-East	2
-22.22
-50.00
-50.00
-	1
-11.11
-25.00
-33.33
-	1
-11.11
-25.00
-50.00
-	4
-44.44
+		Corn		Cotton	Oranges	Total
+East		2		1		1		4
+		22.22	11.11	11.11	44.44
+		50.00	25.00	25.00
+		50.00	33.33	50.00
 
 
-
-South	2
-22.22
-40.00
-50.00
-	2
-22.22
-40.00
-66.67
-	1
-11.11
-20.00
-50.00
-	5
-55.56
+South	2		2		1		5
+		22.22	22.22	11.11	55.56
+		40.00	40.00	20.00
+		50.00	66.67	50.00
 
 
-
-Total	4
-44.44
-	3
-33.33
-	2
-22.22
-	9
-100.00
-
+Total		4		3		2		9
+		44.44	33.33	22.22	100.00
 
 Which TABLES statement was used to completed the following program
 that produced the output?
@@ -7064,7 +7133,7 @@ The following SAS program is submitted:
 libname temp ‘SAS data library’;
 data work.new;
 set temp.jobs;
-format newdate mmdd10.;
+format newdate mmddyy10.;
 mdate = month(newdate);
 ddate = weekday(newdate);
 run;
@@ -7585,33 +7654,31 @@ Description: In a PROC SORT step, you specify the DATA= option to specify the da
 
 
 Question:
- Which options are used to create the following PROC PRINT output?
+Which options are used to create the following PROC PRINT output?
 13:27 Monday, March 22, 1999
-Patient Arterial Heart Cardiac Urinary
-203 88 95 66 110
-54 83 183 95 0
-664 72 111 332 12
-210 74 97 369 0
-101 80 130 291 0
+Patient Arterial    Heart   Cardiac Urinary
+203 88  95  66  110
+54  83  183 95  0
+664 72  111 332 12
+210 74  97  369 0
+101 80  130 291 0
 A. the DATE system option and the LABEL option in PROC PRINT
 B. the DATE and NONUMBER system options and the DOUBLE and NOOBS options in PROC PRINT
 C. the DATE and NONUMBER system options and the DOUBLE option in PROC PRINT
-D. the DATE and NONUMBER system options and the NOOBS option in PROC
-PRINT
+D. the DATE and NONUMBER system options and the NOOBS option in PROC PRINT
 Answer: B
 Description: The DATE and NONUMBER system options cause the output to appear with the date but without page numbers. In the PROC PRINT step, the DOUBLE option specifies double spacing, and the NOOBS option removes the default Obs column.
 
-
 Question:
- Which of the following statements can you use in a PROC PRINT step to create this
+Which of the following statements can you use in a PROC PRINT step to create this
 output?
-Month Instructors AerClass WalkJogRun Swim
-01 1 37 91 83
-02 2 41 102 27
-03 1 52 98 19
-04 1 61 118 22
-05 3 49 88 29
-8 240 497 180
+Month   Instructors AerClass    WalkJogRun  Swim
+01  1   37  91  83
+02  2   41  102 27
+03  1   52  98  19
+04  1   61  118 22
+05  3   49  88  29
+8   240 497 180
 A. var month instructors;
 sum instructors aerclass walkjogrun swim;
 B. var month;
@@ -7621,7 +7688,6 @@ sum instructors aerclass walkjogrun swim;
 D. all of the above
 Answer: D
 Description: You do not need to name the variables in a VAR statement if you specify them in the SUM statement, but you can. If you choose not to name the variables in the VAR statement as well, then the SUM statement determines the order of the variables in the output.
-
 
 Question:
  What happens if you submit the following program?
@@ -7642,7 +7708,7 @@ Description: The BY statement is required in PROC SORT. Without it, the PROC SOR
 
 
 Question:
- If you submit the following program, which output does it create?
+If you submit the following program, which output does it create?
 proc sort data=finance.loans out=work.loans;
 by months amount;
 run;
@@ -8065,7 +8131,7 @@ Answer: B
 Description: A semicolon is needed after the PROC FORMAT statement. The VALUE statement begins with the keyword VALUE and ends with a semicolon after all the labels have been defined.
 
 Question:
- Which of these is false? Ranges in the VALUE statement can specify
+Which of these is false? Ranges in the VALUE statement can specify
 A. A single value, such as 24 or 'S'.
 B. a range of numeric values, such as 0–1500.
 C. a range of character values, such as 'A'–'M'.
@@ -8074,7 +8140,7 @@ Answer: D
 Description: You can list values separated by commas, but the list must contain either all numeric values or all character values. Data set variables are either numeric or character.
 
 Question:
- How many characters can be used in a label?
+How many characters can be used in a label?
 A. 40
 B. 96
 C. 200
@@ -8083,7 +8149,7 @@ Answer: D
 Description: When specifying a label, enclose it in quotation marks and limit the label to 256 characters.
 
 Question:
- Which keyword can be used to label missing values as well as any values that are not specified in a range?
+Which keyword can be used to label missing values as well as any values that are not specified in a range?
 A. LOW
 B. MISS
 C. MISSING
@@ -8092,7 +8158,7 @@ Answer: D
 Description: MISS and MISSING are invalid keywords, and LOW does not include missing values. The keyword OTHER can be used in the VALUE statement to label missing values as well as any values that are not specifically included in a range.
 
 Question:
- You can place the FORMAT statement in either a DATA step or a PROC step. What happens when you place the FORMAT statement in a DATA step?
+You can place the FORMAT statement in either a DATA step or a PROC step. What happens when you place the FORMAT statement in a DATA step?
 A. You temporarily associate the formats with variables.
 B. You permanently associate the formats with variables.
 C. You replace the original data with the format labels.
@@ -8101,7 +8167,7 @@ Answer: B
 Description: By placing the FORMAT statement in a DATA step, you permanently associate the defined formats with variables.
 
 Question:
- The format JOBFMT was created in a FORMAT procedure. Which FORMAT statement will apply it to the variable JobTitle in the program output?
+The format JOBFMT was created in a FORMAT procedure. Which FORMAT statement will apply it to the variable JobTitle in the program output?
 A. format jobtitle jobfmt;
 B. format jobtitle jobfmt.;
 C. format jobtitle=jobfmt;
@@ -8119,7 +8185,7 @@ Answer: D
 Description: Adding the keyword FMTLIB to the PROC FORMAT statement displays a list of all the formats in your catalog, along with descriptions of their values.
 
 Question:
- If Style has four unique values and you submit the following program, which output do you get? (Assume that all the other variables are numeric.)
+If Style has four unique values and you submit the following program, which output do you get? (Assume that all the other variables are numeric.)
 proc report data=sasuser.houses nowd;
 column style sqfeet bedrooms price;
 define style / group;
@@ -8165,7 +8231,6 @@ TWOSTORY 1745 4 $102,950
 CONDO 1860 2 $110,700
 Answer: A
 Description: This program creates a summary report, which consolidates into one row all observations from the data set that have a unique combination of values for the variable Style.
-
 
 Question:
  When you define an order variable,

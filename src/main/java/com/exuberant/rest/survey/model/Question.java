@@ -19,7 +19,7 @@ public class Question {
     private String fileName;
     private String number;
     private StringBuilder description = new StringBuilder();
-    private StringBuilder explaination = new StringBuilder();
+    private StringBuilder explanation = new StringBuilder();
     private Options options = new Options();
     private String errorMessage;
     private Exception exception;
@@ -42,6 +42,10 @@ public class Question {
 
     public String getDescription() {
         return description.toString();
+    }
+
+    public String getExplanation() {
+        return explanation.toString();
     }
 
     @JsonIgnore
@@ -97,8 +101,8 @@ public class Question {
         this.description.append(question).append("\n");
     }
 
-    public void appendDescription(String description) {
-        this.explaination.append(description).append("\n");
+    public void appendExplanation(String description) {
+        this.explanation.append(description).append("\n");
     }
 
     @JsonIgnore

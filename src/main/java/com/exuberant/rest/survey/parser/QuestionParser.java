@@ -75,7 +75,7 @@ public class QuestionParser {
                             }
                             previousOptionLine = new StringBuilder(line);
                         } else if (patternParser.isDescription(line) || hasDescriptionStarted) {
-                            question.appendDescription(line);
+                            question.appendExplanation(line.replaceFirst("Description:", "").trim());
                             hasDescriptionStarted = true;
                         } else if (!hasDescriptionStarted && hasOptionStarted) {
                             previousOptionLine.append("\n").append(line);
