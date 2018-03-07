@@ -1,6 +1,7 @@
 package com.exuberant.rest.survey;
 
 import com.exuberant.rest.survey.exam.sas.SasQuestionBanker;
+import com.exuberant.rest.survey.model.JsonQuestions;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.QuestionParser;
@@ -52,7 +53,11 @@ public class Main {
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
         System.err.println("Created: " + path);
-        Files.write(path, objectMapper.writeValueAsString(allQuestions).getBytes());
+        JsonQuestions jsonQuestions = new JsonQuestions();
+        for (Question question : allQuestions) {
+            jsonQuestions.addQuestion(question);
+        }
+        Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }
 
     private void startExam() throws Exception {
