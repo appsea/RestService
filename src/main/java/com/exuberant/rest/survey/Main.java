@@ -7,6 +7,7 @@ import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.util.StringUtils;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -57,6 +58,7 @@ public class Main {
         for (Question question : allQuestions) {
             jsonQuestions.addQuestion(question);
         }
+        System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }
 
