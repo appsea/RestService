@@ -5941,18 +5941,16 @@ The following results were generated to display only specific statistics and lim
 Which statement below was modified or added to generate the results above:
 
 Analysis variable Height
-Sex        Age         N obs       Minimum           Maximum           Mean
-
-F         Pre-Teen      3             51.3                   59.8                  55.8
-               Teen         6             56.5                   66.5                  63.0
-
-M        Pre-Teen      4             57.3                   64.8                  59.7
-               Teen         6             62.5                   72.0                  66.8
+Sex Age         Obs Minimum Maximum Mean
+F   Pre-Teen    3   51.3    59.8    55.8
+    Teen        6   56.5    66.5    63.0
+M   Pre-Teen    4   57.3    64.8    59.7
+    Teen        6   62.5    72.0    66.8
 
 A. var Height / nobs min max mean maxdec=1;
 B. proc means data=SASHELP.CLASSmaxdec=1 ;
 C. proc means data=SASHELP.CLASS min max meanmaxdec=1;
-D. outputnobs min max mean maxdec=1;
+D. output nobs min max mean maxdec=1;
 Answer: C
 
 Question:
@@ -5992,14 +5990,14 @@ Answer: D
 
 Question:
 Given the SAS data set WORK.TEMPS:
-Day Month Temp
---- --------- -------
-1 May 75
-15 May 70
-15 June 80
-3 June 76
-2 July 85
-14 July 89
+Day Month   Temp
+--- ------  -------
+1   May     75
+15  May     70
+15  June    80
+3   June    76
+2   July    85
+14  July    89
 The following program is submitted:
 proc sort data=WORK.TEMPS;
 by descending Month Day;
@@ -6007,38 +6005,38 @@ run;
 proc print data=WORK.TEMPS;
 run;
 Which output is correct?
-A. Obs Day Month Temp
---- --- ----- ----
-1 2 July 85
-2 14 July 89
-3 3 June 76
-4 15 June 80
-5 1 May 75
-6 15 May 7
-B. Obs Day Month Temp
---- --- ----- ----
-1 1 May 75
-2 2 July 85
-3 3 June 76
-4 14 July 89
-5 15 May 70
-6 15 June 80
-C. Obs Day Month Temp
---- --- ----- ----
-1 1 May 75
-2 15 May 70
-3 3 June 76
-4 15 June 80
-5 2 July 85
-6 14 July 89
-D. Obs Day Month Temp
---- --- ----- ----
-1 15 May 70
-2 1 May 75
-3 15 June 80
-4 3 June 76
-5 14 July 89
-6 2 July 85
+A. Obs  Day Month   Temp
+   ---  --- -----   ----
+    1   2   July    85
+    2   14  July    89
+    3   3   June    76
+    4   15  June    80
+    5   1   May     75
+    6   15  May     7
+B.  Obs Day Month   Temp
+    --- --- -----   ----
+    1   1   May     75
+    2   2   July    85
+    3   3   June    76
+    4   14  July    89
+    5   15  May     70
+    6   15  June    80
+C.  Obs Day Month   Temp
+    --- --- -----   ----
+    1   1   May     75
+    2   15  May     70
+    3   3   June    76
+    4   15  June    80
+    5   2   July    85
+    6   14  July    89
+D.  Obs Day Month   Temp
+    --- --- -----   ----
+    1   15  May     70
+    2   1   May     75
+    3   15  June    80
+    4   3   June    76
+    5   14  July    89
+    6   2   July    85
 Answer: C
 
 Question:
@@ -6048,9 +6046,9 @@ set WORK.DEPARTMENT;
 label Jobcode='Job Description';
 run;
 Which statement is true about the output dataset?
-A. The label of the variableJobcode is Job (only the first word).
-B. The label of the variableJobcode is Job Desc (only the first 8 characters).
-C. The label of the variableJobcode is Job Description.
+A. The label of the variable Jobcode is Job (only the first word).
+B. The label of the variable Jobcode is Job Desc (only the first 8 characters).
+C. The label of the variable Jobcode is Job Description.
 D. The program fails to execute due to errors. Labels must be defined in a PROC step.
 Answer: C
 
@@ -6061,8 +6059,6 @@ B. sasdata libname "_SAS_data_library_location_";
 C. libname sasdata "_SAS_data_library_location_";
 D. libname sasdata sas "_SAS_data_library_location_";
 Answer: C
-
-
 
 Question:
 The Excel workbook QTR1.XLS contains the following three worksheets:
@@ -6109,7 +6105,6 @@ B. An execution error, triggered by an invalid character for the variable Salary
 C. The 1st of potentially many errors, this one occurring on the 4th observation.
 D. An error on the INPUT statement specification for reading the variable Salary.
 Answer: B
-
 
 Question:
 The following SAS program is submitted:
