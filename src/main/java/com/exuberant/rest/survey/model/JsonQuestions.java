@@ -1,14 +1,10 @@
 package com.exuberant.rest.survey.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -20,6 +16,7 @@ public class JsonQuestions {
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
 
     private List<JsonQuestion> questions = new ArrayList<>();
+    private int version = 1;
 
     public void addQuestion(Question question) {
         questions.add(toQuestion(question));

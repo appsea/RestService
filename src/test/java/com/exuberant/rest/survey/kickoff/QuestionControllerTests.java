@@ -22,7 +22,7 @@ public class QuestionControllerTests {
 
     @Test
     public void getQuestions() throws Exception {
-        this.mockMvc.perform(get("/questions")).andDo(print()).andExpect(status().isOk());
+        this.mockMvc.perform(get("/sas/questions")).andDo(print()).andExpect(status().isOk());
     }
 
 }

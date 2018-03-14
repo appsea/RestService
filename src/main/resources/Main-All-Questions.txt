@@ -1,4 +1,4 @@
-Question:
+﻿Question:
 
 Which ODS command closes the HTML file??
 A. END
@@ -2669,14 +2669,14 @@ The SAS data set named COMPANY.PRICES is listed below:
 
 COMPANY.PRICES
 
-prodid price producttype sales returns
+prodid	price	producttype	sales	returns
 
-K12S 5.10 NETWORK 15 2
-B132S 2.34 HARDWARE 300 10
-R18KY2 1.29 SOFTWARE 25 5
-3KL8BY 6.37 HARDWARE 125 15
-DY65DW 5.60 HARDWARE 45 5
-DGTY23 4.55 HARDWARE 67 2
+K12S	5.10	NETWORK		15	2
+B132S	2.34	HARDWARE	300	10
+R18KY2	1.29	SOFTWARE	25	5
+3KL8BY	6.37	HARDWARE	125	15
+DY65DW	5.60	HARDWARE	45	5
+DGTY23	4.55	HARDWARE	67	2
 
 The following SAS program is submitted:
 
@@ -2695,6 +2695,7 @@ B. 2
 C. 4
 D. 6
 Answer: B
+Description: since it has a condition 'if price le 5.00' which gives 3 observations out of which only 2 fulfil the condition 'if producttype = 'HARDWARE' then output HWARE'  hence output dataset HWARE has 2 observation.
 
 Question:
 The contents of the raw data file TEAM are listed below:
@@ -2737,7 +2738,8 @@ B. 425
 C. 499
 D. 1000
 Answer: B
-DESCRIPTION: Obs count - 499-75
+DESCRIPTION: Firstobs option tells SAS from which observation to starts reads while obs option tells SAS on which observation to stop on.
+Here data Obs count = 499-75 which is 425. hance answer is B.
 
 Question:
 The following SAS program is submitted:
@@ -2755,8 +2757,7 @@ B. (space)
 C. , (comma)
 D. ; (semicolon)
 Answer: B
-Description: Since no delimiter is specified at the end of the "file", the default delimiter space will be used.
-
+Description: Since no delimiter is specified at the end of the "file", the default delimiter (space) will be used.
 
 
 Question:
@@ -2775,6 +2776,7 @@ C. the SAS output window or an output file
 D. the data set mentioned in the DATA statement
 
 Answer: A
+Description:  When you use the DATA _NULL_ statement, SAS processes the DATA step without writing observations to a data set and output written in SAS log.
 
 Question:
 The contents of the SAS data set PERM.JAN_SALES are listed below:
@@ -2815,7 +2817,7 @@ put idnum sales_date : mmddyy10. dsd = ',';
 run;
 
 Answer: B
-Description: The answer needs a File statement with dlm=’,’ and input with date format mmddyy10.
+Description: The answer needs a File statement with dlm=’,’ and input with date format mmddyy10. In option A it has DSD = ',' which is invalid because by default DSD is a comma. If you use DSD alone it would work.
 
 Question:
 A raw data record is shown below:
@@ -2828,6 +2830,7 @@ C. ddMMMyy9.
 D. ddmmmyyyy9.
 
 Answer: A
+Description: DATE9. reads dates in the form ddMMMyyyy.
 
 Question:
 The following SAS program is submitted:
@@ -2860,7 +2863,7 @@ D. Obs newdate qdate ddate
 1 04/15/2000 2 7
 
 Answer: D
-Description: The WEEKDAY function produces an integer that represents the day of the week, where 1=Sunday, 2=Monday, ..., 7=Saturday.
+Description: the qtr function produces quarter of the year ie Jan-Mar=1, Apr-Jun=2, Jul-Sept=3, Oct-Dec=4. The WEEKDAY function produces an integer that represents the day of the week, where 1=Sunday, 2=Monday, ..., 7=Saturday.
 
 Question:
 The following SAS program is submitted:
@@ -2985,7 +2988,7 @@ set mydata;
 run;
 
 Answer: D
-
+Description: data and set statement creates new dataset in SAS.
 
 Question:
 The following SAS program is submitted:
@@ -3027,7 +3030,7 @@ C. ' ' (missing character value)
 D. The value cannot be determined as the program fails to execute due to errors.
 
 Answer: A
-
+Description: Informat should be COMMA6.0 in input statement then it will not give any error.
 
 Question:
 The contents of the raw data file NAMENUM are listed below:
@@ -3048,24 +3051,6 @@ Answer: C
 Description: It is because number is defined as a numeric variable so it is expecting a numeric value but it reads xx, so number will be a missing value.
 
 Question:
-The contents of the raw data file AMOUNT are listed below:
---------10-------20-------30
-$1,234
-The following SAS program is submitted:
-data test;
-infile 'amount';
-input @1 salary 6.;
-run;
-Which one of the following is the value of the SALARY variable?
-A. 1234
-B. 1,234
-C. $1,234
-D. . (missing numeric value)
-
-Answer: D
-
-
-Question:
 Which one of the following statements is true regarding the SAS automatic _ERROR_ variable?
 A. The _ERROR_ variable contains the values 'ON' or 'OFF'.
 B. The _ERROR_ variable contains the values 'TRUE' or 'FALSE'.
@@ -3073,6 +3058,8 @@ C. The _ERROR_ variable is automatically stored in the resulting SAS data set.
 D. The _ERROR_ variable can be used in expressions or calculations in the DATA step.
 
 Answer: D
+Description: both A and B are wrong because the question says the value of _ERROR_ is'ON' or "OFF' it refers to the word on and off not logical valu 0 and 1. answer is D. 
+
 
 Question:
 Which one of the following is true when SAS encounters a data error in a DATA step?
@@ -3082,11 +3069,7 @@ C. A note appears in the SAS log that the incorrect data record was saved to a s
 D. The DATA step stops executing at the point of the error, and the resulting DATA set contains observations up to that point.
 
 Answer: B
-Description: If it's a syntax error then the A occurs.
-If it's an error with invalid data then B will occur .
-If it's a problem with merging two or more datasets, then D will occur.
-
-
+Description: If it's a syntax error then the A occurs. If it's an error with invalid data then B will occur . If it's a problem with merging two or more datasets, then D will occur.
 
 Question:
 The following SAS program is submitted:
@@ -3108,12 +3091,6 @@ Answer: B
 Description:
 The syntax issue lies in this line of code - keep = msales{12}. You can not use array name in keep option.
 To correct the syntax issue, replace keep = msales{12} with keep = msales1-msales12
-See the errors in log window :
-
-153 data work.totalsales(keep = msales{12} ) ;
-
-ERROR 214-322: Variable name { is not valid.
-ERROR 23-7: Invalid value for the KEEP option.
 
 
 Question:
@@ -3249,7 +3226,7 @@ C. Low, Medium, High, and Unknown only
 D. Low, Medium, High, Unknown, and ' ' (missing character value)
 
 Answer: B
-Description: this is a quit tricky question, The issue lies in this line of code - else if level = 2 or 3 then expertise = 'Medium'; hence SAS cannot diffrentiate value 2 or 3 hence consider values bigger then 3 as 2 or 3, hence give expertise value as 'Medium' for all values greater than 4.
+Description: This is a tricky question, The issue lies in this line of code - else if level = 2 or 3 then expertise = 'Medium'; since SAS cannot diffrentiate value 2 or 3 hence consider values bigger than 3 as 2 or 3, hence give expertise value as 'Medium' for all values greater than 4.
 
 
 Question:
@@ -3273,6 +3250,11 @@ C. 32
 D. . (missing numeric value)
 
 Answer: B
+Description: Answer is C because after reading following statement
+input employee_name $ 1-4;
+SAS advances to next line of raw data file and next input statement 
+if employee_name = 'Sue' then input age 7-8;
+reads age for John as age of SUE which is 40.
 
 Question:
 The following SAS program is submitted:
@@ -3404,22 +3386,22 @@ proc print data = houses;
 
 run;
 
-style bedrooms baths price
-CONDO	2 1.5 80050
-	3 2.5 79350
-	4 2.5 127150
-	2 2.0 110700
-RANCH	2 1.0 64000
-	3 3.0 86650
-	3 1.0 89100
-	1 1.0 34550
-SPLIT	1 1.0 65850
-	4 3.0 94450
-	3 1.5 73650
-TWOSTORY 4 3.0 107250
-	2 1.0 55850
-	2 1.0 69250
-	4 2.5 102950
+style	bedrooms	baths	price
+CONDO	2		1.5	80050
+	3		2.5	79350
+	4		2.5	127150
+	2		2.0	110700
+RANCH	2		1.0	64000
+	3		3.0	86650
+	3		1.0	89100
+	1		1.0	34550
+SPLIT	1		1.0 	65850
+	4 		3.0 	94450
+	3		1.5	73650
+TWOSTORY 4		3.0	107250
+	2		1.0	55850
+	2		1.0	69250
+	4		2.5	102950
 Which of the following SAS statement(s) create(s) the report?
 A. id style;
 B. id style;
@@ -3432,6 +3414,8 @@ by style;
 var style bedrooms baths price;
 
 Answer: C
+Description: C and D options are same only diff is that there is style variable in var... But, if the style variable is present in id statement, you don't have to mention it in var statement, else you will get 2 style variable in the output, but since there is just 1 style column present ans is C and not D
+
 
 Question:
 A realtor has two customers. One customer wants to view a list of homes selling for less than $60,000. The other customer wants to view a list of homes selling for greater than $100,000. Assuming the PRICE variable is numeric, which one of the following PRINT procedure steps will select all desired observations?
@@ -3451,6 +3435,7 @@ where price lt 60000 or where price gt 100000;
 run;
 
 Answer: B
+Description: 'OR' gives either of one condition whereas we need both condition results , so answer is B.
 
 Question:
 The value 110700 is stored in a numeric variable.
@@ -3462,7 +3447,7 @@ C. dollar8.2
 D. dollar11.2
 
 Answer: D
-
+Description: It can not be C bcz the total width is 11 not 8, so it comes down to either of dollar11.2 or comma11.2. But comma11.2 does not insert dollar sign along with comma. So the answer is D.
 
 Question:
 The SAS data set SASUSER.HOUSES contains a variable PRICE which has been assigned a permanent label of "Asking Price".
@@ -3480,14 +3465,15 @@ D. proc print data = sasuser.houses label = "Sale Price";
 run;
 
 Answer: C
+Description: Permanent Labels can only be defined in Data Step, Proc step can only be used to define temp labels... and to get the o/p from Label statement in Proc Step we need to use label option.
 
 Question:
 The SAS data set BANKS is listed below:
 BANKS
-name rate
-FirstCapital 0.0718
-DirectBank 0.0721
-VirtualDirect 0.0728
+name		rate
+FirstCapital	0.0718
+DirectBank	0.0721
+VirtualDirect	0.0728
 The following SAS program is submitted:
 data newbank;
 do year = 1 to 3;
@@ -3502,6 +3488,7 @@ C. 3 observations and 3 variables
 D. 9 observations and 2 variables
 
 Answer: B
+Description: You need output statement within a do loop to get all the 3 observations printed. four variables are Name, Rate, Year, Capital.
 
 Question:
 The following SAS program is submitted:
@@ -3518,6 +3505,8 @@ C. 6
 D. 7
 
 Answer: D
+Description: DO WHILE loop executes till we get a false value. Now, calls=6 is equal to 6 therefore calls less than equal to 6 is TRUE. DO LOOP is executed. So, on next execution, calls = calls +1 = 7. Now, calls=7 is greater than 6 therefore calls le 6 is FALSE. DO LOOP is not executed.
+Hence, the value of calls remains 7
 
 Question:
 The following SAS program is submitted:
@@ -3533,6 +3522,9 @@ C. 6
 D. 7
 
 Answer: C
+Description: DO WHILE loop executes till we get a false value. SAS gives value starting from 0, if value not defined n=0, 1, 2, 3, 4, 5 than n is lt (less than) 6 therefore n lt 6 is TRUE. DO LOOP is executed.
+Adding plus 1 at every iteration.
+Now, when n=6 at top, it is not less than 6 therefore condition n lt 6 is FALSE. DO LOOP is not executed. Hence, the value of n remains 6
 
 Question:
 The following SAS program is submitted:
@@ -3550,6 +3542,7 @@ C. 5
 D. 60
 
 Answer: B
+Description: you need output statement within a do loop to get all the 60 observations printed.
 
 Question:
 A raw data record is listed below:
@@ -3569,11 +3562,12 @@ C. duration = today( ) - input(date,ddmmyy10.);
 D. duration = today( ) - input(date,yymmdd10.);
 
 Answer: D
+Description: input function converts character to numeric, PUT funtion converts numeric to char, so here date is given as character, INPUT function and date is in the form of yymmdd10.
 
 Question:
 A raw data record is listed below:
  --------10-------20-------30
-Printing___750
+Printing   750
 The following SAS program is submitted:
 data bonus;
 infile 'file-specification';
@@ -3588,6 +3582,8 @@ C. department = trim(dept) || put(number,3.);
 D. department = input(dept,11.) || input(number,3.);
 
 Answer: C
+Description: The input statement reads the variable dept using 11 bytes. The value of dept (Department) consists of 8 bytes therefore 3 trailing blanks are present in the value of dept which need to be trimmed out using the trim function. This is concatenated to the put function which converts numeric variables to character variables using the supplied format (3.).
+
 
 Question:
 The following SAS program is submitted:
@@ -3601,6 +3597,7 @@ C. character, 8 bytes
 D. character, 10 bytes
 
 Answer: D
+Description: put function converts num to char thus date be displayed as 03/13/2000, taking up 10 bytes.
 
 Question:
 The following SAS program is submitted:
@@ -3614,6 +3611,7 @@ C. character, 8 bytes
 D. character, 9 bytes
 
 Answer: A
+Description: As input function converts character variable to numeric variables and numeric variables are always stored in 8 bytes unless define it using length statement.
 
 Question:
 The following SAS program is submitted:
@@ -3629,6 +3627,7 @@ C. . (missing numeric value)
 D. The value cannot be determined as the program fails to execute due to errors.
 
 Answer: C
+Description: concatenating operator (||) is missing in line "Item_Reference = Item'/'Product_Number; ". so Answer is D
 
 Question:
 The following SAS program is submitted:
@@ -3643,6 +3642,7 @@ C. . (missing numeric value)
 D. ' ' (missing character value)
 
 Answer: A
+Description: to an extent, SAS automatically converts character to numeric. even though cost is character. due to automatic conversion here we are getting 2000.
 
 Question:
 Which one of the following SAS statements correctly computes the average of four numerical values?
@@ -3652,6 +3652,8 @@ C. average = mean(of num1 to num4);
 D. average = mean(num1 num2 num3 num4);
 
 Answer: B
+Description: Correct Answer is mean(of num1 - num4);. D is incorrect as commas or OF is missing ...correct forms could be
+average = mean(num1, num2, num3 ,num4); Or average = mean(OF num1 num2 num3 num4);
 
 Question:
 The following SAS program is submitted:
@@ -3666,6 +3668,8 @@ C. Agatha
 D. ' ' (missing character value)
 
 Answer: A
+Description: scan function executed first,it will give result as agatha.now substr funtion looks for first position character ie,1-1 ,results A so answer is A.
+
 
 Question:
 The following SAS program is submitted:
@@ -3680,6 +3684,7 @@ C. Dickens
 D. ' ' (missing character value)
 
 Answer: B
+Description: The third parameter to the scan function is space and a comma (' ,') then answer is B, If third paramter is only a comma (',') then answer is D
 
 Question:
 The following SAS program is submitted:
@@ -3694,13 +3699,14 @@ C. 17
 D. 25
 
 Answer: D
+Description: By default the variable length is determined by the length of the first argument for substr. So here we have 16 + 2(', ') + 7('England') = 25
 
 Question:
 The following SAS program is submitted:
 data work.test;
 First = 'Ipswich, England';
 City = substr(First,1,7);
-City_Country = City!!', '!!'England';
+City_Country = City||', '||'England';
 run;
 Which one of the following is the value of the variable CITY_COUNTRY in the output data set?
 A. Ipswich!!
@@ -3709,6 +3715,7 @@ C. Ipswich, 'England'
 D. Ipswich , England
 
 Answer: D
+Description: SUBSTR function returns a portion of an expression that you specify in argument, in this case SUBSTR gives value of city Ipswich. substr function creates trailing blanks. trailing blanks can be remove using strip function.
 
 Question:
 Which one of the following is true of the RETAIN statement in a SAS DATA step program?
@@ -3747,6 +3754,7 @@ D. retain totquantity 0;
 totquantity = totquantity + quantity;
 
 Answer: A
+Description: A is the correct one, when we put the statement totquantity + quantity , it initializes to zero in the first iteration and adds the quantity and gets the fist totquantity. and so forth. retain will not work in this data set. if you put the retain statement it will stop once reads the missing value the totquantity will be missing value ( . )
 
 Question:
 A raw data file is listed below:
@@ -3769,6 +3777,7 @@ D. grandtot = sum(grandtot,cost);
 output grandtot;
 
 Answer: C
+Description: sum is a function which means it will need brackets () so A is not the correct answer. There no such variable as grandtot, so program will give syntax error, so option B and D is not the correct answer. C is the correct option because retain statement is creating a new variable and initializing it with zero. Sum function will add cost to grandtot for each observation and as grandtot is retained it will carry forward the added value.
 
 Question:
 The following SAS program is submitted:
