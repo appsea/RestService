@@ -7186,21 +7186,21 @@ $60,000. The other customer wants to view a list of homes selling for greater th
 Assuming the PRICE variable is numeric, which one of the following PRINT procedure steps will
 select all desired observations?
 A. proc print data = sasuser.houses;
-            where price lt 60000 or where price gt 100000;
-    run;
+   where price lt 60000 or where price gt 100000;
+   run;
 
 B. proc print data = sasuser.houses;
-           where price lt 60000;
-           where price gt 100000;
-    run;
+   where price lt 60000;
+   where price gt 100000;
+   run;
 
 C. proc print data = sasuser.houses;
-            where price lt 60000 and price gt 100000;
-    run;
+   where price lt 60000 and price gt 100000;
+   run;
 
 D. proc print data = sasuser.houses;
-            where price lt 60000 or price gt 100000;
-     run;
+   where price lt 60000 or price gt 100000;
+   run;
 Answer: D
 
 Question:
@@ -7213,17 +7213,17 @@ John +35;
 run;
 
 Which values are stored in the output data set?
-A. Name              Age
----------------------
-John               35
+A.  Name     Age
+    ---------------------
+    John     35
 
-B. Name                        Age
--------------------------------------
-(missing value)        (missing value)
+B.  Name                        Age
+    -------------------------------------
+    (missing value)        (missing value)
 
-C. Name              Age
----------------------
-John              (missing value)
+C.  Name              Age
+    ---------------------
+    John              (missing value)
 
 D. The DATA step fails execution due to data errors.
 Answer: A
@@ -7313,7 +7313,7 @@ Answer: B.
 Description: By default, PROC MEANS calculates count, mean, standard deviation, minimum and maximum value.
 
 Question:
-  What does data _null_ mean?
+What does data _null_ mean?
 data _null_ ;
 
 This statement produces:
@@ -7488,7 +7488,7 @@ Description: The LIBNAME statement is global, which means that librefs remain in
 
 
 Question:
-  What does the following statement do?
+What does the following statement do?
 libname osiris spss 'c:\myfiles\sasdata\data';
 A. defines a library called Spss using the OSIRIS engine
 B. defines a library called Osiris using the SPSS engine
@@ -7499,7 +7499,7 @@ Description: In the LIBNAME statement, you specify the library name before the e
 
 
 Question:
-  What does the following OPTIONS statement do?
+What does the following OPTIONS statement do?
 options pagesize=15 nodate;
 A. suppresses the date and limits the page size of the log
 B. suppresses the date and limits the vertical page size for text output
@@ -7510,7 +7510,7 @@ Description: These options affect the format of listing output only. NODATE supp
 
 
 Question:
- What usually happens when a syntax error is detected?
+What usually happens when a syntax error is detected?
 A. SAS continues processing the step.
 B. SAS continues to process the step, and the SAS log displays messages about
 the error.
@@ -7525,7 +7525,7 @@ appear in the SAS log. When a syntax error is detected, the SAS log displays the
 ERROR, identifies the possible location of the error, and gives an explanation of the error.
 
 Question:
-  A syntax error occurs when
+A syntax error occurs when
 A. some data values are not appropriate for the SAS statements that are specified in a program.
 B. the form of the elements in a SAS statement is correct, but the elements are not valid for that usage.
 C. program statements do not conform to the rules of the SAS language.
@@ -7535,7 +7535,7 @@ Description: Syntax errors are common types of errors. Some SAS system options, 
 errors include data errors, semantic errors, and execution-time errors.
 
 Question:
- How can you tell whether you have specified an invalid option in a SAS program?
+How can you tell whether you have specified an invalid option in a SAS program?
 A. A log message indicates an error in a statement that seems to be valid.
 B. A log message indicates that an option is not valid or not recognized.
 C. The message "PROC running" or "DATA step running" appears at the top of the active window.
@@ -7545,7 +7545,7 @@ Answer: B
 Description: When you submit a SAS statement that contains an invalid option, a log message notifies you that the option is not valid or not recognized. You should recall the program, remove or replace the invalid option, check your statement syntax as needed, and resubmit the corrected program.
 
 Question:
- Which of the following programs contain a syntax error?
+Which of the following programs contain a syntax error?
 A. proc sort data=sasuser.mysales;
 by region;
 run;
@@ -7560,7 +7560,7 @@ Answer: B
 Description: The DATA step contains a misspelled keyword (dat instead of data). However, this is such a common (and easily interpretable) error that SAS produces only a warning message, not an error.
 
 Question:
- What does the following log indicate about your program?
+What does the following log indicate about your program?
 proc print data=sasuser.cargo99
 var origin dest cargorev;
 22
@@ -7581,7 +7581,7 @@ Description: Because there is a missing semicolon at the end of the PROC PRINT s
 
 
 Question:
- Which PROC PRINT step below creates the following output?
+Which PROC PRINT step below creates the following output?
 Date On Changed Flight
 04MAR99 232 18 219
 05MAR99 160 4 219
@@ -7614,7 +7614,7 @@ Description: The DATA= option specifies the data set that you are listing, and t
 specified in the LABEL statement to be displayed.
 
 Question:
- Which of the following PROC PRINT steps is correct if labels are not stored with the data set?
+Which of the following PROC PRINT steps is correct if labels are not stored with the data set?
 A. proc print data=allsales.totals label;
 label region8='Region 8 Yearly Totals';
 run;
@@ -7630,7 +7630,7 @@ Description: You use the DATA= option to specify the data set to be printed. The
 
 
 Question:
- Which of the following statements selects from a data set only those observations for
+Which of the following statements selects from a data set only those observations for
 which the value of the variable Style is RANCH, SPLIT, or TWOSTORY?
 A. where style='RANCH' or 'SPLIT' or 'TWOSTORY';
 B. where style in 'RANCH' or 'SPLIT' or 'TWOSTORY';
@@ -7640,7 +7640,7 @@ Answer: D
 Description: In the WHERE statement, the IN operator enables you to select observations based on several values. You specify values in parentheses and separate them by spaces or commas. Character values must be enclosed in quotation marks and must be in the same case as in the data set.
 
 Question:
- If you want to sort your data and create a temporary data set named Calc to store the
+If you want to sort your data and create a temporary data set named Calc to store the
 sorted data, which of the following steps should you submit?
 A. proc sort data=work.calc out=finance.dividend;
 run;
@@ -7660,12 +7660,12 @@ Description: In a PROC SORT step, you specify the DATA= option to specify the da
 Question:
 Which options are used to create the following PROC PRINT output?
 13:27 Monday, March 22, 1999
-Patient Arterial    Heart   Cardiac Urinary
-203 88  95  66  110
-54  83  183 95  0
-664 72  111 332 12
-210 74  97  369 0
-101 80  130 291 0
+Patient	Arterial	Heart	Cardiac	Urinary
+203 	88			95		66		110
+54		83			183		95		0
+664		72			111		332		12
+210		74			97		369		0
+101		80			130		291		0
 A. the DATE system option and the LABEL option in PROC PRINT
 B. the DATE and NONUMBER system options and the DOUBLE and NOOBS options in PROC PRINT
 C. the DATE and NONUMBER system options and the DOUBLE option in PROC PRINT
@@ -7694,7 +7694,7 @@ Answer: D
 Description: You do not need to name the variables in a VAR statement if you specify them in the SUM statement, but you can. If you choose not to name the variables in the VAR statement as well, then the SUM statement determines the order of the variables in the output.
 
 Question:
- What happens if you submit the following program?
+What happens if you submit the following program?
 proc sort data=clinic.diabetes;
 run;
 proc print data=clinic.diabetes;
@@ -8009,7 +8009,7 @@ Answer: C
 Description: The DATA step executes once for each record in the input file, unless otherwise directed.
 
 Question:
- At the beginning of the execution phase, the value of _N_ is 1, the value of
+At the beginning of the execution phase, the value of _N_ is 1, the value of
 _ERROR_ is 0, and the values of the remaining variables are set to
 A. 0
 B. 1

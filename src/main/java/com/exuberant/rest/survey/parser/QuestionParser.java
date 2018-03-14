@@ -80,7 +80,7 @@ public class QuestionParser {
                         } else if (!hasDescriptionStarted && hasOptionStarted) {
                             previousOptionLine.append("\n").append(line);
                         } else {
-                            question.appendQuestion(line);
+                            question.appendQuestion(line.trim());
                         }
                     }
                 } else {
