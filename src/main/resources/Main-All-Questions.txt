@@ -240,9 +240,9 @@ Answer: A.
 Question:
 DATA TEMP;
 Infile ‘filename’;
-Input ID $5 @;
-If  ID  = ‘RAMESH’ then input Y $6 Z $10 @;
-else  ID  = ‘VIJAY’ then input R $2 @;
+Input ID $5. @;
+If  ID  = ‘RAMESH’ then input Y $6. Z $10. @;
+else  ID  = ‘VIJAY’ then input R $2. @;
 Input age 5.;
 RUN;
 
