@@ -8,4 +8,9 @@ public class JsonOption {
     private String tag;
     private String description;
     private boolean correct;
+
+    @Override
+    public String toString() {
+        return description;
+    }
 }

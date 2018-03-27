@@ -16,4 +16,12 @@ public class JsonQuestion {
     public void addOption(JsonOption jsonOption) {
         options.add(jsonOption);
     }
+
+    @Override
+    public String toString() {
+        return "number='" + number + '\'' +
+                "\n description='" + description + '\'' +
+                "\n options=" + options +
+                '}';
+    }
 }

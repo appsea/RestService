@@ -59,6 +59,7 @@ public class Main {
             jsonQuestions.addQuestion(question);
         }
         System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
+        //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }
 
