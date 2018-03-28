@@ -1377,6 +1377,11 @@ D. define bonus / ordered 'Yearly Bonus';
 bonus=(yrsemp/10)(yrsales.06);
 
 Answer: B
+Description: General syntax of compute statement is, 
+compute <location><report_item></options>;
+one or more SAS language elements; 
+endcomp;
+report_item variable can be any variable on the COLUMN statement. Accepted location values include BEFORE and AFTER.
 
 Question:
 What is true of the BY statement in the context of PROC MEANS?
@@ -1387,6 +1392,8 @@ C. BY functions just like the CLASS statement
 D. Summary statistics are computed on BY-variable values
 
 Answer: A
+Description: BY statement in proc means calculate separate statistics for each BY group. Unsorted by variable creates an error. If by variable is not sorted NOSORTED option in the BY statement to analyze data by groups.
+
 
 
 Question:
@@ -1398,6 +1405,7 @@ C. years employed
 D. salary
 
 Answer: A
+Description: The MEANS procedure provides data summarization tools to compute descriptive statistics for numeric variables across all observations and within groups of observations. Bonus, Years Employed, Salary seems to be numeric variables while Emp Id Num can contain character value. 
 
 Question:
 What output does the following code produce?
@@ -1412,7 +1420,7 @@ C. A list report ordered by values of the first variable in the COLUMN statement
 D. A summary report ordered by values of the first variable in the COLUMN statement.
 
 Answer: A
-
+Description: A detail report contains one row for every observation selected for the report. and includes only the variables in the COLUMN statement.
 
 Question:
 By default, PROC FREQ creates tables of frequencies and percentages for which data set variables?
@@ -1423,6 +1431,7 @@ C. character variables
 D. none: you must always specify the variables.
 
 Answer: A
+Description: The FREQ procedure produces one-way to n-way frequency and contingency (crosstabulation) tables for both character and numeric variables.
 
 Question:
 Consider the following code.
@@ -1449,16 +1458,7 @@ C. 1
 D. 2
 
 Answer: D
-
-Question:
-The data step executes
-
-A. once for each variable in the output data set
-B. continuously if you use the POINT= option and the STOP statement.
-C. until it encounters an OUTPUT statement
-D. once for each observation in the input data set.
-
-Answer: D
+Description: SAS will run the program for first.gender and last.gender.
 
 Question:
 Which statement correctly preserves the "date" variables in both data sets?
@@ -1469,6 +1469,9 @@ C. merge employees sales (rename=(date=dateSold));
 D. merge employees (rename date=dateHired) sales (rename date=dateSold);
 
 Answer: C
+Description: Correct Syntax for rename statement is 
+RENAME=(old-name-1=new-name-1 old-name-2=new-name-2. . . old-name-n=new-name-n)
+
 
 Question:
 Which of the following can determine the length of a new variable?
@@ -1479,6 +1482,7 @@ C. the LENGTH statement
 D. all of the above
 
 Answer: D
+Description: length of variable is depending on various factors in SAS. Length of a variable is depending on 1st observation, value within assignment statement as well as you can assign length using Length statement. 
 
 Question:
 What variables are in sandbox when it is run?
@@ -1494,6 +1498,7 @@ C. Not enough information
 D. Name, Weight
 
 Answer: D
+Description: In SET statement keep= allows only Name, Age, Weight variable to read while out of which age get dropped in data statement.
 
 Question:
 In order to use the first. and the last. variables inside a data set, what must be true?
@@ -1504,6 +1509,7 @@ C. You need to do nothing, they are created automatically.
 D. A and B
 
 Answer: D
+Description: The SET and BY statements in a data step tell SAS to process the data by grouping observations together. Whenever we use BY statement with a SET statement, SAS automatically creates two temporary variables for each variable name that appears in the BY statement. Temporary variables are called FIRST.variable, LAST.variable. 
 
 Question:
 The data set julSales has 250 observations, while augSales has 600 observations. Consider the following code.
@@ -1521,6 +1527,7 @@ C. 600
 D. 850
 
 Answer: A
+Description: Reads the first observation from julSales and places it into PDV now SAS Reads the first observation from augSales and also places it into the PDV. SAS overwrites values of common variables from julSales with the new values from augSales. At the end of the 250 iteration of the data step, SAS stops processing. This is because SAS encounters the end of file marker on the smallest file. This explains why our other observations from augSales went awol. 
 
 Question:
 The data set play contains the variable i and j, while sand contains i and k. Consider the following code.
@@ -1537,6 +1544,7 @@ C. The code has a syntax error.
 D. i, j
 
 Answer: B
+Description: merging combines observations from two or more SAS data sets into a single observation in a new data set. the MERGE statement without a BY statement. SAS combines the first observation from all data sets that are named in the MERGE statement into the first observation in the new data set, the second observation from all data sets into the second observation in the new data set, and so on. In the number of observations in the new data set is equal to the number of observations in the largest data set named in the MERGE statement.  
 
 Question:
 Which array statement option(s) would only apply when creating new variables?
@@ -1547,6 +1555,8 @@ C. initial values
 D. a and c
 
 Answer: D
+Description: basic syntax of array is,
+‘array name[n] <length of variable eg.$10> var1 var2 var...;’ 
 
 Question:
 You have a variable FUNCODE which is 123M43S3 for one occurrence and 983F23G4 for another. The fourth character is the gender and age is the numbers in the 5th and 6th characters. What is used to assign AGE to the appropriate value?
@@ -1557,6 +1567,7 @@ C. AGE=scan(funcode,5,2);
 D. AGE=substr(funcode,5);
 
 Answer: A
+Description: SUBSTR function returns a portion of an expression that you specify in argument, in this case SUBSTR gives value of AGE, substr reads value from 5th position for next 2 values i.e. 5th 6th. substr function creates trailing blanks. trailing blanks can be remove using strip function.
 
 Question:
 If you have a date variable (date) whose value is 01 January 2009 and were interested in determining the month value, what function would you use?
@@ -1567,6 +1578,7 @@ C. month=today(date);
 D. month=qtr(date);
 
 Answer: B
+Description: The MONTH function produces an integer that represents the month, where 1=January, 2=february, . . . , 12=December. 
 
 Question:
 How can you find out the dimensions of the array sales?
@@ -1577,6 +1589,7 @@ C. dim(sales)
 D. dimensions(sales)
 
 Answer: C
+Description: The DIM function can be used to return the count of elements. SAS will count the number of numeric variables used as elements of the array. The DIM function will return the count value as the ending range for the loop. 
 
 Question:
 What will the following output?
@@ -1618,6 +1631,7 @@ C. 100
 D. 10
 
 Answer: B
+Description: X has value 1,3,5,7,9 each value iterate for each value of Y i.e. 0-9. output statement within Do Loop give all observations. Hence final output has 50 observations. 5*10=50. 
 
 Question:
 Suppose that the YEARCUTOFF= system option is set to 1910. Which MDY function creates the date value for April 22, 2010.
@@ -2034,26 +2048,6 @@ D. array GPA{4} GPA1-GPA4 (3.5 3.5 3.5 3.5);
 
 Answer: D
 
-Question:
-How many observations are in playground after the data step is run?
-
-data playground;
-do x=0 to 9;
-do y =0 to 9;
-if x in(1,3,5,7,9) then do;
-z=x*10+y;
-output;
-end;
-end;
-end;
-run;
-
-A. 50
-B. Can not determine from the output.
-C. 100
-D. 0
-
-Answer: A
 
 Question:
 The variable sales in the data set employees has a format of 8.3. The variable sales in the data set daily has a format of dollar6.2. The following program is submitted: Assume one of the values for name is 'John'.
