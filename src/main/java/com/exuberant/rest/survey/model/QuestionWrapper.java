@@ -22,7 +22,7 @@ public class QuestionWrapper {
         QuestionWrapper other = (QuestionWrapper) obj;
         boolean equals = this.flattenIt(this.question.getDescription()).equals(this.flattenIt(other.question.getDescription())) && this.flattenIt(this.question.getOptions().toString()).equals(this.flattenIt(other.question.getOptions().toString()));
         if (equals) {
-            System.err.println("-------------------------");
+            System.err.println("----------Duplicate Questions Start---------------");
             System.err.println(this.question.getDescription());
             System.err.println("-------------------------");
             /*if(!this.question.getId().equals(other.question.getId())){

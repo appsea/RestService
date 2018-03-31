@@ -3,8 +3,6 @@ package com.exuberant.rest.survey.parser;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.exuberant.rest.survey.parser.DynamicPatternParser.IGNORE_REGEX;
-
 public class PatternParserFactory {
 
     private static Map<String, PatternParser> patternParsersForFile = new HashMap<>();
@@ -17,6 +15,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
         patternParsersForFile.put("Main-All-Questions.txt", getMainPatternParser());
+        patternParsersForFile.put("Advance-sas-questions.txt", getMainPatternParser());
     }
 
     public static PatternParser getPatternParser(String fileName) {

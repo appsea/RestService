@@ -52,13 +52,15 @@ public class Main {
         System.err.println("TQ: " + wrappers.size());
         System.err.println("TQ: " + allQuestions.size());
         ObjectMapper objectMapper = new ObjectMapper();
-        Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
+        //Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
+        Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "advanced_sas_questions.json");
         System.err.println("Created: " + path);
         JsonQuestions jsonQuestions = new JsonQuestions();
         for (Question question : allQuestions) {
             jsonQuestions.addQuestion(question);
         }
         System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
+        jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }

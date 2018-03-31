@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
  */
 public class Options {
     public static final int OPTION_COUNT = 4;
+    public static final int BOOLEAN_OPTION_COUNT = 2;
     private List<Option> options = new ArrayList<>();
 
     public void add(Option option) {
@@ -21,7 +22,7 @@ public class Options {
     }
 
     public boolean areValid() {
-        return options.size() == OPTION_COUNT && options.stream().filter(option -> option.isCorrect()).count() > 0 && options.stream().filter(option -> StringUtils.isEmpty(option.getTag())).count() == 0;
+        return (options.size() == OPTION_COUNT || (options.size() == BOOLEAN_OPTION_COUNT)) && options.stream().filter(option -> option.isCorrect()).count() > 0 && options.stream().filter(option -> StringUtils.isEmpty(option.getTag())).count() == 0;
     }
 
     public List<Option> giveCorrectAnswers() {

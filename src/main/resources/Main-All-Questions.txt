@@ -1642,6 +1642,9 @@ C. MDY(4,22,10);
 D. MDY(22,4,2010)
 
 Answer: A
+Description: Yearcutoff= option always has 100 years of span. Time span for yearcutoff=1910 will be 1910-2009. MDY function has syntax mdy(mon,day,year); As long as you specify an year value with yyyy form for reading the date value, the YEARCUTOFF= option doesn't affect date values that have four-digit years.
+
+
 
 Question:
 From the following code, what is the value of x,y,z after the data step is run?
@@ -1670,6 +1673,7 @@ C. You do not need to specify the array elements in the ARRAY statement.
 D. Arrays can only have character elements.
 
 Answer: D
+Description: arrays can have numeric and character both elements.
 
 Question:
 What does the following statement do if firstdate and lastdate are stored as date values?
@@ -1682,6 +1686,8 @@ C. Your computer explodes.
 D. The variable numdays contains a noninterpretable integer value.
 
 Answer: B
+Description: numdays will contain difference between lastate and firstdate. But lastdate, firstdate should not have any missing value else it will returns a missing value. When you use a missing value with an arithmetic operator (+, - etc), it returns a missing value. 
+
 
 Question:
 What is the default value of YEARCUTOFF= system option?
@@ -1702,6 +1708,7 @@ C. leap years
 D. time zones
 
 Answer: C
+Description: SAS automatically adjust for leap year value.
 
 Question:
 The following are the first lines of an input file.
@@ -1782,6 +1789,7 @@ C. 6
 D. 5
 
 Answer: D
+Description: specifies the width of the input field. Range is from 5-32.
 
 Question:
 SAS date values are the number of days since which date?
@@ -1802,6 +1810,8 @@ C. weekdate6.
 D. date9.
 
 Answer: B
+Description: DATE7. reads dates in the form ddMMMyy.
+
 
 Question:
 The advantage of storing date and time data as numeric data comes in the form that
@@ -1812,6 +1822,7 @@ C. they can be easily edited.
 D. they can be used in calculations like other numeric values.
 
 Answer: D
+Description: date and time data as numeric data are easy to use in calculations, for character data value you have to change them using PUT function.
 
 Question:
 The following is the first few lines of an input file.
@@ -1829,6 +1840,7 @@ C. infile persons
 D. infile persons dlm='^';
 
 Answer: D
+Description: The DLM= option enables you to list read data with delimiters rather than the default space. i.e., here data is separated by "^", you can use DLM='^' to read them correctly.
 
 Question:
 If you know the SAS date value for a certain date is 850, in which year did the day occur?
@@ -1839,6 +1851,7 @@ C. 1921
 D. 1962
 
 Answer: D
+Description: SAS date value starts from 1 Jan 1960. SAS will start counting date value from first date if 850 then which lie in 1962.
 
 Question:
 From the following code, two data sets play and sand were created.

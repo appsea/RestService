@@ -4,6 +4,7 @@ import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -24,6 +25,7 @@ public class QuestionParser {
 
     public static final Log log = LogFactory.getLog(QuestionParser.class);
     public static final Set<String> ignoredLines = new HashSet<>();
+    private String re = "Description:(?!\\s )";
     private PatternParser patternParser;
     private List<Question> failedQuestions = new ArrayList<>();
 
@@ -35,6 +37,7 @@ public class QuestionParser {
         try {
             lines = Files.readAllLines(Paths.get(getClass().getClassLoader().getResource(fileName).toURI()));
         } catch (IOException | URISyntaxException e) {
+            System.err.println(e.getMessage());
             throw new RuntimeException("Invalid File Path: " + fileName);
         }
         Question question = null;
@@ -48,8 +51,8 @@ public class QuestionParser {
                         if (question != null && question.isComplete()) {
                             questions.add(question);
                             question = null;
-                        }else if(question!=null && !question.isComplete()){
-                            System.err.println("Incomplete: " + question.getOptions().areValid() + " que: "+ question);
+                        } else if (question != null && !question.isComplete()) {
+                            System.err.println("Incomplete: " + question.getOptions().size() + (question.getOptions().giveCorrectAnswers()) + " que: " + question);
                         }
                         String questionNumber = patternParser.extractQuestionNumber(line);
                         question = new Question(fileName, questionNumber);
@@ -63,9 +66,9 @@ public class QuestionParser {
                     } else if (question != null) {
                         if (!hasDescriptionStarted && patternParser.isAnswer(line)) {
                             question.addOption(previousOptionLine.toString());
-                            try{
+                            try {
                                 question.addAnswer(line.substring(8).trim());
-                            }catch (Exception e){
+                            } catch (Exception e) {
                                 System.err.println("Exce");
                             }
                         } else if (!hasDescriptionStarted && patternParser.isOption(line)) {
@@ -96,7 +99,7 @@ public class QuestionParser {
         }
         if (question != null && question.isComplete()) {
             questions.add(question);
-        }else{
+        } else {
             System.err.println("Last Question Not Added....");
         }
         validateQuestions(questions, questionBank.getTotalQuestions());
