@@ -16,7 +16,7 @@ public class JsonQuestions {
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
 
     private List<JsonQuestion> questions = new ArrayList<>();
-    private int version = 4;
+    private int version = 5;
 
     public void addQuestion(Question question) {
         questions.add(toQuestion(question));

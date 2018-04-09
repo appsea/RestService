@@ -151,7 +151,6 @@ D. Corresponds to days from 01 Jan 1960: 135680
 
 Answer: B
 Description: SAS store date in SAS date format which Corresponds to days from 01 Jan 1960. 13MAR2000 gives SAS date as 14682. 
-
 Question:
 1----5----10---	(data in file ‘asa’)
 03132000
@@ -229,7 +228,7 @@ data test;
 set y;
 run;
 
-What will be the missing code to reset the page number ?
+What will be the missing code to reset the page number?
 
 A. OPTIONS PAGENO = 1;
 B. OPTIONS RESET PAGENO = 1;
@@ -317,7 +316,7 @@ C. 100
 D. 0
 
 Answer: A
-Description: It will give 5 observations only for first.id.
+Description: 20 for each Id and total 100 Observation would mean there are 5 ID's, hence SAS will give 5 observations only for first.id.
 
 Question:
 libname temp ‘abc.sds.as’;
@@ -780,7 +779,6 @@ D. PROC CONTENTS
 
 Answer: C
 Description: there are two portion of a data set- descriptor and data portion. the descriptor portion gives an insight into the data set and its variable attributes. whereas the data portion displays the data in listed column. the descriptor portion of the data set can be viewed through 'proc content' and the data portion can be displayed through 'proc print'.
-
 
 Question:
 What is the procedure to see the descriptor portion of the dataset?
@@ -1840,7 +1838,7 @@ C. infile persons
 D. infile persons dlm='^';
 
 Answer: D
-Description: The DLM= option enables you to list read data with delimiters rather than the default space. i.e., here data is separated by "^", you can use DLM='^' to read them correctly.
+Description: The DLM= option enables you to list read data with delimiters rather than the default space. i.e., here data is separated by ‘^’, you can use DLM='^' to read them correctly.
 
 Question:
 If you know the SAS date value for a certain date is 850, in which year did the day occur?
@@ -1867,7 +1865,7 @@ run;
 
 data sand;
 do i=1 to 100;
-a=byte(i); / Returns a character /
+a=byte(i); /* Returns a character */
 output;
 end;
 run;
@@ -1880,6 +1878,7 @@ C. data box; merge play sand(rename=(i=sandi)); run;
 D. data box; merge play sand(in=sandi); run;
 
 Answer: C
+Description: dataset PLAY and SAND both has variable ‘i’, to preserve all the original variable we have to change name of variable ‘i’ in SAND dataset and the correct syntax of renaming variable is (rename = (name = fname)).
 
 Question:
 If I submit the code below, what will the title look like above my SAS output?
@@ -1896,6 +1895,7 @@ C. Dr. Scott Stat 124 Final Exam
 D. Stat 124 Final Exam
 
 Answer: D
+Description: The TITLE or FOOTNOTE statement of any number completely replaces any other TITLE or FOOTNOTE statement of that number. In addition, it cancels all TITLE or FOOTNOTE statements of a higher number. For example, if you define TITLE1, TITLE2, and TITLE3, resubmitting the TITLE2 statement cancels TITLE3. 
 
 Question:
 The data step has completed processing for five records, two of which had a data error. At the end of the fifth record, which of the following could be the correct program data vector? The last values read in without errors were AC103, John, and 45330.
@@ -1910,6 +1910,7 @@ D. _N_ _Error_ ID Name Salary
 6 1 .
 
 Answer: D
+Description: At the end of 5th record in PDV _N_ will have next observation number i.e. 6, while _ERROR_ will set to 1 i.e. error and other variables will set to missing.
 
 Question:
 Which of the following correctly creates four variables which give the total quarterly sales for each quarter given that the dataset SALES contains twelve variables, month1 through month12?
@@ -1964,6 +1965,8 @@ end;
 run;
 
 Answer: C
+Description: Defining the array Qtr{4} creates the numeric variables Qtr1, Qtr2, Qtr3, Qtr4, which will be used to sum the sales for each quarter. Defining the array m{4,3} puts the variables Month1 through Month12 into four groups of three months (yearly quarters). A nested DO loop is used to reference the values of the variables Month1 through Month12 and to calculate the values of Qtr1 through Qtr4. the variables i and j are used only for loop processing. Each element in the Qtr array represents the sum of one row in the m array. The number of elements in the Qtr array should match the first dimension of the m array (that is, the number of rows in the m array). The first DO loop executes once for each of the four elements of the Qtr array.The assignment statement, qtr{i}=0, sets the value of qtr{i} to zero after each iteration of the first DO loop. Without the assignment statement, the values of Qtr1, Qtr2, Qtr3, and Qtr4 would accumulate across iterations of the data step due to the qtr{i}+m{i,j} sum statement within the DO loop. The second DO loop executes the same number of times as the second dimension of the m array (that is, the number of columns in each row of the m array).
+
 
 Question:
 The following program is submitted
@@ -1985,8 +1988,7 @@ Answer: C
 Description: When you use a missing value with an arithmetic operator (+, - etc), it returns a missing value. On the other hand, the sum function ignores the missing value.
 
 Question:
-Which of the following pieces of code appends the
-observations from dataB to the end of the dataset dataA?
+Which of the following pieces of code appends the observations from dataB to the end of the dataset dataA?
 
 A. data dataC;
 set dataA dataB;
@@ -2005,6 +2007,7 @@ by variable1;
 run;
 
 Answer: A
+Description: To append the observations from one dataset to end of another we use SET statement. The observations from the first data set that you name in the SET statement appear first in the new data set. The observations from the second data set follow those from the first data set, and so on.
 
 Question:
 When the code below is run, what is the value of the variable TotalSales for the last observation?
@@ -2025,6 +2028,7 @@ C. 900
 D. 1000
 
 Answer: C
+Description: RETAIN statement has retained initial value of 200. variable TOTALSALE will have final total of all observation from sales variable plus retained value 200. Total 900. 
 
 Question:
 What variables are in sandbox when it is run?
@@ -2040,6 +2044,7 @@ C. None
 D. Name, Age, Weight, Height, Gender
 
 Answer: A
+Description: SET step has kept 5 variables Name Age Weight Height Gender. Out of which Name Age been drop in DATA step. Hence only Weight Height Gender will written in output dataset. 
 
 Question:
 In the DATA step, how can you reference the temporary SAS data set named Employees
@@ -2050,6 +2055,7 @@ C. work.employees
 D. a and c
 
 Answer: D
+Description: Temporary dataset name can be assign either without libref or with libref as ‘work’.
 
 Question:
 Which of the following statements correctly (without warnings) uses an array to create four numeric variables, called GPA1 GPA2 GPA3 GPA4 all with the initial value of 3.5?
@@ -2060,14 +2066,14 @@ C. array GPA{4} $ GPA1-GPA4 (3.5 3.5 3.5 3.5);
 D. array GPA{4} GPA1-GPA4 (3.5 3.5 3.5 3.5);
 
 Answer: D
-
+Description: Value in {4} creates 4 arrays. Arrays having consecutive names can be named as NAME1-NAMEn. Numeric arrays do not need $ sign with them. Values exact next to array name are initial value of created arrays respectively. Array arraname(no of elements) char|numeric element_names (intial values)
 
 Question:
 The variable sales in the data set employees has a format of 8.3. The variable sales in the data set daily has a format of dollar6.2. The following program is submitted: Assume one of the values for name is 'John'.
 
 data merged;
 merge employees daily;
-by name; /format sales comma5.2;/
+by name; /* format sales comma5.2; */
 run;
 
 What is the format of the variable name in the merged data set?
@@ -2079,6 +2085,7 @@ D. dollar6.2
 
 Answer: A
 
+
 Question:
 What usually happens when a syntax error is detected?
 
@@ -2088,6 +2095,7 @@ C. SAS stops processing the step in which the error occurred, and the Output win
 D. SAS stops processing the step in which the error occurred, and the SAS log displays messages about the error.
 
 Answer: D
+Description: Syntax error stops SAS datastep processing. SAS shows all kind of error messages, warning and notes in LOG window.
 
 Question:
 The YEARCUTOFF= system option is set to 1930. What are the range of dates it covers?
@@ -2098,6 +2106,8 @@ C. 1829-1930
 D. 1931-2030
 
 Answer: A
+Description: The YEARCUTOFF= option specifies which 100-year span is used to interpret two-digit year values. The default value of YEARCUTOFF= is 1920. However, you can override the default and change the value of YEARCUTOFF= to the first year of another 100-year span. If you specify YEARCUTOFF=1930, then the 100-year span will be from 1930 to 2029.
+
 
 Question:
 What does the following code produce? Assume gender, weight, and height are all categorical variables.
@@ -2112,6 +2122,7 @@ C. Two tables, one for each gender, with height groups on one axis and weight gr
 D. A single table with gender, weight, and height variables along with variables for frequency, percent, cumulative frequencies, and cumulative percents.
 
 Answer: C
+Description: tables gender*weight*height treated as table A*(B*C) which gives table as A*B A*C with frequency distribution as Frequency, percent, row percent, and column percent.
 
 
 Question:
@@ -2123,7 +2134,7 @@ C. proc print data=bonds; label Coupon='MyLabel'; run;
 D. proc print data=bonds label; run;
 
 Answer: D
-Description: label option in proc print shows the changed label in name in output of proc print. without label option in proc print sas does not show changed label in datastep.
+Description: label option in proc print shows the changed label in name in output of proc print. without label option in proc print SAS does not show changed label in datastep.
 
 Question:
 What is the function of the FILENAME statement in SAS?
@@ -2134,6 +2145,7 @@ C. It associates a file reference with an external file.
 D. It associates a library reference with a relational database.
 
 Answer: C
+Description: FILENAME associates a SAS fileref with an external file or a logical file device. 
 
 Question:
 Which of the following statements changes the first three letters of the variable Jobcode to 'MAN' if the variable JobDescription contains a word with the substring 'manage' (regardless of case) in it?
@@ -2144,6 +2156,7 @@ C. if find(upcase(JobDescription),'MANAGE','t')=0 then substr(Jobcode,1,3)='MAN'
 D. if find(JobDescription,'MANAGE','i')>0 then substr(Jobcode,3,1)='MAN';
 
 Answer: A
+Description: The INDEX function enables you to search a character value for a specified string. Since ‘MANAGE’ is in quotation mark it is case sensitive. UPCASE function converts all string from JobDescription to upper case letters while ‘>0’ means if this condition is true. SUBSTR function replaces first 3 letters to ‘MAN’ gives desired output.  
 
 Question:
 What is contained in the dataset Averages created by the following program?
@@ -2163,6 +2176,7 @@ C. Eighteen observations, two variables, one for male and one for female, with t
 D. Three observations, _TYPE_ and _FREQ_ variables along with mean, max, and minimum values for each variable in the var statement.
 
 Answer: A
+Description: Final output gives 3 observations total and 1 for each gender. and _TYPE_ and _FREQ_ variables along with variables for mean, max, and median values for each variable 
 
 Question:
 Which statement directs output to an HTML file?
@@ -2173,16 +2187,18 @@ C. the HTML statement
 D. the ODS HTML statement
 
 Answer: D
+Description: ODS statement creates different types of files. Eg. HTML, RTF, PDF, etc.
 
 Question:
 What does the NOOBS option do in the PROC PRINT step?
 
 A. Relentlessly mocks you for being new to SAS.
 B. Removes the default Obs column from the output
-C. Prints only the the column titles with no data.
+C. Prints only the column titles with no data.
 D. Prints the data with no column titles.
 
 Answer: B
+Description: NO OBS option in Proc Print supress observation number column from output.
 
 
 Question:
@@ -2193,7 +2209,7 @@ input CouponRate $ ParValue $;
 datalines;
 8% $1000
 9% $1200
-7.8% $1500
+8% $1500
 5% $900
 6% $750
 ;
@@ -2212,7 +2228,7 @@ C. Coupon=CouponRate/100 * ParValue;
 D. Coupon=numeric(CouponRate,percent4.)*numeric(Parvalue,dollar5.);
 
 Answer: A
-Description: input function changes character value to numeric values which makes code to calculate coupon value.
+Description: Mathematical operations can be done with numeric variables only. input function changes character value to numeric values which makes code to calculate coupon value. Percent4. And dollar5. Functions read values without an error.
 
 Question:
 The data step executes
@@ -2220,7 +2236,7 @@ The data step executes
 A. once for each variable in the output data set
 B. once for each observation in the input data set.
 C. until it encounters an OUTPUT statement
-D. continuously if you use the POINT=option and the STOPstatement.
+D. continuously if you use the POINT=option and the STOP statement.
 
 Answer: B
 
@@ -2280,6 +2296,7 @@ C. 16
 D. . (missing)
 
 Answer: B
+Description: Whenever SAS does not find a mapping for some value in the format it prints the value as it is.
 
 Question:
 Consider the following code which generates a data set and creates a third variable utilizing the first two:
@@ -2289,9 +2306,10 @@ input CouponRate $ ParValue $;
 datalines;
 8% $1000
 9% $1200
-7.8% $1500
+8% $1500
 5% $900
-6% $750 ;
+6% $750 
+;
 
 data BondCoupons;
 set Bonds;
@@ -2308,6 +2326,8 @@ C. The coupon value will be 80 because SAS automatically converts character valu
 D. The proc print procedure will fail because the BondCoupons data set was not successfully created.
 
 Answer: A
+Description: Mathematical operations can be done with numeric variables only. Both are character variables. Hence COUPON will have missing numeric values. Applying input function changes character value to numeric values which makes code to calculate coupon value. Percent4. And dollar5. Functions will read values without an error.
+
 
 Question:
 The SAS data set one is listed below.
@@ -2336,6 +2356,7 @@ C. 2
 D. 1
 
 Answer: C
+Description: There will be only 2 observations 1 A 33 and 3 A 82.
 
 Question:
 The following SAS program is submitted:
@@ -2357,7 +2378,7 @@ C. The values of the variable PAYROLL represent the total for each department in
 D. The values of the variable PAYROLL represent a total for all values of WAGERATE in the WORK.SALARY data set.
 
 Answer: C
-Description: Correct answer is C. when you use PAYROLL + WAGERATE, variable payroll will automatically be retained through-out the dataset. Its values is resettled at first observation of each department. The observations to output dataset total are output on last observation of each department. So number of observation in total dataset is number of departments in salary dataset. Moreover wagerate is getting added to payroll and that value is retained in payroll variable until the next observation of same department is read. After that second observation wagerate gets added to payroll, so on and so forth until all the 10 observations are read for a department. At last observation, payroll has the sum of all wagerate for that particular department and is outputed to total dataset. Hence answer is C.
+Description: When you use PAYROLL + WAGERATE, variable payroll will automatically be retained through-out the dataset. Its values are resettled at first observation of each department. The observations to output dataset total are output on last observation of each department. So number of observation in total dataset is number of departments in salary dataset. Moreover, wagerate is getting added to payroll and that value is retained in payroll variable until the next observation of same department is read. After that second observation wagerate gets added to payroll, so on and so forth until all the 10 observations are read for a department. At last observation, payroll has the sum of all wagerate for that particular department and is outputted to total dataset. Hence answer is C.
 For every BY group we get the sum of wagerate in the Payroll variable for each department.
 
 Question:
@@ -2414,6 +2435,7 @@ C. 12
 D. The length cannot be determined as the program fails to execute due to errors.
 
 Answer: A
+Description: Since SAS checks the variable JOBCODE in department dataset for the first time of length of 5 Bytes. it sets the length to be 5. To assign LENGTH statement before SET statement to assign desired length. 
 
 Question:
 Which one of the following SAS statements renames two variables?
@@ -2440,6 +2462,7 @@ C. Neither variable JCODE nor JOBCODE is written to the output data set.
 D. The program fails to execute due to errors.
 
 Answer: B
+Description: RENAME statement will rename variable jcode to jobcode.
 
 Question:
 The following SAS program is submitted:
@@ -2477,20 +2500,20 @@ Which one of the following represents how the observations are sorted?
 
 A. COMPANY.PAYROLL is recreated in sorted order by EmployeeIDNumber.
 B. COMPANY.PAYROLL is stored in original order, and a new data set PAYROLL is created in sorted order by EmployeeIDNumber.
-C. COMPANY.PAYROLL is stored in original order, and a new data set
-COMPANY.PAYROLLSORTED is created in sorted order by EmployeeIDNumber.
+C. COMPANY.PAYROLL is stored in original order, and a new data set COMPANY.PAYROLLSORTED is created in sorted order by EmployeeIDNumber.
 D. COMPANY.PAYROLL is recreated in sorted order by EmployeeIDNumber, and a new data set PAYROLL is created in sorted order by EmployeeIDNumber.
 
 Answer: A
+Description: Since there is no ‘OUT=’ option in PROC SORT SAS will not create a new dataset but recreate the same dataset in sorted order of BY variable. 
 
 Question:
 The SAS data set EMPLOYEE_INFO is listed below:
 
-IDNumber Expenses
-2542 100.00
-3612 133.15
-2198 234.34
-2198 111.12
+IDNumber	Expenses
+2542		100.00
+3612		133.15
+2198		234.34
+2198		111.12
 
 The following SAS program is submitted:
 
@@ -2504,7 +2527,7 @@ C. by ascending (IDNumber Expenses);
 D. by ascending IDNumber ascending Expenses;
 
 Answer: B
-Description: here we want ascending expense values within each ascending IDNUMBER value in our by statement we should have IDNUMBER first and then expenses.
+Description: here we want ascending expense values within each ascending IDNUMBER value. in by statement we should have IDNUMBER first and then expenses.
 
 Question:
 The SAS data set WORK.AWARDS is listed below:
@@ -2555,6 +2578,7 @@ Amy 2
 
 
 Answer: D
+Description: by descending fname points. BY statement will rearrange FNAME in descending order while POINTS will rearrange in ascending order.
 
 Question:
 Which one of the following statements is true regarding the name of a SAS array?
@@ -2564,6 +2588,7 @@ C. It exists only for the duration of the DATA step.
 D. It can be the same as the name of a variable in the data set.
 
 Answer: C
+Description: Only Temporary arrays will be variable for duration of DATA Step otherwise it will be saved as datastep variable.
 
 Question:
 The following SAS program is submitted:
@@ -2585,6 +2610,7 @@ C. do i = mon tue wed thu fri;
 D. A DO loop cannot be used because the variables referenced do not end in a digit.
 
 Answer: A
+Description: DO i=, an iterative, or indexed, DO loop used to perform the operations in the DO loop at a specified start and ending index value for an array 
 
 Question:
 The following SAS program is submitted:
@@ -2600,6 +2626,8 @@ C. None, the DATA step fails because the ARRAY statement can reference only nume
 D. None, the DATA step fails because the ARRAY statement can reference only pre-existing variables.
 
 Answer: A
+Description: Array statement creates 4 new variables SALES1, SALES2, SALES3, SALES4 which will present in  output dataset.
+
 
 Question:
 On which portion(s) of a SAS data set does the PRINT procedure report?
@@ -2620,8 +2648,7 @@ C. CONTENTS
 D. DATASETS
 
 Answer: A
-Description: FSLIST is used to display an external file from within a SAS session.
-LIST procedure does not exist. Hence result = A.
+Description: FSLIST is used to display an external file from within a SAS session. LIST procedure does not exist. PRINT procedure prints only data portion of SAS dataset. 
 
 Question:
 The following SAS program is submitted:
@@ -2678,8 +2705,7 @@ B. 2
 C. 3
 D. No data set is created as the program fails to execute due to errors.
 Answer: C
-Description: This is a tricky question…
-The values for name have embedded blanks and also no length statement…so the values assigned for age is . (missing) for all obs. And also . (missing) is always le 10. Therefore the output dataset has 3 obs.
+Description: The values for name have embedded blanks and also no length statement…so the values assigned for age is . (missing) for all obs. And also . (missing) is always le 10. Therefore, the output dataset has 3 obs.
 
 Question:
 The SASDATA.BANKS data set has five observations when the following SAS program is submitted:
@@ -2710,12 +2736,12 @@ COMPANY.PRICES
 
 prodid	price	producttype	sales	returns
 
-K12S	5.10	NETWORK		15	2
-B132S	2.34	HARDWARE	300	10
-R18KY2	1.29	SOFTWARE	25	5
-3KL8BY	6.37	HARDWARE	125	15
-DY65DW	5.60	HARDWARE	45	5
-DGTY23	4.55	HARDWARE	67	2
+K12S		5.10		NETWORK		15		2
+B132S	2.34		HARDWARE		300		10
+R18KY2	1.29		SOFTWARE		25		5
+3KL8BY	6.37		HARDWARE		125		15
+DY65DW	5.60		HARDWARE		45		5
+DGTY23	4.55		HARDWARE		67		2
 
 The following SAS program is submitted:
 
@@ -2796,7 +2822,7 @@ B. (space)
 C. , (comma)
 D. ; (semicolon)
 Answer: B
-Description: Since no delimiter is specified at the end of the "file", the default delimiter (space) will be used.
+Description: Since no delimiter is specified at the end of the file statement, the default delimiter (space) will be used.
 
 
 Question:
@@ -3288,7 +3314,7 @@ C. 32
 D. . (missing numeric value)
 
 Answer: B
-Description: Answer is C because after reading following statement
+Description: After reading following statement
 input employee_name $ 1-4;
 SAS advances to next line of raw data file and next input statement 
 if employee_name = 'Sue' then input age 7-8;
@@ -6831,8 +6857,7 @@ B. the DATA step automatically creates two variables, FIRST. and LAST., for each
 C. the data sets that are listed in the SET statement must be indexed or sorted by the values of the BY variable(s).
 D. FIRST. and LAST. are stored in the data set.
 Answer: D
-Description: SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set.
-
+Description: SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set. If u want get into datset must assign any variable like var=first.by_variable
 
 Question:
 A typical value for the character variable Target is 123,456. Which statement correctly converts the values of Target to numeric values when creating the variable TargetNo?
