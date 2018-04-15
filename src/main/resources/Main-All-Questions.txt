@@ -202,7 +202,6 @@ Proc Format;
 Value ag 1-50  = ‘less’
 	 51-100 = ‘greater’;
 Run;
-
 Data test;
 X = 50.5;
 Format x ag.;
@@ -292,6 +291,7 @@ DATA temp;
 Infile ‘abc’ dsd;
 Input FNAME $ LNAME $ AGE;
 RUN;
+
 What will be the value of LNAME for 1st observation?
 A. ‘,’
 B. blank character value
@@ -306,6 +306,7 @@ set test1(in = a) /* 2 observations*/
 test2 (in=b);  /* 5 observations*/
 if  a and b;
 run;
+
 How many observations will be there in temp dataset?
 A. 2
 B. 5
@@ -765,14 +766,14 @@ Which of the following code creates the permanent dataset MYDATA from temporary 
 Libname out ‘sas-library’;
 
 A. data MYDATA;
-     set MYDATA;
-     run;
+set MYDATA;
+run;
 B. data MYDATA;
-     set out.MYDATA;
-       run;
+set out.MYDATA;
+run;
 C. data out.MYDATA;
-    set MYDATA;
-    run;
+set MYDATA;
+run;
 D. none
 
 Answer: C
@@ -823,6 +824,7 @@ Description: there are two portion of a data set- descriptor and data portion. t
 
 Question:
 The variable JOBCODE has length $5 in the dataset TEMP. The same variable present in the dataset TEMP1 and has length $7.
+
 data temp2;
 set temp temp1;
 run;
@@ -871,6 +873,7 @@ Date_________________________________________________
 11/01/2004
 12/01/2004
 How many observations will be there dataset b if the following datastep is submitted?
+
 Data b;
    Set a;
    Temp = qtr(input(Date,mmddyy10.));
@@ -3198,6 +3201,7 @@ To correct the syntax issue, replace keep = msales{12} with keep = msales1-msale
 
 Question:
 The following SAS program is submitted:
+
 data work.totalsales;
 set work.monthlysales(keep = year product sales);
 retain monthsales {12} ;
@@ -3924,6 +3928,7 @@ Description: The data is sorted by department, thus we can think there are five 
 
 Question:
 The following SAS program is submitted:
+
 data work.passengers;
 if OrigPassengers = . then
 OrigPassengers = 100;
@@ -3943,7 +3948,8 @@ Answer: A
 Description: PDV initializes all variables in data step to missing first. So if statement yields true, so value of origpassenger becomes 100. Then transpassenger is assigned value of 100. Next step value of origpassenger is overwritten with missing value. So when you add using sum function which ignores missing value, values of orignpassenger and transpassenger ie sum(.,100) gives you 100. Thus answer is A.
 
 Question:
-The following SAS program is submitted:data work.passengers;
+The following SAS program is submitted:
+
 data work.passengers;
 if OrigPassengers = . then
 OrigPassengers = 100;
@@ -3964,6 +3970,7 @@ Description: All summary function ignore missing value when computing values whe
 
 Question:
 The following SAS program is submitted:
+
 data work.staff;
 JobCategory = 'FA';
 JobLevel = '1';
@@ -4032,6 +4039,7 @@ Description: The problem with the options A is it has uninitialized Variable sta
 
 Question:
 The following SAS program is submitted:
+
 data work.flights;
 destination = 'cph';
 select(destination);
@@ -4081,6 +4089,7 @@ else if amount = 7 then word = 'SEVEN';
 else word = 'NONE!!!';
 amount = 7;
 run;
+
 Which one of the following represents the values of the AMOUNT and WORD variables?
 A. amount word
 7 FOUR
@@ -4333,6 +4342,7 @@ Description: In this question, the type of the merge is exact merge, since in=in
 
 Question:
 The following SAS program is submitted:
+
 data work.empsalary;
 set work.people (in = inemp)
 work.money (in = insal);
@@ -4351,6 +4361,7 @@ Description: In 'SET', only one table is contributing in any one observation of 
 
 Question:
 The following SAS program is submitted:
+
 data numrecords;
 infile 'file-specification';
 input @1 patient $15.
@@ -4437,6 +4448,7 @@ chair,,table
 chair,couch,table
 
 The following SAS program is submitted:
+
 data stock;
 infile 'furniture' dsd;
 input item1 $ item2 $ item3 $;
@@ -4457,7 +4469,6 @@ data work.total;
 infile 'file-specification' end = eof;
 input name $ salary;
 totsal + salary;
-
 run;
 
 Which one of the following IF statements writes the last observation to the output data set?
@@ -4471,6 +4482,7 @@ Description: End is a sas keyword which will become true when SAS reads last rec
 
 Question:
 The following SAS program is submitted:
+
 libname rawdata1 'location of SAS data library';
 filename rawdata2 'location of raw data file';
 data work.testdata;
@@ -4543,6 +4555,7 @@ The contents of the raw data file PRODUCT are listed below:
 --------10-------20-------30
 24613    $25.31
 The following SAS program is submitted:
+
 data inventory;
 infile 'product';
 input idnum 5. @10 price;
@@ -4597,6 +4610,7 @@ last loop => prod = 7 => (7 gt 6) => true, do until loop exits and pdv writes pr
 
 Question:
 The following SAS program is submitted:
+
 data work.new;
 length word $7;
 amount = 7;
@@ -4621,6 +4635,7 @@ Description: When SAS reads in the iterations in sequence, it first writes 7 to 
 
 Question:
 When the following SAS program is submitted, the data set SASDATA.PRDSALES contains 5000 observations:
+
 libname sasdata 'SAS-data-library';
 options obs = 500;
 proc print data = sasdata.prdsales (firstobs = 100);
@@ -4687,6 +4702,7 @@ Description: The IF statement containing value of 'x' has a single iteration and
 
 Question:
 The following code is submitted:
+
 data temp;
 salary='20000';
 bonus=0.1*salary;
@@ -4708,6 +4724,7 @@ john McCloskey 35 71
 June Rosesette 10 43
 Tineke Jones 9 37
 The following SAS program is submitted using the raw data file as input:
+
 data work.homework;
 infile 'file-specification';
 input name $ age height;
@@ -4759,6 +4776,7 @@ SAS treats an expression that produces a missing value as zero.
 
 Question:
 The following SAS program is submitted:
+
 data work.products;
 Product_Number = 5461;
 Item = '1001';
@@ -4782,6 +4800,7 @@ proc report data = work.houses nowd;
     <insert DEFINE statements here>
     title;
 run;
+
 Exhibit: the output from the REPORT procedure.
 style	price
 CONDO	80,050
@@ -4970,6 +4989,7 @@ A raw data record is listed below:
 ----|----10----|----20----|----30
 Printing 750
 The following SAS program is submitted:
+
 data bonus;
 infile ‘file-specification’;
 input dept $ 1-11 number 13-15;
@@ -5004,33 +5024,6 @@ Answer: C
 Description: out= option specify the output dataset. by default dataset will get sort in ascending order. therefor output dataset is stored in ascending order by values of the NAME variable.
 
 Question:
-The following SAS program is submitted:
-
-data work.totalsales;
-set work.monthlysales(keep = year product sales);
-retain monthsales {12};
-array monthsales {12};
-do i = 1 to 12;
-monthsales{i} = sales;
-end;
-cnt + 1;
-monthsales{cnt} = sales;
-run;
-
-The data set named WORK.MONTHLYSALES has one observation per month for each of five
-years for a total of 60 observations.
-Which one of the following is the result of the above program?
-A. The program fails execution due to data errors.
-B. The program fails execution due to syntax errors.
-C. The program runs with warnings and creates the WORK.TOTALSALES data set with 60
-observations.
-D. The program runs without errors or warnings and creates the WORK.TOTALSALES data set
-with 60 observations.
-
-Answer: B
-Description: You cannot use ARRAY name in RETAIN statement.
-
-Question:
 Which one of the following is true of the SUM statement in a SAS DATA step program?
 A. It is only valid in conjunction with a SUM function.
 B. It is not valid with the SET, MERGE and UPDATE statements.
@@ -5046,6 +5039,7 @@ The contents of the raw data file TYPECOLOR are listed below:
 ----|----10----|----20----|----30
 Daisyyellow
 The following SAS program is submitted:
+
 data flowers;
 infile typecolor’;
 input type $ 1-5 +1 color$;
@@ -5072,6 +5066,7 @@ X Y
 3 1
 5 6
 The following SAS program is submitted:
+
 data sasuser.one two sasdata.three;
 set sasdata two;
 if x = 5 then output sasuser.one;
@@ -5095,12 +5090,14 @@ Description: In SET statement sasdata and two does not have '.' in it, therefor 
 
 Question:
 The following SAS program is submitted:
+
 data one;
 address= '214 London Way';
 run;
 data one;
 set one;
-address = tranwrd(address1, 'Way', 'Drive'); run;
+address = tranwrd(address1, 'Way', 'Drive');
+run;
 
 What are the length and value of the variable ADDRESS?
 A. Length is 14; value is '214London Dri'.
@@ -5122,6 +5119,7 @@ Description: The CONTENTS procedure allows us to create SAS output that describe
 
 Question:
 The following SAS program Is submitted:
+
 data work.sales;
 do year = 1 to 5;
 do month=1 to 12;
@@ -5145,6 +5143,7 @@ AGES
 AGE
 ---------
 The variable AGE contains character values. The following SAS program is submitted:
+
 data subset;
 set ages;
 where age> 12;
@@ -5161,6 +5160,7 @@ Description: AGE is character and character can not be compared with numeric val
 Question:
 The SAS data set PETS is sorted by the variables TYPE and BREED.
 The following SAS program is submitted:
+
 proc print data = pets;
 vartype breed;
 sum number;
@@ -5178,6 +5178,7 @@ Description: When you use a SUM statement, PROC PRINT sums the SUM variables tha
 
 Question:
 The following SAS program is submitted:
+
 data work.passengers;
 if OrigPassengers = then
 OrigPassengers= 100;
@@ -5207,6 +5208,7 @@ R18KY2	1.29	SOFTWARE	25	5
 DY65DW	5.60	HARDWARE	45	5
 DGTY23	4.55	HARDWARE	67	2
 The following SAS program is submitted:
+
 data hware inter cheap;
 set prices(keep = productype price);
 if producttype = 'HARDWARE' then output hware; else if producttype = 'NETWORK' then output inter; 
@@ -5251,11 +5253,13 @@ Obs	Dte
 1	09JAN2005
 2	12JAN2005
 The following SAS program is submitted:
+
 data two;
 set one;
 day = <insert expression here>;
 format dte date9.;
 run;
+
 The data set TWO is created:
 TWO
 Obs	Dte		Day
@@ -5274,6 +5278,7 @@ Description: The WEEKDAY function produces an integer that represents the day of
 Question:
 The following SAS program is submitted:
 Libname temp 'SAS data library';
+
 data work.new;
 set temp.jobs;
 format newdate mmddyy10.;
@@ -5332,6 +5337,7 @@ Description: Keep option in SET statement can not have undefined variable. Load 
 
 Question:
 The following SAS program is submitted:
+
 data temp.x;
 set sasuser.y;
 run;
@@ -5347,6 +5353,7 @@ Description: SASUSER is a default library in SAS. while TEMP is an user defined 
 Question:
 The data set REALESTATE has the variable LOCALFEE with a format or 9. and a variable COUNTRYFEE with a format or 7.;
 The following SAS program is submitted:
+
 data history;
 format local fee country fee percent6.;
 set realestate;
@@ -5364,9 +5371,11 @@ Description: you can apply single format to multiple variables. Since format is 
 
 Question:
 The following SAS program is submitted:
+
 proc freq data = class;
 tables gender * age / <insert option here>;
 run;
+
 The following report is created:
 The FREQ Procedure
 Table of gender by age
@@ -5413,10 +5422,12 @@ Description: User defined format always stored in the form of catalog in user de
 
 Question:
 The following SAS program is submitted, creating the SAS data set ONE:
+
 data one;
 infile 'file specification';
 input num char$;
 run;
+
 ONE
 NUM	CHAR
 ---	---------
@@ -5445,6 +5456,7 @@ Description: CHAR variable has type character. In line 'where char = 23;' value 
 
 Question:
 The following SAS program is submitted:
+
 data work.retail;
 cost = '20000';
 total= .10* cost
@@ -5641,6 +5653,7 @@ Description: KEEP statement does not contain equal to (=) sign.
 
 Question:
 The following SAS program is submitted:
+
 data combine;
 prefix='505';
 middle='6465 ';
@@ -5658,6 +5671,7 @@ Description: The CATX function does not create leading and trailing blanks where
 
 Question:
 The following SAS program is submitted:
+
 <insert ODS statement here>
 proc means data = sasuser.shoes;
 where product in ('Sandal' , 'Slipper' , 'Boot');
@@ -5688,6 +5702,7 @@ Description: The FIND function searches string for the first occurrence of the s
 
 Question:
 Given the following code:
+
 proc print data=SASHELP.CLASS(firstobs=5 obs=15);
 where Sex='M';
 run;
@@ -5702,6 +5717,7 @@ Description: OBS option will let SAS know last observation to process. FIRSTOBS 
 
 Question:
 The SAS data set named WORK.SALARY contains 10 observations for each department, and is currently ordered by Department. The following SAS program is submitted:
+
 data WORK.TOTAL;
 set WORK.SALARY(keep=Department MonthlyWageRate);
 by Department;
@@ -5723,6 +5739,7 @@ Given the contents of the raw data file TYPECOLOR.DAT:
 ----+----10---+----20---+----30 
 daisyyellow 
 The following SAS program is submitted:
+
 data FLOWERS;
 infile'TYPECOLOR.DAT' truncover;
 length Type $ 5 Color $ 11;
@@ -5739,6 +5756,7 @@ Description: The code neither specified where to read the value of each variable
 
 Question:
 The following SAS program is submitted:
+
 data WORK.TEST;
 set WORK.MEASLES(keep=Janpt Febpt Marpt);
 array Diff{3} Difcount1-Difcount3;
@@ -5759,6 +5777,7 @@ Given the raw data record in the file phone.txt:
 ----|----10---|----20---|----30---|
 Stevens James SALES 304-923-3721 14
 The following SAS program is submitted:
+
 data WORK.PHONES;
 infile phone.txt;
 input EmpLName $ EmpFName $ Dept $ Phone $ Extension;
@@ -5784,6 +5803,7 @@ Description: OBS option will let SAS know last observation to process.
 
 Question:
 The following SAS program is submitted:
+
 data WORK.ONE;
 Text='Australia, US, Denmark';
 Pos=find(Text,'US','i',5);
@@ -5803,6 +5823,7 @@ Kim,Basketball,Golf,Tennis
 Bill,Football
 Tracy,Soccer,Track
 The following program is submitted:
+
 data WORK.SPORTS_INFO;
 length Fname Sport1-Sport3 $ 10;
 infile'DATAFILE.TXT' dlm=',';
@@ -5844,6 +5865,7 @@ Num	Char
 3	23
 1	77
 The following SAS program is submitted:
+
 proc print data=WORK.ONE;
 where Num='1';
 run;
@@ -5889,8 +5911,8 @@ South		2		2	1	5
 Total		4		3	2	9
 		44.44		33.33	22.22	100.00
 
-Which TABLES statement was used to completed the following program
-that produced the output?
+Which TABLES statement was used to completed the following program that produced the output?
+
 proc freq data=sales;
 <_insert_code_>
 run;
@@ -5904,6 +5926,7 @@ Description: '*' operator creates two-way table.
 
 Question:
 Given the following data step:
+
 data WORK.GEO;
 infile datalines;
 input City $20.;
@@ -6006,6 +6029,7 @@ EmpIDDepartment
 4698 Marketing
 5463 Accounting
 The following program is submitted:
+
 data WORK.ALL;
 merge WORK.EMP_NAME(in=Emp_N)
 WORK.EMP_DEPT(in=Emp_D);
@@ -6051,6 +6075,7 @@ Description: Descending option applies to variable which is exact next to it, he
 
 Question:
 The following code was modified to generate the results further below:
+
 proc format;
 value agegrp
 low-12 ='Pre-Teen'
@@ -6081,6 +6106,7 @@ Description: You have to mention all descriptive statistics you want in proc mea
 
 Question:
 The following SAS program is submitted:
+
 data WORK.DATE_INFO;
 X='04jul2005'd;
 DayOfMonth=day(x);
@@ -6098,6 +6124,7 @@ Description: The MONTH function produces an integer that represents the month, w
  
 Question:
 The following SAS program is submitted:
+
 data ONE TWO SASUSER.TWO
 set SASUSER.ONE;
 run;
@@ -6177,6 +6204,7 @@ Within each month, the observations are sorted by ascending DAY (descending only
 
 Question:
 The following SAS program is submitted:
+
 data WORK.ACCOUNTING;
 set WORK.DEPARTMENT;
 label Jobcode='Job Description';
@@ -6251,6 +6279,7 @@ Description: Variable salary has '#' invalid character.
 
 Question:
 The following SAS program is submitted:
+
 data WORK.TEST;
 drop City;
 infile datalines;
@@ -6270,6 +6299,7 @@ Jennifer Jason
 666 Mt. Diablo
 Eureka
 CA ;
+
 What will the data set WORK.TEST contain?
 A. Name		Address		State
 -------------- ---------------- ------
@@ -6308,6 +6338,7 @@ Id Char2
 538 F
 644 G
 The following program is submitted:
+
 data WORK.BOTH;
 set WORK.ONE WORK.TWO;
 by Id;
@@ -6332,6 +6363,7 @@ Description: The observations from the first data set that you name in the SET s
 
 Question:
 The following SAS program is submitted:
+
 data WORK.DATE_INFO;
 Day="01" ;
 Yr=1960 ;
@@ -6349,6 +6381,7 @@ Description: Mdy() function returns a date numeric date value. Value of X using 
 Question:
 
 The following SAS program is submitted:
+
 data WORK.AUTHORS;
 array Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');
 run;
@@ -6363,6 +6396,7 @@ Description: In array statement specified length of array names is 8.
 
 Question:
 Consider the following data step:
+
 data WORK.NEW;
 set WORK.OLD(keep=X);
 if X < 10 then X=1;
@@ -6415,6 +6449,7 @@ R18KY2	51.99	EQUIPMENT	25	5
 DY65DW	5.60	OUTDOOR		45	5
 DGTY23	34.55	EQUIPMENT	67	2
 The following SAS program is submitted:
+
 data WORK.OUTDOOR WORK.CLOTH WORK.EQUIP;
 set WORK.PRODUCTS;
 if Sales GT 30;
@@ -6502,7 +6537,9 @@ R18KY2	51.99	EQUIPMENT	25	5
 3KL8BY	6.39	OUTDOOR		125	15
 DY65DW	5.60	OUTDOOR		45	5
 DGTY23	34.55	EQUIPMENT	67	2
+
 The following SAS program is submitted:
+
 data WORK.REVENUE(drop=Sales Returns Price);
 set WORK.PRODUCTS(keep=ProdId Price Sales Returns);
 Revenue=Price*(Sales-Returns);
@@ -6519,6 +6556,7 @@ Description: SET statement keeps 4 variables out of which 3 variables are droped
 
 Question:
 The following SAS program is submitted:
+
 data WORK.TOTAL_SALARY;
 retain Total;
 set WORK.SALARY;
@@ -6539,6 +6577,7 @@ Description: If you omit initial-value in RETAIN statement, the initial value is
 
 Question:
 Consider the following data step:
+
 data WORK.NEW;
 set WORK.OLD;
 Count+1;
@@ -6629,6 +6668,7 @@ Description: BY statement does not contain AND or OR operator. OUT= gives new da
 
 Question:
 Consider the data step:
+
 data WORK.TEST;
 infile'c:\class1.csv' dsd;
 input Name $ Sex $ Age Height Weight;
@@ -6645,6 +6685,7 @@ Description: You can use the IN operator to compare a value that is produced by 
 
 Question:
 The following SAS program is submitted:
+
 data WORK.ACCOUNTING;
 set WORK.DEPARTMENT;
 length EmpId $6;
@@ -6662,6 +6703,7 @@ Description: Type of 'CharEmpid' variable should be numeric, but length statemen
 
 Question:
 The following SAS program is submitted:
+
 data WORK.TOTAL;
 set WORK.SALARY;
 by Department Gender;
@@ -6736,6 +6778,7 @@ Description: DROP statement does not contain '=' sign while DROP OPTION does con
 
 Question:
 Consider the following data step:
+
 data WORK.TEST;
 set SASHELP.CLASS(obs=5);
 retain City 'Beverly Hills';
@@ -6756,6 +6799,7 @@ Obs	Revenue2008	Revenue2009	Revenue2010
 --- ---------------- ---------------- ----------------
 1	1.2		1.6		2.0
 The following SAS program is submitted:
+
 data WORK.TWO;
 set WORK.ONE;
 Total=mean(of Rev:);
@@ -6772,6 +6816,7 @@ Description: mean(of Rev:) gives mean of all variables whose name start with 'Re
 
 Question:
 After a SAS program is submitted, the following is written to the SAS log:
+
 Data WORK.JANUARY;
 Set WORK.ALLYEAR(keep=Product Month Quantity Cost);
 If month=’JAN’ then output WORK.JANUARY;
@@ -6898,6 +6943,7 @@ Description: RENAME statement in front of P2000 dataset rename variable name fro
 
 Question:
 The following SAS program is submitted:
+
 data WORK.RETAIL;
 Cost=’$20,000′;
 Discount=.10*Cost;
@@ -6934,11 +6980,13 @@ N	BeginDate
 1	09JAN201
 2	12JAN201
 The following SAS program is submitted:
+
 data WORK.TWO;
 set WORK.ONE;
 Day=<_insert_code_>;
 format BeginDate date9.;
 run;
+
 The data set WORK.TWO is created, where Day would be 1 for Sunday, 2 for Monday, 3 for Tuesday, … :
 N	BeginDate	Day
 1	09JAN2010	7
@@ -6972,6 +7020,7 @@ X	Y
 3	1
 5	6
 The following SAS program is submitted:
+
 data SASUSER.ONE SASUSER.TWO OTHER;
 set SASDATA.TWO;
 if X eq 5 then output SASUSER.ONE;
@@ -7141,9 +7190,9 @@ GRAY   BROWN   PINK    MAGENTA
 The following SAS program is submitted:
 
 data WORK.COLORS;
- infile 'COLORS.TXT';
- input @1 Var1 $ @8 Var2 $ @;
- input @1 Var3 $ @8 Var4 $ @;
+infile 'COLORS.TXT';
+input @1 Var1 $ @8 Var2 $ @;
+input @1 Var3 $ @8 Var4 $ @;
 run;
 
 What will the data set WORK.COLORS contain?
@@ -7392,7 +7441,7 @@ It is used mainly for the following purposes :
 2. To create customized reports with PUT statements writing to external files.
 
 Question:
- You have executed following SAS DATA step as on Monday, April 01, 2000:
+You have executed following SAS DATA step as on Monday, April 01, 2000:
 data joiners;
 set joinee;
 join_date = today();
@@ -7409,7 +7458,8 @@ The Ans is: the numeric value 14701
 The TODAY function produces the current date in the form of a SAS date value, which is the number of days since January 1, 1960.
 
 Question:
- How many program steps are executed when the program below is processed?
+How many program steps are executed when the program below is processed?
+
 data user.tables;
 infile jobs;
 input date name $ job $;
@@ -7417,7 +7467,6 @@ run;
 proc sort data=user.tables;
 by name;
 run;
-
 proc print data=user.tables;
 run;
 
@@ -7429,7 +7478,7 @@ Answer: A
 Description: When it encounters a DATA, PROC, or RUN statement, SAS stops reading statements and executes the previous step in the program. The program above contains one DATA step and two PROC steps, for a total of three program steps.
 
 Question:
- If you submit the following program, how does the output look?
+If you submit the following program, how does the output look?
 options pagesize=55 nonumber;
 proc tabulate data=clinic.admit;
 class actlevel;
@@ -7456,7 +7505,7 @@ no page numbers. If you don't specify a system option, SAS uses the default valu
 
 
 Question:
- In order for the date values 05May1955 and 04Mar2046 to be read correctly,
+In order for the date values 05May1955 and 04Mar2046 to be read correctly,
 what value must the YEARCUTOFF= option have?
 A. a value between 1947 and 1954, inclusive
 B. 1955 or higher
@@ -7467,7 +7516,7 @@ Answer: D
 Description: As long as you specify an informat with the correct field width for reading the entire date value, the YEARCUTOFF= option doesn't affect date values that have four-digit years.
 
 Question:
- When you specify an engine for a library, you are always specifying
+When you specify an engine for a library, you are always specifying
 A.  The file format for files that are stored in the library.
 B.  The version of SAS that you are using.
 C.  Access to other software vendors' files.
@@ -7479,7 +7528,7 @@ library, which in turn enables SAS to access files with a particular format. Som
 
 
 Question:
- Which statement prints a summary of all the files stored in the library named
+Which statement prints a summary of all the files stored in the library named
 Area51?
 A. proc contents data=area51._all_ nods;
 B. proc contents data=area51 _all_ nods;
@@ -7490,7 +7539,7 @@ Answer: A
 Description: To print a summary of library contents with the CONTENTS procedure, use a period to append the _ALL_ option to the libref. Adding the NODS option suppresses detailed information about the files.
 
 Question:
- The following PROC PRINT output was created immediately after PROC TABULATE output. Which SAS system options were specified when the report was created?
+The following PROC PRINT output was created immediately after PROC TABULATE output. Which SAS system options were specified when the report was created?
 
 1
 10:03 Friday, March 17, 2000
@@ -7514,7 +7563,7 @@ Answer: B
 Description: Clearly, the DATE and PAGENO= options are specified. Because the page number on the output is 1, even though PROC TABULATE output was just produced. If you don't specify PAGENO=, all output in the Output window is numbered sequentially throughout your SAS session.
 
 Question:
- Which of the following programs correctly references a SAS data set named SalesAnalysis that is stored in a permanent SAS library?
+Which of the following programs correctly references a SAS data set named SalesAnalysis that is stored in a permanent SAS library?
 A. data saleslibrary.salesanalysis;
 set mydata.quarter1sales;
 if sales>100000;
@@ -7533,7 +7582,7 @@ Answer: B
 Description: Librefs must be 1 to 8 characters long, must begin with a letter or underscore, and can contain only letters, numbers, or underscores. After you assign a libref, you specify it as the first element in the two-level name for a SAS file.
 
 Question:
- Which time span is used to interpret two-digit year values if the YEARCUTOFF= option is set to 1950?
+Which time span is used to interpret two-digit year values if the YEARCUTOFF= option is set to 1950?
 A. 1950-2049
 B. 1950-2050
 C. 1949-2050
@@ -7543,7 +7592,7 @@ Description: The YEARCUTOFF= option specifies which 100-year span is used to int
 
 
 Question:
-  Assuming you are using SAS code and not special SAS windows, which one of the following statements is false?
+Assuming you are using SAS code and not special SAS windows, which one of the following statements is false?
 A. LIBNAME statements can be stored with a SAS program to reference the SAS library automatically when you submit the program.
 B. When you delete a libref, SAS no longer has access to the files in the library. However, the contents of the library still exist on your operating system.
 C. Librefs can last from one SAS session to another.
@@ -7842,7 +7891,7 @@ that have an amount less than or equal to 5000).
 
 
 Question:
- What does PROC PRINT display by default?
+What does PROC PRINT display by default?
 A. PROC PRINT does not create a default report; you must specify the rows and columns to be displayed.
 B. PROC PRINT displays all observations and variables in the data set. If you want an additional column for observation numbers, you can request it.
 C. PROC PRINT displays columns in the following order: a column for
@@ -7853,7 +7902,7 @@ Answer: D
 Description: You can remove the column for observation numbers. You can also specify the variables you want, and you can select observations according to conditions.
 
 Question:
- Filerefs remain in effect until
+Filerefs remain in effect until
 A. you change them.
 B. you cancel them.
 C. you end your SAS session.
@@ -7862,7 +7911,7 @@ Answer: D
 Description: Like LIBNAME statements, FILENAME statements are global; they remain in effect until you change them, cancel them, or end your SAS session.
 
 Question:
- Which statement identifies the name of a raw data file to be read with the fileref
+Which statement identifies the name of a raw data file to be read with the fileref
 Products and specifies that the DATA step read only records 1–15?
 A. infile products obs 15;
 B. infile products obs=15;
@@ -7872,7 +7921,7 @@ Answer: B
 Description: You use an INFILE statement to specify the raw data file to be read. You can specify a fileref or an actual filename (in quotation marks). The OBS= option in the INFILE statement enables you to process only records 1 through n.
 
 Question:
- Which of the following programs correctly writes the observations from the data set below to a raw data file? SAS Data Set Work.Patients
+Which of the following programs correctly writes the observations from the data set below to a raw data file? SAS Data Set Work.Patients
 ID Sex Age Height Weight Pulse
 2304 F 16 61 102 100
 1128 M 43 71 218 76
@@ -7913,7 +7962,7 @@ Description: The keyword _NULL_ in the DATA statement enables you to use the pow
 data file and the PUT statement describes the lines to write to the raw data file. The filename and location that are specified in the FILE statement must be enclosed in quotation marks.
 
 Question:
- Which raw data file can be read using column input?
+Which raw data file can be read using column input?
 A. 1-----+-----10-----+----20-----+
 Henderson CA 26 ADM
 Josephs SC 33 SALES
@@ -7935,7 +7984,7 @@ Answer: B
 Description: The INPUT statement creates a variable using the name that you assign to each field. Therefore, when you write an INPUT statement, you need to specify the variable names exactly as you want them to appear in the SAS data set.
 
 Question:
- Which statement correctly reads the fields in the following order: StockNumber, Price, Item, Finish, Style?
+Which statement correctly reads the fields in the following order: StockNumber, Price, Item, Finish, Style?
 Field Name   Start Column    End Column       Data Type
 StockNumber       1              3            character
 Finish            5              9            character
@@ -7959,7 +8008,7 @@ Answer: B
 Description: You can use column input to read fields in any order. You must specify the variable name to be created, identify character values with a $, and name the correct starting column and ending column for each field.
 
 Question:
- Which statement correctly re-defines the values of the variable Income as 100 percent higher?
+Which statement correctly re-defines the values of the variable Income as 100 percent higher?
 A. income=income*1.00;
 B. income=income+(income*2.00);
 C. income=income*2;
@@ -7968,7 +8017,7 @@ Answer: C
 Description: To re-define the values of the variable Income in an Assignment statement, you specify the variable name on the left side of the equal sign and an appropriate expression including the variable name on the right side of the equal sign.
 
 Question:
- Which program correctly reads in stream data?
+Which program correctly reads in stream data?
 A. data finance.newloan;
 input datalines;
 if country='JAPAN';
@@ -8044,7 +8093,7 @@ Answer: C
 Description: To subset data, you can use a sub-setting IF statement in any DATA steps to process only those observations that meet a specified condition. Because Sex is a character variable, the value F must be enclosed in quotation marks and must be in the same case as in the data set.
 
 Question:
- Which of the following is not created during the compilation phase?
+Which of the following is not created during the compilation phase?
 A. the data set descriptor
 B. the first observation
 C. the program data vector
@@ -8053,7 +8102,7 @@ Answer: B
 Description: At the beginning of the compilation phase, the program data vector is created. The program data vector includes the two automatic variables _N_ and _ERROR_. The descriptor portion of the new SAS data set is created at the end of the compilation phase. The descriptor portion includes the name of the data set, the number of observations and variables, and the names and attributes of the variables. Observations are not written until the execution phase.
 
 Question:
- During the compilation phase, SAS scans each statement in the DATA step, looking for syntax errors. Which of the following is not considered a syntax error?
+During the compilation phase, SAS scans each statement in the DATA step, looking for syntax errors. Which of the following is not considered a syntax error?
 A. incorrect values and formats
 B. invalid options or variable names
 C. missing or invalid punctuation
@@ -8099,6 +8148,7 @@ Description: By default, at the end of the DATA step, the values in the program 
 
 Question:
 Look carefully at the DATA step shown below. Based on the INPUT statement, in what order will the variables be stored in the new data set?
+
 data perm.update;
 infile invent;
 input IDnum $ 15-19 Item $ 1-13 Instock 21-22 BackOrd 24-25;
@@ -8122,6 +8172,7 @@ Description: When SAS can't interpret syntax errors, the DATA step compiles, but
 
 Question:
 What is wrong with this program?
+
 data perm.update;
 infile invent
 input Item $ 1-13 IDnum $ 15-19 Instock 21-22
@@ -8247,6 +8298,7 @@ Description: Adding the keyword FMTLIB to the PROC FORMAT statement displays a l
 
 Question:
 If Style has four unique values and you submit the following program, which output do you get? (Assume that all the other variables are numeric.)
+
 proc report data=sasuser.houses nowd;
 column style sqfeet bedrooms price;
 define style / group;
