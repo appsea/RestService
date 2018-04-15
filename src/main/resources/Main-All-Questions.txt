@@ -5625,7 +5625,7 @@ C. X	Y	Z
 4	A	82
 4	C	91
 
-D. The PRINT procedure tails because the data set TWO is not created in the DATA step.
+D. The PRINT procedure fails because the data set TWO is not created in the DATA step.
 Answer: A
 
 Question:
