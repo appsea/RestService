@@ -75,7 +75,7 @@ public class DynamicPatternParser implements PatternParser {
 
     @Override
     public boolean ignoreLine(String line) {
-        return line == null || "".equals(line.trim()) || ignorePattern.matcher(line).matches();
+        return line == null || ignorePattern.matcher(line).matches();
     }
 
     public void setDescriptionPattern(String descriptionPattern) {

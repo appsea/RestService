@@ -57,7 +57,8 @@ public class QuestionParser {
                         String questionNumber = patternParser.extractQuestionNumber(line);
                         question = new Question(fileName, questionNumber);
                         String questionString = patternParser.stripQuestionNumber(line);
-                        if (!StringUtils.isEmpty(questionString)) {
+
+                        if (!StringUtils.isEmpty(questionString) || !StringUtils.isEmpty(question.getDescription())) {
                             question.appendQuestion(questionString.trim());
                         }
                         hasOptionStarted = false;

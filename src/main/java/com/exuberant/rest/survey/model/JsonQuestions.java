@@ -25,13 +25,13 @@ public class JsonQuestions {
     private JsonQuestion toQuestion(Question question) {
         JsonQuestion jsonQuestion = new JsonQuestion();
         jsonQuestion.setNumber(question.getNumber());
-        jsonQuestion.setDescription(question.getDescription());
-        jsonQuestion.setExplanation(question.getExplanation());
+        jsonQuestion.setDescription(question.getDescription().replaceAll("\n$", ""));
+        jsonQuestion.setExplanation(question.getExplanation().replaceAll("\n$", ""));
         for (Option option : question.getOptions().getOptions()) {
             JsonOption jsonOption = new JsonOption();
             jsonOption.setCorrect(option.isCorrect());
             jsonOption.setTag(option.getTag());
-            jsonOption.setDescription(option.getDescription());
+            jsonOption.setDescription(option.getDescription().replaceAll("\n$", ""));
             jsonQuestion.addOption(jsonOption);
         }
         return jsonQuestion;

@@ -1,5 +1,7 @@
-﻿Question:
-Which ODS command closes the HTML file??
+﻿
+Question:
+Which ODS command closes the HTML file?
+
 A. END
 B. QUIT
 C. STOP
@@ -9,6 +11,7 @@ Description: ods html close;
 
 Question:
 Which is the correct statement?
+
 A. ODS HTML FILE = ‘file’;
 B. ODS FILE HTML = ‘file’
 C. ODS FILE = ‘file’
@@ -20,6 +23,7 @@ data temp;
 set lib1.x lib2.y;
 length jobcode $12.;
 run;
+
 What would be the length of Jobcode in temp?
 A. 5
 B. 8
@@ -33,6 +37,7 @@ Question:
 PROC SORT data = lib.temp out = temp2;
 By subjid;
 Run;
+
 In which library temp2 is made?
 A. WORK
 B. SASUSER
@@ -47,6 +52,7 @@ options obs = 500;
 Data TEMP;
 Set test (firstobs=75);
 Run;
+
 What will be the number of observations in temp dataset?
 A. 424
 B. 425
@@ -58,10 +64,11 @@ Description: Firstobs option tells SAS from which observation to start reads whi
 Here data Obs count = 500-75 which is 426.
 
 Question:
+What is the correct missing code?
+
 DATA TEMP;
  <MISSING CODE>
 RUN;
-What is the correct missing code?
 
 A. Merge Test1   /*Test1 contains JOBCODE */
     Test2(rename = (Jcode = JOBCODE));
@@ -79,6 +86,8 @@ Answer: A
 Description: Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)) . 
 
 Question:
+What will be the output of following code?
+
 data temp;
 test = ‘X’;
 select(test);
@@ -87,7 +96,7 @@ when(‘X’) Name = ‘Rakesh’;
 when(‘Z’) Name = ‘       ’;
 end;
 run;
-What is the output?
+
 A. Rakesh
 B. Rak
 C. Missing (character missing value)
@@ -97,10 +106,12 @@ Answer: B
 Description: It’s because during compilation time the length of variable Name is set as 3 (see the first case ‘Y’) and hence even if the case ‘X’ is satisfied the output will still be Rak.
 
 Question :
+Where will the ouput(rakesh) be written?
+
 data _null_;
 put ‘rakesh’;
 run;
-Where will the ouput(rakesh) be written?
+
 A. In Last file opened
 B. In dataset _null_
 C. Syntax error
@@ -143,6 +154,7 @@ Question:
 DATA TEMP;
 X= ‘13MAR2000’d;
 RUN;
+
 What is stored in x?
 A. 13MAR2000
 B. Corresponds to days from 01 Jan 1960: 14682
@@ -190,10 +202,12 @@ Proc Format;
 Value ag 1-50  = ‘less’
 	 51-100 = ‘greater’;
 Run;
+
 Data test;
 X = 50.5;
 Format x ag.;
 Run;
+
 What will be the output of dataset test?
 A. ‘less’
 B. ‘greater’
@@ -223,6 +237,7 @@ Question:
 data temp;
 set x;
 run;
+
 “missing code”
 data test;
 set y;
@@ -308,6 +323,7 @@ if first.ID then name = ‘RAJU’;
 else if ID = ‘RAM’ then name = ‘RAMU’;
 if last.ID;
 run;
+
 How many observations will be present in temp dataset?
 
 A. 5
@@ -331,7 +347,7 @@ C. In datastep input is read from temporary location and output is written to pe
 D. In datastep input is read from permanent location and output is written to permanent location.
 
 Answer: D
-Description: Both data statement and set statement has libname before dataset names which assign.
+Description: Both data statement and set statement has libref before dataset names which assign.
 
 Question:
 What is the output of DATE9. format?
@@ -362,7 +378,9 @@ data temp;
 infile ‘file’;
 input name $1-10 age 15-16;
 /*missing code*/
+
 run;
+
 What is the missing code to write ‘rakesh,22’ to variable LA;
 
 A. LA = TRIM(name)||’,’||put(Age,2.);
@@ -380,6 +398,7 @@ test2(keep = ID NAME CLASS AGE);
 by ID;
 keep = ID NAME;
 run;
+
 Variables in output dataset?
 
 A. ID NAME
@@ -407,7 +426,7 @@ C. 1 and 4
 D. 3 and 1
 
 Answer: C
-Description: do loop does not have output statement hence it will have only one observation and 4 variables. output statement within do loop gives explicit output.
+Description: do loop does not have output statement hence it will have only one observation and 4 variables. output statement within do loop gives explicit output. Final dataset has 4 variables namely X, ID, NAME, AGE.
 
 Question:
 What informat should be used to read the date variable in the flat file having the values like 02NOV2003?
@@ -417,6 +436,7 @@ C. MMDDYY10.
 D. none
 
 Answer: A
+Description: DATE9. Informat reads value present in the form of DDMMMYYYY.
 
 Question:
 Flat file structure is as below
@@ -447,7 +467,8 @@ data temp;
 infile ‘file specification’;
 input date mmddyy10.;
 run;
-what is the value of date in the dataset TEMP?
+
+What is the value of date in the dataset TEMP?
 
 A. 02032000
 B. 14643, the number of days from jan 1st , 1960
@@ -458,6 +479,7 @@ Description: SAS store date in the form of SAS date values starts from number of
 
 Question:
 The following code is submitted:
+
 data temp;
 x=14643;
 y=put(x,mmddyy10.);
@@ -480,6 +502,7 @@ if x=4 then y='four';
 else if x=7 then y='seven';
 x=7;
 run;
+
 What would be the value of X and Y in the dataset temp?
 A. X=4 and Y= ‘seven’
 B. X=7 and Y=’seven’
@@ -528,6 +551,7 @@ infile ‘file specification’;
 input x $ age;
 if age<=40;
 run;
+
 How many observations will be there in the TEMP dataset?
 A. 3
 B. 2
@@ -563,6 +587,7 @@ bonus=10;
 salary=.;
 total=sum(salary,bonus);
 run;
+
 What would be the value of TOTAL variable in the dataset TEMP?
 
 A. 100
@@ -659,6 +684,7 @@ run;
 D. None
 
 Answer: A
+Description: DO LOOP ends with END statement. As many Do statement present that many End statement should be in code.
 
 
 Question:
@@ -670,6 +696,7 @@ data temp;
 infile ‘file specification’;
 input @1 weight 2. @4 height 2.;
 run;
+
 What is the value of HEIGHT variable in the TEMP dataset?
 
 A. . (period)
@@ -690,7 +717,7 @@ end;
 end;
 run;
 
-how many observations will present in the dataset TEMP?
+How many observations will present in the dataset TEMP?
 
 A. 1
 B. 3
@@ -705,6 +732,7 @@ The dataset XYZ has 5000 observations.
 options obs=500;
 proc print data=xyz(firstobs=100 )
 run;
+
 options obs=max;
  proc means data=xyz(firstobs=500)
  run;
@@ -759,7 +787,8 @@ data temp;
 infile <missing code>;
 input x y;
 run;
-what should be inserted in place of missing code?
+
+What should be inserted in place of missing code?
 
 A. rawdata2
 B. rawdata1
@@ -865,7 +894,6 @@ A = ‘I am Bond, James Bond’;
 LEN=SCAN(A,3);
 Run;
 
-
 A. 4
 B. 20
 C. 8
@@ -875,12 +903,12 @@ Answer: D
 Description: Whenever a variable is created by assigning the value returned by the SCAN function, its length is always $200 (If it is not set explicitly using length statement).
 
 Question:
- What will be the value of variable LEN when the following code is submitted?
+What will be the value of variable LEN when the following code is submitted?
+
 Date temp;
       A=’I was Bond, A real Bond’;
       LEN=SUBSTR(A,6,4);
 Run;
-
 
 A. 4
 B. 23
@@ -936,6 +964,7 @@ data temp;
  input date mmddyy10.;
  if date='01012000'd then EVENT='January 1st'.
 run;
+
 What is the value of EVENT in the dataset?
 as date constant uses ddmmmyyyy format i.e. date='01jan2000'd is the correct option here.
 A. January 1st
@@ -956,7 +985,8 @@ data temp;
  	input profession $;
  input Age;
 run;
-how many records from infile will be read for a record in the dataset?
+
+How many records from infile will be read for a record in the dataset?
 A. 0
 B. 1
 C. 2
@@ -971,7 +1001,8 @@ data temp;
  retain address {12};
  array address {12} address1-address12;
 run;
-how many observations??
+
+How many observations??
 A. 0
 B. 1
 C. 2
@@ -988,7 +1019,8 @@ data temp;
 infile 'file';
 input @1 price;
 run;
-value of price?
+
+What will be value of price?
 
 A. 1120
 B. $1,120
@@ -1355,7 +1387,7 @@ define units / format=4. 'Units Sold';
 /*Insert code here*/
 run;
 
-what is the correct set of code to define BONUS as a computed variable?
+What is the correct set of code to define BONUS as a computed variable?
 
 A. define bonus / computed 'Yearly Bonus';
 computation;
@@ -2455,6 +2487,7 @@ The following SAS program is submitted:
 data work.company;
 set work.dept1(keep = jobcode) work.dept2(rename = (jcode = jobcode));
 run;
+
 Which one of the following is the result?
 A. The variable JCODE is written to the output data set.
 B. The variable JOBCODE is written to the output data set.
@@ -2720,6 +2753,7 @@ capital + ((capital+2000) * rate);
 output;
 end;
 run;
+
 How many observations will the ALLOBS data set contain?
 
 A. 5
@@ -2779,6 +2813,7 @@ input name $15. age 2.;
 file 'file-specification';
 put name $15. +5 age 2.;
 run;
+
 Which one of the following describes the output created?
 A. a raw data file only
 B. a SAS data set named GROUP only
@@ -2948,8 +2983,7 @@ C. 6
 D. 9
 
 Answer: C
-Description: The qtr values of each of the months 7,8,9,10,11,12 is 3,3,3,4.4,4..Therefore 6 obs in the final dataset…
-
+Description: The qtr values of each of the months 7,8,9,10,11,12 is 3,3,3,4.4,4..Therefore 6 obs in the final dataset.
 
 Question:
 The following SAS program is submitted:
@@ -3067,6 +3101,7 @@ else
 amount = 0;
 amount_per_year = years_service / amount;
 run;
+
 Which one of the following values does the variable AMOUNT_PER_YEAR contain if an employee has been with the company for
 one year?
 A. 0
@@ -3088,6 +3123,7 @@ input @1 salary 6.;
 if _error_ then description = 'Problems';
 else description = 'No Problems';
 run;
+
 Which one of the following is the value of the DESCRIPTION variable?
 A. Problems
 B. No Problems
@@ -3106,6 +3142,7 @@ data test;
 infile 'namenum';
 input name $ number;
 run;
+
 Which one of the following is the value of the NUMBER variable?
 A. xx
 B. Joe
@@ -3146,6 +3183,7 @@ do i=1 to 12;
 monthsales{i} = sales;
 end;
 run;
+
 The data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.
 Which one of the following is the result of the above program?
 A. The program fails execution due to data errors.
@@ -3170,6 +3208,7 @@ end;
 cnt + 1;
 monthsales{cnt} = sales;
 run;
+
 The data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.
 Which one of the following is the result of the above program?
 A. The program fails execution due to data errors.
@@ -3191,6 +3230,7 @@ if month = 'Jan' then output work.january;
 sales = cost * num_sold;
 keep = product sales;
 run;
+
 Which variables does the WORK.JANUARY data set contain?
 A. PRODUCT and SALES only
 B. PRODUCT, MONTH, NUM_SOLD and COST only
@@ -3210,6 +3250,7 @@ infile 'calendar';
 input @1 date mmddyy10.;
 if date = '01012000'd then event = 'January 1st';
 run;
+
 Which one of the following is the value of the EVENT variable?
 A. 01012000
 B. January 1st
@@ -3237,6 +3278,7 @@ ERROR 22-322: Syntax error, expecting one of the following: a name,
 a quoted string, (, ;, END, KEY, KEYS, NOBS, OPEN, POINT, _DATA_, _LAST_, _NULL_.
 ERROR 202-322: The option or parameter is not recognized and will be ignored.
 5 run;
+
 The IA libref was previously assigned in this SAS session.
 Which one of the following corrects the errors in the LOG?
 A. Delete the word THEN on the IF statement.
@@ -3256,6 +3298,7 @@ data test;
 infile 'size';
 input @1 height 2. @4 weight 2;
 run;
+
 Which one of the following is the value of the variable WEIGHT in the output data set?
 A. 2
 B. 72
@@ -3284,6 +3327,7 @@ else if level = 1 then expertise = 'Low';
 else if level = 2 or 3 then expertise = 'Medium';
 else expertise = 'High';
 run;
+
 Which of the following values does the variable EXPERTISE contain?
 A. Low, Medium, and High only
 B. Low, Medium, and Unknown only
@@ -3307,6 +3351,7 @@ input employee_name $ 1-4;
 if employee_name = 'Ruth' then input idnum 10-11;
 else input age 7-8;
 run;
+
 Which one of the following values does the variable IDNUM contain when the name of the employee is "Ruth"?
 A. 11
 B. 22
@@ -3326,6 +3371,7 @@ The following SAS program is submitted:
 proc means data = sasuser.shoes;
 where product in ('Sandal' , 'Slipper' , 'Boot');
 run;
+
 Which one of the following ODS statements completes the program and sends the report to an HTML file?
 A. ods html = 'sales.html';
 B. ods file = 'sales.html';
@@ -3336,6 +3382,7 @@ Answer: D
 
 Question:
 The following SAS program is submitted:
+
 proc format;
 value score 1 - 50 = 'Fail'
 51 - 100 = 'Pass';
@@ -3344,6 +3391,7 @@ proc report data = work.courses nowd;
 column exam;
 define exam / display format = score.;
 run;
+
 The variable EXAM has a value of 50.5.
 How will the EXAM variable value be displayed in the REPORT procedure output?
 A. Fail
@@ -3357,11 +3405,13 @@ Description: Whenever SAS does not find a mapping for some value in the format i
 
 Question:
 The following SAS program is submitted:
+
 options pageno = 1;
 proc print data = sasuser.houses;
 run;
 proc means data = sasuser.shoes;
 run;
+
 The report created by the PRINT procedure step generates 5 pages of output.
 What is the page number on the first page of the report generated by the MEANS procedure step?
 A. 1
@@ -3402,6 +3452,7 @@ footnote4 'All Figures in Thousands of Dollars';
 proc print data = sasuser.shoes;
 footnote2 'All Products';
 run;
+
 Which one of the following contains the footnote text that is displayed in the report?
 A. All Products
 B. Sales Report for Last Month
@@ -3422,6 +3473,7 @@ The following SAS program is submitted:
 proc means data = sasuser.houses std mean max;
 var sqfeet;
 run;
+
 Which one of the following is needed to display the standard deviation with only two decimal places?
 A. Add the option MAXDEC = 2 to the MEANS procedure statement.
 B. Add the statement MAXDEC = 7.2; in the MEANS procedure step.
@@ -3447,14 +3499,13 @@ proc sort data = sasuser.houses out = houses;
 by style;
 run;
 proc print data = houses;
-
 run;
 
 style	bedrooms	baths	price
-CONDO	2		1.5	80050
-	3		2.5	79350
-	4		2.5	127150
-	2		2.0	110700
+CONDO	2		    1.5	80050
+	3	2.5	        79350
+	4	2.5	        127150
+	2	2.0	110700
 RANCH	2		1.0	64000
 	3		3.0	86650
 	3		1.0	89100
@@ -3545,6 +3596,7 @@ set banks;
 capital + 5000;
 end;
 run;
+
 Which one of the following represents how many observations and variables will exist in the SAS data set NEWBANK?
 A. 0 observations and 0 variables
 B. 1 observations and 4 variables
@@ -3562,6 +3614,7 @@ do while (calls le 6);
 calls + 1;
 end;
 run;
+
 Which one of the following is the value of the variable CALLS in the output data set?
 A. 4
 B. 5
@@ -3579,6 +3632,7 @@ do while (n lt 6);
 n + 1;
 end;
 run;
+
 Which one of the following is the value of the variable N in the output data set?
 A. 4
 B. 5
@@ -3597,6 +3651,7 @@ x + 1;
 end;
 end;
 run;
+
 Which one of the following represents how many observations are written to the WORK.SALES data set?
 A. 0
 B. 1
@@ -3616,6 +3671,7 @@ infile 'file-specification';
 input date $ 1 - 10;
 
 run;
+
 Which one of the following statements completes the program above and computes the duration of the project in days as of today's
 date?
 A. duration = today( ) - put(date,ddmmyy10.);
@@ -3636,6 +3692,7 @@ infile 'file-specification';
 input dept $ 1 - 11 number 13 - 15;
 
 run;
+
 Which one of the following SAS statements completes the program and results in a value of 'Printing750' for the DEPARTMENT
 variable?
 A. department = trim(dept) number;
@@ -3652,6 +3709,7 @@ The following SAS program is submitted:
 data work.month;
 date = put('13mar2000'd,ddmmyy10.);
 run;
+
 Which one of the following represents the type and length of the variable DATE in the output data set?
 A. numeric, 8 bytes
 B. numeric, 10 bytes
@@ -3666,6 +3724,7 @@ The following SAS program is submitted:
 data work.month;
 date = input('13mar2000',date9.);
 run;
+
 Which one of the following represents the type and length of the variable DATE in the output data set?
 A. numeric, 8 bytes
 B. numeric, 9 bytes
@@ -3697,6 +3756,7 @@ data work.retail;
 cost = '20000';
 total = .10 * cost;
 run;
+
 Which one of the following is the value of the variable TOTAL in the output data set?
 A. 2000
 B. '2000'
@@ -3828,8 +3888,8 @@ The following SAS program is submitted using the raw data file above:
 data groceries;
 infile 'file-specification';
 input item $ cost;
-
 run;
+
 Which one of the following completes the program and produces a grand total for all COST values?
 A. grandtot = sum cost;
 B. grandtot = sum(grandtot,cost);
@@ -3850,6 +3910,7 @@ if first.department then payroll = 0;
 payroll + wagerate;
 if last.department;
 run;
+
 The SAS data set WORK.SALARY, currently ordered by DEPARTMENT, contains 100 observations for each of 5 departments.
 Which one of the following represents how many observations the WORK.TOTAL data set contains?
 A. 5
@@ -3871,6 +3932,7 @@ OrigPassengers = .;
 NonPaying = 10;
 TotalPassengers = sum (OrigPassengers, TransPassengers);
 run;
+
 Which one of the following is the value of the TOTALPASSENGERS variable in the output data set?
 A. 100
 B. 110
@@ -3890,6 +3952,7 @@ OrigPassengers = .;
 NonPaying = 10;
 TotalPassengers = OrigPassengers + TransPassengers;
 run;
+
 Which one of the following is the value of the TOTALPASSENGERS variable in the output data set?
 A. 100
 B. 110
@@ -3906,6 +3969,7 @@ JobCategory = 'FA';
 JobLevel = '1';
 JobCategory = JobCategory || JobLevel;
 run;
+
 Which one of the following is the value of the variable JOBCATEGORY in the output data set?
 
 A. FA
@@ -3976,6 +4040,7 @@ when('CPH') city = 'Copenhagen';
 otherwise city = 'Other';
 end;
 run;
+
 Which one of the following is the value of the CITY variable?
 A. Other
 B. Copenh
@@ -3995,6 +4060,7 @@ when('CPH') city = 'Copenhagen';
 otherwise;
 end;
 run;
+
 Which one of the following is the value of the CITY variable?
 A. London
 B. Copenh
@@ -4041,8 +4107,8 @@ IDNumber	Expenses
 2198		111.12
 The following SAS program is submitted:
 proc sort data = employee_info;
-
 run;
+
 Which one of the following BY statements completes the program and sorts the data sequentially by descending expense values within
 each descending IDNUMBER value?
 A. by descending IDNumber Expenses;
@@ -4065,6 +4131,7 @@ The following SAS program is submitted:
 proc sort data = qtr1_revenue;
 by destination descending revenue;
 run;
+
 Which one of the following represents the first observation in the output data set?
 A. destination revenue
 YYZ 82174
@@ -4085,6 +4152,7 @@ set work.staff (keep = jansales febsales marsales);
 array diff_sales{3} difsales1 - difsales3;
 array monthly{3} jansales febsales marsales;
 run;
+
 Which one of the following represents the new variables that are created?
 A. JANSALES, FEBSALES and MARSALES
 B. MONTHLY1, MONTHLY2 and MONTHLY3
@@ -4108,6 +4176,7 @@ set perm.students;
 file 'file-specification';
 put name $15. @5 age 2.;
 run;
+
 Which one of the following represents the values written to the output raw data file?
 A. --------10-------20-------30
 Alfred	14
@@ -4140,6 +4209,7 @@ data temp.report;
 set sasuser.houses;
 newvar = price * 1.04;
 run;
+
 Which one of the following statements is true regarding the program above?
 A. The program is reading from a temporary data set and writing to a temporary data set.
 B. The program is reading from a temporary data set and writing to a permanent data set.
@@ -4154,6 +4224,7 @@ The following SAS SORT procedure step generates an output data set:
 proc sort data = sasuser.houses out = report;
 by style;
 run;
+
 In which library is the output data set stored?
 A. WORK
 B. REPORT
@@ -4174,6 +4245,7 @@ merge work.employee
 work.salary;
 by fname;
 run;
+
 Which one of the following statements explains why the program failed execution?
 A. The SORT procedures contain invalid syntax.
 B. The merged data sets are not permanent SAS data sets.
@@ -4196,6 +4268,7 @@ data work.empdata;
 by fname;
 totsal + salary;
 run;
+
 Which one of the following statements completes the merge of the two data sets by the FNAME variable?
 A. merge work.employee
 work.salary (fname = name);
@@ -4223,6 +4296,7 @@ work.salary;
 by fname;
 totsal + salary;
 run;
+
 How many variables are output to the WORK.EMPDATA data set?
 A. 3
 B. 4
@@ -4248,7 +4322,7 @@ merge employee (in=ine) salary(in=ins);
 by name;
 if ine and ins;
 run;
-Choices are
+
 A. 4
 B. 3
 C. 2
@@ -4264,6 +4338,7 @@ set work.people (in = inemp)
 work.money (in = insal);
 if insal and inemp;
 run;
+
 The SAS data set WORK.PEOPLE has 5 observations, and the data set WORK.MONEY has 7 observations.
 How many observations will the data set WORK.EMPSALARY contain?
 A. 0
@@ -4288,6 +4363,7 @@ clinic $ 44-53
 @54 diagnosis $15. @;
 input age;
 run;
+
 How many raw data records are read during each iteration of the DATA step during execution?
 A. 1
 B. 2
@@ -4314,6 +4390,7 @@ input style $ @;
 if style = 'CONDO' or style = 'RANCH';
 input sqfeet bedrooms baths street $ price : dollar10.;
 run;
+
 How many observations will the output data set contain?
 A. 0
 B. 3
@@ -4342,6 +4419,7 @@ input style $ @;
 if style = 'CONDO' or style = 'RANCH' then
 input sqfeet bedrooms baths street $ price : dollar10.;
 run;
+
 How many observations does the WORK.CONDO_RANCH data set contain?
 A. 0
 B. 3
@@ -4363,6 +4441,7 @@ data stock;
 infile 'furniture' dsd;
 input item1 $ item2 $ item3 $;
 run;
+
 Which one of the following is the value of the variable named ITEM2 in the first observation of the output data set?
 A. table
 B. ,table
@@ -4380,6 +4459,7 @@ input name $ salary;
 totsal + salary;
 
 run;
+
 Which one of the following IF statements writes the last observation to the output data set?
 A. if end = 0;
 B. if eof = 0;
@@ -4397,6 +4477,7 @@ data work.testdata;
 infile
 input sales1 sales2;
 run;
+
 Which one of the following is needed to complete the program correctly?
 A. rawdata1
 B. rawdata2
@@ -4444,6 +4525,7 @@ data flowers;
 infile 'typecolor';
 input type $ 1-5 +1 color $;
 run;
+
 Which one of the following represents the values of the variables TYPE and COLOR?
 A. type color
 daisy yellow
@@ -4465,6 +4547,7 @@ data inventory;
 infile 'product';
 input idnum 5. @10 price;
 run;
+
 Which one of the following is the value of the PRICE variable?
 A. 25.31
 B. $25.31
@@ -4481,6 +4564,7 @@ run;
 
 proc means data = sasuser.shoes;
 run;
+
 Which one of the following OPTIONS statements resets the page number to 1 for the second report?
 A. options pageno = 1;
 B. options pagenum = 1;
@@ -4497,6 +4581,7 @@ do until (prod gt 6);
 prod + 1;
 end;
 run;
+
 Which one of the following is the value of the variable PROD in the output data set?
 A. 5
 B. 6
@@ -4520,6 +4605,7 @@ else if amount = 7 then word = 'DOG';
 else word = 'NONE!!!';
 amount = 5;
 run;
+
 Which one of the following represents the values of the AMOUNT and WORD variables?
 A. amount word
 5 DOG
@@ -4542,6 +4628,7 @@ run;
 options obs = max;
 proc means data = sasdata.prdsales (firstobs = 500);
 run;
+
 How many observations are processed by each procedure?
 A. 400 for PROC PRINT
 4500 for PROC MEANS
@@ -4563,6 +4650,7 @@ merge temp.sales;
 work.receipt;
 by names;
 run;
+
 Which one of the following results occurs when this program is submitted?
 A. The program executes successfully and a temporary SAS data set is created.
 B. The program executes successfully and a permanent SAS data set is created.
@@ -4586,7 +4674,8 @@ infile ‘file specification’;
 if x='sue' then input age 5-6;
 else input height 8-9;
 run;
-what would be the value of variable AGE in the dataset TEMP when variable X has the value ‘Sue’?
+
+What would be the value of variable AGE in the dataset TEMP when variable X has the value ‘Sue’?
 
 A. 44
 B. 30
@@ -4602,6 +4691,7 @@ data temp;
 salary='20000';
 bonus=0.1*salary;
 run;
+
 What would be the value of BONUS variable in the dataset TEMP?
 
 A. '2000'
@@ -4623,6 +4713,7 @@ infile 'file-specification';
 input name $ age height;
 if age LE 10;
 run;
+
 How many observations will the WORK.HOMEWORK dataset contain?
 
 A. 0
@@ -4673,6 +4764,7 @@ Product_Number = 5461;
 Item = '1001';
 Item_Reference = Item||'/'||Product_Number;
 run;
+
 Which one of the following is the value of the variable ITEM_REFERENCE in the output data set?
 A. 1001/5461
 B. 1001/ 5461
@@ -4703,6 +4795,7 @@ SPLIT	65,850
 	73,650
 TWOSTORY 55,850
 	69,250
+
 Assume permanent variable labels have been assigned.
 Which one of the following completes the program and produces the output displayed in the exhibit?
 A. define style / display width = 9;
@@ -4725,6 +4818,7 @@ where price <100000;
 <insert code here>
 title;
 run;
+
 Exhibit: output from the REPORT procedure.
 Style     Price
 RANCH     $64,000
@@ -4813,6 +4907,7 @@ proc report data = sasuser.houses nowd headline;
     define price / mean width = 9;
     title;
 run;
+
 The following ouput is created by the REPORT procedure:
 style    price
 CONDO    $79,700
@@ -4880,6 +4975,7 @@ infile ‘file-specification’;
 input dept $ 1-11 number 13-15;
 <insert code here>
 run;
+
 Which one of the following SAS statements completes the program and results in a value of
 ‘Printing 750’ for the DEPARTMENT variable?
 A. department = trim(dept) || number;
@@ -4897,6 +4993,7 @@ The following SAS program is submitted:
 proc sort data = work.test out = work.testsorted;
 by name;
 run;
+
 Which one of the following is the result of the SAS program?
 A. The data set WORK.TEST is stored in ascending order by values of the NAME variable.
 B. The data set WORK.TEST is stored in descending order by values of the NAME variable.
@@ -4908,6 +5005,7 @@ Description: out= option specify the output dataset. by default dataset will get
 
 Question:
 The following SAS program is submitted:
+
 data work.totalsales;
 set work.monthlysales(keep = year product sales);
 retain monthsales {12};
@@ -4918,6 +5016,7 @@ end;
 cnt + 1;
 monthsales{cnt} = sales;
 run;
+
 The data set named WORK.MONTHLYSALES has one observation per month for each of five
 years for a total of 60 observations.
 Which one of the following is the result of the above program?
@@ -4929,7 +5028,7 @@ D. The program runs without errors or warnings and creates the WORK.TOTALSALES d
 with 60 observations.
 
 Answer: B
-Description: you cannot use ARRAY name in RETAIN statement.
+Description: You cannot use ARRAY name in RETAIN statement.
 
 Question:
 Which one of the following is true of the SUM statement in a SAS DATA step program?
@@ -4940,6 +5039,7 @@ D. It does not retain the accumulator variable value from one iteration of the S
 the next.
 
 Answer: C
+Description: SUM function returns the sum of non-missing arguments whereas “+” operator returns a missing value if any of the arguments are missing.
 
 Question:
 The contents of the raw data file TYPECOLOR are listed below:
@@ -4950,6 +5050,7 @@ data flowers;
 infile typecolor’;
 input type $ 1-5 +1 color$;
 run;
+
 Which one of the following represents the values of the variables TYPE and COLOR?
 A. type color
 daisy yellow
@@ -4976,6 +5077,7 @@ set sasdata two;
 if x = 5 then output sasuser.one;
 else output sasdata two;
 run;
+
 What is the result?
 A. data set SASUSER.ONE has 5 observations
 data set SASUSER.TWO has 5 observations
@@ -4999,6 +5101,7 @@ run;
 data one;
 set one;
 address = tranwrd(address1, 'Way', 'Drive'); run;
+
 What are the length and value of the variable ADDRESS?
 A. Length is 14; value is '214London Dri'.
 B. Length is 14; value is'214 London Way'.
@@ -5027,9 +5130,8 @@ output
 end;
 end;
 run;
+
 How many observations are written the WORK SALES data set?
-
-
 A. 0
 B. 1
 C. 5
@@ -5047,6 +5149,7 @@ data subset;
 set ages;
 where age> 12;
 run;
+
 How many observations are written out to the data set SUBSET?
 A. 0
 B. 1
@@ -5062,6 +5165,7 @@ proc print data = pets;
 vartype breed;
 sum number;
 run;
+
 What is the result?
 
 A. The SUM statement produces only a grand total of NUMBER.
@@ -5081,6 +5185,7 @@ TransPassengers= 100;
 OrigPassengers=
 TotalPassengers= sum (OrigPassengers, TransPassengers) +0;
 run;
+
 What is the value of the TOTALPASSENGERS variable in the output data set?
 
 A. 0
@@ -5107,6 +5212,7 @@ set prices(keep = productype price);
 if producttype = 'HARDWARE' then output hware; else if producttype = 'NETWORK' then output inter; 
 if price le 5.00;
 run;
+
 How many observations does the HWARE data set contain?
 
 A. 0
@@ -5128,6 +5234,7 @@ Liu	45000
 The following SAS program is submitted:
 proc print data = employees; where name like '_i%';
 run;
+
 What is contained in the output?
 A. Liu only
 B. Innis and Ellis only
@@ -5154,6 +5261,7 @@ TWO
 Obs	Dte		Day
 1	09JAN2005	1
 12	JAN2005		4
+
 Which expression successfully completed the program and created the variable DAY?
 A. day(dte)
 B. weekday(dte)
@@ -5174,6 +5282,7 @@ ddate= weekday(newdate);
 run;
 proc print data = work.new; 
 run;
+
 The variable NEWDATE contains the SAS date value for April 15. 2005. What output is produced if April 15, 2005 falls on a Friday?
 A.	Obs	newdate		mdate	ddate
 	1	04/15/2005	APR	 6
@@ -5212,8 +5321,8 @@ data gt100;
 set airplanes(keep = type mpg load);
 load = mpg * 150;
 run;
-The program fails to execute due to syntax errors.
-What is the cause of the syntax error?
+
+The program fails to execute due to syntax errors. What is the cause of the syntax error?
 A. MPG is not a numeric variable.
 B. LOAD is not a variable in the data set GT100.
 C. LOAD is not variable in the data set AIRPLANES.
@@ -5226,6 +5335,7 @@ The following SAS program is submitted:
 data temp.x;
 set sasuser.y;
 run;
+
 What must be submitted prior to this SAS program for the program to execute successfully?
 A. A LIBNAME statement for the libref TEMP only must be submitted.
 B. A LIBNAME statement for the libref SASUSER only must be submitted.
@@ -5243,6 +5353,7 @@ set realestate;
 local fee = local fee / 100;
 country fee = country fee / 100;
 run;
+
 What are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?
 A. LOCALFEE has format of 9. and COUNTRYFEE has a format of 7.
 B. LOCALFEE has format of 9. and COUNTRYFEE has a format of percent6.
@@ -5338,6 +5449,7 @@ data work.retail;
 cost = '20000';
 total= .10* cost
 run;
+
 What is the result?
 A. The value of the variable TOTAL in the output data set is 2000. No messages are written to the SAS log.
 B. The value of the variable TOTAL in the output data set is2000. A note that conversion has taken place is written to the SAS log.
@@ -5351,6 +5463,7 @@ The following SAS program is submitted:
 data work.test;
 array items{3} _temporary_;
 run;
+
 What are the names of the variable(s) in the WORKTEST data set?
 A. ITEMS
 B. ITEMS1, ITEMS2, ITEMS3
@@ -5367,7 +5480,8 @@ format date weekdate.;
 run;
 proc print data = one;
 run;
-What output is generated?
+
+What output will be generated?
 A. Obs date
 1 Monday, July 4, 2005
 B. Obs date
@@ -5396,6 +5510,7 @@ file 'file specification';
 put name $ age;
 <insert statement here>
 run;
+
 The following double-spaced file is desired as output
 Alfred 14
 Alice 13
@@ -5425,6 +5540,7 @@ input@1 name$
 @15 date <insert INFORMAT here>
 @25 department$;
 run;
+
 Which INFORMAT correctly completes the program?
 A. date9.
 B. ddmmyyyy9.
@@ -5440,6 +5556,7 @@ data test;
 infile 'file specification';
 input name $ amount@@;
 run;
+
 Which of the following is true?
 A. Two @@ together are the same as one c.
 B. Two @@ hold the data records until the bottom of the DATA step.
@@ -5468,6 +5585,7 @@ if first.y;
 run;
 proc print data = two noobs;
 run;
+
 Which report is produced?
 A. X	Y	Z
 1	B	45
@@ -5512,6 +5630,7 @@ ERROR 22-322: Syntax error, expecting one of the following:!,
 AND, EQ, GE, GT, IN, LE, LT, MAX, MIN, NE, NG, NL,
 NOTIN, OR,^=,|,II,
 110 run;
+
 What changes should be made to the KEEP statement to correct the errors in the LOG?
 A. keep product sales;
 B. keep product, sales;
@@ -5528,6 +5647,7 @@ middle='6465 ';
 end='09090';
 <insert statement here>;
 run;
+
 Which statement successfully completes the program so that TOTAL has a value of 505-6465-09090?
 A. total = cat('-', prefix, middle, end);
 B. total =catx('-', prefix, middle, end);
@@ -5543,6 +5663,7 @@ proc means data = sasuser.shoes;
 where product in ('Sandal' , 'Slipper' , 'Boot');
 run;
 <insert ODS statement here>
+
 Which ODS statements complete the program and send the report to an HTML file?
 A. ods html = 'sales.html'; ods html close;
 B. ods file = 'sales.html'; ods file close;
@@ -5556,6 +5677,7 @@ data combine;
 country = 'Italy, Russia, ireland';
 found = find(country, 'i');
 run;
+
 What is the value of the variable FOUND in the output data set?
 A. 1
 B. 12
@@ -5569,6 +5691,7 @@ Given the following code:
 proc print data=SASHELP.CLASS(firstobs=5 obs=15);
 where Sex='M';
 run;
+
 How many observations will be displayed?
 A. 11
 B. 15
@@ -5586,6 +5709,7 @@ if First.Department=1 then Payroll=0;
 Payroll+(MonthlyWageRate*12);
 if Last.Department=1;
 run;
+
 Which statement is true?
 A. The by statement in the DATA step causes a syntax error.
 B. The statement Payroll+(MonthlyWageRate*12); in the data step causes a syntax error.
@@ -5604,6 +5728,7 @@ infile'TYPECOLOR.DAT' truncover;
 length Type $ 5 Color $ 11;
 input Type $ Color $;
 run;
+
 What are the values of the variables Type and Color?
 A. Type=daisy, Color=yellow
 B. Type=daisy, Color=w
@@ -5619,6 +5744,7 @@ set WORK.MEASLES(keep=Janpt Febpt Marpt);
 array Diff{3} Difcount1-Difcount3;
 array Patients{3} Janpt Febpt Marpt;
 run;
+
 What new variables are created?
 A. Difcount1, Difcount2 and Difcount3
 B. Diff1, Diff2 and Diff3
@@ -5638,6 +5764,7 @@ infile phone.txt;
 input EmpLName $ EmpFName $ Dept $ Phone $ Extension;
 <_insert_code_>
 run;
+
 Which SAS statement completes the program and results in a value of "James Stevens" for the variable FullName?
 A. FullName=CATX(' ',EmpFName,EmpLName);
 B. FullName=CAT(' ',EmpFName,EmpLName);
@@ -5661,6 +5788,7 @@ data WORK.ONE;
 Text='Australia, US, Denmark';
 Pos=find(Text,'US','i',5);
 run;
+
 What value will SAS assign to Pos?
 A. 0
 B. 1
@@ -5682,6 +5810,7 @@ input Fname $ Sport1 $ Sport2 $ Sport3 $;
 run;
 proc print data=WORK.SPORTS_INFO;
 run;
+
 Which output is correct based on the submitted program?
 A.	Obs	Fname	Sport1		Sport2	Sport3
 	1	Kim	Basketball	Golf	Tennis
@@ -5718,7 +5847,8 @@ The following SAS program is submitted:
 proc print data=WORK.ONE;
 where Num='1';
 run;
-What is output?
+
+What will be the output?
 A. Num Char
 --- ----
 1 23
@@ -5764,6 +5894,7 @@ that produced the output?
 proc freq data=sales;
 <_insert_code_>
 run;
+
 A. tables region product;
 B. tables region,product;
 C. tables region/product;
@@ -5786,6 +5917,7 @@ Los Angeles
 Bangor
 ;
 run;
+
 After data step execution, what will data set WORK.GEO contain?
 A. Obs	City		State	Region
 1	Tulsa		OK	Western
@@ -5834,8 +5966,7 @@ run;
 D. proc print data=MYXLS.'NORTH$'n;
 run;
 Answer: D
-Description:  Excel worksheet names end with a dollar sign. We must use a name to refer to the worksheet. Name are quoted and
-followed immediately by the letter en (n).
+Description:  Excel worksheet names end with a dollar sign. We must use a name to refer to the worksheet. Name are quoted and followed immediately by the letter en (n).
 
 Question:
 Given the data set WORK.EMPDATA:
@@ -5881,6 +6012,7 @@ WORK.EMP_DEPT(in=Emp_D);
 by Empid;
 if (Emp_N and not Emp_D) or (Emp_D and not Emp_N);
 run;
+
 How many observations are in data set WORK.ALL after submitting the program?
 A. 1
 B. 2
@@ -5893,6 +6025,7 @@ Question:
 The following program is submitted:
 proc contents data=_all_;
 run;
+
 Which statement best describes the output from the submitted program?
 A. The output contains only a list of the SAS data sets that are contained in the WORK library.
 B. The output displays only the contents of the SAS data sets that are contained in the WORK library.
@@ -5906,6 +6039,7 @@ The following program is submitted:
 proc sort data=SASUSER.PROJECTS out=PSORT;
 by Code descending Date Cost;
 run;
+
 Which of the following is true concerning the submitted program?
 A. The descending option applies to the variable Code.
 B. The variable Code is sorted by ascending order.
@@ -5927,6 +6061,7 @@ var Height;
 class Sex Age;
 format Age agegrp.;
 run;
+
 The following results were generated to display only specific statistics and limit the decimals with the modification:
 Which statement below was modified or added to generate the results above:
 
@@ -5952,6 +6087,7 @@ DayOfMonth=day(x);
 MonthOfYear=month(x);
 Year=year(x);
 run;
+
 What types of variables are DayOfMonth, MonthOfYear, and Year?
 A. DayOfMonth, Year, and MonthOfYear are character.
 B. DayOfMonth, Year, and MonthOfYear are numeric.
@@ -5965,6 +6101,7 @@ The following SAS program is submitted:
 data ONE TWO SASUSER.TWO
 set SASUSER.ONE;
 run;
+
 Assuming that SASUSER.ONE exists, how many temporary and permanent SAS data sets are created?
 A. 2 temporary and 1 permanent SAS data sets are created
 B. 3 temporary and 2 permanent SAS data sets are created
@@ -5998,6 +6135,7 @@ by descending Month Day;
 run;
 proc print data=WORK.TEMPS;
 run;
+
 Which output is correct?
 A. Obs  Day Month   Temp
    ---  --- -----   ----
@@ -6043,6 +6181,7 @@ data WORK.ACCOUNTING;
 set WORK.DEPARTMENT;
 label Jobcode='Job Description';
 run;
+
 Which statement is true about the output dataset?
 A. The label of the variable Jobcode is Job (only the first word).
 B. The label of the variable Jobcode is Job Desc (only the first 8 characters).
@@ -6081,6 +6220,7 @@ var Name Score Grade;
 by IdNumber;
 run;
 ods csvall close;
+
 What is produced as output?
 A. A file named test.cvs that can only be opened in Excel.
 B. A text file named test.cvs that can be opened in Excel or in any text editor.
@@ -6172,6 +6312,7 @@ data WORK.BOTH;
 set WORK.ONE WORK.TWO;
 by Id;
 run;
+
 What is the first observation in SAS data set WORK.BOTH?
 
 A. Id Char1 Char2
@@ -6196,6 +6337,7 @@ Day="01" ;
 Yr=1960 ;
 X=mdy(Day,01,Yr) ;
 run;
+
 What is the value of the variable X?
 A. the numeric value 0
 B. the character value "01011960"
@@ -6210,6 +6352,7 @@ The following SAS program is submitted:
 data WORK.AUTHORS;
 array Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');
 run;
+
 What is the value of the second variable in the dataset WORK.AUTHORS?
 A. Hemingway
 B. Hemingwa
@@ -6226,6 +6369,7 @@ if X < 10 then X=1;
 else if X >= 10 AND X LT 20 then X=2;
 else X=3;
 run;
+
 In filtering the values of the variable X in data set WORK.OLD, what value new value would be assigned to X if its original value was a missing value?
 A. X would get a value of 1.
 B. X would get a value of 3.
@@ -6250,6 +6394,7 @@ fullname='Name of Employee'
 salary='Annual Salary'
 hiredate='Date of Hire';
 run;
+
 Why does the program fail?
 A. The PAGENO option is invalid in the OPTIONS statement.
 B. The RUN statement is missing after the FORMAT procedure.
@@ -6277,6 +6422,7 @@ if ProductType EQ 'OUTDOOR' then output WORK.OUTDOOR;
 else if ProductType EQ 'CLOTHING' then output WORK.CLOTH;
 else if ProductType EQ 'EQUIPMENT' then output WORK.EQUIP;
 run;
+
 How many observations does the WORK.OUTDOOR data set contain?
 A. 1
 B. 2
@@ -6361,6 +6507,7 @@ data WORK.REVENUE(drop=Sales Returns Price);
 set WORK.PRODUCTS(keep=ProdId Price Sales Returns);
 Revenue=Price*(Sales-Returns);
 run;
+
 How many variables does the WORK.REVENUE data set contain?
 A. 2
 B. 3
@@ -6381,6 +6528,7 @@ then Total=0;
 Total=sum(Total, Wagerate);
 if Last.Total;
 run;
+
 What is the initial value of the variable Total in the following program?
 A. 0
 B. Missing
@@ -6395,6 +6543,7 @@ data WORK.NEW;
 set WORK.OLD;
 Count+1;
 run;
+
 The variable Count is created using a sum statement. Which statement regarding this variable is true?
 A. It is assigned a value 0 when the data step begins execution.
 B. It is assigned a value of missing when the data step begins execution.
@@ -6501,6 +6650,7 @@ set WORK.DEPARTMENT;
 length EmpId $6;
 CharEmpid=EmpId;
 run;
+
 If data set WORK.DEPARTMENT has a numeric variable EmpId. Which statement is true about the output dataset?
 A. The type of the variable CharEmpid is numeric.
 B. The type of the variable CharEmpid is unknown.
@@ -6519,6 +6669,7 @@ if First.<_insert_code_> then Payroll=0;
 Payroll+Wagerate;
 if Last.<_insert_code_>;
 run;
+
 The SAS data set WORK.SALARY is currently ordered by Gender within Department. Which inserted code will accumulate subtotals for each Gender within Department?
 A. Gender
 B. Department
@@ -6573,6 +6724,7 @@ ERROR 22-322: Syntax error, expecting one of the following: !,
 AND, EQ, GE, GT, IN, LE, LT, MAX, MIN, NE, NG, NL,
 NOTIN, OR, ^=, |, ||, ~=.
 110 run;
+
 What data set option could be attached to WORK.JANUARY to replace the DROP statement that generated the error in the log?
 
 A. (drop Month Quantity Cost)
@@ -6589,6 +6741,7 @@ set SASHELP.CLASS(obs=5);
 retain City 'Beverly Hills';
 State='California';
 run;
+
 The computed variables City and State have their values assigned using two different methods, a RETAIN statement and an Assignment statement. Which statement regarding this program is true?
 A. The RETAIN statement is fine, but the value of City will be truncated to 8 bytes as the LENGTH statement has been omitted.
 B. Both the RETAIN and assignment statement are being used to initialize new variables and are equally efficient. Method used is a matter of programmer preference.
@@ -6607,6 +6760,7 @@ data WORK.TWO;
 set WORK.ONE;
 Total=mean(of Rev:);
 run;
+
 What value will SAS assign to Total?
 A. 3
 B. 1.6
@@ -6824,6 +6978,7 @@ if X eq 5 then output SASUSER.ONE;
 if Y lt 5 then output SASUSER.TWO;
 output;
 run;
+
 What is the result?
 A. data set SASUSER.ONE has 5 observations
 data set SASUSER.TWO has 5 observations
@@ -7037,7 +7192,8 @@ Set WORK.SALES;
 array month{3} salesjan febsales marchamt;
 <insert code here>
 run;
-which statement should be inserted to produce a following output?
+
+Which statement should be inserted to produce a following output?
 SalesID       SalesJan      FebSales     MarchAmt      QTR1
 -------      ----------   ------------  --------     --------
 W6790          50            400           350         800
@@ -7065,6 +7221,7 @@ do Index = 1 to 5  by  2;
 X = Index;	
 end;
 run;
+
 Upon completion of execution, what are the values of the variables X and Index in the SAS data set named WORK.LOOP?
 A. X = 5, Index = 7
 B. X = 5, Index = 5
@@ -7240,6 +7397,7 @@ data joiners;
 set joinee;
 join_date = today();
 run;
+
 Which one of the following is the value of the variable JOIN_DATE in the output data set?
 A. This will be a character string with the value '04/01/2000'
 B. This will be a character string with the value 'Monday, April 01, 2000'
