@@ -348,7 +348,7 @@ C. In datastep input is read from temporary location and output is written to pe
 D. In datastep input is read from permanent location and output is written to permanent location.
 
 Answer: D
-Description: Both data statement and set statement has libref before dataset names which assign.
+Description: Both data statement and set statement has libname before dataset names which assign.
 
 Question:
 What is the output of DATE9. format?
@@ -4126,7 +4126,7 @@ C. by IDNumber descending Expenses descending;
 D. by descending IDNumber descending Expenses;
 
 Answer: D
-Description: sorting of variables is in ascending order by default. As per condition var 2 is within var 1, So Descending Var1 Descending var2
+Description: Sorting of variables is in ascending order by default. As per condition var 2 is within var 1, So Descending Var1 Descending var2
 
 Question:
 The SAS data set QTR1_REVENUE is listed below:
@@ -4395,6 +4395,7 @@ RANCH,1500,3,3,Kemble Avenue,"$86,650"
 SPLIT,1615,4,3,West Drive,"94,450"
 SPLIT,1305,3,1.5,Graham Avenue,"$73,650"
 The following SAS program is submitted using the raw data file as input:
+
 data work.condo_ranch;
 infile 'file-specification' dsd;
 input style $ @;
