@@ -1,10 +1,13 @@
-﻿Question:
+﻿
+Question:
 The following SAS program is submitted:
+
 Data sasuser.history;
 Set sasuser.history(keep=state x y
 Rename = (state=ST));
 Total=sum(x, y);
 Run;
+
 The SAS data set SASUSER.HISTORY has an index on the variable STATE.
 Which describes the result of submitting the SAS program?
 A. The index on STATE is deleted and an index on ST is created
@@ -17,6 +20,7 @@ Description: The index does not delete just because the variable associated with
 
 Question:
 The following SAS program is submitted:
+
 %macro one (input);
 %two;
 %put the value is &date;
@@ -28,13 +32,14 @@ run;
 %mend;
 %let date=31DEC2006;
 %one(&date)
+
 What is the result when the %PUT statement executes?
 A. A macro variable DATE with the value 12SEP2008 is retrieved from the local symbol table for the ONE macro
 B. A macro variable DATE with the value 12SEP2008 is retrieved from the local symbol table for the TWO macro
 C. A macro variable DATE with the value 12SEP2008 is retrieved from the global symbol table
 D. A macro variable DATE with the value 31DEC2006 is retrieved from the global symbol table
 Answer: C
-Description: since the macro-variable DATE is defined as a global variable, it should be in the global symbol table & its value is updated through the macros
+Description: Since the macro-variable DATE is defined as a global variable, it should be in the global symbol table & its value is updated through the macros
 the %let statement near end of code triggers first, generating a global macro variable. Macro two later changes the value of the macro variable, but it remains global.
 
 Question:
@@ -55,15 +60,16 @@ D. A variable that represents the current observation number
 Answer: C
 Description:  it gives the number of observations of the data set which is being read
 
-
 Question:
 CORRECT TEXT
 The following SAS program is submitted:
+
 %macro check(num=4);
 %let result=%sysevalf(&num+0.5);
 %put result is &result;
 %mend;
 %check(num=10)
+
 What is the written to the SAS log?
 A. result is
 B. result is 10
@@ -74,12 +80,14 @@ Description: the value will be 10.5, since %sysevalf handles floating values. Ha
 
 Question:
 The following SAS program is submitted:
+
 %micro test(var);
 %let jobs=BLACKSMITH WORDSMITH SWORDSMITH;
 %let type=%index(&jobs, &var);
 %put type = &type;
 %mend;
 %test(SMITH)
+
 What is the value of the macro variable TYPE when the %PUT statement executes?
 A. 0
 B. Null
@@ -90,11 +98,13 @@ Description: SMITH starts with 6th character of &jobs string.
 
 Question:
 The following SAS program is submitted:
+
 %macro check(num=4);
 %let result=%eval(&nm gt 5);
 %put result is &result;
 %mend;
 %check (num=10)
+
 What is written to the SAS log?
 A. result is true
 B. result is 10 gt 5
@@ -105,11 +115,13 @@ Description: %eval returns 0 or 1 for a Boolean expression being calculated insi
 
 Question:
 The following SAS program is submitted:
-data temp;
+
+#data temp;
 length 1 b 3 x;
 infile 'file reference';
 input a b x;
 run;
+
 What is the result?
 A. The data set TEMP is not created because variables A and B have invalid lengths
 B. The data set TEMP is created, but variable X is not created
@@ -133,10 +145,12 @@ YEAR    QTR     BUDGET
 2002    1       600
 
 The following SAS program is submitted:
+
 Proc sql;
 Select two.*,budget from one <insert JOIN operator here> two on one.year=two.year,
 Quit;
-The following output is desired:
+
+Following is desired output:
 YEAR    QTR     BUDGET  SALES
 2001    4       300     500
 2001    4       300     400
@@ -182,8 +196,10 @@ Description: As many as the macro variables are there, we get the datasets
 
 Question:
 The following SAS program is submitted:
+
 %let dept=prod;
 %let prod=merchandise;
+
 The following message is written to the SAS log:
 The value is "merchandise"
 Which SAS System option writes this message to the SAS log?
@@ -198,8 +214,10 @@ Question:
 The SAS data set WORK.TEMPDATA contains the variables FMTNAME, START and
 LABEL and it consists of 10 observations.
 The following SAS program is submitted:
+
 Proc format cntlin=wor.tempdata;
 Run;
+
 What is the result of submitting the FORMAT procedure step?
 A. It uses the WORK.TEMPDATA SAS data set as input to create the format
 B. All formats created will be stored in two WORK.TEMPDATA SAS data set
@@ -209,9 +227,11 @@ Answer: A
 
 Question:
 The following SAS program is submitted:
+
 date view=sasuser.ranch;
 describe;
 run;
+
 What is the result?
 A. The program creates a DATA step view called SASUSER.RANCH and places the program cod in the current editor window
 B. The program retrieves the SAS source code that creates the view and places it in the output window
@@ -237,6 +257,7 @@ A 1234
 A 3654
 B 5678
 The following SAS program is submitted:
+
 Data_null_;
 Set one;
 By divition;
@@ -245,6 +266,7 @@ Do;
 %let mfirst=sales;
 end;
 run;
+
 What is the value of the macro variable MFRIST when the program finishes execution?
 A. 1234
 B. sales
@@ -265,11 +287,13 @@ Description: POINT specifies whether SAS creates compressed data sets whose obse
 
 Question:
 The following SAS program is submitted:
+
 %macro check(num=4);
 %let result=%sysevalf(&num+0.5);
 %put result is &result;
 %mend;
 %check(num=10)
+
 What is the written to the SAS log?
 A. result is
 B. result is 10.5
@@ -280,9 +304,11 @@ Description: %sysevalf evaluates arithmetic and logical expressions using floati
 
 Question:
 The following SAS program is submitted:
+
 %let first=yourname;
 %let last=first;
 %put &&&last;
+
 What is written to the SAS Log?
 A. First
 B. Yourname
@@ -293,12 +319,14 @@ Description: First two '&' sign resolves to a single '&' where as value of &last
 
 Question:
 The following SAS program is submitted:
+
 %let a=cat;
 %macro animal(a=frog);
 %let a=bird;
 %mend;
 %animal(a=pig)
 %put a is &a;
+
 What is written to the SAS log?
 A. a is pig
 B. a is cat
@@ -330,10 +358,12 @@ Description: Alter command is used to modify table structure so Delete from tabl
 
 Question:
 The following SAS program is submitted:
+
 %let lib=%upcase(sauser);
 proc sql;
 select nvar form dictionary.tables where libname='&lib";
 quit;
+
 Several SAS data sets exist in the SAUSER library.
 What is generated as output?
 A. A report showing the names of the columns in each table in SASUSER
@@ -345,6 +375,7 @@ Answer: B
 
 QUESTION :
 The following SAS program is submitted:
+
 %macro loop;
 data one;
 %do I=1 %to 3;
@@ -353,6 +384,7 @@ end
 run;
 %mend;
 %loop
+
 After this program executes; the following is written to the SAS log:
 (LOOP): Beginning execution
 (LOOP): %DO loop beginning; index variable l; start value is 1; stop value is 3; by value is 1
@@ -367,7 +399,7 @@ C. MACRO
 D. MPRINT
 Answer: B
 
-QUESTION:
+Question:
 Given the SAS data sets ONE and TWO:
 ONE
 ID               NAME
@@ -382,10 +414,12 @@ ID               SALARY
 523             75000
 
 The following SAS program is submitted:
+
 Data combine;
 Merge one two;
 By id;
 Run;
+
 Which SQL procedure program procedures the same results?
 A. proc sql;
 Create table combine as
@@ -408,8 +442,7 @@ Name,salary from one full join two on one.id=two.id;
 Quit;
 Answer: D
 
-
-QUESTION:
+Question:
 The following SAS program is submitted:
 %let first=yourname;
 %lest last=first
@@ -421,8 +454,7 @@ C. &&First
 D. Yourname
 Answer: D
 
-
-QUESTION:
+Question:
 The following SAS program is submitted:
 proc contents data = testdata.one;
 run;
@@ -441,7 +473,7 @@ Contents testdata.one;
 Quit;
 Answer: B
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 data temp;
 array points{2,3} (10,15,20,25,30,35);
@@ -456,7 +488,7 @@ D. The variables named POINTS11, POINTS12, POINTS21, POINTS22, POINTS23 are
 created in the PDV
 Answer: C
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 %let a =cat;
 %macro animal(a=frog);
@@ -471,7 +503,7 @@ C. a is cat
 D. a is pig
 Answer: C
 
-QUESTION:
+Question:
 Given the SAS data set ONE:
 ONE
 A Composite Solution With Just One Click - Certification Guaranteed 14
@@ -495,7 +527,7 @@ Delete from one;
 Quit;
 Answer: A
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 %macro location;
 data _null_;
@@ -513,7 +545,7 @@ C. COMPANY Only
 D. COMPANY and COUNTRY only
 Answer: A
 
-QUESTION:
+Question:
 What is the purpose of the SASFILE statement?
 A. It requests that SAS data set be opened and loaded into SAS memory one page at a
 time
@@ -524,7 +556,7 @@ observation at a time
 D. It requests that a SAS data set be opened and loaded into SAS memory in its entirety
 Answer: D
 
-QUESTION:
+Question:
 Given the SAS date sets CLASS1 and CLASS2
 CLASS1 CLASS2
 NAME COURSE NAME COURSE
@@ -550,7 +582,7 @@ C. INTERSECT ALL
 D. OUTER UNION ALL
 Answer: B
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 data new (bufnp=4);
 set old(bufno=4);
@@ -562,7 +594,7 @@ C. To reduce memory usage
 D. To reduce the amount of data read
 Answer: A
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 options reuse=YES;
 data sasuser RealEstate(compress=CHAR);
@@ -575,7 +607,7 @@ C. It allows users to access the same SAS data set concurrently
 D. It allows updates in place
 Answer: A
 
-QUESTION:
+Question:
 The SAS data set ONE contains fifty million observations and contains the variable
 PRICE, QUANTITY, FIXED and VARIABLE. Which SAS program successfully creates
 three new variables TOTREV, TOTCOST and PROFIT and requires the least amount of
@@ -611,7 +643,7 @@ Run;
 Answer: C
 
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 %macro location;
 data _null_;
@@ -630,7 +662,7 @@ D. COMPANY,COUNTRY and DEPT
 Answer: C
 
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 data temp;
 set sasuser.history(kep=date);
@@ -656,7 +688,7 @@ D. by date qtr
 Answer: A
 
 
-QUESTION:
+Question:
 Which statement(s) in the DATASETS procedure alter(s) the name of a SAS data set
 stored in a SAS data library?
 A. MODIFY and CHANGE statements
@@ -666,7 +698,7 @@ D. MODIFY and RENAME statements
 Answer: C
 Description: The CHANGE Statement Renames one or more SAS files in the same SAS library.
 
-QUESTION:
+Question:
 Given has SAS dataset ONE:
 ONE
 NAME     SALARY
@@ -695,7 +727,7 @@ C. Select salary, salary *.10 column='BONUS'
 D. Select salary, salary*.10 name='BONUS'
 Answer: B
 
-QUESTION:
+Question:
 The SAS data set WORK.TEMPDATA contains the variable FMTNAME, START and
 LABEL and it consists of 10 observations.
 The following SAS program is submitted:
@@ -709,7 +741,7 @@ D. It uses the WORK.TEMPDATA SAS data set as input to create the format
 Answer: D
 
 
-QUESTION:
+Question:
 Given the non-indexed SAS data set TEMP:
 TEMP
 X Y
@@ -734,7 +766,7 @@ D. By X;
 Answer: A
 
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 %micro test(var);
 %let jobs=BLACKSMITH WORDSMITH SWORDSMITH;
@@ -750,7 +782,7 @@ D. 0
 Answer: C
 
 
-QUESTION:
+Question:
 Given the data set SASHELP.CLASS
 SASHELP.CLASS
 NAME AGE
@@ -770,7 +802,7 @@ C. Where upcase(name)=upcase(&value);
 D. Where upcase(name)=%upcase(&value);
 Answer: B
 
-QUESTION:
+Question:
 Following SAS program is submitted:
 data temp(<insert option here>);
 infile 'rawdata';
@@ -784,7 +816,7 @@ C. SORTEDBY=X
 D. SORTSYNC=X
 Answer: C
 
-QUESTION:
+Question:
 Given the following partial SAS log:
 NOTE: SQL table SASHELP.CLASS was created line
 Create table SASHELP.CLASS(bufsize=4096)
@@ -803,7 +835,7 @@ D. CREATE TABLE
 Answer: A
 
 
-QUESTION:
+Question:
 The following SAS program is submitted:
 options mprint;
 %macro test(parm);
@@ -1623,7 +1655,6 @@ D. ID         SALARY      BONUS
    978      55000             .
 Answer: D
 Description: This PROC SQL query is a right outer join, which retrieves all rows that match across tables, based on the join conditions in the ON clause, plus nonmatching rows from the right (second) table.
-
 
 Question:
 Which PROC SQL query produces the same output as the query shown here?

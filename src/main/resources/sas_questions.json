@@ -975,7 +975,7 @@
     {
       "number": "37",
       "description": "If you submit the following program, which output does it create?\nproc sort data=finance.loans out=work.loans;\nby months amount;\nrun;\nproc print data=work.loans noobs;\nvar months;\nsum amount payment;\nwhere months<360;\nrun;",
-      "explanation": "Column totals appear at the end of the report in the same format as the values of the variables, so b is incorrect. Work.Loans is sorted by Month and Amount, so c is incorrect.\nThe program sums both Amount and Payment, so d is incorrect.",
+      "explanation": "Column totals appear at the end of the report in the same format as the values of the variables, so B is incorrect. Work.Loans is sorted by Month and Amount, so c is incorrect.\nThe program sums both Amount and Payment, so d is incorrect.",
       "options": [
         {
           "tag": "A",
@@ -1002,7 +1002,7 @@
     {
       "number": "38",
       "description": "The following SAS program is submitted:\nproc print data = sasuser.houses;\nrun;\n\nproc means data = sasuser.shoes;\nrun;\n\nWhich one of the following OPTIONS statements resets the page number to 1 for the second report?",
-      "explanation": "pageno = option reset the pageno to you want.",
+      "explanation": "Options \"pageno\" resets the page number to the number you need.",
       "options": [
         {
           "tag": "A",
@@ -1379,7 +1379,7 @@
     },
     {
       "number": "52",
-      "description": "The following SAS program is submitted:\ndata work.test;\narray items{3} _temporary_;\nrun;\n\nWhat are the names of the variable(s) in the WORKTEST data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\narray items{3} _temporary_;\nrun;\n\nWhat are the names of the variable(s) in the WORKTEST data set?",
       "explanation": "You use the keyword _TEMPORARY_ where you usually enter your variable names. There are no variables associated with a temporary array. You can use temporary arrays to calculate rolling/moving statistics.",
       "options": [
         {
@@ -2136,7 +2136,7 @@
     {
       "number": "80",
       "description": "The SAS data set SASUSER.HOUSES contains a variable PRICE which has been assigned a permanent label of \"Asking Price\".\nWhich one of the following SAS programs temporarily replaces the label \"Asking Price\" with the label \"Sale Price\" in the output?",
-      "explanation": "Permanent Labels can only be defined in Data Step, Proc step can only be used to define temp labels... and to get the o/p from Label statement in Proc Step we need to use label option.",
+      "explanation": "Description: Permanent Labels can only be defined in Data Step, Proc step can only be used to define temp labels. And to get the o/p from Label statement we need to use label option in Proc Step.",
       "options": [
         {
           "tag": "A",
@@ -3594,7 +3594,7 @@
     {
       "number": "134",
       "description": "Given the SAS data set EMPLOYEES:\nEMPLOYEES\nNAME\tSALARY\n------  --------\nInnis\t60000\nJolli\t50000\nEllis\t55000\nLiu\t45000\nThe following SAS program is submitted:\nproc print data = employees; where name like '_i%';\nrun;\n\nWhat is contained in the output?",
-      "explanation": "underscore (_) matches just one character in the value for each underscore character. So there must be exactly one character before the \"i\", and only Liu satisfies this.",
+      "explanation": "'_i%' means starts with any letter but 2nd letter is i and followed by any letter with their way = LIU",
       "options": [
         {
           "tag": "A",
@@ -3864,7 +3864,7 @@
     {
       "number": "144",
       "description": "A raw data file is listed below:\nRANCH,1250,2,1,Sheppard Avenue,\"$64,000\"\nSPLIT,1190,1,1,Rand Street,\"$65,850\"\nCONDO,1400,2,1.5,Market Street,\"80,050\"\nTWOSTORY,1810,4,3,Garris Street,\"$107,250\"\nRANCH,1500,3,3,Kemble Avenue,\"$86,650\"\nSPLIT,1615,4,3,West Drive,\"94,450\"\nSPLIT,1305,3,1.5,Graham Avenue,\"$73,650\"\nThe following SAS program is submitted using the raw data file as input:\n\ndata work.condo_ranch;\ninfile 'file-specification' dsd;\ninput style $ @;\nif style = 'CONDO' or style = 'RANCH';\ninput sqfeet bedrooms baths street $ price : dollar10.;\nrun;\n\nHow many observations will the output data set contain?",
-      "explanation": "The answer is B, because once you tell sas some condition as we have here if style = 'CONDO' or style = 'RANCH';\nRANCH,1250,.....\nCONDO,1400,.....\nRANCH,1500,.....",
+      "explanation": "Once you tell sas some condition as we have here if style = 'CONDO' or style = 'RANCH';\nRANCH,1250,.....\nCONDO,1400,.....\nRANCH,1500,.....",
       "options": [
         {
           "tag": "A",
@@ -3917,7 +3917,7 @@
     },
     {
       "number": "146",
-      "description": "Given the AIRPLANES data set\nAlRPLANES\nTYPE\tMPG\n------- ------\nF-18\t105\nC-130\t25\nHarrier\t75\nA-6\t110\nThe following SAS program is submitted:\ndata gt100;\nset airplanes(keep = type mpg load);\nload = mpg * 150;\nrun;\n\nThe program fails to execute due to syntax errors. What is the cause of the syntax error?",
+      "description": "Given the AIRPLANES data set\nAlRPLANES\nTYPE\tMPG\n------- ------\nF-18\t105\nC-130\t25\nHarrier\t75\nA-6\t110\nThe following SAS program is submitted:\n\ndata gt100;\nset airplanes(keep = type mpg load);\nload = mpg * 150;\nrun;\n\nThe program fails to execute due to syntax errors. What is the cause of the syntax error?",
       "explanation": "Keep option in SET statement can not have undefined variable. Load variable is created in assignment.",
       "options": [
         {
@@ -4943,7 +4943,7 @@
     },
     {
       "number": "184",
-      "description": "The following SAS program Is submitted:\n\ndata work.sales;\ndo year = 1 to 5;\ndo month=1 to 12;\nx+1;\noutput\nend;\nend;\nrun;\n\nHow many observations are written the WORK SALES data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.sales;\ndo year = 1 to 5;\ndo month=1 to 12;\nx+1;\noutput;\nend;\nend;\nrun;\n\nHow many observations are written the WORK SALES data set?",
       "explanation": "output statement in do loop gives explicit output which gives 60 observations.",
       "options": [
         {
@@ -5051,7 +5051,7 @@
     },
     {
       "number": "188",
-      "description": "The following SAS program is submitted:\nLibname temp 'SAS data library';\n\ndata work.new;\nset temp.jobs;\nformat newdate mmddyy10.;\nmdate= month(newdate);\nddate= weekday(newdate);\nrun;\nproc print data = work.new;\nrun;\n\nThe variable NEWDATE contains the SAS date value for April 15. 2005. What output is produced if April 15, 2005 falls on a Friday?",
+      "description": "The following SAS program is submitted:\n\nLibname temp 'SAS data library';\ndata work.new;\nset temp.jobs;\nformat newdate mmddyy10.;\nmdate= month(newdate);\nddate= weekday(newdate);\nrun;\nproc print data = work.new;\nrun;\n\nThe variable NEWDATE contains the SAS date value for April 15. 2005. What output is produced if April 15, 2005 falls on a Friday?",
       "explanation": "The MONTH function produces an integer that represents the month, where 1=January, 2=february, . . . , 12=December. The WEEKDAY function produces an integer that represents the day of the week, where 1=Sunday, 2=Monday, . . . , 7=Saturday.",
       "options": [
         {
@@ -5294,7 +5294,7 @@
     },
     {
       "number": "197",
-      "description": "The following SAS program is submitted:\ndata one;\ndate = '04juI2005'd;\nformat date weekdate.;\nrun;\nproc print data = one;\nrun;\n\nWhat output will be generated?",
+      "description": "The following SAS program is submitted:\n\ndata one;\ndate = '04juI2005'd;\nformat date weekdate.;\nrun;\nproc print data = one;\nrun;\n\nWhat output will be generated?",
       "explanation": "The WEEKDATE. format writes SAS date values in the form day-of-week, month-name, dd, yy (or yyyy), where dd is an integer that represents the day of the month. yy or yyyy is a two-digit or four-digit integer that represents the year.",
       "options": [
         {
@@ -5619,7 +5619,7 @@
     {
       "number": "209",
       "description": "What is the correct missing code?\n\nDATA TEMP;\n<MISSING CODE>\nRUN;",
-      "explanation": "Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)) .",
+      "explanation": "Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)).",
       "options": [
         {
           "tag": "A",
@@ -5753,7 +5753,7 @@
     },
     {
       "number": "214",
-      "description": "Given the SAS data set ONE:\nONE\nX\tY\tZ\n1\tA\t27\n1\tA\t33\n1\tB\t45\n2\tA\t52\n2\tB\t69\n3\tB\t70\n4\tA\t82\n4\tC\t91\nThe following SAS program is submitted:\ndata two;\nset one;\nby x y;\nif first.y;\nrun;\nproc print data = two noobs;\nrun;\n\nWhich report is produced?",
+      "description": "Given the SAS data set ONE:\nONE\nX\tY\tZ\n1\tA\t27\n1\tA\t33\n1\tB\t45\n2\tA\t52\n2\tB\t69\n3\tB\t70\n4\tA\t82\n4\tC\t91\nThe following SAS program is submitted:\n\ndata two;\nset one;\nby x y;\nif first.y;\nrun;\nproc print data = two noobs;\nrun;\n\nWhich report is produced?",
       "explanation": "",
       "options": [
         {
@@ -5834,7 +5834,7 @@
     },
     {
       "number": "217",
-      "description": "The following SAS program is submitted:\ndata test;\ninfile 'file specification';\ninput name $ amount@@;\nrun;\n\nWhich of the following is true?",
+      "description": "The following SAS program is submitted:\n\ndata test;\ninfile 'file specification';\ninput name $ amount@@;\nrun;\n\nWhich of the following is true?",
       "explanation": "The double trailing at sign (@@) enables the next INPUT statement to read from the current record across further iterations of the DATA step.",
       "options": [
         {
@@ -8291,7 +8291,7 @@
     },
     {
       "number": "308",
-      "description": "The following SAS program is submitted:\nods csvall file='c:\\test.cvs';\nproc print data=WORK.ONE;\nvar Name Score Grade;\nby IdNumber;\nrun;\nods csvall close;\n\nWhat is produced as output?",
+      "description": "The following SAS program is submitted:\n\nods csvall file='c:\\test.cvs';\nproc print data=WORK.ONE;\nvar Name Score Grade;\nby IdNumber;\nrun;\nods csvall close;\n\nWhat is produced as output?",
       "explanation": "CSV files can be opened with many programs, like text editors, the data they contain is best viewed using a spreadsheet program, such as Microsoft Excel, OpenOffice Calc, or Google Sheets.\n",
       "options": [
         {
@@ -8507,7 +8507,7 @@
     },
     {
       "number": "316",
-      "description": "Given the SAS data set PERM.STUDENTS:\nPERM.STUDENTS\nNAME\tAGE\n------\t-------\nAlfred\t14\nAlice\t13\nBarbara\t13\nCarol\t14\nThe following SAS program is submitted:\nlibname perm 'SAS data library';\ndata students;\nset perm.students;\nfile 'file specification';\nput name $ age;\n<insert statement here>\nrun;\n\nThe following double-spaced file is desired as output\nAlfred 14\nAlice 13\nBarbara 13\nCarol 14\nWhich statement completes the program and creates the desired file?",
+      "description": "Given the SAS data set PERM.STUDENTS:\nPERM.STUDENTS\nNAME\tAGE\n------\t-------\nAlfred\t14\nAlice\t13\nBarbara\t13\nCarol\t14\nThe following SAS program is submitted:\n\nlibname perm 'SAS data library';\ndata students;\nset perm.students;\nfile 'file specification';\nput name $ age;\n<insert statement here>\nrun;\n\nThe following double-spaced file is desired as output\nAlfred 14\nAlice 13\nBarbara 13\nCarol 14\nWhich statement completes the program and creates the desired file?",
       "explanation": "the program writes the desired report, writing each line of data to a separate line.  The requirements were actually a little bit different, however, to get a double-spaced report.  So you need to make a change that will write out a blank line as well. null put statement add a blank line to output file or log.\n",
       "options": [
         {
@@ -8940,7 +8940,7 @@
     {
       "number": "332",
       "description": "The following SAS program is submitted:\n\ndata work.passengers;\nif OrigPassengers = . then\nOrigPassengers = 100;\nTransPassengers = 100;\nOrigPassengers = .;\nNonPaying = 10;\nTotalPassengers = sum (OrigPassengers, TransPassengers);\nrun;\n\nWhich one of the following is the value of the TOTALPASSENGERS variable in the output data set?",
-      "explanation": "PDV initializes all variables in data step to missing first. So if statement yields true, so value of origpassenger becomes 100. Then transpassenger is assigned value of 100. Next step value of origpassenger is overwritten with missing value. So when you add using sum function which ignores missing value, values of orignpassenger and transpassenger ie sum(.,100) gives you 100. Thus answer is A.",
+      "explanation": "PDV initializes all variables in data step to missing first. So if statement yields true, so value of origpassenger becomes 100. Then transpassenger is assigned value of 100. Next step value of origpassenger is overwritten with missing value. So when you add using sum function which ignores missing value, values of orignpassenger and transpassenger ie sum(.,100) gives you 100. Thus answer is A.\nAll summary function ignore missing value when computing values whereas operators like + - / * etc do not ignore missing. Thus SUM function will give non missing output as long as their is at least one variable with non missing value. Whereas the operator will always give missing as long as at least one variable in operation is missing.",
       "options": [
         {
           "tag": "A",
@@ -9020,7 +9020,7 @@
     },
     {
       "number": "335",
-      "description": "When you define an order variable,",
+      "description": "When you define an order variable?",
       "explanation": "Order variables do order rows according to the formatted values of the order variable, and PROC REPORT suppresses repetitious printing of order values. However, you can't use order variables in a summary report.",
       "options": [
         {
@@ -9263,7 +9263,7 @@
     },
     {
       "number": "344",
-      "description": "Given the contents of the raw data file EMPLOYEE:\n----|----10----|----20----|----30\nAlan 19/2/2004 ACCT\nRob 22/5/2004 MKTG\nMaryJane 14/3/2004 EDUC\nThe following SAS program is submitted:\ndata emps;\ninfile'employee';\ninput@1 name$\n@15 date <insert INFORMAT here>\n@25 department$;\nrun;\n\nWhich INFORMAT correctly completes the program?",
+      "description": "Given the contents of the raw data file EMPLOYEE:\n----|----10----|----20----|----30\nAlan 19/2/2004 ACCT\nRob 22/5/2004 MKTG\nMaryJane 14/3/2004 EDUC\nThe following SAS program is submitted:\n\ndata emps;\ninfile'employee';\ninput@1 name$\n@15 date <insert INFORMAT here>\n@25 department$;\nrun;\n\nWhich INFORMAT correctly completes the program?",
       "explanation": "The DDMMYYw. format writes SAS date values in the form dd/mm/<yy>yy, / is the separator. dd is an integer that represents the day of the month. where mm is an integer that represents the month. <yy>yy is a two-digit or four-digit integer that represents the year.",
       "options": [
         {
@@ -9831,7 +9831,7 @@
     {
       "number": "365",
       "description": "Which of the following contains a syntax error?",
-      "explanation": "statement DATA is misspelled.",
+      "explanation": "Statement DATA is misspelled but sas assumes that the keyword is data and just gives the warning not an error. Same is the case with proc keyword but no other keywords",
       "options": [
         {
           "tag": "A",
@@ -9840,17 +9840,17 @@
         },
         {
           "tag": "B",
-          "description": "B. proc print data=sales.location label;\n     label loc='Franchise Location';\n     run;",
+          "description": "B. proc print data=sales.location label;\n   label loc='Franchise Location';\n   run;",
           "correct": false
         },
         {
           "tag": "C",
-          "description": "C. proc sort data=work.sales;\n     by month;\n     run;",
+          "description": "C. proc sort data=work.sales;\n   by month;\n   run;",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. dat homework.test;\n    set homework.quiz;\n    run;",
+          "description": "D. dat homework.test;\n   set homework.quiz;\n   run;",
           "correct": true
         }
       ]
@@ -9912,7 +9912,7 @@
     {
       "number": "368",
       "description": "The following code is submitted:\n\ndata temp;\nsalary='20000';\nbonus=0.1*salary;\nrun;\n\nWhat would be the value of BONUS variable in the dataset TEMP?",
-      "explanation": "to an extent, SAS automatically converts character to numeric. even though cost is character. due to automatic conversion here we are getting 2000.",
+      "explanation": "to an extent, SAS automatically converts character to numeric. even though cost is character. due to automatic conversion here we are getting 2000.\nSAS will consider '20000' as a numeric value and thus value of BONUS variable is 200.",
       "options": [
         {
           "tag": "A",
@@ -10181,7 +10181,7 @@
     },
     {
       "number": "378",
-      "description": "The following SAS program is submitted, creating the SAS data set ONE:\n\ndata one;\ninfile 'file specification';\ninput num char$;\nrun;\n\nONE\nNUM\tCHAR\n---\t---------\n1\t23\n3\t23\n1\t77\nThe following SAS program is submitted:\nproc print data = one;\nwhere char = 23;\nrun;\nWhat is output?",
+      "description": "The following SAS program is submitted, creating the SAS data set ONE:\n\ndata one;\ninfile 'file specification';\ninput num char$;\nrun;\n\nONE\nNUM\tCHAR\n---\t---------\n1\t23\n3\t23\n1\t77\nThe following SAS program is submitted:\n\nproc print data = one;\nwhere char = 23;\nrun;\n\nWhat is output?",
       "explanation": "CHAR variable has type character. In line 'where char = 23;' value of char is numeric. hence its generate an error.WHERE clause operator requires compatible variables. To eliminate this error put quotation mark('') at 23.",
       "options": [
         {
@@ -11315,7 +11315,7 @@
     },
     {
       "number": "420",
-      "description": "The following SAS program is submitted:\n\nlibname sasdata 'SAS-data-library';\ndata test;\nset sasdata.chemists (keep = job_code);\nif job_code = 'chem3' then description = 'Senior Chemist';\nrun;\n\nThe variable JOB_CODE is a character variable with a length of 6 bytes.\n\nWhich one of the following is the length of the variable DESCRIPTION in the output data set?",
+      "description": "The following SAS program is submitted:\n\nlibname sasdata 'SAS-data-library';\n\ndata test;\nset sasdata.chemists (keep = job_code);\nif job_code = 'chem3' then description = 'Senior Chemist';\nrun;\n\nThe variable JOB_CODE is a character variable with a length of 6 bytes.\n\nWhich one of the following is the length of the variable DESCRIPTION in the output data set?",
       "explanation": "The length of 'Senior Chemist' is 14.",
       "options": [
         {
@@ -11396,7 +11396,7 @@
     },
     {
       "number": "423",
-      "description": "The following SAS program is submitted:\nproc contents data = sashelp.class varnum;\nquit;\nWhat does the VARNUM option print?",
+      "description": "The following SAS program is submitted:\n\nproc contents data = sashelp.class varnum;\nquit;\n\nWhat does the VARNUM option print?",
       "explanation": "Varnum option in proc contents give list of the variables in the order they were created.",
       "options": [
         {
@@ -11505,7 +11505,7 @@
     {
       "number": "427",
       "description": "The following SAS program is submitted:\ndata work.sales;\ndo year = 1 to 5;\ndo month = 1 to 12;\nx + 1;\nend;\nend;\nrun;\n\nWhich one of the following represents how many observations are written to the WORK.SALES data set?",
-      "explanation": "you need output statement within a do loop to get all the 60 observations printed.",
+      "explanation": "You need output statement within a do loop to get all the 60 observations printed.",
       "options": [
         {
           "tag": "A",
@@ -11719,5 +11719,5 @@
       ]
     }
   ],
-  "version": 11
+  "version": 12
 }

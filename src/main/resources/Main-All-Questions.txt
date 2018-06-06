@@ -83,7 +83,7 @@ D. Merge Test1   /*Test1 contains JOBCODE */
     Test2(rename  Jcode = JOBCODE));
 
 Answer: A
-Description: Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)) . 
+Description: Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)).
 
 Question:
 What will be the output of following code?
@@ -1107,17 +1107,17 @@ Question:
 Which of the following contains a syntax error?
 A. None of these
 B. proc print data=sales.location label;
-     label loc='Franchise Location';
-     run;
+   label loc='Franchise Location';
+   run;
 C. proc sort data=work.sales;
-     by month;
-     run;
+   by month;
+   run;
 D. dat homework.test;
-    set homework.quiz;
-    run;
+   set homework.quiz;
+   run;
 
 Answer: D
-Description: statement DATA is misspelled.
+Description: Statement DATA is misspelled but sas assumes that the keyword is data and just gives the warning not an error. Same is the case with proc keyword but no other keywords
 
 Question:
 A syntax error occurs when:
@@ -2420,6 +2420,7 @@ Question:
 The following SAS program is submitted:
 
 libname sasdata 'SAS-data-library';
+
 data test;
 set sasdata.chemists (keep = job_code);
 if job_code = 'chem3' then description = 'Senior Chemist';
@@ -3584,7 +3585,7 @@ D. proc print data = sasuser.houses label = "Sale Price";
 run;
 
 Answer: C
-Description: Permanent Labels can only be defined in Data Step, Proc step can only be used to define temp labels... and to get the o/p from Label statement in Proc Step we need to use label option.
+Description: Description: Permanent Labels can only be defined in Data Step, Proc step can only be used to define temp labels. And to get the o/p from Label statement we need to use label option in Proc Step.
 
 Question:
 The SAS data set BANKS is listed below:
@@ -3663,7 +3664,7 @@ C. 5
 D. 60
 
 Answer: B
-Description: you need output statement within a do loop to get all the 60 observations printed.
+Description: You need output statement within a do loop to get all the 60 observations printed.
 
 Question:
 A raw data record is listed below:
@@ -3946,6 +3947,7 @@ D. . (missing numeric value)
 
 Answer: A
 Description: PDV initializes all variables in data step to missing first. So if statement yields true, so value of origpassenger becomes 100. Then transpassenger is assigned value of 100. Next step value of origpassenger is overwritten with missing value. So when you add using sum function which ignores missing value, values of orignpassenger and transpassenger ie sum(.,100) gives you 100. Thus answer is A.
+All summary function ignore missing value when computing values whereas operators like + - / * etc do not ignore missing. Thus SUM function will give non missing output as long as their is at least one variable with non missing value. Whereas the operator will always give missing as long as at least one variable in operation is missing.
 
 Question:
 The following SAS program is submitted:
@@ -4410,7 +4412,7 @@ C. 5
 D. 7
 
 Answer: B
-Description: The answer is B, because once you tell sas some condition as we have here if style = 'CONDO' or style = 'RANCH';
+Description: Once you tell sas some condition as we have here if style = 'CONDO' or style = 'RANCH';
 RANCH,1250,.....
 CONDO,1400,.....
 RANCH,1500,.....
@@ -4586,7 +4588,7 @@ C. options reset pageno = 1;
 D. options reset pagenum = 1;
 
 Answer: A
-Description: pageno = option reset the pageno to you want.
+Description: Options "pageno" resets the page number to the number you need.
 
 Question:
 The following SAS program is submitted:
@@ -4718,6 +4720,7 @@ D. blank
 
 Answer: B
 Description: to an extent, SAS automatically converts character to numeric. even though cost is character. due to automatic conversion here we are getting 2000.
+SAS will consider '20000' as a numeric value and thus value of BONUS variable is 200.
 
 Question:
 ----|----10----|----20----|----30
@@ -5119,13 +5122,13 @@ Answer: D
 Description: The CONTENTS procedure allows us to create SAS output that describes either the contents of a SAS library or the descriptor information for an individual SAS data set. the _ALL_ option requests a listing of all of the SAS files in the library.
 
 Question:
-The following SAS program Is submitted:
+The following SAS program is submitted:
 
 data work.sales;
 do year = 1 to 5;
 do month=1 to 12;
 x+1;
-output
+output;
 end;
 end;
 run;
@@ -5244,7 +5247,7 @@ B. Innis and Ellis only
 C. Innis, Ellis, and Liu only
 D. Innis, Jolli, Ellis, and Liu
 Answer: A
-Description: underscore (_) matches just one character in the value for each underscore character. So there must be exactly one character before the "i", and only Liu satisfies this.
+Description: '_i%' means starts with any letter but 2nd letter is i and followed by any letter with their way = LIU
 
 Question:
 Given the SAS data set ONE:
@@ -5278,8 +5281,8 @@ Description: The WEEKDAY function produces an integer that represents the day of
 
 Question:
 The following SAS program is submitted:
-Libname temp 'SAS data library';
 
+Libname temp 'SAS data library';
 data work.new;
 set temp.jobs;
 format newdate mmddyy10.;
@@ -5303,8 +5306,10 @@ Description: The MONTH function produces an integer that represents the month, w
 
 Question:
 The following SAS program is submitted:
+
 proc contents data = sashelp.class varnum;
 quit;
+
 What does the VARNUM option print?
 A. a list of variable names
 B. the total number of variables
@@ -5323,6 +5328,7 @@ C-130	25
 Harrier	75
 A-6	110
 The following SAS program is submitted:
+
 data gt100;
 set airplanes(keep = type mpg load);
 load = mpg * 150;
@@ -5436,9 +5442,11 @@ NUM	CHAR
 3	23
 1	77
 The following SAS program is submitted:
+
 proc print data = one;
 where char = 23;
 run;
+
 What is output?
 A. NUM CHAR
 1 77
@@ -5473,6 +5481,7 @@ Description: Semicolon is missing in line 'total= .10* cost'.
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 array items{3} _temporary_;
 run;
@@ -5487,6 +5496,7 @@ Description:  You use the keyword _TEMPORARY_ where you usually enter your varia
 
 Question:
 The following SAS program is submitted:
+
 data one;
 date = '04juI2005'd;
 format date weekdate.;
@@ -5516,6 +5526,7 @@ Alice	13
 Barbara	13
 Carol	14
 The following SAS program is submitted:
+
 libname perm 'SAS data library';
 data students;
 set perm.students;
@@ -5547,6 +5558,7 @@ Alan 19/2/2004 ACCT
 Rob 22/5/2004 MKTG
 MaryJane 14/3/2004 EDUC
 The following SAS program is submitted:
+
 data emps;
 infile'employee';
 input@1 name$
@@ -5565,6 +5577,7 @@ Description: The DDMMYYw. format writes SAS date values in the form dd/mm/<yy>yy
 
 Question:
 The following SAS program is submitted:
+
 data test;
 infile 'file specification';
 input name $ amount@@;
@@ -5591,6 +5604,7 @@ X	Y	Z
 4	A	82
 4	C	91
 The following SAS program is submitted:
+
 data two;
 set one;
 by x y;
@@ -6243,6 +6257,7 @@ Description: Correct format of libname statement is, LIBNAME < libref> <'physica
 
 Question:
 The following SAS program is submitted:
+
 ods csvall file='c:\test.cvs';
 proc print data=WORK.ONE;
 var Name Score Grade;
@@ -7859,7 +7874,7 @@ D. Months Amount Payment
 48 $5,000 $128.02
 $1,165.03
 Answer: A
-Description: Column totals appear at the end of the report in the same format as the values of the variables, so b is incorrect. Work.Loans is sorted by Month and Amount, so c is incorrect.
+Description: Column totals appear at the end of the report in the same format as the values of the variables, so B is incorrect. Work.Loans is sorted by Month and Amount, so c is incorrect.
 The program sums both Amount and Payment, so d is incorrect.
 
 Question:
@@ -8347,7 +8362,7 @@ Answer: A
 Description: This program creates a summary report, which consolidates into one row all observations from the data set that have a unique combination of values for the variable Style.
 
 Question:
-When you define an order variable,
+When you define an order variable?
 A. the detail rows are ordered according to their formatted values.
 B. you can't create summary reports.
 C. PROC REPORT displays only the first occurrence of each order variable value in a set of rows that have the same value for all order variables.
