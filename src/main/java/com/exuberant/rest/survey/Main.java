@@ -54,10 +54,8 @@ public class Main {
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
         //Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "advanced_sas_questions.json");
         System.err.println("Created: " + path);
-        JsonQuestions jsonQuestions = new JsonQuestions();
-        for (Question question : allQuestions) {
-            jsonQuestions.addQuestion(question);
-        }
+        int version = 13;
+        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version);
         System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
         jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);

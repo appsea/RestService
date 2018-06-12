@@ -6,10 +6,12 @@ package com.exuberant.rest.survey;
 public class QuestionBank {
     private String fileName;
     private int totalQuestions;
+    private int version;
 
-    public QuestionBank(String fileName, int totalQuestions) {
+    public QuestionBank(String fileName, int totalQuestions, int version) {
         this.fileName = fileName;
         this.totalQuestions = totalQuestions;
+        this.version = version;
     }
 
     public String getFileName() {

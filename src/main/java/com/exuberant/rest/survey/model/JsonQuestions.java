@@ -16,7 +16,12 @@ public class JsonQuestions {
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
 
     private List<JsonQuestion> questions = new ArrayList<>();
-    private int version = 12;
+    private int version;
+
+    public JsonQuestions(List<Question> allQuestions, int version) {
+        allQuestions.forEach(q->questions.add(toQuestion(q)));
+        this.version = version;
+    }
 
     public void addQuestion(Question question) {
         questions.add(toQuestion(question));

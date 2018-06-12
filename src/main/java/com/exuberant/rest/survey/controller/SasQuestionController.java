@@ -1,31 +1,42 @@
 package com.exuberant.rest.survey.controller;
 
-import com.exuberant.rest.survey.model.Question;
-import com.exuberant.rest.survey.service.PaperSetter;
+import com.exuberant.rest.survey.model.JsonQuestion;
+import com.exuberant.rest.survey.service.QuestionService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
+import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8808")
 //@PreAuthorize("hasRole('ADMIN')")
 @RequestMapping("/sas")
-public class QuestionController {
+public class SasQuestionController {
 
-    public static final Log log = LogFactory.getLog(QuestionController.class);
+    public static final Log log = LogFactory.getLog(SasQuestionController.class);
 
     @Autowired
-    private PaperSetter paperSetter;
+    private QuestionService questionService;
 
     @CrossOrigin(origins = "http://localhost:8808")
     @RequestMapping("/questions")
-    public Collection<Question> questions() throws Exception {
+    public List<JsonQuestion> questions() throws Exception {
+        return this.questionService.getQuestions();
+    }
+
+    @CrossOrigin(origins = "http://localhost:8808")
+    @RequestMapping("/version")
+    public int version() {
+        return this.questionService.getVersion();
+    }
+
+    /*@CrossOrigin(origins = "http://localhost:8808")
+    @RequestMapping("/questionsOld")
+    public Collection<Question> questionsOld() throws Exception {
         return paperSetter.buildQuestionPaper();
     }
 
@@ -35,6 +46,5 @@ public class QuestionController {
     public Question nextQuestion() throws Exception {
         log.info("Next Question...");
         return paperSetter.pollNextQuestion();
-    }
-
+    }*/
 }

@@ -1,5 +1,6 @@
 package com.exuberant.rest.survey.service;
 
+import com.exuberant.rest.survey.model.JsonQuestion;
 import com.exuberant.rest.survey.model.Option;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionId;
@@ -16,4 +17,7 @@ public interface QuestionService {
 
     boolean isCorrect(QuestionId questionId, Option option);
 
+    List<JsonQuestion> getQuestions();
+
+    int getVersion();
 }

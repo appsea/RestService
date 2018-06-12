@@ -39,21 +39,10 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().exceptionHandling()
-                .and().cors().and().addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
-                .exceptionHandling().authenticationEntryPoint(restAuthenticationEntryPoint)
-                .and().formLogin()
-                .usernameParameter("username").passwordParameter("password")
-                .successHandler(authenticationSuccessHandler())
-                .failureHandler(failureHandler())
-                .and().authorizeRequests()
-                //.antMatchers("/login").permitAll()
-                .antMatchers("/sas/*").hasRole("USER")
-                .and()
-                .logout();
+        http.csrf().disable();
     }
 
-    @Bean
+    /*@Bean
     public TokenAuthenticationFilter tokenAuthenticationFilter() {
         return new TokenAuthenticationFilter();
     }
@@ -67,7 +56,7 @@ public class SecurityConfigurer extends WebSecurityConfigurerAdapter {
     public AuthenticationSuccessHandler authenticationSuccessHandler() {
         return new SuccessfulAuthenticationHandler();
     }
-
+*/
     /*@Bean
     public DelegatingFilterProxy springSecurityFilterChain() {
         return new DelegatingFilterProxy("usernamePasswordAuthenticationFilter");
