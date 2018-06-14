@@ -8369,4 +8369,3 @@ C. PROC REPORT displays only the first occurrence of each order variable value i
 D. all of the above
 Answer: D
 Description: Order variables do order rows according to the formatted values of the order variable, and PROC REPORT suppresses repetitious printing of order values. However, you can't use order variables in a summary report.
-

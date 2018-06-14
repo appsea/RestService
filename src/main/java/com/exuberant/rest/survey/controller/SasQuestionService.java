@@ -4,6 +4,7 @@ import com.exuberant.rest.survey.exam.sas.SasQuestionBanker;
 import com.exuberant.rest.survey.model.*;
 import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.service.QuestionService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -17,13 +18,16 @@ public class SasQuestionService implements QuestionService {
 
     private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1);
 
+    @Autowired
+    private QuestionParser questionParser;
+
     @PostConstruct
     public void init() throws Exception {
         jsonQuestions = this.readQuestion();
     }
 
     private JsonQuestions readQuestion() throws Exception {
-        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(new QuestionParser());
+        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(questionParser);
         List<Question> allQuestions = sasQuestionBanker.getAllQuestions();
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {

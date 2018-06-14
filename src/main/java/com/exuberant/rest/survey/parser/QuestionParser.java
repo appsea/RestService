@@ -4,14 +4,16 @@ import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.core.io.ClassPathResource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -29,16 +31,25 @@ public class QuestionParser {
     private PatternParser patternParser;
     private List<Question> failedQuestions = new ArrayList<>();
 
+    @Autowired
+    private ResourceLoader resourceLoader;
+
     public List<Question> parse(QuestionBank questionBank) throws Exception {
         List<Question> questions = new ArrayList<>();
         String fileName = questionBank.getFileName();
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
-        List<String> lines = null;
+        List<String> lines = new ArrayList<>();
         try {
-            lines = Files.readAllLines(Paths.get(getClass().getClassLoader().getResource(fileName).toURI()));
-        } catch (IOException | URISyntaxException e) {
+            String filePath = "classpath:" + fileName;
+            Resource resource = resourceLoader.getResource(filePath);
+            InputStream is = resource.getInputStream();
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is));
+            while (bufferedReader.ready()) {
+                lines.add(bufferedReader.readLine());
+            }
+        } catch (IOException e) {
             System.err.println(e.getMessage());
-            throw new RuntimeException("Invalid File Path: " + fileName);
+            throw new RuntimeException("Invalid File Path: " + fileName + e.getMessage());
         }
         Question question = null;
         StringBuilder previousOptionLine = new StringBuilder();
