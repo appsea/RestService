@@ -118,6 +118,10 @@ public class QuestionParser {
         return questions;
     }
 
+    public void setResourceLoader(ResourceLoader resourceLoader) {
+        this.resourceLoader = resourceLoader;
+    }
+
     private void validateQuestions(List<Question> questions, int expectedQuestions) throws Exception {
         if (questions.size() != expectedQuestions) {
             System.err.println("Expected Question were " + expectedQuestions + " but was " + questions.size());

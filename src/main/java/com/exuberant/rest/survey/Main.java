@@ -7,6 +7,7 @@ import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.StringUtils;
 
 import java.nio.file.Files;
@@ -32,7 +33,10 @@ public class Main {
     }
 
     private void analyseQuestions() throws Exception {
-        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(new QuestionParser());
+        QuestionParser questionParser = new QuestionParser();
+        ResourceLoader resourceLoader = new LocalResourceLoader();
+        questionParser.setResourceLoader(resourceLoader);
+        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(questionParser);
         List<Question> allQuestions = sasQuestionBanker.getAllQuestions();
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {
@@ -56,7 +60,7 @@ public class Main {
         System.err.println("Created: " + path);
         int version = 13;
         JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version);
-        System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
+        //System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
         jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());

@@ -1,22 +1,22 @@
 package com.exuberant.rest.survey.controller;
 
-import com.exuberant.rest.survey.model.JsonQuestion;
 import com.exuberant.rest.survey.service.FirebaseService;
 import com.exuberant.rest.survey.service.QuestionService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8808")
 //@PreAuthorize("hasRole('ADMIN')")
-@RequestMapping("/sas")
-public class SasQuestionController {
+@RequestMapping("/app")
+public class ApplicationController {
 
-    public static final Log log = LogFactory.getLog(SasQuestionController.class);
+    public static final Log log = LogFactory.getLog(ApplicationController.class);
 
     @Autowired
     private QuestionService questionService;
@@ -24,10 +24,9 @@ public class SasQuestionController {
     @Autowired
     private FirebaseService firebaseService;
 
-    @CrossOrigin(origins = "http://localhost:8808")
-    @RequestMapping("/questions")
-    public List<JsonQuestion> questions() throws Exception {
-        return this.questionService.getQuestions();
+    @RequestMapping("/url")
+    public String questions(@RequestParam String app) throws Exception {
+        return this.firebaseService.getUrl(app);
     }
 
     @CrossOrigin(origins = "http://localhost:8808")
@@ -35,12 +34,6 @@ public class SasQuestionController {
     public String version() {
         return this.firebaseService.version();
     }
-
-    @RequestMapping(path = "/suggestion", method = RequestMethod.POST)
-    public void suggest(@RequestBody JsonQuestion jsonQuestion){
-        this.firebaseService.suggest(jsonQuestion);
-    }
-
 
     /*@CrossOrigin(origins = "http://localhost:8808")
     @RequestMapping("/questionsOld")

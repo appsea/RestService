@@ -4429,3 +4429,93 @@ A. True
 B. False
 Answer: B
 Description: OUTARGS specifies arguments from the argument list that you want the subroutine to update.
+
+Question:
+The following SAS program is submitted:
+
+%let type = RANCH;
+proc sql;
+ create view houses as
+ select *
+ from sasuser.houses
+ where style = "&type";
+quit;
+%let type = CONDO;
+proc print data = houses;
+run;
+
+The report that is produced displays observations whose value of STYLE are all equal to RANCH.
+Which one of the following functions on the WHERE clause resolves the current value of the macro
+variable TYPE?
+A. GET
+B. SYMGET
+C. %SYMGET
+D. &RETRIEVE
+Answer: B
+
+Question:
+The SAS data set SASDATA.SALES has a simple index on the variable DATE and a variable named
+REVENUE with no index.
+In which one of the following SAS programs is the DATE index considered for use?
+A. proc print data = sasdata.sales;
+ by date;
+run;
+B. proc print data = sasdata.sales;
+ where month(date) = 3;
+run;
+C. data march;
+ set sasdata.sales;
+ if '01mar2002'd < date < '31mar2002'd;
+run;
+D. data march;
+ set sasdata.sales;
+ where date < '31mar2002'd or revenue > 50000;
+run;
+Answer: A
+
+Question:
+The following SAS program is submitted:
+%macro mysum(n);
+ %if &n > 1 %then %eval(&n + %mysum(%eval(&n-1)));
+ %else &n;
+%mend;
+%put %mysum(4);
+Which output is written to the log?
+A. 10
+B. 4+3+2+1
+C. 7
+D. A character operand was found in the %EVAL function or %IF condition where a numeric operand is required.
+Answer: A
+
+Question:
+A local permanent data set has the following characteristics:
+1. 80 character variables, length 200, storing 28 bytes of non-repeating characters
+2. 120 numeric variables, length 8, 14 digits
+3. 4000 observations
+
+What is the best way to reduce the storage size of this data set?
+A. Compress the data set with character compression
+B. Reduce length of character variables to 28 bytes
+C. Compress the data set with binary compression
+D. Reduce length of character variables to 6 bytes
+Answer: A
+
+Question:
+The following program is submitted to check the variables Xa, Xb, and Xc in the SASUSER.LOOK data
+set:
+
+data _null_ WORK.BAD_DATA / view=WORK.BAD_DATA ;
+ set SASUSER.LOOK(keep=Xa Xb Xc);
+ length _Check_ $ 10 ;
+ if Xa=. then _check_=trim(_Check_)!!" Xa" ;
+ if Xb=. then _check_=trim(_Check_)!!" Xb" ;
+ if Xc=. then _check_=trim(_Check_)!!" Xc" ;
+ put Xa= Xb= Xc= _check_= ;
+run ;
+
+When is the PUT statement executed?
+A. when the code is submitted
+B. only when the WORK.BAD_DATA view is used
+C. both when the code is submitted and the view is used
+D. never, the use of _null_ in a view is a syntax error
+Answer: B
