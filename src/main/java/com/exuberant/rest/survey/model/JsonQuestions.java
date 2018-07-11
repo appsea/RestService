@@ -1,5 +1,6 @@
 package com.exuberant.rest.survey.model;
 
+import com.exuberant.rest.survey.QuestionBank;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,11 +17,22 @@ public class JsonQuestions {
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
 
     private List<JsonQuestion> questions = new ArrayList<>();
-    private int version;
+    private int questionVersion;
+    private int playStoreVersion;
+    private boolean showAds;
 
-    public JsonQuestions(List<Question> allQuestions, int version) {
-        allQuestions.forEach(q->questions.add(toQuestion(q)));
-        this.version = version;
+    public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean showAds) {
+        allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
+        this.questionVersion = questionVersion;
+        this.playStoreVersion = playStoreVersion;
+        this.showAds = showAds;
+    }
+
+    public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
+        allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
+        this.questionVersion = questionBank.getQuestionVersion();
+        this.playStoreVersion = questionBank.getPlayStoreVersion();
+        this.showAds = questionBank.isShowAd();
     }
 
     public void addQuestion(Question question) {

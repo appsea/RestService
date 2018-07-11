@@ -2,6 +2,7 @@ package com.exuberant.rest.survey.parser;
 
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
+import com.exuberant.rest.survey.model.QuestionWrapper;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +28,6 @@ public class QuestionParser {
 
     public static final Log log = LogFactory.getLog(QuestionParser.class);
     public static final Set<String> ignoredLines = new HashSet<>();
-    private String re = "Description:(?!\\s )";
     private PatternParser patternParser;
     private List<Question> failedQuestions = new ArrayList<>();
 
@@ -35,8 +35,29 @@ public class QuestionParser {
     private ResourceLoader resourceLoader;
 
     public List<Question> parse(QuestionBank questionBank) throws Exception {
+        List<Question> questions = readAllQuestions(questionBank);
+        Set<QuestionWrapper> wrappers = new HashSet<>();
+        for (Question question : questions) {
+            QuestionWrapper newQ = new QuestionWrapper(question);
+            if(!wrappers.contains(newQ)){
+                wrappers.add(newQ);
+            }
+        }
+        questions.clear();
+        int count = 0;
+        for (QuestionWrapper wrapper : wrappers) {
+            Question question = wrapper.getQuestion();
+            question.setNumber(++count);
+            questions.add(question);
+        }
+        System.err.println("TQ: " + wrappers.size());
+        System.err.println("TQ: " + questions.size());
+        return questions;
+    }
+
+    private List<Question> readAllQuestions(QuestionBank questionBank) throws Exception {
         List<Question> questions = new ArrayList<>();
-        String fileName = questionBank.getFileName();
+        String fileName = questionBank.getInputFile();
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
         List<String> lines = new ArrayList<>();
         try {

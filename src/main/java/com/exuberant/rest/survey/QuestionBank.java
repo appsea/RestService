@@ -4,22 +4,26 @@ package com.exuberant.rest.survey;
  * Created by rakesh on 23-Sep-2017.
  */
 public class QuestionBank {
-    private String fileName;
+    private String inputFile;
     private int totalQuestions;
-    private int version;
+    private int questionVersion;
+    private final int playStoreVersion;
+    private final boolean showAd;
 
-    public QuestionBank(String fileName, int totalQuestions, int version) {
-        this.fileName = fileName;
+    public QuestionBank(String inputFile, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd) {
+        this.inputFile = inputFile;
         this.totalQuestions = totalQuestions;
-        this.version = version;
+        this.questionVersion = questionVersion;
+        this.playStoreVersion = playStoreVersion;
+        this.showAd = showAd;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getInputFile() {
+        return inputFile;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setInputFile(String inputFile) {
+        this.inputFile = inputFile;
     }
 
     public int getTotalQuestions() {
@@ -28,5 +32,21 @@ public class QuestionBank {
 
     public void setTotalQuestions(int totalQuestions) {
         this.totalQuestions = totalQuestions;
+    }
+
+    public int getQuestionVersion() {
+        return questionVersion;
+    }
+
+    public void setQuestionVersion(int questionVersion) {
+        this.questionVersion = questionVersion;
+    }
+
+    public int getPlayStoreVersion() {
+        return playStoreVersion;
+    }
+
+    public boolean isShowAd() {
+        return showAd;
     }
 }

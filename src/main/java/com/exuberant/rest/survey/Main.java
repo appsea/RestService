@@ -1,6 +1,7 @@
 package com.exuberant.rest.survey;
 
 import com.exuberant.rest.survey.exam.sas.SasQuestionBanker;
+import com.exuberant.rest.survey.local.JsonQuestionGenerator;
 import com.exuberant.rest.survey.model.JsonQuestions;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
@@ -13,9 +14,7 @@ import org.springframework.util.StringUtils;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by rakesh on 21-Sep-2017.
@@ -26,10 +25,25 @@ public class Main {
         try {
             Main main = new Main();
             //main.startExam();
-            main.analyseQuestions();
+            main.generateQuestions();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    private void generateQuestions() throws Exception {
+        JsonQuestionGenerator jsonQuestionGenerator = new JsonQuestionGenerator();
+        Collection<QuestionBank> banks = buildQuestionBank();
+        for (QuestionBank questionBank : banks) {
+            jsonQuestionGenerator.generateQuestions(questionBank);
+        }
+    }
+
+    private Collection<QuestionBank> buildQuestionBank() {
+        Collection<QuestionBank> bank = new ArrayList<>();
+        bank.add(new QuestionBank("Base SAS Question.txt", 434, 13, 10027, false));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 2, 10001, false));
+        return bank;
     }
 
     private void analyseQuestions() throws Exception {
@@ -58,8 +72,8 @@ public class Main {
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "sas_questions.json");
         //Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "advanced_sas_questions.json");
         System.err.println("Created: " + path);
-        int version = 13;
-        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version);
+        int questionVersion = 13;
+        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, questionVersion, 10000, true);
         //System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
         jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);

@@ -14,7 +14,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
-        patternParsersForFile.put("Main-All-Questions.txt", getMainPatternParser());
+        patternParsersForFile.put("Base SAS Question.txt", getMainPatternParser());
         patternParsersForFile.put("Advance-sas-questions.txt", getMainPatternParser());
     }
 

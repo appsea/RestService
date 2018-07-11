@@ -16,7 +16,7 @@ import java.util.Set;
 @Service
 public class SasQuestionService implements QuestionService {
 
-    private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1);
+    private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1, -1, true);
 
     @Autowired
     private QuestionParser questionParser;
@@ -32,7 +32,7 @@ public class SasQuestionService implements QuestionService {
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {
             QuestionWrapper newQ = new QuestionWrapper(question);
-            if(!wrappers.contains(newQ)){
+            if (!wrappers.contains(newQ)) {
                 wrappers.add(newQ);
             }
         }
@@ -44,7 +44,8 @@ public class SasQuestionService implements QuestionService {
             allQuestions.add(question);
         }
         int version = 13;
-        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version);
+        int playStoreVersion = 10001;
+        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version, playStoreVersion, false);
         return jsonQuestions;
     }
 
@@ -75,6 +76,6 @@ public class SasQuestionService implements QuestionService {
 
     @Override
     public int getVersion() {
-        return this.jsonQuestions.getVersion();
+        return this.jsonQuestions.getQuestionVersion();
     }
 }
