@@ -2,7 +2,7 @@ package com.exuberant.rest.survey.controller;
 
 import com.exuberant.rest.survey.exam.sas.SasQuestionBanker;
 import com.exuberant.rest.survey.model.*;
-import com.exuberant.rest.survey.parser.QuestionParser;
+import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public class SasQuestionService implements QuestionService {
     private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1, -1, true);
 
     @Autowired
-    private QuestionParser questionParser;
+    private GenericQuestionParser genericQuestionParser;
 
     @PostConstruct
     public void init() throws Exception {
@@ -27,7 +27,7 @@ public class SasQuestionService implements QuestionService {
     }
 
     private JsonQuestions readQuestion() throws Exception {
-        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(questionParser);
+        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(genericQuestionParser);
         List<Question> allQuestions = sasQuestionBanker.getAllQuestions();
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {

@@ -22,7 +22,11 @@ public class Options {
     }
 
     public boolean areValid() {
-        return (options.size() == OPTION_COUNT || (options.size() == BOOLEAN_OPTION_COUNT)) && options.stream().filter(option -> option.isCorrect()).count() > 0 && options.stream().filter(option -> StringUtils.isEmpty(option.getTag())).count() == 0;
+        return (options.size() == OPTION_COUNT || (options.size() == BOOLEAN_OPTION_COUNT)) && includesAnswer() && options.stream().filter(option -> StringUtils.isEmpty(option.getTag())).count() == 0;
+    }
+
+    public boolean includesAnswer() {
+        return options.stream().filter(option -> option.isCorrect()).count() > 0;
     }
 
     public List<Option> giveCorrectAnswers() {

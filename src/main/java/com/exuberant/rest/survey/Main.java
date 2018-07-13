@@ -5,7 +5,7 @@ import com.exuberant.rest.survey.local.JsonQuestionGenerator;
 import com.exuberant.rest.survey.model.JsonQuestions;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
-import com.exuberant.rest.survey.parser.QuestionParser;
+import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ResourceLoader;
@@ -24,7 +24,6 @@ public class Main {
     public static void main(String[] args) {
         try {
             Main main = new Main();
-            //main.startExam();
             main.generateQuestions();
         } catch (Exception e) {
             e.printStackTrace();
@@ -47,10 +46,10 @@ public class Main {
     }
 
     private void analyseQuestions() throws Exception {
-        QuestionParser questionParser = new QuestionParser();
         ResourceLoader resourceLoader = new LocalResourceLoader();
-        questionParser.setResourceLoader(resourceLoader);
-        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(questionParser);
+        GenericQuestionParser genericQuestionParser = new GenericQuestionParser(resourceLoader);
+        genericQuestionParser.setResourceLoader(resourceLoader);
+        SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(genericQuestionParser);
         List<Question> allQuestions = sasQuestionBanker.getAllQuestions();
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {
@@ -81,7 +80,7 @@ public class Main {
     }
 
     private void startExam() throws Exception {
-        Examiner examiner = new Examiner(new RandomPaperSetter(new SasQuestionBanker(new QuestionParser())));
+        Examiner examiner = new Examiner(new RandomPaperSetter(new SasQuestionBanker(new GenericQuestionParser(new LocalResourceLoader()))));
         examiner.beginExam();
     }
 }

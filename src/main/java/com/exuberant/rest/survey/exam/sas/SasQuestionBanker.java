@@ -3,7 +3,7 @@ package com.exuberant.rest.survey.exam.sas;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.exam.question.QuestionBanker;
 import com.exuberant.rest.survey.model.Question;
-import com.exuberant.rest.survey.parser.QuestionParser;
+import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,11 +15,11 @@ import java.util.List;
  */
 @Service
 public class SasQuestionBanker implements QuestionBanker {
-    private final QuestionParser questionParser;
+    private final GenericQuestionParser genericQuestionParser;
     private final List<Question> allQuestions;
 
-    public SasQuestionBanker(QuestionParser questionParser) throws Exception {
-        this.questionParser = questionParser;
+    public SasQuestionBanker(GenericQuestionParser genericQuestionParser) throws Exception {
+        this.genericQuestionParser = genericQuestionParser;
         allQuestions = readAllQuestions();
     }
 
@@ -27,7 +27,7 @@ public class SasQuestionBanker implements QuestionBanker {
         Collection<QuestionBank> bank = buildQuestionBank();
         List<Question> uniqueQuestions = new ArrayList<>();
         for (QuestionBank questionBank : bank) {
-            List<Question> questions = questionParser.parse(questionBank);
+            List<Question> questions = genericQuestionParser.parse(questionBank);
             uniqueQuestions.addAll(questions);
         }
         return uniqueQuestions;

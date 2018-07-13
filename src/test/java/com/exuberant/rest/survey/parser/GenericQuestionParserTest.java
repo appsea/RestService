@@ -1,5 +1,6 @@
 package com.exuberant.rest.survey.parser;
 
+import com.exuberant.rest.survey.LocalResourceLoader;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
 import org.junit.Before;
@@ -7,9 +8,9 @@ import org.junit.Test;
 
 import java.util.List;
 
-public class QuestionParserTest {
+public class GenericQuestionParserTest {
 
-    private QuestionParser questionParser = new QuestionParser();
+    private GenericQuestionParser genericQuestionParser = new GenericQuestionParser(new LocalResourceLoader());
 
     @Before
     public void setup(){
@@ -21,7 +22,7 @@ public class QuestionParserTest {
         String fileName = "first.txt";
         QuestionBank bank = new QuestionBank(fileName, 1, 13, 10001, false);
         PatternParserFactory.addPatternParser(fileName, PatternParserFactory.getMainPatternParser());
-        List<Question> questions = questionParser.parse(bank);
+        List<Question> questions = genericQuestionParser.parse(bank);
         System.err.println(questions.size());
     }
 

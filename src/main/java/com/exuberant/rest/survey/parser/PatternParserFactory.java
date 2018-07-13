@@ -3,19 +3,22 @@ package com.exuberant.rest.survey.parser;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.exuberant.rest.util.Constants.ADVANCE_SAS_QUESTIONS_FILE_NAME;
+import static com.exuberant.rest.util.Constants.BASE_SAS_QUESTION_FILE_NAME;
+
 public class PatternParserFactory {
 
     private static Map<String, PatternParser> patternParsersForFile = new HashMap<>();
 
     static {
-        patternParsersForFile.put("Q1-A00-211qa204-20170130-17520396.txt", getFirstPatternParser());
+        /*patternParsersForFile.put("Q1-A00-211qa204-20170130-17520396.txt", getFirstPatternParser());
         patternParsersForFile.put("Q2-1A00-201-Q&A-CertMagic-20170130-175206262.txt", getSecondPatternParser());
         patternParsersForFile.put("Q3-A00-201-Fx-20170130-175207599.txt", getThirdPatternParser());
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
-        patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());
-        patternParsersForFile.put("Base SAS Question.txt", getMainPatternParser());
-        patternParsersForFile.put("Advance-sas-questions.txt", getMainPatternParser());
+        patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
+        patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
+        patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
     }
 
     public static PatternParser getPatternParser(String fileName) {
