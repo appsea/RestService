@@ -6,6 +6,8 @@ import com.exuberant.rest.survey.model.JsonQuestions;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.parser.QuestionParser;
+import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
+import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.nio.file.Files;
@@ -30,8 +32,10 @@ public class JsonQuestionGenerator {
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
         LocalResourceLoader localResourceLoader = new LocalResourceLoader();
-        questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, new GenericQuestionParser(localResourceLoader));
-        questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, new GenericQuestionParser(localResourceLoader));
+        QuestionValidator generalQuestionValidator = new GeneralQuestionValidator();
+        GenericQuestionParser genericQuestionParser = new GenericQuestionParser(localResourceLoader, generalQuestionValidator);
+        questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
     }
 
     public void generateQuestions(QuestionBank questionBank) throws Exception {

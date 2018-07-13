@@ -3,6 +3,7 @@ package com.exuberant.rest.survey.parser;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
+import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,10 +33,12 @@ public class GenericQuestionParser implements QuestionParser {
     private List<Question> failedQuestions = new ArrayList<>();
 
     private ResourceLoader resourceLoader;
+    private QuestionValidator questionValidator;
 
     @Autowired
-    public GenericQuestionParser(ResourceLoader resourceLoader) {
+    public GenericQuestionParser(ResourceLoader resourceLoader, QuestionValidator questionValidator) {
         this.resourceLoader = resourceLoader;
+        this.questionValidator = questionValidator;
     }
 
     @Override
@@ -85,10 +88,10 @@ public class GenericQuestionParser implements QuestionParser {
             try {
                 if (!patternParser.ignoreLine(line) || patternParser.isNewQuestion(line)) {
                     if (patternParser.isNewQuestion(line)) {
-                        if (question != null && question.isComplete()) {
+                        if (question != null && questionValidator.isComplete(question)) {
                             questions.add(question);
                             question = null;
-                        } else if (question != null && !question.isComplete()) {
+                        } else if (question != null && !questionValidator.isComplete(question)) {
                             System.err.println("Incomplete: " + question.getOptions().size() + (question.getOptions().giveCorrectAnswers()) + " que: " + question);
                         }
                         String questionNumber = patternParser.extractQuestionNumber(line);
@@ -135,7 +138,7 @@ public class GenericQuestionParser implements QuestionParser {
                 }
             }
         }
-        if (question != null && question.isComplete()) {
+        if (question != null && questionValidator.isComplete(question)) {
             questions.add(question);
         } else {
             System.err.println("Last Question Not Added....");

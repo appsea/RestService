@@ -6,6 +6,8 @@ import com.exuberant.rest.survey.model.JsonQuestions;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.GenericQuestionParser;
+import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
+import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ResourceLoader;
@@ -47,7 +49,8 @@ public class Main {
 
     private void analyseQuestions() throws Exception {
         ResourceLoader resourceLoader = new LocalResourceLoader();
-        GenericQuestionParser genericQuestionParser = new GenericQuestionParser(resourceLoader);
+        QuestionValidator generalQuestionValidator = new GeneralQuestionValidator();
+        GenericQuestionParser genericQuestionParser = new GenericQuestionParser(resourceLoader, generalQuestionValidator);
         genericQuestionParser.setResourceLoader(resourceLoader);
         SasQuestionBanker sasQuestionBanker = new SasQuestionBanker(genericQuestionParser);
         List<Question> allQuestions = sasQuestionBanker.getAllQuestions();
@@ -80,7 +83,7 @@ public class Main {
     }
 
     private void startExam() throws Exception {
-        Examiner examiner = new Examiner(new RandomPaperSetter(new SasQuestionBanker(new GenericQuestionParser(new LocalResourceLoader()))));
+        Examiner examiner = new Examiner(new RandomPaperSetter(new SasQuestionBanker(new GenericQuestionParser(new LocalResourceLoader(), new GeneralQuestionValidator()))));
         examiner.beginExam();
     }
 }

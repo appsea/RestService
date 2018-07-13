@@ -3,6 +3,7 @@ package com.exuberant.rest.survey.parser;
 import com.exuberant.rest.survey.LocalResourceLoader;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
+import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 public class GenericQuestionParserTest {
 
-    private GenericQuestionParser genericQuestionParser = new GenericQuestionParser(new LocalResourceLoader());
+    private GenericQuestionParser genericQuestionParser = new GenericQuestionParser(new LocalResourceLoader(), new GeneralQuestionValidator());
 
     @Before
     public void setup(){
