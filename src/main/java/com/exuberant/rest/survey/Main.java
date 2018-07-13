@@ -9,10 +9,12 @@ import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.StringUtils;
 
+import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -25,8 +27,31 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            Main main = new Main();
-            main.generateQuestions();
+            ObjectMapper objectMapper = new ObjectMapper();
+            List<TetQuestion> questions = objectMapper.readValue(new File("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\tet.json"), new TypeReference<List<TetQuestion>>() {});
+            System.err.println("questions.size(): " + questions.size());
+            String content = "";
+            for (TetQuestion question : questions) {
+                content+= "\nQuestion:"+"\n";
+                content+= question.getQuestion1()+"?\n";
+                content+= "A. " + question.getOption1()+"\n";
+                content+= "B. " + question.getOption2()+"\n";
+                content+= "C. " + question.getOption3()+"\n";
+                if(question.getAnswer().equals(question.getOption1())){
+                    content+= "Answer: A\n";
+                }else if(question.getAnswer().equals(question.getOption2())){
+                    content+= "Answer: B\n";
+                }else if(question.getAnswer().equals(question.getOption3())){
+                    content+= "Answer: C\n";
+                }else{
+                    content+= "Invalid\n";
+                }
+                content+= "Description: \n";
+            }
+            Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "tet.txt");
+            Files.write(path, content.getBytes());
+            /*Main main = new Main();
+            main.generateQuestions();*/
         } catch (Exception e) {
             e.printStackTrace();
         }
