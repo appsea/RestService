@@ -34,6 +34,7 @@ public class JsonQuestionGenerator {
         LocalResourceLoader localResourceLoader = new LocalResourceLoader();
         QuestionValidator generalQuestionValidator = new GeneralQuestionValidator();
         GenericQuestionParser genericQuestionParser = new GenericQuestionParser(localResourceLoader, generalQuestionValidator);
+        questionParsersForFile.put("Categories Base SAS.txt", genericQuestionParser);
         questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
     }

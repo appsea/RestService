@@ -19,20 +19,20 @@ public class JsonQuestions {
     private List<JsonQuestion> questions = new ArrayList<>();
     private int questionVersion;
     private int playStoreVersion;
-    private boolean showAds;
+    private boolean ads;
 
-    public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean showAds) {
+    public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads) {
         allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
-        this.showAds = showAds;
+        this.ads = ads;
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
         allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
         this.questionVersion = questionBank.getQuestionVersion();
         this.playStoreVersion = questionBank.getPlayStoreVersion();
-        this.showAds = questionBank.isShowAd();
+        this.ads = questionBank.isShowAd();
     }
 
     public void addQuestion(Question question) {

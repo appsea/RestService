@@ -27,31 +27,8 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            List<TetQuestion> questions = objectMapper.readValue(new File("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\tet.json"), new TypeReference<List<TetQuestion>>() {});
-            System.err.println("questions.size(): " + questions.size());
-            String content = "";
-            for (TetQuestion question : questions) {
-                content+= "\nQuestion:"+"\n";
-                content+= question.getQuestion1()+"?\n";
-                content+= "A. " + question.getOption1()+"\n";
-                content+= "B. " + question.getOption2()+"\n";
-                content+= "C. " + question.getOption3()+"\n";
-                if(question.getAnswer().equals(question.getOption1())){
-                    content+= "Answer: A\n";
-                }else if(question.getAnswer().equals(question.getOption2())){
-                    content+= "Answer: B\n";
-                }else if(question.getAnswer().equals(question.getOption3())){
-                    content+= "Answer: C\n";
-                }else{
-                    content+= "Invalid\n";
-                }
-                content+= "Description: \n";
-            }
-            Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "tet.txt");
-            Files.write(path, content.getBytes());
-            /*Main main = new Main();
-            main.generateQuestions();*/
+            Main main = new Main();
+            main.generateQuestions();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -67,8 +44,9 @@ public class Main {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank("Base SAS Question.txt", 434, 13, 10027, false));
-        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 2, 10001, false));
+        bank.add(new QuestionBank("Categories Base SAS.txt", 434, 13, 10001, true));
+        bank.add(new QuestionBank("Base SAS Question.txt", 434, 2, 10040, true));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 2, 10014, true));
         return bank;
     }
 

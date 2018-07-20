@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Created by rakesh on 22-Sep-2017.
@@ -44,27 +45,26 @@ public class GenericQuestionParser implements QuestionParser {
     @Override
     public List<Question> parse(QuestionBank questionBank) throws Exception {
         List<Question> questions = readAllQuestions(questionBank);
-        Set<QuestionWrapper> wrappers = new HashSet<>();
+        /*Uncomment to find duplicate questions*/
+        /*Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : questions) {
             QuestionWrapper newQ = new QuestionWrapper(question);
             if(!wrappers.contains(newQ)){
                 wrappers.add(newQ);
             }
         }
-        questions.clear();
+        questions.clear();*/
         int count = 0;
-        for (QuestionWrapper wrapper : wrappers) {
-            Question question = wrapper.getQuestion();
+        for (Question question : questions) {
             question.setNumber(++count);
-            questions.add(question);
+            //questions.add(question);
         }
-        System.err.println("TQ: " + wrappers.size());
         System.err.println("TQ: " + questions.size());
         return questions;
     }
 
     private List<Question> readAllQuestions(QuestionBank questionBank) throws Exception {
-        List<Question> questions = new ArrayList<>();
+        List<Question> questions = new CopyOnWriteArrayList<>();
         String fileName = questionBank.getInputFile();
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
         List<String> lines = new ArrayList<>();
