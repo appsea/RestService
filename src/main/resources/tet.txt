@@ -1,6 +1,6 @@
 
 Question:
-Verbal guidance is least effective in teaching?
+Verbal guidance is least effective when it comes to ______?
 A. feelings
 B. thinking
 C. skills
@@ -8,7 +8,7 @@ Answer: C
 Description: 
 
 Question:
-Teaching-Learning process fundamentally completed in?
+Teaching-Learning process fundamentally completed in ______?
 A. Home
 B. School
 C. Class-room
@@ -26,8 +26,8 @@ Description:
 Question:
 Which one is non luminous?
 A. Moon
-B. star
-C. sun
+B. Star
+C. Sun
 Answer: A
 Description: 
 
