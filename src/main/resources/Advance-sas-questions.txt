@@ -165,6 +165,7 @@ Answer: D
 
 Question:
 Given the SAS data set SAUSER.HIGWAY:
+
 STEERING    SEATBELT    SPEED   STATUS      COUNT
 absent      no          0-29    serious     31
 absent      no          0-29    not         1419
@@ -186,6 +187,7 @@ run;
 %end;
 %mend;
 %highway
+
 How many reports are produced?
 A. 2
 B. 6
@@ -401,6 +403,7 @@ Answer: B
 
 Question:
 Given the SAS data sets ONE and TWO:
+
 ONE
 ID               NAME
 112             Smith
@@ -444,9 +447,11 @@ Answer: D
 
 Question:
 The following SAS program is submitted:
+
 %let first=yourname;
 %lest last=first
 %put &&last;
+
 What is written to the SAS log?
 A. First
 B. &yourname
@@ -456,8 +461,10 @@ Answer: D
 
 Question:
 The following SAS program is submitted:
+
 proc contents data = testdata.one;
 run;
+
 Which SQL procedure program produces similar information about the column attributes of the dataset TESTDATA.ONE?
 A. proc sql;
 Contents table testdata.one;
@@ -475,9 +482,11 @@ Answer: B
 
 Question:
 The following SAS program is submitted:
+
 data temp;
 array points{2,3} (10,15,20,25,30,35);
 run;
+
 What impact does the ARRAY statement have in the Program Data Vector(PDV)?
 A. No variable are created in the PDV
 B. The variables named POINTS10, POINTS15, POINTS20,POINTS25,POINTS30,
@@ -490,12 +499,14 @@ Answer: C
 
 Question:
 The following SAS program is submitted:
+
 %let a =cat;
 %macro animal(a=frog);
 %let a = bird;
 %mend;
 %animal(a=ping);
 %put a is &a;
+
 What is written to the SAS log?
 A. a is bird
 B. a is frog
@@ -511,7 +522,7 @@ NUM VAR
 1 A
 2 B
 3 C
-SAS Institute A00-212: Practice Exam
+
 Which SQL procedure program deletes the data set ONE?
 A. proc sql;
 Drop table one;
@@ -529,6 +540,7 @@ Answer: A
 
 Question:
 The following SAS program is submitted:
+
 %macro location;
 data _null_;
 call symput ('dept','sales');
@@ -538,6 +550,7 @@ run;
 %mend;
 %let company = ABC;
 %location;
+
 Which macro variables are written to the SAS log?
 A. COMPANY and DEPT only
 B. COMPANY,COUNTRY and DEPT
@@ -564,17 +577,21 @@ Lauren MATH1 Smith MATH2
 Patel MATH1 Farmer MATH2
 Chang MATH1 Patel MATH2
 Chang MATH3 Hiller MATH2
+
 The following SAS program is submitted:
+
 Proc sql;
 Select name from CLASS1
 <insert SQL set operator here>
 select name from CLASS;
 quit;
+
 The following output is desired
 NAME
 Chang
 Chang
 Lauren
+
 Which SQL set operator completes the program and generates the desired output?
 A. UNION ALL
 B. EXCEPT ALL
@@ -584,9 +601,11 @@ Answer: B
 
 Question:
 The following SAS program is submitted:
+
 data new (bufnp=4);
 set old(bufno=4);
 run;
+
 Why are the BUFNO options used?
 A. To reduce the number I/O operations
 B. To reduce network traffic
@@ -600,6 +619,7 @@ options reuse=YES;
 data sasuser RealEstate(compress=CHAR);
 set sasuser houses;
 run;
+
 What is the effect of the REUSE=YES SAS system option?
 A. It tracks and recycles free space
 B. It allows a permanently stored SAS data set to be replaced
@@ -645,6 +665,7 @@ Answer: C
 
 Question:
 The following SAS program is submitted:
+
 %macro location;
 data _null_;
 call symput ('dept','sales');
@@ -654,6 +675,7 @@ run;
 %mend;
 %let company = ABC;
 %location;
+
 Which macro variables are written to the SAS log?
 A. COMPANY and COUNTRY only
 B. COMPANY Only
@@ -664,6 +686,7 @@ Answer: C
 
 Question:
 The following SAS program is submitted:
+
 data temp;
 set sasuser.history(kep=date);
 format date qtr
@@ -674,12 +697,14 @@ if last.date;
 run;
 proc print data=temp;
 run
+
 SASUSER.HISTORY is sorted by the SAS date variable DATE.
 The following output is required:
 Date Total
 1 13
 3 15
 4 25
+
 Which By statement completes the data step and successfully generates the required output?
 A. by groupformat date;
 B. by formateed date;
@@ -689,8 +714,7 @@ Answer: A
 
 
 Question:
-Which statement(s) in the DATASETS procedure alter(s) the name of a SAS data set
-stored in a SAS data library?
+Which statement(s) in the DATASETS procedure alter(s) the name of a SAS data set stored in a SAS data library?
 A. MODIFY and CHANGE statements
 B. RENAME statement only
 C. CHANGE statement only
@@ -701,25 +725,26 @@ Description: The CHANGE Statement Renames one or more SAS files in the same SAS 
 Question:
 Given has SAS dataset ONE:
 ONE
-NAME     SALARY
-Hans         200
-Maria        205
-Jose          310
-Ariel          523
+NAME    SALARY
+Hans    200
+Maria   205
+Jose    310
+Ariel   523
 
 The following SAS program is submitted:
-
-SALARY       BONUS
-200                   20
-205                   20.5
-310                   31
-523                   52.3
 
 Proc sql;
 <insert SQL clause here>
 from one;
 quit;
+
 The following output is desired:
+SALARY      BONUS
+200         20
+205         20.5
+310         31
+523         52.3
+
 Which SQL procedure clause completes the program and generates the desired output?
 A. Select salary, salary*.10 var=BONUS
 B. Select salary, salary*.10 label='BONUS'
@@ -740,7 +765,6 @@ C. An ERROR message is written to the SAS log because the program is incomplete
 D. It uses the WORK.TEMPDATA SAS data set as input to create the format
 Answer: D
 
-
 Question:
 Given the non-indexed SAS data set TEMP:
 TEMP
@@ -753,27 +777,30 @@ A 56
 R 34
 R 12
 R 78
+
 The following SAS program is submitted:
+
 Proc print data=temp;
 <insert BY statement here>
 run;
-Which BY statement completes the program, creates a listing report that is grouped by X
-and completes without errors?
+
+Which BY statement completes the program, creates a listing report that is grouped by X and completes without errors?
 A. By X notsorted;
 B. By X grouped;
 C. By Descending X;
 D. By X;
 Answer: A
 
-
 Question:
 The following SAS program is submitted:
+
 %micro test(var);
 %let jobs=BLACKSMITH WORDSMITH SWORDSMITH;
 %let type=%index(&jobs,&var);
 %put type = &type;
 %mend;
 %test(SMITH)
+
 What is the value of the macro variable TYPE when the %PUT statement executes?
 A. 3
 B. Null
@@ -781,20 +808,23 @@ C. 6
 D. 0
 Answer: C
 
-
 Question:
 Given the data set SASHELP.CLASS
+
 SASHELP.CLASS
 NAME AGE
 Mary 15
 Philip 16
 Robert 12
 Ronald 15
+
 The following SAS program is submitted
+
 %let value = Philip;
 proc print data =sashelp.class;
 <insert Where statement here>
 run;
+
 Which WHERE statement successfully completes the program and produces a report?
 A. Where upcase(name)="upcase(&value)";
 B. Where upcase(name)="%upcase(&value)";
@@ -804,10 +834,12 @@ Answer: B
 
 Question:
 Following SAS program is submitted:
+
 data temp(<insert option here>);
 infile 'rawdata';
 input x $ y z;
 run;
+
 RAWDATA is a file reference to an external file that is ordered by the variable X.
 Which option specifies how the data in the SAS data set TEMP will be sorted?
 A. ORDEREDBY=X
@@ -827,6 +859,7 @@ Age num;
 Height num;
 Weight num
 );
+
 Which SQL procedure statement generated this output?
 A. DESCRIBE TABLE
 B. LIST TABLE
@@ -837,12 +870,14 @@ Answer: A
 
 Question:
 The following SAS program is submitted:
+
 options mprint;
 %macro test(parm);
 proc &parm data = sashelp.prdsale;
 run;
 %mend;
 %test(print)
+
 What is the result of the MPRINT options?
 A. It has no effect in this example
 B. It writes the original program code inside the marco definition to the SAS log
@@ -862,7 +897,9 @@ JONES 400
 SMITH 800
 JONES 100
 JONES 300
+
 The following SAS program is submitted: proc sql;
+
 select rep, avg(cost) as AVERAGE from one
 group by rep
 having avg(cost) > (select avg(cost) from one);
@@ -895,25 +932,20 @@ Now statement avg(cost) > (select avg(cost) from one) will return Average of SMI
 Question:
 Which one of the following options controls the pagesize of a SAS data set?
 
-A.  SIZE=
-
+A. SIZE=
 B. BUFNO=
-
-C.  BUFSIZE=
-
+C. BUFSIZE=
 D. PAGESIZE=
 
 Answer: C
-
 Description: BUFSIZE= Data Set Option
 Specifies the size of a permanent buffer page for an output SAS data set.
 Valid in: DATA step and PROC steps
 Category: Data Set Control
 Restriction: Use with output data sets only.
 
-
 Question:
- The following SAS program is submitted:
+The following SAS program is submitted:
 
 (insert statement here)
 %let development = ontime;
@@ -922,26 +954,25 @@ proc print data = sasuser.highway;
 title For &;
 title2 This project was completed &development;
 run;
+
 Which one of the following statements completes the above and resolves titlel to For research&amp;development?
 A. %let dept = %str(research&development);
-
 B.  %let dept = %str(research%&development);
-
 C. %let dept = %nrstr(research&development);
-
 D. %let dept = %nrstr(research%&development);
 
 Answer: C
-
 Description: %STR and %NRSTR Functions Mask special characters and mnemonic operators in constant text at macro compilation.
 
 If a special character or mnemonic affects the way the macro processor constructs macro program statements, you must mask the item during macro compilation (or during the compilation of a macro program statement in open code) by using either the %STR or %NRSTR macro quoting functions.
 
 Question:
 The following SAS program is submitted:
+
 proc sort data = sales tagsort;
 by month year;
 run;
+
 Which of the following resource(s) is the TAGSORT option reducing?
 
 A. I/O usage only
@@ -954,6 +985,7 @@ Description: TAGSORT stores only the BY variables and the observation numbers in
 
 Question:
 The following SAS program is submitted:
+
 data one;
 do i = ito 10;
 ptobs = ceil(ranuni(0) * totobs);
@@ -962,18 +994,15 @@ output;
 end;
 stop;
 run;
+
 The SAS data set TEMP contains 2,500,000 observations. Which one of the following represents the possible values for PTOBS?
 
 A.  any integer between 1 and 10
-
 B.  any real number between 0 and 1
-
 C.  any integer between 1 and 2,500,000
-
 D.  any real number between 1 and 2,500,000
 
 Answer: C
-
 Description: RANUNI Function Returns a random variate from a uniform distribution. RANUNI(seed) : seed
 
 Question:
@@ -1018,66 +1047,66 @@ run;
 %houses(sub = SPLIT)
 %houses(dsn = ranch)
 %houses(sub = TWOSTORY)
+
 Which one of the following is the value of the automatic macro variable SYSLAST?
 
 A. work.ranch
 B. work.houses
-C.  WORK.RANCH
+C. WORK.RANCH
 D. WORK.HOUSES
 Answer: D
 
 Description: SYSLAST the name of the most recently created SAS data set, in the form LIBREF.NAME. This value is always stored in ALL capital letters. SYSLAST Automatic Macro Variable Contains the name of the SAS data file created most recently.
 
 Question:
- Given the following SAS data sets ONE and TWO:
+Given the following SAS data sets ONE and TWO:
 ONE
 NUM     COUNTRY
-1             CANADA
-2             FRANCE
-3            GERMANY
-4            BELGIUM
-5            JAPAN
+1       CANADA
+2       FRANCE
+3       GERMANY
+4       BELGIUM
+5       JAPAN
 
 TWO
 NUM     CITY
-3          BERLIN
-5           TOKYO
+3       BERLIN
+5       TOKYO
+
 The following SAS program is submitted:
+
 proc sql;
 select country from one
 where not exists (select * from two where one.num = two.num);
 quit;
+
 Which one of the following reports is generated?
 
 A. COUNTRY
 GERMANY JAPAN
-
 B. COUNTRY
 FRANCE BELGIUM
-
 C. COUNTRY
 CANADA FRANCE BELGIUM
-
 D. COUNTRY
 CANADA FRANCE GERMANY
 Answer: C
-
 Description: EXISTS condition Tests if a subquery returns one or more rows.
 The EXISTS condition is an operator whose right operand is a subquery. The result of an EXISTS condition is true if the subquery resolves to at least one row. The result of a NOT EXISTS condition is true if the subquery evaluates to zero rows.
 
 Question:
 Which one of the following statements is true?
 
-A.  The WHERE statement can be executed conditionally as part of an IF statement.
+A. The WHERE statement can be executed conditionally as part of an IF statement.
 B. The WHERE statement selects observations before they are brought into the PDV.
-C.  The subsetting IF statement works on observations before they are read into the PDV.
-D.  The WHERE and subsetting IF statements can be used interchangeably in all SAS programs.
+C. The subsetting IF statement works on observations before they are read into the PDV.
+D. The WHERE and subsetting IF statements can be used interchangeably in all SAS programs.
 Answer: B
 Description: WHERE Statement Selects observations from SAS data sets that meet a particular condition.
 
 Question:
-
 Which of the clauses in the PROC SQL program below is written incorrectly?
+
 proc sql;
 select style sqm kitchen
 from choice.houses
@@ -1092,6 +1121,7 @@ Description: The SELECT clause in the program is written incorrectly. Columns th
 
 Question:
 How many statements does the program below contain?
+
 proc sql;
 select grapes,oranges,
 grapes + oranges as sumsales
@@ -1137,6 +1167,7 @@ data three;
 merge one two;
 by year;
 run;
+
 Which one of the following is the result of the program execution?
 
 A.  No messages are written to the SAS log.
@@ -1145,13 +1176,13 @@ C.  Data set THREE is created with two variables and 50 observations.
 D.  Data set THREE is created with three variables and 100 observations.
 
 Answer: B
-
-Description: Any variables that have the same name in multiple data sets in the merge statement must also have the same type.
-Otherwise error and warning message would come out!
+Description: Any variables that have the same name in multiple data sets in the merge statement must also have the same type. Otherwise error and warning message would come out!
 
 Question:
 Given the following SAS statement:
+
 %let idcode = Prod567;
+
 Which one of the following statements stores the value 567 in the macro variable CODENUM?
 
 A.  %let codenum = substr(&amp;idcode,length(&amp;idcode)-2);
@@ -1160,30 +1191,26 @@ C.  %let codenum = %substr(&amp;idcode,%length(&amp;idcode)-2);
 D.  %let codenum = %substr(&amp;idcode,%length(&amp;idcode)-3);
 
 Answer: C
-
 Description: Retrieve the substring from the 5 th position, If you use an undeclared variable, it will be assigned a default length of 8 when the SUBSTR function is compiled.
 When you use the SUBSTR function on the left side of an assignment statement, SAS replaces the value of variable with the expression on the right side. SUBSTR replaces length characters starting at the character that you specify in position.
 
-
 Question:
 The following SAS program is submitted:
+
 data new (bufsize = 6144 bufno = 4);
 set old;
 run;
+
 Which one of the following describes the difference between the usage of BUFSIZE= and BUFNO= options?
 
 A. BUFSIZE= specifies the size of the input buffer in bytes; BUFNO= specifies the number of input buffers.
-
 B. BUFSIZE= specifies the size of the output buffer in bytes; BUFNO= specifies the number of output buffers.
-
 C. BUFSIZE= specifies the size of the output buffer in kilobytes; BUFNO= specifies the number of input buffers.
-
 D. BUFSIZE= specifies the size of the output buffer in kilobytes; BUFNO= specifies the number of output buffers.
 Answer: B
 Description: BUFSIZE= Data Set Option
 Specifies the size of a permanent buffer page for an output SAS data set.
 The page size is the amount of data that can be transferred for a single I/O operation to one buffer. The page size is a permanent attribute of the data set and is used when the data set is processed.
-
 
 Question:
 If you specify a CREATE TABLE statement in your PROC SQL step,
@@ -1246,6 +1273,7 @@ Description: To remove duplicate values from PROC SQL output, you specify the DI
 
 Question:
 Which of the clauses in the PROC SQL program below is written incorrectly?
+
 proc sql;
 select style sqfeet bedrooms
 from choice.houses
@@ -1259,6 +1287,7 @@ Description: The SELECT clause in the program is written incorrectly. Columns th
 
 Question:
 How many statements does the program below contain?
+
 proc sql;
 select grapes,oranges,
 grapes + oranges as sumsales
@@ -1314,7 +1343,6 @@ D. Profit as price-cost
 Answer: B
 Description: To create a new column and assign a column alias to the column, you specify the following in the SELECT clause, in the order shown here: an expression, (optionally) the keyword AS, and a column alias. The case that you use when you create the column name is the one that will be displayed in the output.
 
-
 Question:
 What happens if you use a GROUP BY clause in a PROC SQL step without a summary function?
 A. The step does not execute.
@@ -1344,6 +1372,7 @@ Description: If you are joining two tables that contain a same-named column, the
 
 Question:
 Which clause in the following program is incorrect?
+
 proc sql;
 select sex,mean(weight) as avgweight
 from company.employees company.health
@@ -1384,7 +1413,6 @@ D. both a and c
 Answer: D
 Description: To list rows that have no data (that is, missing data), you can use either of these other conditional operators: IS MISSING or IS NULL. The NOT EXISTS operator is used specifically with a subquery, and resolves to true if the subquery returns no values to the outer query.
 
-
 Question:
 You are creating a PROC SQL query that lists all employees who have spent (or overspent) their allotted 120 hours of vacation for the current year. The hours that each employee used are stored in the existing column Spent. Your query defines a new column, Balance, to calculate each employee's balance of vacation hours.
 Which query produces the report that you want?
@@ -1414,6 +1442,7 @@ Description: When a WHERE clause references a new column that was defined in the
 
 Question:
 Consider this PROC SQL query:
+
 proc sql;
 select flightnumber,
 count(*) as Flights,
@@ -1429,7 +1458,6 @@ C. 4
 D. 1
 Answer: C
 Description: To determine how PROC SQL calculates and displays output from summary functions, consider the key factors. This PROC SQL query has a GROUP BY clause, and it does not specify any columns that are outside of summary functions. Therefore, PROC SQL calculates and displays the summary function for each group. There are 7 unique values of FlightNumber, but the HAVING clause specifies only the flights that have an average number of boarded passengers greater than 150. Because 4 of the 7 flight numbers meet this condition, the output will contain 4 rows.
-
 
 Question:
 You are writing a PROC SQL query that displays the names of all library cardholders who work as volunteers for the library, and the number of books that each volunteer currently has checked out. You use one or both of the following tables:
@@ -1475,6 +1503,7 @@ Description: A noncorrelated subquery is a nested query that executes independen
 
 Question:
 Which statement about the following PROC SQL query is false?
+
 proc sql;
 validate
 select name label='Country',
@@ -1493,9 +1522,9 @@ D. After the query is submitted, the SAS log indicates whether the query has val
 Answer: A
 Description: The syntax in this PROC SQL query is valid, so the first statement is false. The query contains a correlated subquery, so the second statement is true. The VALIDATE keyword is used after the PROC SQL statement, so the third statement is true. And the last statement correctly indicates that the VALIDATE keyword causes the SAS log to display a special message if the query syntax is valid, or standard error messages if the syntax is not valid.
 
-
 Question:
 Consider the following PROC SQL query:
+
 proc sql;
 select lastname, firstname,
 total, since
@@ -1517,7 +1546,6 @@ D. all donors whose current year's donation in Charity.Current has not yet been 
 Answer: C
 Description: In this PROC SQL query, the outer query uses the operator NOT EXISTS with a correlated subquery. The outer query selects all rows from Charity.Donors whose names do not appear in Charity.Current. In other words, this PROC SQL query output lists all donors who did not make a contribution in the current year.
 
-
 Question:
 Which statement about data remerging is true?
 A. When PROC SQL remerges data, it combines data from two tables.
@@ -1530,6 +1558,7 @@ Description: The third statement about data remerging is correct.
 Question:
 A public library has several categories of books. Each book in the library is assigned to only one category. The table Library.Inventory contains one row for each book in the library. The Checkouts column indicates the number of times that each book has been checked out.
 You want to display only the categories that have an average circulation (number of checkouts) that is less than 2500. Does the following PROC SQL query produce the results that you want?
+
 proc sql;
 title 'Categories with Average Circulation';
 title2 'Less Than 2500';
@@ -1554,7 +1583,6 @@ D. the keyword ALL is used with the OUTER UNION operator.
 Answer: A
 Description: A Cartesian product is returned when join conditions are not specified in a PROC SQL join. In a Cartesian product, each row from the first table is combined with every row from the second table.
 
-
 Question:
 Given the PROC SQL query and tables shown below, which output is generated?
 STORE1
@@ -1572,41 +1600,39 @@ WK    SALES
 4         $1784.11
 5         $43.00
 
-
 proc sql;
 select *
 from store1,
 store2
 where store1.wk=
 store2.wk;
-A. WK    SALES       WK          SALES
-      1     $515.07        1            $1368.99
-      2    $772.29         2            $1506.23
-      3      $888.88       3            $1200.57
-      4       $1000.01    4            $1784.11
-                                    5            $43.00
+A. WK   SALES       WK      SALES
+    1   $515.07     1       $1368.99
+    2   $772.29     2       $1506.23
+    3   $888.88     3       $1200.57
+    4   $1000.01    4       $1784.11
+    5                       $43.00
+B. WK   SALES       WK      SALES
+    1   $515.07     1       $1368.99
+    2   $772.29     2       $1506.23
+    3   $888.88     3       $1200.57
+    4   $1000.01    4       $1784.11
 
-B. WK    SALES       WK          SALES
-      1     $515.07        1            $1368.99
-      2    $772.29         2            $1506.23
-      3      $888.88       3            $1200.57
-      4       $1000.01    4            $1784.11
+C. WK       SALES
+    1       $515.07
+    2       $772.29
+    3       $888.88
+    4       $1000.01
 
-C.  WK      SALES
-      1         $515.07
-      2         $772.29
-      3         $888.88
-      4         $1000.01
-
-D. WK      SALES
-      1         $515.07
-      2         $772.29
-      3         $888.88
-      4         $1000.01
-      1         $1368.99
-      2         $1506.23
-      3         $1200.57
-      4         $1784.11
+D. WK       SALES
+    1       $515.07
+    2       $772.29
+    3       $888.88
+    4       $1000.01
+    1       $1368.99
+    2       $1506.23
+    3       $1200.57
+    4       $1784.11
 
 Answer: B
 Description: This PROC SQL query is an inner join. It combines the rows from the first table that match rows from the second table, based on the matching criteria specified in the WHERE clause. Columns are not overlaid, so all columns from the referenced tables (including any columns with duplicate names) are displayed. Any unmatched rows from either table are not displayed.
@@ -1625,7 +1651,6 @@ ID         SALARY
 456      80000
 978      55000
 
-
 proc sql;
 select s.*, bonus
 from bonus as b
@@ -1634,36 +1659,39 @@ salary as s
 on b.id=
 s.id;
 
-A. ID         SALARY      BONUS
-   123      70000           5000
-    456      80000          7000
-   978      55000           3500
+A. ID       SALARY  BONUS
+   123      70000   5000
+   456      80000   7000
+   978      55000   3500
 
-B. ID     SALARY      BONUS
-  123       70000         5000
-  456       80000         7000
-  744           .                3500
+B. ID       SALARY  BONUS
+   123      70000   5000
+   456      80000   7000
+   744      .       3500
 
-C. ID     SALARY      BONUS
-  123       70000         5000
-  456       80000         7000
-  744       55000         3500
+C. ID       SALARY  BONUS
+   123      70000   5000
+   456      80000   7000
+   744      55000   3500
 
-D. ID         SALARY      BONUS
-   123      70000           5000
-    456      80000          7000
-   978      55000             .
+D. ID       SALARY      BONUS
+   123      70000       5000
+   456      80000       7000
+   978      55000       .
 Answer: D
 Description: This PROC SQL query is a right outer join, which retrieves all rows that match across tables, based on the join conditions in the ON clause, plus nonmatching rows from the right (second) table.
 
 Question:
 Which PROC SQL query produces the same output as the query shown here?
+
 proc sql;
 select a.*,
 duration
 from groupa as a,
 groupb as b
-where a.obs=b.obs;Note:Assume that the table Groupa contains the columns Obs and Med. Groupb contains the columns Obs and Duration.
+where a.obs=b.obs;
+
+Note:Assume that the table Groupa contains the columns Obs and Med. Groupb contains the columns Obs and Duration.
 A. proc sql;
 select a.obs label='Obs',
 med
@@ -1697,10 +1725,9 @@ G3      Z
 
 TABLE2
 G3     R
-46      BC
-85      FL
-99      BA
-
+46     BC
+85     FL
+99     BA
 
 proc sql;
 select *
@@ -1709,21 +1736,21 @@ left join
 table2
 on table1.g3=
 table2.g3;
-A. G3      Z       G3        R
-    89      FL       .
-    46      UI       46       BC
-    47      BL       .
+A. G3       Z       G3      R
+   89       FL      .
+   46       UI      46      BC
+   47       BL      .
 
-B. G3     Z       G3       R
-    46     FL      46      BC
-       .                 45      FL
-       .                 99      BA
+B. G3       Z       G3      R
+   46       FL      46      BC
+   .                45      FL
+   .                99      BA
 
 C. G3       Z
-     46      UI
+   46       UI
 
-D.  G3       Z       G3     R
-       46     UI      46    BC
+D. G3       Z       G3      R
+   46       UI      46      BC
 
 Answer: A
 Description: This PROC SQL query is a left outer join, which retrieves all rows that match across tables (based on the join conditions in the ON clause), plus nonmatching rows from the left (first) table. No columns are overlaid, so all columns from both tables are displayed.
@@ -1743,16 +1770,7 @@ A. Once defined, an in-line view can be referenced in any PROC SQL query in the 
 B. An in-line view can be assigned a table alias but not a permanent name.
 C. In-line views can be combined with tables in PROC SQL joins.
 D. This PROC SQL query contains an in-line view that uses valid syntax:
-proc sql;
-select name, numvisits
-from (select name, sum(checkin)
-as numvisits
-from facility as f, members as m
-where area='POOL' and
-f.id=m.id
-group by name)
-where numvisits<=10
-order by 1;
+
 Answer: A
 Description: Unlike a table, an in-line view exists only during query execution. Because it is temporary, an in-line view can be referenced only in the query in which it is defined.
 
@@ -1767,17 +1785,17 @@ G3      Z
 
 TABLE2
 G3     R
-46      BC
-85      FL
-99      BA
+46     BC
+85     FL
+99     BA
 
 MERGED
-G3     R       Z
-46     UI      BC
+G3     R        Z
+46     UI       BC
 47     BA
-85               FL
+85              FL
 89     FL
-99               BA
+99              BA
 
 data merged;
 merge table1 table2;
@@ -1822,7 +1840,6 @@ order by 1;
 Answer: C
 Description: In order to generate the same output as the DATA step and PRINT steps, the PROC SQL full outer join must use the COALESCE function with the duplicate columns specified as arguments.
 
-
 Question:
 A PROC SQL inner join can combine
 A. a maximum of 2 tables or in-line views, but multiple joins can be chained together.
@@ -1859,29 +1876,28 @@ D. OUTER UNION
 Answer: D
 Description: By default, when processing a set operation that contains the EXCEPT, INTERSECT, and UNION set operators, PROC SQL makes an extra pass through the data to eliminate duplicate rows. The keyword ALL is used to suppress that additional pass through the tables, allowing duplicate rows to appear in the result set. Because the OUTER UNION set operator displays all rows, the keyword ALL is invalid and cannot be used with OUTER UNION.
 
-
 Question:
 Which PROC SQL step combines the tables Summer and Winter to produce the output displayed below?
 SUMMER
-Month     Temp        Precip
-7                78           .05
-8                85           .04
-9                83           .15
+Month   Temp    Precip
+7       78      .05
+8       85      .04
+9       83      .15
 
 Winter
-Mo      Temp      Precip
-1           29            .15
-2           32            .17
-3           38            .20
-2           32            .17
+Month   Temp    Precip
+1       29      .15
+2       32      .17
+3       38      .20
+2       32      .17
 
-Month      Temp        Precip
-1                29             .15
-2                32             .17
-3                38             .20
-7                78             .05
-8                85             .04
-9                83             .15
+Month   Temp    Precip
+1       29      .15
+2       32      .17
+3       38      .20
+7       78      .05
+8       85      .04
+9       83      .15
 
 A. proc sql;
 select *
@@ -1909,7 +1925,6 @@ select *
 from winter;
 Answer: D
 Description: The output contains all rows that are unique in the combined set of rows from both tables, and the columns have been overlaid by position. This output is generated by a set operation that uses the set operator UNION without keywords.
-
 
 Question:
 Which PROC SQL step combines tables but does not overlay any columns?
@@ -1953,25 +1968,25 @@ Description: The keyword CORRESPONDING (CORR) can be used alone or together with
 Question:
 Which PROC SQL step generates the following output from the tables Dogs and Pets?
 DOGS
-Name                Price
-FIFI                    $101
-GEORGE         $75
-SPARKY          $136
-TRUFFLE        $250
+Name        Price
+FIFI        $101
+GEORGE      $75
+SPARKY      $136
+TRUFFLE     $250
 
 PETS
-Names         Price        Arr
-ANA               $25       9JAN2002
-FIFI                $101     14MAR2002
-GAO              $57       8DEC2001
-GAO              $57       8DEC2001
-SPARKY       $136    16SEP2002
-TRUFFLE     $250     20DEC2002
-ZEUS            $500     8JUN2002
+Names       Price       Arr
+ANA         $25         9JAN2002
+FIFI        $101        14MAR2002
+GAO         $57         8DEC2001
+GAO         $57         8DEC2001
+SPARKY      $136        16SEP2002
+TRUFFLE     $250        20DEC2002
+ZEUS        $500        8JUN2002
 
-NAME       PRICE
-ANA           $25
-GAO          $57
+NAME        PRICE
+ANA         $25
+GAO         $57
 ZEUS        $500
 
 A. proc sql;
@@ -2001,30 +2016,28 @@ from pets;
 Answer: B
 Description: This PROC SQL output includes all rows from the table Pets that do not appear in the table Dogs. No duplicates are displayed. A PROC SQL set operation that contains the set operator EXCEPT without keywords produces these results.
 
-
 Question:
 The PROG1 and PROG2 tables list students who took the PROG1 and PROG2 courses, respectively. Which PROC SQL step gives you the names of the students who took only the PROG1 class?
 
 PROG1
-FNAME      LNAME
-Pete             Henry
-Mary            Johnson
-Alex             Kinsley
-Dori             O'niel
+FNAME       LNAME
+Pete        Henry
+Mary        Johnson
+Alex        Kinsley
+Dori        O'niel
 
 PROG2
-FNAME      LNAME
-Clara           Adams
-Pete             Henry
-Dori             O'niel
-Cindy          Philips
-Mandy        Young
+FNAME       LNAME
+Clara       Adams
+Pete        Henry
+Dori        O'niel
+Cindy       Philips
+Mandy       Young
 
 PROG1 Only
-FNAME      LNAME
-Alex             Kinsley
-Mary            Johnson
-
+FNAME       LNAME
+Alex        Kinsley
+Mary        Johnson
 
 A. proc sql;
 select fname, lname
@@ -2056,29 +2069,29 @@ Description: The set operator EXCEPT returns all the rows in the first table tha
 Question:
 Which PROC SQL step returns the names of all the students who took PROG1, PROG2, or both classes?
 PROG1
-FNAME      LNAME
-Pete             Henry
-Mary            Johnson
-Alex             Kinsley
-Dori             O'niel
+FNAME       LNAME
+Pete        Henry
+Mary        Johnson
+Alex        Kinsley
+Dori        O'niel
 
 PROG2
-FNAME      LNAME
-Clara           Adams
-Pete             Henry
-Dori             O'niel
-Cindy          Philips
-Mandy        Young
+FNAME       LNAME
+Clara       Adams
+Pete        Henry
+Dori        O'niel
+Cindy       Philips
+Mandy       Young
 
 PROG1 PROG2 or BOTH
-FNAME      LNAME
-Alex             Kinsley
-Cindy          Philips
-Clara           Adams
-Dori             O'niel
-Mandy        Young
-Mary            Johnson
-Pete             Henry
+FNAME       LNAME
+Alex        Kinsley
+Cindy       Philips
+Clara       Adams
+Dori        O'niel
+Mandy       Young
+Mary        Johnson
+Pete        Henry
 
 A. proc sql;
 select fname, lname
@@ -2107,29 +2120,28 @@ from prog2;
 Answer: C
 Description: The set operator UNION returns all rows that are unique in the combined set of rows from both tables.
 
-
 Question:
 Which PROC SQL step returns the names of all the students who took both the PROG1 and PROG2 classes?
 
 PROG1
-FNAME      LNAME
-Pete             Henry
-Mary            Johnson
-Alex             Kinsley
-Dori             O'niel
+FNAME       LNAME
+Pete        Henry
+Mary        Johnson
+Alex        Kinsley
+Dori        O'niel
 
 PROG2
-FNAME      LNAME
-Clara           Adams
-Pete             Henry
-Dori             O'niel
-Cindy          Philips
-Mandy        Young
+FNAME       LNAME
+Clara       Adams
+Pete        Henry
+Dori        O'niel
+Cindy       Philips
+Mandy       Young
 
 PROG1 PROG2
-FNAME      LNAME
-Dori             O'niel
-Pete             Henry
+FNAME       LNAME
+Dori        O'niel
+Pete        Henry
 
 
 A. proc sql;
@@ -2164,19 +2176,19 @@ Question:
 Which PROC SQL step generates the same results as the following DATA step?
 
 PROG1
-FNAME      LNAME
-Pete             Henry
-Mary            Johnson
-Alex             Kinsley
-Dori             O'niel
+FNAME       LNAME
+Pete        Henry
+Mary        Johnson
+Alex        Kinsley
+Dori        O'niel
 
 PROG2
-FNAME      LNAME
-Clara           Adams
-Pete             Henry
-Dori             O'niel
-Cindy          Philips
-Mandy        Young
+FNAME       LNAME
+Clara       Adams
+Pete        Henry
+Dori        O'niel
+Cindy       Philips
+Mandy       Young
 
 data allstudents;
 set prog1 prog2;
@@ -2234,8 +2246,6 @@ create table work.newpayroll
 describe sasuser.payrollmaster;
 Answer: B
 Description: The CREATE TABLE statement that includes a LIKE clause copies the column names and attributes from an existing table into a new table. No rows of data are inserted.
-
-
 
 Question:
 Which of the following PROC SQL steps creates a table that contains rows for the level-1 flight attendants only?
@@ -2377,7 +2387,6 @@ describe * from sasuser.payrollmaster;
 Answer: C
 Description: The DESCRIBE TABLE statement lists the column attributes for a specified table.
 
-
 Question:
 Which of the following creates an empty table that contains the two columns FullName and Age?
 A. proc sql;
@@ -2442,7 +2451,6 @@ destination);
 Answer: D
 Description: A composite index is based on two or more columns. In the CREATE INDEX statement, you specify the index name after the keywords CREATE INDEX. You do not include a keyword to specify that this is a composite index. The names of the key columns are specified in parentheses after the table name. The name of a composite index cannot be the same as the name of any columns in the table.
 
-
 Question:
 Which of the following writes a message to the SAS log that shows whether PROC SQL has used an index?
 A. options msglevel=i;
@@ -2506,7 +2514,6 @@ D. It stops SAS from using any index.
 Answer: A
 Description: The IDXWHERE=YES data set option tells SAS to use the best available index, even if the index does not optimize performance.
 
-
 Question:
 Which of the following is false regarding the use of an index?
 A. Equijoins can be performed without internal sorts.
@@ -2515,7 +2522,6 @@ C. Indexes can be created for numeric columns only.
 D. Indexes can enforce uniqueness.
 Answer: C
 Description: Indexes can be created on either character or numeric columns.
-
 
 Question:
 Using an index is not likely to optimize a PROC SQL query in which of the following situations?
@@ -2542,9 +2548,7 @@ B. A view accesses the most current underlying data.
 C. A view follows the same naming conventions as a table.
 D. A view can be used in SAS programs in place of an actual SAS data file.
 Answer: A
-Description: A PROC SQL view accesses the most current underlying data and can be joined with tables or other views. In addition, a PROC SQL view can
-be used in SAS programs in place of an actual SAS data file
-be derived from one or more tables, PROC SQL views, or DATA step views.
+Description: A PROC SQL view accesses the most current underlying data and can be joined with tables or other views. In addition, a PROC SQL view can be used in SAS programs in place of an actual SAS data file be derived from one or more tables, PROC SQL views, or DATA step views.
 
 Question:
 Which of the following statements describes an advantage of using a PROC SQL view?
@@ -2553,13 +2557,8 @@ B. Views prevent users from continually submitting queries to omit unwanted colu
 C. Views hide complex joins or queries from users.
 D. all of the above
 Answer: D
-Description: PROC SQL views are useful because they
-often save space (a view is usually quite small compared with the data that it accesses)
-prevent users from continually submitting queries to omit unwanted columns or rows
-hide complex joins or queries from users.
-In addition, PROC SQL views
-ensure that input data sets are always current, because data is derived from tables at execution time
-can be used to shield sensitive or confidential columns from users while enabling the same users to view other columns in the same table.
+Description: PROC SQL views are useful because they often save space (a view is usually quite small compared with the data that it accesses) prevent users from continually submitting queries to omit unwanted columns or rows hide complex joins or queries from users.
+In addition, PROC SQL views ensure that input data sets are always current, because data is derived from tables at execution time can be used to shield sensitive or confidential columns from users while enabling the same users to view other columns in the same table.
 
 Question:
 Which PROC SQL step creates a view that queries the table Sasuser.Payrollmaster?
@@ -2646,10 +2645,9 @@ B. avoid creating views that are based on tables whose structure might change.
 C. specify a one-level name in the FROM clause if the view resides in the same SAS library as the contributing table(s).
 D. all of the above
 Answer: D
-Description: When you are working with PROC SQL views, it is best to
-avoid using an ORDER BY clause in a view. If you specify an ORDER BY clause, the data must be sorted each time the view is referenced.
-avoid creating views that are based on tables whose structure might change. A view is no longer valid when it references a nonexistent column.
-specify a one-level name in the FROM clause if the view resides in the same SAS data library as the contributing table(s). Using a one-level name in the FROM clause prevents you from having to change the view if you assign a different libref to the SAS data library that contains the view and its contributing table or tables.
+Description: When you are working with PROC SQL views, it is best to avoid using an ORDER BY clause in a view. If you specify an ORDER BY clause, the data must be sorted each time the view is referenced.
+Avoid creating views that are based on tables whose structure might change. A view is no longer valid when it references a nonexistent column.
+Specify a one-level name in the FROM clause if the view resides in the same SAS data library as the contributing table(s). Using a one-level name in the FROM clause prevents you from having to change the view if you assign a different libref to the SAS data library that contains the view and its contributing table or tables.
 
 Question:
 You can update the data underlying PROC SQL view using the INSERT, DELETE, and UPDATE statements under which of the following conditions:
@@ -2659,7 +2657,6 @@ C. The view contains a WHERE clause.
 D. all of the above
 Answer: C
 Description: You can update a PROC SQL view provided that the view does not join or link to another table, the view does not have a subquery, or you try to update a derived column. You can update a view  that contains a WHERE clause. The WHERE clause can be in the UPDATE clause or in the view. You cannot update a view that contains any other clause such as an ORDER BY or a HAVING  clause.
-
 
 Question:
 Which of the following programs drops (deletes) a view?
@@ -2727,7 +2724,6 @@ C. limited to Read-Only access.
 D. all of the above
 Answer: D
 Description: Dictionary tables are created each time they are referenced in a SAS program, updated automatically, and limited to read-only access. Accessing a Dictionary table causes SAS to determine the  current state of the SAS session and return the information that you want.
-
 
 Question:
 Dictionary tables can be accessed
@@ -2846,11 +2842,13 @@ Description: The word scanner recognizes four types of tokens. Expressions are n
 
 Question:
 What are the resulting values for the macro variables that are defined here?
+
 %let month1 = June;
 %let month2 = July;
 %let period1 = &month1&month2;
 %let period2 = May&month1;
 %let period3 = &month2.Aug;
+
 A. month1 Junemonth2 Julyperiod1 June Julyperiod2 May Juneperiod3 July Aug
 B. month1 Junemonth2 Julyperiod1 JuneJulyperiod2 MayJuneperiod3 July.Aug
 C. month1 Junemonth2 Julyperiod1 JuneJulyperiod2 MayJuneperiod3 JulyAug
@@ -3066,6 +3064,7 @@ Description: To include positional parameters in a macro definition, you list th
 
 Question:
 Which of the following correctly references the macro named Printdsn as shown here:
+
 %macro printdsn(dsn,vars);
 %if &vars= %then %do;
 proc print data=&dsn;
@@ -3268,6 +3267,7 @@ Description: In order to create a permanently stored compiled macro, you must sp
 
 Question:
 When you submit the following code, what happens?
+
 %macro prtlast;
 proc print data=&syslast (obs=5);
 title "Listing of &syslast data set";
@@ -3291,6 +3291,7 @@ Description: If you store your macro definitions in external files, you can easi
 
 Question:
 What does the following PROC CATALOG step do?
+
 proc catalog cat=mylib.sasmacr;
 contents;
 quit;
@@ -3438,6 +3439,7 @@ Description: The FILEVAR= option enables you to dynamically change the currently
 
 Question:
 Given the following program, which table correctly shows the corresponding values of the variables Month and Readfile?
+
 data work.revenue;
 do month = 8, 9, 10;
 readfile=compress("c:\data\month"
@@ -3452,27 +3454,28 @@ end;
 end;
 stop;
 run;
-A. When x=        readfile=
-8                     month8.dat
-9                     month9.dat
-10                   month10.dat
-B. When x=		readfile=
-8		c:\data\month8.dat
-9		c:\data\month9.dat
-10		c:\data\month10.dat
+A. When x=      readfile=
+8               month8.dat
+9               month9.dat
+10              month10.dat
+B. When x=      readfile=
+8		        c:\data\month8.dat
+9		        c:\data\month9.dat
+10		        c:\data\month10.dat
 C. When x=		readfile=
-8		c:\data\month 8.dat
-9		c:\data\month 9.dat
-10		c:\data\month10.dat
+8		        c:\data\month 8.dat
+9		        c:\data\month 9.dat
+10		        c:\data\month10.dat
 D. When x=		readfile=
-8		month8
-9		month9
-10		month10
+8		        month8
+9		        month9
+10		        month10
 Answer: B
 Description: The DO statement creates the index variable x and assigns it the values of 8, 9, and 10. The assignment statement assigns the name of a raw data file to Readfile using the current value of x and the PUT function, which concatenates the values of x with the text strings c:\data\month and .dat. The COMPRESS function removes blank spaces from the values of Readfile.
 
 Question:
- If the current date is March 30, 2003, which table correctly shows the corresponding values of the variables y1, y2, y3, and Nextfile?
+If the current date is March 30, 2003, which table correctly shows the corresponding values of the variables y1, y2, y3, and Nextfile?
+
 data work.quarter (drop=monthnum midmon lastmon);
 y3=year(today());
 y2=y3-1;
@@ -3500,14 +3503,14 @@ y2		Y2002.dat
 y3		Y2003.dat
 
 C. When i=		Nextfile=
-y1		c:\data\Y2003.dat
-y2		c:\data\Y2002.dat
-y3		c:\data\Y2001.dat
+y1      		c:\data\Y2003.dat
+y2		        c:\data\Y2002.dat
+y3		        c:\data\Y2001.dat
 
 D. When i=		Nextfile=
-y1		c:\data\Y3.dat
-y2		c:\data\Y2.dat
-y3		c:\data\Y1.dat
+y1		        c:\data\Y3.dat
+y2		        c:\data\Y2.dat
+y3		        c:\data\Y1.dat
 Answer: A
 Description: The TODAY function returns the current date from the system clock as a SAS date value. The year number is then extracted from the current date using the YEAR function. The value of the current year, 2003, is assigned to y3. The year values 2002 and 2001 are assigned to y2 and y1, respectively. The PUT function concatenates the text string c:\data\Y with the year values and the text string .dat.
 
@@ -3537,24 +3540,25 @@ Description: PROC APPEND uses the BASE= and DATA= arguments. BASE=SAS-data-set n
 
 Question:
 What happens when the following program is submitted?
+
 proc append base=staff.marketing
 data=staff.sales force;
 run;
 Data Set Description for Staff.Marketing
-Variable           Type      Length
-LastName       char          12
-FirstName       char          10
-EmpID             char          5
-Office               char           4
-Phone              char         12
+Variable        Type        Length
+LastName        char        12
+FirstName       char        10
+EmpID           char        5
+Office          char        4
+Phone           char        12
 
 Data Set Description for Staff.Sales
-Variable           Type      Length
-LastName       char          20
-FirstName       char          10
-EmpID             char          5
-Office               char           4
-Phone              char         12
+Variable        Type        Length
+LastName        char        20
+FirstName       char        10
+EmpID           char        5
+Office          char        4
+Phone           char        12
 
 A. The length of LastName is converted to 20 in Staff.Marketing.
 B. LastName is dropped from Staff.Marketing.
@@ -3566,19 +3570,20 @@ Description: If a DATA= data set contains variables that are longer than the cor
 
 Question:
 Which program appends Work.April to Work.Y2003?
+
 Data Set Description for Work.Y2003
-Variable                Type      Length
-FlightNum             Num          8
-FirstClass             Num          8
-BusinessClass     Num          8
-Coach                   Num          8
+Variable        Type      Length
+FlightNum       Num          8
+FirstClass      Num          8
+BusinessClass   Num          8
+Coach           Num          8
 
 Data Set Description for Work.April
-Variable                Type      Length
-FlightNum             Char          4
-FirstClass             Num          8
-BusinessClass     Num          8
-Coach                   Num          8
+Variable        Type      Length
+FlightNum       Char        4
+FirstClass      Num         8
+BusinessClass   Num         8
+Coach           Num         8
 
 A. proc append base=work.y2003
 data=work.april;
@@ -3635,18 +3640,19 @@ the variables in the DATA= data set have a different type than the corresponding
 
 Question:
 According to the data set descriptions below, which of the variables that are listed qualify as BY variables for a DATA step match-merge?
-Variable		Type	Length	Description
-Code		Char	5	Department Code
-Totemps		Num	3	Total number of employees
-Region		Char	5	Location of department
-Manager		Num	4	Employee ID number
 
-Variable		Type	Length	Description
-IDnum		Num	5	Employee ID number
-Name		Char	3	Employee Name
-Devision		Char	5	Division Abbreviation
-hiredate		Num	4	Date of hire
-Supervisor	Char	20	Name of supervisor
+Variable    Type	Length  Description
+Code		Char	5	    Department Code
+Totemps		Num	    3	    Total number of employees
+Region		Char	5	    Location of department
+Manager		Num	    4       Employee ID number
+
+Variable    Type	Length	Description
+IDnum		Num	    5	    Employee ID number
+Name		Char	3	    Employee Name
+Devision	Char	5	    Division Abbreviation
+hiredate	Num	    4	    Date of hire
+Supervisor	Char	20	    Name of supervisor
 
 A. Code and IDnum
 B. Manager and Supervisor
@@ -3753,7 +3759,6 @@ C. The value is missing.
 D. The value cannot be determined without seeing the data that is in Sasuser.Summary.
 Answer: A
 Description: The _N_ variable records how many times the DATA step has iterated. In the example, _N_ is used to ensure that the first SET statement executes only one time so the one observation is read from Sasuser.Summary, but the end of file marker is not read. Since the values in the PDV are not reinitialized after each DATA step iteration, the value of CARGOSUM is retained throughout DATA step execution. Therefore, if the value of Cargosum is $1000 in the first iteration, it will be $1000 in each subsequent iteration as well.
-
 
 Question:
 According to the data set shown, what is the value of Totalrev in the PDV at the end of the fourth iteration of the DATA step?
@@ -3897,6 +3902,7 @@ Description: Lookup tables should be stored in a SAS data set when there are too
 
 Question:
 Given the following program, which statement is not true?
+
 data work.lookup1;
 array Targets{1997:1999,12} _temporary_;
 if _n_=1 then do i= 1 to 3;
@@ -3963,6 +3969,7 @@ Description: A data set that is used to create a format with the CNTLIN= option 
 
 Question:
 Given the following code, what option is missing?
+
 proc format;
 value times (?)
 '00:00't-'04:59't = 'Red Eye'
@@ -4454,32 +4461,33 @@ D. &RETRIEVE
 Answer: B
 
 Question:
-The SAS data set SASDATA.SALES has a simple index on the variable DATE and a variable named
-REVENUE with no index.
+The SAS data set SASDATA.SALES has a simple index on the variable DATE and a variable named REVENUE with no index.
 In which one of the following SAS programs is the DATE index considered for use?
-A. proc print data = sasdata.sales;
- by date;
-run;
-B. proc print data = sasdata.sales;
- where month(date) = 3;
-run;
-C. data march;
- set sasdata.sales;
- if '01mar2002'd < date < '31mar2002'd;
-run;
-D. data march;
- set sasdata.sales;
- where date < '31mar2002'd or revenue > 50000;
-run;
+A.  proc print data = sasdata.sales;
+    by date;
+    run;
+B.  proc print data = sasdata.sales;
+    where month(date) = 3;
+    run;
+C.  data march;
+    set sasdata.sales;
+    if '01mar2002'd < date < '31mar2002'd;
+    run;
+D.  data march;
+    set sasdata.sales;
+    where date < '31mar2002'd or revenue > 50000;
+    run;
 Answer: A
 
 Question:
 The following SAS program is submitted:
+
 %macro mysum(n);
- %if &n > 1 %then %eval(&n + %mysum(%eval(&n-1)));
- %else &n;
+%if &n > 1 %then %eval(&n + %mysum(%eval(&n-1)));
+%else &n;
 %mend;
 %put %mysum(4);
+
 Which output is written to the log?
 A. 10
 B. 4+3+2+1
@@ -4505,13 +4513,13 @@ The following program is submitted to check the variables Xa, Xb, and Xc in the 
 set:
 
 data _null_ WORK.BAD_DATA / view=WORK.BAD_DATA ;
- set SASUSER.LOOK(keep=Xa Xb Xc);
- length _Check_ $ 10 ;
- if Xa=. then _check_=trim(_Check_)!!" Xa" ;
- if Xb=. then _check_=trim(_Check_)!!" Xb" ;
- if Xc=. then _check_=trim(_Check_)!!" Xc" ;
- put Xa= Xb= Xc= _check_= ;
-run ;
+set SASUSER.LOOK(keep=Xa Xb Xc);
+length _Check_ $ 10 ;
+if Xa=. then _check_=trim(_Check_)!!" Xa" ;
+if Xb=. then _check_=trim(_Check_)!!" Xb" ;
+if Xc=. then _check_=trim(_Check_)!!" Xc" ;
+put Xa= Xb= Xc= _check_= ;
+run;
 
 When is the PUT statement executed?
 A. when the code is submitted

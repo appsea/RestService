@@ -245,7 +245,7 @@
     },
     {
       "number": "10",
-      "description": "Given the SAS data set SAUSER.HIGWAY:\nSTEERING    SEATBELT    SPEED   STATUS      COUNT\nabsent      no          0-29    serious     31\nabsent      no          0-29    not         1419\nabsent      no          30-49   serious     191\nabsent      no          30-49   not         2004\nabsent      no          50+     serious     216\n\nSASUSER.HIGHWAY\nThe following SAS program is submitted:\n%macro highway;\nproc sql nonprint;\n%let numgrp=6;\nselect distinct status into:group1-:group&numgrp from sasuser.highway;\nquit;\n%do i=1 %to &numgrp;\nproc print data =sasuser.highway;\nwhere status =\"&&group&I\";\nrun;\n%end;\n%mend;\n%highway\nHow many reports are produced?",
+      "description": "Given the SAS data set SAUSER.HIGWAY:\n\nSTEERING    SEATBELT    SPEED   STATUS      COUNT\nabsent      no          0-29    serious     31\nabsent      no          0-29    not         1419\nabsent      no          30-49   serious     191\nabsent      no          30-49   not         2004\nabsent      no          50+     serious     216\n\nSASUSER.HIGHWAY\nThe following SAS program is submitted:\n%macro highway;\nproc sql nonprint;\n%let numgrp=6;\nselect distinct status into:group1-:group&numgrp from sasuser.highway;\nquit;\n%do i=1 %to &numgrp;\nproc print data =sasuser.highway;\nwhere status =\"&&group&I\";\nrun;\n%end;\n%mend;\n%highway\n\nHow many reports are produced?",
       "explanation": "As many as the macro variables are there, we get the datasets",
       "options": [
         {
@@ -569,7 +569,7 @@
     },
     {
       "number": "22",
-      "description": "Given the SAS data sets ONE and TWO:\nONE\nID               NAME\n112             Smith\n243             Wei\n457             Jones\n\nTWO\nID               SALARY\n213             150000\n355             45000\n523             75000\n\nThe following SAS program is submitted:\n\nData combine;\nMerge one two;\nBy id;\nRun;\n\nWhich SQL procedure program procedures the same results?",
+      "description": "Given the SAS data sets ONE and TWO:\n\nONE\nID               NAME\n112             Smith\n243             Wei\n457             Jones\n\nTWO\nID               SALARY\n213             150000\n355             45000\n523             75000\n\nThe following SAS program is submitted:\n\nData combine;\nMerge one two;\nBy id;\nRun;\n\nWhich SQL procedure program procedures the same results?",
       "explanation": "",
       "options": [
         {
@@ -596,7 +596,7 @@
     },
     {
       "number": "23",
-      "description": "The following SAS program is submitted:\n%let first=yourname;\n%lest last=first\n%put &&last;\nWhat is written to the SAS log?",
+      "description": "The following SAS program is submitted:\n\n%let first=yourname;\n%lest last=first\n%put &&last;\n\nWhat is written to the SAS log?",
       "explanation": "",
       "options": [
         {
@@ -623,7 +623,7 @@
     },
     {
       "number": "24",
-      "description": "The following SAS program is submitted:\nproc contents data = testdata.one;\nrun;\nWhich SQL procedure program produces similar information about the column attributes of the dataset TESTDATA.ONE?",
+      "description": "The following SAS program is submitted:\n\nproc contents data = testdata.one;\nrun;\n\nWhich SQL procedure program produces similar information about the column attributes of the dataset TESTDATA.ONE?",
       "explanation": "",
       "options": [
         {
@@ -650,7 +650,7 @@
     },
     {
       "number": "25",
-      "description": "The following SAS program is submitted:\ndata temp;\narray points{2,3} (10,15,20,25,30,35);\nrun;\nWhat impact does the ARRAY statement have in the Program Data Vector(PDV)?",
+      "description": "The following SAS program is submitted:\n\ndata temp;\narray points{2,3} (10,15,20,25,30,35);\nrun;\n\nWhat impact does the ARRAY statement have in the Program Data Vector(PDV)?",
       "explanation": "",
       "options": [
         {
@@ -677,7 +677,7 @@
     },
     {
       "number": "26",
-      "description": "The following SAS program is submitted:\n%let a =cat;\n%macro animal(a=frog);\n%let a = bird;\n%mend;\n%animal(a=ping);\n%put a is &a;\nWhat is written to the SAS log?",
+      "description": "The following SAS program is submitted:\n\n%let a =cat;\n%macro animal(a=frog);\n%let a = bird;\n%mend;\n%animal(a=ping);\n%put a is &a;\n\nWhat is written to the SAS log?",
       "explanation": "",
       "options": [
         {
@@ -704,7 +704,7 @@
     },
     {
       "number": "27",
-      "description": "Given the SAS data set ONE:\nONE\nA Composite Solution With Just One Click - Certification Guaranteed 14\nNUM VAR\n1 A\n2 B\n3 C\nSAS Institute A00-212: Practice Exam\nWhich SQL procedure program deletes the data set ONE?",
+      "description": "Given the SAS data set ONE:\nONE\nA Composite Solution With Just One Click - Certification Guaranteed 14\nNUM VAR\n1 A\n2 B\n3 C\n\nWhich SQL procedure program deletes the data set ONE?",
       "explanation": "",
       "options": [
         {
@@ -731,7 +731,7 @@
     },
     {
       "number": "28",
-      "description": "The following SAS program is submitted:\n%macro location;\ndata _null_;\ncall symput ('dept','sales');\nrun;\n%let country=Germany;\n%put_global_;\n%mend;\n%let company = ABC;\n%location;\nWhich macro variables are written to the SAS log?",
+      "description": "The following SAS program is submitted:\n\n%macro location;\ndata _null_;\ncall symput ('dept','sales');\nrun;\n%let country=Germany;\n%put_global_;\n%mend;\n%let company = ABC;\n%location;\n\nWhich macro variables are written to the SAS log?",
       "explanation": "",
       "options": [
         {
@@ -785,7 +785,7 @@
     },
     {
       "number": "30",
-      "description": "Given the SAS date sets CLASS1 and CLASS2\nCLASS1 CLASS2\nNAME COURSE NAME COURSE\nLauren MATH1 Smith MATH2\nPatel MATH1 Farmer MATH2\nChang MATH1 Patel MATH2\nChang MATH3 Hiller MATH2\nThe following SAS program is submitted:\nProc sql;\nSelect name from CLASS1\n<insert SQL set operator here>\nselect name from CLASS;\nquit;\nThe following output is desired\nNAME\nChang\nChang\nLauren\nWhich SQL set operator completes the program and generates the desired output?",
+      "description": "Given the SAS date sets CLASS1 and CLASS2\nCLASS1 CLASS2\nNAME COURSE NAME COURSE\nLauren MATH1 Smith MATH2\nPatel MATH1 Farmer MATH2\nChang MATH1 Patel MATH2\nChang MATH3 Hiller MATH2\n\nThe following SAS program is submitted:\n\nProc sql;\nSelect name from CLASS1\n<insert SQL set operator here>\nselect name from CLASS;\nquit;\n\nThe following output is desired\nNAME\nChang\nChang\nLauren\n\nWhich SQL set operator completes the program and generates the desired output?",
       "explanation": "",
       "options": [
         {
@@ -812,7 +812,7 @@
     },
     {
       "number": "31",
-      "description": "The following SAS program is submitted:\ndata new (bufnp=4);\nset old(bufno=4);\nrun;\nWhy are the BUFNO options used?",
+      "description": "The following SAS program is submitted:\n\ndata new (bufnp=4);\nset old(bufno=4);\nrun;\n\nWhy are the BUFNO options used?",
       "explanation": "",
       "options": [
         {
@@ -839,7 +839,7 @@
     },
     {
       "number": "32",
-      "description": "The following SAS program is submitted:\noptions reuse=YES;\ndata sasuser RealEstate(compress=CHAR);\nset sasuser houses;\nrun;\nWhat is the effect of the REUSE=YES SAS system option?",
+      "description": "The following SAS program is submitted:\noptions reuse=YES;\ndata sasuser RealEstate(compress=CHAR);\nset sasuser houses;\nrun;\n\nWhat is the effect of the REUSE=YES SAS system option?",
       "explanation": "",
       "options": [
         {
@@ -893,7 +893,7 @@
     },
     {
       "number": "34",
-      "description": "The following SAS program is submitted:\n%macro location;\ndata _null_;\ncall symput ('dept','sales');\nrun;\n%let country=Germany;\n%put_global_;\n%mend;\n%let company = ABC;\n%location;\nWhich macro variables are written to the SAS log?",
+      "description": "The following SAS program is submitted:\n\n%macro location;\ndata _null_;\ncall symput ('dept','sales');\nrun;\n%let country=Germany;\n%put_global_;\n%mend;\n%let company = ABC;\n%location;\n\nWhich macro variables are written to the SAS log?",
       "explanation": "",
       "options": [
         {
@@ -920,7 +920,7 @@
     },
     {
       "number": "35",
-      "description": "The following SAS program is submitted:\ndata temp;\nset sasuser.history(kep=date);\nformat date qtr\n<insert BY statement here>\nif first.date then total=0;\ntotal+1;\nif last.date;\nrun;\nproc print data=temp;\nrun\nSASUSER.HISTORY is sorted by the SAS date variable DATE.\nThe following output is required:\nDate Total\n1 13\n3 15\n4 25\nWhich By statement completes the data step and successfully generates the required output?",
+      "description": "The following SAS program is submitted:\n\ndata temp;\nset sasuser.history(kep=date);\nformat date qtr\n<insert BY statement here>\nif first.date then total=0;\ntotal+1;\nif last.date;\nrun;\nproc print data=temp;\nrun\n\nSASUSER.HISTORY is sorted by the SAS date variable DATE.\nThe following output is required:\nDate Total\n1 13\n3 15\n4 25\n\nWhich By statement completes the data step and successfully generates the required output?",
       "explanation": "",
       "options": [
         {
@@ -947,7 +947,7 @@
     },
     {
       "number": "36",
-      "description": "Which statement(s) in the DATASETS procedure alter(s) the name of a SAS data set\nstored in a SAS data library?",
+      "description": "Which statement(s) in the DATASETS procedure alter(s) the name of a SAS data set stored in a SAS data library?",
       "explanation": "The CHANGE Statement Renames one or more SAS files in the same SAS library.",
       "options": [
         {
@@ -974,7 +974,7 @@
     },
     {
       "number": "37",
-      "description": "Given has SAS dataset ONE:\nONE\nNAME     SALARY\nHans         200\nMaria        205\nJose          310\nAriel          523\n\nThe following SAS program is submitted:\n\nSALARY       BONUS\n200                   20\n205                   20.5\n310                   31\n523                   52.3\n\nProc sql;\n<insert SQL clause here>\nfrom one;\nquit;\nThe following output is desired:\nWhich SQL procedure clause completes the program and generates the desired output?",
+      "description": "Given has SAS dataset ONE:\nONE\nNAME    SALARY\nHans    200\nMaria   205\nJose    310\nAriel   523\n\nThe following SAS program is submitted:\n\nProc sql;\n<insert SQL clause here>\nfrom one;\nquit;\n\nThe following output is desired:\nSALARY      BONUS\n200         20\n205         20.5\n310         31\n523         52.3\n\nWhich SQL procedure clause completes the program and generates the desired output?",
       "explanation": "",
       "options": [
         {
@@ -1028,7 +1028,7 @@
     },
     {
       "number": "39",
-      "description": "Given the non-indexed SAS data set TEMP:\nTEMP\nX Y\n- -\nP 52\nP 45\nA 13\nA 56\nR 34\nR 12\nR 78\nThe following SAS program is submitted:\nProc print data=temp;\n<insert BY statement here>\nrun;\nWhich BY statement completes the program, creates a listing report that is grouped by X\nand completes without errors?",
+      "description": "Given the non-indexed SAS data set TEMP:\nTEMP\nX Y\n- -\nP 52\nP 45\nA 13\nA 56\nR 34\nR 12\nR 78\n\nThe following SAS program is submitted:\n\nProc print data=temp;\n<insert BY statement here>\nrun;\n\nWhich BY statement completes the program, creates a listing report that is grouped by X and completes without errors?",
       "explanation": "",
       "options": [
         {
@@ -1055,7 +1055,7 @@
     },
     {
       "number": "40",
-      "description": "The following SAS program is submitted:\n%micro test(var);\n%let jobs=BLACKSMITH WORDSMITH SWORDSMITH;\n%let type=%index(&jobs,&var);\n%put type = &type;\n%mend;\n%test(SMITH)\nWhat is the value of the macro variable TYPE when the %PUT statement executes?",
+      "description": "The following SAS program is submitted:\n\n%micro test(var);\n%let jobs=BLACKSMITH WORDSMITH SWORDSMITH;\n%let type=%index(&jobs,&var);\n%put type = &type;\n%mend;\n%test(SMITH)\n\nWhat is the value of the macro variable TYPE when the %PUT statement executes?",
       "explanation": "",
       "options": [
         {
@@ -1082,7 +1082,7 @@
     },
     {
       "number": "41",
-      "description": "Given the data set SASHELP.CLASS\nSASHELP.CLASS\nNAME AGE\nMary 15\nPhilip 16\nRobert 12\nRonald 15\nThe following SAS program is submitted\n%let value = Philip;\nproc print data =sashelp.class;\n<insert Where statement here>\nrun;\nWhich WHERE statement successfully completes the program and produces a report?",
+      "description": "Given the data set SASHELP.CLASS\n\nSASHELP.CLASS\nNAME AGE\nMary 15\nPhilip 16\nRobert 12\nRonald 15\n\nThe following SAS program is submitted\n\n%let value = Philip;\nproc print data =sashelp.class;\n<insert Where statement here>\nrun;\n\nWhich WHERE statement successfully completes the program and produces a report?",
       "explanation": "",
       "options": [
         {
@@ -1109,7 +1109,7 @@
     },
     {
       "number": "42",
-      "description": "Following SAS program is submitted:\ndata temp(<insert option here>);\ninfile 'rawdata';\ninput x $ y z;\nrun;\nRAWDATA is a file reference to an external file that is ordered by the variable X.\nWhich option specifies how the data in the SAS data set TEMP will be sorted?",
+      "description": "Following SAS program is submitted:\n\ndata temp(<insert option here>);\ninfile 'rawdata';\ninput x $ y z;\nrun;\n\nRAWDATA is a file reference to an external file that is ordered by the variable X.\nWhich option specifies how the data in the SAS data set TEMP will be sorted?",
       "explanation": "",
       "options": [
         {
@@ -1136,7 +1136,7 @@
     },
     {
       "number": "43",
-      "description": "Given the following partial SAS log:\nNOTE: SQL table SASHELP.CLASS was created line\nCreate table SASHELP.CLASS(bufsize=4096)\n(\nName char(8);\nGender Char(1);\nAge num;\nHeight num;\nWeight num\n);\nWhich SQL procedure statement generated this output?",
+      "description": "Given the following partial SAS log:\nNOTE: SQL table SASHELP.CLASS was created line\nCreate table SASHELP.CLASS(bufsize=4096)\n(\nName char(8);\nGender Char(1);\nAge num;\nHeight num;\nWeight num\n);\n\nWhich SQL procedure statement generated this output?",
       "explanation": "",
       "options": [
         {
@@ -1163,7 +1163,7 @@
     },
     {
       "number": "44",
-      "description": "The following SAS program is submitted:\noptions mprint;\n%macro test(parm);\nproc &parm data = sashelp.prdsale;\nrun;\n%mend;\n%test(print)\nWhat is the result of the MPRINT options?",
+      "description": "The following SAS program is submitted:\n\noptions mprint;\n%macro test(parm);\nproc &parm data = sashelp.prdsale;\nrun;\n%mend;\n%test(print)\n\nWhat is the result of the MPRINT options?",
       "explanation": "In this query\nSMITH 200 + SMITH 400 + SMITH 600 + SMITH 800\n\nAverage for SMITH = 2000/4 = 500\n\nJONES 100 + JONES 100 + JONES 200 + JONES 400 + JONES 100 + JONES 300\nAverage for JONES = 1200/6 = 200\n\nNow query select avg(cost) from one will select the first record which would be 200 (Average of JONES)\nNow statement avg(cost) > (select avg(cost) from one) will return Average of SMITH 500, because it is >200",
       "options": [
         {
@@ -1191,11 +1191,11 @@
     {
       "number": "45",
       "description": "Which one of the following options controls the pagesize of a SAS data set?",
-      "explanation": "BUFSIZE= Data Set Option\nSpecifies the size of a permanent buffer page for an output SAS data set.\nValid in: DATA step and PROC steps\nCategory: Data Set Control\nRestriction: Use with output data sets only.\n",
+      "explanation": "BUFSIZE= Data Set Option\nSpecifies the size of a permanent buffer page for an output SAS data set.\nValid in: DATA step and PROC steps\nCategory: Data Set Control\nRestriction: Use with output data sets only.",
       "options": [
         {
           "tag": "A",
-          "description": "A.  SIZE=",
+          "description": "A. SIZE=",
           "correct": false
         },
         {
@@ -1205,7 +1205,7 @@
         },
         {
           "tag": "C",
-          "description": "C.  BUFSIZE=",
+          "description": "C. BUFSIZE=",
           "correct": true
         },
         {
@@ -1217,7 +1217,7 @@
     },
     {
       "number": "46",
-      "description": "The following SAS program is submitted:\n\n(insert statement here)\n%let development = ontime;\n\nproc print data = sasuser.highway;\ntitle For &;\ntitle2 This project was completed &development;\nrun;\nWhich one of the following statements completes the above and resolves titlel to For research&amp;development?",
+      "description": "The following SAS program is submitted:\n\n(insert statement here)\n%let development = ontime;\n\nproc print data = sasuser.highway;\ntitle For &;\ntitle2 This project was completed &development;\nrun;\n\nWhich one of the following statements completes the above and resolves titlel to For research&amp;development?",
       "explanation": "%STR and %NRSTR Functions Mask special characters and mnemonic operators in constant text at macro compilation.\n\nIf a special character or mnemonic affects the way the macro processor constructs macro program statements, you must mask the item during macro compilation (or during the compilation of a macro program statement in open code) by using either the %STR or %NRSTR macro quoting functions.",
       "options": [
         {
@@ -1244,7 +1244,7 @@
     },
     {
       "number": "47",
-      "description": "The following SAS program is submitted:\nproc sort data = sales tagsort;\nby month year;\nrun;\nWhich of the following resource(s) is the TAGSORT option reducing?",
+      "description": "The following SAS program is submitted:\n\nproc sort data = sales tagsort;\nby month year;\nrun;\n\nWhich of the following resource(s) is the TAGSORT option reducing?",
       "explanation": "TAGSORT stores only the BY variables and the observation numbers in temporary files. The BY variables and the observation numbers are called tags. At the completion of the sorting process, PROC SORT uses the tags to retrieve records from the input data set in sorted order.",
       "options": [
         {
@@ -1271,7 +1271,7 @@
     },
     {
       "number": "48",
-      "description": "The following SAS program is submitted:\ndata one;\ndo i = ito 10;\nptobs = ceil(ranuni(0) * totobs);\nset temp point = ptobs nobs = totobs;\noutput;\nend;\nstop;\nrun;\nThe SAS data set TEMP contains 2,500,000 observations. Which one of the following represents the possible values for PTOBS?",
+      "description": "The following SAS program is submitted:\n\ndata one;\ndo i = ito 10;\nptobs = ceil(ranuni(0) * totobs);\nset temp point = ptobs nobs = totobs;\noutput;\nend;\nstop;\nrun;\n\nThe SAS data set TEMP contains 2,500,000 observations. Which one of the following represents the possible values for PTOBS?",
       "explanation": "RANUNI Function Returns a random variate from a uniform distribution. RANUNI(seed) : seed",
       "options": [
         {
@@ -1325,7 +1325,7 @@
     },
     {
       "number": "50",
-      "description": "The following SAS code is submitted:\n\n%macro houses(dsn = houses,sub = RANCH);\ndata &dsn;\nset sasuser.houses; if style = &sub;\nrun;\n%mend;\n\n%houses(sub = SPLIT)\n%houses(dsn = ranch)\n%houses(sub = TWOSTORY)\nWhich one of the following is the value of the automatic macro variable SYSLAST?",
+      "description": "The following SAS code is submitted:\n\n%macro houses(dsn = houses,sub = RANCH);\ndata &dsn;\nset sasuser.houses; if style = &sub;\nrun;\n%mend;\n\n%houses(sub = SPLIT)\n%houses(dsn = ranch)\n%houses(sub = TWOSTORY)\n\nWhich one of the following is the value of the automatic macro variable SYSLAST?",
       "explanation": "SYSLAST the name of the most recently created SAS data set, in the form LIBREF.NAME. This value is always stored in ALL capital letters. SYSLAST Automatic Macro Variable Contains the name of the SAS data file created most recently.",
       "options": [
         {
@@ -1340,7 +1340,7 @@
         },
         {
           "tag": "C",
-          "description": "C.  WORK.RANCH",
+          "description": "C. WORK.RANCH",
           "correct": false
         },
         {
@@ -1352,7 +1352,7 @@
     },
     {
       "number": "51",
-      "description": "Given the following SAS data sets ONE and TWO:\nONE\nNUM     COUNTRY\n1             CANADA\n2             FRANCE\n3            GERMANY\n4            BELGIUM\n5            JAPAN\n\nTWO\nNUM     CITY\n3          BERLIN\n5           TOKYO\nThe following SAS program is submitted:\nproc sql;\nselect country from one\nwhere not exists (select * from two where one.num = two.num);\nquit;\nWhich one of the following reports is generated?",
+      "description": "Given the following SAS data sets ONE and TWO:\nONE\nNUM     COUNTRY\n1       CANADA\n2       FRANCE\n3       GERMANY\n4       BELGIUM\n5       JAPAN\n\nTWO\nNUM     CITY\n3       BERLIN\n5       TOKYO\n\nThe following SAS program is submitted:\n\nproc sql;\nselect country from one\nwhere not exists (select * from two where one.num = two.num);\nquit;\n\nWhich one of the following reports is generated?",
       "explanation": "EXISTS condition Tests if a subquery returns one or more rows.\nThe EXISTS condition is an operator whose right operand is a subquery. The result of an EXISTS condition is true if the subquery resolves to at least one row. The result of a NOT EXISTS condition is true if the subquery evaluates to zero rows.",
       "options": [
         {
@@ -1384,7 +1384,7 @@
       "options": [
         {
           "tag": "A",
-          "description": "A.  The WHERE statement can be executed conditionally as part of an IF statement.",
+          "description": "A. The WHERE statement can be executed conditionally as part of an IF statement.",
           "correct": false
         },
         {
@@ -1394,19 +1394,19 @@
         },
         {
           "tag": "C",
-          "description": "C.  The subsetting IF statement works on observations before they are read into the PDV.",
+          "description": "C. The subsetting IF statement works on observations before they are read into the PDV.",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D.  The WHERE and subsetting IF statements can be used interchangeably in all SAS programs.",
+          "description": "D. The WHERE and subsetting IF statements can be used interchangeably in all SAS programs.",
           "correct": false
         }
       ]
     },
     {
       "number": "53",
-      "description": "\nWhich of the clauses in the PROC SQL program below is written incorrectly?\nproc sql;\nselect style sqm kitchen\nfrom choice.houses\nwhere sqm ge 300;",
+      "description": "Which of the clauses in the PROC SQL program below is written incorrectly?\n\nproc sql;\nselect style sqm kitchen\nfrom choice.houses\nwhere sqm ge 300;",
       "explanation": "The SELECT clause in the program is written incorrectly. Columns that are listed in the clause must be separated by commas, not just blanks.",
       "options": [
         {
@@ -1433,7 +1433,7 @@
     },
     {
       "number": "54",
-      "description": "How many statements does the program below contain?\nproc sql;\nselect grapes,oranges,\ngrapes + oranges as sumsales\nfrom sales.produce\norder by sumsales;",
+      "description": "How many statements does the program below contain?\n\nproc sql;\nselect grapes,oranges,\ngrapes + oranges as sumsales\nfrom sales.produce\norder by sumsales;",
       "explanation": "There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.",
       "options": [
         {
@@ -1487,8 +1487,8 @@
     },
     {
       "number": "56",
-      "description": "The variable attributes of SAS data sets ONE and TWO are shown below:\nONE\n# Variable Type Len Pos\n2 sales Num 8 8\n1 year Num 8 0\n\nTWO\n# Variable Type Len Pos\n2 budget Num 8 8\n3 sales Char 8 16\n1 year Num 8 0\nData set ONE contains 100 observations. Data set TWO contains 50 observations. Both data sets are sorted by the variable YEAR. The following SAS program is submitted:\ndata three;\nmerge one two;\nby year;\nrun;\nWhich one of the following is the result of the program execution?",
-      "explanation": "Any variables that have the same name in multiple data sets in the merge statement must also have the same type.\nOtherwise error and warning message would come out!",
+      "description": "The variable attributes of SAS data sets ONE and TWO are shown below:\nONE\n# Variable Type Len Pos\n2 sales Num 8 8\n1 year Num 8 0\n\nTWO\n# Variable Type Len Pos\n2 budget Num 8 8\n3 sales Char 8 16\n1 year Num 8 0\nData set ONE contains 100 observations. Data set TWO contains 50 observations. Both data sets are sorted by the variable YEAR. The following SAS program is submitted:\ndata three;\nmerge one two;\nby year;\nrun;\n\nWhich one of the following is the result of the program execution?",
+      "explanation": "Any variables that have the same name in multiple data sets in the merge statement must also have the same type. Otherwise error and warning message would come out!",
       "options": [
         {
           "tag": "A",
@@ -1514,8 +1514,8 @@
     },
     {
       "number": "57",
-      "description": "Given the following SAS statement:\n%let idcode = Prod567;\nWhich one of the following statements stores the value 567 in the macro variable CODENUM?",
-      "explanation": "Retrieve the substring from the 5 th position, If you use an undeclared variable, it will be assigned a default length of 8 when the SUBSTR function is compiled.\nWhen you use the SUBSTR function on the left side of an assignment statement, SAS replaces the value of variable with the expression on the right side. SUBSTR replaces length characters starting at the character that you specify in position.\n",
+      "description": "Given the following SAS statement:\n\n%let idcode = Prod567;\n\nWhich one of the following statements stores the value 567 in the macro variable CODENUM?",
+      "explanation": "Retrieve the substring from the 5 th position, If you use an undeclared variable, it will be assigned a default length of 8 when the SUBSTR function is compiled.\nWhen you use the SUBSTR function on the left side of an assignment statement, SAS replaces the value of variable with the expression on the right side. SUBSTR replaces length characters starting at the character that you specify in position.",
       "options": [
         {
           "tag": "A",
@@ -1541,8 +1541,8 @@
     },
     {
       "number": "58",
-      "description": "The following SAS program is submitted:\ndata new (bufsize = 6144 bufno = 4);\nset old;\nrun;\nWhich one of the following describes the difference between the usage of BUFSIZE= and BUFNO= options?",
-      "explanation": "BUFSIZE= Data Set Option\nSpecifies the size of a permanent buffer page for an output SAS data set.\nThe page size is the amount of data that can be transferred for a single I/O operation to one buffer. The page size is a permanent attribute of the data set and is used when the data set is processed.\n",
+      "description": "The following SAS program is submitted:\n\ndata new (bufsize = 6144 bufno = 4);\nset old;\nrun;\n\nWhich one of the following describes the difference between the usage of BUFSIZE= and BUFNO= options?",
+      "explanation": "BUFSIZE= Data Set Option\nSpecifies the size of a permanent buffer page for an output SAS data set.\nThe page size is the amount of data that can be transferred for a single I/O operation to one buffer. The page size is a permanent attribute of the data set and is used when the data set is processed.",
       "options": [
         {
           "tag": "A",
@@ -1649,7 +1649,7 @@
     },
     {
       "number": "62",
-      "description": "Which of the clauses in the PROC SQL program below is written incorrectly?\nproc sql;\nselect style sqfeet bedrooms\nfrom choice.houses\nwhere sqfeet ge 800;",
+      "description": "Which of the clauses in the PROC SQL program below is written incorrectly?\n\nproc sql;\nselect style sqfeet bedrooms\nfrom choice.houses\nwhere sqfeet ge 800;",
       "explanation": "The SELECT clause in the program is written incorrectly. Columns that are listed in the clause must be separated by commas, not just blanks.",
       "options": [
         {
@@ -1676,7 +1676,7 @@
     },
     {
       "number": "63",
-      "description": "How many statements does the program below contain?\nproc sql;\nselect grapes,oranges,\ngrapes + oranges as sumsales\nfrom sales.produce\norder by sumsales;",
+      "description": "How many statements does the program below contain?\n\nproc sql;\nselect grapes,oranges,\ngrapes + oranges as sumsales\nfrom sales.produce\norder by sumsales;",
       "explanation": "There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.\n",
       "options": [
         {
@@ -1785,7 +1785,7 @@
     {
       "number": "67",
       "description": "Complete the SELECT clause below to create a new column named Profit by subtracting the values of the column Cost from those of the column Price.\nselect fruit,cost,price,\n________________",
-      "explanation": "To create a new column and assign a column alias to the column, you specify the following in the SELECT clause, in the order shown here: an expression, (optionally) the keyword AS, and a column alias. The case that you use when you create the column name is the one that will be displayed in the output.\n",
+      "explanation": "To create a new column and assign a column alias to the column, you specify the following in the SELECT clause, in the order shown here: an expression, (optionally) the keyword AS, and a column alias. The case that you use when you create the column name is the one that will be displayed in the output.",
       "options": [
         {
           "tag": "A",
@@ -1892,7 +1892,7 @@
     },
     {
       "number": "71",
-      "description": "Which clause in the following program is incorrect?\nproc sql;\nselect sex,mean(weight) as avgweight\nfrom company.employees company.health\nwhere employees.id=health.id\ngroup by sex;",
+      "description": "Which clause in the following program is incorrect?\n\nproc sql;\nselect sex,mean(weight) as avgweight\nfrom company.employees company.health\nwhere employees.id=health.id\ngroup by sex;",
       "explanation": "The table names that are specified in the FROM clause must be separated by commas. Note that you can specify columns in the WHERE clause that are not specified in the SELECT clause.",
       "options": [
         {
@@ -1947,7 +1947,7 @@
     {
       "number": "73",
       "description": "Which of the following causes PROC SQL to list rows that have no data in the Address column?",
-      "explanation": "To list rows that have no data (that is, missing data), you can use either of these other conditional operators: IS MISSING or IS NULL. The NOT EXISTS operator is used specifically with a subquery, and resolves to true if the subquery returns no values to the outer query.\n",
+      "explanation": "To list rows that have no data (that is, missing data), you can use either of these other conditional operators: IS MISSING or IS NULL. The NOT EXISTS operator is used specifically with a subquery, and resolves to true if the subquery returns no values to the outer query.",
       "options": [
         {
           "tag": "A",
@@ -2000,8 +2000,8 @@
     },
     {
       "number": "75",
-      "description": "Consider this PROC SQL query:\nproc sql;\nselect flightnumber,\ncount(*) as Flights,\navg(boarded)\nlabel=\"Average Boarded\"\nformat=3.\nfrom sasuser.internationalflights\ngroup by flightnumber\nhaving avg(boarded) > 150;The table Sasuser.Internationalflights contains 201 rows, 7 unique values of FlightNumber, 115 unique values of Boarded, and 4 different flight numbers that have an average value of Boarded that is greater than 150. How many rows of output is generated by the query?",
-      "explanation": "To determine how PROC SQL calculates and displays output from summary functions, consider the key factors. This PROC SQL query has a GROUP BY clause, and it does not specify any columns that are outside of summary functions. Therefore, PROC SQL calculates and displays the summary function for each group. There are 7 unique values of FlightNumber, but the HAVING clause specifies only the flights that have an average number of boarded passengers greater than 150. Because 4 of the 7 flight numbers meet this condition, the output will contain 4 rows.\n",
+      "description": "Consider this PROC SQL query:\n\nproc sql;\nselect flightnumber,\ncount(*) as Flights,\navg(boarded)\nlabel=\"Average Boarded\"\nformat=3.\nfrom sasuser.internationalflights\ngroup by flightnumber\nhaving avg(boarded) > 150;The table Sasuser.Internationalflights contains 201 rows, 7 unique values of FlightNumber, 115 unique values of Boarded, and 4 different flight numbers that have an average value of Boarded that is greater than 150. How many rows of output is generated by the query?",
+      "explanation": "To determine how PROC SQL calculates and displays output from summary functions, consider the key factors. This PROC SQL query has a GROUP BY clause, and it does not specify any columns that are outside of summary functions. Therefore, PROC SQL calculates and displays the summary function for each group. There are 7 unique values of FlightNumber, but the HAVING clause specifies only the flights that have an average number of boarded passengers greater than 150. Because 4 of the 7 flight numbers meet this condition, the output will contain 4 rows.",
       "options": [
         {
           "tag": "A",
@@ -2081,8 +2081,8 @@
     },
     {
       "number": "78",
-      "description": "Which statement about the following PROC SQL query is false?\nproc sql;\nvalidate\nselect name label='Country',\nrate label='Literacy Rate'\nfrom world.literacy\nwhere 'Asia' =\n(select continent\nfrom world.continents\nwhere literacy.name =\ncontinents.country)\norder by 2;",
-      "explanation": "The syntax in this PROC SQL query is valid, so the first statement is false. The query contains a correlated subquery, so the second statement is true. The VALIDATE keyword is used after the PROC SQL statement, so the third statement is true. And the last statement correctly indicates that the VALIDATE keyword causes the SAS log to display a special message if the query syntax is valid, or standard error messages if the syntax is not valid.\n",
+      "description": "Which statement about the following PROC SQL query is false?\n\nproc sql;\nvalidate\nselect name label='Country',\nrate label='Literacy Rate'\nfrom world.literacy\nwhere 'Asia' =\n(select continent\nfrom world.continents\nwhere literacy.name =\ncontinents.country)\norder by 2;",
+      "explanation": "The syntax in this PROC SQL query is valid, so the first statement is false. The query contains a correlated subquery, so the second statement is true. The VALIDATE keyword is used after the PROC SQL statement, so the third statement is true. And the last statement correctly indicates that the VALIDATE keyword causes the SAS log to display a special message if the query syntax is valid, or standard error messages if the syntax is not valid.",
       "options": [
         {
           "tag": "A",
@@ -2108,8 +2108,8 @@
     },
     {
       "number": "79",
-      "description": "Consider the following PROC SQL query:\nproc sql;\nselect lastname, firstname,\ntotal, since\nfrom charity.donors\nwhere not exists\n(select lastname\nfrom charity.current\nwhere donors.lastname =\ncurrent.lastname);\nThe query references two tables:\nCharity.Donors lists name and contact information for all donors who have made contributions since the charity was founded. The table also contains these two columns: Total, which shows the total dollars given by each donor, and Since, which stores the first year in which each donor gave money.\nCharity.Current lists the names of all donors who have made contributions in the current year, and the total dollars each has given this year (YearTotal).\nAssume that the values of LastName are unique in both tables.\nThe output of this query displays",
-      "explanation": "In this PROC SQL query, the outer query uses the operator NOT EXISTS with a correlated subquery. The outer query selects all rows from Charity.Donors whose names do not appear in Charity.Current. In other words, this PROC SQL query output lists all donors who did not make a contribution in the current year.\n",
+      "description": "Consider the following PROC SQL query:\n\nproc sql;\nselect lastname, firstname,\ntotal, since\nfrom charity.donors\nwhere not exists\n(select lastname\nfrom charity.current\nwhere donors.lastname =\ncurrent.lastname);\nThe query references two tables:\nCharity.Donors lists name and contact information for all donors who have made contributions since the charity was founded. The table also contains these two columns: Total, which shows the total dollars given by each donor, and Since, which stores the first year in which each donor gave money.\nCharity.Current lists the names of all donors who have made contributions in the current year, and the total dollars each has given this year (YearTotal).\nAssume that the values of LastName are unique in both tables.\nThe output of this query displays",
+      "explanation": "In this PROC SQL query, the outer query uses the operator NOT EXISTS with a correlated subquery. The outer query selects all rows from Charity.Donors whose names do not appear in Charity.Current. In other words, this PROC SQL query output lists all donors who did not make a contribution in the current year.",
       "options": [
         {
           "tag": "A",
@@ -2162,7 +2162,7 @@
     },
     {
       "number": "81",
-      "description": "A public library has several categories of books. Each book in the library is assigned to only one category. The table Library.Inventory contains one row for each book in the library. The Checkouts column indicates the number of times that each book has been checked out.\nYou want to display only the categories that have an average circulation (number of checkouts) that is less than 2500. Does the following PROC SQL query produce the results that you want?\nproc sql;\ntitle 'Categories with Average Circulation';\ntitle2 'Less Than 2500';\nselect category,\navg(checkouts) as AvgCheckouts\nfrom library.inventory\nhaving avg(checkouts) < 2500\norder by 1;",
+      "description": "A public library has several categories of books. Each book in the library is assigned to only one category. The table Library.Inventory contains one row for each book in the library. The Checkouts column indicates the number of times that each book has been checked out.\nYou want to display only the categories that have an average circulation (number of checkouts) that is less than 2500. Does the following PROC SQL query produce the results that you want?\n\nproc sql;\ntitle 'Categories with Average Circulation';\ntitle2 'Less Than 2500';\nselect category,\navg(checkouts) as AvgCheckouts\nfrom library.inventory\nhaving avg(checkouts) < 2500\norder by 1;",
       "explanation": "PROC SQL can execute this query, but the query will not produce the results that you want. If you omit the GROUP BY clause in a query that contains a HAVING clause, then the HAVING clause and any summary functions treat the entire table as one group. Without a GROUP BY clause, the HAVING clause in this example calculates the average circulation for the table as a whole (all books in the library), not for each group (each category of books). The output contains either all the rows in the table (if the average circulation for the entire table is less than 2500) or none of the rows in the table (if the average circulation for the entire table is greater than 2500).",
       "options": [
         {
@@ -2190,7 +2190,7 @@
     {
       "number": "82",
       "description": "A Cartesian product is returned when",
-      "explanation": "A Cartesian product is returned when join conditions are not specified in a PROC SQL join. In a Cartesian product, each row from the first table is combined with every row from the second table.\n",
+      "explanation": "A Cartesian product is returned when join conditions are not specified in a PROC SQL join. In a Cartesian product, each row from the first table is combined with every row from the second table.",
       "options": [
         {
           "tag": "A",
@@ -2216,61 +2216,61 @@
     },
     {
       "number": "83",
-      "description": "Given the PROC SQL query and tables shown below, which output is generated?\nSTORE1\nWK    SALES\n1         $515.07\n2         $772.29\n3         $888.88\n4         $1000.01\n\nSTORE2\nWK    SALES\n1         $1368.99\n2         $1506.23\n3         $1200.57\n4         $1784.11\n5         $43.00\n\n\nproc sql;\nselect *\nfrom store1,\nstore2\nwhere store1.wk=\nstore2.wk;",
+      "description": "Given the PROC SQL query and tables shown below, which output is generated?\nSTORE1\nWK    SALES\n1         $515.07\n2         $772.29\n3         $888.88\n4         $1000.01\n\nSTORE2\nWK    SALES\n1         $1368.99\n2         $1506.23\n3         $1200.57\n4         $1784.11\n5         $43.00\n\nproc sql;\nselect *\nfrom store1,\nstore2\nwhere store1.wk=\nstore2.wk;",
       "explanation": "This PROC SQL query is an inner join. It combines the rows from the first table that match rows from the second table, based on the matching criteria specified in the WHERE clause. Columns are not overlaid, so all columns from the referenced tables (including any columns with duplicate names) are displayed. Any unmatched rows from either table are not displayed.",
       "options": [
         {
           "tag": "A",
-          "description": "A. WK    SALES       WK          SALES\n      1     $515.07        1            $1368.99\n      2    $772.29         2            $1506.23\n      3      $888.88       3            $1200.57\n      4       $1000.01    4            $1784.11\n                                    5            $43.00",
+          "description": "A. WK   SALES       WK      SALES\n    1   $515.07     1       $1368.99\n    2   $772.29     2       $1506.23\n    3   $888.88     3       $1200.57\n    4   $1000.01    4       $1784.11\n    5                       $43.00",
           "correct": false
         },
         {
           "tag": "B",
-          "description": "B. WK    SALES       WK          SALES\n      1     $515.07        1            $1368.99\n      2    $772.29         2            $1506.23\n      3      $888.88       3            $1200.57\n      4       $1000.01    4            $1784.11",
+          "description": "B. WK   SALES       WK      SALES\n    1   $515.07     1       $1368.99\n    2   $772.29     2       $1506.23\n    3   $888.88     3       $1200.57\n    4   $1000.01    4       $1784.11",
           "correct": true
         },
         {
           "tag": "C",
-          "description": "C.  WK      SALES\n      1         $515.07\n      2         $772.29\n      3         $888.88\n      4         $1000.01",
+          "description": "C. WK       SALES\n    1       $515.07\n    2       $772.29\n    3       $888.88\n    4       $1000.01",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. WK      SALES\n      1         $515.07\n      2         $772.29\n      3         $888.88\n      4         $1000.01\n      1         $1368.99\n      2         $1506.23\n      3         $1200.57\n      4         $1784.11",
+          "description": "D. WK       SALES\n    1       $515.07\n    2       $772.29\n    3       $888.88\n    4       $1000.01\n    1       $1368.99\n    2       $1506.23\n    3       $1200.57\n    4       $1784.11",
           "correct": false
         }
       ]
     },
     {
       "number": "84",
-      "description": "Given the PROC SQL query and tables shown below, which output is generated?\nBONUS\nID        BONUS\n123      5000\n456      7000\n744      3500\n\nSALARY\nID         SALARY\n123      70000\n456      80000\n978      55000\n\n\nproc sql;\nselect s.*, bonus\nfrom bonus as b\nright join\nsalary as s\non b.id=\ns.id;",
+      "description": "Given the PROC SQL query and tables shown below, which output is generated?\nBONUS\nID        BONUS\n123      5000\n456      7000\n744      3500\n\nSALARY\nID         SALARY\n123      70000\n456      80000\n978      55000\n\nproc sql;\nselect s.*, bonus\nfrom bonus as b\nright join\nsalary as s\non b.id=\ns.id;",
       "explanation": "This PROC SQL query is a right outer join, which retrieves all rows that match across tables, based on the join conditions in the ON clause, plus nonmatching rows from the right (second) table.",
       "options": [
         {
           "tag": "A",
-          "description": "A. ID         SALARY      BONUS\n   123      70000           5000\n    456      80000          7000\n   978      55000           3500",
+          "description": "A. ID       SALARY  BONUS\n   123      70000   5000\n   456      80000   7000\n   978      55000   3500",
           "correct": false
         },
         {
           "tag": "B",
-          "description": "B. ID     SALARY      BONUS\n  123       70000         5000\n  456       80000         7000\n  744           .                3500",
+          "description": "B. ID       SALARY  BONUS\n   123      70000   5000\n   456      80000   7000\n   744      .       3500",
           "correct": false
         },
         {
           "tag": "C",
-          "description": "C. ID     SALARY      BONUS\n  123       70000         5000\n  456       80000         7000\n  744       55000         3500",
+          "description": "C. ID       SALARY  BONUS\n   123      70000   5000\n   456      80000   7000\n   744      55000   3500",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. ID         SALARY      BONUS\n   123      70000           5000\n    456      80000          7000\n   978      55000             .",
+          "description": "D. ID       SALARY      BONUS\n   123      70000       5000\n   456      80000       7000\n   978      55000       .",
           "correct": true
         }
       ]
     },
     {
       "number": "85",
-      "description": "Which PROC SQL query produces the same output as the query shown here?\nproc sql;\nselect a.*,\nduration\nfrom groupa as a,\ngroupb as b\nwhere a.obs=b.obs;Note:Assume that the table Groupa contains the columns Obs and Med. Groupb contains the columns Obs and Duration.",
+      "description": "Which PROC SQL query produces the same output as the query shown here?\n\nproc sql;\nselect a.*,\nduration\nfrom groupa as a,\ngroupb as b\nwhere a.obs=b.obs;\n\nNote:Assume that the table Groupa contains the columns Obs and Med. Groupb contains the columns Obs and Duration.",
       "explanation": "There are two valid formats for writing a PROC SQL inner join. The PROC SQL query shown at the top of this question uses the first inner join format, which does not use a keyword to indicate the type of join. The alternate format is similar to an outer join and uses the keyword INNER JOIN.",
       "options": [
         {
@@ -2297,27 +2297,27 @@
     },
     {
       "number": "86",
-      "description": "Which output is generated by the following PROC SQL query?\nTABLE1\nG3      Z\n89      FL\n46      UI\n47      BL\n\nTABLE2\nG3     R\n46      BC\n85      FL\n99      BA\n\n\nproc sql;\nselect *\nfrom table1\nleft join\ntable2\non table1.g3=\ntable2.g3;",
+      "description": "Which output is generated by the following PROC SQL query?\nTABLE1\nG3      Z\n89      FL\n46      UI\n47      BL\n\nTABLE2\nG3     R\n46     BC\n85     FL\n99     BA\n\nproc sql;\nselect *\nfrom table1\nleft join\ntable2\non table1.g3=\ntable2.g3;",
       "explanation": "This PROC SQL query is a left outer join, which retrieves all rows that match across tables (based on the join conditions in the ON clause), plus nonmatching rows from the left (first) table. No columns are overlaid, so all columns from both tables are displayed.",
       "options": [
         {
           "tag": "A",
-          "description": "A. G3      Z       G3        R\n    89      FL       .\n    46      UI       46       BC\n    47      BL       .",
+          "description": "A. G3       Z       G3      R\n   89       FL      .\n   46       UI      46      BC\n   47       BL      .",
           "correct": true
         },
         {
           "tag": "B",
-          "description": "B. G3     Z       G3       R\n    46     FL      46      BC\n       .                 45      FL\n       .                 99      BA",
+          "description": "B. G3       Z       G3      R\n   46       FL      46      BC\n   .                45      FL\n   .                99      BA",
           "correct": false
         },
         {
           "tag": "C",
-          "description": "C. G3       Z\n     46      UI",
+          "description": "C. G3       Z\n   46       UI",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D.  G3       Z       G3     R\n       46     UI      46    BC",
+          "description": "D. G3       Z       G3      R\n   46       UI      46      BC",
           "correct": false
         }
       ]
@@ -2371,15 +2371,15 @@
         },
         {
           "tag": "D",
-          "description": "D. This PROC SQL query contains an in-line view that uses valid syntax:\nproc sql;\nselect name, numvisits\nfrom (select name, sum(checkin)\nas numvisits\nfrom facility as f, members as m\nwhere area='POOL' and\nf.id=m.id\ngroup by name)\nwhere numvisits<=10\norder by 1;",
+          "description": "D. This PROC SQL query contains an in-line view that uses valid syntax:",
           "correct": false
         }
       ]
     },
     {
       "number": "89",
-      "description": "Which PROC SQL query generates the same output as the DATA step match-merge and PRINT step shown below?\n\nTABLE1\nG3      Z\n46      UI\n47      BL\n89      FL\n\nTABLE2\nG3     R\n46      BC\n85      FL\n99      BA\n\nMERGED\nG3     R       Z\n46     UI      BC\n47     BA\n85               FL\n89     FL\n99               BA\n\ndata merged;\nmerge table1 table2;\nby g3;\nrun;\nproc print data=merged\nnoobs;\ntitle 'Merged';\nrun;",
-      "explanation": "In order to generate the same output as the DATA step and PRINT steps, the PROC SQL full outer join must use the COALESCE function with the duplicate columns specified as arguments.\n",
+      "description": "Which PROC SQL query generates the same output as the DATA step match-merge and PRINT step shown below?\n\nTABLE1\nG3      Z\n46      UI\n47      BL\n89      FL\n\nTABLE2\nG3     R\n46     BC\n85     FL\n99     BA\n\nMERGED\nG3     R        Z\n46     UI       BC\n47     BA\n85              FL\n89     FL\n99              BA\n\ndata merged;\nmerge table1 table2;\nby g3;\nrun;\nproc print data=merged\nnoobs;\ntitle 'Merged';\nrun;",
+      "explanation": "In order to generate the same output as the DATA step and PRINT steps, the PROC SQL full outer join must use the COALESCE function with the duplicate columns specified as arguments.",
       "options": [
         {
           "tag": "A",
@@ -2487,7 +2487,7 @@
     {
       "number": "93",
       "description": "The keyword ALL cannot be used with which of the following set operators?",
-      "explanation": "By default, when processing a set operation that contains the EXCEPT, INTERSECT, and UNION set operators, PROC SQL makes an extra pass through the data to eliminate duplicate rows. The keyword ALL is used to suppress that additional pass through the tables, allowing duplicate rows to appear in the result set. Because the OUTER UNION set operator displays all rows, the keyword ALL is invalid and cannot be used with OUTER UNION.\n",
+      "explanation": "By default, when processing a set operation that contains the EXCEPT, INTERSECT, and UNION set operators, PROC SQL makes an extra pass through the data to eliminate duplicate rows. The keyword ALL is used to suppress that additional pass through the tables, allowing duplicate rows to appear in the result set. Because the OUTER UNION set operator displays all rows, the keyword ALL is invalid and cannot be used with OUTER UNION.",
       "options": [
         {
           "tag": "A",
@@ -2513,8 +2513,8 @@
     },
     {
       "number": "94",
-      "description": "Which PROC SQL step combines the tables Summer and Winter to produce the output displayed below?\nSUMMER\nMonth     Temp        Precip\n7                78           .05\n8                85           .04\n9                83           .15\n\nWinter\nMo      Temp      Precip\n1           29            .15\n2           32            .17\n3           38            .20\n2           32            .17\n\nMonth      Temp        Precip\n1                29             .15\n2                32             .17\n3                38             .20\n7                78             .05\n8                85             .04\n9                83             .15",
-      "explanation": "The output contains all rows that are unique in the combined set of rows from both tables, and the columns have been overlaid by position. This output is generated by a set operation that uses the set operator UNION without keywords.\n",
+      "description": "Which PROC SQL step combines the tables Summer and Winter to produce the output displayed below?\nSUMMER\nMonth   Temp    Precip\n7       78      .05\n8       85      .04\n9       83      .15\n\nWinter\nMonth   Temp    Precip\n1       29      .15\n2       32      .17\n3       38      .20\n2       32      .17\n\nMonth   Temp    Precip\n1       29      .15\n2       32      .17\n3       38      .20\n7       78      .05\n8       85      .04\n9       83      .15",
+      "explanation": "The output contains all rows that are unique in the combined set of rows from both tables, and the columns have been overlaid by position. This output is generated by a set operation that uses the set operator UNION without keywords.",
       "options": [
         {
           "tag": "A",
@@ -2594,8 +2594,8 @@
     },
     {
       "number": "97",
-      "description": "Which PROC SQL step generates the following output from the tables Dogs and Pets?\nDOGS\nName                Price\nFIFI                    $101\nGEORGE         $75\nSPARKY          $136\nTRUFFLE        $250\n\nPETS\nNames         Price        Arr\nANA               $25       9JAN2002\nFIFI                $101     14MAR2002\nGAO              $57       8DEC2001\nGAO              $57       8DEC2001\nSPARKY       $136    16SEP2002\nTRUFFLE     $250     20DEC2002\nZEUS            $500     8JUN2002\n\nNAME       PRICE\nANA           $25\nGAO          $57\nZEUS        $500",
-      "explanation": "This PROC SQL output includes all rows from the table Pets that do not appear in the table Dogs. No duplicates are displayed. A PROC SQL set operation that contains the set operator EXCEPT without keywords produces these results.\n",
+      "description": "Which PROC SQL step generates the following output from the tables Dogs and Pets?\nDOGS\nName        Price\nFIFI        $101\nGEORGE      $75\nSPARKY      $136\nTRUFFLE     $250\n\nPETS\nNames       Price       Arr\nANA         $25         9JAN2002\nFIFI        $101        14MAR2002\nGAO         $57         8DEC2001\nGAO         $57         8DEC2001\nSPARKY      $136        16SEP2002\nTRUFFLE     $250        20DEC2002\nZEUS        $500        8JUN2002\n\nNAME        PRICE\nANA         $25\nGAO         $57\nZEUS        $500",
+      "explanation": "This PROC SQL output includes all rows from the table Pets that do not appear in the table Dogs. No duplicates are displayed. A PROC SQL set operation that contains the set operator EXCEPT without keywords produces these results.",
       "options": [
         {
           "tag": "A",
@@ -2621,7 +2621,7 @@
     },
     {
       "number": "98",
-      "description": "The PROG1 and PROG2 tables list students who took the PROG1 and PROG2 courses, respectively. Which PROC SQL step gives you the names of the students who took only the PROG1 class?\n\nPROG1\nFNAME      LNAME\nPete             Henry\nMary            Johnson\nAlex             Kinsley\nDori             O'niel\n\nPROG2\nFNAME      LNAME\nClara           Adams\nPete             Henry\nDori             O'niel\nCindy          Philips\nMandy        Young\n\nPROG1 Only\nFNAME      LNAME\nAlex             Kinsley\nMary            Johnson\n",
+      "description": "The PROG1 and PROG2 tables list students who took the PROG1 and PROG2 courses, respectively. Which PROC SQL step gives you the names of the students who took only the PROG1 class?\n\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\nPROG1 Only\nFNAME       LNAME\nAlex        Kinsley\nMary        Johnson",
       "explanation": "The set operator EXCEPT returns all the rows in the first table that do not appear in the second table. The keyword ALL suppresses the extra pass that PROC SQL makes through the data to eliminate duplicate rows. The EXCEPT operator when used alone will also produce the output specified in the question.",
       "options": [
         {
@@ -2648,8 +2648,8 @@
     },
     {
       "number": "99",
-      "description": "Which PROC SQL step returns the names of all the students who took PROG1, PROG2, or both classes?\nPROG1\nFNAME      LNAME\nPete             Henry\nMary            Johnson\nAlex             Kinsley\nDori             O'niel\n\nPROG2\nFNAME      LNAME\nClara           Adams\nPete             Henry\nDori             O'niel\nCindy          Philips\nMandy        Young\n\nPROG1 PROG2 or BOTH\nFNAME      LNAME\nAlex             Kinsley\nCindy          Philips\nClara           Adams\nDori             O'niel\nMandy        Young\nMary            Johnson\nPete             Henry",
-      "explanation": "The set operator UNION returns all rows that are unique in the combined set of rows from both tables.\n",
+      "description": "Which PROC SQL step returns the names of all the students who took PROG1, PROG2, or both classes?\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\nPROG1 PROG2 or BOTH\nFNAME       LNAME\nAlex        Kinsley\nCindy       Philips\nClara       Adams\nDori        O'niel\nMandy       Young\nMary        Johnson\nPete        Henry",
+      "explanation": "The set operator UNION returns all rows that are unique in the combined set of rows from both tables.",
       "options": [
         {
           "tag": "A",
@@ -2675,7 +2675,7 @@
     },
     {
       "number": "100",
-      "description": "Which PROC SQL step returns the names of all the students who took both the PROG1 and PROG2 classes?\n\nPROG1\nFNAME      LNAME\nPete             Henry\nMary            Johnson\nAlex             Kinsley\nDori             O'niel\n\nPROG2\nFNAME      LNAME\nClara           Adams\nPete             Henry\nDori             O'niel\nCindy          Philips\nMandy        Young\n\nPROG1 PROG2\nFNAME      LNAME\nDori             O'niel\nPete             Henry\n",
+      "description": "Which PROC SQL step returns the names of all the students who took both the PROG1 and PROG2 classes?\n\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\nPROG1 PROG2\nFNAME       LNAME\nDori        O'niel\nPete        Henry\n",
       "explanation": "The set operator INTERSECT returns all rows that are common to both tables. Specifying the keyword ALL suppresses PROC SQL's additional pass through the data to eliminate duplicate rows.\n",
       "options": [
         {
@@ -2702,7 +2702,7 @@
     },
     {
       "number": "101",
-      "description": "Which PROC SQL step generates the same results as the following DATA step?\n\nPROG1\nFNAME      LNAME\nPete             Henry\nMary            Johnson\nAlex             Kinsley\nDori             O'niel\n\nPROG2\nFNAME      LNAME\nClara           Adams\nPete             Henry\nDori             O'niel\nCindy          Philips\nMandy        Young\n\ndata allstudents;\nset prog1 prog2;\nby lname;\nrun;\nproc print noobs;\nrun;",
+      "description": "Which PROC SQL step generates the same results as the following DATA step?\n\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\ndata allstudents;\nset prog1 prog2;\nby lname;\nrun;\nproc print noobs;\nrun;",
       "explanation": "The DATA step returns all rows from the first table along with all rows from the second table, maintaining the order specified in the BY statement. Same-named columns are overlaid by default. The set operator OUTER UNION returns all rows from both tables. The CORR keyword causes same-named columns to be overlaid. The ORDER BY clause causes the result rows to be ordered by values of the specified column (LName).\n",
       "options": [
         {
@@ -2730,7 +2730,7 @@
     {
       "number": "102",
       "description": "Which of the following PROC SQL steps creates a new table by copying only the column structure (but not the rows) of an existing table?",
-      "explanation": "The CREATE TABLE statement that includes a LIKE clause copies the column names and attributes from an existing table into a new table. No rows of data are inserted.\n\n",
+      "explanation": "The CREATE TABLE statement that includes a LIKE clause copies the column names and attributes from an existing table into a new table. No rows of data are inserted.",
       "options": [
         {
           "tag": "A",
@@ -2946,7 +2946,7 @@
     {
       "number": "110",
       "description": "Which of the following displays the structure of a table in the SAS log?",
-      "explanation": "The DESCRIBE TABLE statement lists the column attributes for a specified table.\n",
+      "explanation": "The DESCRIBE TABLE statement lists the column attributes for a specified table.",
       "options": [
         {
           "tag": "A",
@@ -3054,7 +3054,7 @@
     {
       "number": "114",
       "description": "Which of the following creates a composite index for the table Sasuser.Flightdelays? (Sasuser.Flightdelays contains the following columns: Date, FlightNumber, Origin, Destination, DelayCategory, DestinationType, DayOfWeek, and Delay.)",
-      "explanation": "A composite index is based on two or more columns. In the CREATE INDEX statement, you specify the index name after the keywords CREATE INDEX. You do not include a keyword to specify that this is a composite index. The names of the key columns are specified in parentheses after the table name. The name of a composite index cannot be the same as the name of any columns in the table.\n",
+      "explanation": "A composite index is based on two or more columns. In the CREATE INDEX statement, you specify the index name after the keywords CREATE INDEX. You do not include a keyword to specify that this is a composite index. The names of the key columns are specified in parentheses after the table name. The name of a composite index cannot be the same as the name of any columns in the table.",
       "options": [
         {
           "tag": "A",
@@ -3162,7 +3162,7 @@
     {
       "number": "118",
       "description": "What is the purpose of specifying the data set option IDXWHERE=YES?",
-      "explanation": "The IDXWHERE=YES data set option tells SAS to use the best available index, even if the index does not optimize performance.\n",
+      "explanation": "The IDXWHERE=YES data set option tells SAS to use the best available index, even if the index does not optimize performance.",
       "options": [
         {
           "tag": "A",
@@ -3189,7 +3189,7 @@
     {
       "number": "119",
       "description": "Which of the following is false regarding the use of an index?",
-      "explanation": "Indexes can be created on either character or numeric columns.\n",
+      "explanation": "Indexes can be created on either character or numeric columns.",
       "options": [
         {
           "tag": "A",
@@ -3270,7 +3270,7 @@
     {
       "number": "122",
       "description": "Which of the following statements is false regarding a PROC SQL view?",
-      "explanation": "A PROC SQL view accesses the most current underlying data and can be joined with tables or other views. In addition, a PROC SQL view can\nbe used in SAS programs in place of an actual SAS data file\nbe derived from one or more tables, PROC SQL views, or DATA step views.",
+      "explanation": "A PROC SQL view accesses the most current underlying data and can be joined with tables or other views. In addition, a PROC SQL view can be used in SAS programs in place of an actual SAS data file be derived from one or more tables, PROC SQL views, or DATA step views.",
       "options": [
         {
           "tag": "A",
@@ -3297,7 +3297,7 @@
     {
       "number": "123",
       "description": "Which of the following statements describes an advantage of using a PROC SQL view?",
-      "explanation": "PROC SQL views are useful because they\noften save space (a view is usually quite small compared with the data that it accesses)\nprevent users from continually submitting queries to omit unwanted columns or rows\nhide complex joins or queries from users.\nIn addition, PROC SQL views\nensure that input data sets are always current, because data is derived from tables at execution time\ncan be used to shield sensitive or confidential columns from users while enabling the same users to view other columns in the same table.",
+      "explanation": "PROC SQL views are useful because they often save space (a view is usually quite small compared with the data that it accesses) prevent users from continually submitting queries to omit unwanted columns or rows hide complex joins or queries from users.\nIn addition, PROC SQL views ensure that input data sets are always current, because data is derived from tables at execution time can be used to shield sensitive or confidential columns from users while enabling the same users to view other columns in the same table.",
       "options": [
         {
           "tag": "A",
@@ -3459,7 +3459,7 @@
     {
       "number": "129",
       "description": "When you are working with PROC SQL views, it is best to:",
-      "explanation": "When you are working with PROC SQL views, it is best to\navoid using an ORDER BY clause in a view. If you specify an ORDER BY clause, the data must be sorted each time the view is referenced.\navoid creating views that are based on tables whose structure might change. A view is no longer valid when it references a nonexistent column.\nspecify a one-level name in the FROM clause if the view resides in the same SAS data library as the contributing table(s). Using a one-level name in the FROM clause prevents you from having to change the view if you assign a different libref to the SAS data library that contains the view and its contributing table or tables.",
+      "explanation": "When you are working with PROC SQL views, it is best to avoid using an ORDER BY clause in a view. If you specify an ORDER BY clause, the data must be sorted each time the view is referenced.\nAvoid creating views that are based on tables whose structure might change. A view is no longer valid when it references a nonexistent column.\nSpecify a one-level name in the FROM clause if the view resides in the same SAS data library as the contributing table(s). Using a one-level name in the FROM clause prevents you from having to change the view if you assign a different libref to the SAS data library that contains the view and its contributing table or tables.",
       "options": [
         {
           "tag": "A",
@@ -3486,7 +3486,7 @@
     {
       "number": "130",
       "description": "You can update the data underlying PROC SQL view using the INSERT, DELETE, and UPDATE statements under which of the following conditions:",
-      "explanation": "You can update a PROC SQL view provided that the view does not join or link to another table, the view does not have a subquery, or you try to update a derived column. You can update a view  that contains a WHERE clause. The WHERE clause can be in the UPDATE clause or in the view. You cannot update a view that contains any other clause such as an ORDER BY or a HAVING  clause.\n",
+      "explanation": "You can update a PROC SQL view provided that the view does not join or link to another table, the view does not have a subquery, or you try to update a derived column. You can update a view  that contains a WHERE clause. The WHERE clause can be in the UPDATE clause or in the view. You cannot update a view that contains any other clause such as an ORDER BY or a HAVING  clause.",
       "options": [
         {
           "tag": "A",
@@ -3675,7 +3675,7 @@
     {
       "number": "137",
       "description": "Dictionary tables are",
-      "explanation": "Dictionary tables are created each time they are referenced in a SAS program, updated automatically, and limited to read-only access. Accessing a Dictionary table causes SAS to determine the  current state of the SAS session and return the information that you want.\n",
+      "explanation": "Dictionary tables are created each time they are referenced in a SAS program, updated automatically, and limited to read-only access. Accessing a Dictionary table causes SAS to determine the  current state of the SAS session and return the information that you want.",
       "options": [
         {
           "tag": "A",
@@ -3998,7 +3998,7 @@
     },
     {
       "number": "149",
-      "description": "What are the resulting values for the macro variables that are defined here?\n%let month1 = June;\n%let month2 = July;\n%let period1 = &month1&month2;\n%let period2 = May&month1;\n%let period3 = &month2.Aug;",
+      "description": "What are the resulting values for the macro variables that are defined here?\n\n%let month1 = June;\n%let month2 = July;\n%let period1 = &month1&month2;\n%let period2 = May&month1;\n%let period3 = &month2.Aug;",
       "explanation": "You can combine macro variable references with text to create new text strings. If you precede a macro variable with text, the ampersand at the beginning of the macro variable name signals the  end of the text and the beginning of a macro variable name. If you want text to follow the macro variable value, you must signal the end of the macro variable name with a period.",
       "options": [
         {
@@ -4376,7 +4376,7 @@
     },
     {
       "number": "163",
-      "description": "Which of the following correctly references the macro named Printdsn as shown here:\n%macro printdsn(dsn,vars);\n%if &vars= %then %do;\nproc print data=&dsn;\ntitle \"Full Listing of %upcase(&dsn) data set\";\nrun;\n%end;\n%else %do;\nproc print data=&dsn;\nvar &vars;\ntitle \"Listing of %upcase(&dsn) data set\";\nrun;\n%end;\n%mend;",
+      "description": "Which of the following correctly references the macro named Printdsn as shown here:\n\n%macro printdsn(dsn,vars);\n%if &vars= %then %do;\nproc print data=&dsn;\ntitle \"Full Listing of %upcase(&dsn) data set\";\nrun;\n%end;\n%else %do;\nproc print data=&dsn;\nvar &vars;\ntitle \"Listing of %upcase(&dsn) data set\";\nrun;\n%end;\n%mend;",
       "explanation": "To call a macro that includes positional parameters, you precede the macro name with a percent sign. You list the values for the macro variables that are defined by the parameters in parentheses. List values in the same order in which the parameters are listed, and separate them with commas. Remember that a macro call is not a SAS language statement and does not require a semicolon.",
       "options": [
         {
@@ -4700,7 +4700,7 @@
     },
     {
       "number": "175",
-      "description": "When you submit the following code, what happens?\n%macro prtlast;\nproc print data=&syslast (obs=5);\ntitle \"Listing of &syslast data set\";\nrun;\n%mend;",
+      "description": "When you submit the following code, what happens?\n\n%macro prtlast;\nproc print data=&syslast (obs=5);\ntitle \"Listing of &syslast data set\";\nrun;\n%mend;",
       "explanation": "When you submit a macro definition, SAS creates a session-compiled macro and stores it in the temporary SAS catalog Work.Sasmacr. This macro will be deleted at the end of the SAS session.",
       "options": [
         {
@@ -4754,7 +4754,7 @@
     },
     {
       "number": "177",
-      "description": "What does the following PROC CATALOG step do?\nproc catalog cat=mylib.sasmacr;\ncontents;\nquit;",
+      "description": "What does the following PROC CATALOG step do?\n\nproc catalog cat=mylib.sasmacr;\ncontents;\nquit;",
       "explanation": "The PROC CATALOG step enables you to view a list of the contents of a SAS catalog. This might be especially useful if you store your macro definitions as SOURCE entries in permanent SAS catalogs. You might also use the PROC CATALOG step to see a list of the session-compiled macros that are stored in Work.Sasmacr.",
       "options": [
         {
@@ -5078,34 +5078,34 @@
     },
     {
       "number": "189",
-      "description": "Given the following program, which table correctly shows the corresponding values of the variables Month and Readfile?\ndata work.revenue;\ndo month = 8, 9, 10;\nreadfile=compress(\"c:\\data\\month\"\n!!put(month,2.)!!\".dat\");\ndo until (lastobs);\ninfile temp filevar=readfile\nend=lastobs;\ninput Date : date7. Location $\nSales : dollar10.;\noutput;\nend;\nend;\nstop;\nrun;",
+      "description": "Given the following program, which table correctly shows the corresponding values of the variables Month and Readfile?\n\ndata work.revenue;\ndo month = 8, 9, 10;\nreadfile=compress(\"c:\\data\\month\"\n!!put(month,2.)!!\".dat\");\ndo until (lastobs);\ninfile temp filevar=readfile\nend=lastobs;\ninput Date : date7. Location $\nSales : dollar10.;\noutput;\nend;\nend;\nstop;\nrun;",
       "explanation": "The DO statement creates the index variable x and assigns it the values of 8, 9, and 10. The assignment statement assigns the name of a raw data file to Readfile using the current value of x and the PUT function, which concatenates the values of x with the text strings c:\\data\\month and .dat. The COMPRESS function removes blank spaces from the values of Readfile.",
       "options": [
         {
           "tag": "A",
-          "description": "A. When x=        readfile=\n8                     month8.dat\n9                     month9.dat\n10                   month10.dat",
+          "description": "A. When x=      readfile=\n8               month8.dat\n9               month9.dat\n10              month10.dat",
           "correct": false
         },
         {
           "tag": "B",
-          "description": "B. When x=\t\treadfile=\n8\t\tc:\\data\\month8.dat\n9\t\tc:\\data\\month9.dat\n10\t\tc:\\data\\month10.dat",
+          "description": "B. When x=      readfile=\n8\t\t        c:\\data\\month8.dat\n9\t\t        c:\\data\\month9.dat\n10\t\t        c:\\data\\month10.dat",
           "correct": true
         },
         {
           "tag": "C",
-          "description": "C. When x=\t\treadfile=\n8\t\tc:\\data\\month 8.dat\n9\t\tc:\\data\\month 9.dat\n10\t\tc:\\data\\month10.dat",
+          "description": "C. When x=\t\treadfile=\n8\t\t        c:\\data\\month 8.dat\n9\t\t        c:\\data\\month 9.dat\n10\t\t        c:\\data\\month10.dat",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. When x=\t\treadfile=\n8\t\tmonth8\n9\t\tmonth9\n10\t\tmonth10",
+          "description": "D. When x=\t\treadfile=\n8\t\t        month8\n9\t\t        month9\n10\t\t        month10",
           "correct": false
         }
       ]
     },
     {
       "number": "190",
-      "description": "If the current date is March 30, 2003, which table correctly shows the corresponding values of the variables y1, y2, y3, and Nextfile?\ndata work.quarter (drop=monthnum midmon lastmon);\ny3=year(today());\ny2=y3-1;\ny1=y3-2;\ndo i = y3, y2, y1;\nnextfile=\"c:\\data\\Y\"!!put(i,4.)!!\".dat\";\ndo until (lastobs);\ninfile temp filevar=nextfile\nend=lastobs;\ninput Flight $ Origin $ Dest $\nDate : date9.;\noutput;\nend;\nend;\nstop;\nrun;",
+      "description": "If the current date is March 30, 2003, which table correctly shows the corresponding values of the variables y1, y2, y3, and Nextfile?\n\ndata work.quarter (drop=monthnum midmon lastmon);\ny3=year(today());\ny2=y3-1;\ny1=y3-2;\ndo i = y3, y2, y1;\nnextfile=\"c:\\data\\Y\"!!put(i,4.)!!\".dat\";\ndo until (lastobs);\ninfile temp filevar=nextfile\nend=lastobs;\ninput Flight $ Origin $ Dest $\nDate : date9.;\noutput;\nend;\nend;\nstop;\nrun;",
       "explanation": "The TODAY function returns the current date from the system clock as a SAS date value. The year number is then extracted from the current date using the YEAR function. The value of the current year, 2003, is assigned to y3. The year values 2002 and 2001 are assigned to y2 and y1, respectively. The PUT function concatenates the text string c:\\data\\Y with the year values and the text string .dat.",
       "options": [
         {
@@ -5120,12 +5120,12 @@
         },
         {
           "tag": "C",
-          "description": "C. When i=\t\tNextfile=\ny1\t\tc:\\data\\Y2003.dat\ny2\t\tc:\\data\\Y2002.dat\ny3\t\tc:\\data\\Y2001.dat",
+          "description": "C. When i=\t\tNextfile=\ny1      \t\tc:\\data\\Y2003.dat\ny2\t\t        c:\\data\\Y2002.dat\ny3\t\t        c:\\data\\Y2001.dat",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. When i=\t\tNextfile=\ny1\t\tc:\\data\\Y3.dat\ny2\t\tc:\\data\\Y2.dat\ny3\t\tc:\\data\\Y1.dat",
+          "description": "D. When i=\t\tNextfile=\ny1\t\t        c:\\data\\Y3.dat\ny2\t\t        c:\\data\\Y2.dat\ny3\t\t        c:\\data\\Y1.dat",
           "correct": false
         }
       ]
@@ -5186,7 +5186,7 @@
     },
     {
       "number": "193",
-      "description": "What happens when the following program is submitted?\nproc append base=staff.marketing\ndata=staff.sales force;\nrun;\nData Set Description for Staff.Marketing\nVariable           Type      Length\nLastName       char          12\nFirstName       char          10\nEmpID             char          5\nOffice               char           4\nPhone              char         12\n\nData Set Description for Staff.Sales\nVariable           Type      Length\nLastName       char          20\nFirstName       char          10\nEmpID             char          5\nOffice               char           4\nPhone              char         12",
+      "description": "What happens when the following program is submitted?\n\nproc append base=staff.marketing\ndata=staff.sales force;\nrun;\nData Set Description for Staff.Marketing\nVariable        Type        Length\nLastName        char        12\nFirstName       char        10\nEmpID           char        5\nOffice          char        4\nPhone           char        12\n\nData Set Description for Staff.Sales\nVariable        Type        Length\nLastName        char        20\nFirstName       char        10\nEmpID           char        5\nOffice          char        4\nPhone           char        12",
       "explanation": "If a DATA= data set contains variables that are longer than the corresponding variables in the BASE= data set, the FORCE option must be used with PROC APPEND. Using the FORCE option enables you to append the data sets. However, some of the variable values may be truncated in the observations that are read in from the DATA= data set.\n",
       "options": [
         {
@@ -5213,7 +5213,7 @@
     },
     {
       "number": "194",
-      "description": "Which program appends Work.April to Work.Y2003?\nData Set Description for Work.Y2003\nVariable                Type      Length\nFlightNum             Num          8\nFirstClass             Num          8\nBusinessClass     Num          8\nCoach                   Num          8\n\nData Set Description for Work.April\nVariable                Type      Length\nFlightNum             Char          4\nFirstClass             Num          8\nBusinessClass     Num          8\nCoach                   Num          8",
+      "description": "Which program appends Work.April to Work.Y2003?\n\nData Set Description for Work.Y2003\nVariable        Type      Length\nFlightNum       Num          8\nFirstClass      Num          8\nBusinessClass   Num          8\nCoach           Num          8\n\nData Set Description for Work.April\nVariable        Type      Length\nFlightNum       Char        4\nFirstClass      Num         8\nBusinessClass   Num         8\nCoach           Num         8",
       "explanation": "You must use the FORCE option with PROC APPEND when the DATA= data set contains a variable that does not have the same type as the corresponding variable in the BASE= data set.",
       "options": [
         {
@@ -5294,7 +5294,7 @@
     },
     {
       "number": "197",
-      "description": "According to the data set descriptions below, which of the variables that are listed qualify as BY variables for a DATA step match-merge?\nVariable\t\tType\tLength\tDescription\nCode\t\tChar\t5\tDepartment Code\nTotemps\t\tNum\t3\tTotal number of employees\nRegion\t\tChar\t5\tLocation of department\nManager\t\tNum\t4\tEmployee ID number\n\nVariable\t\tType\tLength\tDescription\nIDnum\t\tNum\t5\tEmployee ID number\nName\t\tChar\t3\tEmployee Name\nDevision\t\tChar\t5\tDivision Abbreviation\nhiredate\t\tNum\t4\tDate of hire\nSupervisor\tChar\t20\tName of supervisor",
+      "description": "According to the data set descriptions below, which of the variables that are listed qualify as BY variables for a DATA step match-merge?\n\nVariable    Type\tLength  Description\nCode\t\tChar\t5\t    Department Code\nTotemps\t\tNum\t    3\t    Total number of employees\nRegion\t\tChar\t5\t    Location of department\nManager\t\tNum\t    4       Employee ID number\n\nVariable    Type\tLength\tDescription\nIDnum\t\tNum\t    5\t    Employee ID number\nName\t\tChar\t3\t    Employee Name\nDevision\tChar\t5\t    Division Abbreviation\nhiredate\tNum\t    4\t    Date of hire\nSupervisor\tChar\t20\t    Name of supervisor",
       "explanation": "Remember that common variables might not have the same names. Manager and IDnum are the only two variables listed that match according to type and description. You can use the RENAME= option to rename one of these variables so that they can be used as BY variables in the MERGE statement of the DATA step.",
       "options": [
         {
@@ -5457,7 +5457,7 @@
     {
       "number": "203",
       "description": "If the value of Cargosum is $1000 at the end of the first iteration of the DATA step shown below, what is the value of Cargosum in the PDV when the DATA step is in its third iteration?\ndata sasuser.percent1;\nif _n_=1 then set sasuser.summary (keep=cargosum);\nset sasuser.monthsum (keep=salemon revcargo);\nPctRev=revcargo/cargosum;\nrun;",
-      "explanation": "The _N_ variable records how many times the DATA step has iterated. In the example, _N_ is used to ensure that the first SET statement executes only one time so the one observation is read from Sasuser.Summary, but the end of file marker is not read. Since the values in the PDV are not reinitialized after each DATA step iteration, the value of CARGOSUM is retained throughout DATA step execution. Therefore, if the value of Cargosum is $1000 in the first iteration, it will be $1000 in each subsequent iteration as well.\n",
+      "explanation": "The _N_ variable records how many times the DATA step has iterated. In the example, _N_ is used to ensure that the first SET statement executes only one time so the one observation is read from Sasuser.Summary, but the end of file marker is not read. Since the values in the PDV are not reinitialized after each DATA step iteration, the value of CARGOSUM is retained throughout DATA step execution. Therefore, if the value of Cargosum is $1000 in the first iteration, it will be $1000 in each subsequent iteration as well.",
       "options": [
         {
           "tag": "A",
@@ -5699,7 +5699,7 @@
     },
     {
       "number": "212",
-      "description": "Given the following program, which statement is not true?\ndata work.lookup1;\narray Targets{1997:1999,12} _temporary_;\nif _n_=1 then do i= 1 to 3;\nset sasuser.ctargets;\narray Mnth{*} Jan--Dec;\ndo j=1 to dim(mnth);\ntargets{year,j}=mnth{j};\nend;\nend;\nset sasuser.monthsum(keep=salemon revcargo monthno);\nyear=input(substr(salemon,4),4.);\nCtarget=targets{year,monthno};\nrun;",
+      "description": "Given the following program, which statement is not true?\n\ndata work.lookup1;\narray Targets{1997:1999,12} _temporary_;\nif _n_=1 then do i= 1 to 3;\nset sasuser.ctargets;\narray Mnth{*} Jan--Dec;\ndo j=1 to dim(mnth);\ntargets{year,j}=mnth{j};\nend;\nend;\nset sasuser.monthsum(keep=salemon revcargo monthno);\nyear=input(substr(salemon,4),4.);\nCtarget=targets{year,monthno};\nrun;",
       "explanation": "The IF-THEN statement specifies that the Targets array is loaded only once, during the first iteration of the DATA step. During the first iteration of the DATA step, the condition _N_=1 is true, so the outer DO loop executes three times; once for each observation in Sasuser.Ctargets. After the third iteration of the DO loop, the pointer drops down to the second SET statement and the values from the first observation in Sasuser.Monthum are read into the program data vector. During the second iteration of the DATA step, the condition _N_=1 is false. So, the DO loop doesn't execute again.\n",
       "options": [
         {
@@ -5834,7 +5834,7 @@
     },
     {
       "number": "217",
-      "description": "Given the following code, what option is missing?\nproc format;\nvalue times (?)\n'00:00't-'04:59't = 'Red Eye'\n'05:00't-'11:59't = 'Morning'\n'12:00't-'17:59't = 'Afternoon'\n'18:00't-'23:59't = 'Evening'\n'00:00't-'11:59't = 'AM'\n'12:00't-'23:59't = 'PM';\nrun;",
+      "description": "Given the following code, what option is missing?\n\nproc format;\nvalue times (?)\n'00:00't-'04:59't = 'Red Eye'\n'05:00't-'11:59't = 'Morning'\n'12:00't-'17:59't = 'Afternoon'\n'18:00't-'23:59't = 'Evening'\n'00:00't-'11:59't = 'AM'\n'12:00't-'23:59't = 'PM';\nrun;",
       "explanation": "The format created by this value statement has overlapping ranges, so the MULTILABEL option must be used. A multilabel format can be used by any procedure that supports the MLF option.",
       "options": [
         {
@@ -6911,34 +6911,34 @@
     },
     {
       "number": "258",
-      "description": "The SAS data set SASDATA.SALES has a simple index on the variable DATE and a variable named\nREVENUE with no index.\nIn which one of the following SAS programs is the DATE index considered for use?",
+      "description": "The SAS data set SASDATA.SALES has a simple index on the variable DATE and a variable named REVENUE with no index.\nIn which one of the following SAS programs is the DATE index considered for use?",
       "explanation": "",
       "options": [
         {
           "tag": "A",
-          "description": "A. proc print data = sasdata.sales;\n by date;\nrun;",
+          "description": "A.  proc print data = sasdata.sales;\n    by date;\n    run;",
           "correct": true
         },
         {
           "tag": "B",
-          "description": "B. proc print data = sasdata.sales;\n where month(date) = 3;\nrun;",
+          "description": "B.  proc print data = sasdata.sales;\n    where month(date) = 3;\n    run;",
           "correct": false
         },
         {
           "tag": "C",
-          "description": "C. data march;\n set sasdata.sales;\n if '01mar2002'd < date < '31mar2002'd;\nrun;",
+          "description": "C.  data march;\n    set sasdata.sales;\n    if '01mar2002'd < date < '31mar2002'd;\n    run;",
           "correct": false
         },
         {
           "tag": "D",
-          "description": "D. data march;\n set sasdata.sales;\n where date < '31mar2002'd or revenue > 50000;\nrun;",
+          "description": "D.  data march;\n    set sasdata.sales;\n    where date < '31mar2002'd or revenue > 50000;\n    run;",
           "correct": false
         }
       ]
     },
     {
       "number": "259",
-      "description": "The following SAS program is submitted:\n%macro mysum(n);\n%if &n > 1 %then %eval(&n + %mysum(%eval(&n-1)));\n%else &n;\n%mend;\n%put %mysum(4);\nWhich output is written to the log?",
+      "description": "The following SAS program is submitted:\n\n%macro mysum(n);\n%if &n > 1 %then %eval(&n + %mysum(%eval(&n-1)));\n%else &n;\n%mend;\n%put %mysum(4);\n\nWhich output is written to the log?",
       "explanation": "",
       "options": [
         {
@@ -6992,7 +6992,7 @@
     },
     {
       "number": "261",
-      "description": "The following program is submitted to check the variables Xa, Xb, and Xc in the SASUSER.LOOK data\nset:\n\ndata _null_ WORK.BAD_DATA / view=WORK.BAD_DATA ;\nset SASUSER.LOOK(keep=Xa Xb Xc);\nlength _Check_ $ 10 ;\nif Xa=. then _check_=trim(_Check_)!!\" Xa\" ;\nif Xb=. then _check_=trim(_Check_)!!\" Xb\" ;\nif Xc=. then _check_=trim(_Check_)!!\" Xc\" ;\nput Xa= Xb= Xc= _check_= ;\nrun ;\n\nWhen is the PUT statement executed?",
+      "description": "The following program is submitted to check the variables Xa, Xb, and Xc in the SASUSER.LOOK data\nset:\n\ndata _null_ WORK.BAD_DATA / view=WORK.BAD_DATA ;\nset SASUSER.LOOK(keep=Xa Xb Xc);\nlength _Check_ $ 10 ;\nif Xa=. then _check_=trim(_Check_)!!\" Xa\" ;\nif Xb=. then _check_=trim(_Check_)!!\" Xb\" ;\nif Xc=. then _check_=trim(_Check_)!!\" Xc\" ;\nput Xa= Xb= Xc= _check_= ;\nrun;\n\nWhen is the PUT statement executed?",
       "explanation": "",
       "options": [
         {
@@ -7018,7 +7018,7 @@
       ]
     }
   ],
-  "questionVersion": 2,
+  "questionVersion": 3,
   "playStoreVersion": 10014,
   "ads": true
 }

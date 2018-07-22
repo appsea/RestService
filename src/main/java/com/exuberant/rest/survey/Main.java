@@ -45,8 +45,8 @@ public class Main {
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
         bank.add(new QuestionBank("Categories Base SAS.txt", 434, 13, 10001, true));
-        bank.add(new QuestionBank("Base SAS Question.txt", 434, 2, 10040, true));
-        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 2, 10014, true));
+        bank.add(new QuestionBank("Base SAS Question.txt", 434, 3, 10042, true));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 4, 10014, true));
         return bank;
     }
 
