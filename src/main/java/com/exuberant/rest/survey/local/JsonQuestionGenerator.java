@@ -43,7 +43,7 @@ public class JsonQuestionGenerator {
     public void generateQuestions(QuestionBank questionBank) throws Exception {
         QuestionParser parser = questionParsersForFile.get(questionBank.getInputFile());
         List<Question> questions = parser.parse(questionBank);
-        writeQuestionsWithRandomDescrription(questions);
+        writeQuestionsWithRandomDescription(questions);
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", questionBank.getInputFile().replaceAll(".txt", ".json"));
         System.err.println("Created: " + path);
@@ -54,7 +54,7 @@ public class JsonQuestionGenerator {
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }
 
-    private void writeQuestionsWithRandomDescrription(List<Question> questions) throws IOException {
+    private void writeQuestionsWithRandomDescription(List<Question> questions) throws IOException {
         List<String> categories = Arrays.asList("First", "Second", "Third");
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "categories.txt");
         List<String> lines = new ArrayList<>();

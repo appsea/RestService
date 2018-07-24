@@ -3,6 +3,7 @@ package com.exuberant.rest.survey.parser;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
+import com.exuberant.rest.util.MultiValueMap;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,9 +57,14 @@ public class GenericQuestionParser implements QuestionParser {
         int count = 0;
         for (Question question : questions) {
             question.setNumber(++count);
-            //questions.add(question);
         }
-        System.err.println("TQ: " + questions.size());
+        MultiValueMap<String, Integer> categories = new MultiValueMap();
+        for (Question question : questions) {
+            categories.put(question.getCategory(), Integer.parseInt(question.getNumber()));
+        }
+        for (String category : categories.keySet()) {
+            System.err.println(category + " : " + categories.get(category).size());
+        }
         return questions;
     }
 

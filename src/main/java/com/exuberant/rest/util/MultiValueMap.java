@@ -21,7 +21,6 @@ public class MultiValueMap<K, T> {
     }
 
     public Set<T> get(String key) {
-        key = key.toLowerCase();
         return mMap.get(key);
     }
 
@@ -62,6 +61,10 @@ public class MultiValueMap<K, T> {
             mMap.remove(key);
         }
         return result;
+    }
+
+    public Set<K> keySet(){
+        return this.mMap.keySet();
     }
 
     public T remove(T value) {
