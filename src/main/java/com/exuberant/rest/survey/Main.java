@@ -9,12 +9,10 @@ import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.exuberant.rest.survey.service.RandomPaperSetter;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.StringUtils;
 
-import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -60,7 +58,7 @@ public class Main {
         Set<QuestionWrapper> wrappers = new HashSet<>();
         for (Question question : allQuestions) {
             QuestionWrapper newQ = new QuestionWrapper(question);
-            if(!wrappers.contains(newQ)){
+            if (!wrappers.contains(newQ)) {
                 wrappers.add(newQ);
             }
         }
@@ -80,7 +78,7 @@ public class Main {
         int questionVersion = 13;
         JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, questionVersion, 10000, true);
         //System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
-        jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
+        jsonQuestions.getQuestions().stream().filter(que -> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
     }
