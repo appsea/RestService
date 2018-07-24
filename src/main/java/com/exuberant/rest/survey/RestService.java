@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class RestService {
 
-    public void getRequest(String url){
+    public void getRequest(String url) {
         RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Type", "application/json");

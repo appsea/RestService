@@ -37,7 +37,7 @@ public class SasQuestionController {
     }
 
     @RequestMapping(path = "/suggestion", method = RequestMethod.POST)
-    public void suggest(@RequestBody JsonQuestion jsonQuestion){
+    public void suggest(@RequestBody JsonQuestion jsonQuestion) {
         this.firebaseService.suggest(jsonQuestion);
     }
 

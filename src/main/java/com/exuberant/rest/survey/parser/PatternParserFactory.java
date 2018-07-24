@@ -17,7 +17,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
-        patternParsersForFile.put("Categories Base SAS.txt", getMainPatternParser());
+        patternParsersForFile.put("Categories Base SAS.txt", getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
         patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
     }
@@ -54,11 +54,19 @@ public class PatternParserFactory {
         String optionRegex = "^[A-D][.]\\s.*";
         String answerRegex = "^Answer:.*";
         String descriptionRegex = "^Description:.*";
-        //return new DynamicPatternParser(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, descriptionRegex);
         return DynamicPatternParser.getParserWithDescription(newQuestionRegex, optionRegex, answerRegex, descriptionRegex);
     }
 
-    public static void addPatternParser(String file, PatternParser patternParser){
+    public static PatternParser getCategoryParser() {
+        String newQuestionRegex = "^Question:.*";
+        String optionRegex = "^[A-D][.]\\s.*";
+        String answerRegex = "^Answer:.*";
+        String descriptionRegex = "^Description:.*";
+        String categoryRegex = "^Category:.*";
+        return DynamicPatternParser.getParserWithCategory(newQuestionRegex, optionRegex, answerRegex, descriptionRegex, categoryRegex);
+    }
+
+    public static void addPatternParser(String file, PatternParser patternParser) {
         patternParsersForFile.put(file, patternParser);
     }
 }

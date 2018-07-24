@@ -2,7 +2,6 @@ package com.exuberant.rest.survey.parser;
 
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.Question;
-import com.exuberant.rest.survey.model.QuestionWrapper;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -118,6 +117,9 @@ public class GenericQuestionParser implements QuestionParser {
                                 question.addOption(previousOptionLine.toString());
                             }
                             previousOptionLine = new StringBuilder(line);
+                        } else if (patternParser.isCategory(line)) {
+                            question.setCategory(line.replaceFirst("Category:", ""));
+                            hasDescriptionStarted = false;
                         } else if (patternParser.isDescription(line) || hasDescriptionStarted) {
                             question.appendExplanation(line.replaceFirst("Description:", "").trim());
                             hasDescriptionStarted = true;

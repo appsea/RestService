@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
-public class CacheQuestionService implements QuestionService{
+public class CacheQuestionService implements QuestionService {
 
     @Autowired
     private QuestionBanker questionBanker;

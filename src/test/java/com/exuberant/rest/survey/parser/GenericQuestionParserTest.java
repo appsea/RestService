@@ -14,7 +14,7 @@ public class GenericQuestionParserTest {
     private GenericQuestionParser genericQuestionParser = new GenericQuestionParser(new LocalResourceLoader(), new GeneralQuestionValidator());
 
     @Before
-    public void setup(){
+    public void setup() {
 
     }
 

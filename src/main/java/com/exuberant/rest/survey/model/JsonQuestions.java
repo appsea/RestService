@@ -22,14 +22,14 @@ public class JsonQuestions {
     private boolean ads;
 
     public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads) {
-        allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
+        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
         this.ads = ads;
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
-        allQuestions.forEach(q-> this.questions.add(toQuestion(q)));
+        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
         this.questionVersion = questionBank.getQuestionVersion();
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
@@ -42,8 +42,9 @@ public class JsonQuestions {
     private JsonQuestion toQuestion(Question question) {
         JsonQuestion jsonQuestion = new JsonQuestion();
         jsonQuestion.setNumber(question.getNumber());
-        jsonQuestion.setDescription(question.getDescription().replaceAll("\n$", ""));
-        jsonQuestion.setExplanation(question.getExplanation().replaceAll("\n$", ""));
+        jsonQuestion.setDescription(question.getDescription());
+        jsonQuestion.setExplanation(question.getExplanation());
+        jsonQuestion.setCategory(question.getCategory());
         for (Option option : question.getOptions().getOptions()) {
             JsonOption jsonOption = new JsonOption();
             jsonOption.setCorrect(option.isCorrect());

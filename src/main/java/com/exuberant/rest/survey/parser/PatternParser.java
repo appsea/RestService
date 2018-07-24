@@ -18,4 +18,6 @@ public interface PatternParser {
     boolean ignoreLine(String line);
 
     boolean isDescription(String line);
+
+    boolean isCategory(String line);
 }

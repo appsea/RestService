@@ -26,7 +26,7 @@ public class BaseSasFirebaseServiceImpl implements FirebaseService {
 
     @Override
     public void suggest(JsonQuestion jsonQuestion) {
-        restTemplate.postForEntity(baseUrl+"/suggestion.json", jsonQuestion, JsonQuestion.class);
+        restTemplate.postForEntity(baseUrl + "/suggestion.json", jsonQuestion, JsonQuestion.class);
     }
 
     @Override

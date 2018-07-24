@@ -37,7 +37,7 @@ public class QuestionWrapper {
         return equals;
     }
 
-    public String flattenIt(String string){
+    public String flattenIt(String string) {
         return string.replaceAll("\n", " ").replaceAll("\\s{2,}", " ");
     }
 }

@@ -3,6 +3,7 @@ package com.exuberant.rest.survey.local;
 import com.exuberant.rest.survey.LocalResourceLoader;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.survey.model.JsonQuestions;
+import com.exuberant.rest.survey.model.Option;
 import com.exuberant.rest.survey.model.Question;
 import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.parser.QuestionParser;
@@ -10,12 +11,12 @@ import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
 
 import static com.exuberant.rest.util.Constants.ADVANCE_SAS_QUESTIONS_FILE_NAME;
 import static com.exuberant.rest.util.Constants.BASE_SAS_QUESTION_FILE_NAME;
@@ -42,6 +43,7 @@ public class JsonQuestionGenerator {
     public void generateQuestions(QuestionBank questionBank) throws Exception {
         QuestionParser parser = questionParsersForFile.get(questionBank.getInputFile());
         List<Question> questions = parser.parse(questionBank);
+        writeQuestionsWithRandomDescrription(questions);
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", questionBank.getInputFile().replaceAll(".txt", ".json"));
         System.err.println("Created: " + path);
@@ -50,5 +52,26 @@ public class JsonQuestionGenerator {
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         Files.write(path, objectMapper.writeValueAsString(jsonQuestions).getBytes());
+    }
+
+    private void writeQuestionsWithRandomDescrription(List<Question> questions) throws IOException {
+        List<String> categories = Arrays.asList("First", "Second", "Third");
+        Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "categories.txt");
+        List<String> lines = new ArrayList<>();
+        for (Question question : questions) {
+            lines.add("Question:");
+            lines.add(question.getDescription());
+            lines.add("");
+            List<Option> options = question.getOptions().getOptions();
+            for (Option option : options) {
+                lines.add(option.getDescription());
+            }
+            lines.add("");
+            lines.add("Answer: " + options.stream().filter(option -> option.isCorrect()).findFirst().get().getTag());
+            lines.add("Description: " + question.getExplanation());
+            lines.add("Category: " + categories.get(ThreadLocalRandom.current().nextInt(0, 3)));
+            lines.add("");
+        }
+        Files.write(path, lines);
     }
 }

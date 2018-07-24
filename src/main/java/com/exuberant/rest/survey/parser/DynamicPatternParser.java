@@ -17,16 +17,17 @@ public class DynamicPatternParser implements PatternParser {
     private Pattern optionPattern;
     private Pattern answerPattern;
     private Pattern descriptionPattern;
+    private Pattern categoryPattern;
 
     public DynamicPatternParser(String newQuestionRegex, String optionRegex, String answerRegex) {
-        this(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null);
+        this(newQuestionRegex, newQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null, null);
     }
 
     public DynamicPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex) {
-        this(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null);
+        this(newQuestionRegex, extractQuestionRegex, optionRegex, answerRegex, IGNORE_REGEX, null, null);
     }
 
-    public DynamicPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex, String ignoreRegex, String descriptionRegex) {
+    public DynamicPatternParser(String newQuestionRegex, String extractQuestionRegex, String optionRegex, String answerRegex, String ignoreRegex, String descriptionRegex, String categoryPatternRegex) {
         newQuestionPattern = Pattern.compile(newQuestionRegex);
         this.extractQuestionRegex = extractQuestionRegex;
         extractQuestionPattern = Pattern.compile(extractQuestionRegex);
@@ -36,11 +37,21 @@ public class DynamicPatternParser implements PatternParser {
         if (null != descriptionRegex) {
             descriptionPattern = Pattern.compile(descriptionRegex);
         }
+        if (null != categoryPatternRegex) {
+            categoryPattern = Pattern.compile(categoryPatternRegex);
+        }
     }
 
-    public static DynamicPatternParser getParserWithDescription(String newQuestionRegex, String optionRegex, String answerRegex, String descriptionRegex){
+    public static DynamicPatternParser getParserWithDescription(String newQuestionRegex, String optionRegex, String answerRegex, String descriptionRegex) {
         DynamicPatternParser dynamicPatternParser = new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
         dynamicPatternParser.setDescriptionPattern(descriptionRegex);
+        return dynamicPatternParser;
+    }
+
+    public static DynamicPatternParser getParserWithCategory(String newQuestionRegex, String optionRegex, String answerRegex, String descriptionRegex, String categoryRegex) {
+        DynamicPatternParser dynamicPatternParser = new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
+        dynamicPatternParser.setDescriptionPattern(descriptionRegex);
+        dynamicPatternParser.setCategoryPattern(categoryRegex);
         return dynamicPatternParser;
     }
 
@@ -74,11 +85,20 @@ public class DynamicPatternParser implements PatternParser {
     }
 
     @Override
+    public boolean isCategory(String line) {
+        return categoryPattern != null && categoryPattern.matcher(line).matches();
+    }
+
+    @Override
     public boolean ignoreLine(String line) {
         return line == null || ignorePattern.matcher(line).matches();
     }
 
     public void setDescriptionPattern(String descriptionPattern) {
         this.descriptionPattern = Pattern.compile(descriptionPattern);
+    }
+
+    public void setCategoryPattern(String categoryPattern) {
+        this.categoryPattern = Pattern.compile(categoryPattern);
     }
 }

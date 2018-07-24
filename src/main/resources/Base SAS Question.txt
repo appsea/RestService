@@ -250,7 +250,7 @@ B. OPTIONS RESET PAGENO = 1;
 C. OPTIONS RESET PAGENUMBER = 1;
 D. OPTIONS PAGENUMBER = 1;
 
-Answer: A.
+Answer: A
 Description: Options pageno=1 reset the page number to 1.
 
 Question:
@@ -390,7 +390,7 @@ B. LA = name||’,’||put(Age,2.);
 C. LA = name||’ ,’||TRIM(put(Age,2.));
 D. LA = put(name)||’,’||put(Age,3.);
 
-Answer: A.
+Answer: A
 Description: TRIM function removes leading and trailing blacks from name and concatenate it with age value.
 
 Question:

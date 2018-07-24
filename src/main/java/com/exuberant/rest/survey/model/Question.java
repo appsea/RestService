@@ -25,6 +25,7 @@ public class Question {
     private Exception exception;
     private String answer;
     private String submittedAnswer = new String();
+    private String category;
     private Collection<Object> waste = new ArrayList<>();
 
     public Question(String fileName, String questionNumber) {
@@ -32,20 +33,16 @@ public class Question {
         this.number = questionNumber;
     }
 
-    /*public String getId() {
-        return fileName + " " + number;
-    }*/
-
     public Options getOptions() {
         return options;
     }
 
     public String getDescription() {
-        return description.toString();
+        return description.toString().replaceAll("\n$", "");
     }
 
     public String getExplanation() {
-        return explanation.toString();
+        return explanation.toString().replaceAll("\n$", "");
     }
 
     @JsonIgnore
@@ -86,6 +83,10 @@ public class Question {
         this.setAnswer(tags);
         String[] answers = tags.split(",");
         options.addAnswer(Arrays.asList(answers));
+    }
+
+    public void setCategory(String category) {
+        this.category = category.trim();
     }
 
     @JsonIgnore
@@ -176,5 +177,9 @@ public class Question {
 
     public String getNumber() {
         return number;
+    }
+
+    public String getCategory() {
+        return category;
     }
 }

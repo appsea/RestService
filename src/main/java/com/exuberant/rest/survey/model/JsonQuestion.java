@@ -11,6 +11,7 @@ public class JsonQuestion {
     private String number;
     private String description;
     private String explanation;
+    private String category;
     private List<JsonOption> options = new ArrayList<>();
 
     public void addOption(JsonOption jsonOption) {
