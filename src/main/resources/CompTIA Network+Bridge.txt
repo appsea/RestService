@@ -1,0 +1,1195 @@
+
+QUESTION NO: 1
+Horizontal cross-connect (HCC) is a term in networks for a wiring closet where the horizontal
+cabling connects to a patch panel which is connected by backbone cabling to the main distribution
+facility. Which of the following is the maximum CAT3 length acceptable for a horizontal crossconnect?
+A. 100 meters (328 feet)
+B. 125 meters (410 feet)
+C. 256 meters (840 feet)
+D. 328 meters (1076 feet)
+Answer: A
+QUESTION NO: 2
+Which wireless technology permits communication to run at 2.4Ghz and up to 54Mbps?
+A. 802.11b
+B. 802.11a
+C. 802.11g
+D. 802.11n
+Answer: C
+QUESTION NO: 3
+John works as a network administrator of his company. He is noticing timeouts when a user logs
+in. Which of the following would permit John to spread network authentication request traffic
+across multiple authentication servers?
+A. Load balancing
+B. Caching engines
+C. QoS
+D. Traffic shaping
+Answer: A
+QUESTION NO: 4
+What does the 10 stand for in 10Base-T?
+
+
+
+A. Delay
+B. Speed
+C. Resistance
+D. Length
+Answer: B
+QUESTION NO: 5
+Which of the following statements regarding FDDI (Fiber Distributed Data Interface) is TRUE?
+A. FDDI uses CSMA / CD (Carrier Sense Multiple Access / Collision Detection) for media access
+control.
+B. FDDI consists of two counter rotating token rings.
+C. FDDI has a maximum transmission speed of 54 Mbps.
+D. FDDI has a maximum transmission distance of 1,000 meters.
+Answer: B
+QUESTION NO: 6
+Your company network has just been configured with a rogue WAP. Some workstations can??t
+access network resources. Why?
+A. WAP DHCP is enabled
+B. WEP is enabled
+C. WAP gateway address is not configured properly
+D. WEP key is not valid
+Answer: A
+QUESTION NO: 7
+A large company with five-thousand local users must make sure that all users could access
+needed Internet resources with the least amount of latency. Which of the following will permit the
+network to maximize response time?
+A. Install multiple DNSservers onsite
+B. Install a DHCP server
+C. Install an additional Application Server
+D. Install multiple NICs
+
+
+
+Answer: A
+QUESTION NO: 8
+Which IEEE standard describes Thinnet?
+A. 802.3a
+B. 802.3ab
+C. 802.3ae
+D. 802.3u
+Answer: A
+QUESTION NO: 9
+A client workstation is unable to connect to the network due to having not been assigned an IP
+address. Which server is MOST likely the problem?
+A. DNS
+B. WINS
+C. DHCP
+D. FTP
+Answer: C
+QUESTION NO: 10
+Look at the following items carefully, which is the approximate standard data transmission rate in
+both directions for a T1 line?
+A. 1.54Mbps
+B. 44.73Mbps
+C. 6.31Mbps
+D. 10.54Mbps
+Answer: A
+QUESTION NO: 11
+Single-mode fiber-optic cable is used in ______.
+
+
+A. 100Base-FX and 1000Base-SX
+B. 10GBase-ER and 10 GBase-LR
+C. 1000Base-SR and10 GBase-SR
+D. FDDI (Fiber Distributed Data Interface)
+Answer: B
+QUESTION NO: 12
+A computer can not connect to the network any more. The technician tries to ping the loopback
+address and receives no response back and gets a timeout error message. Which action should
+the technician take next?
+A. Replace the Ethernet cable
+B. Replace the WAP
+C. Restart the router
+D. Restart the computer
+Answer: D
+QUESTION NO: 13
+A rollover cable will be used in which of the following situation?
+A. Connecting a PC to a printer
+B. Connecting two switches back-to-back
+C. Connecting a PC to a console port
+D. Connecting a PC to a switch
+Answer: C
+QUESTION NO: 14
+When ending local exchange carrier responsibility, which of the following is the point?
+A. MDF
+B. Point of Presence (POP)
+C. Smart jack
+D. Demarc
+Answer: D
+
+
+QUESTION NO: 15
+Multimode fiber-optic cable is used in ______.
+A. 1000Base-CX
+B. 10GBase - SR
+C. 10GBase-ER
+D. 10GBase-LR
+Answer: B
+QUESTION NO: 16
+A routing protocol is a protocol that specifies how routers communicate with each other,
+disseminating information that enables them to select routes between any two nodes on a
+Computer network, the choice of the route being done by routing algorithms. Which routing
+protocol is a link state and uses a backbone called area 0?
+A. OSPF
+B. BGP
+C. IS-IS
+D. EIGRP
+Answer: A
+QUESTION NO: 17
+Which network monitoring utility can make sure that there are no major collisions occurring on the
+network?
+A. Network access control software
+B. Discovery and connectivity software
+C. Antivirus and anti-spyware software
+D. Interface counters
+Answer: D
+QUESTION NO: 18
+
+
+A companys network currently has three Microsoft Windows 2000 servers. A Novell NetWare 4.0
+server is added, but none of the Microsoft Windows 2000 servers can access the Novell server.
+What must be done so that the Microsoft Windows 2000 servers can access the Novell NetWare
+4.0 server?
+A. Install NetBEUI (Network Basic Input / Output Extended User Interface) on the Microsoft
+Windows 2000 servers
+B. Install NetBEUI (Network Basic Input / Output Extended User Interface) on the Novell NetWare
+4.0 server
+C. Install NWLINK on the Microsoft 2000 servers
+D. Install NWLINK on the Novell NetWare 4.0 server
+Answer: C
+QUESTION NO: 19
+Which authentication protocol sends user credentials in plain text?
+A. PAP
+B. CHAP
+C. MS-CHAPv2
+D. MS-CHAP
+Answer: A
+QUESTION NO: 20
+Social engineering is the act of manipulating people into performing actions or divulging
+confidential information. While similar to a confidence trick or simple fraud, the term typically
+applies to trickery or deception for the purpose of information gathering, fraud or computer system
+access; in most cases the attacker never comes face-to-face with the victim. Which of the
+following can mitigate social engineering attacks?
+A. Policies
+B. Logical network diagram
+C. Baselines
+D. Wiring schematics
+Answer: A
+
+QUESTION NO: 21
+Which of the following options allows for secure communication over the Internet?
+A. RAS (Remote Access Service)
+B. RDP (Remote Desktop Protocol)
+C. SLIP (Serial Line Internet Protocol)
+D. VPN (Virtual Private Network)
+Answer: D
+QUESTION NO: 22
+Which of the following is the 66 block termination point?
+A. Coaxial compliant.
+B. IEEE 1394 compliant.
+C. CAT6 compliant.
+D. CAT3 compliant.
+Answer: D
+QUESTION NO: 23
+Which of the following will have the MOST negative effect on network security?
+A. HTTPS
+B. RSH
+C. SNMPv3
+D. SCP
+Answer: B
+QUESTION NO: 24
+Certways.com has a token bus network. A break occurs in the network cable. How will this affect
+the network?
+A. The network will be split into two token bus networks.
+B. The nodes downstream from the break will have no network connectivity.
+C. The nodes upstream from the break will have no network connectivity.
+D. The network will collapse.
+
+Answer: D
+QUESTION NO: 25
+Which media type is NOT susceptible to electromagnetic interference (EMI)?
+A. Unshielded Twister Pair cable
+B. Shielded Twister Pair cable
+C. Co-axial cable
+D. Fiber-optic cable
+Answer: D
+QUESTION NO: 26
+In telecommunications, connectionless describes communication between two network end points
+in which a message can be sent from one end point to another without prior arrangement. Which
+of the following is considered a connectionless-oriented protocol?
+A. IP
+B. TCP
+C. SPX
+D. UDP
+Answer: D
+QUESTION NO: 27
+What is the purpose of the UDP protocol?
+A. Server to server connections
+B. Video conferencing
+C. Uploading files to a FTP server
+D. Typical user LAN traffic
+Answer: B
+QUESTION NO: 28
+What is the maximum length for a 1000Base-SX cable segment?
+
+A. 300 meters
+B. 550 meters
+C. 10 kilometers
+D. 40 kilometers
+Answer: B
+QUESTION NO: 29
+Which layer 2 device will permit an administrator to connect two networks?
+A. Hub
+B. Bridge
+C. Router
+D. Firewall
+Answer: B
+QUESTION NO: 30
+Which is the most secure protocol that will allow a technician to remotely work on servers over a
+WAN?
+A. FTP
+B. SSH
+C. SIP
+D. Telnet
+Answer: B
+QUESTION NO: 31
+What is the maximum length of a 1000Base-CX cable segment?
+A. 25 meters
+B. 75 meters
+C. 100 meters
+D. 550 meters
+Answer: A
+
+QUESTION NO: 32
+Which tool will be installed in the server room to automate humidity drop reporting?
+A. Thermometer
+B. OTDR
+C. Environmental sensor
+D. Voltage event recorder
+Answer: C
+QUESTION NO: 33
+Which device can handle several secure tunneling connections?
+A. VPN concentrator
+B. NAT
+C. IPS
+D. IDS
+Answer: A
+QUESTION NO: 34
+A client noticed that traffic has increased steadily over the last few months and performance is
+beginning to suffer on its TCP / IP (Transmission Control Protocol / Internet Protocol). Which
+network device can be installed to reduce the impact of network traffic without dividing the LAN
+(Local Area Network) into separate subnets?
+A. Bridge
+B. Repeater
+C. Router
+D. Gateway
+Answer: A
+QUESTION NO: 35
+Network topology is the study of the arrangement or mapping of the elements (links, nodes, etc.)
+of a network, especially the physical (real) and logical (virtual) interconnections between nodes.
+Which network topology will provide the greatest protection against network outages due to a
+single line break?
+
+A. Ring
+B. Bus
+C. Mesh
+D. Star
+Answer: C
+QUESTION NO: 36
+Your company has implemented a VoIP phone system. Power is not available in all areas of the
+building. Which equipment can be used to solve this problem?
+A. Routers
+B. PoE switches
+C. Hubs
+D. CSUs
+Answer: B
+QUESTION NO: 37
+Which description is correct about configuring two network cards for failover in the event that one
+of the NICs becomes defective?
+A. constantly awake mode (CAM).
+B. Data redundancy.
+C. Hardware teaming.
+D. Full duplex mode.
+Answer: C
+QUESTION NO: 38
+Which of the following has a maximum data transmission rate of 10 Gbps?
+A. 10Base-2, 10Base-5 and 10Base-T.
+B. 100Base-FX, 100Base-TX and FDDI.
+C. 1000Base-CX, 1000Base-LX and 1000Base-SX.
+D. 10GBase-ER, 10 GBase-LR and 10 GBase-SR.
+Answer: D
+
+QUESTION NO: 39
+Which monitoring software can view network traffic at the frame level?
+A. Connectivity
+B. Packet sniffer
+C. Load testing
+D. Throughput testing
+Answer: B
+QUESTION NO: 40
+Which description is correct about the advanced switch feature that allows an analyzer on one port
+of a switch to see all the traffic passing through a different port on that switch?
+A. VLAN.
+B. Spanning tree.
+C. Protocol analyzer.
+D. Port mirroring.
+Answer: D
+QUESTION NO: 41
+Which digital interface device is used to connect to a local service providers digital T1 (T-Carrier
+Level 1) or E1 network?
+A. NIC (Network Interface Card)
+B. ISDN (Integrated Services Digital Network)
+C. CSU / DSU (Channel Service Unit / Data Service Unit)
+D. WAP (Wireless Access Point)
+Answer: C
+QUESTION NO: 42
+Which type of connector can connect a PC to a dial-up modem?
+
+A. RS-232
+B. RJ-45
+C. RG-6
+D. ST
+Answer: A
+QUESTION NO: 43
+Which switch feature could send data from multiple VLANs between two switches?
+A. Port mirroring
+B. Spanning tree
+C. Port authentication
+D. Porttrunking
+Answer: D
+QUESTION NO: 44
+Which of the following are small form factor fiber-optic connectors? (Choose all that apply)
+A. MT-RJ
+B. LC
+C. ST
+D. RJ-45
+Answer: A,B
+QUESTION NO: 45
+A computer can not access web pages. A simple method to determine if DNS is configured
+correctly is to PING a domain name and determine if the:
+A. Reply had a TTL value of less than 300ms.
+B. Domain name resolved to an IP address.
+C. Domain name repeated throughout thePING.
+D. IP address resolved to the domain name.
+Answer: B
+
+QUESTION NO: 46
+Which type of Internet connection has the highest amount of latency?
+A. Satellite
+B. Fiber
+C. DSL
+D. Cable
+Answer: A
+QUESTION NO: 47
+When using a subnet mask of 255.255.255.128, which of the following is the default broadcast
+address of the 192.168.2.0 network?
+A. 192.168.2.254
+B. 192.168.2.255
+C. 192.168.2.127
+D. 192.168.2.1
+Answer: C
+QUESTION NO: 48
+With which of the following would you use a RJ-45 connector? (Choose all that apply)
+A. 100Base-T
+B. 1000Base-CX
+C. 1000Base-LX
+D. 1000Base-TX
+Answer: A,D
+QUESTION NO: 49
+Which type of cable will be LEAST affected by EMI?
+A. UTP
+B. STP
+C. Coax
+D. Fiber
+
+Answer: D
+QUESTION NO: 50
+A technician is troubleshooting a connectivity issue on a client machine. The command ipconfig
+does not return an IP address. Why?
+A. No network connection is present.
+B. DNS server is down.
+C. User is not logged on to the correct domain.
+D. DHCP server is not functioning.
+Answer: A
+QUESTION NO: 51
+A patch cable is used to connect which of the following in a token ring network?
+A. A host to a switch
+B. A host to a hub
+C. Two MAUs
+D. Two hosts
+Answer: C
+QUESTION NO: 52
+Which of the following is the necessary time between a topology change and all routers agreeing
+on the new network topology?
+A. Packet latency.
+B. Failover time.
+C. Convergence time.
+D. Next hop delay.
+Answer: C
+QUESTION NO: 53
+Which non-overlapping channel is part of the 802.11b/g North American frequency range? (Select
+TWO).
+
+A. 1
+B. 8
+C. 10
+D. 11
+Answer: A,D
+QUESTION NO: 54
+How many pins would you expect to find on a connector used on a 1000Base-TX network?
+A. 4
+B. 8
+C. 9
+D. 16
+Answer: B
+QUESTION NO: 55
+Which server manages the number of assigned IP addresses that a company will have in a given
+network?
+A. Proxy server
+B. DNS server
+C. DHCP server
+D. WINS server
+Answer: C
+QUESTION NO: 56
+Which one of the following items can be used to daisy chain hubs and switches to each other?
+A. Straight cables
+B. Rollover cable
+C. Loopback
+D. Crossover cable
+Answer: D
+
+QUESTION NO: 57
+Which of the following workstations will be affected when a SINGLE link on a full-mesh network
+fails?
+A. The workstations directly connected to the failed link.
+B. The workstations downstream from the failed link.
+C. The workstations upstream from the failed link.
+D. None of the workstations.
+Answer: D
+QUESTION NO: 58
+The certways.com network has a 100Base-T switch. You need to add a new host to the
+certways.com network. Which cable would you require?
+A. RG-58 co-axial cable.
+B. A Category 3 UTP cable.
+C. A Category 5 UTP cable.
+D. AMultiMode Fiber-optic cable.
+Answer: C
+QUESTION NO: 59
+Study the following situation carefully, then answer my question.
+Given: A network technician installed a 10/100/1000 NIC into a server and the network tests are
+only reporting it as having a 10Mb connection.
+Question: Which is the most likely cause of this problem?
+A. The port duplex is mismatched.
+B. An incorrect channel frequency is being used.
+C. The server is on the wrong VLAN.
+D. The port speed is set incorrectly on the switch.
+Answer: D
+QUESTION NO: 60
+
+Refer to the following items, which is an example of physical device security?
+A. Restricting remote access
+B. Requiring a strong password
+C. An ACL on the device
+D. Restricting facility access
+Answer: D
+QUESTION NO: 61
+What is the maximum standard distance allowed to connect a customer via an ISDN (Integrated
+Services Digital Network) line?
+A. 6,000 feet (1,828.8 meters)
+B. 8,000 feet (2,438.4 meters)
+C. 12,000 feet (3,657.6 meters)
+D. 18,000 feet (5,486.4 meters)
+Answer: D
+QUESTION NO: 62
+Which device can provide DHCP services as well as routing services?
+A. Basic DHCP server.
+B. Layer three switch.
+C. Layer two switch.
+D. Bridge
+Answer: B
+QUESTION NO: 63
+Which protocol can be used by a technician to update and retrieve files located on network
+equipment distributed throughout the network securely?
+A. RCP
+B. SFTP
+C. TFTP
+D. FTP
+
+Answer: B
+QUESTION NO: 64
+Which one of the following items can generate 100Mbps throughput on twisted pair wiring, using
+fast Ethernet?
+A. 100base-FX
+B. 10Gbase-LR
+C. 10Gbase-SR
+D. 100base-TX
+Answer: D
+QUESTION NO: 65
+How will a failure of a switch on a routed network with two subnets affect communication?
+(Choose all that apply)
+A. The entire network will be down.
+B. The network will remain fully operational.
+C. Communication between subnets will be affected.
+D. The subnet with the failed switch will be affected.
+Answer: C,D
+QUESTION NO: 66
+Your company wants to stop all IM chat through the internet. A technician uses a traffic shaping
+device to block IRC traffic, yet IM chat remains useable. Which action should be taken by the
+technician next?
+A. Contact the IM carrier to request the IM accountbe disabled.
+B. Block both IRC and ICMP
+C. Utilize SNMP to identify IM users
+D. Change the shaping setting to allow minimal traffic to reduce port hopping.
+Answer: D
+QUESTION NO: 67
+
+0
+
+A user can not connect to the network. All other users connected to the same switch have not this
+problem. After verifying that the NIC and the connection from the wall to the switch port are
+working normally, which tool should be used by the technician to isolate the problem?
+A. A toner probe
+B. A cable tester
+C. A punch down
+D. Amultimeter
+Answer: B
+QUESTION NO: 68
+How will a failure of a router on a network with two subnets affect communication?
+A. The entire network will be down.
+B. The network will remain fully operational.
+C. Communication between subnets will be affected.
+D. All workstations connected to the router will be affected.
+Answer: C
+QUESTION NO: 69
+Two locations with a wireless WAN intermittently drop the connection between each other
+throughout the day. Which one of the following items will most likely cause the inconsistent
+connection?
+A. Bad media
+B. Routers from different vendors
+C. Frequency hopping is enabled
+D. Interference
+Answer: D
+QUESTION NO: 70
+Social engineering is the act of manipulating people into performing actions or divulging
+confidential information. While similar to a confidence trick or simple fraud, the term typically
+applies to trickery or deception for the purpose of information gathering, fraud or computer system
+access; in most cases the attacker never comes face-to-face with the victim. Which of the
+following can mitigate social engineering attacks?
+
+1
+
+A. Policies
+B. Logical network diagram
+C. Baselines
+D. Wiring schematics
+Answer: A
+QUESTION NO: 71
+Which of the following operates at a maximum of 10 Gbps?
+A. 10GBase-SR
+B. 10Base-T
+C. Token Ring
+D. FDDI
+Answer: A
+QUESTION NO: 72
+Which device sets the framing type on a T1 circuit?
+A. Router
+B. Transceiver
+C. Gateway Modem
+D. CSU/DSU
+Answer: D
+QUESTION NO: 73
+Which tool can best check connectivity of a CAT5 cable?
+A. Punch-down tool
+B. Tone generator
+C. Multimeter
+D. Cable tester
+Answer: D
+
+2
+
+QUESTION NO: 74
+Which one of the following security protocols creates a secure connection over the Internet?
+A. L2TP (Layer 2 Tunneling Protocol)
+B. PPP (Point-to-Point Protocol)
+C. SNMP (Simple Network Management Protocol)
+D. WEP (Wired Equivalent Privacy)
+Answer: A
+QUESTION NO: 75
+What will happen when a SINGLE connection to one of the network hosts in a full mesh network
+fails?
+A. The whole network will be down and none of the hosts will have network connectivity.
+B. The failed connection will be down and only its hosts will have no network connectivity.
+C. The failed connection will be down but all hosts will still be connected to the network.
+D. The failed connection will be down and only the two hosts between the failedconnection will
+have no network connectivity.
+Answer: C
+QUESTION NO: 76
+RIPv2 is the newer, enhanced version of the RIP routing protocol, and is specified in RFC 1723.
+Which is the maximum hop count for RIPv2?
+A. 10
+B. 16
+C. 17
+D. 18
+Answer: B
+QUESTION NO: 77
+Ethernet is a family of frame-based computer networking technologies for local area networks
+(LANs). An Ethernet LAN has several trunk links passing near heavy machinery resulting in EMI.
+Which type of Ethernet media can avoid interference?
+
+3
+
+A. 100Base-FX
+B. 10Base5
+C. 100Base-T
+D. 10Base2
+Answer: A
+QUESTION NO: 78
+Which UNIX service provides interoperability with Windows file and print sharing?
+A. Mozilla
+B. NFS (Network File Service)
+C. SMB (Server Message Block)
+D. TCL (Terminal Control Language)
+Answer: C
+QUESTION NO: 79
+Dynamic Host Configuration Protocol (DHCP) is a network application protocol used by devices
+(DHCP clients) to obtain configuration information for operation in an Internet Protocol network.
+After enabling DHCP, what information will be received?
+A. MAC address
+B. Network permissions
+C. SMTP
+D. Subnet Mask
+Answer: D
+QUESTION NO: 80
+Static routing describes a system that does not implement adaptive routing. In these systems,
+routes through a data network are described by fixed paths (statically). While using static routes,
+how does the network correct for link failures?
+A. The administrator is required to manually alter routes.
+B. The default gateway will select an alternate path to the destination to route around the link
+failure.
+C. The routers send traffic back to the origin to select a different path to the destination.
+
+4
+
+D. The routers automatically exchange static routes to learn the network topology.
+Answer: A
+QUESTION NO: 81
+A single connection in a token bus network fails. What will happen?
+A. The whole network will be down and none of the hosts will have network connectivity.
+B. The failed connection will be down and only its hosts will have no network connectivity.
+C. All hosts will still be connected to the network and only failed connection will be down.
+D. The failed connection will be down and only the two hosts between the failedconnection will
+have no network connectivity.
+Answer: A
+QUESTION NO: 82
+Which is the primary difference between an IGP and an EGP?
+A. An IGP is typically used within a single routing domain.
+B. EGP supports dynamic routing whereas IGPs do not.
+C. IGP supports dynamic routing whereas EGPs do not.
+D. An EGP is typically used within a single routing domain.
+Answer: A
+QUESTION NO: 83
+Which interference situation should be avoided when initially placing an 802.11g WAP in a
+permanent location? (Select TWO).
+A. Large open areas
+B. Buildings with multiple floors
+C. Large steel and/or concrete walls
+D. Microwaves and refrigerators
+Answer: C,D
+QUESTION NO: 84
+
+5
+
+Which network topology would require the MOST cable?
+A. The star topology.
+B. The ring topology.
+C. The bus topology.
+D. The full-mesh topology.
+Answer: D
+QUESTION NO: 85
+In computer networking, network address translation (NAT) is the process of modifying network
+address information in datagram packet headers while in transit across a traffic routing device for
+the purpose of remapping a given address space into another. Which function is performed by
+NAT?
+A. Sends and receives network traffic from both external resources and internal resources
+B. Serves as a routing protocol on a TCP/IP network
+C. Initiates and receives changes to the routing table within a private network
+D. Allows computers on a private network to access external computers through a public network
+Answer: D
+QUESTION NO: 86
+Computers on a 10.x.x.x environment using 100Base-T suddenly begin receiving 192.168.x.x
+addresses from DHCP. What most likely causes this problem?
+A. The default route being handed out by DHCP has been changed
+B. DHCP is corrupt and should be restarted
+C. WINS has been disabled
+D. ASOHO wireless router has been connected to the network
+Answer: D
+QUESTION NO: 87
+Which network equipment would play the role of intelligently forwarding frames from one collision
+domain to another?
+A. Switch
+
+6
+
+B. Hub
+C. Media converter
+D. Router
+Answer: A
+QUESTION NO: 88
+Which of the following operates at a maximum of 16 Mbps?
+A. 10GBase-SR
+B. 10Base-T
+C. Token Ring
+D. FDDI
+Answer: C
+QUESTION NO: 89
+On wireless networks, EAP expands on authentication methods used by which of the following?
+A. SCP.
+B. PPP.
+C. SSH.
+D. HTTPS.
+Answer: B
+QUESTION NO: 90
+Which protocol will permit a server to collect data about network performance?
+A. SMTP
+B. ICS
+C. SNMP
+D. TCP
+Answer: C
+QUESTION NO: 91
+
+7
+
+Which network topology has at least two physical connections per host?
+A. The star topology.
+B. The ring topology.
+C. The bus topology.
+D. The partial-mesh topology.
+Answer: D
+QUESTION NO: 92
+How to increase the security of the wireless network?
+A. Disable the remote logging feature.
+B. Enabletrunking.
+C. Disable the broadcast of the ESSID.
+D. Enable the DHCP.
+Answer: C
+QUESTION NO: 93
+Look at the following items, which is the standard trunk protocol?
+A. 802.11b
+B. 802.1s
+C. 802.11a
+D. 802.1q
+Answer: D
+QUESTION NO: 94
+Which of the following could be used in a token ring network?
+A. A hub.
+B. A switch.
+C. A router.
+D. A MSAU.
+Answer: D
+
+8
+
+QUESTION NO: 95
+Your company has implemented a VoIP phone system. Power is not available in all areas of the
+building. Which equipment can be used to solve this problem?
+A. CSUs
+B. PoE switches
+C. Routers
+D. Hubs
+Answer: B
+QUESTION NO: 96
+Which cable standard has a maximum effective range of 25 meters (82 feet)?
+A. 1000Base-CX
+B. 1000Base-SX
+C. 1000Base-T
+D. 1000Base-LX
+Answer: A
+QUESTION NO: 97
+Alexander is a system administrator of his company. Now, he is troubleshooting an application that
+is terminating frequently. Which of the following can be used to identify the problem?
+A. Application log
+B. DNS log
+C. History log
+D. Port scanner
+Answer: A
+QUESTION NO: 98
+A network administrator is troubleshooting connectivity from a client machine. An error message
+that reads "Page Cannot be Displayed" is shown in the browser whenever a FQDN (Fully Qualified
+Domain Name) is typed in the address bar. However, if the IP (Internet Protocol) address is typed
+in the browser the site is displayed. At which port number is the problem taking place?
+
+9
+
+A. 53
+B. 80
+C. 119
+D. 443
+Answer: A
+QUESTION NO: 99
+Plain old telephone service (POTS) is the voice-grade telephone service that remains the basic
+form of residential and small business service connection to the telephone network in most parts
+of the world. Which connector would be used on a POTS connection?
+A. RJ-11
+B. MT-RJ
+C. F-Type
+D. RJ-45
+Answer: A
+QUESTION NO: 100
+A network technician of your company is asked to use a client computer to troubleshoot
+connectivity problems. The technician must determine the MAC address of the NIC. Which
+command will permit the MAC address to be displayed within a command prompt?
+A. nbtstat
+B. netstat
+C. nslookup
+D. ipconfig
+Answer: D
+QUESTION NO: 101
+Which of the following networks would collapse should a single node on the network fail? (Choose
+all that apply)
+A. Ethernet
+B. Token Bus.
+C. Token Ring.
+
+0
+
+D. Mesh.
+Answer: B,C
+QUESTION NO: 102
+Which process can identify the coverage area of a wireless access point?
+A. Wireless blueprinting
+B. Network mapping
+C. Site assessment
+D. Site survey
+Answer: D
+QUESTION NO: 103
+Which device should be installed to create an additional collision domain without affecting the
+number of broadcast domains?
+A. A hub
+B. A bridge
+C. A media converter
+D. A router
+Answer: B
+QUESTION NO: 104
+Which of the following statements regarding mesh network is FALSE?
+A. It has at least two physical connections per host.
+B. A single failed connection will affect only that host.
+C. New hosts can be added quickly and easily.
+D. It is the most common topology used on the Internet.
+Answer: B
+QUESTION NO: 105
+
+1
+
+Refer to the following ports, which one allows for client to server email communication?
+A. 23
+B. 53
+C. 67
+D. 143
+Answer: D
+QUESTION NO: 106
+A new computer which has a 169.254.0.1 IP address is deployed and plugged into a non DHCP
+network. Which of the following should be changed on the computer?
+A. DHCP needs to be enabled.
+B. A WINS IP address needs to be assigned.
+C. The DNS IP address needs to be assigned.
+D. A static IP needs to be assigned.
+Answer: D
+QUESTION NO: 107
+When a break in the cable of a token ring network occurs, ______.
+A. The network will revert to a token bus network
+B. The nodes downstream from the break will have no network connectivity
+C. The nodes upstream from the break will have no network connectivity
+D. The network will collapse
+Answer: D
+QUESTION NO: 108
+certways.com has a network that has a total of five hosts. Should certways.com implement a
+fullmesh network, how many physical connections will each host have?
+A. 1
+B. 2
+C. 4
+D. 5
+
+2
+
+Answer: C
+QUESTION NO: 109
+Which remote access method is commonly associated with a modem bank?
+A. VNC
+B. ICA
+C. RDP
+D. RAS
+Answer: D
+QUESTION NO: 110
+An Intrusion detection system (IDS) is software and/or hardware designed to detect unwanted
+attempts at accessing, manipulating, and/or disabling of computer systems, mainly through a
+network, such as the Internet. Which feature will allow intrusion detection sensors to intercept
+traffic crossing a switched LAN?
+A. Port authentication
+B. Port mirroring
+C. Porttrunking
+D. Port aggregation
+Answer: B
+QUESTION NO: 111
+What is the maximum speed at which a token ring network operates?
+A. 4 Mbps
+B. 10 Mbps
+C. 16 Mbps
+D. 100 Mbps
+Answer: C
+QUESTION NO: 112
+
+3
+
+Which of the following methods transfers files with the use of a UDP (User Datagram Protocol)?
+A. HTTP (Hypertext Transfer Protocol)
+B. TFTP (Trivial File Transfer Protocol)
+C. SCP (Secure Copy Protocol)
+D. FTP (File Transfer Protocol)
+Answer: B
+QUESTION NO: 113
+After implementing the DHCP server on the network, an application server is getting an IP address
+conflict. What should be configured?
+A. Exclude the application server IP from the DHCP scope
+B. Reboot the application server
+C. Ping the conflicting IP to resolve the computer name
+D. Reboot the DHCP server
+Answer: A
+QUESTION NO: 114
+What is the maximum speed at which a 10Base-T Ethernet network operates?
+A. 4 Mbps
+B. 10 Mbps
+C. 16 Mbps
+D. 100 Mbps
+Answer: B
+QUESTION NO: 115
+Which of the following is typically connected by a 100 pair cable?
+A. Telephony distribution.
+B. Computer labs with more than 20 computers.
+C. Businesses with more than 75 computers.
+D. Security cameras.
+Answer: A
+
+4
+
+QUESTION NO: 116
+UDP is short for User Datagram Protocol. Which of the following is a property of UDP?
+A. UDP makes its best effort to deliver packets
+B. UDP uses error correction
+C. UDP uses acknowledgments for delivery
+D. UDP is a connection-oriented protocol
+Answer: A
+QUESTION NO: 117
+An administrator has added a new DNS (Domain Name Service) server for fault tolerance in a
+network. If the administrator wants the DHCP (Dynamic Host Configuration Protocol) clients to use
+the new server, they should configure:
+A. A static IP (Internet Protocol) on the client and add the server IP (Internet Protocol) to the DNS
+(Domain Name Service) list.
+B. The DHCP (Dynamic Host Configuration Protocol) server to provide the setting to the clients.
+C. The DHCP (Dynamic Host Configuration Protocol) server to increase lease expiration time.
+D. The DHCP (Dynamic Host Configuration Protocol) client to increase lease expiration time.
+Answer: B
+QUESTION NO: 118
+Tom is a network technician of his company. He is asked to extend a data circuit to the other side
+of the building. What should be set up at the new location?
+A. IDF
+B. ESD
+C. MDF
+D. EMI
+Answer: A
+QUESTION NO: 119
+
+5
+
+Which device can deal with several secure tunneling connections?
+A. VPN concentrator
+B. NAT
+C. IPS
+D. IDS
+Answer: A
+QUESTION NO: 120
+Cat5e cable is an enhanced version of Cat 5 that adds specifications for far end crosstalk. Which
+option is the maximum transmission speed of CAT5e?
+A. 10Mbps
+B. 100Mbps
+C. 1000Mbps
+D. 10000Mbps
+Answer: C
+QUESTION NO: 121
+Which IEEE standard describes Ethernet?
+A. 802.3
+B. 802.4
+C. 802.5
+D. 802.11
+Answer: A
+QUESTION NO: 122
+What is the objective of a port scanner?
+A. Views networkdatagrams.
+B. Verifies name to IP address resolution.
+C. Checks the route to a remote host.
+D. Verifies if a service is running on a remote host.
+Answer: D
+
+6
+
+QUESTION NO: 123
+Client computers can not use their VPN client to connect to the remote office. What is the most
+likely cause of this problem?
+A. PPP has not been activated.
+B. The connection file has not been imported.
+C. The 128-bit encryption has not been turned on.
+D. The VPN concentrator or server is down.
+Answer: D
+QUESTION NO: 124
+Which IEEE standard describes Token Ring?
+A. 802.3
+B. 802.4
+C. 802.5
+D. 802.11
+Answer: C
+QUESTION NO: 125
+10BASE2 (also known as cheapernet, thin Ethernet, thinnet, thinwire or quite simply Thinnies) is a
+variant of Ethernet that uses thin coaxial cable (RG-58 or similar, as opposed to the thicker RG-8
+cable used in 10BASE5 networks), terminated with BNC connectors. Which is the maximum
+length of a 10Base2 cable?
+A. 225 feet (67 meters)
+B. 328 feet (100 meters)
+C. 500 feet (152 meters)
+D. 606 feet (185 meters)
+Answer: D
+QUESTION NO: 126
+
+7
+
+Which port can resolve an FQDN to an IP address?
+A. 53
+B. 67
+C. 80
+D. 161
+Answer: A
+QUESTION NO: 127
+Which of the following cable types is used to link together two buildings that are over 10 miles
+(16.09 kilometers) apart?
+A. SMF (Single Mode Fiber)
+B. MMF (MultiMode Fiber)
+C. Coaxial cable
+D. Category 6 cable
+Answer: A
+QUESTION NO: 128
+Which tool can be used to prepare an Ethernet cable for RJ-45 connectors?
+A. Punch down tool
+B. Cable stripper
+C. Butt set
+D. Cable tester
+Answer: B
+QUESTION NO: 129
+When using a protocol analyzer to examine a traffic stream, the network technician discovers that
+latency from packet to packet vary greatly. Which problem is the technician witnessing?
+A. Jitter
+B. High latency
+C. Packet collisions
+D. Packet loss
+
+8
+
+Answer: A
+QUESTION NO: 130
+Which description is correct about the function of a stateful firewall?
+A. Maintains connection information for all established TCP flows.
+B. Offers less functionality for packet inspection than does a stateless firewall.
+C. Can act only as an application layer firewall.
+D. Maintains connection information for all established UDP flows.
+Answer: A
+QUESTION NO: 131
+Which network relies on CSMA / CD (Carrier Sense Multiple Access / Collision Detection) for
+media access control?
+A. Token Bus
+B. Token Ring
+C. Ethernet
+D. Wireless
+Answer: C
+QUESTION NO: 132
+Which network topology is the LEAST fault tolerant?
+A. Bus
+B. Hybrid
+C. Mesh
+D. Star
+Answer: A
+QUESTION NO: 133
+Which network cable can configure a layer 2 switch via the console port?
+
+9
+
+A. Rollover
+B. Straight
+C. Loopback
+D. Crossover
+Answer: A
+QUESTION NO: 134
+Which access method is used in Ethernet?
+A. Token passing
+B. Full duplex
+C. CSMA / CA (Carrier Sense Multiple Access / Collision Avoidance)
+D. CSMA / CD (Carrier Sense Multiple Access / Collision Detection)
+Answer: D
+QUESTION NO: 135
+Which encryption method permits a user to connect to a VPN by use of HTTPS?
+A. IPSec
+B. PPTP
+C. SSL
+D. L2TP
+Answer: C
+QUESTION NO: 136
+Tom is a network technician of his company. He notices that the phone company has installed the
+smart jack in the wrong location. It should be moved 75 feet (23 meters) to the computer room.
+Which of the following should be requested?
+A. A replacement smart jack
+B. A 66 block extension
+C. Ademarc extension
+D. A 110 block extension
+Answer: C
+
+
+
+QUESTION NO: 137
+Which access method is used in Token Ring?
+A. Token passing
+B. Full duplex
+C. CSMA / CA (Carrier Sense Multiple Access / Collision Avoidance)
+D. CSMA / CD (Carrier Sense Multiple Access / Collision Detection)
+Answer: A
+QUESTION NO: 138
+Look at the following devices carefully, which one uses a physical star and a logical bus?
+A. Basic firewall
+B. Hub
+C. Modem
+D. Router
+Answer: B
+QUESTION NO: 139
+Should a break occur in the cable of an Ethernet network, ______ will be offline.
+A. All hosts on the network
+B. The host directly connected to the failed cable
+C. The hosts upstream from the failed cable
+D. None of the hosts on the network
+Answer: B
+QUESTION NO: 140
+Which access method is used in IEEE 802.11 networks?
+A. Token passing
+B. Half duplex
+C. CSMA / CA (Carrier Sense Multiple Access / Collision Avoidance)
+D. CSMA / CD (Carrier Sense Multiple Access / Collision Detection)
+Answer: C
+QUESTION NO: 141
+In an 802.11g network, which is the maximum transmission speed to be received indoors?
+A. 1Mbps
+B. 5.5Mbps
+C. 11Mbps
+D. 54Mbps
+Answer: D
+QUESTION NO: 142
+Which device can forward network traffic according to the destination IP address?
+A. A CSU/DSU
+B. An IPS
+C. A layer two switch
+D. A multilayer switch
+Answer: D
