@@ -12155,5 +12155,6 @@
   ],
   "questionVersion": 3,
   "playStoreVersion": 10042,
-  "ads": true
+  "ads": true,
+  "categories": null
 }

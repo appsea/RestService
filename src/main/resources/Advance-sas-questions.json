@@ -7281,5 +7281,6 @@
   ],
   "questionVersion": 4,
   "playStoreVersion": 10014,
-  "ads": true
+  "ads": true,
+  "categories": null
 }

@@ -18,7 +18,7 @@ D. The index on STATE is updated as an index on ST
 Answer: D
 Description: The index does not delete just because the variable associated with it has a change in name from State to ST. Because it's not deleted, it's not 're-created' either, simply updated.
 
-Category: First
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -57,7 +57,7 @@ D. NOBS=pointobs
 
 Answer: B
 Description: The point options points to the current iteration. Also, it needs to be accompanied by STOP keyword. 'A' simply tells how many observations to process. 'D' transfers number of non-missing in dataset to a variable. 'C' is completely irrelevant.
-Category: Third
+Category: Second
 
 Question:
 When reading a SAS data file, what does the NOBS=option on the SET statement represent?
@@ -69,7 +69,7 @@ D. A variable that represents the current observation number
 
 Answer: C
 Description: it gives the number of observations of the data set which is being read
-Category: Third
+Category: First
 
 Question:
 CORRECT TEXT
@@ -90,7 +90,7 @@ D. result is 10+0.5
 
 Answer: C
 Description: the value will be 10.5, since %sysevalf handles floating values. Had we used %eval in its place, the program would fail & the macros execution will stop
-Category: Third
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -131,7 +131,7 @@ D. result is 0
 
 Answer: C
 Description: %eval returns 0 or 1 for a Boolean expression being calculated inside it. As '1'=true for 10>5, but 1st macro line should be &num, not &nm.
-Category: First
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -151,7 +151,7 @@ D. The data set TEMP is created and variable X has a length of 8
 
 Answer: D
 Description: D for x having length of 8.
-Category: First
+Category: Third
 
 Question:
 Given the SAS data sets ONE and TWO:
@@ -224,7 +224,7 @@ D. 5
 
 Answer: A
 Description: As many as the macro variables are there, we get the datasets
-Category: Second
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -293,7 +293,7 @@ D. REGISTRY
 
 Answer: A
 Description: Proc Datasets is used to perform operations on a data set, like changing the dataset name, indexes,arrtibutes etc.
-Category: Second
+Category: First
 
 Question:
 Given the SAS data set ONE:
@@ -323,7 +323,7 @@ D. null
 
 Answer: B
 Description: Since there is no ampersand sign before sales,when it is being assigned to mfirst, the value of mfirst will be 'sales'
-Category: Third
+Category: First
 
 Question:
 Which SET statement option names a variable that contains the number of observation to read during the current iteration of the DATA step?
@@ -355,7 +355,7 @@ D. result is 10
 
 Answer: B
 Description: %sysevalf evaluates arithmetic and logical expressions using floating-point arithmetic. Notice the %check call which overwrites the num value to 10.
-Category: Third
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -418,7 +418,7 @@ Quit;
 
 Answer: C
 Description: Alter command is used to modify table structure so Delete from tablename where condition is correct syntax.
-Category: Second
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -438,7 +438,7 @@ D. A report showing the number of numeric columns in each table in SASUSER
 
 Answer: B
 Description: 
-Category: First
+Category: Second
 
 Question:
 Given the SAS data sets ONE and TWO:
@@ -529,7 +529,7 @@ Quit;
 
 Answer: B
 Description: 
-Category: Second
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -550,7 +550,7 @@ created in the PDV
 
 Answer: C
 Description: 
-Category: Third
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -571,7 +571,7 @@ D. a is pig
 
 Answer: C
 Description: 
-Category: Second
+Category: Third
 
 Question:
 Given the SAS data set ONE:
@@ -599,7 +599,7 @@ Quit;
 
 Answer: A
 Description: 
-Category: Third
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -623,7 +623,7 @@ D. COMPANY and COUNTRY only
 
 Answer: A
 Description: 
-Category: Third
+Category: Second
 
 Question:
 What is the purpose of the SASFILE statement?
@@ -638,7 +638,7 @@ D. It requests that a SAS data set be opened and loaded into SAS memory in its e
 
 Answer: D
 Description: 
-Category: First
+Category: Third
 
 Question:
 Given the SAS date sets CLASS1 and CLASS2
@@ -690,7 +690,7 @@ D. To reduce the amount of data read
 
 Answer: A
 Description: 
-Category: Third
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -708,7 +708,7 @@ D. It allows updates in place
 
 Answer: A
 Description: 
-Category: Second
+Category: Third
 
 Question:
 The SAS data set ONE contains fifty million observations and contains the variable
@@ -771,7 +771,7 @@ D. COMPANY,COUNTRY and DEPT
 
 Answer: C
 Description: 
-Category: Third
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -815,7 +815,7 @@ D. MODIFY and RENAME statements
 
 Answer: C
 Description: The CHANGE Statement Renames one or more SAS files in the same SAS library.
-Category: Third
+Category: First
 
 Question:
 Given has SAS dataset ONE:
@@ -866,7 +866,7 @@ D. It uses the WORK.TEMPDATA SAS data set as input to create the format
 
 Answer: D
 Description: 
-Category: Second
+Category: Third
 
 Question:
 Given the non-indexed SAS data set TEMP:
@@ -896,7 +896,7 @@ D. By X;
 
 Answer: A
 Description: 
-Category: Second
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -965,7 +965,7 @@ D. SORTSYNC=X
 
 Answer: C
 Description: 
-Category: First
+Category: Second
 
 Question:
 Given the following partial SAS log:
@@ -988,7 +988,7 @@ D. CREATE TABLE
 
 Answer: A
 Description: 
-Category: First
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -1035,7 +1035,7 @@ Specifies the size of a permanent buffer page for an output SAS data set.
 Valid in: DATA step and PROC steps
 Category: Data Set Control
 Restriction: Use with output data sets only.
-Category: First
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -1060,7 +1060,7 @@ Answer: C
 Description: %STR and %NRSTR Functions Mask special characters and mnemonic operators in constant text at macro compilation.
 
 If a special character or mnemonic affects the way the macro processor constructs macro program statements, you must mask the item during macro compilation (or during the compilation of a macro program statement in open code) by using either the %STR or %NRSTR macro quoting functions.
-Category: Second
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -1103,7 +1103,7 @@ D.  any real number between 1 and 2,500,000
 
 Answer: C
 Description: RANUNI Function Returns a random variate from a uniform distribution. RANUNI(seed) : seed
-Category: Second
+Category: Third
 
 Question:
 Which one of the following programs contains a syntax error?
@@ -1134,7 +1134,7 @@ quit;
 
 Answer: C
 Description: In option C, there are reference to c.unitcost and s.quantity of which c and s are not defined anywhere in the code. If anything refered as a refrence then it has to be first defined.
-Category: Third
+Category: Second
 
 Question:
 The following SAS code is submitted:
@@ -1158,7 +1158,7 @@ D. WORK.HOUSES
 
 Answer: D
 Description: SYSLAST the name of the most recently created SAS data set, in the form LIBREF.NAME. This value is always stored in ALL capital letters. SYSLAST Automatic Macro Variable Contains the name of the SAS data file created most recently.
-Category: Third
+Category: Second
 
 Question:
 Given the following SAS data sets ONE and TWO:
@@ -1208,7 +1208,7 @@ D. The WHERE and subsetting IF statements can be used interchangeably in all SAS
 
 Answer: B
 Description: WHERE Statement Selects observations from SAS data sets that meet a particular condition.
-Category: Second
+Category: Third
 
 Question:
 Which of the clauses in the PROC SQL program below is written incorrectly?
@@ -1245,7 +1245,7 @@ D.  5
 
 Answer: A
 Description: There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.
-Category: Third
+Category: First
 
 Question:
 Complete the following PROC SQL query to select the columns Address and SqFeet from the table List.Size
@@ -1262,7 +1262,7 @@ D. either 2 or 3
 
 Answer: B
 Description: The SELECT clause lists the columns from both tables to be queried. You must use a prefix with the Address column because it appears in both tables. The prefix specifies the table from which you want the column to be read.
-Category: First
+Category: Second
 
 Question:
 The variable attributes of SAS data sets ONE and TWO are shown below:
@@ -1310,7 +1310,7 @@ D.  %let codenum = %substr(&amp;idcode,%length(&amp;idcode)-3);
 Answer: C
 Description: Retrieve the substring from the 5 th position, If you use an undeclared variable, it will be assigned a default length of 8 when the SUBSTR function is compiled.
 When you use the SUBSTR function on the left side of an assignment statement, SAS replaces the value of variable with the expression on the right side. SUBSTR replaces length characters starting at the character that you specify in position.
-Category: First
+Category: Second
 
 Question:
 The following SAS program is submitted:
@@ -1343,7 +1343,7 @@ D. Results are grouped by the value of the summarized column.
 
 Answer: C
 Description: Create Table simply creates the table.
-Category: Third
+Category: Second
 
 Question:
 Consider the following SAS log:
@@ -1371,7 +1371,7 @@ Answer: D
 Description: A data step view contains a partially compiled data step program that can read data from a variety of source
 The compiled code doesnt take up too much room for storage
 the view= option tells sas to compile, but not to execute, the source program and to store the compiled code in the input data step that is named in the option
-Category: Second
+Category: First
 
 Question:
 Which PROC SQL query will remove duplicate values of MemberType from the query output, so that only the unique values are listed?
@@ -1411,7 +1411,7 @@ D. both a and c
 
 Answer: A
 Description: The SELECT clause in the program is written incorrectly. Columns that are listed in the clause must be separated by commas, not just blanks.
-Category: Second
+Category: Third
 
 Question:
 How many statements does the program below contain?
@@ -1430,7 +1430,7 @@ D. five
 Answer: A
 Description: There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.
 
-Category: Third
+Category: Second
 
 Question:
 Complete the following PROC SQL query to select the columns Address and SqFeet from the table List.Size and to select Price from the table List.Price. (Only the Address column appears in both tables.)
@@ -1458,7 +1458,7 @@ D. sort price sqfeet
 
 Answer: B
 Description: The ORDER BY clause specifies how the rows are to be sorted. You follow the keywords ORDER BY by one or more column names or numbers, separated by commas.
-Category: Third
+Category: First
 
 Question:
 Which clause below specifies that the two tables Produce and Hardware be queried? Both tables are located in a library to which the libref Sales has been assigned.
@@ -1470,7 +1470,7 @@ D. where sales.produce, sales.hardware
 
 Answer: C
 Description: In the FROM clause, you list the names of the tables to be queried, separated by commas.
-Category: First
+Category: Third
 
 Question:
 Complete the SELECT clause below to create a new column named Profit by subtracting the values of the column Cost from those of the column Price.
@@ -1484,7 +1484,7 @@ D. Profit as price-cost
 
 Answer: B
 Description: To create a new column and assign a column alias to the column, you specify the following in the SELECT clause, in the order shown here: an expression, (optionally) the keyword AS, and a column alias. The case that you use when you create the column name is the one that will be displayed in the output.
-Category: Second
+Category: Third
 
 Question:
 What happens if you use a GROUP BY clause in a PROC SQL step without a summary function?
@@ -1496,7 +1496,7 @@ D. The step executes but does not group or sort data.
 
 Answer: C
 Description: The GROUP BY clause enables you to break query results into subsets of rows. When you use the GROUP BY clause, you use an aggregate function in the SELECT clause or a HAVING clause to  instruct PROC SQL how to group the data. When you specify a GROUP BY clause in a query that does not contain a summary function, your clause is changed to an ORDER BY clause.
-Category: Third
+Category: First
 
 Question:
 If you specify a CREATE TABLE statement in your PROC SQL step,
@@ -1508,7 +1508,7 @@ D. results are grouped by the value of the summarized column.
 
 Answer: C
 Description: The CREATE TABLE statement enables you to store your results in a SAS table instead of displaying the query results as a report.
-Category: First
+Category: Third
 
 Question:
 Which statement is true regarding the use of the PROC SQL step to query data that is stored in two or more tables?
@@ -1520,7 +1520,7 @@ D. If two tables that are being joined contain a same-named column, then you mus
 
 Answer: D
 Description: If you are joining two tables that contain a same-named column, then you must use a prefix to specify the table(s) from which you want the column to be read. Remember that if you join tables that don't contain columns that have matching data values, you can produce a huge amount of output. Be sure to specify a WHERE clause to select only the rows that you want.
-Category: Third
+Category: First
 
 Question:
 Which clause in the following program is incorrect?
@@ -1572,7 +1572,7 @@ D. both a and c
 
 Answer: D
 Description: To list rows that have no data (that is, missing data), you can use either of these other conditional operators: IS MISSING or IS NULL. The NOT EXISTS operator is used specifically with a subquery, and resolves to true if the subquery returns no values to the outer query.
-Category: Second
+Category: First
 
 Question:
 You are creating a PROC SQL query that lists all employees who have spent (or overspent) their allotted 120 hours of vacation for the current year. The hours that each employee used are stored in the existing column Spent. Your query defines a new column, Balance, to calculate each employee's balance of vacation hours.
@@ -1624,7 +1624,7 @@ D. 1
 
 Answer: C
 Description: To determine how PROC SQL calculates and displays output from summary functions, consider the key factors. This PROC SQL query has a GROUP BY clause, and it does not specify any columns that are outside of summary functions. Therefore, PROC SQL calculates and displays the summary function for each group. There are 7 unique values of FlightNumber, but the HAVING clause specifies only the flights that have an average number of boarded passengers greater than 150. Because 4 of the 7 flight numbers meet this condition, the output will contain 4 rows.
-Category: First
+Category: Third
 
 Question:
 You are writing a PROC SQL query that displays the names of all library cardholders who work as volunteers for the library, and the number of books that each volunteer currently has checked out. You use one or both of the following tables:
@@ -1723,7 +1723,7 @@ D. all donors whose current year's donation in Charity.Current has not yet been 
 
 Answer: C
 Description: In this PROC SQL query, the outer query uses the operator NOT EXISTS with a correlated subquery. The outer query selects all rows from Charity.Donors whose names do not appear in Charity.Current. In other words, this PROC SQL query output lists all donors who did not make a contribution in the current year.
-Category: Third
+Category: First
 
 Question:
 Which statement about data remerging is true?
@@ -1735,7 +1735,7 @@ D. PROC SQL does not attempt to remerge data unless a subquery is used.
 
 Answer: C
 Description: The third statement about data remerging is correct.
-Category: Second
+Category: First
 
 Question:
 A public library has several categories of books. Each book in the library is assigned to only one category. The table Library.Inventory contains one row for each book in the library. The Checkouts column indicates the number of times that each book has been checked out.
@@ -1757,7 +1757,7 @@ D. Yes. Requires only a single value to be passed to it by the outer query.
 
 Answer: C
 Description: PROC SQL can execute this query, but the query will not produce the results that you want. If you omit the GROUP BY clause in a query that contains a HAVING clause, then the HAVING clause and any summary functions treat the entire table as one group. Without a GROUP BY clause, the HAVING clause in this example calculates the average circulation for the table as a whole (all books in the library), not for each group (each category of books). The output contains either all the rows in the table (if the average circulation for the entire table is less than 2500) or none of the rows in the table (if the average circulation for the entire table is greater than 2500).
-Category: Third
+Category: Second
 
 Question:
 A Cartesian product is returned when
@@ -1769,7 +1769,7 @@ D. the keyword ALL is used with the OUTER UNION operator.
 
 Answer: A
 Description: A Cartesian product is returned when join conditions are not specified in a PROC SQL join. In a Cartesian product, each row from the first table is combined with every row from the second table.
-Category: First
+Category: Third
 
 Question:
 Given the PROC SQL query and tables shown below, which output is generated?
@@ -1826,7 +1826,7 @@ D. WK       SALES
 
 Answer: B
 Description: This PROC SQL query is an inner join. It combines the rows from the first table that match rows from the second table, based on the matching criteria specified in the WHERE clause. Columns are not overlaid, so all columns from the referenced tables (including any columns with duplicate names) are displayed. Any unmatched rows from either table are not displayed.
-Category: Third
+Category: Second
 
 Question:
 Given the PROC SQL query and tables shown below, which output is generated?
@@ -1872,7 +1872,7 @@ D. ID       SALARY      BONUS
 
 Answer: D
 Description: This PROC SQL query is a right outer join, which retrieves all rows that match across tables, based on the join conditions in the ON clause, plus nonmatching rows from the right (second) table.
-Category: First
+Category: Third
 
 Question:
 Which PROC SQL query produces the same output as the query shown here?
@@ -1909,7 +1909,7 @@ on a.obs=b.obs;
 
 Answer: D
 Description: There are two valid formats for writing a PROC SQL inner join. The PROC SQL query shown at the top of this question uses the first inner join format, which does not use a keyword to indicate the type of join. The alternate format is similar to an outer join and uses the keyword INNER JOIN.
-Category: Third
+Category: Second
 
 Question:
 Which output is generated by the following PROC SQL query?
@@ -1977,7 +1977,7 @@ D. This PROC SQL query contains an in-line view that uses valid syntax:
 
 Answer: A
 Description: Unlike a table, an in-line view exists only during query execution. Because it is temporary, an in-line view can be referenced only in the query in which it is defined.
-Category: Second
+Category: First
 
 Question:
 Which PROC SQL query generates the same output as the DATA step match-merge and PRINT step shown below?
@@ -2058,7 +2058,7 @@ D. a maximum of 2 tables and 32 columns.
 
 Answer: C
 Description: A maximum of 256 tables can be combined in a single inner join. If the join involves views (either in-line views or PROC SQL views), it is the number of tables that underlie the views, not the number of views, that counts towards the limit of 256.
-Category: First
+Category: Second
 
 Question:
 Which statement about the use of table aliases is false?
@@ -2070,7 +2070,7 @@ D. Table aliases must be used when using summary functions.
 
 Answer: D
 Description: The use of summary functions does not require the use of table aliases. All of the other statements about table aliases that are shown here are true.
-Category: Second
+Category: First
 
 Question:
 Which statement is false with respect to a set operation that uses the EXCEPT, UNION, or INTERSECT set operator without a keyword?
@@ -2094,7 +2094,7 @@ D. OUTER UNION
 
 Answer: D
 Description: By default, when processing a set operation that contains the EXCEPT, INTERSECT, and UNION set operators, PROC SQL makes an extra pass through the data to eliminate duplicate rows. The keyword ALL is used to suppress that additional pass through the tables, allowing duplicate rows to appear in the result set. Because the OUTER UNION set operator displays all rows, the keyword ALL is invalid and cannot be used with OUTER UNION.
-Category: First
+Category: Second
 
 Question:
 Which PROC SQL step combines the tables Summer and Winter to produce the output displayed below?
@@ -2179,7 +2179,7 @@ from groupb as b;
 
 Answer: A
 Description: The PROC SQL set operation that uses the set operator OUTER UNION without a keyword is the only code shown that does not overlay any columns in output.
-Category: Second
+Category: Third
 
 Question:
 Which statement is false regarding the keyword CORRESPONDING?
@@ -2191,7 +2191,7 @@ D. When used in OUTER UNION set operations, it causes same-named columns to be o
 
 Answer: A
 Description: The keyword CORRESPONDING (CORR) can be used alone or together with the keyword ALL.
-Category: First
+Category: Third
 
 Question:
 Which PROC SQL step generates the following output from the tables Dogs and Pets?
@@ -2244,7 +2244,7 @@ from pets;
 
 Answer: B
 Description: This PROC SQL output includes all rows from the table Pets that do not appear in the table Dogs. No duplicates are displayed. A PROC SQL set operation that contains the set operator EXCEPT without keywords produces these results.
-Category: Third
+Category: First
 
 Question:
 The PROG1 and PROG2 tables list students who took the PROG1 and PROG2 courses, respectively. Which PROC SQL step gives you the names of the students who took only the PROG1 class?
@@ -2296,7 +2296,7 @@ from prog1;
 
 Answer: B
 Description: The set operator EXCEPT returns all the rows in the first table that do not appear in the second table. The keyword ALL suppresses the extra pass that PROC SQL makes through the data to eliminate duplicate rows. The EXCEPT operator when used alone will also produce the output specified in the question.
-Category: Second
+Category: Third
 
 Question:
 Which PROC SQL step returns the names of all the students who took PROG1, PROG2, or both classes?
@@ -2352,7 +2352,7 @@ from prog2;
 
 Answer: C
 Description: The set operator UNION returns all rows that are unique in the combined set of rows from both tables.
-Category: Second
+Category: Third
 
 Question:
 Which PROC SQL step returns the names of all the students who took both the PROG1 and PROG2 classes?
@@ -2406,7 +2406,7 @@ from prog2;
 Answer: C
 Description: The set operator INTERSECT returns all rows that are common to both tables. Specifying the keyword ALL suppresses PROC SQL's additional pass through the data to eliminate duplicate rows.
 
-Category: Second
+Category: First
 
 Question:
 Which PROC SQL step generates the same results as the following DATA step?
@@ -2465,7 +2465,7 @@ order by lname;
 Answer: A
 Description: The DATA step returns all rows from the first table along with all rows from the second table, maintaining the order specified in the BY statement. Same-named columns are overlaid by default. The set operator OUTER UNION returns all rows from both tables. The CORR keyword causes same-named columns to be overlaid. The ORDER BY clause causes the result rows to be ordered by values of the specified column (LName).
 
-Category: First
+Category: Third
 
 Question:
 Which of the following PROC SQL steps creates a new table by copying only the column structure (but not the rows) of an existing table?
@@ -2486,7 +2486,7 @@ describe sasuser.payrollmaster;
 
 Answer: B
 Description: The CREATE TABLE statement that includes a LIKE clause copies the column names and attributes from an existing table into a new table. No rows of data are inserted.
-Category: Second
+Category: First
 
 Question:
 Which of the following PROC SQL steps creates a table that contains rows for the level-1 flight attendants only?
@@ -2537,7 +2537,7 @@ D. PRIMARY KEY
 
 Answer: B
 Description: The NOT NULL integrity constraint specifies that data is required and cannot have a null (missing) value.
-Category: Second
+Category: First
 
 Question:
 Which of the following PROC SQL steps deletes rows for all frequent-flyer program members who traveled less than 10,000 miles?
@@ -2562,7 +2562,7 @@ where milestraveled < 10000;
 Answer: D
 Description: The DELETE statement deletes rows that are specified in the WHERE clause from the table. If no WHERE clause is specified, all rows are deleted. The DROP TABLE statement drops (deletes) an entire table; the syntax shown in option c is not valid.
 
-Category: Second
+Category: Third
 
 Question:
 Which of the following PROC SQL steps gives bonuses (in points) to frequent-flyer program members as follows:
@@ -2620,7 +2620,7 @@ D. CREATE TABLE
 
 Answer: A
 Description: The INSERT statement is used to insert new rows into a new or existing table. There is no LOAD statement in PROC SQL, VALUES is a clause, and the CREATE TABLE statement is used to create a table.
-Category: First
+Category: Third
 
 Question:
 Which of the following statements regarding the ALTER TABLE statement is false?
@@ -2632,7 +2632,7 @@ D. It enables you to change a character column to a numeric column.
 
 Answer: D
 Description: The ALTER TABLE statement is used to modify attributes of existing columns (include the MODIFY clause), add new column definitions (include the ADD clause), or delete existing columns (include the DROP clause).
-Category: First
+Category: Second
 
 Question:
 Which of the following displays the structure of a table in the SAS log?
@@ -2650,7 +2650,7 @@ describe * from sasuser.payrollmaster;
 
 Answer: C
 Description: The DESCRIBE TABLE statement lists the column attributes for a specified table.
-Category: Second
+Category: First
 
 Question:
 Which of the following creates an empty table that contains the two columns FullName and Age?
@@ -2671,7 +2671,7 @@ set (FullName char(25), Age num);
 
 Answer: A
 Description: The CREATE TABLE statement can include column specifications to create an empty table. The entire group of column specifications must be enclosed in a single set of parentheses. You must list each column's name, data type, and (for character columns) length. The length is specified as an integer in parentheses. Multiple column specifications must be separated by commas.
-Category: First
+Category: Third
 
 Question:
 Which of the following creates an index on the column EmpID for the table Sasuser.Staffmaster?
@@ -2703,7 +2703,7 @@ D. NODUPKEY
 
 Answer: B
 Description: To create a unique index, the UNIQUE keyword is added to the CREATE INDEX statement, between the keywords CREATE and INDEX.
-Category: Second
+Category: Third
 
 Question:
 Which of the following creates a composite index for the table Sasuser.Flightdelays? (Sasuser.Flightdelays contains the following columns: Date, FlightNumber, Origin, Destination, DelayCategory, DestinationType, DayOfWeek, and Delay.)
@@ -2726,7 +2726,7 @@ destination);
 
 Answer: D
 Description: A composite index is based on two or more columns. In the CREATE INDEX statement, you specify the index name after the keywords CREATE INDEX. You do not include a keyword to specify that this is a composite index. The names of the key columns are specified in parentheses after the table name. The name of a composite index cannot be the same as the name of any columns in the table.
-Category: Second
+Category: First
 
 Question:
 Which of the following writes a message to the SAS log that shows whether PROC SQL has used an index?
@@ -2756,7 +2756,7 @@ and '07mar2000'd;
 
 Answer: A
 Description: Specifying the option MSGLEVEL=I causes informational messages about index usage to be written to the SAS log.
-Category: Second
+Category: First
 
 Question:
 Which of the following drops (deletes) an index from a table?
@@ -2777,7 +2777,7 @@ flightdate);
 
 Answer: C
 Description: The DROP INDEX statement drops one or more specified indexes from a table. You specify the name of each index to be dropped after the keywords DROP INDEX. The table name is specified after the keyword FROM. The type of index and the names of the indexed columns are not specified in the statement.
-Category: First
+Category: Second
 
 Question:
 Which of the following statements shows you all the indexes that are defined for a table?
@@ -2801,7 +2801,7 @@ D. It stops SAS from using any index.
 
 Answer: A
 Description: The IDXWHERE=YES data set option tells SAS to use the best available index, even if the index does not optimize performance.
-Category: Third
+Category: First
 
 Question:
 Which of the following is false regarding the use of an index?
@@ -2813,7 +2813,7 @@ D. Indexes can enforce uniqueness.
 
 Answer: C
 Description: Indexes can be created on either character or numeric columns.
-Category: Third
+Category: First
 
 Question:
 Using an index is not likely to optimize a PROC SQL query in which of the following situations?
@@ -2825,7 +2825,7 @@ D. The key column is specified only in a SELECT clause.
 
 Answer: D
 Description: Using an index will optimize specific classes of PROC SQL queries. A query in which the key column is specified only in a SELECT clause is not one of these queries.
-Category: Second
+Category: Third
 
 Question:
 Which of the following is false regarding the IDXNAME= data set option?
@@ -2837,7 +2837,7 @@ D. The option directs SAS to use an index that you specify.
 
 Answer: C
 Description: The IDXNAME= data set option directs PROC SQL to use an index that you specify. The specified index must exist and must be suitable by having at least its first or only column match the condition in the WHERE expression.
-Category: Second
+Category: Third
 
 Question:
 Which of the following statements is false regarding a PROC SQL view?
@@ -2862,7 +2862,7 @@ D. all of the above
 Answer: D
 Description: PROC SQL views are useful because they often save space (a view is usually quite small compared with the data that it accesses) prevent users from continually submitting queries to omit unwanted columns or rows hide complex joins or queries from users.
 In addition, PROC SQL views ensure that input data sets are always current, because data is derived from tables at execution time can be used to shield sensitive or confidential columns from users while enabling the same users to view other columns in the same table.
-Category: First
+Category: Third
 
 Question:
 Which PROC SQL step creates a view that queries the table Sasuser.Payrollmaster?
@@ -2882,7 +2882,7 @@ into view sasuser.newview;
 
 Answer: C
 Description: You use the CREATE VIEW statement to create a view. The keywords CREATE VIEW are followed by the name of the view and the keyword AS.
-Category: Second
+Category: Third
 
 Question:
 Which of the following PROC SQL steps enables you to see a description of the view definition?
@@ -2919,7 +2919,7 @@ where view='empview';
 
 Answer: A
 Description: A view can be used in a PROC SQL step just as you would use an actual SAS table.
-Category: First
+Category: Second
 
 Question:
 Which of the following PROC SQL steps correctly embeds a LIBNAME statement with a view definition?
@@ -2969,7 +2969,7 @@ Answer: D
 Description: When you are working with PROC SQL views, it is best to avoid using an ORDER BY clause in a view. If you specify an ORDER BY clause, the data must be sorted each time the view is referenced.
 Avoid creating views that are based on tables whose structure might change. A view is no longer valid when it references a nonexistent column.
 Specify a one-level name in the FROM clause if the view resides in the same SAS data library as the contributing table(s). Using a one-level name in the FROM clause prevents you from having to change the view if you assign a different libref to the SAS data library that contains the view and its contributing table or tables.
-Category: Second
+Category: Third
 
 Question:
 You can update the data underlying PROC SQL view using the INSERT, DELETE, and UPDATE statements under which of the following conditions:
@@ -2981,7 +2981,7 @@ D. all of the above
 
 Answer: C
 Description: You can update a PROC SQL view provided that the view does not join or link to another table, the view does not have a subquery, or you try to update a derived column. You can update a view  that contains a WHERE clause. The WHERE clause can be in the UPDATE clause or in the view. You cannot update a view that contains any other clause such as an ORDER BY or a HAVING  clause.
-Category: First
+Category: Second
 
 Question:
 Which of the following programs drops (deletes) a view?
@@ -2997,7 +2997,7 @@ remove newview from sasuser;
 
 Answer: B
 Description: The DROP VIEW statement drops a view from the specified library.
-Category: Third
+Category: First
 
 Question:
 PROC SQL options are specified in
@@ -3009,7 +3009,7 @@ D. the OPTIONS procedure.
 
 Answer: A
 Description: PROC SQL options are specified in the PROC SQL statement. After you specify an option, it remains in effect until you change it or you re-invoke PROC SQL.
-Category: Third
+Category: First
 
 Question:
 Which of the following SQL options restricts the number of rows that PROC SQL takes as input from any single source?
@@ -3021,7 +3021,7 @@ D. none of the above
 
 Answer: B
 Description: The INOBS= option restricts the number of rows that PROC SQL takes as input from any single source. The INOBS= option is similar to the SAS system option OBS= and is useful for debugging  queries on large tables. The OUTOBS= option restricts the number of rows that PROC SQL displays or writes to a table.
-Category: Third
+Category: Second
 
 Question:
 Which of the following options does not affect the appearance of HTML, PDF, or RTF output?
@@ -3033,7 +3033,7 @@ D. b and c
 
 Answer: D
 Description: The DOUBLE | NODOUBLE option specifies whether PROC SQL output is double-spaced in listing output. The FLOW | NOFLOW | FLOW=n | FLOW=n m option controls the appearance of wide character columns in listing output. Neither option affects the appearance of HTML output.
-Category: First
+Category: Third
 
 Question:
 Which of the following statements is true regarding the STIMER option in PROC SQL?
@@ -3045,7 +3045,7 @@ D. a and c
 
 Answer: D
 Description: The STIMER | NOSTIMER option in PROC SQL specifies whether PROC SQL writes timing information for each statement to the SAS log, instead of as a cumulative value for the entire procedure. NOSTIMER is the default. In order to use the STIMER option in PROC SQL, the SAS system option STIMER (the default) must also be in effect. If you use the system option alone, you will receive timing information for the entire procedure, not on a statement-by-statement basis.
-Category: Second
+Category: Third
 
 Question:
 A Dictionary table contains which of the following?
@@ -3069,7 +3069,7 @@ D. all of the above
 
 Answer: D
 Description: Dictionary tables are created each time they are referenced in a SAS program, updated automatically, and limited to read-only access. Accessing a Dictionary table causes SAS to determine the  current state of the SAS session and return the information that you want.
-Category: Third
+Category: Second
 
 Question:
 Dictionary tables can be accessed
@@ -3081,7 +3081,7 @@ D. a and b
 
 Answer: D
 Description: Dictionary tables can be accessed by running a PROC SQL query against the table, using the Dictionary libref. Though SAS librefs are usually limited to eight characters, Dictionary is an  automatically assigned, reserved word. You can also access a Dictionary table by referring to the PROC SQL view of the table that is stored in the Sashelp library.
-Category: Second
+Category: First
 
 Question:
 Which of the following PROC SQL steps displays information about the Dictionary table Dictionary.Titles?
@@ -3155,7 +3155,7 @@ D. %PUT the macro variable MONTH has the value &month.;
 
 Answer: A
 Description: There are two ways to display the value of a macro variable in the SAS log: you can turn on the SYMBOLGEN system option to list the values of all macro variables that are used, or you can use  the %PUT statement to write specific text, including macro variable values, to the log.
-Category: Third
+Category: First
 
 Question:
 Which statement creates a macro variable named location that has the value storage?
@@ -3181,7 +3181,7 @@ D. * Sales Report for "Southeast" Area *
 
 Answer: D
 Description: Macro variables are stored as character strings. Quotation marks and most special characters are stored exactly as they are assigned, but leading blanks are stripped from assigned values. You  can also include references to other macro variables within %LET statements.
-Category: Second
+Category: First
 
 Question:
 Assuming that you began your SAS session today, which of the following statements correctly sets the macro variable currdate to today's date:
@@ -3217,7 +3217,7 @@ D. expressions, literals, numbers, and special characters.
 
 Answer: B
 Description: The word scanner recognizes four types of tokens. Expressions are not a type of token.
-Category: First
+Category: Third
 
 Question:
 What are the resulting values for the macro variables that are defined here?
@@ -3235,7 +3235,7 @@ D. month1 Junemonth2 Julyperiod1 junejulyperiod2 Mayjuneperiod3 julyaug
 
 Answer: C
 Description: You can combine macro variable references with text to create new text strings. If you precede a macro variable with text, the ampersand at the beginning of the macro variable name signals the  end of the text and the beginning of a macro variable name. If you want text to follow the macro variable value, you must signal the end of the macro variable name with a period.
-Category: First
+Category: Second
 
 Question:
 Which of the following correctly produces a title in which the current date is left-justified in order to remove extra blanks?
@@ -3315,7 +3315,7 @@ D. be used to assign a numeric value to a macro variable in an SCL program.
 
 Answer: D
 Description: The SYMPUT routine enables you to assign a data set variable as the value of a macro variable. You can also use the SYMPUT routine to create a series of related macro variables. Because all  macro variable values are character strings, SYMPUT automatically converts any numeric value that you attempt to assign as a value for a macro variable. In an SCL program, you must use  SYMPUTN rather than SYMPUT if you are attempting to assign a numeric value to a macro variable.
-Category: Second
+Category: First
 
 Question:
 Which of the following programs correctly creates a series of macro variables whose names are values of the data set variable Course_code, then indirectly references one of those macro variables in a later step?
@@ -3400,7 +3400,7 @@ into daily_fee from sasuser.all;
 
 Answer: C
 Description: To create a macro variable during the execution of a PROC SQL step, use the INTO clause of the SELECT statement. In the INTO clause, you precede the name of the macro variable with a colon.
-Category: Second
+Category: Third
 
 Question:
 According to the global symbol table shown here, what is the resolved value for a reference to &&teach&crs?
@@ -3412,7 +3412,7 @@ D. none of the above
 
 Answer: C
 Description: You can use multiple ampersands to delay the resolution of a macro variable reference. You can also combine macro variable references in order to create new tokens. In this example, the reference &&teach&crs resolves to &teach3 on the first scan. On the next scan, &teach3 resolves to Forest, Mr. Peter.
-Category: Third
+Category: Second
 
 Question:
 Which of the following statements correctly creates a DATA step variable named Price and assigns to it the value of the macro variable daily_fee during DATA step execution?
@@ -3424,7 +3424,7 @@ D. price=symget("daily_fee");
 
 Answer: D
 Description: You can use the SYMGET function in an assignment statement to obtain the current value of a macro variable and to assign that value to a DATA step variable. The SYMGET function enables you to obtain the value of a macro variable during execution of a DATA step, a PROC SQL step, or an SCL program.
-Category: Third
+Category: Second
 
 Question:
 Which of the following is false?
@@ -3436,7 +3436,7 @@ D. In an SCL program, the SYMPUTN routine can be used to assign a numeric value 
 
 Answer: C
 Description: The SYMPUT routine can be used in either the DATA step or in an SCL program. In the DATA step, the SYMPUT routine will perform automatic conversion on numeric values that you attempt to assign as values for macro variables, using the BEST12. format. In an SCL program, you should use the SYMPUTN routine if you want to assign a numeric value as a value for a macro variable. In a PROC SQL step, you need to use the INPUT function in order to convert macro variable values to numeric before you compare them to other numeric values.
-Category: First
+Category: Third
 
 Question:
 Which of the following is false?
@@ -3448,7 +3448,7 @@ D. Compiled macros are stored in a temporary SAS catalog by default.
 
 Answer: B
 Description: A macro definition must begin with a %MACRO statement and must end with a %MEND statement. The macro definition can include macro language statements as well as SAS language statements. When the macro is compiled, macro language statements are checked for syntax errors. The compiled macro is stored in a temporary SAS catalog by default.
-Category: Third
+Category: First
 
 Question:
 Which of the following examples correctly defines a macro named Print that implements parameters named vars and total?
@@ -3480,7 +3480,7 @@ run;
 
 Answer: C
 Description: To include positional parameters in a macro definition, you list the parameters in parentheses and separate them with commas. When the macro is executed, macro variables will be created in the local symbol table and will have the same names as the parameters. You can then use these macro variables within the macro.
-Category: Third
+Category: First
 
 Question:
 Which of the following correctly references the macro named Printdsn as shown here:
@@ -3506,7 +3506,7 @@ D. %printdsn(sasuser.courses, course_title, days)
 
 Answer: C
 Description: To call a macro that includes positional parameters, you precede the macro name with a percent sign. You list the values for the macro variables that are defined by the parameters in parentheses. List values in the same order in which the parameters are listed, and separate them with commas. Remember that a macro call is not a SAS language statement and does not require a semicolon.
-Category: Third
+Category: First
 
 Question:
 If you use a mixed parameter list in your macro program definition, which of the following is false?
@@ -3530,7 +3530,7 @@ D. A macro program is available for execution throughout the SAS session in whic
 
 Answer: C
 Description: When you submit a macro definition, the macro is compiled and is stored in a SAS catalog. Then when you call the macro, the macro is executed. The macro is available for execution anytime throughout the current SAS session.
-Category: First
+Category: Second
 
 Question:
 When you use an %IF-%THEN statement in your macro program,
@@ -3542,7 +3542,7 @@ D. all of the above.
 
 Answer: D
 Description: You can use %IF-%THEN statements to conditionally process code. Within a %IF-%THEN statement, you must use %DO and %END statements to enclose multiple statements. %IF-%THEN statements are similar to IF THEN statements in the DATA step, but they are part of the macro language.
-Category: Second
+Category: First
 
 Question:
 Which of the following can be placed onto the input stack?
@@ -3554,7 +3554,7 @@ D. whole steps, whole statements, or pieces of text within statements.
 
 Answer: D
 Description: By using %IF-%THEN statements, you can place whole steps, individual statements, or parts of statements onto the input stack.
-Category: First
+Category: Third
 
 Question:
 Which of the following creates a macro variable named class in a local symbol table?
@@ -3627,7 +3627,7 @@ run;
 
 Answer: B
 Description: To define macros with %DO loops you use a %DO statement and a %END statement. Be sure to precede all keywords in the statements with percent signs since the %DO and %END statements are macro language statements. Also, be sure to end these statements with semicolons. Answer: D When you submit a call to a compiled macro, the macro is executed. Specifically, the macro processor executes compiled macro language statements first. When any SAS language statements are encountered, the macro processor places these statements onto the input stack and pauses while they are passed to the compiler and then executed. Then the macro processor continues to repeat these steps until the %MEND statement is reached.
-Category: Third
+Category: Second
 
 Question:
 The %INCLUDE statement
@@ -3651,7 +3651,7 @@ D. you do not need to compile the macro before you invoke it in a program.
 
 Answer: A
 Description: When a macro definition is stored as a catalog SOURCE entry, you must compile it before you can call it from a SAS program. You compile a macro that is stored as a catalog SOURCE entry by using the CATALOG access method. This creates a session-compiled macro that will be deleted at the end of the SAS session. The PROC CATALOG statement enables you to view a list of the contents of a SAS catalog.
-Category: Third
+Category: Second
 
 Question:
 Which of the following programs correctly sets the appropriate system options and calls the macro Prtlast? Assume that Prtlast is stored in an autocall library as a text file and that it has not been compiled during the current SAS session.
@@ -3672,7 +3672,7 @@ options mautosource sasautos=mylib;
 
 Answer: C
 Description: To call a macro that is stored in an autocall library, you must specify both the MAUTOSOURCE system options and the SASAUTOS= system option. The SASAUTOS= system option can be set to include multiple pathnames or filerefs. Once these two system options are set, you can call the macro by preceding the macro name with a percent sign.
-Category: First
+Category: Third
 
 Question:
 If you use the Stored Compiled Macro Facility,
@@ -3684,7 +3684,7 @@ D. all of the above
 
 Answer: D
 Description: The Stored Compiled Macro Facility enables you to store compiled macros permanently so that you can reuse them in later SAS sessions without compiling them again. Compiled macros must be stored in a catalog named Sasmacr, and both the MSTORED system option and the SASMSTORE= system option must be specified.
-Category: First
+Category: Second
 
 Question:
 Which of the following correctly creates a permanently stored compiled macro?
@@ -3719,7 +3719,7 @@ run;
 
 Answer: B
 Description: In order to create a permanently stored compiled macro, you must specify the MSTORED system option. The SASMSTORE= system option must be specified to point to the library in which you want your macros to be stored. You must also use the STORE option in the %MACRO statement.
-Category: Second
+Category: Third
 
 Question:
 When you submit the following code, what happens?
@@ -3765,7 +3765,7 @@ D. none of the above
 
 Answer: B
 Description: The PROC CATALOG step enables you to view a list of the contents of a SAS catalog. This might be especially useful if you store your macro definitions as SOURCE entries in permanent SAS catalogs. You might also use the PROC CATALOG step to see a list of the session-compiled macros that are stored in Work.Sasmacr.
-Category: Second
+Category: First
 
 Question:
 Which of the following is not true about stored compiled macros?
@@ -3849,7 +3849,7 @@ D. any of the above
 
 Answer: D
 Description: You can use the DATASETS procedure or the SQL procedure to create or delete an index from an existing data set. You can also rebuild the index with a DATA step and use the INDEX= option to create an index on the rebuilt data set. However, rebuilding a data set uses more system resources than adding an index to an existing data set with either the DATASETS or the SQL procedure.
-Category: First
+Category: Second
 
 Question:
 Which of the following correctly creates a simple index named Origin on the Revenue data set?
@@ -3870,7 +3870,7 @@ quit;
 
 Answer: A
 Description: You use the CREATE INDEX statement of the SQL procedure to create an index on an existing data set. In the SQL procedure, you must name the index in the CREATE INDEX statement; for a simple index, the index name must match the name of the key variable.
-Category: Second
+Category: Third
 
 Question:
 To view a list of the indexes that are associated with a data set, you use which of the following?
@@ -3882,7 +3882,7 @@ D. any of the above
 
 Answer: B
 Description: You can use either the CONTENTS procedure or the CONTENTS statement in the DATASETS procedure to generate a list of information about a data set, including a list of existing indexes. All indexes for a data set are stored in a single file that is separate from but has the same name as the data set.
-Category: First
+Category: Third
 
 Question:
 When you submit a call to a compiled macro, what happens?
@@ -3921,7 +3921,7 @@ c:\routes\new\zurich.dat';
 
 Answer: C
 Description: When a FILENAME statement is used to assign a fileref to multiple raw data files, the list of files must be enclosed in a single set of parentheses. Each filename specified must be enclosed in quotation marks.
-Category: Third
+Category: First
 
 Question:
 Which of the following statements is true?
@@ -4016,7 +4016,7 @@ y3		        c:\data\Y1.dat
 
 Answer: A
 Description: The TODAY function returns the current date from the system clock as a SAS date value. The year number is then extracted from the current date using the YEAR function. The value of the current year, 2003, is assigned to y3. The year values 2002 and 2001 are assigned to y2 and y1, respectively. The PUT function concatenates the text string c:\data\Y with the year values and the text string .dat.
-Category: First
+Category: Third
 
 Question:
 What happens when SAS processes the last data record in an input file?
@@ -4112,7 +4112,7 @@ run;
 
 Answer: C
 Description: You must use the FORCE option with PROC APPEND when the DATA= data set contains a variable that does not have the same type as the corresponding variable in the BASE= data set.
-Category: Third
+Category: Second
 
 Question:
 What happens when the SAS data set Work.NewHires is appended to the SAS data set Work.Employees using PROC APPEND?
@@ -4139,7 +4139,7 @@ D. The values of Name are truncated in the observations that are read in from Wo
 Answer: A
 Description: When the BASE= data set contains more variables than the DATA= data set, missing values for the additional variables are assigned to the observations that are read in from the DATA= data set.
 
-Category: Second
+Category: Third
 
 Question:
 You do not need to use the FORCE option with PROC APPEND when the following is true:
@@ -4155,7 +4155,7 @@ the DATA= data set contains variables that are not in the BASE= data set
 the variables in the DATA= data set are longer than the corresponding variables in the BASE= data set
 the variables in the DATA= data set have a different type than the corresponding variables in the BASE= data set.
 
-Category: Third
+Category: First
 
 Question:
 According to the data set descriptions below, which of the variables that are listed qualify as BY variables for a DATA step match-merge?
@@ -4193,7 +4193,7 @@ D. You cannot merge these three data sets at all because they do not have a comm
 Answer: B
 Description: In order to merge multiple data sets in a DATA step, the data sets must have a common variable. However, if there are variables that are common to at least two of the input data sets, and if each input data set contains at least one of these variables, then you can use subsequent DATA steps to merge the data sets. You can also use a PROC SQL step to merge data sets that do not have common variables.
 
-Category: Second
+Category: First
 
 Question:
 Which of the following programs correctly creates a table with the results of a PROC SQL inner join matched on the values of empcode?
@@ -4234,7 +4234,7 @@ quit;
 
 Answer: D
 Description: You can use PROC SQL to join data from data sets that do not have a single common variable among them. If you create a new table with the result of an inner join in a PROC SQL step, the resulting data set can be similar or identical to the result of a DATA step match-merge.
-Category: First
+Category: Second
 
 Question:
 To process a default DATA step match-merge, SAS first reads the descriptor portion of each input data set to create the PDV and the descriptor portion of the new data set. Which of the following accurately describes the rest of this process?
@@ -4258,7 +4258,7 @@ D. The variables in the PDV are not reinitialized when a second SET statement is
 
 Answer: C
 Description: You can use multiple SET statements in one DATA step to combine observations from several data sets. The data sets do not need to have a common variable.
-Category: Third
+Category: First
 
 Question:
 Select the program that correctly creates a new data set named Sasuser.Summary that contains one observation with summary data that was created from the Salary variable of the Sasuser.Empdata data set.
@@ -4280,7 +4280,7 @@ run;
 
 Answer: B
 Description: You can use the MEANS procedure to create a new data set that contains a summary statistic. The NOPRINT option suppresses the default report. The OUTPUT statement routes the results from the MEANS procedure to a new data set. The VAR statement specifies one or more numeric variables from the input data set.
-Category: Second
+Category: First
 
 Question:
 If the value of Cargosum is $1000 at the end of the first iteration of the DATA step shown below, what is the value of Cargosum in the PDV when the DATA step is in its third iteration?
@@ -4325,7 +4325,7 @@ D. $1100.00
 
 Answer: D
 Description: Totalrev is the accumulator variable of the sum statement, which is automatically initialized with a value of 0. If the expression in a sum statement produces a missing value, SAS replaces the missing value with a value of 0. As the DATA step iterates, the sum statement retains the accumulator variable so that it will accumulate a total.
-Category: Third
+Category: Second
 
 Question:
 Which of the following programs correctly uses an index to combine data from two input data sets?
@@ -4366,7 +4366,7 @@ run;
 
 Answer: D
 Description: You use the KEY= option in a SET statement to cause SAS to use an index to combine data from multiple data sets. When the SET statement with the KEY= option executes, the program data vector must already contain a value for the indexed variable. You cannot use WHERE processing on a data set that has been read with the KEY= option within the same DATA step.
-Category: First
+Category: Third
 
 Question:
 Which of the following statements about the _IORC_ variable is false?
@@ -4378,7 +4378,7 @@ D. You can use the _IORC_ variable to prevent nonmatching data from being includ
 
 Answer: B
 Description: When you use the KEY= option, SAS creates an automatic variable named _IORC_, which stands for INPUT/OUTPUT Return Code. If the value of _IORC_ is zero, the index search was successful. The _IORC_ variable is also created automatically when you use a MODIFY statement in a DATA step.
-Category: Second
+Category: Third
 
 Question:
 Which SAS statement correctly specifies the array Sales as illustrated in the following table?
@@ -4394,7 +4394,7 @@ D. array {4,12} Sales m1-m12;
 
 Answer: A
 Description: An array is specified using the keyword ARRAY followed by the name of the array and the dimensions of the array. In a two-dimensional array, the two dimensions can be thought of as a table of rows and columns. The first dimension in the ARRAY statement specifies the number of rows. The second dimension specifies the number of columns.
-Category: Third
+Category: First
 
 Question:
 Which of the following statements creates temporary array elements?
@@ -4406,7 +4406,7 @@ D. array _temporary_ new {6} Jan Feb Mar Apr May Jun;
 
 Answer: B
 Description: To create temporary array elements, specify the keyword _TEMPORARY_ after the array name and dimension. Remember that if you use an asterisk to count the array elements, you must list the array elements. You cannot use the asterisk and the _TEMPORARY_ keyword together in an ARRAY statement.
-Category: Third
+Category: Second
 
 Question:
 Which DO statement processes all of the elements in the Yearx array?
@@ -4419,7 +4419,7 @@ D. a and b
 
 Answer: D
 Description: To process all of the elements in an array, you can use either the DIM function with the array name as the argument or specify the array dimension.
-Category: First
+Category: Third
 
 Question:
 Given the following program, what is the value of Points in the fifth observation in the data set Work.Results?
@@ -4448,7 +4448,7 @@ D. 70
 
 Answer: A
 Description: The ARRAY statement creates the two-dimensional array Score and specifies the dimensions of the array: two rows and four columns. The value of Points for each observation is determined by referencing the array based on the values of Week and Finish in the Work.Contest data set. The row number for the array reference is determined by the value of Week. The column number for the array reference is determined by the value of Finish.
-Category: First
+Category: Third
 
 Question:
 Array values should be stored in a SAS data set when which of the following is true?
@@ -4487,7 +4487,7 @@ D. During the second iteration of the DATA step, the condition _N_=1 is false. S
 Answer: C
 Description: The IF-THEN statement specifies that the Targets array is loaded only once, during the first iteration of the DATA step. During the first iteration of the DATA step, the condition _N_=1 is true, so the outer DO loop executes three times; once for each observation in Sasuser.Ctargets. After the third iteration of the DO loop, the pointer drops down to the second SET statement and the values from the first observation in Sasuser.Monthum are read into the program data vector. During the second iteration of the DATA step, the condition _N_=1 is false. So, the DO loop doesn't execute again.
 
-Category: First
+Category: Second
 
 Question:
 Which SAS system option is used to identify format catalogs to SAS?
@@ -4499,7 +4499,7 @@ D. FMTSEARCH=
 
 Answer: D
 Description: By default, SAS searches for custom formats in the Work and Library libraries. The FMTSEARCH= system option specifies other catalogs to search when a format is referenced.
-Category: First
+Category: Second
 
 Question:
 Given the following PROC FORMAT step, how is the value 70 displayed when the AGEGRP. format is applied?
@@ -4518,7 +4518,7 @@ D. 070 Senior
 
 Answer: C
 Description: A non-inclusive range is used such that the age at the high end of the range is not included. To create the picture format, three zeros are used to create a position for a three-digit numeric value. Because zero is used as a digit selector rather than a nonzero value, leading zeros are not included in the formatted value.
-Category: Second
+Category: First
 
 Question:
 When the NOFMTERR system option is in effect, what happens when SAS encounters a format that it cannot locate?
@@ -4542,7 +4542,7 @@ D. Description
 
 Answer: B
 Description: A data set that is used to create a format with the CNTLIN= option must have the variables FmtName, Start, and Label. If a range is specified, it must also include the variable End.
-Category: Third
+Category: Second
 
 Question:
 Given the following code, what option is missing?
@@ -4589,7 +4589,7 @@ D. the default search order
 
 Answer: B
 Description: SAS will search in the order specified on the FMTSEARCH= option. By default, SAS searches in the Work and Library libraries first unless they are specified on the option. Because Library is not specified here, it is searched after Work.
-Category: Second
+Category: Third
 
 Question:
 What option is used with PROC FORMAT to document the formats in a particular format catalog?
@@ -4621,7 +4621,7 @@ select levels.format $picks.format;
 
 Answer: C
 Description: In the COPY statement, OUT= specifies the catalog to which you want to copy the format catalog entry. In the SELECT statement, you specify the catalog entries by their entire name. Remember that numeric formats are stored with the extension .FORMAT and character formats are stored with the extension .FORMATC.
-Category: First
+Category: Second
 
 Question:
 Given the following PROC FORMAT step, how is the value 6.1 displayed when the SKICOND format is applied?
@@ -4640,7 +4640,7 @@ D. .
 
 Answer: C
 Description: The value 6.1 falls in the range 6<-9, which is labeled 'Good.' The non-inclusive range does not include the value 6, but it does include values above 6.
-Category: Second
+Category: First
 
 Question:
 Which type of integrity constraint would you place on the variable StoreID to ensure that there are no missing values and that there are no duplicate values?
@@ -4652,7 +4652,7 @@ D. NOT NULL
 
 Answer: C
 Description: The PRIMARY KEY integrity constraint includes both the NOT NULL and UNIQUE constraints.
-Category: Third
+Category: First
 
 Question:
 Which code creates an audit trail on the SAS data set Reports.Quarter1?
@@ -4674,7 +4674,7 @@ quit;
 
 Answer: D
 Description: To initiate an audit on an existing SAS data set with the DATASETS procedure, you specify the data set in the AUDIT statement, and then you specify the INITIATE statement. You specify the library with the LIB= option.
-Category: Second
+Category: Third
 
 Question:
 Which DATA step uses the transaction data set Records.Overnight to update the master data set Records.Snowfall by accumAmt?
@@ -4698,7 +4698,7 @@ run;
 
 Answer: C
 Description: In the MODIFY statement, you specify the master data set followed by the transaction data set. Then you specify the key variable in the BY statement.
-Category: Third
+Category: Second
 
 Question:
 The automatic variable _IORC_ is created when you use the MODIFY statement with a BY statement or the KEY= option. How can you use the value of _IORC_?
@@ -4759,7 +4759,7 @@ D. The audit trail file has the same name as the SAS data file that it is monito
 
 Answer: C
 Description: Audit trails are used to track changes that are made to a data set in place.
-Category: Third
+Category: Second
 
 Question:
 Which code initiates generation data sets on the existing SAS data set Sasuser.Amounts and specifies that five historical versions are saved in addition to the base version?
@@ -4791,7 +4791,7 @@ D. The index named in the KEY= option must be a simple index.
 
 Answer: B
 Description: When you use the KEY= option, you must specify the update that you want to make to the data set.
-Category: Third
+Category: First
 
 Question:
 Which code deletes all generations of the data set Sasuser.Amounts including the base data set?
@@ -4812,7 +4812,7 @@ quit;
 Answer: A
 Description: The keyword ALL is used to indicate that you want to delete all generations of the specified data set, including the base version. The keyword HIST deletes the generation data sets, but saves the base version.
 
-Category: First
+Category: Second
 
 Question:
 Which of the following statements is true regarding the BUFNO= option?
@@ -4836,7 +4836,7 @@ D. The size of a page can be changed at any time.
 
 Answer: D
 Description: A page is fixed in size when the data set is created, either to a default value or a specified value. You can use the BUFSIZE= option to control the page size of an output SAS data set. The new buffer size is permanent. After it is specified, it is used whenever the data set is processed.
-Category: Second
+Category: Third
 
 Question:
 The total number of bytes occupied by a data set equals which of the following?
@@ -4860,7 +4860,7 @@ D. sasfile work.quarter1 bufsize=max;
 
 Answer: B
 Description: The SASFILE LOAD statement opens the file, allocates the buffers, and reads the data into memory.
-Category: First
+Category: Second
 
 Question:
 Which of the following statements is true regarding a file that is opened with the SASFILE statement?
@@ -4872,7 +4872,7 @@ D. If the file increases in size during processing, the number of buffers remain
 
 Answer: A
 Description: When a SAS data file is opened using the SASFILE statement, the data is held in memory, and is available to subsequent DATA and PROC steps or applications, until either a SASFILE CLOSE statement is executed or the SAS session ends. Though a file that is opened with the SASFILE statement can be used for subsequent input or update processing, it cannot be used for subsequent utility or output processing. If the file in-memory increases in size during processing, the number of buffers also increases.
-Category: Third
+Category: Second
 
 Question:
 Which of the following statements about uncompressed SAS data files is true?
@@ -4884,7 +4884,7 @@ D. New observations are always added at the end of the data set.
 
 Answer: D
 Description: The descriptor portion of an uncompressed data file is always stored at the end of the first data set page. New observations are always added to the end of the data set, and deleted observation space is neither tracked nor reused.
-Category: Third
+Category: First
 
 Question:
 Which of the following statements about compressed SAS data files is true?
@@ -4896,7 +4896,7 @@ D. In a compressed SAS data set, each observation must be the same size.
 
 Answer: B
 Description: The descriptor portion of a compressed data file is always stored at the end of the first data set page. If you specify REUSE=YES, SAS tracks and reuses deleted observation space within a compressed data file. Therefore, every observation in a compressed data file can be a different size. Compressed data files do have a larger overhead than uncompressed data files.
-Category: Third
+Category: Second
 
 Question:
 Which of the following programs correctly creates reduced-length numeric variables?
@@ -4937,7 +4937,7 @@ run;
 
 Answer: C
 Description: Use the LENGTH statement to assign a reduced length to a numeric variable. If you do not use the LENGTH statement to define a reduced length for numeric variables, their default length is 8 bytes. The FORMAT statement associates a format with a variable, and the INFORMAT statement associates an informat with a variable.
-Category: Second
+Category: First
 
 Question:
 Which of the following statements about SAS data views is true?
@@ -4970,7 +4970,7 @@ run;
 
 Answer: B
 Description: Use the COMPARE procedure to detect any differences in the values of two data sets. The COMPARE statement is not valid syntax in either the CONTENTS procedure or the DATASETS procedure. Printing both data sets might not reveal differences in the precise values of the shortened variables, depending on the formats that are used.
-Category: Third
+Category: Second
 
 Question:
 Placing the subsetting IF statement at the top rather than near the bottom of a DATA step results in a savings in CPU usage. What happens if the subset is large rather than small?
@@ -4982,7 +4982,7 @@ D. The savings in CPU usage decreases as the subset grows larger. However, placi
 
 Answer: B
 Description: As SAS processes a larger subset of the data, more CPU resources are required. However, positioning of the subsetting IF statement in a DATA step can affect performance and efficiency.
-Category: First
+Category: Third
 
 Question:
 Which of the following statements is true about techniques that are used for modifying data and attributes?
@@ -5006,7 +5006,7 @@ D. A WHERE statement is more efficient because it examines what is in the input 
 
 Answer: D
 Description: For selecting observations, a WHERE statement is more efficient than a subsetting IF statement because it examines what is in the input page buffer and selects observations before they are loaded into the program data vector, which results in a savings in CPU operations.
-Category: First
+Category: Second
 
 Question:
 When is it more advantageous to create a temporary SAS data set rather than a permanent SAS data set?
@@ -5054,7 +5054,7 @@ D. where rating=5.5;
 
 Answer: B
 Description: SAS does not use an index for a WHERE condition that contains a function other than TRIM or SUBSTR.
-Category: First
+Category: Second
 
 Question:
 In which of the following situations is sequential access likely to be more efficient than direct access for WHERE processing?
@@ -5102,7 +5102,7 @@ D. Do not return a value.
 
 Answer: A
 Description: Subroutine declares (creates) an independent computational block of code that you can call using a CALL statement so the parameters cannot be passed by value.
-Category: First
+Category: Third
 
 Question:
 You can create one function and one CALL routine in a single FCMP procedure step.
@@ -5112,7 +5112,7 @@ B. False
 
 Answer: B
 Description: 
-Category: Third
+Category: First
 
 Question:
 Is OUTLIB= option required in PROC FCMP function?
@@ -5125,7 +5125,7 @@ Description: OUTLIB specifies the three-level name of an output data set to whic
 Following are syntax examples:
 proc fcmp outlib=sasuser.fcmpsubs.pkt1;
 proc fcmp outlib=sasuser.mysubs.math;
-Category: Third
+Category: First
 
 Question:
 The OUTARGS statement is used with the FUNCTION and SUBROUTINE statements.
@@ -5135,7 +5135,7 @@ B. False
 
 Answer: B
 Description: OUTARGS specifies arguments from the argument list that you want the subroutine to update.
-Category: Third
+Category: First
 
 Question:
 The following SAS program is submitted:
@@ -5185,7 +5185,7 @@ D.  data march;
 
 Answer: A
 Description: 
-Category: First
+Category: Third
 
 Question:
 The following SAS program is submitted:
@@ -5205,7 +5205,7 @@ D. A character operand was found in the %EVAL function or %IF condition where a 
 
 Answer: A
 Description: 
-Category: First
+Category: Third
 
 Question:
 A local permanent data set has the following characteristics:
@@ -5222,7 +5222,7 @@ D. Reduce length of character variables to 6 bytes
 
 Answer: A
 Description: 
-Category: Third
+Category: Second
 
 Question:
 The following program is submitted to check the variables Xa, Xb, and Xc in the SASUSER.LOOK data

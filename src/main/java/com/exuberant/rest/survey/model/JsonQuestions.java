@@ -1,6 +1,7 @@
 package com.exuberant.rest.survey.model;
 
 import com.exuberant.rest.survey.QuestionBank;
+import com.exuberant.rest.util.MultiValueMap;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -20,9 +21,11 @@ public class JsonQuestions {
     private int questionVersion;
     private int playStoreVersion;
     private boolean ads;
+    private MultiValueMap<String, Integer> categories;
 
     public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads) {
         allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        this.categorise();
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
         this.ads = ads;
@@ -30,6 +33,7 @@ public class JsonQuestions {
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
         allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        this.categorise();
         this.questionVersion = questionBank.getQuestionVersion();
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
@@ -53,5 +57,18 @@ public class JsonQuestions {
             jsonQuestion.addOption(jsonOption);
         }
         return jsonQuestion;
+    }
+
+    public MultiValueMap<String, Integer> getCategories() {
+        return categories;
+    }
+
+    public void categorise(){
+        categories = new MultiValueMap();
+        for (JsonQuestion question : questions) {
+            if(question.getCategory()!=null){
+                categories.put(question.getCategory(), Integer.parseInt(question.getNumber()));
+            }
+        }
     }
 }
