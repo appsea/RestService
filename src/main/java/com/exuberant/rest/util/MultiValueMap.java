@@ -6,6 +6,10 @@ public class MultiValueMap<K, T> {
 
     private final Map<K, Set<T>> mMap = new LinkedHashMap<>();
 
+    public Set<Map.Entry<K, Set<T>>> getAll() {
+        return mMap.entrySet();
+    }
+
     public void put(K key, T value) {
         Set<T> values = mMap.get(key);
         if (values == null) {
@@ -100,7 +104,7 @@ public class MultiValueMap<K, T> {
         return allValues;
     }
 
-    public T getSingletonValue() {
+    public T findSingletonValue() {
         if (mMap.size() != 1) {
             throw new IllegalArgumentException("Map is not a single entry map");
         }

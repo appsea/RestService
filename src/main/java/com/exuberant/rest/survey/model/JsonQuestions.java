@@ -8,6 +8,8 @@ import org.apache.commons.logging.LogFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by rakesh on 22-Sep-2017.
@@ -59,8 +61,8 @@ public class JsonQuestions {
         return jsonQuestion;
     }
 
-    public MultiValueMap<String, Integer> getCategories() {
-        return categories;
+    public Set<Map.Entry<String, Set<Integer>>> getCategories() {
+        return categories.entries();
     }
 
     public void categorise(){

@@ -66,7 +66,7 @@ public class GenericQuestionParser implements QuestionParser {
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
         List<String> lines = new ArrayList<>();
         try {
-            String filePath = "classpath:" + fileName;
+            String filePath = "classpath:" + "/input/" + fileName;
             Resource resource = resourceLoader.getResource(filePath);
             InputStream is = resource.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is));
