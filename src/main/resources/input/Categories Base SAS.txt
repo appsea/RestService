@@ -2662,15 +2662,15 @@ Category: First
 
 Question:
 The SAS data set one is listed below.
-x y z
-1 A 27
-1 A 33
-1 B 45
-2 A 52
-2 B 69
-3 B 70
-3 A 82
-3 C 91
+x   y   z
+1   A   27
+1   A   33
+1   B   45
+2   A   52
+2   B   69
+3   B   70
+3   A   82
+3   C   91
 
 The following program is submitted
 data two;

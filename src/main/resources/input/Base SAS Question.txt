@@ -2341,23 +2341,25 @@ Description: Mathematical operations can be done with numeric variables only. Bo
 
 Question:
 The SAS data set one is listed below.
-x y z
-1 A 27
-1 A 33
-1 B 45
-2 A 52
-2 B 69
-3 B 70
-3 A 82
-3 C 91
+x   y   z
+1   A   27
+1   A   33
+1   B   45
+2   A   52
+2   B   69
+3   B   70
+3   A   82
+3   C   91
 
 The following program is submitted
+
 data two;
 set one;
 by x;
 if first.x then delete;
 if last.x then delete;
 run;
+
 The data set two has how many observations?
 
 A. 0
@@ -3153,6 +3155,7 @@ Description: If it's a syntax error then the A occurs. If it's an error with inv
 
 Question:
 The following SAS program is submitted:
+
 data work.totalsales (keep = monthsales{12} );
 set work.monthlysales (keep = year product sales);
 array monthsales {12} ;
@@ -3200,6 +3203,7 @@ To correct the syntax issue, replace retain monthsales{12} with retain msales1-m
 
 Question:
 The following SAS program is submitted:
+
 data work.january;
 set work.allmonths (keep = product month num_sold cost);
 if month = 'Jan' then output work.january;
@@ -3296,6 +3300,7 @@ Obs name level
 6 Kelly .
 7 Juan 1
 The following SAS program is submitted:
+
 data work.expertise;
 set work.levels;
 if level = . then expertise = 'Unknown';
@@ -3584,6 +3589,7 @@ Description: You need output statement within a do loop to get all the 3 observa
 
 Question:
 The following SAS program is submitted:
+
 data work.clients;
 calls = 6;
 do while (calls le 6);
@@ -3603,6 +3609,7 @@ Hence, the value of calls remains 7
 
 Question:
 The following SAS program is submitted:
+
 data work.pieces;
 do while (n lt 6);
 n + 1;
@@ -3620,6 +3627,7 @@ Description: DO WHILE loop executes till we get a false value. SAS gives value s
 
 Question:
 The following SAS program is submitted:
+
 data work.sales;
 do year = 1 to 5;
 do month = 1 to 12;
@@ -3682,6 +3690,7 @@ Description: The input statement reads the variable dept using 11 bytes. The val
 
 Question:
 The following SAS program is submitted:
+
 data work.month;
 date = put('13mar2000'd,ddmmyy10.);
 run;
@@ -3697,6 +3706,7 @@ Description: put function converts numeric to character thus date be displayed a
 
 Question:
 The following SAS program is submitted:
+
 data work.month;
 date = input('13mar2000',date9.);
 run;
@@ -3712,6 +3722,7 @@ Description: As input function converts character variable to numeric variables 
 
 Question:
 The following SAS program is submitted:
+
 data work.products;
 Product_Number = 5461;
 Item = '1001';
@@ -3728,6 +3739,7 @@ Description: concatenating operator (||) is missing in line "Item_Reference = It
 
 Question:
 The following SAS program is submitted:
+
 data work.retail;
 cost = '20000';
 total = .10 * cost;
@@ -3755,10 +3767,12 @@ average = mean(num1, num2, num3 ,num4); Or average = mean(OF num1 num2 num3 num4
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 Author = 'Christie, Agatha';
 First = substr(scan(author,2,' ,'),1,1);
 run;
+
 Which one of the following is the value of the variable FIRST in the output data set?
 A. A
 B. C
@@ -3771,10 +3785,12 @@ Description: scan function executed first,it will give result as agatha.now subs
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 Title = 'A Tale of Two Cities, Charles J. Dickens';
 Word = scan(title,3,' ,');
 run;
+
 Which one of the following is the value of the variable WORD in the output data set?
 A. T
 B. of
@@ -3786,6 +3802,7 @@ Description: The third parameter to the scan function is space and a comma (' ,'
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 First = 'Ipswich, England';
 City_Country = substr(First,1,7)!!', '!!'England';
@@ -3801,11 +3818,13 @@ Description: By default the variable length is determined by the length of the f
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 First = 'Ipswich, England';
 City = substr(First,1,7);
 City_Country = City||', '||'England';
 run;
+
 Which one of the following is the value of the variable CITY_COUNTRY in the output data set?
 A. Ipswich!!
 B. Ipswich, England
@@ -3879,6 +3898,7 @@ Description: sum is a function which means it will need brackets () so A is not 
 
 Question:
 The following SAS program is submitted:
+
 data work.total;
 set work.salary(keep = department wagerate);
 by department;
@@ -4033,6 +4053,7 @@ Description: Quoted string is always case sensitive.
 
 Question:
 The following SAS program is submitted:
+
 data work.flights;
 destination = 'CPH';
 select(destination);
@@ -4054,6 +4075,7 @@ Description: during compilation time SAS will read 1st value that is London and 
 Question:
 
 The following SAS program is submitted:
+
 data work.new;
 length word $7;
 amount = 4;
@@ -4129,6 +4151,7 @@ Description: The word descending only modifies the variable directly after it. s
 
 Question:
 The following SAS program is submitted:
+
 data work.test;
 set work.staff (keep = jansales febsales marsales);
 array diff_sales{3} difsales1 - difsales3;
@@ -4218,6 +4241,7 @@ Description: If library name is not specified then the data will be stored in te
 
 Question:
 The following SAS program is submitted:
+
 proc sort data=work.employee;
 by descending fname;
 proc sort data=work.salary;
@@ -4244,7 +4268,9 @@ fname	age	name	salary
 Bruce	30	Bruce	25000
 Dan	40	Bruce	35000
 		Dan	25000
+
 The following SAS program is submitted:
+
 data work.empdata;
 
 by fname;
@@ -4272,6 +4298,7 @@ Bruce   30      Bruce   25000
 Dan     40      Bruce   35000
                 Dan     25000
 The following SAS program is submitted:
+
 data work.empdata;
 merge work.employee
 work.salary;
@@ -4397,7 +4424,9 @@ TWOSTORY,1810,4,3,Garris Street,"$107,250"
 RANCH,1500,3,3,Kemble Avenue,"$86,650"
 SPLIT,1615,4,3,West Drive,"94,450"
 SPLIT,1305,3,1.5,Graham Avenue,"$73,650"
+
 The following SAS program is submitted using the raw data file as input:
+
 data work.condo_ranch;
 infile 'file-specification' dsd;
 input style $ @;
@@ -4439,6 +4468,7 @@ Description: with DSD option two consecutive delimiters are not consider as one,
 
 Question:
 The following SAS program is submitted and reads 100 records from a raw data file:
+
 data work.total;
 infile 'file-specification' end = eof;
 input name $ salary;
@@ -4563,6 +4593,7 @@ Description: Options "pageno" resets the page number to the number you need.
 
 Question:
 The following SAS program is submitted:
+
 data work.sets;
 do until (prod gt 6);
 prod + 1;
@@ -5980,13 +6011,13 @@ Description:  Excel worksheet names end with a dollar sign. We must use a name t
 Question:
 Given the data set WORK.EMPDATA:
 Employee_ Manager_
-ID	Job_Title	Department		ID
-------- ---------------------- --------------------- ----------------
-120101	Director	Sales Management	120261
-120102	Sales Manager	Sales Management	120101
-120103	Sales Manager	II Sales Management	120101
-120104	Administration	Manager Administration	120101
-120105	Secretary	I Administration	120101
+ID      Job_Title       Department              ID
+------- --------------  ---------------------   ------
+120101  Director        Sales Management        120261
+120102	Sales Manager   Sales Management        120101
+120103	Sales Manager   II Sales Management     120101
+120104	Administration  Manager Administration  120101
+120105	Secretary	I   Administration          120101
 
 Which one of the following where statements would display observations with job titles containing the word 'Manager'?
 A. where substr(Job_Title,(length(Job_Title)-6))='Manager';

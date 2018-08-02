@@ -3922,7 +3922,7 @@
     },
     {
       "number": "141",
-      "description": "The SAS data set one is listed below.\nx y z\n1 A 27\n1 A 33\n1 B 45\n2 A 52\n2 B 69\n3 B 70\n3 A 82\n3 C 91\n\nThe following program is submitted\ndata two;\nset one;\nby x;\nif first.x then delete;\nif last.x then delete;\nrun;\nThe data set two has how many observations?",
+      "description": "The SAS data set one is listed below.\nx   y   z\n1   A   27\n1   A   33\n1   B   45\n2   A   52\n2   B   69\n3   B   70\n3   A   82\n3   C   91\n\nThe following program is submitted\ndata two;\nset one;\nby x;\nif first.x then delete;\nif last.x then delete;\nrun;\nThe data set two has how many observations?",
       "explanation": "There will be only 2 observations 1 A 33 and 3 A 82.",
       "category": "First",
       "options": [
@@ -12158,7 +12158,8 @@
   "ads": true,
   "categories": [
     {
-      "First": [
+      "name": "First",
+      "questionNumbers": [
         1,
         258,
         5,
@@ -12320,7 +12321,8 @@
       ]
     },
     {
-      "Third": [
+      "name": "Third",
+      "questionNumbers": [
         256,
         257,
         2,
@@ -12463,7 +12465,8 @@
       ]
     },
     {
-      "Second": [
+      "name": "Second",
+      "questionNumbers": [
         3,
         263,
         10,

@@ -3922,7 +3922,7 @@
     },
     {
       "number": "141",
-      "description": "The SAS data set one is listed below.\nx y z\n1 A 27\n1 A 33\n1 B 45\n2 A 52\n2 B 69\n3 B 70\n3 A 82\n3 C 91\n\nThe following program is submitted\ndata two;\nset one;\nby x;\nif first.x then delete;\nif last.x then delete;\nrun;\nThe data set two has how many observations?",
+      "description": "The SAS data set one is listed below.\nx   y   z\n1   A   27\n1   A   33\n1   B   45\n2   A   52\n2   B   69\n3   B   70\n3   A   82\n3   C   91\n\nThe following program is submitted\n\ndata two;\nset one;\nby x;\nif first.x then delete;\nif last.x then delete;\nrun;\n\nThe data set two has how many observations?",
       "explanation": "There will be only 2 observations 1 A 33 and 3 A 82.",
       "category": null,
       "options": [
@@ -5014,7 +5014,7 @@
     },
     {
       "number": "180",
-      "description": "The following SAS program is submitted:\ndata work.totalsales (keep = monthsales{12} );\nset work.monthlysales (keep = year product sales);\narray monthsales {12} ;\ndo i=1 to 12;\nmonthsales{i} = sales;\nend;\nrun;\n\nThe data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.\nWhich one of the following is the result of the above program?",
+      "description": "The following SAS program is submitted:\n\ndata work.totalsales (keep = monthsales{12} );\nset work.monthlysales (keep = year product sales);\narray monthsales {12} ;\ndo i=1 to 12;\nmonthsales{i} = sales;\nend;\nrun;\n\nThe data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.\nWhich one of the following is the result of the above program?",
       "explanation": "The syntax issue lies in this line of code - keep = msales{12}. You can not use array name in keep option.\nTo correct the syntax issue, replace keep = msales{12} with keep = msales1-msales12",
       "category": null,
       "options": [
@@ -5070,7 +5070,7 @@
     },
     {
       "number": "182",
-      "description": "The following SAS program is submitted:\ndata work.january;\nset work.allmonths (keep = product month num_sold cost);\nif month = 'Jan' then output work.january;\nsales = cost * num_sold;\nkeep = product sales;\nrun;\n\nWhich variables does the WORK.JANUARY data set contain?",
+      "description": "The following SAS program is submitted:\n\ndata work.january;\nset work.allmonths (keep = product month num_sold cost);\nif month = 'Jan' then output work.january;\nsales = cost * num_sold;\nkeep = product sales;\nrun;\n\nWhich variables does the WORK.JANUARY data set contain?",
       "explanation": "keep statement does ot have '=' equal to sign. To correct the syntax issue, remove equal to sign from the keep statement",
       "category": null,
       "options": [
@@ -5182,7 +5182,7 @@
     },
     {
       "number": "186",
-      "description": "A SAS PRINT procedure output of the WORK.LEVELS data set is listed below:\nObs name level\n1 Frank 1\n2 Joan 2\n3 Sui 2\n4 Jose 3\n5 Burt 4\n6 Kelly .\n7 Juan 1\nThe following SAS program is submitted:\ndata work.expertise;\nset work.levels;\nif level = . then expertise = 'Unknown';\nelse if level = 1 then expertise = 'Low';\nelse if level = 2 or 3 then expertise = 'Medium';\nelse expertise = 'High';\nrun;\n\nWhich of the following values does the variable EXPERTISE contain?",
+      "description": "A SAS PRINT procedure output of the WORK.LEVELS data set is listed below:\nObs name level\n1 Frank 1\n2 Joan 2\n3 Sui 2\n4 Jose 3\n5 Burt 4\n6 Kelly .\n7 Juan 1\nThe following SAS program is submitted:\n\ndata work.expertise;\nset work.levels;\nif level = . then expertise = 'Unknown';\nelse if level = 1 then expertise = 'Low';\nelse if level = 2 or 3 then expertise = 'Medium';\nelse expertise = 'High';\nrun;\n\nWhich of the following values does the variable EXPERTISE contain?",
       "explanation": "This is a tricky question, The issue lies in this line of code - else if level = 2 or 3 then expertise = 'Medium'; since SAS cannot differentiate value 2 or 3 hence consider values bigger than 3 as 2 or 3, hence give expertise value as 'Medium' for all values greater than 4.",
       "category": null,
       "options": [
@@ -5602,7 +5602,7 @@
     },
     {
       "number": "201",
-      "description": "The following SAS program is submitted:\ndata work.clients;\ncalls = 6;\ndo while (calls le 6);\ncalls + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable CALLS in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.clients;\ncalls = 6;\ndo while (calls le 6);\ncalls + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable CALLS in the output data set?",
       "explanation": "DO WHILE loop executes till we get a false value. Now, calls=6 is equal to 6 therefore calls less than equal to 6 is TRUE. DO LOOP is executed. So, on next execution, calls = calls +1 = 7. Now, calls=7 is greater than 6 therefore calls le 6 is FALSE. DO LOOP is not executed.\nHence, the value of calls remains 7",
       "category": null,
       "options": [
@@ -5630,7 +5630,7 @@
     },
     {
       "number": "202",
-      "description": "The following SAS program is submitted:\ndata work.pieces;\ndo while (n lt 6);\nn + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable N in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.pieces;\ndo while (n lt 6);\nn + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable N in the output data set?",
       "explanation": "DO WHILE loop executes till we get a false value. SAS gives value starting from 0, if value not defined n=0, 1, 2, 3, 4, 5 than n is lt (less than) 6 therefore n lt 6 is TRUE. DO LOOP is executed. Adding plus 1 at every iteration. Now, when n=6 at top, it is not less than 6 therefore condition n lt 6 is FALSE. DO LOOP is not executed. Hence, the value of n remains 6",
       "category": null,
       "options": [
@@ -5658,7 +5658,7 @@
     },
     {
       "number": "203",
-      "description": "The following SAS program is submitted:\ndata work.sales;\ndo year = 1 to 5;\ndo month = 1 to 12;\nx + 1;\nend;\nend;\nrun;\n\nWhich one of the following represents how many observations are written to the WORK.SALES data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.sales;\ndo year = 1 to 5;\ndo month = 1 to 12;\nx + 1;\nend;\nend;\nrun;\n\nWhich one of the following represents how many observations are written to the WORK.SALES data set?",
       "explanation": "You need output statement within a do loop to get all the 60 observations printed.",
       "category": null,
       "options": [
@@ -5742,7 +5742,7 @@
     },
     {
       "number": "206",
-      "description": "The following SAS program is submitted:\ndata work.month;\ndate = put('13mar2000'd,ddmmyy10.);\nrun;\n\nWhich one of the following represents the type and length of the variable DATE in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.month;\ndate = put('13mar2000'd,ddmmyy10.);\nrun;\n\nWhich one of the following represents the type and length of the variable DATE in the output data set?",
       "explanation": "put function converts numeric to character thus date be displayed as 03/13/2000, taking up 10 bytes.",
       "category": null,
       "options": [
@@ -5770,7 +5770,7 @@
     },
     {
       "number": "207",
-      "description": "The following SAS program is submitted:\ndata work.month;\ndate = input('13mar2000',date9.);\nrun;\n\nWhich one of the following represents the type and length of the variable DATE in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.month;\ndate = input('13mar2000',date9.);\nrun;\n\nWhich one of the following represents the type and length of the variable DATE in the output data set?",
       "explanation": "As input function converts character variable to numeric variables and numeric variables are always stored in 8 bytes unless define it using length statement.",
       "category": null,
       "options": [
@@ -5798,7 +5798,7 @@
     },
     {
       "number": "208",
-      "description": "The following SAS program is submitted:\ndata work.products;\nProduct_Number = 5461;\nItem = '1001';\nItem_Reference = Item'/'Product_Number;\nrun;\nWhich one of the following is the value of the variable ITEM_REFERENCE in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.products;\nProduct_Number = 5461;\nItem = '1001';\nItem_Reference = Item'/'Product_Number;\nrun;\nWhich one of the following is the value of the variable ITEM_REFERENCE in the output data set?",
       "explanation": "concatenating operator (||) is missing in line \"Item_Reference = Item'/'Product_Number; \".",
       "category": null,
       "options": [
@@ -5826,7 +5826,7 @@
     },
     {
       "number": "209",
-      "description": "The following SAS program is submitted:\ndata work.retail;\ncost = '20000';\ntotal = .10 * cost;\nrun;\n\nWhich one of the following is the value of the variable TOTAL in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.retail;\ncost = '20000';\ntotal = .10 * cost;\nrun;\n\nWhich one of the following is the value of the variable TOTAL in the output data set?",
       "explanation": "to an extent, SAS automatically converts character to numeric. even though cost is character. due to automatic conversion here we are getting 2000.",
       "category": null,
       "options": [
@@ -5882,7 +5882,7 @@
     },
     {
       "number": "211",
-      "description": "The following SAS program is submitted:\ndata work.test;\nAuthor = 'Christie, Agatha';\nFirst = substr(scan(author,2,' ,'),1,1);\nrun;\nWhich one of the following is the value of the variable FIRST in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\nAuthor = 'Christie, Agatha';\nFirst = substr(scan(author,2,' ,'),1,1);\nrun;\n\nWhich one of the following is the value of the variable FIRST in the output data set?",
       "explanation": "scan function executed first,it will give result as agatha.now substr function looks for first position character ie,1-1 ,results A so answer is A.\n",
       "category": null,
       "options": [
@@ -5910,7 +5910,7 @@
     },
     {
       "number": "212",
-      "description": "The following SAS program is submitted:\ndata work.test;\nTitle = 'A Tale of Two Cities, Charles J. Dickens';\nWord = scan(title,3,' ,');\nrun;\nWhich one of the following is the value of the variable WORD in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\nTitle = 'A Tale of Two Cities, Charles J. Dickens';\nWord = scan(title,3,' ,');\nrun;\n\nWhich one of the following is the value of the variable WORD in the output data set?",
       "explanation": "The third parameter to the scan function is space and a comma (' ,') then answer is B, If third parameter is only a comma (',') then answer is D",
       "category": null,
       "options": [
@@ -5938,7 +5938,7 @@
     },
     {
       "number": "213",
-      "description": "The following SAS program is submitted:\ndata work.test;\nFirst = 'Ipswich, England';\nCity_Country = substr(First,1,7)!!', '!!'England';\nrun;\nWhich one of the following is the length of the variable CITY_COUNTRY in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\nFirst = 'Ipswich, England';\nCity_Country = substr(First,1,7)!!', '!!'England';\nrun;\nWhich one of the following is the length of the variable CITY_COUNTRY in the output data set?",
       "explanation": "By default the variable length is determined by the length of the first argument for substr. So here we have 16 + 2(', ') + 7('England') = 25",
       "category": null,
       "options": [
@@ -5966,7 +5966,7 @@
     },
     {
       "number": "214",
-      "description": "The following SAS program is submitted:\ndata work.test;\nFirst = 'Ipswich, England';\nCity = substr(First,1,7);\nCity_Country = City||', '||'England';\nrun;\nWhich one of the following is the value of the variable CITY_COUNTRY in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\nFirst = 'Ipswich, England';\nCity = substr(First,1,7);\nCity_Country = City||', '||'England';\nrun;\n\nWhich one of the following is the value of the variable CITY_COUNTRY in the output data set?",
       "explanation": "SUBSTR function returns a portion of an expression that you specify in argument, in this case SUBSTR gives value of city Ipswich. substr function creates trailing blanks. trailing blanks can be remove using strip function.",
       "category": null,
       "options": [
@@ -6078,7 +6078,7 @@
     },
     {
       "number": "218",
-      "description": "The following SAS program is submitted:\ndata work.total;\nset work.salary(keep = department wagerate);\nby department;\nif first.department then payroll = 0;\npayroll + wagerate;\nif last.department;\nrun;\n\nThe SAS data set WORK.SALARY, currently ordered by DEPARTMENT, contains 100 observations for each of 5 departments.\nWhich one of the following represents how many observations the WORK.TOTAL data set contains?",
+      "description": "The following SAS program is submitted:\n\ndata work.total;\nset work.salary(keep = department wagerate);\nby department;\nif first.department then payroll = 0;\npayroll + wagerate;\nif last.department;\nrun;\n\nThe SAS data set WORK.SALARY, currently ordered by DEPARTMENT, contains 100 observations for each of 5 departments.\nWhich one of the following represents how many observations the WORK.TOTAL data set contains?",
       "explanation": "The data is sorted by department, thus we can think there are five subgroup in the dataset: dep1-dep5. Within each group, sas computes the payroll+wagerate value, and sas outputs observations when it reaches the last observation in each subgroup. Thus there will be five observations.\n",
       "category": null,
       "options": [
@@ -6246,7 +6246,7 @@
     },
     {
       "number": "224",
-      "description": "The following SAS program is submitted:\ndata work.flights;\ndestination = 'CPH';\nselect(destination);\nwhen('LHR') city = 'London';\nwhen('CPH') city = 'Copenhagen';\notherwise;\nend;\nrun;\n\nWhich one of the following is the value of the CITY variable?",
+      "description": "The following SAS program is submitted:\n\ndata work.flights;\ndestination = 'CPH';\nselect(destination);\nwhen('LHR') city = 'London';\nwhen('CPH') city = 'Copenhagen';\notherwise;\nend;\nrun;\n\nWhich one of the following is the value of the CITY variable?",
       "explanation": "during compilation time SAS will read 1st value that is London and assign that length which is 6. Hence answer will be B.",
       "category": null,
       "options": [
@@ -6274,7 +6274,7 @@
     },
     {
       "number": "225",
-      "description": "\nThe following SAS program is submitted:\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
+      "description": "\nThe following SAS program is submitted:\n\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
       "explanation": "SAS reads the first amount 4 and we get the fist obs\n4 four\nas the sas reads amount = 7 then output, then it replaces the amount 4 to 7.\nwe get a output like this.\n7 four",
       "category": null,
       "options": [
@@ -6358,7 +6358,7 @@
     },
     {
       "number": "228",
-      "description": "The following SAS program is submitted:\ndata work.test;\nset work.staff (keep = jansales febsales marsales);\narray diff_sales{3} difsales1 - difsales3;\narray monthly{3} jansales febsales marsales;\nrun;\n\nWhich one of the following represents the new variables that are created?",
+      "description": "The following SAS program is submitted:\n\ndata work.test;\nset work.staff (keep = jansales febsales marsales);\narray diff_sales{3} difsales1 - difsales3;\narray monthly{3} jansales febsales marsales;\nrun;\n\nWhich one of the following represents the new variables that are created?",
       "explanation": "As given in set statement JANSALES, FEBSALES and MARSALES variables already exist. array diff_sales{3} creates 3 new variables DIFSALES1, DIFSALES2 and DIFSALES3.",
       "category": null,
       "options": [
@@ -6470,7 +6470,7 @@
     },
     {
       "number": "232",
-      "description": "The following SAS program is submitted:\nproc sort data=work.employee;\nby descending fname;\nproc sort data=work.salary;\nby descending fname;\ndata work.empdata;\nmerge work.employee\nwork.salary;\nby fname;\nrun;\n\nWhich one of the following statements explains why the program failed execution?",
+      "description": "The following SAS program is submitted:\n\nproc sort data=work.employee;\nby descending fname;\nproc sort data=work.salary;\nby descending fname;\ndata work.empdata;\nmerge work.employee\nwork.salary;\nby fname;\nrun;\n\nWhich one of the following statements explains why the program failed execution?",
       "explanation": "The two proc sorts are arranged in descending order. However, the merge is in ascending order. Hence, the two data sets won't be merged. In merge if you choose to sort by descending then you must use descending with merge statement otherwise it will not merge because of reason ( C ). It does not matter if you sort by descending order.",
       "category": null,
       "options": [
@@ -6498,7 +6498,7 @@
     },
     {
       "number": "233",
-      "description": "The SAS data sets WORK.EMPLOYEE and WORK.SALARY are shown below:\nWORK.EMPLOYEE WORK.SALARY\nfname\tage\tname\tsalary\nBruce\t30\tBruce\t25000\nDan\t40\tBruce\t35000\nDan\t25000\nThe following SAS program is submitted:\ndata work.empdata;\n\nby fname;\ntotsal + salary;\nrun;\n\nWhich one of the following statements completes the merge of the two data sets by the FNAME variable?",
+      "description": "The SAS data sets WORK.EMPLOYEE and WORK.SALARY are shown below:\nWORK.EMPLOYEE WORK.SALARY\nfname\tage\tname\tsalary\nBruce\t30\tBruce\t25000\nDan\t40\tBruce\t35000\nDan\t25000\n\nThe following SAS program is submitted:\n\ndata work.empdata;\n\nby fname;\ntotsal + salary;\nrun;\n\nWhich one of the following statements completes the merge of the two data sets by the FNAME variable?",
       "explanation": "Because the two data sets are merged by fname variable. You need to rename the name variable of the salary data set to fname. Correct way to rename is (rename = (name = fname))",
       "category": null,
       "options": [
@@ -6526,7 +6526,7 @@
     },
     {
       "number": "234",
-      "description": "The SAS data sets WORK.EMPLOYEE and WORK.SALARY are listed below:\nWORK.EMPLOYEE WORK.SALARY\nfname   age     fname   salary\nBruce   30      Bruce   25000\nDan     40      Bruce   35000\nDan     25000\nThe following SAS program is submitted:\ndata work.empdata;\nmerge work.employee\nwork.salary;\nby fname;\ntotsal + salary;\nrun;\n\nHow many variables are output to the WORK.EMPDATA data set?",
+      "description": "The SAS data sets WORK.EMPLOYEE and WORK.SALARY are listed below:\nWORK.EMPLOYEE WORK.SALARY\nfname   age     fname   salary\nBruce   30      Bruce   25000\nDan     40      Bruce   35000\nDan     25000\nThe following SAS program is submitted:\n\ndata work.empdata;\nmerge work.employee\nwork.salary;\nby fname;\ntotsal + salary;\nrun;\n\nHow many variables are output to the WORK.EMPDATA data set?",
       "explanation": "The variables are: Fname, age, salary and totsal.\nNote: Obs will not be counted here.",
       "category": null,
       "options": [
@@ -6666,7 +6666,7 @@
     },
     {
       "number": "239",
-      "description": "A raw data file is listed below:\nRANCH,1250,2,1,Sheppard Avenue,\"$64,000\"\nSPLIT,1190,1,1,Rand Street,\"$65,850\"\nCONDO,1400,2,1.5,Market Street,\"80,050\"\nTWOSTORY,1810,4,3,Garris Street,\"$107,250\"\nRANCH,1500,3,3,Kemble Avenue,\"$86,650\"\nSPLIT,1615,4,3,West Drive,\"94,450\"\nSPLIT,1305,3,1.5,Graham Avenue,\"$73,650\"\nThe following SAS program is submitted using the raw data file as input:\ndata work.condo_ranch;\ninfile 'file-specification' dsd;\ninput style $ @;\nif style = 'CONDO' or style = 'RANCH' then\ninput sqfeet bedrooms baths street $ price : dollar10.;\nrun;\n\nHow many observations does the WORK.CONDO_RANCH data set contain?",
+      "description": "A raw data file is listed below:\nRANCH,1250,2,1,Sheppard Avenue,\"$64,000\"\nSPLIT,1190,1,1,Rand Street,\"$65,850\"\nCONDO,1400,2,1.5,Market Street,\"80,050\"\nTWOSTORY,1810,4,3,Garris Street,\"$107,250\"\nRANCH,1500,3,3,Kemble Avenue,\"$86,650\"\nSPLIT,1615,4,3,West Drive,\"94,450\"\nSPLIT,1305,3,1.5,Graham Avenue,\"$73,650\"\n\nThe following SAS program is submitted using the raw data file as input:\n\ndata work.condo_ranch;\ninfile 'file-specification' dsd;\ninput style $ @;\nif style = 'CONDO' or style = 'RANCH' then\ninput sqfeet bedrooms baths street $ price : dollar10.;\nrun;\n\nHow many observations does the WORK.CONDO_RANCH data set contain?",
       "explanation": "\nReason being statement \"input style $ @;\" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.",
       "category": null,
       "options": [
@@ -6722,7 +6722,7 @@
     },
     {
       "number": "241",
-      "description": "The following SAS program is submitted and reads 100 records from a raw data file:\ndata work.total;\ninfile 'file-specification' end = eof;\ninput name $ salary;\ntotsal + salary;\nrun;\n\nWhich one of the following IF statements writes the last observation to the output data set?",
+      "description": "The following SAS program is submitted and reads 100 records from a raw data file:\n\ndata work.total;\ninfile 'file-specification' end = eof;\ninput name $ salary;\ntotsal + salary;\nrun;\n\nWhich one of the following IF statements writes the last observation to the output data set?",
       "explanation": "End is a sas keyword which will become true when SAS reads last record of a dataset. This value you cannot use directly in your program, so we create a alias name eof (end of file), but you can name it anything. EOF will carry the same value as internal variable END. So as we know 1=true and 0= false. if EOF = 1; will output only the last observation.",
       "category": null,
       "options": [
@@ -6890,7 +6890,7 @@
     },
     {
       "number": "247",
-      "description": "The following SAS program is submitted:\ndata work.sets;\ndo until (prod gt 6);\nprod + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable PROD in the output data set?",
+      "description": "The following SAS program is submitted:\n\ndata work.sets;\ndo until (prod gt 6);\nprod + 1;\nend;\nrun;\n\nWhich one of the following is the value of the variable PROD in the output data set?",
       "explanation": "Because of prod + 1 statement, SAS compiler will assume a retain prod 0; statement.\nFirst loop => prod = 1 => (1 gt 6) => false, loop continues\nSecond loop => prod = 2 => (2 gt 6) => false, loop continues\n.....\nlast loop => prod = 7 => (7 gt 6) => true, do until loop exits and pdv writes prod value of 7 to output dataset.",
       "category": null,
       "options": [
@@ -8654,7 +8654,7 @@
     },
     {
       "number": "310",
-      "description": "Given the data set WORK.EMPDATA:\nEmployee_ Manager_\nID\tJob_Title\tDepartment\t\tID\n------- ---------------------- --------------------- ----------------\n120101\tDirector\tSales Management\t120261\n120102\tSales Manager\tSales Management\t120101\n120103\tSales Manager\tII Sales Management\t120101\n120104\tAdministration\tManager Administration\t120101\n120105\tSecretary\tI Administration\t120101\n\nWhich one of the following where statements would display observations with job titles containing the word 'Manager'?",
+      "description": "Given the data set WORK.EMPDATA:\nEmployee_ Manager_\nID      Job_Title       Department              ID\n------- --------------  ---------------------   ------\n120101  Director        Sales Management        120261\n120102\tSales Manager   Sales Management        120101\n120103\tSales Manager   II Sales Management     120101\n120104\tAdministration  Manager Administration  120101\n120105\tSecretary\tI   Administration          120101\n\nWhich one of the following where statements would display observations with job titles containing the word 'Manager'?",
       "explanation": "The LIKE operator selects observations by comparing the values of a character variable to a specified pattern, which is referred to as pattern matching. The LIKE operator is case sensitive. There are two special characters available for specifying a pattern:\npercent sign (%)= specifies that any number of characters can occupy that position. The names can be of any length.\nunderscore (_)= matches just one character in the value for each underscore character. You can specify more than one consecutive underscore character in a pattern, and you can specify a percent sign and an underscore in the same pattern.",
       "category": null,
       "options": [

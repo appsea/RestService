@@ -2,6 +2,7 @@ package com.exuberant.rest.survey.model;
 
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.util.MultiValueMap;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -23,7 +24,8 @@ public class JsonQuestions {
     private int questionVersion;
     private int playStoreVersion;
     private boolean ads;
-    private MultiValueMap<String, Integer> categories;
+    @JsonIgnore
+    private MultiValueMap<String, Integer> multiValueMap;
 
     public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads) {
         allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
@@ -61,15 +63,19 @@ public class JsonQuestions {
         return jsonQuestion;
     }
 
-    public Set<Map.Entry<String, Set<Integer>>> getCategories() {
-        return categories.entries();
+    public List<Category> getCategories() {
+        List<Category> categories = new ArrayList<>();
+        for (Map.Entry<String, Set<Integer>> stringSetEntry : multiValueMap.entries()) {
+            categories.add(new Category(stringSetEntry.getKey(), stringSetEntry.getValue()));
+        }
+        return categories;
     }
 
     public void categorise(){
-        categories = new MultiValueMap();
+        multiValueMap = new MultiValueMap();
         for (JsonQuestion question : questions) {
             if(question.getCategory()!=null){
-                categories.put(question.getCategory(), Integer.parseInt(question.getNumber()));
+                multiValueMap.put(question.getCategory(), Integer.parseInt(question.getNumber()));
             }
         }
     }
