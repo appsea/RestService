@@ -534,7 +534,7 @@
     },
     {
       "number": "20",
-      "description": "data temp;\nset test1(in = a) /* 2 observations*/\ntest2 (in=b);  /* 5 observations*/\nif  a and b;\nrun;\n\nHow many observations will be there in temp dataset?",
+      "description": "data temp;\nset test1(in = a) /* 2 observations*/\ntest2 (in=b);  /* 5 observations*/\nif  a and b;\nrun;\n\nHow many observations will temp dataset contain?",
       "explanation": "We get an error message 'Variable a has been defined as both character and numeric'.",
       "category": null,
       "options": [
@@ -562,7 +562,7 @@
     },
     {
       "number": "21",
-      "description": "data temp;\nset test; /* 100 observations 20 for each ID*/\nby ID;\nif first.ID then name = ‘RAJU’;\nelse if ID = ‘RAM’ then name = ‘RAMU’;\nif last.ID;\nrun;\n\nHow many observations will be present in temp dataset?",
+      "description": "data temp;\nset test; /* 100 observations 20 for each ID*/\nby ID;\nif first.ID then name = ‘RAJU’;\nelse if ID = ‘RAM’ then name = ‘RAMU’;\nif last.ID;\nrun;\n\nHow many observations will temp dataset contain?",
       "explanation": "20 for each Id and total 100 Observation would mean there are 5 ID's, hence SAS will give 5 observations only for first.id.",
       "category": null,
       "options": [
@@ -926,7 +926,7 @@
     },
     {
       "number": "34",
-      "description": "Flat file structure is as below\n1----5----10\nvital reddy 45\nvijay 30\nsarma 40\n\nThe following code is submitted.\n\ndata temp;\ninfile ‘file specification’;\ninput x $ age;\nif age<=40;\nrun;\n\nHow many observations will be there in the TEMP dataset?",
+      "description": "Flat file structure is as below\n1----5----10\nvital reddy 45\nvijay 30\nsarma 40\n\nThe following code is submitted.\n\ndata temp;\ninfile ‘file specification’;\ninput x $ age;\nif age<=40;\nrun;\n\nHow many observations will TEMP dataset contain?",
       "explanation": "SAS will consider reddy as a numeric value hence generate missing numeric value for age and missing numeric value is always minimum value available. thus we get 3 observations.",
       "category": null,
       "options": [
@@ -3755,7 +3755,7 @@
     {
       "number": "135",
       "description": "What does the NOOBS option do in the PROC PRINT step?",
-      "explanation": "NO OBS option in Proc Print supress observation number column from output.\n",
+      "explanation": "NO OBS option in Proc Print supress observation number column from output.",
       "category": null,
       "options": [
         {
@@ -4902,7 +4902,7 @@
     },
     {
       "number": "176",
-      "description": "The contents of the raw data file AMOUNT are listed below:\n--------10-------20-------30\n$1,234\nThe following SAS program is submitted:\ndata test;\ninfile 'amount';\ninput @1 salary 6.;\nif _error_ then description = 'Problems';\nelse description = 'No Problems';\nrun;\n\nWhich one of the following is the value of the DESCRIPTION variable?",
+      "description": "The contents of the raw data file AMOUNT are listed below:\n--------10-------20-------30\n$1,234\nThe following SAS program is submitted:\n\ndata test;\ninfile 'amount';\ninput @1 salary 6.;\nif _error_ then description = 'Problems';\nelse description = 'No Problems';\nrun;\n\nWhich one of the following is the value of the DESCRIPTION variable?",
       "explanation": "Informat should be COMMA6.0 in input statement then it will not give any error.",
       "category": null,
       "options": [
@@ -4930,7 +4930,7 @@
     },
     {
       "number": "177",
-      "description": "The contents of the raw data file NAMENUM are listed below:\n--------10-------20-------30\nJoe xx\nThe following SAS program is submitted:\ndata test;\ninfile 'namenum';\ninput name $ number;\nrun;\n\nWhich one of the following is the value of the NUMBER variable?",
+      "description": "The contents of the raw data file NAMENUM are listed below:\n--------10-------20-------30\nJoe xx\nThe following SAS program is submitted:\n\ndata test;\ninfile 'namenum';\ninput name $ number;\nrun;\n\nWhich one of the following is the value of the NUMBER variable?",
       "explanation": "It is because number is defined as a numeric variable so it is expecting a numeric value but it reads xx, so number will be a missing value.",
       "category": null,
       "options": [
@@ -5098,7 +5098,7 @@
     },
     {
       "number": "183",
-      "description": "The contents of the raw data file CALENDAR are listed below:\n--------10-------20-------30\n01012000\nThe following SAS program is submitted:\ndata test;\ninfile 'calendar';\ninput @1 date mmddyy10.;\nif date = '01012000'd then event = 'January 1st';\nrun;\n\nWhich one of the following is the value of the EVENT variable?",
+      "description": "The contents of the raw data file CALENDAR are listed below:\n--------10-------20-------30\n01012000\nThe following SAS program is submitted:\n\ndata test;\ninfile 'calendar';\ninput @1 date mmddyy10.;\nif date = '01012000'd then event = 'January 1st';\nrun;\n\nWhich one of the following is the value of the EVENT variable?",
       "explanation": "The syntax issue lies in this line of code - if date = '01012000'd ;. You can not use date time constant in IF statement.\nTo correct the syntax issue, remove 'd' ie date time constant from IF statement and correct statement would be,\nif date = '01012000' then event = 'January 1st';\n",
       "category": null,
       "options": [
@@ -5154,7 +5154,7 @@
     },
     {
       "number": "185",
-      "description": "The contents of the raw data file SIZE are listed below:\n--------10-------20-------30\n72 95\nThe following SAS program is submitted:\ndata test;\ninfile 'size';\ninput @1 height 2. @4 weight 2;\nrun;\n\nWhich one of the following is the value of the variable WEIGHT in the output data set?",
+      "description": "The contents of the raw data file SIZE are listed below:\n--------10-------20-------30\n72 95\nThe following SAS program is submitted:\n\ndata test;\ninfile 'size';\ninput @1 height 2. @4 weight 2;\nrun;\n\nWhich one of the following is the value of the variable WEIGHT in the output data set?",
       "explanation": "format for weight in input statement does not have . after 2, SAS will consider it as value for weight. to remove this error statement should be like, input @1 height 2. @4 weight 2.;\n",
       "category": null,
       "options": [
@@ -5210,7 +5210,7 @@
     },
     {
       "number": "187",
-      "description": "The contents of the raw data file EMPLOYEE are listed below:\n--------10-------20-------30\nRuth 39 11\nJose 32 22\nSue 30 33\nJohn 40 44\nThe following SAS program is submitted:\ndata test;\ninfile 'employee';\ninput employee_name $ 1-4;\nif employee_name = 'Ruth' then input idnum 10-11;\nelse input age 7-8;\nrun;\n\nWhich one of the following values does the variable IDNUM contain when the name of the employee is \"Ruth\"?",
+      "description": "The contents of the raw data file EMPLOYEE are listed below:\n--------10-------20-------30\nRuth    39  11\nJose    32  22\nSue     30  33\nJohn    40  44\n\nThe following SAS program is submitted:\n\ndata test;\ninfile 'employee';\ninput employee_name $ 1-4;\nif employee_name = 'Ruth' then input idnum 10-11;\nelse input age 7-8;\nrun;\n\nWhich one of the following values does the variable IDNUM contain when the name of the employee is \"Ruth\"?",
       "explanation": "After reading following statement\ninput employee_name $ 1-4;\nSAS advances to next line of raw data file and next input statement\nif employee_name = 'Sue' then input age 7-8;\nreads age for John as age of SUE which is 40.",
       "category": null,
       "options": [
@@ -5267,7 +5267,7 @@
     {
       "number": "189",
       "description": "The following SAS program is submitted:\n\nproc format;\nvalue score 1 - 50 = 'Fail'\n51 - 100 = 'Pass';\nrun;\nproc report data = work.courses nowd;\ncolumn exam;\ndefine exam / display format = score.;\nrun;\n\nThe variable EXAM has a value of 50.5.\nHow will the EXAM variable value be displayed in the REPORT procedure output?",
-      "explanation": "Whenever SAS does not find a mapping for some value in the format it print the value as it is.\n",
+      "explanation": "Whenever SAS does not find a mapping for some value in the format it print the value as it is.",
       "category": null,
       "options": [
         {
@@ -5378,7 +5378,7 @@
     },
     {
       "number": "193",
-      "description": "The following SAS program is submitted:\nfootnote1 'Sales Report for Last Month';\nfootnote2 'Selected Products Only';\nfootnote3 'All Regions';\nfootnote4 'All Figures in Thousands of Dollars';\nproc print data = sasuser.shoes;\nfootnote2 'All Products';\nrun;\n\nWhich one of the following contains the footnote text that is displayed in the report?",
+      "description": "The following SAS program is submitted:\n\nfootnote1 'Sales Report for Last Month';\nfootnote2 'Selected Products Only';\nfootnote3 'All Regions';\nfootnote4 'All Figures in Thousands of Dollars';\nproc print data = sasuser.shoes;\nfootnote2 'All Products';\nrun;\n\nWhich one of the following contains the footnote text that is displayed in the report?",
       "explanation": "if u change the FOOTNOTEn in procedure then SAS only writes footnote with leser number.in this example in proc print footnote2 is written again hence SAS writes only footenote1 and footnote2.",
       "category": null,
       "options": [
@@ -5406,7 +5406,7 @@
     },
     {
       "number": "194",
-      "description": "The following SAS program is submitted:\nproc means data = sasuser.houses std mean max;\nvar sqfeet;\nrun;\n\nWhich one of the following is needed to display the standard deviation with only two decimal places?",
+      "description": "The following SAS program is submitted:\n\nproc means data = sasuser.houses std mean max;\nvar sqfeet;\nrun;\n\nWhich one of the following is needed to display the standard deviation with only two decimal places?",
       "explanation": "Maxdec option in the MEANS procedure statement specifies the number of decimal places for the statistics. Which only is used for display output, not dataset of output, for dataset output You need to format the variables in dataset by yourself using format statement.",
       "category": null,
       "options": [
@@ -5462,7 +5462,7 @@
     },
     {
       "number": "196",
-      "description": "The following SAS program is submitted:\nproc sort data = sasuser.houses out = houses;\nby style;\nrun;\nproc print data = houses;\nrun;\n\nstyle\tbedrooms\tbaths\tprice\nCONDO\t2\t\t    1.5\t80050\n3\t2.5\t        79350\n4\t2.5\t        127150\n2\t2.0\t110700\nRANCH\t2\t\t1.0\t64000\n3\t\t3.0\t86650\n3\t\t1.0\t89100\n1\t\t1.0\t34550\nSPLIT\t1\t\t1.0 \t65850\n4 \t\t3.0 \t94450\n3\t\t1.5\t73650\nTWOSTORY 4\t\t3.0\t107250\n2\t\t1.0\t55850\n2\t\t1.0\t69250\n4\t\t2.5\t102950\nWhich of the following SAS statement(s) create(s) the report?",
+      "description": "The following SAS program is submitted:\n\nproc sort data = sasuser.houses out = houses;\nby style;\nrun;\nproc print data = houses;\nrun;\n\nstyle\tbedrooms\tbaths\tprice\nCONDO\t2\t\t    1.5     80050\n3\t2.5\t        79350\n4\t2.5\t        127150\n2\t2.0\t        110700\nRANCH\t2\t\t    1.0     64000\n3\t\t        3.0     86650\n3\t\t        1.0     89100\n1\t\t        1.0     34550\nSPLIT\t1           1.0 \t65850\n4 \t\t        3.0 \t94450\n3\t\t        1.5 \t73650\nTWOSTORY 4\t\t    3.0\t    107250\n2\t\t        1.0 \t55850\n2\t\t        1.0 \t69250\n4\t\t        2.5\t    102950\nWhich of the following SAS statement(s) create(s) the report?",
       "explanation": "C and D options are same only diff is that there is style variable in var... But, if the style variable is present in id statement, you don't have to mention it in var statement, else you will get 2 style variable in the output, but since there is just 1 style column present ans is C and not D\n",
       "category": null,
       "options": [
@@ -5574,7 +5574,7 @@
     },
     {
       "number": "200",
-      "description": "The SAS data set BANKS is listed below:\nBANKS\nname\t\trate\nFirstCapital\t0.0718\nDirectBank\t0.0721\nVirtualDirect\t0.0728\nThe following SAS program is submitted:\ndata newbank;\ndo year = 1 to 3;\nset banks;\ncapital + 5000;\nend;\nrun;\n\nWhich one of the following represents how many observations and variables will exist in the SAS data set NEWBANK?",
+      "description": "The SAS data set BANKS is listed below:\nBANKS\nname\t\trate\nFirstCapital\t0.0718\nDirectBank\t0.0721\nVirtualDirect\t0.0728\nThe following SAS program is submitted:\n\ndata newbank;\ndo year = 1 to 3;\nset banks;\ncapital + 5000;\nend;\nrun;\n\nWhich one of the following represents how many observations and variables will exist in the SAS data set NEWBANK?",
       "explanation": "You need output statement within a do loop to get all the 3 observations printed. four variables are Name, Rate, Year, Capital.",
       "category": null,
       "options": [
@@ -5686,7 +5686,7 @@
     },
     {
       "number": "204",
-      "description": "A raw data record is listed below:\n--------10-------20-------30\n1999/10/25\nThe following SAS program is submitted:\ndata projectduration;\ninfile 'file-specification';\ninput date $ 1 - 10;\n\nrun;\n\nWhich one of the following statements completes the program above and computes the duration of the project in days as of today's\ndate?",
+      "description": "A raw data record is listed below:\n--------10-------20-------30\n1999/10/25\nThe following SAS program is submitted:\n\ndata projectduration;\ninfile 'file-specification';\ninput date $ 1 - 10;\nrun;\n\nWhich one of the following statements completes the program above and computes the duration of the project in days as of today's\ndate?",
       "explanation": "input function converts character to numeric, PUT function converts numeric to character, so here date is given as character, INPUT function and date is in the form of yymmdd10.",
       "category": null,
       "options": [
@@ -5714,7 +5714,7 @@
     },
     {
       "number": "205",
-      "description": "A raw data record is listed below:\n--------10-------20-------30\nPrinting   750\nThe following SAS program is submitted:\ndata bonus;\ninfile 'file-specification';\ninput dept $ 1 - 11 number 13 - 15;\n\nrun;\n\nWhich one of the following SAS statements completes the program and results in a value of 'Printing750' for the DEPARTMENT\nvariable?",
+      "description": "A raw data record is listed below:\n--------10-------20-------30\nPrinting   750\nThe following SAS program is submitted:\n\ndata bonus;\ninfile 'file-specification';\ninput dept $ 1 - 11 number 13 - 15;\nrun;\n\nWhich one of the following SAS statements completes the program and results in a value of 'Printing750' for the DEPARTMENT\nvariable?",
       "explanation": "The input statement reads the variable dept using 11 bytes. The value of dept (Department) consists of 8 bytes therefore 3 trailing blanks are present in the value of dept which need to be trimmed out using the trim function. This is concatenated to the put function which converts numeric variables to character variables using the supplied format (3.).\n",
       "category": null,
       "options": [
@@ -6022,7 +6022,7 @@
     },
     {
       "number": "216",
-      "description": "A raw data file is listed below:\n--------10-------20-------30\n1901 2\n1905 1\n1910 6\n1925 .\n1941 1\nThe following SAS program is submitted and references the raw data file above:\ndata coins;\ninfile 'file-specification';\ninput year quantity;\n\nrun;\nWhich one of the following completes the program and produces a non-missing value for the variable TOTQUANTITY in the last\nobservation of the output data set?",
+      "description": "A raw data file is listed below:\n--------10-------20-------30\n1901 2\n1905 1\n1910 6\n1925 .\n1941 1\nThe following SAS program is submitted and references the raw data file above:\n\ndata coins;\ninfile 'file-specification';\ninput year quantity;\nrun;\n\nWhich one of the following completes the program and produces a non-missing value for the variable TOTQUANTITY in the last\nobservation of the output data set?",
       "explanation": "When we put the statement totquantity + quantity , it initializes to zero in the first iteration and adds the quantity and gets the fist totquantity. and so forth. retain will not work in this data set. if you put the retain statement it will stop once reads the missing value the totquantity will be missing value ( . )",
       "category": null,
       "options": [
@@ -6050,7 +6050,7 @@
     },
     {
       "number": "217",
-      "description": "A raw data file is listed below:\n--------10-------20-------30\nsquash\t1.10\napples\t2.25\njuice\t1.69\nThe following SAS program is submitted using the raw data file above:\ndata groceries;\ninfile 'file-specification';\ninput item $ cost;\nrun;\n\nWhich one of the following completes the program and produces a grand total for all COST values?",
+      "description": "A raw data file is listed below:\n--------10-------20-------30\nsquash\t1.10\napples\t2.25\njuice\t1.69\nThe following SAS program is submitted using the raw data file above:\n\ndata groceries;\ninfile 'file-specification';\ninput item $ cost;\nrun;\n\nWhich one of the following completes the program and produces a grand total for all COST values?",
       "explanation": "sum is a function which means it will need brackets () so A is not the correct answer. There no such variable as grandtot, so program will give syntax error, so option B and D is not the correct answer. C is the correct option because retain statement is creating a new variable and initializing it with zero. Sum function will add cost to grandtot for each observation and as grandtot is retained it will carry forward the added value.",
       "category": null,
       "options": [
@@ -6806,7 +6806,7 @@
     },
     {
       "number": "244",
-      "description": "The contents of the raw data file TYPECOLOR are listed below:\n---------10--------20--------30\ndaisyyellow\nThe following SAS program is submitted:\ndata flowers;\ninfile 'typecolor';\ninput type $ 1-5 +1 color $;\nrun;\n\nWhich one of the following represents the values of the variables TYPE and COLOR?",
+      "description": "The contents of the raw data file TYPECOLOR are listed below:\n---------10--------20--------30\ndaisyyellow\nThe following SAS program is submitted:\n\ndata flowers;\ninfile 'typecolor';\ninput type $ 1-5 +1 color $;\nrun;\n\nWhich one of the following represents the values of the variables TYPE and COLOR?",
       "explanation": "by default sas proceeds to next column. here after reading 5 columns for type the position of the pointer is at y. due to +1 cursor moves to one column more.",
       "category": null,
       "options": [
@@ -6862,7 +6862,7 @@
     },
     {
       "number": "246",
-      "description": "The following SAS program is submitted:\nproc print data = sasuser.houses;\nrun;\n\nproc means data = sasuser.shoes;\nrun;\n\nWhich one of the following OPTIONS statements resets the page number to 1 for the second report?",
+      "description": "The following SAS program is submitted:\n\nproc print data = sasuser.houses;\nrun;\nproc means data = sasuser.shoes;\nrun;\n\nWhich one of the following OPTIONS statements resets the page number to 1 for the second report?",
       "explanation": "Options \"pageno\" resets the page number to the number you need.",
       "category": null,
       "options": [
@@ -7226,8 +7226,8 @@
     },
     {
       "number": "259",
-      "description": "The following SAS program is submitted:\nproc report data = sasuser.houses nowd headline headskip;\ncolumn style price;\nwhere price <100000;\n<insert code here>\ntitle;\nrun;\n\nExhibit: output from the REPORT procedure.\nStyle     Price\nRANCH     $64,000\nSPLIT     $65,850\nCONDO     $80,050\nRANCH     $86,650\nSPLIT     $94,450\nSPLIT     $73,650\nCONDO     $79,350\nTWOSTORY  $55,850\nRANCH     $89,100\nTWOSTORY  $69,250\nRANCH     $34,500\nAssuming that the PRICE variable is numeric, which one of the following completes the program and produces the output displayed in the exhibit?",
-      "explanation": "group define type in style statement groups all style values hence A is wrong. Across option in define price statement converts price value in variable, hence B is wrong. D cannot be true because 'order' option in 'define style' statement put obs in alphabetical order. only C gives desired output.\n",
+      "description": "The following SAS program is submitted:\n\nproc report data = sasuser.houses nowd headline headskip;\ncolumn style price;\nwhere price <100000;\n<insert code here>\ntitle;\nrun;\n\nExhibit: output from the REPORT procedure.\nStyle     Price\nRANCH     $64,000\nSPLIT     $65,850\nCONDO     $80,050\nRANCH     $86,650\nSPLIT     $94,450\nSPLIT     $73,650\nCONDO     $79,350\nTWOSTORY  $55,850\nRANCH     $89,100\nTWOSTORY  $69,250\nRANCH     $34,500\nAssuming that the PRICE variable is numeric, which one of the following completes the program and produces the output displayed in the exhibit?",
+      "explanation": "group define type in style statement groups all style values hence A is wrong. Across option in define price statement converts price value in variable, hence B is wrong. D cannot be true because 'order' option in 'define style' statement put obs in alphabetical order. only C gives desired output.",
       "category": null,
       "options": [
         {
@@ -7254,7 +7254,7 @@
     },
     {
       "number": "260",
-      "description": "The FREQ Procedure\nStyle of homes\nStyle\tFrequency\tPercent\tCumulative Frequency\tCumulative Percent\nCONDON\t4\t\t26.67\t4\t\t\t26.67\nRANCH\t4\t\t26.67\t8\t\t\t53.33\nSPLIT\t3\t\t20.00\t11\t\t\t73.33\nTWOSTORY 4\t\t26.67\t15\t\t\t100.00\n\nNumber of bedrooms\nBedrooms\tFrequency\tPercent\tCumulative Frequency\tCumulative Percent\n1\t\t2\t\t13.33\t2\t\t\t13.33\n2\t\t5\t\t33.33\t7\t\t\t46.67\n3\t\t4\t\t26.67\t11\t\t\t73.33\n4\t\t4\t\t26.67\t15\t\t\t100.00\n\nThe variable STYLE has a permanent label of “Style of homes” and the variable BEDROOMS has a permanent label of “Number of bedrooms”.\nWhich one of the following SAS programs produced the output shown in the exhibit?",
+      "description": "The FREQ Procedure\nStyle of homes\nStyle\t    Frequency\tPercent Cumulative  Frequency\tCumulative Percent\nCONDON\t    4   \t\t26.67\t4\t\t\t26.67\nRANCH\t    4\t    \t26.67\t8\t\t\t53.33\nSPLIT\t    3\t\t    20.00\t11\t\t\t73.33\nTWOSTORY    4\t\t    26.67\t15\t\t\t100.00\n\nNumber of bedrooms\nBedrooms\tFrequency\tPercent Cumulative  Frequency\tCumulative Percent\n1\t\t    2\t\t    13.33   2\t\t\t13.33\n2\t\t    5\t\t    33.33   7\t\t\t46.67\n3\t\t    4\t\t    26.67   11\t\t\t73.33\n4\t\t    4\t\t    26.67\t15\t\t\t100.00\n\nThe variable STYLE has a permanent label of “Style of homes” and the variable BEDROOMS has a permanent label of “Number of bedrooms”.\nWhich one of the following SAS programs produced the output shown in the exhibit?",
       "explanation": "Two table statement in freq procedure creates 2 tables, one for styles and other one is for bedrooms.",
       "category": null,
       "options": [
@@ -7282,7 +7282,7 @@
     },
     {
       "number": "261",
-      "description": "Obs\tstyle\tsqfeet\tbedrooms\tbaths\tstreet\t\t\tprice\n1\tRANCH\t1250\t2\t\t1.0\tSheppard Avenue\t\t$64,000\n2\tSPLIT\t1190\t1\t\t1.0\tRand Street\t\t$65,850\n3\tCONDO\t1400\t2\t\t1.5\tMarket Street\t\t$80,050\n4\tTWOSTORY 1810\t4\t\t3.0\tGarris Street\t\t$107,250\n5\tRANCH\t1500\t3\t\t3.0\tKemble Avenue\t\t$86,650\n6\tSPLIT\t1615\t4\t\t3.0\tWest Drive\t\t$94,450\n7\tSPLIT\t1305\t3\t\t1.5\tGraham Avenue\t\t$73,650\n8\tCONDO\t1390\t3\t\t2.5\tHampshire Avenue\t$79,350\n9\tTWOSTORY 1040\t2\t\t1.0\tSanders Road\t\t$55,850\n10\tCONDO\t2105\t4\t\t2.5\tJeans Avenue\t\t$127,150\n11\tRANCH\t1535\t3\t\t3.0\tState Highway\t\t$89,100\n12\tTWOSTORY 1240\t2\t\t1.0\tFairbanks Circle\t$69,250\n13\tRANCH\t720\t1\t\t1.0\tNicholson Drive\t\t$34,550\n14\tTWOSTORY 1745\t4\t\t2.5\tHighland Road\t\t$102,950\n15\tCONDO\t1860\t2\t\t2.0\tArcata Avenue\t\t$110,700\n\nThe following SAS program is submitted:\nproc report data = sasuser.houses nowd headline;\ncolumn style price;\nwhere prices lt 100000;\n<insert DEFINE statement here>\ndefine price / mean width = 9;\ntitle;\nrun;\n\nThe following ouput is created by the REPORT procedure:\nstyle    price\nCONDO    $79,700\nRANCH    $68,575\nSPLIT    $77,983\nTWOSTORY $62,550\nWhich one of the following DEFINE statements completes the above program and produces the above output?",
+      "description": "Obs\tstyle\tsqfeet\tbedrooms\tbaths\tstreet\t\t\t    price\n1\tRANCH\t1250\t2\t\t    1.0\t    Sheppard Avenue\t\t$64,000\n2\tSPLIT\t1190\t1\t\t    1.0\t    Rand Street\t\t    $65,850\n3\tCONDO\t1400\t2\t\t    1.5\t    Market Street\t\t$80,050\n4\tTWOSTORY 1810\t4\t\t    3.0\t    Garris Street\t\t$107,250\n5\tRANCH\t1500\t3\t\t    3.0\t    Kemble Avenue\t\t$86,650\n6\tSPLIT\t1615\t4\t\t    3.0\t    West Drive\t\t    $94,450\n7\tSPLIT\t1305\t3\t\t    1.5\t    Graham Avenue\t\t$73,650\n8\tCONDO\t1390\t3\t\t    2.5\t    Hampshire Avenue\t$79,350\n9\tTWOSTORY 1040\t2\t\t    1.0\t    Sanders Road\t\t$55,850\n10\tCONDO\t2105\t4\t\t    2.5\t    Jeans Avenue\t\t$127,150\n11\tRANCH\t1535\t3\t\t    3.0\t    State Highway\t\t$89,100\n12\tTWOSTORY 1240\t2\t\t    1.0\t    Fairbanks Circle\t$69,250\n13\tRANCH\t720\t1\t\t        1.0\t    Nicholson Drive\t\t$34,550\n14\tTWOSTORY 1745\t4\t\t    2.5\t    Highland Road\t\t$102,950\n15\tCONDO\t1860\t2\t\t    2.0\t    Arcata Avenue\t\t$110,700\n\nThe following SAS program is submitted:\n\nproc report data = sasuser.houses nowd headline;\ncolumn style price;\nwhere prices lt 100000;\n<insert DEFINE statement here>\ndefine price / mean width = 9;\ntitle;\nrun;\n\nThe following ouput is created by the REPORT procedure:\nstyle    price\nCONDO    $79,700\nRANCH    $68,575\nSPLIT    $77,983\nTWOSTORY $62,550\nWhich one of the following DEFINE statements completes the above program and produces the above output?",
       "explanation": "GROUP define type consolidates all the observations with the same unique combination of grouped variables and gives total of their corresponding variable values.",
       "category": null,
       "options": [

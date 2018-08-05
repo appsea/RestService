@@ -308,7 +308,7 @@ test2 (in=b);  /* 5 observations*/
 if  a and b;
 run;
 
-How many observations will be there in temp dataset?
+How many observations will temp dataset contain?
 A. 2
 B. 5
 C. 7
@@ -326,7 +326,7 @@ else if ID = ‘RAM’ then name = ‘RAMU’;
 if last.ID;
 run;
 
-How many observations will be present in temp dataset?
+How many observations will temp dataset contain?
 
 A. 5
 B. 20
@@ -554,7 +554,7 @@ input x $ age;
 if age<=40;
 run;
 
-How many observations will be there in the TEMP dataset?
+How many observations will TEMP dataset contain?
 A. 3
 B. 2
 C. zero observations
@@ -734,8 +734,8 @@ proc print data=xyz(firstobs=100 )
 run;
 
 options obs=max;
- proc means data=xyz(firstobs=500)
- run;
+proc means data=xyz(firstobs=500)
+run;
 
 How many observations processed in each procedure?
 
@@ -2210,7 +2210,6 @@ D. Prints the data with no column titles.
 Answer: B
 Description: NO OBS option in Proc Print supress observation number column from output.
 
-
 Question:
 Consider the following code which generates a data set and creates a third variable utilizing the first two:
 
@@ -3098,6 +3097,7 @@ The contents of the raw data file AMOUNT are listed below:
 --------10-------20-------30
 $1,234
 The following SAS program is submitted:
+
 data test;
 infile 'amount';
 input @1 salary 6.;
@@ -3119,6 +3119,7 @@ The contents of the raw data file NAMENUM are listed below:
 --------10-------20-------30
 Joe xx
 The following SAS program is submitted:
+
 data test;
 infile 'namenum';
 input name $ number;
@@ -3225,6 +3226,7 @@ The contents of the raw data file CALENDAR are listed below:
 --------10-------20-------30
 01012000
 The following SAS program is submitted:
+
 data test;
 infile 'calendar';
 input @1 date mmddyy10.;
@@ -3274,6 +3276,7 @@ The contents of the raw data file SIZE are listed below:
 --------10-------20-------30
 72 95
 The following SAS program is submitted:
+
 data test;
 infile 'size';
 input @1 height 2. @4 weight 2;
@@ -3321,11 +3324,13 @@ Description: This is a tricky question, The issue lies in this line of code - el
 Question:
 The contents of the raw data file EMPLOYEE are listed below:
 --------10-------20-------30
-Ruth 39 11
-Jose 32 22
-Sue 30 33
-John 40 44
+Ruth    39  11
+Jose    32  22
+Sue     30  33
+John    40  44
+
 The following SAS program is submitted:
+
 data test;
 infile 'employee';
 input employee_name $ 1-4;
@@ -3383,7 +3388,6 @@ D. . (missing numeric value)
 Answer: D
 Description: Whenever SAS does not find a mapping for some value in the format it print the value as it is.
 
-
 Question:
 The following SAS program is submitted:
 
@@ -3426,6 +3430,7 @@ Description: number/ nonumber system options Controls whether the page number is
 
 Question:
 The following SAS program is submitted:
+
 footnote1 'Sales Report for Last Month';
 footnote2 'Selected Products Only';
 footnote3 'All Regions';
@@ -3451,6 +3456,7 @@ Description: if u change the FOOTNOTEn in procedure then SAS only writes footnot
 
 Question:
 The following SAS program is submitted:
+
 proc means data = sasuser.houses std mean max;
 var sqfeet;
 run;
@@ -3476,6 +3482,7 @@ Description: 'PROC MEANS excludes missing values for the analysis variables befo
 
 Question:
 The following SAS program is submitted:
+
 proc sort data = sasuser.houses out = houses;
 by style;
 run;
@@ -3483,21 +3490,21 @@ proc print data = houses;
 run;
 
 style	bedrooms	baths	price
-CONDO	2		    1.5	80050
+CONDO	2		    1.5     80050
 	3	2.5	        79350
 	4	2.5	        127150
-	2	2.0	110700
-RANCH	2		1.0	64000
-	3		3.0	86650
-	3		1.0	89100
-	1		1.0	34550
-SPLIT	1		1.0 	65850
-	4 		3.0 	94450
-	3		1.5	73650
-TWOSTORY 4		3.0	107250
-	2		1.0	55850
-	2		1.0	69250
-	4		2.5	102950
+	2	2.0	        110700
+RANCH	2		    1.0     64000
+	3		        3.0     86650
+	3		        1.0     89100
+	1		        1.0     34550
+SPLIT	1           1.0 	65850
+	4 		        3.0 	94450
+	3		        1.5 	73650
+TWOSTORY 4		    3.0	    107250
+	2		        1.0 	55850
+	2		        1.0 	69250
+	4		        2.5	    102950
 Which of the following SAS statement(s) create(s) the report?
 A. id style;
 B. id style;
@@ -3571,6 +3578,7 @@ FirstCapital	0.0718
 DirectBank	0.0721
 VirtualDirect	0.0728
 The following SAS program is submitted:
+
 data newbank;
 do year = 1 to 3;
 set banks;
@@ -3650,10 +3658,10 @@ A raw data record is listed below:
 --------10-------20-------30
 1999/10/25
 The following SAS program is submitted:
+
 data projectduration;
 infile 'file-specification';
 input date $ 1 - 10;
-
 run;
 
 Which one of the following statements completes the program above and computes the duration of the project in days as of today's
@@ -3671,10 +3679,10 @@ A raw data record is listed below:
  --------10-------20-------30
 Printing   750
 The following SAS program is submitted:
+
 data bonus;
 infile 'file-specification';
 input dept $ 1 - 11 number 13 - 15;
-
 run;
 
 Which one of the following SAS statements completes the program and results in a value of 'Printing750' for the DEPARTMENT
@@ -3856,11 +3864,12 @@ A raw data file is listed below:
 1925 .
 1941 1
 The following SAS program is submitted and references the raw data file above:
+
 data coins;
 infile 'file-specification';
 input year quantity;
-
 run;
+
 Which one of the following completes the program and produces a non-missing value for the variable TOTQUANTITY in the last
 observation of the output data set?
 A. totquantity + quantity;
@@ -3880,6 +3889,7 @@ squash	1.10
 apples	2.25
 juice	1.69
 The following SAS program is submitted using the raw data file above:
+
 data groceries;
 infile 'file-specification';
 input item $ cost;
@@ -4537,6 +4547,7 @@ The contents of the raw data file TYPECOLOR are listed below:
 ---------10--------20--------30
 daisyyellow
 The following SAS program is submitted:
+
 data flowers;
 infile 'typecolor';
 input type $ 1-5 +1 color $;
@@ -4576,9 +4587,9 @@ Description: $25.31 did begin at column 10 then there would be a missing value i
 
 Question:
 The following SAS program is submitted:
+
 proc print data = sasuser.houses;
 run;
-
 proc means data = sasuser.shoes;
 run;
 
@@ -4837,6 +4848,7 @@ Description: Display option in define statement shows observation in order they 
 
 Question:
 The following SAS program is submitted:
+
 proc report data = sasuser.houses nowd headline headskip;
 column style price;
 where price <100000;
@@ -4870,22 +4882,21 @@ define price / mean 'Price' format = dollar9.;
 Answer: C
 Description: group define type in style statement groups all style values hence A is wrong. Across option in define price statement converts price value in variable, hence B is wrong. D cannot be true because 'order' option in 'define style' statement put obs in alphabetical order. only C gives desired output.
 
-
 Question:
 The FREQ Procedure
 Style of homes
-Style	Frequency	Percent	Cumulative Frequency	Cumulative Percent
-CONDON	4		26.67	4			26.67
-RANCH	4		26.67	8			53.33
-SPLIT	3		20.00	11			73.33
-TWOSTORY 4		26.67	15			100.00
+Style	    Frequency	Percent Cumulative  Frequency	Cumulative Percent
+CONDON	    4   		26.67	4			26.67
+RANCH	    4	    	26.67	8			53.33
+SPLIT	    3		    20.00	11			73.33
+TWOSTORY    4		    26.67	15			100.00
 
 Number of bedrooms
-Bedrooms	Frequency	Percent	Cumulative Frequency	Cumulative Percent
-1		2		13.33	2			13.33
-2		5		33.33	7			46.67
-3		4		26.67	11			73.33
-4		4		26.67	15			100.00
+Bedrooms	Frequency	Percent Cumulative  Frequency	Cumulative Percent
+1		    2		    13.33   2			13.33
+2		    5		    33.33   7			46.67
+3		    4		    26.67   11			73.33
+4		    4		    26.67	15			100.00
 
 The variable STYLE has a permanent label of “Style of homes” and the variable BEDROOMS has a permanent label of “Number of bedrooms”.
 Which one of the following SAS programs produced the output shown in the exhibit?
@@ -4907,30 +4918,31 @@ Answer: D
 Description: Two table statement in freq procedure creates 2 tables, one for styles and other one is for bedrooms.
 
 Question:
-Obs	style	sqfeet	bedrooms	baths	street			price
- 1	RANCH	1250	2		1.0	Sheppard Avenue		$64,000
- 2	SPLIT	1190	1		1.0	Rand Street		$65,850
- 3	CONDO	1400	2		1.5	Market Street		$80,050
- 4	TWOSTORY 1810	4		3.0	Garris Street		$107,250
- 5	RANCH	1500	3		3.0	Kemble Avenue		$86,650
- 6	SPLIT	1615	4		3.0	West Drive		$94,450
- 7	SPLIT	1305	3		1.5	Graham Avenue		$73,650
- 8	CONDO	1390	3		2.5	Hampshire Avenue	$79,350
- 9	TWOSTORY 1040	2		1.0	Sanders Road		$55,850
-10	CONDO	2105	4		2.5	Jeans Avenue		$127,150
-11	RANCH	1535	3		3.0	State Highway		$89,100
-12	TWOSTORY 1240	2		1.0	Fairbanks Circle	$69,250
-13	RANCH	720	1		1.0	Nicholson Drive		$34,550
-14	TWOSTORY 1745	4		2.5	Highland Road		$102,950
-15	CONDO	1860	2		2.0	Arcata Avenue		$110,700
+Obs	style	sqfeet	bedrooms	baths	street			    price
+ 1	RANCH	1250	2		    1.0	    Sheppard Avenue		$64,000
+ 2	SPLIT	1190	1		    1.0	    Rand Street		    $65,850
+ 3	CONDO	1400	2		    1.5	    Market Street		$80,050
+ 4	TWOSTORY 1810	4		    3.0	    Garris Street		$107,250
+ 5	RANCH	1500	3		    3.0	    Kemble Avenue		$86,650
+ 6	SPLIT	1615	4		    3.0	    West Drive		    $94,450
+ 7	SPLIT	1305	3		    1.5	    Graham Avenue		$73,650
+ 8	CONDO	1390	3		    2.5	    Hampshire Avenue	$79,350
+ 9	TWOSTORY 1040	2		    1.0	    Sanders Road		$55,850
+10	CONDO	2105	4		    2.5	    Jeans Avenue		$127,150
+11	RANCH	1535	3		    3.0	    State Highway		$89,100
+12	TWOSTORY 1240	2		    1.0	    Fairbanks Circle	$69,250
+13	RANCH	720	1		        1.0	    Nicholson Drive		$34,550
+14	TWOSTORY 1745	4		    2.5	    Highland Road		$102,950
+15	CONDO	1860	2		    2.0	    Arcata Avenue		$110,700
 
 The following SAS program is submitted:
+
 proc report data = sasuser.houses nowd headline;
-    column style price;
-    where prices lt 100000;
-    <insert DEFINE statement here>
-    define price / mean width = 9;
-    title;
+column style price;
+where prices lt 100000;
+<insert DEFINE statement here>
+define price / mean width = 9;
+title;
 run;
 
 The following ouput is created by the REPORT procedure:
@@ -4974,10 +4986,10 @@ Regin Asia	Subsidiary	Total Sales
 The following SAS program is submitted and produces the first report:
 
 proc report data = sasuser.shoes nowd;
-    column region subsidiary sales;
-    define subsidiary / display;
-    define region / group;
-    define sales / sum;
+column region subsidiary sales;
+define subsidiary / display;
+define region / group;
+define sales / sum;
 run;
 
 Which one of the following corrects the program above to produce the second report shown in the exhibit?
