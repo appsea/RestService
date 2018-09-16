@@ -1,5 +1,7 @@
 package com.exuberant.rest.survey.config;
 
+import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
+import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -27,4 +29,8 @@ public class SurveyConfiguration {
         return new RestTemplate();
     }
 
+    @Bean
+    public QuestionValidator questionValidator(){
+        return new GeneralQuestionValidator();
+    }
 }

@@ -5,6 +5,7 @@ import com.exuberant.rest.survey.service.QuestionService;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -30,7 +31,7 @@ public class ApplicationController {
     }
 
     @CrossOrigin(origins = "http://localhost:8808")
-    @RequestMapping("/version")
+    @RequestMapping(path = "/version", consumes = MediaType.APPLICATION_ATOM_XML_VALUE)
     public String version() {
         return this.firebaseService.version();
     }
