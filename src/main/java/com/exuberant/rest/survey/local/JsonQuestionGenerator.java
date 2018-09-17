@@ -39,6 +39,7 @@ public class JsonQuestionGenerator {
         questionParsersForFile.put("Categories Base SAS.txt", genericQuestionParser);
         questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put("dvsa.txt", genericQuestionParser);
     }
 
     public void generateQuestions(QuestionBank questionBank) throws Exception {

@@ -19,6 +19,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
         patternParsersForFile.put("CompTIA A+.txt", getFirstPatternParser());
         patternParsersForFile.put("Categories Base SAS.txt", getCategoryParser());
+        patternParsersForFile.put("dvsa.txt", getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
         patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
     }
