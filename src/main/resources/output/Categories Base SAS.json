@@ -10166,7 +10166,7 @@
     },
     {
       "number": "364",
-      "description": "Which of the following programs contain a syntax error?\n",
+      "description": "Which of the following programs contain a syntax error?",
       "explanation": "Data statement has spelling mistake which creates an syntax error.",
       "category": "First",
       "options": [
@@ -10250,7 +10250,7 @@
     },
     {
       "number": "367",
-      "description": "Provide a line of missing code.\n\nGiven the following data set WORK.SALES:\nSalesID     SalesJan      FebSales     MarchAmt\n-------    ---------      --------    ----------\nW6790         50            400           350\nW7693         25            100           125\nW1387         .             300           250\nThe following SAS program is submitted:\n\nData WORK.QTR1;\nSet WORK.SALES;\narray month{3} salesjan febsales marchamt;\n<insert code here>\nrun;\n\nWhich statement should be inserted to produce a following output?\nSalesID       SalesJan      FebSales     MarchAmt      QTR1\n-------      ----------   ------------  --------     --------\nW6790          50            400           350         800\nW7693          25           100            125         250\nW1387          .            300            250         550\n",
+      "description": "Provide a line of missing code.\n\nGiven the following data set WORK.SALES:\nSalesID     SalesJan      FebSales     MarchAmt\n-------    ---------      --------    ----------\nW6790         50            400           350\nW7693         25            100           125\nW1387         .             300           250\nThe following SAS program is submitted:\n\nData WORK.QTR1;\nSet WORK.SALES;\narray month{3} salesjan febsales marchamt;\n<insert code here>\nrun;\n\nWhich statement should be inserted to produce a following output?\nSalesID       SalesJan      FebSales     MarchAmt      QTR1\n-------      ----------   ------------  --------     --------\nW6790          50            400           350         800\nW7693          25           100            125         250\nW1387          .            300            250         550",
       "explanation": "'*' sign in curly braces determine the all of elements or variables in the array when it compiles the code. JANSALES has a missing value, SUM OPERATOR will generate missing value while SUM FUNCTION will give total of all 3 variable.",
       "category": "Third",
       "options": [
@@ -11426,7 +11426,7 @@
     },
     {
       "number": "409",
-      "description": "Which statement correctly reads the fields in the following order: StockNumber, Price, Item, Finish, Style?\nField Name   Start Column    End Column       Data Type\nStockNumber       1              3            character\nFinish            5              9            character\nStyle            11             18            character\nItem             20             24            character\nPrice            27             32            numeric\n\n1-----+-----10-----+----20-----+-----30-----+\n310 Oak    pedestal  table   329.99\n311 male   pedestal  table   369.99\n312 brass  floor     lamp    79.99\n313 glass  table     lamp    59.99\n313 oak    rocking   chair   153.99\n",
+      "description": "Which statement correctly reads the fields in the following order: StockNumber, Price, Item, Finish, Style?\nField Name   Start Column    End Column       Data Type\nStockNumber       1              3            character\nFinish            5              9            character\nStyle            11             18            character\nItem             20             24            character\nPrice            27             32            numeric\n\n1-----+-----10-----+----20-----+-----30-----+\n310 Oak    pedestal  table   329.99\n311 male   pedestal  table   369.99\n312 brass  floor     lamp    79.99\n313 glass  table     lamp    59.99\n313 oak    rocking   chair   153.99",
       "explanation": "You can use column input to read fields in any order. You must specify the variable name to be created, identify character values with a $, and name the correct starting column and ending column for each field.",
       "category": "Second",
       "options": [

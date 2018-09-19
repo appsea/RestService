@@ -16,7 +16,7 @@ import java.util.Set;
 @Service
 public class SasQuestionService implements QuestionService {
 
-    private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1, -1, true);
+    private JsonQuestions jsonQuestions = new JsonQuestions(Collections.emptyList(), -1, -1, true, false);
 
     @Autowired
     private GenericQuestionParser genericQuestionParser;
@@ -45,7 +45,7 @@ public class SasQuestionService implements QuestionService {
         }
         int version = 13;
         int playStoreVersion = 10001;
-        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version, playStoreVersion, false);
+        JsonQuestions jsonQuestions = new JsonQuestions(allQuestions, version, playStoreVersion, false, false);
         return jsonQuestions;
     }
 

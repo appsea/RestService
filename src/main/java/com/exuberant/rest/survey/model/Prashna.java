@@ -5,15 +5,8 @@ import lombok.Data;
 
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class JsonOption {
-
-    private String tag;
-    private String description;
+public class Prashna {
+    private String text;
     private String image;
-    private boolean correct;
-
-    @Override
-    public String toString() {
-        return description;
-    }
+    private String code;
 }

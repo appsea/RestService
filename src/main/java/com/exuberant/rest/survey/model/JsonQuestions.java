@@ -3,6 +3,7 @@ package com.exuberant.rest.survey.model;
 import com.exuberant.rest.survey.QuestionBank;
 import com.exuberant.rest.util.MultiValueMap;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -16,9 +17,13 @@ import java.util.Set;
  * Created by rakesh on 22-Sep-2017.
  */
 @Data
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class JsonQuestions {
 
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
+    public static final String IMAGE = "image:";
+    @JsonIgnore
+    private boolean enablePrashna;
 
     private List<JsonQuestion> questions = new ArrayList<>();
     private int questionVersion;
@@ -27,20 +32,22 @@ public class JsonQuestions {
     @JsonIgnore
     private MultiValueMap<String, Integer> multiValueMap;
 
-    public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads) {
-        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
-        this.categorise();
+    public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads, boolean enablePrashna) {
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
         this.ads = ads;
+        this.enablePrashna = enablePrashna;
+        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        this.categorise();
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
-        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
-        this.categorise();
         this.questionVersion = questionBank.getQuestionVersion();
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
+        this.enablePrashna = questionBank.isEnablePrashna();
+        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        this.categorise();
     }
 
     public void addQuestion(Question question) {
@@ -50,17 +57,54 @@ public class JsonQuestions {
     private JsonQuestion toQuestion(Question question) {
         JsonQuestion jsonQuestion = new JsonQuestion();
         jsonQuestion.setNumber(question.getNumber());
-        jsonQuestion.setDescription(question.getDescription());
+        String descriptionWithImage = question.getDescription();
+        if (enablePrashna) {
+            Prashna prashna = toPrashna(descriptionWithImage);
+            jsonQuestion.setPrashna(prashna);
+        } else {
+            jsonQuestion.setDescription(descriptionWithImage.replaceAll("\n$", ""));
+        }
         jsonQuestion.setExplanation(question.getExplanation());
         jsonQuestion.setCategory(question.getCategory());
         for (Option option : question.getOptions().getOptions()) {
             JsonOption jsonOption = new JsonOption();
             jsonOption.setCorrect(option.isCorrect());
             jsonOption.setTag(option.getTag());
-            jsonOption.setDescription(option.getDescription().replaceAll("\n$", ""));
+            String description = option.getDescription().replaceAll("\n$", "");
+            jsonOption.setDescription(description);
+            if (description.contains(IMAGE)) {
+                int beginIndex = description.indexOf(IMAGE);
+                jsonOption.setDescription(null);
+                String image = description.substring(beginIndex + 7);
+                jsonOption.setImage(image);
+            }
             jsonQuestion.addOption(jsonOption);
         }
         return jsonQuestion;
+    }
+
+
+    public JsonQuestions() {
+    }
+
+    public static void main(String[] args) {
+        JsonQuestions jsonQuestions = new JsonQuestions();
+        String string = "What should you do as you approach this bridge?\nimage: cttk2000.jpg";
+        jsonQuestions.toPrashna(string);
+    }
+
+    public Prashna toPrashna(String description) {
+        Prashna prashna = new Prashna();
+        if (description.contains(IMAGE)) {
+            int beginIndex = description.indexOf(IMAGE);
+            String text = description.substring(0, beginIndex).replaceAll("\n$", "");
+            prashna.setText(text);
+            String image = description.substring(beginIndex + 7);
+            prashna.setImage(image);
+        } else {
+            prashna.setText(description.replaceAll("\n$", ""));
+        }
+        return prashna;
     }
 
     public List<Category> getCategories() {
@@ -71,10 +115,10 @@ public class JsonQuestions {
         return categories;
     }
 
-    public void categorise(){
+    public void categorise() {
         multiValueMap = new MultiValueMap();
         for (JsonQuestion question : questions) {
-            if(question.getCategory()!=null){
+            if (question.getCategory() != null) {
                 multiValueMap.put(question.getCategory(), Integer.parseInt(question.getNumber()));
             }
         }
