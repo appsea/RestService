@@ -43,6 +43,11 @@ public class WordFileWriter {
         document.write(out);
         out.close();
         document.close();
+        createPdf(document, wordPath);
+    }
+
+    private void createPdf(XWPFDocument document, Path wordPath) {
+
     }
 
     private void addOption(XWPFDocument document, JsonOption option) throws Exception {

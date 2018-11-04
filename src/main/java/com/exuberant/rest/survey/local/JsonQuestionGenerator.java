@@ -48,6 +48,7 @@ public class JsonQuestionGenerator {
         ObjectMapper objectMapper = new ObjectMapper();
         Path jsonPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".json"));
         Path wordPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".docx"));
+        Path pdfPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".pdf"));
         System.err.println("Created: " + jsonPath);
         JsonQuestions jsonQuestions = new JsonQuestions(questions, questionBank);
         //System.err.println("Without: " + jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).count());
