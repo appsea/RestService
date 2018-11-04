@@ -46,8 +46,35 @@ public class WordFileWriter {
     }
 
     private void addOption(XWPFDocument document, JsonOption option) throws Exception {
-        this.addText(document, option.getDescription());
-        this.addImage(document, option.getImage());
+        if (option.isCorrect()) {
+            this.addCorrectOption(document, option);
+        } else {
+            this.addText(document, option.getDescription());
+            this.addImage(document, option.getImage());
+            this.addText(document, option.getImage(), ParagraphAlignment.CENTER);
+        }
+    }
+
+    private void addCorrectImage(XWPFDocument document, String image) throws Exception {
+        this.addImage(document, image);
+        this.addCorrectText(document, image, ParagraphAlignment.CENTER);
+    }
+
+    private void addCorrectOption(XWPFDocument document, JsonOption option) throws Exception {
+        String text = option.getDescription();
+        addCorrectText(document, text, ParagraphAlignment.LEFT);
+        this.addCorrectImage(document, option.getImage());
+    }
+
+    private void addCorrectText(XWPFDocument document, String text, ParagraphAlignment alignment) {
+        if (text != null) {
+            XWPFParagraph para3 = document.createParagraph();
+            para3.setAlignment(alignment);
+            XWPFRun run = para3.createRun();
+            run.setText(text);
+            run.setBold(true);
+            run.setColor("009933");
+        }
     }
 
     private void addPrashna(XWPFDocument document, Prashna prashna) throws Exception {
@@ -72,7 +99,7 @@ public class WordFileWriter {
 
     public void addImage(XWPFDocument document, String imageName) throws Exception {
         if (imageName != null) {
-            if(ClassLoader.getSystemResource("images/dvsa/renamed/" + imageName) != null){
+            if (ClassLoader.getSystemResource("images/dvsa/renamed/" + imageName) != null) {
                 XWPFParagraph image = document.createParagraph();
                 image.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun imageRun = image.createRun();
@@ -82,8 +109,7 @@ public class WordFileWriter {
                 imageRun.addPicture(Files.newInputStream(imagePath),
                         XWPFDocument.PICTURE_TYPE_PNG, imagePath.getFileName().toString(),
                         Units.toEMU(300), Units.toEMU(150));
-                this.addText(document, imageName, ParagraphAlignment.CENTER);
-            }else{
+            } else {
                 System.err.println("Couldnt find the image " + imageName);
             }
 
