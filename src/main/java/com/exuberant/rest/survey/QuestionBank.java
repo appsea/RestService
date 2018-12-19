@@ -7,6 +7,7 @@ public class QuestionBank {
     private String inputFile;
     private int totalQuestions;
     private int questionVersion;
+    private int premiumSize = 200;
     private final int playStoreVersion;
     private final boolean showAd;
     private final boolean enablePrashna;
@@ -58,5 +59,9 @@ public class QuestionBank {
 
     public boolean isEnablePrashna() {
         return enablePrashna;
+    }
+
+    public int getPremiumSize() {
+        return premiumSize;
     }
 }

@@ -10,9 +10,9 @@ import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.odftoolkit.odfdom.converter.pdf.PdfOptions;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,10 +20,6 @@ import java.nio.file.Paths;
 import java.util.List;
 
 public class WordFileWriter {
-
-    public static void main(String[] args) throws IOException, InvalidFormatException, URISyntaxException {
-        writeIt(null);
-    }
 
     public void write(JsonQuestions jsonQuestions, Path wordPath) throws Exception {
         XWPFDocument document = new XWPFDocument();
@@ -46,8 +42,11 @@ public class WordFileWriter {
         createPdf(document, wordPath);
     }
 
-    private void createPdf(XWPFDocument document, Path wordPath) {
-
+    private void createPdf(XWPFDocument document, Path wordPath) throws FileNotFoundException {
+        PdfOptions options = PdfOptions.create();
+        OutputStream out = new FileOutputStream(new File(String.valueOf(wordPath)));
+        //PdfConverter.getInstance().convert(document, out, options);
+        System.out.println("Done");
     }
 
     private void addOption(XWPFDocument document, JsonOption option) throws Exception {

@@ -8384,3 +8384,1190 @@ C. PROC REPORT displays only the first occurrence of each order variable value i
 D. all of the above
 Answer: D
 Description: Order variables do order rows according to the formatted values of the order variable, and PROC REPORT suppresses repetitious printing of order values. However, you can't use order variables in a summary report.
+
+Question:
+Which one of the following statement can’t be part of “PROC FREQ”?
+A. OUTPUT
+B. WEIGHT
+C. SET
+D. Tables
+Answer: C
+Description: Look at the syntax of PROC FREQ, there is not SET statement required.
+PROC FREQ <options>;
+BY variables;
+EXACT statistics-options </ computation-options>;
+OUTPUT <OUT=SAS-data-set> options;
+TABLES requests </ options>;
+TEST options;
+WEIGHT variable </ options>;
+RUN;
+
+Question:
+How many variables would be in table “AV” after executing the below SAS program?
+Employee:
+Name    Age
+Ankit	25
+Faizan	24
+Kunal	31
+Sunil	30
+
+Salary:
+Name    Age
+Kunal	60000
+Kunal	55000
+Sunil	37000
+Sunil	34000
+
+Data AV;
+Merge employee salary;
+By name;
+Totsal + salary;
+Run;
+
+A. 3
+B. 4
+C. 5
+D. 1
+Answer: B
+Description: If we are using any variable name within data step program it will automatically get created in output data set. Here, Three unique variables in both the tables are “name”, “age”, “salary” and one more variable created within dataset “totsal”.
+ 
+Question:
+After executing below SAS program, how many observations would be AV dataset?
+Employee:
+Name    Age
+Ankit	25
+Faizan	24
+Kunal	31
+Sunil	30
+
+Salary:
+Name    Age
+Kunal	60000
+Kunal	55000
+Sunil	37000
+Sunil	34000
+
+Data AV;
+Merge employee(in=ins) salary(in=ins);
+By name;
+Run;
+
+A. 4
+B. 2
+C. 1
+D. 6
+Answer: D
+Description: Above you look at input data sets, there is a one-to-many relationship between Employee and Salary.
+ 
+Question:
+After executing below SAS program, how many observations would be in AV dataset?
+Employee:
+Name    Age
+Ankit	25
+Faizan	24
+Kunal	31
+Sunil	30
+
+Salary:
+Name    Age
+Kunal	60000
+Kunal	55000
+Sunil	37000
+Sunil	34000
+
+Data Av;
+Merge employee(in=ine) salary(in=ins);
+By name;
+If ins=0;
+Run;
+
+A. 4
+B. 2
+C. 1
+D. 6
+Answer: B
+Description: Here, we are talking about “in” variables and look at the below table to understand the value of in variables: 
+In this program, we are looking for observations where ins = 0 which means that “name” values not available in table “Salary”. In above table, you can see that only two records satisfy that criteria.
+ 
+Question:
+Which one of the following command will help us to rename the column “Salary” to “Compensation” of table “Salary”?
+Employee:
+Name    Age
+Ankit	25
+Faizan	24
+Kunal	31
+Sunil	30
+
+Salary:
+Name    Age
+Kunal	60000
+Kunal	55000
+Sunil	37000
+Sunil	34000
+
+A. data salary (rename(salary=compensation));
+Set salary;
+Run;
+B. data salary (rename=(salary=compensation));
+Set salary;
+Run;
+C. data salary (rename(salary==compensation));
+Set salary;
+Run;
+D. None of the above
+Answer: B
+Description: Syntax to rename variable(s) in SAS is:
+RENAME = (Old_Var1 = NewVar1 Old_Var2=New_Var2 Old_Var3=New_Var3 …)
+
+Question:
+Which of the following statements is not correct about the program shown below?
+
+Data AV;
+Do year=2000 to 2004;
+Capital+5000;
+Capital=(capital*.10);
+Output;
+End;
+Run;
+
+A. The OUTPUT statement writes current values to the dataset immediately
+B. In this case, last value for Year in the new data set is 2005
+C. The OUTPUT statement overrides the automatic output at the end of the DATA step
+D. The DO loop performs 5 iterations
+Answer: B
+Description: In above program, we are writing to output dataset before END statement which means it will not write last value 2005 to output dataset so last value would be 2004. If we remove OUTPUT statement, last value would be 2005.
+ 
+Question:
+How can you limit the variables written to output dataset in DATA STEP?
+A.	DROP
+B.	KEEP
+C.	RETAIN
+D.	Both A or B
+
+Answer: D
+Description: Both DROP and KEEP can be used to  limit the variables in the dataset.
+•	The DROP= option tells SAS which variables you want to drop. If you place the DROP= option on the SET statement, SAS drops the specified variables when it reads the input data set and if you place the DROP=option on the DATA statement, SAS drops the specified variables when it writes to the output data set.
+•	The KEEP= option tells SAS which variables you want to keep. If you place the KEEP= option on the SET statement, SAS keeps the listed variables when it reads the input data set. On the other hand, if you place the KEEP= option on the DATA statement, SAS keeps the specified variables when it writes to the output data set.
+ 
+Question:
+Which of the following statements are used to read delimited raw data file and create an SAS data set?
+A.	DATA and SET
+B.	DATA, SET and INFILE
+C.	DATA, SET and INPUT
+D.	DATA, INFILE and INPUT
+Answer: D
+Description: SET can not be used to read raw data files. SET is used to read data from one or more SAS dataset.
+
+Question:
+What will be the output if we run the below SAS statements to read “emp.csv” file?
+Below is the data from a csv file “Emp.csv” 
+This dataset is about company employee
+
+Employee id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+
+101			M		John		12/1/1995	Delhi		350000	101
+
+102			F		Sangeeta	7/4/1980	Delhi		450000	103
+
+103			F		Mary		3/5/1973	Mumbai		500000	101
+
+104			M		Richard		6/25/1975	Mumbai		750000	101
+
+105			M		Fredrick	8/20/1990	Delhi		320000	101
+
+data WORK.EMP;
+     infile'C:\AV\Skilltest\Emp.csv'dlm=','  ;
+     input
+           Employee_id $
+           Gender $
+           Name $
+           DOB
+           Location $
+           Salary
+           Manager_Emp_ID;
+run;
+A.
+	Employee_id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+
+1	thisdata	101		M			.			12/1/199	.		350000	
+
+2	102			F		Sangeeta	.			Delhi		450000	103
+
+3	103			F		Mary		.			Mumbai		500000	101
+
+4	104			M		Richard		.			Mumbai		750000	101
+
+5	105			M		Fredrick	.			Delhi		320000	101
+
+B.
+	Employee_id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+
+1	102			F		Sangeeta	.			Delhi		450000	103
+
+2	103			F		Mary		.			Mumbai		500000	101
+
+3	104			M		Richard		.			Mumbai		750000	101
+
+4	105			M		Fredrick	.			Delhi		320000	101
+
+C.
+	Employee_id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+1	Employee	Gender	Name		.			Location	.		.	
+
+2	thisdata	101		M			.			12/1/199	.		350000	
+
+3	102			F		Sangeeta	.			Delhi		450000	103
+
+4	103			F		Mary		.			Mumbai		500000	101
+
+5	104			M		Richard		.			Mumbai		750000	101
+
+6	105			M		Fredrick	.			Delhi		320000	101
+
+D. None of the above
+
+Answer: C
+
+Description:INFILE statement start reading a file from first line of CSV and it can be header row also so we need to mention start row explicitly.
+
+ 
+
+Question:
+Which option will be added to infile statement to read a dataset from the record with employee name “John”?
+Below is the data from a csv file “Emp.csv” 
+This dataset is about company employee
+
+Employee id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+
+
+
+101			M		John		12/1/1995	Delhi		350000	101
+
+102			F		Sangeeta	7/4/1980	Delhi		450000	103
+
+103			F		Mary		3/5/1973	Mumbai		500000	101
+
+104			M		Richard		6/25/1975	Mumbai		750000	101
+
+105			M		Fredrick	8/20/1990	Delhi		320000	101
+
+data WORK.EMP;
+     infile'C:\AV\Skilltest\Emp.csv'dlm=','  ;
+     input
+          Employee_id $
+          Gender $
+          Name $
+          DOB
+          Location $
+          Salary
+          Manager_Emp_ID;
+run;
+A.  rows=3
+B.  option= 3
+C.  firstobs=3
+D.  start=3
+
+
+Answer: C
+Description: FIRSTOBS option can be used to explicity mention the start row to read. In above table, first row is representing header, second row about table and data set is starting with third row.
+
+Question:
+Following SAS statements are used to read file “Emp.csv” from third record of csv file.
+
+data WORK.EMP;
+     infile'C:\AV\Skilltest\Emp.csv'dlm=',' DSD firstobs =3;
+     input
+          Employee_id $
+          Gender $
+          Name $
+          DOB
+          Location $
+          Salary
+          Manager_Emp_ID;
+run;
+Output:
+	Employee_id	Gender	Name		DOB			Location	Salary	ManagerEmp ID
+
+1	101			M		John		.			Delhi		350000	101	
+
+2	102			F		Sangeeta	.			Delhi		450000	103
+
+3	103			F		Mary		.			Mumbai		500000	101
+
+4	104			M		Richard		.			Mumbai		750000	101
+
+5	105			M		Fredrick	.			Delhi		320000	101
+
+
+
+Now, which statement we should add to the above code to read date column “DOB” correctly?
+
+A.  Date 360
+B.  In-format and format
+C.  Both A and B
+D. None of the above
+
+Answer: B
+Description: To read date column, we need to explicitly mention the format type of date and that can be done using INFORMAT and FORMAT  statements.
+
+Question:
+The following SAS program is run on the table “Emp”
+
+
+Obs	DOB	Employee_id	Gender	Name		Location	Salary	Manager_EMP_ID
+
+1	.	101			M		John		Delhi		350000	101	
+
+2	.	102			F		Sangeeta	Delhi		450000	103
+
+3	.	103			F		Mary		Mumbai		500000	101
+
+4	.	104			M		Richard		Mumbai		750000	101
+
+5	.	105			M		Fredrick	Delhi		320000	101
+
+proc print data = emp;
+     where Name like '_R%';
+run;
+
+How many records will it print?
+
+A.  1
+B.  2
+C.  3
+D. None of the above
+
+Answer: D
+Description: Like operator acts as case sensitive and in above table there is no-one whose second character of the name is capital R.
+
+ 
+
+Question:
+Which of the following statement will calculate the age of each employee as on 05-Feb-2017?
+
+
+Obs	DOB	Employee_id	Gender	Name		Location	Salary	Manager_EMP_ID
+
+1	.	101			M		John		Delhi		350000	101	
+
+2	.	102			F		Sangeeta	Delhi		450000	103
+
+3	.	103			F		Mary		Mumbai		500000	101
+
+4	.	104			M		Richard		Mumbai		750000	101
+
+5	.	105			M		Fredrick	Delhi		320000	101
+
+A.
+
+data emp;
+     set emp;
+     Age = yrdif(DOB,'05Feb2017'd,'Actual');
+run;
+B.
+
+data emp;
+     set emp;
+     Age = yrdif(DOB,'05Feb2017','Actual');
+run;
+C.
+
+data emp;
+     set emp;
+     Age = yrdiff(DOB,'05Feb2017','Actual');
+run;
+D. None of the above
+
+Answer: A
+
+Description: In SAS, date string is always followed by “d” to act as date.
+
+ 
+
+Question: If you submit the following program on data set, which variables appear in table “Emp”?
+
+
+Obs	DOB	Employee_id	Gender	Name		Location	Salary	Manager_EMP_ID
+
+1	.	101			M		John		Delhi		350000	101	
+
+2	.	102			F		Sangeeta	Delhi		450000	103
+
+3	.	103			F		Mary		Mumbai		500000	101
+
+4	.	104			M		Richard		Mumbai		750000	101
+
+5	.	105			M		Fredrick	Delhi		320000	101
+
+data emp(drop=Manager_EMP_ID Salary);
+     set emp (keep=Manager_EMP_ID Employee_ID Salary);
+     if Manager_Emp_ID=101 and Salary >45000;
+     Age = yrdif(DOB,'05Feb2017'd,'Actual'd);
+run;
+A.  Employee_Id, Gender, Name, Location, Salary, DOB, Manager_Emp_ID
+
+B.  Employee_Id, Gender, Name, Location, Salary, DOB, Manager_Emp_ID, Age
+
+C.  Employee_ID
+
+D.  Employee_ID, Age
+
+E.  Employee_ID, Age, DOB
+
+Answer: D
+
+Description: We have only three variables from input dataset “Manager_EMP_ID”,”Employee_ID”, “Salary” and two new variables introduced “DOB” and “Age”. In Data statement, we have dropped two (Manager_EMP_ID” and “Salary”) out of these five variables. Now variables in output dataset “Employee_ID”, “Age”, and “DOB”.
+
+Question:
+Below is the csv file “class.csv” for marks of students in different subjects:
+
+Name,Gender,Location,English,Maths,Hindi,Sanskrit
+Mohan,M,Banglore,50,60,70,80
+Ramesh,M,Banglore,45,50,65,89
+John,M,Washington,68,,,88
+Kathy,F,Washington,89,55,85,83
+George,M,Washington,43,45,95,84
+Lisa,F,Washington,76,85,,86
+Venkat,M,Banglore,68,90,78,92
+Srimohan,M,Banglore,59,56,80
+Preet,F,Banglore,81,95,85,96
+Lindsy,F,Washington,66,75,78,82
+
+Below code is used to read the file class.csv into a SAS dataset table named class.
+
+data WORK.class;
+     infile'C:\AV\Skilltest\ClassScore.csv'dlm=','firstobs=2;
+     input
+          Name $
+          Gender $
+          Location $
+          English
+          Maths
+          Hindi
+          Sanskrit;
+run;
+Above code gives the below output:
+	Name		Gender	Location	English		Math	Hindi	Sanskrit		
+1	Mohan		M		Banglore	50			60		70		80
+2	RAMESH		M		Banglore	45			50		65		89
+3	John		M		Washingt	68			88		.		.
+4	George		M		Washingt	43			44		95		84
+5	Lisa		F		Washingt	76			85		86		.
+6	Srimohan	M		Banglore	59			56		80		.
+7	Lindsy		F		Washingt	66			75		80		82
+In the above output, you can see following issues:
+
+Marks are not under right column heading like John marks in”Sanskrit” has shifted to “Maths”
+The total number of observation is 7 only.
+ Which of the following command can be used with “infile” statement to remove these errors?
+
+A.  MISSING
+B.  MISSOVER
+C.  DSD
+D.  Both B and C
+
+Answer: D
+Description: Whenever a read a delimited file using infile statement and if the file has two or more delimiter together (n value between them) or last column data is missing then it takes the next possible value as an input for that column. And, the next possible value can be other column data of same row or next line also.
+Now, to avoid these reading issues, we use DSD to prevent reading from next column of the same row and MISSOVER for next line or observation.
+
+Question:
+Which of the following command will find the number of missing marks in all variables of table “Class”.
+	Name		Gender	Location	English		Math	Hindi	Sanskrit		
+1	Mohan		M		Banglore	50			60		70		80
+2	Ramesh		M		Banglore	45			50		65		89
+3	John		M		Washingt	68			88		.		.
+4	Kathy		F		Washingt	76			85		86		.
+5	George		M		Washingt	43			44		95		84
+6	Lisa		F		Washingt	76			85		86		.
+7	Venkat		M		Banglore	68			90		78		92
+8	Srimohan	M		Banglore	59			56		80		.
+9	Preet		F		Banglore	81			95		85		96
+10	Lindsy		F		Washingt	66			75		80		82
+
+A. proc means data=class N;
+run;
+
+B. proc means data=class N NMISS;
+run;
+
+C. proc means data=class SUM N;
+run;
+
+D. Both B and C
+
+Answer: B
+
+Description: Options with PROC MEANS:
+
+N: Number of observations with a non-missing value of the analysis variable
+MEAN: Mean (Average) of the analysis variable’s non-missing values
+STD: Standard Deviation
+MAX: Largest (Maximum) Value
+MIN: Smallest (Minimum) Value
+NMISS: Number of missing Values
+
+Question:
+Which of the following command will help to impute the missing value of column “Hindi” with average marks of “Hindi”?
+
+A. Proc SQL;
+     Create table temp as Select *, mean(Hindi)  as avg_score from Class;
+quit;
+
+Data class (drop= Hindi avg_score Rename=(Hindi_2=Hindi));
+     Set temp;
+     If Hindi=. Then Hindi_2=avg_score;
+     Else Hindi_2=Hindi;
+run;
+B. Proc SQL;
+     Create table temp as Select *, mean(Hindi)  asavg_score from Class;
+quit;
+
+Data class (drop= Hindi avg_score Rename=(Hindi_2=Hindi));
+     Set class;
+     If Hindi=. Then Hindi_2=avg_score;
+     Else Hindi_2=Hindi;
+run;
+C. Both A and B
+
+D. None of the above
+
+Answer: A
+
+Description: In the first option, we are creating a variable avg_score in the table temp and then using this table data in data step to input missing values of HINDI whereas in option second, we are using table class as an input data set for data step.
+
+Question:
+Which of the following statements can be used to append the Table-1 and Table-2 having a unique value of Product_ID?
+
+Table-1				
+Product_ID	Location	Proposed_Booking_Date	Qty_MT	Discount_Dollar
+A201		Delhi_NCR	12-Jan-17				4		10
+A304		Chennai		12-Jan-17				5		20
+A205		Mumbai		15-Jan-17				2		4
+C406		Delhi_NCR	17-Jan-17				8		5
+C203		Delhi_NCR	20-Jan-17				7		1
+Z404		Mumbai		15-Jan-17				6		12
+
+Table-2				
+Product_ID	Location	Proposed_Booking_Date	Qty_MT	Discount_Dollar
+A210		Mumbai		14-Jan-17				10		10
+A310		Mumbai		14-Jan-17				8		20
+A354		Delhi		18-Jan-17				5		4
+C406		Delhi		17-Jan-17				8		5
+C203		Delhi		20-Jan-17				7		1
+Z514		Delhi		18-Jan-17				10		15
+
+A. data work.merge_table NODUPKEY;
+     set table1 table2;
+run;
+
+B. data work.merge_table;
+     set table1 table2;
+run;
+
+PROC SORT DATA = merge_table OUT = merge_table NODUPKEY;
+     by Product_ID;
+run;
+
+C. data work.merge_table;
+     set table1 table2 nodupkey;
+run;
+
+PROC SORT DATA = merge_table OUT = merge_table;
+     by Product_ID ;
+run;
+
+D. None of the above
+
+Answer: B
+
+Description: To remove duplicate records based on a variable or multiple variables, we use NODUPKEY with PROC SORT or FIRST./ LAST. option to remove duplicate records. For more detail on removing duplicate records, you can refer this link.
+
+Question:
+With cash crunch (due to demonetization) the company decided to advance the proposed booking date by 2 months (keeping the day intact). Which of the below SAS formula can be used to advance the date?
+
+A. data work.av_date;
+   set work.merge_table;
+   proposed_booking_date1=put(intnx('month',proposed_booking_date,day),date9.);
+run;
+
+B. data work.av_date;
+     set work.merge_table;
+     proposed_booking_date1=put(intnx('month',proposed_booking_date,2,'s'),date9.);
+run;
+
+C. data work.av_date;
+     set work.merge_table;
+     proposed_booking_date1=put(intnx('month',proposed_booking_date,sameday),date9.);
+run;
+
+D. data work.av_date;
+     set work.merge_table;
+     proposed_booking_date1=put(intnx('month',proposed_booking_date,1),date9.);
+run;
+Answer: B
+
+Description: Look, at the syntax of INTNX() function:
+
+INTNX ( interval, from, n < , alignment > ) ;
+
+The arguments to the INTNX function are as follows:
+interval: is a character constant or variable that contains an interval name
+from: is a SAS date value (for date intervals) or datetime value (for datetime intervals)
+n: is the number of intervals to increment from the interval that contains the from value
+alignment: controls the alignment of SAS dates, within the interval, used to identify output observations. Allowed values are BEGINNING, MIDDLE, END, and SAMEDAY/S.
+In the second option, you can see that we have used the similar syntax to advance the date value by 2 months.
+
+Question:
+If the following code will run, what will be the output?
+
+Table-1				
+Product_ID	Location	Proposed_Booking_Date	Qty_MT	Discount_Dollar
+A201		Delhi_NCR	12-Jan-17				4		10
+A304		Chennai		12-Jan-17				5		20
+A205		Mumbai		15-Jan-17				2		4
+C406		Delhi_NCR	17-Jan-17				8		5
+C203		Delhi_NCR	20-Jan-17				7		1
+Z404		Mumbai		15-Jan-17				6		12
+
+Table 3	
+Date		Dollar Rate
+12-Jan-17	67.1
+14-Jan-17	67.2
+15-Jan-17	66.6
+17-Jan-17	67.2
+18-Jan-17	66.5
+20-Jan-17	66.8
+
+data table_A (Drop = Location);
+      merge table1(in=Proposed_Booking_Date) table3(in=Date);
+      if Proposed_Booking_Date;
+      if Date then Discount_INR=Discount_Dollar*Dollar_Rate;
+run;
+
+A.
+Product_ID	Proposed_Bokking_Date	Qty_MT	Discount_Dollar	Dollar_Rate	Discount_INR
+A201		12-Jan-17				4		$10				67.1		671
+A304		12-Jan-17				5		$20				67.2		1344
+A205		15-Jan-17				2		$4				66.6		266.4
+C406		17-Jan-17				8		$5				67.2		336
+C203		20-Jan-17				7		$1				66.5		66.5
+Z404		15-Jan-17				6		$12				66.8		801.6
+
+B.
+Product_ID	Proposed_Bokking_Date	Date		Qty_MT	Discount_Dollar	Dollar_Rate	Discount_INR
+A201		12-Jan-17				12-Jan-17	4		$10				67.1		671
+A304		12-Jan-17				12-Jan-17	5		$20				67.2		1344
+A205		15-Jan-17				15-Jan-17	2		$4				66.6		266.4
+C406		17-Jan-17				17-Jan-17	8		$5				67.2		336
+C203		20-Jan-17				20-Jan-17	7		$1				66.5		66.5
+Z404		15-Jan-17				15-Jan-17	6		$12				66.8		801.6
+
+C.
+Product_ID	Qty_MT	Discount_Dollar	Dollar_Rate	Discount_INR
+A201		4		$10				67.1		671
+A304		5		$20				67.2		1344
+A205		2		$4				66.6		266.4
+C406		8		$5				67.2		336
+C203		7		$1				66.5		66.5
+Z404		6		$12				66.8		801.6
+
+Answer: C
+
+Description: “IN” variable does not appear in output dataset. Here, “Proposed_Booking_Date” and “Date” are “IN” variables and we have dropped the variable “Location” in data step.
+
+ 
+
+Question:
+In Table-2, Location name ‘Delhi’ has been wrongly put, need to replace this with ‘Delhi_NCR’. Which of the following code will complete this task?
+
+Table-2				
+Product_ID	Location	Proposed_Booking_Date	Qty_MT	Discount_Dollar
+A210		Mumbai		14-Jan-17				10		10
+A310		Mumbai		14-Jan-17				8		20
+A354		Delhi		18-Jan-17				5		4
+C406		Delhi		17-Jan-17				8		5
+C203		Delhi		20-Jan-17				7		1
+Z514		Delhi		18-Jan-17				10		15
+
+A. data t2;
+     set TABLE2;
+     if Location="Delhi" then Location="Delhi_NCR";
+run;
+B. data t2;
+     format location $10.;
+     set TABLE2;
+     if Location="Delhi" then Location="Delhi_NCR";
+run;
+C. data t2;
+     length Location $10;
+     format location $10.;
+     set TABLE2;
+     if Location="Delhi" then Location="Delhi_NCR";
+run;
+D. Both B and C
+
+Answer: D
+
+Description: The length of field “Location” in table2 is 8 so first we need to change the format of “Location”. Here in both options B and C, we have changed the length of field “Location”.
+
+Question: [ True | False] Value of First. BY-variable and Last. By-variable can be same.
+
+A.  True
+
+B.  False
+
+Answer: A
+
+Description: Yes, it is possible. In case of one unique value for BY variable then this record is the first and last record as well.
+
+Question:
+Which is pointer control used to read multiple records sequentially?
+
+A. @n
+
+B. +N
+
+C. /
+
+D. All of the above
+
+Answer: C
+
+Description: You can use one or more forward slash (/) line pointer controls in your INPUT statements to tell SAS to advance to a new record before reading the next data value.
+
+Question Context 27 – 30
+
+Table 
+
+Loan_ID		Gender	Name			Dependents	Education		LoanAmount	Property_Area	Loan_Status
+LP001002	Male	Dr.Kunal		0			Graduate		145			Urban			Y
+LP001003	Male	Mr. Faizan		1			Graduate		128			Rural			N
+LP001005	Female	Miss. Swati		0			Graduate		66			Urban			Y
+LP001006	Female	Miss. Deepika	0			Not Graduate	120			Urban			H
+LP001008	Male	Master Ankit	0			Graduate		141			Urban			Y
+
+Question:
+Categorical column may contain more than two distinct values. For example, “Married” has two values, “Yes” and “No”. How will you find all the distinct values present in the column “Education”?
+
+Table:
+Loan_ID		Gender	Name			Dependents	Education		LoanAmount	Property_Area	Loan_Status
+LP001002	Male	Dr.Kunal		0			Graduate		145			Urban			Y
+LP001003	Male	Mr. Faizan		1			Graduate		128			Rural			N
+LP001005	Female	Miss. Swati		0			Graduate		66			Urban			Y
+LP001006	Female	Miss. Deepika	0			Not Graduate	120			Urban			H
+LP001008	Male	Master Ankit	0			Graduate		141			Urban			Y
+
+
+A.
+proc freq data=Table;
+     tables Education;
+run;
+
+B.
+proc means data=Table;
+     var Education;
+run;
+
+C. Both A and B
+
+D. None of the above
+
+Answer: A
+
+Description: Proc Means is used to look at the frequency distribution of categories of a categorical variable whereas PROC Means used to explore continuous variables.
+
+Question:
+How will you create an extra column “Salutation”?
+Table: 
+Loan_ID		Gender	Name			Salutation	Dependents	Education		LoanAmount	Property_Area	Loan_Status
+LP001002	Male	Dr.Kunal		Dr			0			Graduate		145			Urban			Y
+LP001003	Male	Mr. Faizan		Mr			1			Graduate		128			Rural			N
+LP001005	Male	Miss. Swati		Miss		0			Graduate		66			Urban			Y
+LP001006	Male	Miss. Deepika	Miss		0			Not Graduate	120			Urban			H
+LP001008	Male	Master Ankit	Master		0			Graduate		141			Urban			Y
+
+A.
+data Table;
+     set Table;
+     Salutation = scan(name, 1);
+run;
+
+B.
+data Table;
+     set Table;
+     Salutation = scan(name, -1);
+run;
+
+C.
+data Table;
+     set Table;
+     Salutation = scan(name, 0);
+run;
+
+D.
+data test2;
+     set Table;
+     Salutation = scan(name, “ ”,1);
+run;
+
+Answer: A
+
+Description: Below is the syntax of function SCAN:
+
+SCAN(string, count_words)
+
+String: A constant string or variable have a string value
+
+Count: is a nonzero numeric constant, variable, or expression that has an integer value that specifies the number of the word in the character string that you want SCAN to select
+
+If count is positive, SCAN counts words from left to right in the character string.
+If count is negative, SCAN counts words from right to left in the character string.
+In above question, we need to extract the first word of string so value of count would be 1 and string variable is “name”.
+
+Question:
+Which of the following command will help you to create the below table “AV” (Exactly Similar) based on “Table”?
+Table: 
+Loan_ID		Gender	Name			Salutation	Dependents	Education		LoanAmount	Property_Area	Loan_Status
+LP001002	Male	Dr.Kunal		Dr			0			Graduate		145			Urban			Y
+LP001003	Male	Mr. Faizan		Mr			1			Graduate		128			Rural			N
+LP001005	Male	Miss. Swati		Miss		0			Graduate		66			Urban			Y
+LP001006	Male	Miss. Deepika	Miss		0			Not Graduate	120			Urban			H
+LP001008	Male	Master Ankit	Master		0			Graduate		141			Urban			Y
+
+AV:
+Loan_ID		Loan_Status_Y	Loan_Status_H	Loan_Status_N
+LP001002	1				0				0
+LP001003	0				1				0
+LP001005	1				0				0
+LP001006	0				0				1
+LP001008	1				0				0
+
+A.
+data AV;
+     Set table;
+     if Loan_Status = "Y" then Loan_Status_Y = 1; else Loan_Status_Y = 0;
+     if Loan_Status = "N" then Loan_Status_N = 1; else Loan_Status_N = 0;
+     if Loan_Status = "H" then Loan_Status_H = 1; else Loan_Status_H = 0;
+run;
+
+B.
+data AV;
+     Set table;
+     Loan_Status_Y= (Loan_Status = "Y");
+     Loan_Status_N= (Loan_Status = "N");
+     Loan_Status_H= (Loan_Status = "H");
+run;
+
+C.  Both A and B
+
+D. None of the above
+
+Answer: D
+
+Description: First of all, here we are creating dummy variables for variable “Loan_Status” (also known as One Hot Encoding). Both Option A and B will create these dummy variables but after execution of both program you will not be able to create exactly similar dataset like AV because it will have more number of variables and the values of dummy variables for “Loan_Status_H” and “Loan_Status_N” is swapped in output table “AV”.
+
+Question:
+Which of the following SAS program will help you understand the relationship between two variables “Education” and “Loan_Status”?
+
+ frequency
+ percent
+ row pct
+ col pct
+A.
+Proc Freq data=table5;
+     tables Education*Loan_Status;
+run;
+B.
+Proc Freq data=table5; ?
+     tables Education Loan_Status;
+run;
+C.
+Proc Univariate data = table5;
+     var Education Loan_Status;
+run;
+D.
+Proc Univariate data = table5;
+     var Education*Loan_Status;
+run;
+Answer: A
+Description: Above, we are trying to create a two-way table based on two categorical variables “Education” and “Loan_Status”. And to create two-way table, we need to place * in between them. If we will separate the variable name by space then this will create two individual frequency distributions for both the variables.
+
+Question:
+Will both programs given below return same output?
+
+Program1
+
+data AV (Drop= LoanAmount); 
+     set table5; 
+     charge=LoanAmount *0.4; 
+run;
+Program2
+
+data AV; 
+     set table5 (Drop= LoanAmount); 
+     charge=LoanAmount *0.4; 
+run;
+A.   True
+
+B.   False
+
+Answer: B
+Description: In the first program, we have “LoanAmount” in input data set so there would be values 0.4*LoanAmount in “Charge” column whereas, in the second program, we have dropped the variable “LoanAmount” so the value of column “Charge” would be missing because we do not have variable “LoanAmount”.
+
+Question:
+Which of the following statement can be used to accumulate the value of the variable in a Data Step?
+
+A. SET
+B. RETAIN
+C. UPDATE
+D. SUM
+
+Answer: B
+Description: The RETAIN statement simply copies retaining values by telling the SAS not to reset the variables at the beginning of each iteration of the DATA step. If you would not use retain statement then SAS would reset the variable at the beginning of each iteration
+
+ 
+
+Question:
+ Given the following SAS error log
+
+  44   data WORK.OUTPUT;
+  45     set SASHELP.CLASS;
+  46     BMI=(Weight*703)/Height**2;
+  47     where bmi ge 20;
+  ERROR: Variable bmi is not on file SASHELP.CLASS.
+  48   run;
+Which of the following step, you will take to correct it?
+
+A.   Replace the WHERE statement with an IF statement
+
+B. Change the ** in the BMI formula to a single *
+
+C.   Change bmi to BMI in the WHERE statement
+
+Answer: A
+
+We can not apply WHERE on derived or calculated variable(s) so we should use IF for subsetting.
+
+ 
+
+Question:
+Which of the following statement can be used to transpose table “Base” to table “Transposed”?
+Base: 
+Cust	Q1	Q2	Q3
+A		3	134	12
+B		32	23	24
+
+Transposed:
+Cust	Period	Amount
+A		Q1		3
+A		Q2		134
+A		Q3		12
+B		Q1		32
+B		Q2		23
+B		Q3		24
+
+
+
+A.
+
+data transposed; 
+     set base;
+     array Qtr{3} Q:;
+     do i = 1 to 3;
+         Period = cat('Qtr',i);
+         Amount = Qtr{i};
+         output;
+     end;
+     drop Q1 Q2 Q3 i;
+     if Amount ne .;
+run;
+B.
+
+proc transpose data = base out = transposed
+               (rename=(Col1=Amount) where=(Amount ne .)) name=Period;
+     by cust; 
+run;
+C.       Both A and B
+
+D.    None of the above
+
+Answer: C
+
+Both program can be used to transpose the data set, One is array approach whereas in second method, we are using PROC Transpose.
+
+ 
+
+Question:
+[True | False] “Where” and “IF” always returns the same result.
+
+A) True
+
+B) False
+
+Answer: B
+
+One of the scenarios, we have discussed in question 35.
+
+ 
+
+Question:
+Which of the following PROC can be used to create “Bubble”, “Scatter” and “Histogram”?
+
+A. PROC SGPLOT
+
+B. PROC UNIVARIATE
+
+C. PROC PLOT
+
+D. None of the above
+
+Answer: A
+
+PROC SGPLOT can be used to create all above-mentioned charts.
+
+ 
+
+Question Context 37 – 38
+
+Table6
+
+Month	Product1	Product2	Product3
+Jan	30	38	39
+Feb	35	43	47
+Mar	68	70	78
+Apr	18	26	26
+May	25	31	33
+Jun	29	36	40
+Jul	34	38	47
+Aug	34	37	43
+Sep	36	43	51
+Oct	34	36	43
+Nov	32	34	40
+Dec	33	43	44
+Note: Above table “Table6” is stored in WORK library
+
+ 
+
+Question:
+Which of the following command can be used to plot below chart?
+
+
+
+A.
+
+PROC SGPLOT DATA = Table6;
+     SERIES X = Month Y = Product1; 
+     SERIES X = Month Y = Product2;
+     SERIES X = Month Y = Product3;
+run;
+B.
+
+PROC SGPLOT DATA = Table6;
+     by Month;
+     Var Product1 Product2 Product3; 
+run;
+C.
+
+PROC SGPLOT DATA = Table6;
+     Line Month;
+     Var Product1 Product2 Product3;
+run;
+D. None of the above
+
+Answer: A
+
+Above, we are creating three series of line in a single chart and we don’t have any “Line” and “BY” statements in PROC SGPLOT.
+
+ 
+
+Question:
+Which of the following command can be used to plot below chart (Below Product1 is represented on x-axis, Product2 on y-axis and Product3 as the size of bubble)?
+
+
+
+A.
+
+proc plot data = Table6;
+     scatter X=Product1 Y=Product2 size= Product3 
+     /fillattrs=(color = teal) datalabel = Month;
+run;
+B.
+
+proc sgplot data = Table6;
+     bubble X=Product1 Y=Product2 size= Product3
+     /fillattrs=(color = teal) datalabel = Month;
+run;
+C.
+
+proc sgplot data = Table6;
+     scatter X=Product1 Y=Product2 size= Product3
+     /fillattrs=(color = teal) datalabel = Month;
+run;
+D.
+
+proc chart data = Table6;
+     scatter X=Product1 Y=Product2 size= Product3
+     /fillattrs=(color = teal) datalabel = Month;
+run;
+Answer: B
+
+In bubble chart, we have three variables to visualize. One on x-axis, second one on y-axis and last one as size of bubble. We can create Bubble chart in SAS using PROC SGPLOT with Bubble statement.
+
+ 
+
+Question Context 39 – 40
+
+Below is the table of product inventory (SAS data set name is “Table7”)
+
+
+
+Question:
+Which of the following SAS program will remove the duplicate observation(s) of “ID” and “Area_Type”. And, remove observation having the lower magnitude of variable “Volume”?
+
+A. Proc Sort data=table7;
+     by ID Area_Type Descending Volume;
+run;
+Proc SORT Data=table7 out=table8 nodupkey;
+     by ID Area_Type; 
+run;
+B. Proc Sort data=table7;
+     by ID Area_TypeVolume Descending;
+run;
+Proc SORT Data=table7 out=table8 nodupkey;
+     by ID Area_Type;
+run;
+C. Proc SORT Data=table7 out=table8 nodupkey;
+     by ID Area_TYPE Volume Descending;
+run;
+D. Both B and C
+
+Answer: A
+
+The basic problem with Option B and C is, “Descending” option is appearing after the variable name which is not the right syntax. In option A, we are first sorting the data set based on “ID”, “Area_Type” and “Volume” (Descending) then again writing a PROC SORT to remove duplicate records based on “ID” and “Area_Type”.
+
+Question:
+Which of the following program will help to bin the variable volume (Adding one more variable to “Table7”, “Volume_Bucket”)?
+
+A. Data table7;
+     set table7;
+     select (Volume);
+            when (le 30)     Volume_Bucket="A";
+            when (le 60)     Volume_Bucket="B";
+            otherwise        Volume_Bucket="C";
+     end;
+run;
+B. Data table7;
+     set table7;
+     if Volume < 30 then Volume_Bucket ="A";
+     Else if Volume <60 then Volume_Bucket="B";
+     Else Volume_Bucket="C";
+run;
+C. Both A and B
+
+D. None of the above
+
+Answer: B
+
+Select statement works with exact value, it does not compare like greater than or less than so here IF statement will do the task.
+
+ 

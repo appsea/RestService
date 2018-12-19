@@ -17,7 +17,7 @@ import java.util.Set;
  * Created by rakesh on 22-Sep-2017.
  */
 @Data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class JsonQuestions {
 
     public static final Log log = LogFactory.getLog(JsonQuestions.class);
@@ -26,6 +26,7 @@ public class JsonQuestions {
     private boolean enablePrashna;
 
     private List<JsonQuestion> questions = new ArrayList<>();
+    private List<JsonQuestion> premium = new ArrayList<>();
     private int questionVersion;
     private int playStoreVersion;
     private boolean ads;
@@ -46,7 +47,8 @@ public class JsonQuestions {
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
         this.enablePrashna = questionBank.isEnablePrashna();
-        allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        allQuestions.subList(0, questionBank.getPremiumSize()).forEach(q -> this.questions.add(toQuestion(q)));
+        allQuestions.subList(questionBank.getPremiumSize(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
         this.categorise();
     }
 
@@ -56,7 +58,7 @@ public class JsonQuestions {
 
     private JsonQuestion toQuestion(Question question) {
         JsonQuestion jsonQuestion = new JsonQuestion();
-        jsonQuestion.setNumber(question.getNumber());
+        jsonQuestion.setNumber(Integer.parseInt(question.getNumber()));
         String descriptionWithImage = question.getDescription();
         if (enablePrashna) {
             Prashna prashna = toPrashna(descriptionWithImage);
@@ -119,7 +121,7 @@ public class JsonQuestions {
         multiValueMap = new MultiValueMap();
         for (JsonQuestion question : questions) {
             if (question.getCategory() != null) {
-                multiValueMap.put(question.getCategory(), Integer.parseInt(question.getNumber()));
+                multiValueMap.put(question.getCategory(), question.getNumber());
             }
         }
     }

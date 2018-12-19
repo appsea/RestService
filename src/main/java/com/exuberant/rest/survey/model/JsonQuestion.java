@@ -10,7 +10,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class JsonQuestion {
 
-    private String number;
+    private int number;
     private String description;
     private String explanation;
     private String category;
