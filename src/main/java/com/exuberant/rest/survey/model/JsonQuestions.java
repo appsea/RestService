@@ -29,6 +29,7 @@ public class JsonQuestions {
     private List<JsonQuestion> premium = new ArrayList<>();
     private int questionVersion;
     private int playStoreVersion;
+    private int totalQuestions;
     private boolean ads;
     @JsonIgnore
     private MultiValueMap<String, Integer> multiValueMap;
@@ -49,6 +50,7 @@ public class JsonQuestions {
         this.enablePrashna = questionBank.isEnablePrashna();
         allQuestions.subList(0, questionBank.getPremiumSize()).forEach(q -> this.questions.add(toQuestion(q)));
         allQuestions.subList(questionBank.getPremiumSize(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
+        this.totalQuestions = allQuestions.size();
         this.categorise();
     }
 

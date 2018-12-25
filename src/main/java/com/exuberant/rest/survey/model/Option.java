@@ -18,16 +18,16 @@ public class Option implements Comparable<Option> {
         this.description = description;
         if (description.startsWith("A.")) {
             this.tag = "A";
-            this.description = description.replaceFirst("A.", "").trim();
+            // this.description = description.replaceFirst("A.", "").trim();
         } else if (description.startsWith("B.")) {
             this.tag = "B";
-            this.description = description.replaceFirst("B.", "").trim();
+            // this.description = description.replaceFirst("B.", "").trim();
         } else if (description.startsWith("C.")) {
             this.tag = "C";
-            this.description = description.replaceFirst("C.", "").trim();
+            // this.description = description.replaceFirst("C.", "").trim();
         } else if (description.startsWith("D.")) {
             this.tag = "D";
-            this.description = description.replaceFirst("D.", "").trim();
+            // this.description = description.replaceFirst("D.", "").trim();
         } else {
             log.error("Received Invalid Description: " + description);
         }

@@ -55,7 +55,7 @@ public class JsonQuestionGenerator {
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(que -> System.err.println(que.getDescription()));
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         new WordFileWriter().write(jsonQuestions, wordPath);
-        Files.write(jsonPath, objectMapper.writeValueAsString(jsonQuestions).getBytes());
+        Files.write(jsonPath, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQuestions).getBytes());
     }
 
     private void writeQuestionsWithRandomDescription(List<Question> questions) throws IOException {

@@ -107,7 +107,7 @@ public class GenericQuestionParser implements QuestionParser {
                             try {
                                 question.addAnswer(line.substring(8).trim());
                             } catch (Exception e) {
-                                System.err.println("Exce");
+                                System.err.println("Exce: " + e.getMessage());
                             }
                         } else if (!hasDescriptionStarted && patternParser.isOption(line)) {
                             hasOptionStarted = true;
