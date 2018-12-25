@@ -2273,19 +2273,19 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Smith Joe 27 1892\n   Franks Carl 24 2343 84060\n   Well Sam 32 4569 76182\n   Max Cori 21 1052 87231",
+      "description" : "A. Smith Joe 27 1892\nFranks Carl 24 2343 84060\nWell Sam 32 4569 76182\nMax Cori 21 1052 87231",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Smith Joe 27 1892 81059\n   Franks Carl 24 2343 84060\n   Well Sam 32 4569 76182\n   Max Cori 21 87231",
+      "description" : "B. Smith Joe 27 1892 81059\nFranks Carl 24 2343 84060\nWell Sam 32 4569 76182\nMax Cori 21 87231",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Smith Joe 27 1892 81059\n   Franks Carl 2343 84060\n   Well Sam 32 4569 76182\n   Max Cori 21 1052 87231",
+      "description" : "C. Smith Joe 27 1892 81059\nFranks Carl 2343 84060\nWell Sam 32 4569 76182\nMax Cori 21 1052 87231",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Smith Joe 27 1892 81059\n   Franks Carl 24 2343 84060\n   Well 32 4569 76182\n   Max Cori 21 1052 87231",
+      "description" : "D. Smith Joe 27 1892 81059\nFranks Carl 24 2343 84060\nWell 32 4569 76182\nMax Cori 21 1052 87231",
       "correct" : false
     } ]
   }, {

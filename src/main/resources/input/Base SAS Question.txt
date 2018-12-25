@@ -1773,21 +1773,21 @@ Max Cori 21 1052 87231
 The following versions of the same data are missing some values. Which file should be read in with the MISSOVER option?
 
 A. Smith Joe 27 1892
-   Franks Carl 24 2343 84060
-   Well Sam 32 4569 76182
-   Max Cori 21 1052 87231
+Franks Carl 24 2343 84060
+Well Sam 32 4569 76182
+Max Cori 21 1052 87231
 B. Smith Joe 27 1892 81059
-   Franks Carl 24 2343 84060
-   Well Sam 32 4569 76182
-   Max Cori 21 87231
+Franks Carl 24 2343 84060
+Well Sam 32 4569 76182
+Max Cori 21 87231
 C. Smith Joe 27 1892 81059
-   Franks Carl 2343 84060
-   Well Sam 32 4569 76182
-   Max Cori 21 1052 87231
+Franks Carl 2343 84060
+Well Sam 32 4569 76182
+Max Cori 21 1052 87231
 D. Smith Joe 27 1892 81059
-   Franks Carl 24 2343 84060
-   Well 32 4569 76182
-   Max Cori 21 1052 87231
+Franks Carl 24 2343 84060
+Well 32 4569 76182
+Max Cori 21 1052 87231
 
 Answer: A
 
