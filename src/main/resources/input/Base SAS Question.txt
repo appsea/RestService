@@ -71,16 +71,16 @@ DATA TEMP;
 RUN;
 
 A. Merge Test1   /*Test1 contains JOBCODE */
-    Test2(rename = (Jcode = JOBCODE));
+Test2(rename = (Jcode = JOBCODE));
 
 B. Merge Test1   /*Test1 contains JOBCODE */
-    Test2(rename = (JOBCODE = JCODE));
+Test2(rename = (JOBCODE = JCODE));
 
 C. Merge Test1 (rename = (Jcode = JOBCODE)) /*Test1 contains JOBCODE */
-     Test2;
+Test2;
 
 D. Merge Test1   /*Test1 contains JOBCODE */
-    Test2(rename  Jcode = JOBCODE));
+Test2(rename  Jcode = JOBCODE));
 
 Answer: A
 Description: Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)).
@@ -4902,17 +4902,17 @@ Bedrooms	Frequency	Percent Cumulative  Frequency	Cumulative Percent
 The variable STYLE has a permanent label of “Style of homes” and the variable BEDROOMS has a permanent label of “Number of bedrooms”.
 Which one of the following SAS programs produced the output shown in the exhibit?
 A. proc freq data = sasuser.houses;
-    tables style and bedrooms;
+tables style and bedrooms;
 run;
 B. proc freq data = sasuser.houses;
-    tables style * bedrooms;
+tables style * bedrooms;
 run;
 C. proc freq data = sasuser.houses;
-    tables style , bedrooms;
+tables style , bedrooms;
 run;
 D. proc freq data = sasuser.houses;
-    tables style;
-    tables bedrooms;
+tables style;
+tables bedrooms;
 run;
 
 Answer: D
@@ -6195,37 +6195,37 @@ run;
 
 Which output is correct?
 A. Obs  Day Month   Temp
-   ---  --- -----   ----
-    1   2   July    85
-    2   14  July    89
-    3   3   June    76
-    4   15  June    80
-    5   1   May     75
-    6   15  May     7
+---  --- -----   ----
+1   2   July    85
+2   14  July    89
+3   3   June    76
+4   15  June    80
+5   1   May     75
+6   15  May     7
 B.  Obs Day Month   Temp
-    --- --- -----   ----
-    1   1   May     75
-    2   2   July    85
-    3   3   June    76
-    4   14  July    89
-    5   15  May     70
-    6   15  June    80
+--- --- -----   ----
+1   1   May     75
+2   2   July    85
+3   3   June    76
+4   14  July    89
+5   15  May     70
+6   15  June    80
 C.  Obs Day Month   Temp
-    --- --- -----   ----
-    1   1   May     75
-    2   15  May     70
-    3   3   June    76
-    4   15  June    80
-    5   2   July    85
-    6   14  July    89
+--- --- -----   ----
+1   1   May     75
+2   15  May     70
+3   3   June    76
+4   15  June    80
+5   2   July    85
+6   14  July    89
 D.  Obs Day Month   Temp
-    --- --- -----   ----
-    1   15  May     70
-    2   1   May     75
-    3   15  June    80
-    4   3   June    76
-    5   14  July    89
-    6   2   July    85
+--- --- -----   ----
+1   15  May     70
+2   1   May     75
+3   15  June    80
+4   3   June    76
+5   14  July    89
+6   2   July    85
 Answer: C
 Description: The months are character, so alphabetical order (corresponding to ascending MONTH) would be: July June May.
 Descending month would give you: May June July
@@ -7229,28 +7229,28 @@ run;
 What will the data set WORK.COLORS contain?
 
 A.	Var1	Var2	Var3	Var4
-    	 ----	-----	-----	-----
-       RED	ORANGE	BLUE	INDIGO
-       CYAN	WHITE	GRAY	BROWN
+----    -----	-----	-----
+RED ORANGE	BLUE	INDIGO
+CYAN	WHITE	GRAY	BROWN
 
 B.	Var1	Var2	Var3	Var4
-	-----	-----	-----	------
-	RED	ORANGE	YELLOW	GREEN
-	BLUE	INDIGO	PURPLE	VIOLET
+-----	-----	-----	------
+RED	ORANGE	YELLOW	GREEN
+BLUE	INDIGO	PURPLE	VIOLET
 
 C.	Var1	Var2	Var3	Var4
-	-----	----	-----	-----      
-	RED	ORANGE	YELLOW	GREEN
-	BLUE	INDIGO	PURPLE	VIOLET
-	CYAN	WHITE	FUSCIA	BLACK
-	GRAY	BROWN	PINK	MAGENTA
+-----	----	-----	-----
+RED	ORANGE	YELLOW	GREEN
+BLUE	INDIGO	PURPLE	VIOLET
+CYAN	WHITE	FUSCIA	BLACK
+GRAY	BROWN	PINK	MAGENTA
 
 D.	Var1	Var2	Var3	Var4
-	-----	-----	------	-----
-	RED	ORANGE	RED	ORANGE
-	BLUE	INDIGO	BLUE	INDIGO
-	CYAN	WHITE	CYAN	WHITE
-	GRAY	BROWN	GRAY	BROWN
+-----	-----	------	-----
+RED	ORANGE	RED	ORANGE
+BLUE	INDIGO	BLUE	INDIGO
+CYAN	WHITE	CYAN	WHITE
+GRAY	BROWN	GRAY	BROWN
 
 
 Answer: D
@@ -7355,16 +7355,16 @@ run;
 
 Which values are stored in the output data set?
 A.  Name     Age
-    ---------------------
-    John     35
+---------------------
+John     35
 
 B.  Name                        Age
-    -------------------------------------
-    (missing value)        (missing value)
+-------------------------------------
+(missing value)        (missing value)
 
 C.  Name              Age
-    ---------------------
-    John              (missing value)
+---------------------
+John              (missing value)
 
 D. The DATA step fails execution due to data errors.
 Answer: A
@@ -7407,10 +7407,11 @@ Description: It is because missing values are considered as lowest values (ascen
 Question: 
 The following SAS program is submitted:
 
-   dta work.il_corn;
-    set corn.state_data;
-    if state = 'Illinois';
-   run;
+dta work.il_corn;
+set corn.state_data;
+if state = 'Illinois';
+run;
+
 The keyword "data" is misspelled above. What happens to this program during the compilation phase assuming "corn" is a valid libref?
 
 A. The program fails due to syntax errors
