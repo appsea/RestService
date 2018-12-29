@@ -110,19 +110,19 @@
     "explanation" : "Dataset Test1 has variable JOBCODE while dataset Test2 has variable Jcode. To Merge both dataset merging variable name should be same as dataset TEST1 has. Correct syntax to rename variable is (RENAME= (data set option)).",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Merge Test1   /*Test1 contains JOBCODE */\n    Test2(rename = (Jcode = JOBCODE));",
+      "description" : "A. Merge Test1   /*Test1 contains JOBCODE */\nTest2(rename = (Jcode = JOBCODE));",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Merge Test1   /*Test1 contains JOBCODE */\n    Test2(rename = (JOBCODE = JCODE));",
+      "description" : "B. Merge Test1   /*Test1 contains JOBCODE */\nTest2(rename = (JOBCODE = JCODE));",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Merge Test1 (rename = (Jcode = JOBCODE)) /*Test1 contains JOBCODE */\n     Test2;",
+      "description" : "C. Merge Test1 (rename = (Jcode = JOBCODE)) /*Test1 contains JOBCODE */\nTest2;",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Merge Test1   /*Test1 contains JOBCODE */\n    Test2(rename  Jcode = JOBCODE));",
+      "description" : "D. Merge Test1   /*Test1 contains JOBCODE */\nTest2(rename  Jcode = JOBCODE));",
       "correct" : false
     } ]
   }, {
@@ -5445,19 +5445,19 @@
     "explanation" : "Two table statement in freq procedure creates 2 tables, one for styles and other one is for bedrooms.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. proc freq data = sasuser.houses;\n    tables style and bedrooms;\nrun;",
+      "description" : "A. proc freq data = sasuser.houses;\ntables style and bedrooms;\nrun;",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. proc freq data = sasuser.houses;\n    tables style * bedrooms;\nrun;",
+      "description" : "B. proc freq data = sasuser.houses;\ntables style * bedrooms;\nrun;",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. proc freq data = sasuser.houses;\n    tables style , bedrooms;\nrun;",
+      "description" : "C. proc freq data = sasuser.houses;\ntables style , bedrooms;\nrun;",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. proc freq data = sasuser.houses;\n    tables style;\n    tables bedrooms;\nrun;",
+      "description" : "D. proc freq data = sasuser.houses;\ntables style;\ntables bedrooms;\nrun;",
       "correct" : true
     } ]
   }, {
@@ -6663,19 +6663,19 @@
     "explanation" : "The months are character, so alphabetical order (corresponding to ascending MONTH) would be: July June May.\nDescending month would give you: May June July\nWithin each month, the observations are sorted by ascending DAY (descending only applies to one variable).\n",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Obs  Day Month   Temp\n   ---  --- -----   ----\n    1   2   July    85\n    2   14  July    89\n    3   3   June    76\n    4   15  June    80\n    5   1   May     75\n    6   15  May     7",
+      "description" : "A. Obs  Day Month   Temp\n---  --- -----   ----\n1   2   July    85\n2   14  July    89\n3   3   June    76\n4   15  June    80\n5   1   May     75\n6   15  May     7",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B.  Obs Day Month   Temp\n    --- --- -----   ----\n    1   1   May     75\n    2   2   July    85\n    3   3   June    76\n    4   14  July    89\n    5   15  May     70\n    6   15  June    80",
+      "description" : "B.  Obs Day Month   Temp\n--- --- -----   ----\n1   1   May     75\n2   2   July    85\n3   3   June    76\n4   14  July    89\n5   15  May     70\n6   15  June    80",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C.  Obs Day Month   Temp\n    --- --- -----   ----\n    1   1   May     75\n    2   15  May     70\n    3   3   June    76\n    4   15  June    80\n    5   2   July    85\n    6   14  July    89",
+      "description" : "C.  Obs Day Month   Temp\n--- --- -----   ----\n1   1   May     75\n2   15  May     70\n3   3   June    76\n4   15  June    80\n5   2   July    85\n6   14  July    89",
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D.  Obs Day Month   Temp\n    --- --- -----   ----\n    1   15  May     70\n    2   1   May     75\n    3   15  June    80\n    4   3   June    76\n    5   14  July    89\n    6   2   July    85",
+      "description" : "D.  Obs Day Month   Temp\n--- --- -----   ----\n1   15  May     70\n2   1   May     75\n3   15  June    80\n4   3   June    76\n5   14  July    89\n6   2   July    85",
       "correct" : false
     } ]
   }, {
@@ -7671,19 +7671,19 @@
     "explanation" : "Since we used the trailing @ option in the input statement that holds the current record for the next input statement that conveys the SAS to read and returns the same position as it is mentioned in the input statement…",
     "options" : [ {
       "tag" : "A",
-      "description" : "A.\tVar1\tVar2\tVar3\tVar4\n    \t ----\t-----\t-----\t-----\n       RED\tORANGE\tBLUE\tINDIGO\n       CYAN\tWHITE\tGRAY\tBROWN",
+      "description" : "A.\tVar1\tVar2\tVar3\tVar4\n----    -----\t-----\t-----\nRED ORANGE\tBLUE\tINDIGO\nCYAN\tWHITE\tGRAY\tBROWN",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B.\tVar1\tVar2\tVar3\tVar4\n\t-----\t-----\t-----\t------\n\tRED\tORANGE\tYELLOW\tGREEN\n\tBLUE\tINDIGO\tPURPLE\tVIOLET",
+      "description" : "B.\tVar1\tVar2\tVar3\tVar4\n-----\t-----\t-----\t------\nRED\tORANGE\tYELLOW\tGREEN\nBLUE\tINDIGO\tPURPLE\tVIOLET",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C.\tVar1\tVar2\tVar3\tVar4\n\t-----\t----\t-----\t-----      \n\tRED\tORANGE\tYELLOW\tGREEN\n\tBLUE\tINDIGO\tPURPLE\tVIOLET\n\tCYAN\tWHITE\tFUSCIA\tBLACK\n\tGRAY\tBROWN\tPINK\tMAGENTA",
+      "description" : "C.\tVar1\tVar2\tVar3\tVar4\n-----\t----\t-----\t-----\nRED\tORANGE\tYELLOW\tGREEN\nBLUE\tINDIGO\tPURPLE\tVIOLET\nCYAN\tWHITE\tFUSCIA\tBLACK\nGRAY\tBROWN\tPINK\tMAGENTA",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D.\tVar1\tVar2\tVar3\tVar4\n\t-----\t-----\t------\t-----\n\tRED\tORANGE\tRED\tORANGE\n\tBLUE\tINDIGO\tBLUE\tINDIGO\n\tCYAN\tWHITE\tCYAN\tWHITE\n\tGRAY\tBROWN\tGRAY\tBROWN",
+      "description" : "D.\tVar1\tVar2\tVar3\tVar4\n-----\t-----\t------\t-----\nRED\tORANGE\tRED\tORANGE\nBLUE\tINDIGO\tBLUE\tINDIGO\nCYAN\tWHITE\tCYAN\tWHITE\nGRAY\tBROWN\tGRAY\tBROWN",
       "correct" : true
     } ]
   }, {
@@ -7776,15 +7776,15 @@
     "explanation" : "+ and – signs will treat as Standard type of numeric data, and Hence no error.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A.  Name     Age\n    ---------------------\n    John     35",
+      "description" : "A.  Name     Age\n---------------------\nJohn     35",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B.  Name                        Age\n    -------------------------------------\n    (missing value)        (missing value)",
+      "description" : "B.  Name                        Age\n-------------------------------------\n(missing value)        (missing value)",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C.  Name              Age\n    ---------------------\n    John              (missing value)",
+      "description" : "C.  Name              Age\n---------------------\nJohn              (missing value)",
       "correct" : false
     }, {
       "tag" : "D",
@@ -7835,7 +7835,7 @@
     } ]
   }, {
     "number" : 374,
-    "description" : "The following SAS program is submitted:\n\ndta work.il_corn;\nset corn.state_data;\nif state = 'Illinois';\nrun;\nThe keyword \"data\" is misspelled above. What happens to this program during the compilation phase assuming \"corn\" is a valid libref?",
+    "description" : "The following SAS program is submitted:\n\ndta work.il_corn;\nset corn.state_data;\nif state = 'Illinois';\nrun;\n\nThe keyword \"data\" is misspelled above. What happens to this program during the compilation phase assuming \"corn\" is a valid libref?",
     "explanation" : "It compiles and executes as SAS assumed that the 'dta' was data. But it leaves a warning in log window.\nThe log shows the following warning :\nWARNING 1-322: Assuming the symbol DATA was misspelled as dta.\n141 run;\n\n",
     "options" : [ {
       "tag" : "A",
@@ -9115,8 +9115,8 @@
       "correct" : true
     } ]
   } ],
-  "questionVersion" : 3,
-  "playStoreVersion" : 10042,
+  "questionVersion" : 6,
+  "playStoreVersion" : 10055,
   "totalQuestions" : 434,
   "ads" : true
 }

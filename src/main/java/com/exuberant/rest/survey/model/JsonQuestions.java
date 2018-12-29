@@ -48,8 +48,8 @@ public class JsonQuestions {
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
         this.enablePrashna = questionBank.isEnablePrashna();
-        allQuestions.subList(0, questionBank.getPremiumSize()).forEach(q -> this.questions.add(toQuestion(q)));
-        allQuestions.subList(questionBank.getPremiumSize(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
+        allQuestions.subList(0, questionBank.getFreeQuestions()).forEach(q -> this.questions.add(toQuestion(q)));
+        allQuestions.subList(questionBank.getFreeQuestions(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
         this.totalQuestions = allQuestions.size();
         this.categorise();
     }

@@ -7,18 +7,19 @@ public class QuestionBank {
     private String inputFile;
     private int totalQuestions;
     private int questionVersion;
-    private int premiumSize = 200;
+    private int freeQuestions = 200;
     private final int playStoreVersion;
     private final boolean showAd;
     private final boolean enablePrashna;
 
-    public QuestionBank(String inputFile, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd) {
-        this(inputFile, totalQuestions, questionVersion, playStoreVersion, showAd, false);
+    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd) {
+        this(inputFile, 200, totalQuestions, questionVersion, playStoreVersion, showAd, false);
     }
 
-    public QuestionBank(String inputFile, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna) {
+    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna) {
         this.inputFile = inputFile;
         this.totalQuestions = totalQuestions;
+        this.freeQuestions = freeQuestions;
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
         this.showAd = showAd;
@@ -61,7 +62,7 @@ public class QuestionBank {
         return enablePrashna;
     }
 
-    public int getPremiumSize() {
-        return premiumSize;
+    public int getFreeQuestions() {
+        return freeQuestions;
     }
 }

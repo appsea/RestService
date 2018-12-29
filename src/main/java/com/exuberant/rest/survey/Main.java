@@ -42,11 +42,11 @@ public class Main {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank("dvsa.txt", 773, 1, 10001, true, true));
-        bank.add(new QuestionBank("CompTIA A+.txt", 977, 13, 10001, true));
-        bank.add(new QuestionBank("Categories Base SAS.txt", 434, 13, 10001, true));
-        bank.add(new QuestionBank("Base SAS Question.txt", 434, 3, 10042, true));
-        bank.add(new QuestionBank("Advance-sas-questions.txt", 261, 4, 10022, true));
+        bank.add(new QuestionBank("dvsa.txt", 200, 773, 1, 10001, true, true));
+        bank.add(new QuestionBank("CompTIA A+.txt", 500, 977, 13, 10001, true));
+        bank.add(new QuestionBank("Categories Base SAS.txt", 200, 434, 13, 10001, true));
+        bank.add(new QuestionBank("Base SAS Question.txt",200, 434, 6, 10055, true));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 150, 261, 4, 10022, true));
         return bank;
     }
 
