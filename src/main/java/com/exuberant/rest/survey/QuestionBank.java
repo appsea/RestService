@@ -13,7 +13,7 @@ public class QuestionBank {
     private final boolean enablePrashna;
 
     public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd) {
-        this(inputFile, 200, totalQuestions, questionVersion, playStoreVersion, showAd, false);
+        this(inputFile, freeQuestions, totalQuestions, questionVersion, playStoreVersion, showAd, false);
     }
 
     public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna) {

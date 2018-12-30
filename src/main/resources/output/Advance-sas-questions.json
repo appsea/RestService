@@ -3149,7 +3149,8 @@
       "description" : "D. title \"Report for %left(today(), worddate.))\";",
       "correct" : false
     } ]
-  }, {
+  } ],
+  "premium" : [ {
     "number" : 151,
     "description" : "Which of the following is false?",
     "explanation" : "Most macro functions are handled by the macro processor before any SAS language statements in the DATA step are executed. For example, the %LET statement and any macro variable  references (&macvar) are passed to the macro processor before the program is compiled. In order to create or update macro variables during DATA step execution, you use the SYMPUT routine.",
@@ -4199,8 +4200,7 @@
       "description" : "D. Next, SAS creates a Cartesian product of all possible combinations of observations, writes them to the PDV, and then to the new data set. The new data set is then ordered by values of the BY variable.",
       "correct" : false
     } ]
-  } ],
-  "premium" : [ {
+  }, {
     "number" : 201,
     "description" : "Which of the following statements is false about using multiple SET statements in one DATA step?",
     "explanation" : "You can use multiple SET statements in one DATA step to combine observations from several data sets. The data sets do not need to have a common variable.",
