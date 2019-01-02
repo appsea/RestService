@@ -11,12 +11,13 @@ public class QuestionBank {
     private final int playStoreVersion;
     private final boolean showAd;
     private final boolean enablePrashna;
+    private final boolean enablePremium;
 
-    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd) {
-        this(inputFile, freeQuestions, totalQuestions, questionVersion, playStoreVersion, showAd, false);
+    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePremium) {
+        this(inputFile, freeQuestions, totalQuestions, questionVersion, playStoreVersion, showAd, false, enablePremium);
     }
 
-    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna) {
+    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna, boolean enablePremium) {
         this.inputFile = inputFile;
         this.totalQuestions = totalQuestions;
         this.freeQuestions = freeQuestions;
@@ -24,6 +25,7 @@ public class QuestionBank {
         this.playStoreVersion = playStoreVersion;
         this.showAd = showAd;
         this.enablePrashna = enablePrashna;
+        this.enablePremium = enablePremium;
     }
 
     public String getInputFile() {
@@ -64,5 +66,9 @@ public class QuestionBank {
 
     public int getFreeQuestions() {
         return freeQuestions;
+    }
+
+    public boolean enablePremium() {
+        return enablePremium;
     }
 }

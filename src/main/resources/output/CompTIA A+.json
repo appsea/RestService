@@ -10499,8 +10499,7 @@
       "description" : "D. Verify full system functionality",
       "correct" : false
     } ]
-  } ],
-  "premium" : [ {
+  }, {
     "number" : 501,
     "description" : "A computer's first boot device is set to CD-ROM drive, but there is no bootable disk inserted in the\nCD-ROM. Which of the following will occur?",
     "explanation" : "",

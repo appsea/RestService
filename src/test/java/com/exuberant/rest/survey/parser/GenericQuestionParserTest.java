@@ -21,7 +21,7 @@ public class GenericQuestionParserTest {
     @Test
     public void test() throws Exception {
         String fileName = "first.txt";
-        QuestionBank bank = new QuestionBank(fileName, 5, 10, 13, 10001, false);
+        QuestionBank bank = new QuestionBank(fileName, 5, 10, 13, 10001, false, false);
         PatternParserFactory.addPatternParser(fileName, PatternParserFactory.getMainPatternParser());
         List<Question> questions = genericQuestionParser.parse(bank);
         System.err.println(questions.size());

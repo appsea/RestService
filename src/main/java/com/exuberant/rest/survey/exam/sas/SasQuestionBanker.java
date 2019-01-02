@@ -41,8 +41,8 @@ public class SasQuestionBanker implements QuestionBanker {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank("Base SAS Question.txt", 200, 434, 13, 10027, false));
-        bank.add(new QuestionBank("Advance-sas-questions.txt", 150, 261, 2, 10001, false));
+        bank.add(new QuestionBank("Base SAS Question.txt", 200, 434, 13, 10027, false, true));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 150, 261, 2, 10001, false, true));
         return bank;
     }
 }

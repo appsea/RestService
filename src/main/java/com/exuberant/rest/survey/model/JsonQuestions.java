@@ -8,10 +8,7 @@ import lombok.Data;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by rakesh on 22-Sep-2017.
@@ -33,14 +30,34 @@ public class JsonQuestions {
     private boolean ads;
     @JsonIgnore
     private MultiValueMap<String, Integer> multiValueMap;
+    @JsonIgnore
+    private Map<String, String> categoryIconMap = new HashMap<>();
 
     public JsonQuestions(List<Question> allQuestions, int questionVersion, int playStoreVersion, boolean ads, boolean enablePrashna) {
         this.questionVersion = questionVersion;
         this.playStoreVersion = playStoreVersion;
         this.ads = ads;
         this.enablePrashna = enablePrashna;
+        this.initialiseMap();
         allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
         this.categorise();
+    }
+
+    private void initialiseMap() {
+        categoryIconMap.put("Alertness", "0xf06e");
+        categoryIconMap.put("Attitude", "0xf118");
+        categoryIconMap.put("Safety and your vehicle", "0xf3ed");
+        categoryIconMap.put("Safety margins", "0xf06e");
+        categoryIconMap.put("Hazard awareness", "0xf557");
+        categoryIconMap.put("Vulnerable road users", "0xf29d");
+        categoryIconMap.put("Other types of vehicle", "0xf4df");
+        categoryIconMap.put("Vehicle handling", "0xf06e"); //f085 f557
+        categoryIconMap.put("Motorway rules", "0xf018");
+        categoryIconMap.put("Rules of the road", "0xf560");
+        categoryIconMap.put("Road and traffic signs", "0xf06e");
+        categoryIconMap.put("Documents", "0xf02d");
+        categoryIconMap.put("Incidents, accidents and emergencies", "0xf5e1");
+        categoryIconMap.put("Vehicle loading", "0xf59d");
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
@@ -48,8 +65,13 @@ public class JsonQuestions {
         this.playStoreVersion = questionBank.getPlayStoreVersion();
         this.ads = questionBank.isShowAd();
         this.enablePrashna = questionBank.isEnablePrashna();
-        allQuestions.subList(0, questionBank.getFreeQuestions()).forEach(q -> this.questions.add(toQuestion(q)));
-        allQuestions.subList(questionBank.getFreeQuestions(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
+        if(questionBank.enablePremium()){
+            allQuestions.subList(0, questionBank.getFreeQuestions()).forEach(q -> this.questions.add(toQuestion(q)));
+            allQuestions.subList(questionBank.getFreeQuestions(), allQuestions.size()).forEach(q -> this.premium.add(toQuestion(q)));
+        }else{
+            allQuestions.forEach(q -> this.questions.add(toQuestion(q)));
+        }
+
         this.totalQuestions = allQuestions.size();
         this.categorise();
     }
@@ -112,9 +134,10 @@ public class JsonQuestions {
     }
 
     public List<Category> getCategories() {
+        this.initialiseMap();
         List<Category> categories = new ArrayList<>();
         for (Map.Entry<String, Set<Integer>> stringSetEntry : multiValueMap.entries()) {
-            categories.add(new Category(stringSetEntry.getKey(), stringSetEntry.getValue()));
+            categories.add(new Category(categoryIconMap.get(stringSetEntry.getKey()), stringSetEntry.getKey(), stringSetEntry.getValue()));
         }
         return categories;
     }
