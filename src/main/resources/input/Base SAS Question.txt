@@ -1099,14 +1099,14 @@ Question:
 Which of the following contains a syntax error?
 A. None of these
 B. proc print data=sales.location label;
-   label loc='Franchise Location';
-   run;
+label loc='Franchise Location';
+run;
 C. proc sort data=work.sales;
-   by month;
-   run;
+by month;
+run;
 D. dat homework.test;
-   set homework.quiz;
-   run;
+set homework.quiz;
+run;
 
 Answer: D
 Description: Statement DATA is misspelled but sas assumes that the keyword is data and just gives the warning not an error. Same is the case with proc keyword but no other keywords

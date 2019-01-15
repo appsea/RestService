@@ -1332,15 +1332,15 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. proc print data=sales.location label;\n   label loc='Franchise Location';\n   run;",
+      "description" : "B. proc print data=sales.location label;\nlabel loc='Franchise Location';\nrun;",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. proc sort data=work.sales;\n   by month;\n   run;",
+      "description" : "C. proc sort data=work.sales;\nby month;\nrun;",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. dat homework.test;\n   set homework.quiz;\n   run;",
+      "description" : "D. dat homework.test;\nset homework.quiz;\nrun;",
       "correct" : true
     } ]
   }, {

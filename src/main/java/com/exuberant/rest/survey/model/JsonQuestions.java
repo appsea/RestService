@@ -53,8 +53,8 @@ public class JsonQuestions {
         categoryIconMap.put("Other types of vehicle", "0xf4df");
         categoryIconMap.put("Vehicle handling", "0xf06e"); //f085 f557
         categoryIconMap.put("Motorway rules", "0xf018");
-        categoryIconMap.put("Rules of the road", "0xf560");
-        categoryIconMap.put("Road and traffic signs", "0xf06e");
+        categoryIconMap.put("Rules of the road", "0xf637");
+        categoryIconMap.put("Road and traffic signs", "0xf637");
         categoryIconMap.put("Documents", "0xf02d");
         categoryIconMap.put("Incidents, accidents and emergencies", "0xf5e1");
         categoryIconMap.put("Vehicle loading", "0xf59d");
