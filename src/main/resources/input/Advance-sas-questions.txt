@@ -1031,9 +1031,9 @@ select p.*, c.unitcost, s.quantity
 from product, cost, sales
 where product.item = cost.item and product.item = sales.item;
 quit;
-Answer: C
+Answer: D
 
-Description: In option C, there are reference to c.unitcost and s.quantity of which c and s are not defined anywhere in the code. If anything refered as a refrence then it has to be first defined.
+Description: The reference to c.unitcost and s.quantity of which c and s are not defined anywhere in the code. If anything referred as a reference then it has to be first defined.
 
 Question:
 The following SAS code is submitted:
@@ -2799,8 +2799,10 @@ A. &let location = storage;
 B. let &location = storage;
 C. %let location = "storage";
 D. %let location = storage;
-Answer: A
-Description: There are two ways to display the value of a macro variable in the SAS log: you can turn on the SYMBOLGEN system option to list the values of all macro variables that are used, or you can use  the %PUT statement to write specific text, including macro variable values, to the log.
+Answer: D
+Description: %let creates user defined macro variables which has following form:
+%let macro-variable= value;
+SAS considers Quotes as part of value so the correct answer is %let location = storage;
 
 Question:
 What value do these statements assign to the macro variable reptitle:
@@ -2965,7 +2967,7 @@ where course_code="&crsid";
 var location begin_date teacher;
 title1 "Schedule for &&&crsid";
 run;
-Answer: B
+Answer: C
 Description: You can use multiple ampersands to create an indirect reference when the value of one macro variable is the name of another. If you enclose the DATA step variable name in quotation marks in the  SYMPUT routine, the new macro variable will have the same name as the DATA step variable rather than having the DATA step variable's value as a name. Use the SYMGET function to obtain the value of a macro variable during the execution of a DATA step.
 
 Question:

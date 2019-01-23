@@ -1010,7 +1010,7 @@
   }, {
     "number" : 49,
     "description" : "Which one of the following programs contains a syntax error?",
-    "explanation" : "In option C, there are reference to c.unitcost and s.quantity of which c and s are not defined anywhere in the code. If anything refered as a refrence then it has to be first defined.",
+    "explanation" : "The reference to c.unitcost and s.quantity of which c and s are not defined anywhere in the code. If anything referred as a reference then it has to be first defined.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\nselect product.*, cost.unitcost, sales .quantity\nfrom product p, cost c, sales s\nwhere p.item = c.item and p.item = s.item;\nquit;",
@@ -1022,11 +1022,11 @@
     }, {
       "tag" : "C",
       "description" : "C.  proc sql;\nselect p.*, c.unitcost, s.quantity\nfrom product as p, cost as c, sales as s\nwhere p.item = c.item and p.item = s.item;\nquit;",
-      "correct" : true
+      "correct" : false
     }, {
       "tag" : "D",
       "description" : "D.  proc sql;\nselect p.*, c.unitcost, s.quantity\nfrom product, cost, sales\nwhere product.item = cost.item and product.item = sales.item;\nquit;",
-      "correct" : false
+      "correct" : true
     } ]
   }, {
     "number" : 50,
@@ -3005,11 +3005,11 @@
   }, {
     "number" : 144,
     "description" : "Which statement creates a macro variable named location that has the value storage?",
-    "explanation" : "There are two ways to display the value of a macro variable in the SAS log: you can turn on the SYMBOLGEN system option to list the values of all macro variables that are used, or you can use  the %PUT statement to write specific text, including macro variable values, to the log.",
+    "explanation" : "%let creates user defined macro variables which has following form:\n%let macro-variable= value;\nSAS considers Quotes as part of value so the correct answer is %let location = storage;",
     "options" : [ {
       "tag" : "A",
       "description" : "A. &let location = storage;",
-      "correct" : true
+      "correct" : false
     }, {
       "tag" : "B",
       "description" : "B. let &location = storage;",
@@ -3021,7 +3021,7 @@
     }, {
       "tag" : "D",
       "description" : "D. %let location = storage;",
-      "correct" : false
+      "correct" : true
     } ]
   }, {
     "number" : 145,
@@ -3224,11 +3224,11 @@
     }, {
       "tag" : "B",
       "description" : "B. data _null_;\nset sasuser.courses;\ncall symput(course_code, trim(course_title));\nrun;\n%let crsid=C005;\nproc print data=sasuser.schedule noobs label;\nwhere course_code=\"&crsid\";\nvar location begin_date teacher;\ntitle1 \"Schedule for &&&crsid\";\nrun;",
-      "correct" : true
+      "correct" : false
     }, {
       "tag" : "C",
       "description" : "C. data _null_;\nset sasuser.courses;\ncall symput('course_code', trim(course_title));\nrun;\n%let crsid=C005;\nproc print data=sasuser.schedule noobs label;\nwhere course_code=\"&crsid\";\nvar location begin_date teacher;\ntitle1 \"Schedule for &&&crsid\";\nrun;",
-      "correct" : false
+      "correct" : true
     }, {
       "tag" : "D",
       "description" : "D. data _null_;\nset sasuser.courses;\ncall symget(course_code, trim(course_title));\nrun;\n%let crsid=C005;\nproc print data=sasuser.schedule noobs label;\nwhere course_code=\"&crsid\";\nvar location begin_date teacher;\ntitle1 \"Schedule for &&&crsid\";\nrun;",
@@ -5458,8 +5458,8 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 4,
-  "playStoreVersion" : 10027,
+  "questionVersion" : 5,
+  "playStoreVersion" : 10037,
   "totalQuestions" : 261,
   "ads" : true
 }

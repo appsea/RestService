@@ -45,8 +45,8 @@ public class Main {
         bank.add(new QuestionBank("dvsa.txt", 200, 773, 1, 10001, true, true, false));
         bank.add(new QuestionBank("CompTIA A+.txt", 500, 977, 13, 10001, true, false));
         bank.add(new QuestionBank("Categories Base SAS.txt", 200, 434, 13, 10001, true, true));
-        bank.add(new QuestionBank("Base SAS Question.txt",200, 434, 6, 10055, true, true));
-        bank.add(new QuestionBank("Advance-sas-questions.txt", 150, 261, 4, 10027, true, true));
+        bank.add(new QuestionBank("Base SAS Question.txt",200, 434, 7, 10070, true, true));
+        bank.add(new QuestionBank("Advance-sas-questions.txt", 150, 261, 5, 10037, true, true));
         return bank;
     }
 
