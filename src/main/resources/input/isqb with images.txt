@@ -1,0 +1,25 @@
+Question:
+If you are flying with an economy ticket, there is a possibility that you may get upgraded to business class, especially if you hold a gold card in the airline's frequent flier program. If you don't hold a gold card, there is a possibility that you will get 'bumped' off the flight if it is full and you check in late. This is shown in following image:
+Note that each statement has been numbered.
+Three tests have been run:
+Test 1: Gold card holder who gets upgraded to business class
+Test 2: Non-gold card holder who stays in economy
+Test 3: A person who is bumped from the flight
+What is the statement coverage of these three tests?
+image: i101.jpg
+a. 60%
+b. 70%
+c. 80%
+d. 90%
+Answer: C
+Category: Test design techniques
+
+Question:
+Given the following state diagram, which test case is the minimum series of valid transitions to cover every state?
+image: i102.jpg
+a. SS-S1-S2-S4-S1-S3-ES
+b. SS-S1-S2-S3-S4-ES
+c. SS-S1-S2-S4-S1-S3-S4-S1-S3-ES
+d. SS-S1-S4-S2-S1-S3-ES
+Answer: A
+Category: Test design techniques

@@ -1737,20 +1737,20 @@ table2
 on table1.g3=
 table2.g3;
 A. G3       Z       G3      R
-   89       FL      .
-   46       UI      46      BC
-   47       BL      .
+89       FL      .
+46       UI      46      BC
+47       BL      .
 
 B. G3       Z       G3      R
-   46       FL      46      BC
-   .                45      FL
-   .                99      BA
+46       FL      46      BC
+.                45      FL
+.                99      BA
 
 C. G3       Z
-   46       UI
+46       UI
 
 D. G3       Z       G3      R
-   46       UI      46      BC
+46       UI      46      BC
 
 Answer: A
 Description: This PROC SQL query is a left outer join, which retrieves all rows that match across tables (based on the join conditions in the ON clause), plus nonmatching rows from the left (first) table. No columns are overlaid, so all columns from both tables are displayed.

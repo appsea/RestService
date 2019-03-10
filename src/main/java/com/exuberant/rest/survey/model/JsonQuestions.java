@@ -47,11 +47,11 @@ public class JsonQuestions {
         categoryIconMap.put("Alertness", "0xf06e");
         categoryIconMap.put("Attitude", "0xf118");
         categoryIconMap.put("Safety and your vehicle", "0xf3ed");
-        categoryIconMap.put("Safety margins", "0xf06e");
-        categoryIconMap.put("Hazard awareness", "0xf557");
+        categoryIconMap.put("Safety margins", "0xf560");
+        categoryIconMap.put("Hazard awareness", "0xf071");
         categoryIconMap.put("Vulnerable road users", "0xf29d");
         categoryIconMap.put("Other types of vehicle", "0xf4df");
-        categoryIconMap.put("Vehicle handling", "0xf06e"); //f085 f557
+        categoryIconMap.put("Vehicle handling", "0xf1B9");
         categoryIconMap.put("Motorway rules", "0xf018");
         categoryIconMap.put("Rules of the road", "0xf637");
         categoryIconMap.put("Road and traffic signs", "0xf637");
@@ -145,6 +145,11 @@ public class JsonQuestions {
     public void categorise() {
         multiValueMap = new MultiValueMap();
         for (JsonQuestion question : questions) {
+            if (question.getCategory() != null) {
+                multiValueMap.put(question.getCategory(), question.getNumber());
+            }
+        }
+        for (JsonQuestion question : premium) {
             if (question.getCategory() != null) {
                 multiValueMap.put(question.getCategory(), question.getNumber());
             }

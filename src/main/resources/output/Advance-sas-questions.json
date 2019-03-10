@@ -1790,19 +1790,19 @@
     "explanation" : "This PROC SQL query is a left outer join, which retrieves all rows that match across tables (based on the join conditions in the ON clause), plus nonmatching rows from the left (first) table. No columns are overlaid, so all columns from both tables are displayed.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. G3       Z       G3      R\n   89       FL      .\n   46       UI      46      BC\n   47       BL      .",
+      "description" : "A. G3       Z       G3      R\n89       FL      .\n46       UI      46      BC\n47       BL      .",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. G3       Z       G3      R\n   46       FL      46      BC\n   .                45      FL\n   .                99      BA",
+      "description" : "B. G3       Z       G3      R\n46       FL      46      BC\n.                45      FL\n.                99      BA",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. G3       Z\n   46       UI",
+      "description" : "C. G3       Z\n46       UI",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. G3       Z       G3      R\n   46       UI      46      BC",
+      "description" : "D. G3       Z       G3      R\n46       UI      46      BC",
       "correct" : false
     } ]
   }, {

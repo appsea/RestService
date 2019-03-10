@@ -24,8 +24,6 @@ machines?
 A. Hypervisor
 B. Cloud Server Manager
 C. Supervisor
-
-
 D. Virtual Disk Manager
 Answer: A
 Reference: http://www.datacenterknowledge.com/archives/2012/08/01/hypervisor-101-a-lookhypervisor-market/

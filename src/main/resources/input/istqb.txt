@@ -1,0 +1,791 @@
+﻿Question:
+A company recently purchased a commercial off-the-shelf application to automate their bill-paying process. They now plan to run an acceptance test against the package prior to putting it into production. Which of the following is their most likely reason for testing?
+A. To build confidence in the application.
+B. To detect bugs in the application.
+C. To gather evidence for a lawsuit.
+D. To train the users.
+Answer: A
+Category: Fundamentals of testing
+
+Question:
+According to the ISTQB Glossary, the word 'bug' is synonymous with which of the following words?
+A. Incident
+B. Defect
+C. Mistake
+D. Error
+Answer: B
+Category: Fundamentals of testing
+
+Question:
+According to the ISTQB Glossary, a risk relates to which of the following?
+A. Negative feedback to the tester.
+B. Negative consequences that will occur.
+C. Negative consequences that could occur.
+D. Negative consequences for the test object.
+Answer: C
+Category: Fundamentals of testing
+
+Question:
+Ensuring that test design starts during the requirements definition phase is important to enable which of the following test objectives?
+A. Preventing defects in the system.
+B. Finding defects through dynamic testing.
+C. Gaining confidence in the system.
+D. Finishing the project on time.
+Answer: A
+Category: Fundamentals of testing
+
+Question:
+A test team consistently finds between 90% and 95% of the defects present in the system under test. While the test manager understands that this is a good defect-detection percentage for her test team and industry, senior management and executives remain disappointed in the test group, saying that the test team misses too many bugs. Given that the users are generally happy with the system and that the failures which have occurred have generally been low impact, which of the following testing principles is most likely to help the test manager explain to these managers and executives why some defects are likely to be missed?
+A. Exhaustive testing is impossible
+B. Defect clustering
+C. Pesticide paradox
+D. Absence-of-errors fallacy
+Answer: A
+Category: Fundamentals of testing
+
+Question:
+According to the ISTQB Glossary, regression testing is required for what purpose?
+A. To verify the success of corrective actions.
+B. To prevent a task from being incorrectly considered completed.
+C. To ensure that defects have not been introduced by a modification.
+D. To motivate better unit testing by the programmers.
+Answer: C
+Category: Fundamentals of testing
+
+Question:
+Which of the following is most important to promote and maintain good relationships between testers and developers?
+A. Understanding what managers value about testing.
+B. Explaining test results in a neutral fashion.
+C. Identifying potential customer work-arounds for bugs.
+D. Promoting better quality software whenever possible.
+Answer: B
+Category: Fundamentals of testing
+
+Question:
+Which of the statements below is the best assessment of how the test principles apply across the test life cycle?
+A. Test principles only affect the preparation for testing.
+B. Test principles only affect test execution activities.
+C. Test principles affect the early test activities such as review.
+D. Test principles affect activities throughout the test life cycle.
+Answer: D
+Category: Fundamentals of testing
+
+Question:
+What are good practices for testing within the development life cycle?
+A. Early test analysis and design.
+B. Different test levels are defined with specific objectives.
+C. Testers will start to get involved as soon as coding is done.
+D. A and B above.
+Answer: D
+Category: Testing throughout the software life cycle
+
+Question:
+Which option best describes objectives for test levels with a life cycle model?
+A. Objectives should be generic for any test level.
+B. Objectives are the same for each test level.
+C. The objectives of a test level don't need to be defined in advance.
+D. Each level has objectives specific to that level.
+Answer: D
+Category: Testing throughout the software life cycle
+
+Question:
+Which of the following is a test type?
+A. Component testing
+B. Functional testing
+C. System testing
+D. Acceptance testing
+Answer: B
+Category: Testing throughout the software life cycle
+
+Question:
+Which of the following is a nonfunctional quality characteristic?
+A. Feasibility
+B. Usability
+C. Maintenance
+D. Regression
+Answer: B
+Category: Testing throughout the software life cycle
+
+Question:
+Which of these is a functional test?
+A. Measuring response time on an on-line booking system.
+B. Checking the effect of high volumes of traffic in a call-center system.
+C. Checking the on-line bookings screen information and the database contents against the information on the letter to the customers.
+D. Checking how easy the system is to use.
+Answer: C
+Category: Testing throughout the software life cycle
+
+Question:
+Which of the following is a true statement regarding the process of fixing emergency changes?
+A. There is no time to test the change before it goes live, so only the best developers should do this work and should not involve testers as they slow down the process.
+B. Just run the retest of the defect actually fixed.
+C. Always run a full regression test of the whole system in case other parts of the system have been adversely affected.
+D. Retest the changed area and then use risk assessment to decide on a reasonable subset of the whole regression test to run in case other parts of the system have been adversely affected.
+Answer: D
+Category: Testing throughout the software life cycle
+
+Question:
+A regression test:
+A. Is only run once.
+B. Will always be automated.
+C. Will check unchanged areas of the software to see if they have been affected.
+D. Will check changed areas of the software to see if they have been affected.
+Answer: C
+Category: Testing throughout the software life cycle
+
+Question:
+Non-functional testing includes:
+A. Testing to see where the system does not function correctly.
+B. Testing the quality attributes of the system including reliability and usability.
+C. Gaining user approval for the system.
+D. Testing a system feature using only the software required for that function.
+Answer: B
+Category: Testing throughout the software life cycle
+
+Question:
+Beta testing is:
+A. Performed by customers at their own site.
+B. Performed by customers at the software developer's site.
+C. Performed by an independent test team.
+D. Useful to test software developed for a specific customer or user.
+Answer: A
+Category: Testing throughout the software life cycle
+
+Question:
+Which of the following artifacts can be examined by using review techniques?
+A. Software code
+B. Requirements specification
+C. Test designs
+D. All of the above
+Answer: D
+Category: Static Techniques
+
+Question:
+Which statement about the function of a static analysis tool is true?
+A. Gives quality information about the code without executing it.
+B. Checks expected results against actual results.
+C. Can detect memory leaks.
+D. Gives information about what code has and has not been exercised.
+Answer: A
+Category: Static Techniques
+
+Question:
+Which is not a type of review?
+A. Walkthrough
+B. Inspection
+C. Informal review
+D. Management approval
+Answer: D
+Category: Static Techniques
+
+Question:
+What statement about reviews is true?
+A. Inspections are led by a trained moderator, whereas technical reviews are not necessarily.
+B. Technical reviews are led by a trained leader, inspections are not.
+C. In a walkthrough, the author does not attend.
+D. Participants for a walkthrough always need to be thoroughly trained.
+Answer: A
+Category: Static Techniques
+
+Question:
+What is the main difference between a walkthrough and an inspection?
+A. An inspection is led by the authors, whilst a walk through is led by a trained moderator.
+B. An inspection has a trained leader, whilst a walk through has no leader.
+C. Authors are not present during inspections, whilst they are during walkthroughs.
+D. A walkthrough is led by the author, whilst an inspection is led by a trained moderator.
+Answer: D
+Category: Static Techniques
+
+Question:
+Which of the following characteristics and types of review processes belong together?
+1. Led by the author
+2. Undocumented
+3. No management participation
+4. Led by a trained moderator or leader
+5. Uses entry and exit criteria
+s. Inspection
+t. Technical review
+u. Informal review
+v. Walkthrough
+A. s = 4, t = 3, u = 2 and 5, v = 1
+B. s = 4 and 5, t = 3, u = 2, v = 1
+C. s = 1 and 5, t = 3, u = 2, v = 4
+D. s = 5, t = 4, u = 3, v = 1 and 2
+Answer: B
+Category: Static Techniques
+
+Question:
+What statement about static analysis is true?
+A. With static analysis, defects can be found that are difficult to find with dynamic testing.
+B. Compiling is not a form of static analysis.
+C. When properly performed, static analysis makes functional testing redundant.
+D. Static analysis finds all faults.
+Answer: A
+Category: Static Techniques
+
+Question:
+Which of the following statements about early test design are true and which are false?
+1. Defects found during early test design are more expensive to fix.
+2. Early test design can find defects.
+3. Early test design can cause changes to the requirements.
+4. Early test design takes more effort.
+A. 1 and 3 are true. 2 and 4 are false.
+B. 2 is true. 1, 3 and 4 are false.
+C. 2 and 3 are true. 1 and 4 are false.
+D. 2, 3 and 4 are true. 1 is false.
+Answer: C
+Category: Static Techniques
+
+Question:
+Static code analysis typically identifies all but one of the following problems. Which is it?
+A. Unreachable code
+B. Undeclared variables
+C. Faults in the requirements
+D. Too few comments
+Answer: C
+Category: Static Techniques
+
+Question:
+In which document described in IEEE 829 would you find instructions for the steps to be taken for a test including set-up, logging, environment and measurement?
+A. Test plan
+B. Test design specification
+C. Test case specification
+D. Test procedure specification
+Answer: D
+Category: Test design techniques
+
+Question:
+With a highly experienced tester with a good business background, which approach to defining test procedures would be effective and most efficient for a project under severe time pressure?
+A. A high-level outline of the test conditions and general steps to take.
+B. Every step in the test spelled out in detail.
+C. A high-level outline of the test conditions with the steps to take discussed in detail with another experienced tester.
+D. Detailed documentation of all test cases and careful records of each step taken in the testing.
+Answer: A
+Category: Test design techniques
+
+Question:
+Put the test cases that implement the following test conditions into the best order for the test execution schedule, for a test that is checking modifications of customers on a database.
+1 Print modified customer record.
+2 Change customer address: house number and street name.
+3 Capture and print the on-screen error message.
+4 Change customer address: postal code.
+5 Confirm existing customer is on the database by opening that record.
+6 Close the customer record and close the database.
+7 Try to add a new customer with no details at all.
+A. 5,4, 2,1, 3, 7, 6
+B. 4,2,5,1,6,7,3
+C. 5,4,2,1,7,3,6
+D. 5,1, 2, 3,4, 7, 6
+Answer: C
+Category: Test design techniques
+
+Question:
+Why are both specification-based and structure-based testing techniques useful?
+A. They find different types of defect.
+B. Using more techniques is always better.
+C. Both find the same types of defect.
+D. Because specifications tend to be unstructured.
+Answer: A
+Category: Test design techniques
+
+Question:
+What is a key characteristic of structure-based testing techniques?
+A. They are mainly used to assess the structure of a specification.
+B. They are used both to measure coverage and to design tests to increase coverage.
+C. They are based on the skills and experience of the tester.
+D. They use a formal or informal model of the software or component.
+Answer: B
+Category: Test design techniques
+
+Question:
+Which of the following would be an example of decision-table testing for a financial application applied at the system-test level?
+A. A table containing rules for combinations of inputs to two fields on a screen.
+B. A table containing rules for interfaces between components.
+C. A table containing rules for mortgage applications.
+D. A table containing rules for chess.
+Answer: C
+Category: Test design techniques
+
+Question:
+Which of the following could be a coverage measure for state transition testing?
+V All states have been reached.
+W The response time for each transaction is adequate.
+X Every transition has been exercised.
+Y All boundaries have been exercised.
+Z Specific sequences of transitions have been exercised.
+A. X,YandZ
+B. V, X, Y and Z
+C. W,XandY
+D. V, X and Z
+Answer: D
+Category: Test design techniques
+
+Question:
+Postal rates for 'light letters' are 25p up to l0g, 35p up to 50g plus an extra l0p for each additional 25g up to l00g. Which test inputs (in grams) would be selected using equivalence partitioning?
+A. 8,42,82,102
+B. 4,15, 65, 92,159
+C. 10,50,75,100
+D. 5, 20, 40, 60, 80
+Answer: B
+Category: Test design techniques
+
+Question:
+Which of the following could be used to assess the coverage achieved for specification based (black-box) test techniques?
+V Decision outcomes exercised
+W Partitions exercised
+X Boundaries exercised
+Y State transitions exercised
+Z Statements exercised
+A. V,W,YorZ
+B. W,XorY
+C. V,XorZ
+D. W, X, Y or Z
+Answer: B
+Category: Test design techniques
+
+Question:
+Which of the following structurebased test design technique would be most likely to be applied to?
+1 Boundaries between mortgage interest rate bands.
+2 An invalid transition between two different arrears^ statuses.
+3 The business process flow for mortgage approval.
+4 Control flow of the program to calculate repayments.
+A. 2, 3 and 4
+B. 2 and 4
+C. 3 and 4
+D. 1, 2 and 3
+Answer: C
+Category: Test design techniques
+
+Question:
+Use case testing is useful for which of the following?
+P Designing acceptance tests with users or customers.
+Q Making sure that the mainstream business processes are tested.
+R Finding defects in the interaction between components.
+S Identifying the maximum and minimum values for every input fielD. T Identifying the percentage of statements exercised by a sets of tests.
+A. P, Q and R
+B. Q,SandT
+C. P, Qand S
+D. R, S and T
+Answer: A
+Category: Test design techniques
+
+Question:
+Which of the following statements about the relationship between statement coverage and decision coverage is correct?
+A. 100% decision coverage is achieved if statement coverage is greater than 90%.
+B. 100% statement coverage is achieved if decision coverage is greater than 90%.
+C. 100% decision coverage always means 100% statement coverage.
+D. 100% statement coverage always means 100% decision coverage.
+Answer: C
+Category: Test design techniques
+
+Question:
+Why are error guessing and exploratory testing good to do?
+A. They can find defects missed by specification based and structure-based techniques.
+B. They don't require any training to be as effective as formal techniques.
+C. They can be used most effectively when there are good specifications.
+D. They will ensure that all of the code or system is tested.
+Answer: A
+Category: Test design techniques
+
+Question:
+How do experience-based techniques differ from specification-based techniques?
+A. They depend on the tester's understanding of the way the system is structured rather than on a documented record of what the system should do.
+B. They depend on having older testers rather than younger testers.
+C. They depend on a documented record of what the system should do rather than on an individual's personal view.
+D. They depend on an individual's personal view rather than on a documented record of what the system should do.
+Answer: D
+Category: Test design techniques
+
+Question:
+When choosing which technique to use in a given situation, which factors should be taken into account?
+U previous experience of types of defects found in this or similar systems
+V the existing knowledge of the testers
+W regulatory standards that apply
+X the type of test execution tool that will be used
+Y the documentation available
+Z previous experience in the development language
+A. V,W,Y and Z
+B. U, V, W and Y
+C. U,X and Y
+D. V,W and Y
+Answer: B
+Category: Test design techniques
+
+Question:
+Why is independent testing important?
+A. Independent testing is usually cheaper than testing your own work.
+B. Independent testing is more effective at finding defects.
+C. Independent testers should determine the processes and methodologies used.
+D. Independent testers are dispassionate about whether the project succeeds or fails.
+Answer: B
+Category: Test management
+
+Question:
+Which of the following is among the typical tasks of a test leader?
+A. Develop system requirements, design specifications and usage models.
+B. Handle all test automation duties.
+C. Keep tests and test coverage hidden from programmers.
+D. Gather and report test progress metrics.
+Answer: D
+Category: Test management
+
+Question:
+According to the ISTQB Glossary, what do we mean when we call someone a test manager?
+A. A test manager manages a collection of test leaders.
+B. A test manager is the leader of a test team or teams.
+C. A test manager gets paid more than a test leader.
+D. A test manager reports to a test leader.
+Answer: B
+Category: Test management
+
+Question:
+What is the primary difference between the test plan, the test design specification, and the test procedure specification?
+A. The test plan describes one or more levels of testing, the test design specification identifies the associated high-level test cases and a test procedure specification describes the actions for executing a test.
+B. The test plan is for managers, the test design specification is for programmers and the test procedure specification is for testers who are automating tests.
+C. The test plan is the least thorough, the test procedure specification is the most thorough and the test design specification is midway between the two.
+D. The test plan is finished in the first third of the project, the test design specification is finished in the middle third of the project and the test procedure specification is finished in the last third of the project.
+Answer: A
+Category: Test management
+
+Question:
+Which of the following factors is an influence on the test effort involved in most projects?
+A. Geographical separation of tester and programmers.
+B. The departure of the test manager during the project.
+C. The quality of the information used to develop the tests.
+D. Unexpected long-term illness by a member of the project team.
+Answer: C
+Category: Test management
+
+Question:
+The ISTQB Foundation Syllabus establishes a fundamental test process where test planning occurs early in the project, while test execution occurs at the enD. Which of the following elements of the test plan, while specified during test planning, is assessed during test execution?
+A. Test tasks
+B. Environmental needs
+C. Exit criteria
+D. Test team training
+Answer: C
+Category: Test management
+
+Question:
+Consider the following exit criteria which might be found in a test plan:
+I No known customer-critical defects.
+II All interfaces between components tested.
+III 100% code coverage of all units.
+IV All specified requirements satisfied.
+V System functionality matches legacy system for all business rules.
+Which of the following statements is true about whether these exit criteria belong in an acceptance test plan?
+A. All statements belong in an acceptance test plan.
+B. Only statement I belongs in an acceptance test plan.
+C. Only statements I, II, and V belong in an acceptance test plan.
+D. Only statements I, IV, and V belong in an acceptance test plan.
+Answer: D
+Category: Test management
+
+Question:
+According to the ISTQB Glossary, what is a test level?
+A. A group of test activities that are organized together.
+B. One or more test design specification documents.
+C. A test type.
+D. An ISTQB certification.
+Answer: A
+Category: Test management
+
+Question:
+Which of the following metrics would be most useful to monitor during test execution?
+A. Percentage of test cases written.
+B. Number of test environments remaining to be configured.
+C. Number of defects found and fixed.
+D. Percentage of requirements for which a test has been written.
+Answer: C
+Category: Test management
+
+Question:
+During test execution, the test manager describes the following situation to the project team: '90% of the test cases have been run. 20% of the test cases have identified defects. 127 defects have been founD. 112 defects have been fixed and have passed confirmation testing. Of the remaining 15 defects, project management has decided that they do not need to be fixed prior to release.'
+
+Which of the following is the most reasonable interpretation of this test status report?
+A. The remaining 15 defects should be confirmation tested prior to release.
+B. The remaining 10% of test cases should be run prior to release.
+C. The system is now ready for release with no further testing or development effort.
+D. The programmers should focus their attention on fixing the remaining known defects prior to release.
+Answer: B
+Category: Test management
+
+Question:
+In a test summary report, the project's test leader makes the following statement, 'The payment processing subsystem fails to accept payments from American Express cardholders, which is considered a must-work feature for this release.' This statement is likely to be found in which of the following sections?
+A. Evaluation
+B. Summary of activities
+C. Variances
+D. Incident description
+Answer: A
+Category: Test management
+
+Question:
+During an early period of test execution, a defect is located, resolved and confirmed as resolved by re-testing, but is seen again later during subsequent test execution. Which of the following is a testing-related aspect of configuration management that is most likely to have broken down?
+A. Traceability
+B. Confirmation testing
+C. Configuration control
+D. Test documentation management
+Answer: C
+Category: Test management
+
+Question:
+You are working as a tester on a project to develop a point-of-sales system for grocery stores and other similar retail outlets. Which of the following is a product risk for such a project?
+A. The arrival of a more-reliable competing product on the market.
+B. Delivery of an incomplete test release to the first cycle of system test.
+C. An excessively high number of defect fixes fail during re-testing.
+D. Failure to accept allowed credit cards.
+Answer: D
+Category: Test management
+
+Question:
+A product risk analysis meeting is held during the project planning perioD. Which of the following determines the level of risk?
+A. Difficulty of fixing related problems in code
+B. The harm that might result to the user
+C. The price for which the software is sold
+D. The technical staff in the meeting
+Answer: B
+Category: Test management
+
+Question:
+You are writing a test plan using the IEEE 829 template and are currently completing the Risks and Contingencies section. Which of the following is most likely to be listed as a project risk?
+A. Unexpected illness of a key team member
+B. Excessively slow transaction-processing time
+C. Data corruption under network congestion
+D. Failure to handle a key use case
+Answer: A
+Category: Test management
+
+Question:
+You and the project stakeholders develop a list of product risks and project risks during the planning stage of a project. What else should you do with those lists of risks during test planning?
+A. Determine the extent of testing required for the product risks and the mitigation and contingency actions required for the project risks.
+B. Obtain the resources needed to completely cover each product risk with tests and transfer responsibility for the project risks to the project manager.
+C. Execute sufficient tests for the product risks, based on the likelihood and impact of each product risk and execute mitigation actions for all project risks.
+D. No further risk management action is required at the test planning stage.
+Answer: A
+Category: Test management
+
+Question:
+According to the ISTQB Glossary, a product risk is related to which of the following?
+A. Control of the test project
+B. The test object
+C. A single test item
+D. A potential negative outcome
+Answer: B
+Category: Test management
+
+Question:
+In an incident report, the tester makes the following statement, At this point, I expect to receive an error message explaining the rejection of this invalid input and asking me to enter a valid input. Instead the system accepts the input, displays an hourglass for between one and five seconds and finally terminates abnormally, giving the message, "Unexpected data type: 15. Click to continue." ' This statement is likely to be found in which of the following sections of an IEEE 829 standard incident report?
+A. Summary
+B. Impact
+C. Item pass/fail criteria
+D. Incident description
+Answer: D
+Category: Test management
+
+Question:
+According to the ISTQB Glossary, what do we call a document that describes any event that occurred during testing which requires further investigation?
+A. A bug report
+B. A defect report
+C. An incident report
+D. A test summary report
+Answer: C
+Category: Test management
+
+Question:
+A product risk analysis is performed during the planning stage of the test process. During the execution stage of the test process, the test manager directs the testers to classify each defect report by the known product risk it relates to (or to 'other'). Once a week, the test manager runs a report that shows the percentage of defects related to each known product risk and to unknown risks. What is one possible use of such a report?
+A. To identify new risks to system quality.
+B. To locate defect clusters in product subsystems.
+C. To check risk coverage by tests.
+D. To measure exploratory testing.
+Answer: A
+Category: Test management
+
+Question:
+What is the main purpose of use case testing?
+A. To identify defects in process flows related to typical use of the system.
+B. To identify defects in the connections between components.
+C. To identify defects in the system related to extreme scenarios.
+D. To identify defects in the system related to the use of unapproved programming practices.
+Answer: A
+
+Question:
+A washing machine has three temperature bands for different kinds of fabrics:
+— Fragile fabrics are washed at temperatures between 10 and 30 degrees Celsius;
+— Normal fabrics are washed at temperatures between 31 and 60 degrees Celsius;
+— Heavily soiled and tough fabrics are washed at temperatures between 61 and 100 degrees Celsius.
+Which of the following contains only values that are in different equivalence partitions?
+A. 10, 31, 55
+B. 20, 65, 90
+C. 25, 45, 77
+D. 15, 30, 60
+Answer: C
+
+Question:
+“Experience based” test design techniques, typically…
+A. Use decision tables to generate the Boolean test conditions to be executed.
+B. Identify the structure of the system or software at the component, integration or system level.
+C. Use the skill, intuition and experience of the tester to derive the test cases, using error guessing and exploratory testing.
+D. Establish traceability from test conditions back to the specifications and requirements.
+Answer: C
+
+Question:
+Testers are often seen as the bearer of unwanted news regarding defects. What are the effective ways to improve the communication and relationship between testers and others?
+a)Communicate factual information in a constructive way.
+b)Try to understand how the other person feels and why they react the way they do.
+c)Always outsource testing activities.
+d)Never record information that could be used to apportion blame to an individual or team.
+A. a and b
+B. a, b and c
+C. a, b and d
+D. a and c
+Answer: A
+
+Question:
+Which of the following is a valid reason for writing test cases based on experience and intuition?
+A. Use of formal techniques requires expensive training
+B. Only experience can ensure all functionality is covered
+C. Tests based on experience and intuition can supplement formal techniques
+D. Formal techniques require the use of expensive tools
+Answer: C
+
+Question:
+Which of the following BEST describes the relationship between test planning and test execution?
+A. Test planning ensures the level of detail in test procedures is appropriate for test execution
+B. Test planning schedules test execution but does not assign resources
+C. Test planning defines the overall approach to testing but does not schedule specific activities such as test execution
+D. Test planning identifies test objectives related to scope and risk but does not define the level of detail for test procedures used in test execution
+Answer: A
+
+Question:
+Which of the following would be appropriate test objectives for user acceptance testing of the first release of a new software product aimed at a general market and built using Agile methods?
+a.To identify as many defects as possible
+b.To maximize code coverage
+c.To ensure the product works as expected
+d.To assess the overall quality of the product
+e.To determine the reliability of the product
+A. b and c
+B. a and d
+C. b and e
+D. c and d
+Answer: D
+
+Question:
+Which of the following characteristics is most likely to promote effective software testing?
+A. Independence from the production process
+B. A belief that programmers always make mistakes
+C. Knowledge of the number of defects typically found in a program
+D. Confidence that the next stage will find defects missed at this stage
+Answer: A
+
+Question:
+Which of the following accurately defines the integration testing test level?
+A. Test basis includes software and system design, test objects include interfaces, and tests concentrate on the interactions between different parts of a system
+B. Test basis includes component requirements, test objects include database modules, and tests concentrate on the behavior of the system as a whole.
+C. Test basis includes business processes, test objects include system configuration and configuration data, and tests concentrate on establishing confidence in the system
+D. Test basis includes use cases, test objects include user procedures and tests concentrate on a high level model of system behavior
+Answer: A
+
+Question:
+An Android application identifies and counts all purchases of a particular product from a shopping website. The application incorrectly counts purchase attempts by including both failed attempts, and also those where the purchase was terminated by the user before completion. Testing has identified that the problem was located in the ‘purchase identification’ module, where the first stage in the purchasing process was counted, rather than a successful confirmed purchase after payment by the customer.
+Which of the following statements correctly identifies what has happened? For more questions buy premium questions from istqb.guru website.
+A. A defect in the purchase identification module caused by a mistake in the module specification led to a defect in the overall application.
+B. An error by the programmer led to a mistake in the purchase identification module and this caused a defect in the application.
+C. The application failed because of a defect in the purchase identification module caused by a programmer mistake or an error in the specification.
+D. A bug in the purchase identification module caused a fault in the application.
+Answer: C
+
+Question:
+Which of the following would TYPICALLY be carried out by a test leader and which by a tester?
+a) Creation of a test strategy.
+b) Creation of a test specification.
+c) Raising of an incident report.
+d) Write a test summary report.
+
+A. a and b would be carried out by a test leader, whilst c and d would be carried out by a tester
+B. b and c would be carried out by a test leader, whilst a and d would be carried out by a tester
+C. a and d would be carried out by a test leader, whilst b and c would be carried out by a tester
+D. a and c would be carried out by a test leader, whilst b and d would be carried out by a tester
+Answer: C
+
+Question:
+The digital Thermometer uses 7 colors to show the ambient temperature. Each color spans a range of just 5 Deg. C, with an operating minimum and maximum of minus 15 Deg. C and 60 Deg. C. Which of the following values is LEAST likely to have been identified when applying the boundary value test design technique?
+A. 60 Deg. C
+B. 0 Deg. C
+C. 12 Deg. C
+D. 25 Deg. C
+Answer: C
+
+Question:
+A system under development contains complex calculations and decision logic, and it is assessed as high risk because of the relative inexperience of the development team in the application domain. Which of the following would be the MOST appropriate choice of test design technique for
+component testing?
+A. Decision testing.
+B. Statement testing
+C. State transition testing
+D. Equivalence partitioning
+Answer: A
+
+Question:
+Which of the following statements correctly describes the benefit of fault attacks?
+A. They are more effective at finding faults than formal test design techniques
+B. They are useful when there is limited experience in the test team
+C. They can evaluate the reliability of a test object by attempting to force specific failures to occur
+D. They are less structured than other experience-based techniques
+Answer: C
+
+Question:
+Which statement is a valid explanation as to why black-box test design techniques can be useful?
+A. They can help to derive test data based on analysis of the requirement specification
+B. They can help derive test cases based on analysis of a component code structure
+C. They can help to derive test conditions based on analysis of a system internal structure
+D. They can help to reduce testing costs
+Answer: A
+
+Question:
+Which of the following activities should be considered before purchasing a tool for an organization?
+a) Ensure that the tool does not have a negative impact on existing test processes.
+b) Produce a business justification examining both costs and benefits.
+c) Determine whether the vendor will continue to provide support for the tool.
+d) Introduce tool deployment activities into the testing schedule.
+A. a and d
+B. b and c
+C. c and d
+D. a and c
+Answer: B
+
+Question:
+Arrive-and-Go airline wants to clarify its baggage handling policy, whilst maximizing revenues, and will introduce the following tariffs for all baggage per individual customer (weights are rounded up to the nearest 0.1Kg):
+The first 2Kg will be carried free of charge. The next 10 Kg will be carried for a flat charge of 0. An additional 15Kg will be charged a total charge of 7.
+Luggage over this amount will be charged at ? per Kg, up to a maximum of 150Kg per person. No passenger may take more that 150Kg with them. Which of the following would constitute boundary values for baggage weights in the price calculation?
+A. 0, 5.0, 10.0, 17.0
+B. 2.0,9.9, 15.0, 26.9
+C. 1.9, 12.0, 14.9, 150.0
+D. 2.0, 12.1, 27.0, 150.1
+Answer: D
+
+Question:
+A program level Master Test Plan states that a number of best practices must be adopted for its project life cycle models, irrespective of whether a sequential or iterative-incremental approach is adopted for each project. Which of the following life cycle related best practices would you expect to see in the Master Test Plan?
+a) There should be a testing activity that corresponds to each development activity.
+b) Each project should have four test levels if using a V-model.
+c) Test personnel should ensure that they are invited to review requirements and design
+documents as soon as draft versions are available.
+d) System testing must not be performed by the development teams.
+A. a and b
+B. a and c
+C. b and d
+D. c and d
+Answer: B
+
+Question:
+A simple gaming system has been specified as a set of use cases. It has been tested by the supplier and is now ready for user acceptance testing. The system is assessed as low risk and there is pressure to release the software into the market as soon as possible. Which of the following test techniques would be most appropriate for this testing?
+A. State transition testing and decision testing
+B. Equivalence partitioning and statement testing
+C. Use case testing and exploratory testing
+D. Decision table testing and exploratory testing
+Answer: C
+
+Question:
+What is the purpose of configuration management in testing? To choose and implement a suitable configuration management tool. To identify unique items of testware and their related developed software. To provide traceability between items of testware and developed software. To enable managers to configure the software. To control the versions of software released into the test environment.
+A. a, c and e
+B. a, b and d
+C. b, c and d
+D. b, c and e
+Answer: D
