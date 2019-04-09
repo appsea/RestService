@@ -2377,7 +2377,7 @@ Category: Hazard awareness
 
 Question:
 You see this sign ahead. What should you expect?
-image: cttk2201.jpg
+image: cttk2201.png
 
 A. The road will bend sharply to the right 
 B. The road will go steeply uphill
@@ -3438,7 +3438,7 @@ Category: Vulnerable road users
 
 Question:
 What action would you take when elderly people are crossing the road?
-image: cttk2196.jpg
+image: cttk2196.png
 
 A. Rev the engine to let them know that you're waiting
 B. Be patient and allow them to cross in their own time
@@ -5835,7 +5835,7 @@ Category: Motorway rules
 
 Question:
 What's the meaning of this sign?
-image: cttk2148.jpg
+image: cttk2148.png
 
 A. No waiting on the carriageway
 B. National speed limit applies
@@ -6331,7 +6331,7 @@ Category: Rules of the road
 
 Question:
 A single carriageway road has this sign. What's the maximum permitted speed for a car towing a trailer?
-image: cttk2148.jpg
+image: cttk2148.png
 
 A. 50 mph
 B. 40 mph
@@ -6855,7 +6855,7 @@ Category: Road and traffic signs
 
 Question:
 What does this sign mean?
-image: cttk2146.jpg
+image: cttk2146.png
 
 A. You have priority
 B. No motor vehicles
@@ -7273,7 +7273,7 @@ Category: Road and traffic signs
 
 Question:
 What does this sign mean?
-image: cttk2205.jpg
+image: cttk2205.png
 
 A. Tall bridge
 B. End of dual carriageway
@@ -7675,7 +7675,7 @@ Category: Road and traffic signs
 
 Question:
 The driver of the car in front is giving this arm signal. What does it mean?
-image: cttk2307.jpg
+image: cttk2307.png
 
 A. The driver wishes to overtake
 B. The driver is slowing down
@@ -8317,7 +8317,7 @@ Category: Road and traffic signs
 
 Question:
 What does this sign mean?
-image: cttk2064.jpg
+image: cttk2064.png
 
 A. Zebra crossing ahead
 B. School crossing patrol

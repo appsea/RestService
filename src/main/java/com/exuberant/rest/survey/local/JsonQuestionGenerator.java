@@ -2,15 +2,14 @@ package com.exuberant.rest.survey.local;
 
 import com.exuberant.rest.survey.LocalResourceLoader;
 import com.exuberant.rest.survey.QuestionBank;
-import com.exuberant.rest.survey.model.JsonQuestions;
-import com.exuberant.rest.survey.model.Option;
-import com.exuberant.rest.survey.model.Question;
+import com.exuberant.rest.survey.model.*;
 import com.exuberant.rest.survey.parser.GenericQuestionParser;
 import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -56,6 +55,33 @@ public class JsonQuestionGenerator {
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         new WordFileWriter().write(jsonQuestions, wordPath);
         Files.write(jsonPath, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQuestions).getBytes());
+        if (questionBank.getInputFile().contains("dvsa"))
+            validateDvsaQuestions(jsonQuestions);
+    }
+
+    private void validateDvsaQuestions(JsonQuestions jsonQuestions) {
+        for (JsonQuestion jsonQuestion : jsonQuestions.getAllQuestions()) {
+            String image = jsonQuestion.getPrashna().getImage();
+            if(!isValidImage(image)){
+                System.err.println("Missing image " + image);
+            }
+            for (JsonOption jsonOption : jsonQuestion.getOptions()) {
+                image = jsonOption.getImage();
+                if(!isValidImage(image)){
+                    System.err.println("Missing image " + image);
+                }
+            }
+        }
+    }
+
+    private boolean isValidImage(String image) {
+        boolean valid = true;
+        if (null != image) {
+            String path = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\Dvsa\\app\\images" + File.separator + image;
+            File file = new File(path);
+            valid = file.exists();
+        }
+        return valid;
     }
 
     private void writeQuestionsWithRandomDescription(List<Question> questions) throws IOException {

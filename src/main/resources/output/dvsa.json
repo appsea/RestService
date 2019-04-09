@@ -4708,7 +4708,7 @@
     "category" : "Hazard awareness",
     "prashna" : {
       "text" : "You see this sign ahead. What should you expect?",
-      "image" : "cttk2201.jpg"
+      "image" : "cttk2201.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -6763,7 +6763,7 @@
     "category" : "Vulnerable road users",
     "prashna" : {
       "text" : "What action would you take when elderly people are crossing the road?",
-      "image" : "cttk2196.jpg"
+      "image" : "cttk2196.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -11437,7 +11437,7 @@
     "category" : "Rules of the road",
     "prashna" : {
       "text" : "What's the meaning of this sign?",
-      "image" : "cttk2148.jpg"
+      "image" : "cttk2148.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -12407,7 +12407,7 @@
     "category" : "Rules of the road",
     "prashna" : {
       "text" : "A single carriageway road has this sign. What's the maximum permitted speed for a car towing a trailer?",
-      "image" : "cttk2148.jpg"
+      "image" : "cttk2148.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -13382,7 +13382,7 @@
     "category" : "Road and traffic signs",
     "prashna" : {
       "text" : "What does this sign mean?",
-      "image" : "cttk2146.jpg"
+      "image" : "cttk2146.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -14151,7 +14151,7 @@
     "category" : "Road and traffic signs",
     "prashna" : {
       "text" : "What does this sign mean?",
-      "image" : "cttk2205.jpg"
+      "image" : "cttk2205.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -14896,7 +14896,7 @@
     "category" : "Road and traffic signs",
     "prashna" : {
       "text" : "The driver of the car in front is giving this arm signal. What does it mean?",
-      "image" : "cttk2307.jpg"
+      "image" : "cttk2307.png"
     },
     "options" : [ {
       "tag" : "A",
@@ -16106,7 +16106,7 @@
     "category" : "Road and traffic signs",
     "prashna" : {
       "text" : "What does this sign mean?",
-      "image" : "cttk2064.jpg"
+      "image" : "cttk2064.png"
     },
     "options" : [ {
       "tag" : "A",

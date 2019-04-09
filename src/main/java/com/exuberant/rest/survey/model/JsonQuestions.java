@@ -155,4 +155,11 @@ public class JsonQuestions {
             }
         }
     }
+
+    @JsonIgnore
+    public List<JsonQuestion> getAllQuestions(){
+        ArrayList<JsonQuestion> jsonQuestions = new ArrayList<>(questions);
+        jsonQuestions.addAll(premium);
+        return jsonQuestions;
+    }
 }
