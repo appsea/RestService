@@ -128,7 +128,7 @@
   }, {
     "number" : 7,
     "description" : "What will be the output of following code?\n\ndata temp;\ntest = ‘X’;\nselect(test);\nwhen(‘Y’) Name = ‘Rak’;\nwhen(‘X’) Name = ‘Rakesh’;\nwhen(‘Z’) Name = ‘       ’;\nend;\nrun;",
-    "explanation" : "It’s because during compilation time the length of variable Name is set as 3 (see the first case ‘Y’) and hence even if the case ‘X’ is satisfied the output will still be Rak.\n\nQuestion :\nWhere will the ouput(rakesh) be written?\n\ndata _null_;\nput ‘rakesh’;\nrun;\n\nA. In Last file opened\nB. In dataset _null_\nC. Syntax error\nD. Log\n\nAnswer: D\nWhen you use the DATA _NULL_ statement, SAS processes the DATA step without writing observations to a data set and output written in SAS log.",
+    "explanation" : "It’s because during compilation time the length of variable Name is set as 3 (see the first case ‘Y’) and hence even if the case ‘X’ is satisfied the output will still be Rak.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Rakesh",
@@ -9114,9 +9114,30 @@
       "description" : "D. all of the above",
       "correct" : true
     } ]
+  }, {
+    "number" : 435,
+    "description" : "Where will the ouput(rakesh) be written?\n\ndata _null_;\nput ‘rakesh’;\nrun;",
+    "explanation" : "When you use the DATA _NULL_ statement, SAS processes the DATA step without writing observations to a data set and output written in SAS log.",
+    "options" : [ {
+      "tag" : "A",
+      "description" : "A. In Last file opened",
+      "correct" : false
+    }, {
+      "tag" : "B",
+      "description" : "B. In dataset _null_",
+      "correct" : false
+    }, {
+      "tag" : "C",
+      "description" : "C. Syntax error",
+      "correct" : false
+    }, {
+      "tag" : "D",
+      "description" : "D. Log",
+      "correct" : true
+    } ]
   } ],
-  "questionVersion" : 7,
-  "playStoreVersion" : 10070,
-  "totalQuestions" : 434,
+  "questionVersion" : 8,
+  "playStoreVersion" : 10093,
+  "totalQuestions" : 435,
   "ads" : true
 }

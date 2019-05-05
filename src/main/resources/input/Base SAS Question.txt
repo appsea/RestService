@@ -105,21 +105,6 @@ D. ‘Rakesh’
 Answer: B
 Description: It’s because during compilation time the length of variable Name is set as 3 (see the first case ‘Y’) and hence even if the case ‘X’ is satisfied the output will still be Rak.
 
-Question :
-Where will the ouput(rakesh) be written?
-
-data _null_;
-put ‘rakesh’;
-run;
-
-A. In Last file opened
-B. In dataset _null_
-C. Syntax error
-D. Log
-
-Answer: D
-Description: When you use the DATA _NULL_ statement, SAS processes the DATA step without writing observations to a data set and output written in SAS log.
-
 Question:
 What is true about _ERROR_ variable?
 A. Can be used in assignments/calculation in datastep.
@@ -8385,3 +8370,18 @@ C. PROC REPORT displays only the first occurrence of each order variable value i
 D. all of the above
 Answer: D
 Description: Order variables do order rows according to the formatted values of the order variable, and PROC REPORT suppresses repetitious printing of order values. However, you can't use order variables in a summary report.
+
+Question:
+Where will the ouput(rakesh) be written?
+
+data _null_;
+put ‘rakesh’;
+run;
+
+A. In Last file opened
+B. In dataset _null_
+C. Syntax error
+D. Log
+
+Answer: D
+Description: When you use the DATA _NULL_ statement, SAS processes the DATA step without writing observations to a data set and output written in SAS log.

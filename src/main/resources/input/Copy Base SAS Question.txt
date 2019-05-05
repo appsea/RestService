@@ -105,7 +105,7 @@ D. ‘Rakesh’
 Answer: B
 Description: It’s because during compilation time the length of variable Name is set as 3 (see the first case ‘Y’) and hence even if the case ‘X’ is satisfied the output will still be Rak.
 
-Question :
+Question:
 Where will the ouput(rakesh) be written?
 
 data _null_;

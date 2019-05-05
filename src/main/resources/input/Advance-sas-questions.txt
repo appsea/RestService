@@ -374,33 +374,6 @@ C. A report showing the numeric columns in each table in SASUSER
 D. A report showing the number of numeric columns in each table in SASUSER
 Answer: B
 
-
-QUESTION :
-The following SAS program is submitted:
-
-%macro loop;
-data one;
-%do I=1 %to 3;
-var&I=&I;%
-end
-run;
-%mend;
-%loop
-
-After this program executes; the following is written to the SAS log:
-(LOOP): Beginning execution
-(LOOP): %DO loop beginning; index variable l; start value is 1; stop value is 3; by value is 1
-(LOOP): %DO loop index variable l is now 2; loop will iterate again
-(LOOP): %DO loop index variable l is no 3; loop will iterate again
-(LOOP): %DO loop index variable l is no 4; loop will iterate again
-(LOOP): Ending execution
-Which SAS system option displays the notes in the SAS log?
-A. SYMBOLGEN
-B. MLOGIC
-C. MACRO
-D. MPRINT
-Answer: B
-
 Question:
 Given the SAS data sets ONE and TWO:
 
@@ -4528,4 +4501,30 @@ A. when the code is submitted
 B. only when the WORK.BAD_DATA view is used
 C. both when the code is submitted and the view is used
 D. never, the use of _null_ in a view is a syntax error
+Answer: B
+
+Question:
+The following SAS program is submitted:
+
+%macro loop;
+data one;
+%do I=1 %to 3;
+var&I=&I;%
+end
+run;
+%mend;
+%loop
+
+After this program executes; the following is written to the SAS log:
+(LOOP): Beginning execution
+(LOOP): %DO loop beginning; index variable l; start value is 1; stop value is 3; by value is 1
+(LOOP): %DO loop index variable l is now 2; loop will iterate again
+(LOOP): %DO loop index variable l is no 3; loop will iterate again
+(LOOP): %DO loop index variable l is no 4; loop will iterate again
+(LOOP): Ending execution
+Which SAS system option displays the notes in the SAS log?
+A. SYMBOLGEN
+B. MLOGIC
+C. MACRO
+D. MPRINT
 Answer: B

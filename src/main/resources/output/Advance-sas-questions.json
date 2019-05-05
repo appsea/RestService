@@ -5457,9 +5457,30 @@
       "description" : "D. never, the use of _null_ in a view is a syntax error",
       "correct" : false
     } ]
+  }, {
+    "number" : 262,
+    "description" : "The following SAS program is submitted:\n\n%macro loop;\ndata one;\n%do I=1 %to 3;\nvar&I=&I;%\nend\nrun;\n%mend;\n%loop\n\nAfter this program executes; the following is written to the SAS log:\n(LOOP): Beginning execution\n(LOOP): %DO loop beginning; index variable l; start value is 1; stop value is 3; by value is 1\n(LOOP): %DO loop index variable l is now 2; loop will iterate again\n(LOOP): %DO loop index variable l is no 3; loop will iterate again\n(LOOP): %DO loop index variable l is no 4; loop will iterate again\n(LOOP): Ending execution\nWhich SAS system option displays the notes in the SAS log?",
+    "explanation" : "",
+    "options" : [ {
+      "tag" : "A",
+      "description" : "A. SYMBOLGEN",
+      "correct" : false
+    }, {
+      "tag" : "B",
+      "description" : "B. MLOGIC",
+      "correct" : true
+    }, {
+      "tag" : "C",
+      "description" : "C. MACRO",
+      "correct" : false
+    }, {
+      "tag" : "D",
+      "description" : "D. MPRINT",
+      "correct" : false
+    } ]
   } ],
-  "questionVersion" : 5,
-  "playStoreVersion" : 10037,
-  "totalQuestions" : 261,
+  "questionVersion" : 6,
+  "playStoreVersion" : 10058,
+  "totalQuestions" : 262,
   "ads" : true
 }
