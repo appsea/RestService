@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -64,15 +65,11 @@ public class GenericQuestionParser implements QuestionParser {
         List<Question> questions = new CopyOnWriteArrayList<>();
         String fileName = questionBank.getInputFile();
         this.patternParser = PatternParserFactory.getPatternParser(fileName);
-        List<String> lines = new ArrayList<>();
+        List<String> lines = null;
         try {
             String filePath = "classpath:" + "/input/" + fileName;
             Resource resource = resourceLoader.getResource(filePath);
-            InputStream is = resource.getInputStream();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(is));
-            while (bufferedReader.ready()) {
-                lines.add(bufferedReader.readLine());
-            }
+            lines = Files.readAllLines(resource.getFile().toPath());
         } catch (IOException e) {
             System.err.println(e.getMessage());
             throw new RuntimeException("Invalid File Path: " + fileName + e.getMessage());

@@ -1,14 +1,4 @@
 Topic 1, Operating Systems
-QUESTION NO: 1
-A technician is creating a batch script that auto-assigns a particular drive share to a drive letter
-upon login. Which of the following commands can accomplish this?
-A. NET USE
-B. PING
-C. XCOPY
-D. IPCONFIG
-Answer: A
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/net_use.mspx?mfr=true
-
 QUESTION NO: 2
 An office of 25 computers is interested in employing a file server, network shares, and print server
 functionality. Which of the following network setups would be BEST suited for this situation?
@@ -17,7 +7,7 @@ B. Workgroup
 C. Domain
 D. Token ring
 Answer: C
-Reference: http://windows.microsoft.com/en-au/windows-vista/what-is-the-difference-between-adomain-and-a-workgroup
+Description: http://windows.microsoft.com/en-au/windows-vista/what-is-the-difference-between-adomain-and-a-workgroup
 QUESTION NO: 3
 Which of the following terms BEST describes the software or hardware used to manage virtual
 machines?
@@ -26,7 +16,7 @@ B. Cloud Server Manager
 C. Supervisor
 D. Virtual Disk Manager
 Answer: A
-Reference: http://www.datacenterknowledge.com/archives/2012/08/01/hypervisor-101-a-lookhypervisor-market/
+Description: http://www.datacenterknowledge.com/archives/2012/08/01/hypervisor-101-a-lookhypervisor-market/
 QUESTION NO: 4
 A technician is required to change a setting for HKEY_Local_Machine. Which of the following
 would the technician use to change this?
@@ -35,7 +25,7 @@ B. WEP setup
 C. MSCONFIG
 D. REGEDIT
 Answer: D
-Reference: http://www.wikihow.com/Edit-the-Windows-Registry
+Description: http://www.wikihow.com/Edit-the-Windows-Registry
 QUESTION NO: 5
 Which of the following Control Panel utilities will allow a technician to change the associated file
 type in a Windows XP machine?
@@ -44,7 +34,7 @@ B. Administrator tools
 C. Accessibility options
 D. Regional and language options
 Answer: A
-Reference: http://pcsupport.about.com/od/fixtheproblem/ht/defprogramxp.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/ht/defprogramxp.htm
 QUESTION NO: 6
 Which of the following keys, when pressed immediately after the BIOS test, will display Windows
 Boot Manager on a Windows 7 PC?
@@ -55,7 +45,7 @@ B. f8
 C. esc
 D. delete
 Answer: C
-Reference: http://pcsupport.about.com/od/fixtheproblem/a/biosaccess_bios.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/a/biosaccess_bios.htm
 QUESTION NO: 7
 Which of the following Windows 7 versions comes with the LARGEST number of multimedia
 features?
@@ -64,7 +54,7 @@ B. Home Premium
 C. Professional
 D. Starter
 Answer: B
-Reference: http://pcsupport.about.com/od/fixtheproblem/a/biosaccess_bios.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/a/biosaccess_bios.htm
 QUESTION NO: 8
 A technician wants to know if a PC has an embedded wireless card. Which of the following tools
 should be used?
@@ -73,7 +63,7 @@ B. Component Services
 C. Services
 D. System Configuration
 Answer: A
-Reference: http://pcsupport.about.com/od/termsd/p/devicemanager.htm
+Description: http://pcsupport.about.com/od/termsd/p/devicemanager.htm
 QUESTION NO: 9
 
 
@@ -84,7 +74,7 @@ B. FDISK
 C. BOOTREC
 D. DISKPART
 Answer: A
-Reference: http://www.computerhope.com/chkdskh.htm
+Description: http://www.computerhope.com/chkdskh.htm
 QUESTION NO: 10
 Which of the following BIOS boot methods allows a system to boot from a remote server?
 A. PXE
@@ -92,7 +82,7 @@ B. DVD
 C. USB
 D. SATA
 Answer: A
-Reference: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
+Description: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
 QUESTION NO: 11
 Which of the following settings MUST be configured in order to turn on a VoIP phone?
 A. PoE
@@ -100,7 +90,7 @@ B. Flow control
 C. VPN
 D. Duplex speed
 Answer: A
-Reference: http://www.voip-info.org/wiki/view/Cisco+POE
+Description: http://www.voip-info.org/wiki/view/Cisco+POE
 
 
 QUESTION NO: 12
@@ -133,7 +123,7 @@ C. Windows XP Professional
 
 D. Windows Server 2008 R2
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
+Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
 QUESTION NO: 15
 Which of the following are true regarding Windows 32-bit versus Windows 64-bit Operating
 Systems? (Select TWO).
@@ -143,7 +133,7 @@ C. Not all CPUs are capable of running Windows 64-bit.
 D. Windows 64-bit can address larger amounts of RAM.
 E. Windows 64-bit is a more secure OS and less susceptible to viruses.
 Answer: C,D
-Reference: http://windows.microsoft.com/is-is/windows-vista/32-bit-and-64-bit-windows-frequentlyasked-questions
+Description: http://windows.microsoft.com/is-is/windows-vista/32-bit-and-64-bit-windows-frequentlyasked-questions
 QUESTION NO: 16
 Which of the following statements is true about XP mode in Windows 7?
 A. Windows XP mode was only available in Windows Vista and it is not available in Windows 7.
@@ -151,7 +141,7 @@ B. Only the Professional and the Ultimate versions support Windows XP mode.
 C. All versions of Windows 7 support Windows XP mode when the feature is installed.
 D. Only the Ultimate version of Windows 7 supports Windows XP mode.
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
+Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
 QUESTION NO: 17
 
 
@@ -161,7 +151,7 @@ B. All of the file permissions are lost
 C. All file permissions must be reassigned
 D. The file name becomes case insensitive
 Answer: B
-Reference: http://serverfault.com/questions/11304/why-does-file-copy-from-ntfs-to-fat32-change-afiles-modified-date
+Description: http://serverfault.com/questions/11304/why-does-file-copy-from-ntfs-to-fat32-change-afiles-modified-date
 QUESTION NO: 18
 If a customer wants to create a multi-boot PC with different editions of Windows, which of the
 following is MOST important to consider?
@@ -170,7 +160,7 @@ B. Using multiple hard drives
 C. Using a single partition
 D. Using a PXE boot scheme
 Answer: A
-Reference: http://windows.microsoft.com/en-us/windows-vista/install-more-than-one-operatingsystem-multiboot
+Description: http://windows.microsoft.com/en-us/windows-vista/install-more-than-one-operatingsystem-multiboot
 QUESTION NO: 19
 A technician suspects that a recent virus they removed may have corrupted a necessary system
 file. Which of the following utilities can the technician use to verify the integrity of these critical
@@ -180,7 +170,7 @@ B. sfc
 C. regsrv32
 D. fixmbr
 Answer: B
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/system_file_checker.mspx?mfr=true
+Description: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/system_file_checker.mspx?mfr=true
 
 
 QUESTION NO: 20
@@ -191,7 +181,7 @@ B. XCOPY
 C. Backup
 D. System Restore
 Answer: C
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/backup-and-restore
+Description: http://windows.microsoft.com/en-us/windows7/products/features/backup-and-restore
 QUESTION NO: 21
 Which of the following is the correct UNC path to use when mapping a network drive?
 A. \\share\password
@@ -199,7 +189,7 @@ B. \\share\server
 C. \\server\username
 D. \\server\share
 Answer: D
-Reference: http://windows.microsoft.com/is-is/windows7/create-a-shortcut-to-map-a-network-drive
+Description: http://windows.microsoft.com/is-is/windows7/create-a-shortcut-to-map-a-network-drive
 QUESTION NO: 22
 Which of the following can be used to remove a virus from a computer?
 A. Anti-spyware software
@@ -207,7 +197,7 @@ B. Anti-malware software
 C. System Restore
 D. Event Viewer
 Answer: B
-Reference: http://www.techopedia.com/definition/25873/anti-malware
+Description: http://www.techopedia.com/definition/25873/anti-malware
 
 
 QUESTION NO: 23
@@ -218,7 +208,7 @@ B. Windows 7 32-bit
 C. Windows 7 64-bit
 D. Windows XP Professional
 Answer: C
-Reference: http://www.zdnet.com/blog/hardware/max-memory-limits-for-64-bit-windows-7/4254
+Description: http://www.zdnet.com/blog/hardware/max-memory-limits-for-64-bit-windows-7/4254
 QUESTION NO: 24
 A /all switch is MOST likely to be used with which of the following commands?
 A. NET
@@ -226,7 +216,7 @@ B. NBTSTAT
 C. PING
 D. IPCONFIG
 Answer: D
-Reference: http://support.microsoft.com/kb/314850
+Description: http://support.microsoft.com/kb/314850
 QUESTION NO: 25
 A technician wants to create a customized list of common utilities that are easily accessible in the
 same location. Which of the following tools would allow them to build such a list?
@@ -237,7 +227,7 @@ D. MSINFO32
 Answer: B
 
 
-Reference: http://technet.microsoft.com/en-us/library/bb742442.aspx
+Description: http://technet.microsoft.com/en-us/library/bb742442.aspx
 QUESTION NO: 26
 A technician needs to use a command line tool to determine the network name and the IP address
 of a resource. Which of the following command line tools will provide an IP address when given a
@@ -247,7 +237,7 @@ B. Tracert
 C. Ipconfig
 D. Nslookup
 Answer: D
-Reference: http://www.computerhope.com/nslookup.htm
+Description: http://www.computerhope.com/nslookup.htm
 QUESTION NO: 27
 A user wants to configure their network to support VoIP. Which of the following would BEST
 support a VoIP installation?
@@ -256,7 +246,7 @@ B. POTS
 C. Wake-on-LAN
 D. VPN
 Answer: A
-Reference: http://www.petri.co.il/voip-quality-of-service-basics.htm
+Description: http://www.petri.co.il/voip-quality-of-service-basics.htm
 QUESTION NO: 28
 A user has installed a legacy application in Windows 7 and reports that only some of the
 functionality in it is operational. Another user is using the same application on a different Windows
@@ -269,7 +259,7 @@ B. User Account Control
 C. Action Center
 D. Data Execution Prevention
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/user-account-control
+Description: http://windows.microsoft.com/en-us/windows7/products/features/user-account-control
 QUESTION NO: 29
 Which of the following file system types is used primarily for optical media?
 A. FAT32
@@ -277,7 +267,7 @@ B. NTFS
 C. HPFS
 D. CDFS
 Answer: D
-Reference: http://www.computerhope.com/jargon/c/cdfs.htm
+Description: http://www.computerhope.com/jargon/c/cdfs.htm
 QUESTION NO: 30
 When moving files from a Microsoft gaming console, which of the following command line utilities
 is recommended to transfer files?
@@ -286,7 +276,7 @@ B. XCOPY
 C. DISKPART
 D. FDISK
 Answer: B
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/xcopy.mspx?mfr=true
+Description: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/xcopy.mspx?mfr=true
 QUESTION NO: 31
 
 
@@ -299,7 +289,7 @@ C. USB
 D. PXE
 E. CD
 Answer: D
-Reference: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
+Description: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
 QUESTION NO: 32
 A technician is setting up automatic login to desktop for a non-domain Windows XP system. Which
 of the following administrative tools would accomplish this?
@@ -308,7 +298,7 @@ B. Network and Sharing Center
 C. Task Manager
 D. System Configuration
 Answer: A
-Reference: http://www.gcflearnfree.org/windowsxp/11
+Description: http://www.gcflearnfree.org/windowsxp/11
 QUESTION NO: 33
 Which of the following command line tools will terminate a non-system process without restarting
 the computer?
@@ -317,7 +307,7 @@ B. Kill
 C. Erase
 D. Break
 Answer: B
-Reference: http://www.tech-recipes.com/rx/446/xp_kill_windows_process_command_line_taskkill/
+Description: http://www.tech-recipes.com/rx/446/xp_kill_windows_process_command_line_taskkill/
 
 
 QUESTION NO: 34
@@ -329,7 +319,7 @@ B. NETSTAT
 C. IPCONFIG
 D. NSLOOKUP
 Answer: A
-Reference: http://support.microsoft.com/kb/162326
+Description: http://support.microsoft.com/kb/162326
 QUESTION NO: 35
 Which of the following operating systems can be upgraded directly to Windows 7 Professional by a
 default installation? (Select TWO).
@@ -339,7 +329,7 @@ C. Windows XP Home
 D. Windows XP Professional 64-bit
 E. Windows XP Media Center
 Answer: A,B
-Reference: http://technet.microsoft.com/en-us/library/dd772579(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/dd772579(v=ws.10).aspx
 QUESTION NO: 36
 Which of the following is an example of client-side virtualization?
 A. Compatibility mode on a program icon properties menu
@@ -349,7 +339,7 @@ D. XP mode running in Windows 7 64-bit operating system
 
 
 Answer: D
-Reference: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-
+Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-
 7
 QUESTION NO: 37
 Joe, a technician, would like to map a network drive when he starts up his computer in the
@@ -359,7 +349,7 @@ B. NETSTAT
 C. NBTSTAT
 D. NET
 Answer: D
-Reference: http://pcsupport.about.com/od/commandlinereference/p/net-command.htm
+Description: http://pcsupport.about.com/od/commandlinereference/p/net-command.htm
 QUESTION NO: 38
 A local administrator would like to determine why a laptop is taking so long to boot into the
 operating system. Which of the following tabs in MSCONFIG would the administrator access to
@@ -369,7 +359,7 @@ B. Tools
 C. General
 D. Boot
 Answer: A
-Reference: http://www.hongkiat.com/blog/speed-windows-startup-with-msconfig/
+Description: http://www.hongkiat.com/blog/speed-windows-startup-with-msconfig/
 QUESTION NO: 39
 A user has plugged in a mobile phone to a PC and received a message that the driver was not
 successfully installed. Which of the following system tools should be used to troubleshoot this
@@ -381,7 +371,7 @@ B. Component Services
 C. Windows Memory Diagnostics
 D. Data Sources
 Answer: A
-Reference: http://www.howtogeek.com/167094/how-to-use-the-windows-device-manager-fortroubleshooting/
+Description: http://www.howtogeek.com/167094/how-to-use-the-windows-device-manager-fortroubleshooting/
 QUESTION NO: 40
 On a corporate network, which of the following features would be used to redirect network traffic
 for filtering or monitoring?
@@ -390,7 +380,7 @@ B. Proxy Settings
 C. Network Drive Mapping
 D. Local Security Policy
 Answer: B
-Reference: http://superuser.com/questions/498412/how-can-windows-application-specificnetwork-
+Description: http://superuser.com/questions/498412/how-can-windows-application-specificnetwork-
 traffic-be-redirected-to-a-proxy-se
 QUESTION NO: 41
 Which of the following describes when an application is able to reuse Windows login credentials?
@@ -399,7 +389,7 @@ B. Principle of least privilege
 C. Single sign-on
 D. Pass-through authentication
 Answer: C
-Reference: http://stackoverflow.com/questions/545667/how-to-use-windows-login-for-single-signon-
+Description: http://stackoverflow.com/questions/545667/how-to-use-windows-login-for-single-signon-
 and-for-active-directory-entries-for wi
 
 
@@ -411,7 +401,7 @@ B. Lower the resolution
 C. Raise the resolution
 D. Increase refresh rate
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Refresh_rate
+Description: http://en.wikipedia.org/wiki/Refresh_rate
 QUESTION NO: 43
 A user recently installed a new video driver on a PC but now it will not boot. Which of the following
 is the BEST option to correct the issue?
@@ -420,7 +410,7 @@ B. Emergency repair disks
 C. FIXBOOT
 D. Safe mode
 Answer: D
-Reference: http://www.computerhope.com/issues/chsafe.htm
+Description: http://www.computerhope.com/issues/chsafe.htm
 QUESTION NO: 44 DRAG DROP
 Drag and drop the following Windows 7 versions in order according to their feature-sets, from
 MOST to LEAST.
@@ -430,7 +420,7 @@ Answer:
 
 
 Explanation:
-Reference: http://windows.microsoft.com/is-is/windows7/products/compare#T1=tab01
+Description: http://windows.microsoft.com/is-is/windows7/products/compare#T1=tab01
 QUESTION NO: 45 DRAG DROP
 Drag and drop the following Windows Versions to the correct feature on which they are found.
 Windows Versions may be used more than once.
@@ -448,7 +438,7 @@ B. PING
 C. IPCONFIG
 D. TRACERT
 Answer: C
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
+Description: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
 ipconfig.mspx?mfr=true
 QUESTION NO: 47
 Which of the following operating systems supports full BitLocker functionality?
@@ -459,7 +449,7 @@ B. Windows 7 Professional
 C. Windows Vista Home
 D. Windows 7 Enterprise
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/dd875547(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/dd875547(v=ws.10).aspx
 QUESTION NO: 48
 When running Windows XP, which of the following would give a list of switches for the CHKDSK
 command?
@@ -468,7 +458,7 @@ B. chkdsk :?
 C. chkdsk /?
 D. chkdsk \?
 Answer: C
-Reference: http://www.computerhope.com/chkdskh.htm
+Description: http://www.computerhope.com/chkdskh.htm
 QUESTION NO: 49
 Which of the following commands would a technician use to move one directory above or below
 the one the technician is currently in?
@@ -477,7 +467,7 @@ B. RD
 C. CD
 D. MD
 Answer: C
-Reference: http://www.lsi.upc.edu/~robert/teaching/foninf/doshelp.html
+Description: http://www.lsi.upc.edu/~robert/teaching/foninf/doshelp.html
 QUESTION NO: 50
 A virtual machine running locally would be BEST utilized in which of the following situations?
 
@@ -498,7 +488,7 @@ B. Windows 7 Home Premium x64
 C. Windows XP Professional
 D. Windows Vista Home Premium x86
 Answer: B
-Reference: http://www.tomshardware.com/answers/id-1677684/12gb-ram-installed-8gb-showingwindows-
+Description: http://www.tomshardware.com/answers/id-1677684/12gb-ram-installed-8gb-showingwindows-
 ultimate-x64.html
 QUESTION NO: 52
 Which of the following commands, in Windows 7, could a technician use to schedule a disk
@@ -508,7 +498,7 @@ B. ROBOCOPY
 C. SCANDISK
 D. FDISK
 Answer: A
-Reference: http://technet.microsoft.com/en-us/magazine/ee872427.aspx
+Description: http://technet.microsoft.com/en-us/magazine/ee872427.aspx
 
 
 QUESTION NO: 53
@@ -519,7 +509,7 @@ B. Services
 C. Tools
 D. Boot
 Answer: A
-Reference: http://www.hongkiat.com/blog/speed-windows-startup-with-msconfig/
+Description: http://www.hongkiat.com/blog/speed-windows-startup-with-msconfig/
 QUESTION NO: 54
 A technician believes a machine loaded with Windows XP Professional has issues with file
 integrity of the core OS components.
@@ -529,7 +519,7 @@ B. CHKDSK /R /F
 C. FORMAT C:
 D. DISKPART
 Answer: A
-Reference: http://pcsupport.about.com/od/toolsofthetrade/ht/sfc-scannow.htm
+Description: http://pcsupport.about.com/od/toolsofthetrade/ht/sfc-scannow.htm
 QUESTION NO: 55
 A technician is tasked with building three systems that are capable of utilizing the new Windows
 HomeGroup functionality. Which of the following versions of Windows would need to be used?
@@ -540,7 +530,7 @@ C. Windows XP Professional x64 Edition
 
 D. Windows 7 only
 Answer: D
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/homegroup
+Description: http://windows.microsoft.com/en-us/windows7/products/features/homegroup
 QUESTION NO: 56
 Which of the following data transfers will retain the current NTFS permissions of a file?
 A. Copying the file to a different location on the same volume
@@ -562,7 +552,7 @@ B. System > Hardware
 C. System > System Restore
 D. System > Advanced
 Answer: D
-Reference: http://support.microsoft.com/kb/826513
+Description: http://support.microsoft.com/kb/826513
 
 
 QUESTION NO: 58
@@ -573,7 +563,7 @@ B. BOOTCFG
 C. FIXBOOT
 D. DISKPART
 Answer: C
-Reference: http://www.computerhope.com/fixboot.htm
+Description: http://www.computerhope.com/fixboot.htm
 QUESTION NO: 59
 A user wants to change the functionality that occurs when the laptop lid is closed. Which of the
 following Control Panel options is the MOST direct way to adjust this?
@@ -582,7 +572,7 @@ B. Power Options
 C. Personalization
 D. Device Management
 Answer: B
-Reference: http://www.howtogeek.com/howto/9090/learning-windows-7-manage-power-settings/
+Description: http://www.howtogeek.com/howto/9090/learning-windows-7-manage-power-settings/
 QUESTION NO: 60
 Which of the following Control Panel items will allow for easy streaming of pictures, music, and
 videos to other Windows 7 PCs?
@@ -593,7 +583,7 @@ D. HomeGroup
 
 
 Answer: D
-Reference: http://lifehacker.com/5883517/how-to-set-up-windows-7-homegroups-for-seamlessinstant-
+Description: http://lifehacker.com/5883517/how-to-set-up-windows-7-homegroups-for-seamlessinstant-
 sharing-between-pcs-in-your-home
 QUESTION NO: 61
 The folder "Documents" is shared. The user can create and delete documents when on the local
@@ -604,7 +594,7 @@ B. Share Permissions
 C. Firewall Settings
 D. NTFS Permissions
 Answer: B
-Reference: http://www.howtogeek.com/72718/how-to-understand-those-confusing-windows-7-
+Description: http://www.howtogeek.com/72718/how-to-understand-those-confusing-windows-7-
 fileshare-permissions/
 QUESTION NO: 62
 Which of the following accounts is MOST restrictive?
@@ -613,7 +603,7 @@ B. Standard User
 C. Guest
 D. Power User
 Answer: C
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
+Description: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
 ua_c_account_types.mspx?mfr=true
 QUESTION NO: 63
 A technician needs to format a file system to be compatible with the WIDEST range of operating
@@ -625,7 +615,7 @@ B. FAT16
 C. CDFS
 D. FAT32
 Answer: D
-Reference: http://www.pcmag.com/article2/0,2817,2421454,00.asp
+Description: http://www.pcmag.com/article2/0,2817,2421454,00.asp
 QUESTION NO: 64
 A consultant is looking to consolidate six company servers onto one physical system. Which of the
 following requirements is MOST important on the new setup to ensure stable functionality of the
@@ -635,7 +625,7 @@ B. Server software security requirements
 C. Server hardware resources
 D. Network resources
 Answer: C
-Reference: http://searchdatacenter.techtarget.com/guides/Using-hardware-resources-tomaximize-
+Description: http://searchdatacenter.techtarget.com/guides/Using-hardware-resources-tomaximize-
 virtualization-performance
 QUESTION NO: 65
 The shared folder named C$ is an example of which of the following?
@@ -644,7 +634,7 @@ B. Permission propagation
 C. Inheritance
 D. Administrative share
 Answer: D
-Reference: http://www.intelliadmin.com/index.php/2007/10/the-admin-share-explained/
+Description: http://www.intelliadmin.com/index.php/2007/10/the-admin-share-explained/
 
 
 QUESTION NO: 66
@@ -654,7 +644,7 @@ B. HDMI
 C. OEM recovery media
 D. FDISK
 Answer: A
-Reference: http://pcsupport.about.com/od/tipstricks/ht/bootusbflash.htm
+Description: http://pcsupport.about.com/od/tipstricks/ht/bootusbflash.htm
 QUESTION NO: 67
 Which of the following is the BEST tool to verify the cable is plugged into the correct port on the
 patch panel?
@@ -663,7 +653,7 @@ B. Punch down
 C. Toner probe
 D. Cable tester
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Logic_probe
+Description: http://en.wikipedia.org/wiki/Logic_probe
 QUESTION NO: 68
 Which of the following is the BEST tool for a technician to use to make sure the network wires are
 securely fastened in a wall jack?
@@ -674,7 +664,7 @@ D. Punch down
 Answer: D
 
 
-Reference: http://www.computercablestore.com/punch-down.aspx
+Description: http://www.computercablestore.com/punch-down.aspx
 QUESTION NO: 69
 Which of the following is the BEST tool for a technician to use to make sure the network cable is
 securely fastened in the RJ-45 connector?
@@ -683,7 +673,7 @@ B. Crimper
 C. Small flat screwdriver
 D. Punch down
 Answer: B
-Reference: http://www.computerhope.com/jargon/c/crimp.htm
+Description: http://www.computerhope.com/jargon/c/crimp.htm
 QUESTION NO: 70
 Which of the following resources is MOST important for accessing remote virtual environments on
 a client machine?
@@ -692,7 +682,7 @@ B. CPU speed
 C. High speed memory
 D. Drive space
 Answer: A
-Reference: http://compnetworking.about.com/od/internetaccessbestuses/f/what-is-networkremote-
+Description: http://compnetworking.about.com/od/internetaccessbestuses/f/what-is-networkremote-
 access.htm
 QUESTION NO: 71
 A user sent an email requesting that a technician check if a computer is on and connected to the
@@ -706,7 +696,7 @@ B. NETSTAT
 C. PING
 D. IPCONFIG
 Answer: C
-Reference: http://pcsupport.about.com/od/commandlinereference/p/ping-command.htm
+Description: http://pcsupport.about.com/od/commandlinereference/p/ping-command.htm
 QUESTION NO: 72
 If a computer does not have an optical drive, which of the following is the MOST efficient method
 to install an operating system?
@@ -715,7 +705,7 @@ B. Floppy disk
 C. USB flash drive
 D. Bluetooth connection
 Answer: C
-Reference: http://en.wikipedia.org/wiki/USB_flash_drive
+Description: http://en.wikipedia.org/wiki/USB_flash_drive
 QUESTION NO: 73
 Which of the following is the MAXIMUM number of primary partitions that can be created on a hard
 drive with FAT32?
@@ -724,7 +714,7 @@ B. 4
 C. 6
 D. 8
 Answer: B
-Reference: http://support.microsoft.com/kb/314463
+Description: http://support.microsoft.com/kb/314463
 QUESTION NO: 74
 
 
@@ -736,7 +726,7 @@ B. USB installation
 C. Unattended installation
 D. Clean installation
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Installation_(computer_programs)#Silent_installation
+Description: http://en.wikipedia.org/wiki/Installation_(computer_programs)#Silent_installation
 QUESTION NO: 75
 Which of the following should be regularly scheduled to fix hard drive errors?
 A. Defragmentation
@@ -744,7 +734,7 @@ B. Check Disk
 C. System Restore
 D. Antivirus Scan
 Answer: B
-Reference: http://support.microsoft.com/kb/315265
+Description: http://support.microsoft.com/kb/315265
 QUESTION NO: 76
 A technician is trying to request a new IP address to a customer’s computer through the command
 prompt. Which of the following commands should the technician use?
@@ -753,7 +743,7 @@ B. ipconfig /renew
 C. ipconfig /all
 D. ipconfig /release
 Answer: B
-Reference: http://www.wikihow.com/Refresh-Your-IP-Address-on-a-Windows-Computer
+Description: http://www.wikihow.com/Refresh-Your-IP-Address-on-a-Windows-Computer
 
 
 QUESTION NO: 77
@@ -764,7 +754,7 @@ B. NET SHOW
 C. IPCONFIG
 D. TRACERT
 Answer: C
-Reference: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
+Description: http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
 ipconfig.mspx?mfr=true
 QUESTION NO: 78
 A technician wants to know the MAC address of a computer. Which of the following commands
@@ -774,7 +764,7 @@ B. NSLOOKUP
 C. NETSTAT
 D. PING
 Answer: A
-Reference: http://compnetworking.about.com/od/networkprotocolsip/a/macaddressing.htm
+Description: http://compnetworking.about.com/od/networkprotocolsip/a/macaddressing.htm
 QUESTION NO: 79
 A technician would like to dispose of a hard drive that is no longer needed. According to company
 policy, all contents on the disk should be deleted before disposal. Which of the following OS
@@ -786,7 +776,7 @@ C. SCANDSK
 
 D. FORMAT
 Answer: D
-Reference: http://www.computerhope.com/formathl.htm
+Description: http://www.computerhope.com/formathl.htm
 QUESTION NO: 80
 A computer starts to boot then quickly shuts down. Which of the following should the technician
 use to troubleshoot this issue?
@@ -795,7 +785,7 @@ B. Power supply tester
 C. Loopback plugs
 D. Events logs
 Answer: B
-Reference: http://pcsupport.about.com/od/toolsofthetrade/f/powersupplytest.htm
+Description: http://pcsupport.about.com/od/toolsofthetrade/f/powersupplytest.htm
 QUESTION NO: 81
 A PC is running slower than usual. Which of the following tools would BEST diagnose the possible
 bottleneck?
@@ -804,7 +794,7 @@ B. Device Manager
 C. Task Scheduler
 D. Task Manager
 Answer: D
-Reference: http://www.ictc.com/my-computer-is-running-slow-what-can-i-do/
+Description: http://www.ictc.com/my-computer-is-running-slow-what-can-i-do/
 QUESTION NO: 82
 Which of the following switches should a technician use with the PING command to resolve an IP
 address to a hostname?
@@ -815,7 +805,7 @@ B. -f
 C. -n
 D. -t
 Answer: A
-Reference: http://rocksoft.com.my/knowledgebase.php?action=displayarticle&id=224
+Description: http://rocksoft.com.my/knowledgebase.php?action=displayarticle&id=224
 QUESTION NO: 83
 Which of the following commands is used to map a network drive?
 A. NBTSTAT
@@ -823,8 +813,7 @@ B. NET USE
 C. NETMAP
 D. NETSTAT
 Answer: B
-Reference:
-http://www.onlinetoolworks.com/help/SB32AdmnNetwork_Drive_Mappings_and_NET_U.htm
+Description: http://www.onlinetoolworks.com/help/SB32AdmnNetwork_Drive_Mappings_and_NET_U.htm
 QUESTION NO: 84
 Which of the following BEST describes a method for installing an operating system across the
 network?
@@ -833,7 +822,7 @@ B. IEEE 1394
 C. PXE
 D. NTFS
 Answer: C
-Reference: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
+Description: http://technet.microsoft.com/en-us/magazine/2008.07.desktopfiles.aspx
 QUESTION NO: 85
 
 
@@ -843,7 +832,7 @@ B. EXT3
 C. CDFS
 D. NTFS
 Answer: C
-Reference: http://www.computerhope.com/jargon/c/cdfs.htm
+Description: http://www.computerhope.com/jargon/c/cdfs.htm
 QUESTION NO: 86
 In which of the following operating systems does Windows XP mode come as a free download to
 be used for application compatibility?
@@ -852,7 +841,7 @@ B. Windows 7 Professional
 C. Windows Vista Business
 D. Windows 7 Home Premium
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/windows-xp-mode
+Description: http://windows.microsoft.com/en-us/windows7/products/features/windows-xp-mode
 QUESTION NO: 87
 The Aero feature is found in which of the following operating systems? (Select TWO).
 A. Windows 7 Home Premium
@@ -861,7 +850,7 @@ C. Windows Vista Enterprise
 D. Windows XP Media Center
 E. Windows XP 64-bit Professional
 Answer: A,C
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/aero
+Description: http://windows.microsoft.com/en-us/windows7/products/features/aero
 
 
 QUESTION NO: 88
@@ -873,7 +862,7 @@ B. Windows Vista Home Premium
 C. Windows 7 Professional
 D. Windows XP Media Center
 Answer: C
-Reference: http://reviews.cnet.com/8301-31012_7-10379487-10355804.html
+Description: http://reviews.cnet.com/8301-31012_7-10379487-10355804.html
 QUESTION NO: 89
 A bank is upgrading some clerical users’ PCs. Which of the following would be the MOST
 appropriate method for erasing the data on the old PCs?
@@ -882,7 +871,7 @@ B. Standard format
 C. Change the jumpers on the hard drive
 D. Quick format
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Degaussing
+Description: http://en.wikipedia.org/wiki/Degaussing
 QUESTION NO: 90
 Which of the following commands may need to be run after a virus removal if the computer will not
 boot?
@@ -891,7 +880,7 @@ B. DXDIAG
 C. FIXMBR
 D. MSCONFIG
 Answer: C
-Reference: http://pcsupport.about.com/od/termsf/p/fixmbr.htm
+Description: http://pcsupport.about.com/od/termsf/p/fixmbr.htm
 
 
 QUESTION NO: 91
@@ -902,7 +891,7 @@ B. \\username\servername
 C. \\password\share
 D. \\servername\share
 Answer: D
-Reference: http://compnetworking.about.com/od/windowsxpnetworking/ht/mapnetworkdrive.htm
+Description: http://compnetworking.about.com/od/windowsxpnetworking/ht/mapnetworkdrive.htm
 QUESTION NO: 92
 Which of the following is the MINIMUM account required to install most programs on Windows
 XP?stand
@@ -911,7 +900,7 @@ B. Administrator
 C. Standard user
 D. Guest
 Answer: A
-Reference: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
+Description: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
 windows_security_default_settings.mspx?mfr=true
 QUESTION NO: 93
 When configuring user accounts, which of the following should a technician perform?
@@ -922,7 +911,7 @@ D. Assign the maximum required access to the users
 
 
 Answer: B
-Reference: http://www.pcworld.com/article/171933/manage_users_in_windows_7.html
+Description: http://www.pcworld.com/article/171933/manage_users_in_windows_7.html
 QUESTION NO: 94
 A technician needs to rebuild a computer that had a virus. Which of the following data destruction
 methods should be used to ensure the virus has been successfully erased before reinstalling the
@@ -932,7 +921,7 @@ B. Low level format
 C. Shredder
 D. Degaussing tool
 Answer: A
-Reference: http://pcsupport.about.com/od/windows7/ss/format-hard-drive-windows-7-
+Description: http://pcsupport.about.com/od/windows7/ss/format-hard-drive-windows-7-
 tutorial_7.htm
 QUESTION NO: 95
 A user states when they press certain letters on their laptop’s keyboard, a number is displayed on
@@ -942,7 +931,7 @@ B. Turn off number lock
 C. Replace the keyboard
 D. Update the keyboard drivers
 Answer: B
-Reference: http://www.computerhope.com/issues/ch000792.htm
+Description: http://www.computerhope.com/issues/ch000792.htm
 QUESTION NO: 96
 A user has too many applications starting when they log into windows. From the command line,
 which of the following tools is the FASTEST option to prevent these applications from running on
@@ -954,7 +943,7 @@ B. SERVICES.MSC
 C. REGEDIT
 D. MSINFO32
 Answer: A
-Reference: http://lifehacker.com/5718799/know-which-apps-to-remove-from-msconfig-with-thisstartup-
+Description: http://lifehacker.com/5718799/know-which-apps-to-remove-from-msconfig-with-thisstartup-
 applications-list
 QUESTION NO: 97
 From which of the following tools can a technician locate the PID of an application?
@@ -963,7 +952,7 @@ B. MSCONFIG
 C. Computer Management
 D. Task Manager
 Answer: D
-Reference: http://www.ehow.com/about_5255845_pid-task-manager.html
+Description: http://www.ehow.com/about_5255845_pid-task-manager.html
 QUESTION NO: 98
 Which of the following file system types is used for optical media?
 A. FAT32
@@ -971,7 +960,7 @@ B. FAT
 C. CDFS
 D. NTFS
 Answer: C
-Reference: http://www.computerhope.com/jargon/c/cdfs.htm
+Description: http://www.computerhope.com/jargon/c/cdfs.htm
 
 
 QUESTION NO: 99
@@ -981,7 +970,7 @@ B. PoE
 C. QoS
 D. WEP
 Answer: B
-Reference: http://www.metrolinedirect.com/what-is-power-over-ethernet.html
+Description: http://www.metrolinedirect.com/what-is-power-over-ethernet.html
 QUESTION NO: 100
 A customer is concerned about a computer that repeatedly beeps when attempting to power on.
 Which of the following is MOST likely the cause?
@@ -990,7 +979,7 @@ B. USB 2.0 is plugged into USB 1.1 port
 C. RAM not seated properly
 D. Optical media was left in the drive
 Answer: C
-Reference: http://antony492.com/unseated-ram/
+Description: http://antony492.com/unseated-ram/
 QUESTION NO: 101
 A customer wants to use VoIP phones without having to plug them into an electrical outlet. Which
 of the following switch features would a technician recommend?
@@ -999,7 +988,7 @@ B. Gigabit
 C. PoE
 D. Wake-on-LAN
 Answer: C
-Reference: http://www.metrolinedirect.com/what-is-power-over-ethernet.html
+Description: http://www.metrolinedirect.com/what-is-power-over-ethernet.html
 
 
 QUESTION NO: 102
@@ -1011,7 +1000,7 @@ B. Firewall settings
 C. User privileges
 D. Proxy settings
 Answer: D
-Reference: http://windows.microsoft.com/en-us/windows-vista/change-proxy-settings-in-internetexplorer
+Description: http://windows.microsoft.com/en-us/windows-vista/change-proxy-settings-in-internetexplorer
 QUESTION NO: 103
 A technician has 50 identical computers that need to be upgraded to the Windows 7 OS, and are
 capable of booting from the network. They are running a Gigabit network with a Windows
@@ -1021,7 +1010,7 @@ B. Windows 7 DVD
 C. PXE
 D. USB flash
 Answer: C
-Reference: http://www.howtogeek.com/57601/what-is-network-booting-pxe-and-how-can-you-useit/
+Description: http://www.howtogeek.com/57601/what-is-network-booting-pxe-and-how-can-you-useit/
 QUESTION NO: 104
 A technician receives an error every time a workstation boots up. The technician needs to find out
 what process is responsible for the error. Which of the following utilities would be used FIRST?
@@ -1032,7 +1021,7 @@ B. Task Manager
 C. Event Viewer
 D. MSCONFIG
 Answer: C
-Reference: http://support.microsoft.com/kb/308427
+Description: http://support.microsoft.com/kb/308427
 QUESTION NO: 105
 A technician is working on a workstation that is receiving read/write failures when trying to access
 a particular file. Which of the following commands should the technician use to resolve this issue?
@@ -1041,7 +1030,7 @@ B. FORMAT
 C. CHKDSK
 D. FDISK
 Answer: C
-Reference: http://www.pegasusafs.
+Description: http://www.pegasusafs.
 com/support/webhelp/common_errors_and_problems/the_benefits_of_using_chkdsk.htm
 QUESTION NO: 106
 A technician is tasked with changing the account lockout threshold to 30 minutes in Windows 7.
@@ -1051,7 +1040,7 @@ B. Windows Security Center
 C. Local Security Policy
 D. Users and Groups
 Answer: C
-Reference: http://technet.microsoft.com/en-us/library/cc757692(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/cc757692(v=ws.10).aspx
 QUESTION NO: 107
 
 
@@ -1062,7 +1051,7 @@ B. Windows 7 Advisor
 C. CHKDSK
 D. DISKPART
 Answer: A
-Reference: http://support.microsoft.com/kb/302577
+Description: http://support.microsoft.com/kb/302577
 QUESTION NO: 108
 A technician needs to create a new folder from the command line on the root of the C. drive.
 Which of the following is the correct command to use?
@@ -1071,7 +1060,7 @@ B. MD
 C. PUSHD
 D. RD
 Answer: B
-Reference: http://www.computerhope.com/mdhlp.htm
+Description: http://www.computerhope.com/mdhlp.htm
 QUESTION NO: 109
 Which of the following options is MOST likely active on a network of three workstations, running
 Windows 7 Home Edition x64, to enable File and Print sharing?
@@ -1080,7 +1069,7 @@ B. Active Directory
 C. WorkGroup
 D. Domain Setup
 Answer: A
-Reference: http://windows.microsoft.com/en-us/windows7/help/home-sweet-homegroupnetworking-
+Description: http://windows.microsoft.com/en-us/windows7/help/home-sweet-homegroupnetworking-
 the-easy-way
 
 
@@ -1105,7 +1094,7 @@ B. MSCONFIG
 C. Disk Management
 D. Administrative Tools
 Answer: A
-Reference: http://support.microsoft.com/kb/323527
+Description: http://support.microsoft.com/kb/323527
 QUESTION NO: 112
 Which of the following Control Panel utilities would be BEST to use to remove a Windows 7
 application?
@@ -1116,7 +1105,7 @@ B. Add/Remove Programs
 C. Programs and Features
 D. Administrator Tools
 Answer: C
-Reference: http://windows.microsoft.com/en-us/windows/uninstall-change-program
+Description: http://windows.microsoft.com/en-us/windows/uninstall-change-program
 QUESTION NO: 113
 Which of the following components would a user MOST need when building a virtual server?
 (Select TWO).
@@ -1127,7 +1116,7 @@ D. High-end video card
 E. HDMI
 F. CPU
 Answer: C,F
-Reference: http://searchservervirtualization.techtarget.com/tip/Sizing-server-hardware-for-virtualmachines
+Description: http://searchservervirtualization.techtarget.com/tip/Sizing-server-hardware-for-virtualmachines
 QUESTION NO: 114
 Which of the following commands would a technician use to map a network share?
 A. NET
@@ -1135,7 +1124,7 @@ B. NSLOOKUP
 C. IPCONFIG
 D. COPY
 Answer: A
-Reference: http://www.computerhope.com/nethlp.htm
+Description: http://www.computerhope.com/nethlp.htm
 
 
 QUESTION NO: 115
@@ -1148,7 +1137,7 @@ B. SERVICES.MSC
 C. MSCONFIG
 D. MSTSC
 Answer: D
-Reference: http://support.microsoft.com/kb/300887
+Description: http://support.microsoft.com/kb/300887
 QUESTION NO: 116
 A user on a domain network cannot install software that they need. Which of the following user
 groups is this user MOST likely associated with?
@@ -1157,7 +1146,7 @@ B. Guest user
 C. Power user
 D. Administrator
 Answer: A
-Reference: http://www.sevenforums.com/software/135091-standard-user-able-install-software.html
+Description: http://www.sevenforums.com/software/135091-standard-user-able-install-software.html
 QUESTION NO: 117
 Which of the following paths would a technician use to map a network drive?
 A. //servername\usershare
@@ -1165,7 +1154,7 @@ B. \\servername\usershare
 C. \\servername/usershare
 D. //servername/usershare
 Answer: B
-Reference: http://www.dummies.com/how-to/content/how-to-map-a-network-folder-in-windows-
+Description: http://www.dummies.com/how-to/content/how-to-map-a-network-folder-in-windows-
 
 
 7.html
@@ -1188,7 +1177,7 @@ B. 80
 C. 3389
 D. 5900
 Answer: C
-Reference: http://helpdeskgeek.com/networking/configure-router-for-remote-desktop/
+Description: http://helpdeskgeek.com/networking/configure-router-for-remote-desktop/
 QUESTION NO: 120
 Which of the following is an advantage of a virtual machine hosted on a PC?
 
@@ -1198,7 +1187,7 @@ B. Reduces the amount of physical hardware required.
 C. Reduces the amount of CPU required on the host PC.
 D. Reduces the amount of RAM required on the host PC.
 Answer: B
-Reference: http://searchservervirtualization.techtarget.com/tip/Understanding-the-benefits-of-avirtual-
+Description: http://searchservervirtualization.techtarget.com/tip/Understanding-the-benefits-of-avirtual-
 machine
 QUESTION NO: 121
 When scheduling a backup for preventative maintenance, which of the following would ensure all
@@ -1208,7 +1197,7 @@ B. Full
 C. Incremental
 D. Daily
 Answer: B
-Reference: http://superuser.com/questions/99530/windows-7-backup-disk-full
+Description: http://superuser.com/questions/99530/windows-7-backup-disk-full
 QUESTION NO: 122
 Which of the following commands can be used in Windows XP to modify when the CHKDSK
 command runs?
@@ -1217,7 +1206,7 @@ B. IPCONFIG
 C. CHKNTFS
 D. SCANDSK
 Answer: C
-Reference: http://support.microsoft.com/kb/160963
+Description: http://support.microsoft.com/kb/160963
 
 
 QUESTION NO: 123
@@ -1229,7 +1218,7 @@ B. KVM switch
 C. Dual boot
 D. Virtualization
 Answer: D
-Reference: http://en.wikipedia.org/wiki/Virtualization
+Description: http://en.wikipedia.org/wiki/Virtualization
 QUESTION NO: 124
 Windows Virtual PC is designed to:
 A. Allow a user to run older programs in a Windows XP environment.
@@ -1245,7 +1234,7 @@ B. Windows 7 Professional
 C. Windows 7 Home Premium
 D. Windows Vista Ultimate
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-
+Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-
 7
 
 
@@ -1546,7 +1535,7 @@ B. FDISK
 C. Low level format
 D. Standard format
 Answer: C
-Reference: http://www.dedoimedo.com/computers/low-level-formatting.html
+Description: http://www.dedoimedo.com/computers/low-level-formatting.html
 QUESTION NO: 156
 An attack that creates a website that looks like another website, with the purpose of learning
 someone’s account information is called which of the following?
@@ -1555,7 +1544,7 @@ B. Shoulder surfing
 C. Trojan
 D. Phishing
 Answer: D
-Reference: http://www.consumer.ftc.gov/articles/0003-phishing
+Description: http://www.consumer.ftc.gov/articles/0003-phishing
 QUESTION NO: 157
 Which of the following helps to prevent virus infections from USB flash drives?
 A. Strong passwords
@@ -1565,7 +1554,7 @@ D. Disabling the autorun feature
 Answer: D
 
 
-Reference: http://support.microsoft.com/kb/967715
+Description: http://support.microsoft.com/kb/967715
 QUESTION NO: 158
 Which of the following security threats are MOST often delivered via email? (Select TWO).
 A. Rootkits
@@ -1574,7 +1563,7 @@ C. Shoulder surfing
 D. Social engineering
 E. Spam
 Answer: B,E
-Reference: http://www.securelist.com/en/threats/spam
+Description: http://www.securelist.com/en/threats/spam
 QUESTION NO: 159
 A user is advised by the software vendor that the user must have elevated privileges in order to
 run a program. The user should do which of the following to BEST accomplish this?
@@ -1583,7 +1572,7 @@ B. Run the program in a virtual PC environment
 C. Log out of the system and login under another user’s name
 D. Right click select “run as” and select administrator
 Answer: D
-Reference: http://msdn.microsoft.com/en-us/library/dd298823.aspx
+Description: http://msdn.microsoft.com/en-us/library/dd298823.aspx
 QUESTION NO: 160
 A company wants to prevent non-authorized users from entering into a secure building. Which of
 the following will BEST mitigate this activity?
@@ -1594,7 +1583,7 @@ B. Implement an escort policy
 C. Install mantraps
 D. Require all users to have badges
 Answer: C
-Reference: http://whatis.techtarget.com/definition/mantrap-interlocking-door-controller
+Description: http://whatis.techtarget.com/definition/mantrap-interlocking-door-controller
 QUESTION NO: 161
 An employee at a company lost their mobile device that contains proprietary information.
 Which of the following methods is the BEST to be implemented to prevent unauthorized users
@@ -1604,7 +1593,7 @@ B. Cancel mobile service
 C. Remote wipe
 D. Six character password
 Answer: C
-Reference: http://www.mobiledevicemanager.com/mobile-device-security/remote-wipe/
+Description: http://www.mobiledevicemanager.com/mobile-device-security/remote-wipe/
 QUESTION NO: 162
 Which of the following would be the QUICKEST means of removing data from a hard drive, when
 there is no consideration regarding the total destruction of the data?
@@ -1613,7 +1602,7 @@ B. Low level format
 C. Overwrite program
 D. Drive wipe
 Answer: A
-Reference: http://pcsupport.about.com/od/windows7/ht/format-hard-drive-windows-7.htm
+Description: http://pcsupport.about.com/od/windows7/ht/format-hard-drive-windows-7.htm
 QUESTION NO: 163
 
 
@@ -1626,7 +1615,7 @@ D. Antivirus software
 E. User education
 F. Enforced login/logoff hours
 Answer: D,E,F
-Reference: http://www.esecurityplanet.com/network-security/how-to-prevent-security-breachesfrom-
+Description: http://www.esecurityplanet.com/network-security/how-to-prevent-security-breachesfrom-
 known-vulnerabilities.html
 QUESTION NO: 164
 Which of the following areas of a file system should a standard user have restricted permissions to
@@ -1653,7 +1642,7 @@ B. Manufacturer password
 C. Default SSID
 D. Configure encryption
 Answer: B
-Reference: http://pcsupport.about.com/od/windows7/f/default-password-windows-7.htm
+Description: http://pcsupport.about.com/od/windows7/f/default-password-windows-7.htm
 QUESTION NO: 166
 Which of the following utilities would a technician use on a Windows Vista or Windows 7 machine
 to configure what applications are allowed to send/receive data over the LAN connection?
@@ -1662,7 +1651,7 @@ B. Windows Firewall
 C. Registry Editor
 D. Task Scheduler
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/windows-firewall
+Description: http://windows.microsoft.com/en-us/windows7/products/features/windows-firewall
 QUESTION NO: 167
 A customer needs to setup their laptop for use with a proxy server to browse the web at work.
 Which of the following areas would a technician need to visit to configure this on a Windows 7
@@ -1672,7 +1661,7 @@ B. Security Center
 C. Windows Firewall
 D. Internet Options
 Answer: D
-Reference: http://windows.microsoft.com/is-is/windows-vista/using-windows-security-center
+Description: http://windows.microsoft.com/is-is/windows-vista/using-windows-security-center
 
 
 QUESTION NO: 168
@@ -1682,7 +1671,7 @@ B. Rootkit
 C. Trojan
 D. Worm
 Answer: D
-Reference: http://www.pcworld.com/article/111965/article.html
+Description: http://www.pcworld.com/article/111965/article.html
 QUESTION NO: 169
 Which of the following should a technician implement to prevent external contractors from
 physically plugging devices into the company’s network jacks unless such jacks are designated for
@@ -1736,7 +1725,7 @@ D. Prevent remote logins to all network shares and drives.
 
 
 Answer: A
-Reference: http://technet.microsoft.com/en-us/library/cc768050.aspx
+Description: http://technet.microsoft.com/en-us/library/cc768050.aspx
 QUESTION NO: 173
 A company is looking to donate a collection of old PCs that are no longer needed. Which of the
 following data destruction methods would be MOST secure for highly sensitive information?
@@ -1745,7 +1734,7 @@ B. Low level 3-pass random wipe
 C. Low level 7-pass random wipe
 D. High level format 10 times
 Answer: C
-Reference: http://superuser.com/questions/215852/is-using-multiple-passes-for-wiping-a-diskreally-
+Description: http://superuser.com/questions/215852/is-using-multiple-passes-for-wiping-a-diskreally-
 necessary
 QUESTION NO: 174
 A user receives an unsolicited call from a technician claiming to be from a Microsoft certified
@@ -1756,7 +1745,7 @@ B. Phishing attack
 C. Social engineering
 D. Malware infection
 Answer: C
-Reference: http://www.social-engineer.org/
+Description: http://www.social-engineer.org/
 QUESTION NO: 175
 Which of the following identifies traffic based upon its physical network address?
 
@@ -1766,7 +1755,7 @@ B. Hashing
 C. MAC filtering
 D. Geotracking
 Answer: C
-Reference: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
+Description: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
 QUESTION NO: 176
 A technician must secure company documents from accidental disclosure. Which of the following
 should be implemented? (Select TWO).
@@ -1777,7 +1766,7 @@ D. Time of day restrictions
 E. Employee badges
 F. Mantraps
 Answer: A,C
-Reference: http://en.wikipedia.org/wiki/Paper_shredder
+Description: http://en.wikipedia.org/wiki/Paper_shredder
 QUESTION NO: 177
 Which of the following is TRUE about the difference between a worm and a virus?
 A. Worms are written in assembly while viruses are written with scripting languages.
@@ -1785,7 +1774,7 @@ B. Viruses hide in the boot record while worms hide within the file system.
 C. Worms self-propagate while viruses need human intervention to replicate.
 D. Viruses disable the antivirus update service while worms kill the antivirus process.
 Answer: C
-Reference: http://www.webopedia.com/DidYouKnow/Internet/2004/virus.asp
+Description: http://www.webopedia.com/DidYouKnow/Internet/2004/virus.asp
 
 
 QUESTION NO: 178
@@ -1799,7 +1788,7 @@ B. Enable WPA2 wireless encryption.
 C. Change the router’s default admin name and password.
 D. Place the router in a locked room.
 Answer: D
-Reference: http://network.cmu.ac.th/wp-content/uploads/2011/05/CCNA-Security-Ch2-Securing-
+Description: http://network.cmu.ac.th/wp-content/uploads/2011/05/CCNA-Security-Ch2-Securing-
 Network-Devices.pdf
 QUESTION NO: 179
 After several passes with a malware removal program, the program keeps detecting the same
@@ -1810,8 +1799,7 @@ B. Run the malware removal program in Windows Safe Mode
 C. Reinstall the malware removal program from a trusted source
 D. Set the malware removal program to run each time the computer is rebooted
 Answer: B
-Reference:
-http://www.pcworld.com/article/243818/how_to_remove_malware_from_your_windows_pc.html
+Description: http://www.pcworld.com/article/243818/how_to_remove_malware_from_your_windows_pc.html
 QUESTION NO: 180
 A technician is trying to prevent a local application from reaching the web due to security
 concerns. Which of the following solutions could BEST prevent the application from reaching the
@@ -1837,7 +1825,7 @@ B. Update antivirus signatures more often
 C. Block all email attachments
 D. Install an IPS on each workstation
 Answer: A
-Reference: http://www.aps.anl.gov/Safety_and_Training/Training/Courses/esh223/start.html
+Description: http://www.aps.anl.gov/Safety_and_Training/Training/Courses/esh223/start.html
 QUESTION NO: 182
 A company wants to ensure that the latest cyber security threats are known to the employees
 across the enterprise to minimize occurrences. Which of the following should be implemented?
@@ -1860,7 +1848,7 @@ B. Enabling MAC filtering
 C. Setting a high encryption level
 D. Disabling the SSID broadcast
 Answer: B
-Reference: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
+Description: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
 QUESTION NO: 184
 A technician enabled remote management on the small office WAP to manage this device from
 another location. Users are reporting that the WAP has changed its SSID without anyone’s
@@ -1870,7 +1858,7 @@ B. Change default usernames and passwords
 C. Disable the SSID from broadcasting
 D. Enable static IP addresses
 Answer: B
-Reference: http://compnetworking.about.com/od/routers/ss/routerpassword.htm
+Description: http://compnetworking.about.com/od/routers/ss/routerpassword.htm
 QUESTION NO: 185
 A technician has configured the ability to connect to a small office server using remote desktop
 
@@ -1883,7 +1871,7 @@ B. Logically move the server to the DMZ
 C. Reallocate the server to a different networking closet
 D. Disable the remote desktop port
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/cc759006(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/cc759006(v=ws.10).aspx
 QUESTION NO: 186
 In order to prevent other users from editing files in ‘C:\ Files’, which of the following steps should
 be taken?
@@ -1892,7 +1880,7 @@ B. Set the folder to index files for search
 C. Set the local administrator as the owner of the folder
 D. Set network share permissions to read only
 Answer: A
-Reference: http://technet.microsoft.com/en-us/magazine/2005.11.howitworksntfs.aspx
+Description: http://technet.microsoft.com/en-us/magazine/2005.11.howitworksntfs.aspx
 QUESTION NO: 187
 Which of the following security threats requires the attacker to be physically located near the target
 machine?
@@ -1901,7 +1889,7 @@ B. Social engineering
 C. Phishing
 D. Rootkit
 Answer: A
-Reference: http://www.lifelock.com/education/id-theft-types/shoulder-surfing/
+Description: http://www.lifelock.com/education/id-theft-types/shoulder-surfing/
 
 
 QUESTION NO: 188
@@ -1911,7 +1899,7 @@ B. Shoulder surfing.
 C. Phishing.
 D. Spyware.
 Answer: B
-Reference: http://www.lifelock.com/education/id-theft-types/shoulder-surfing/
+Description: http://www.lifelock.com/education/id-theft-types/shoulder-surfing/
 QUESTION NO: 189
 Privacy filters applied to users computer screens are used to combat which of the following
 security risks?
@@ -1920,7 +1908,7 @@ B. Spear phishing
 C. Shoulder surfing
 D. Social Engineering
 Answer: C
-Reference: http://blog.securityactive.co.uk/tag/stop-shoulder-surfing/
+Description: http://blog.securityactive.co.uk/tag/stop-shoulder-surfing/
 QUESTION NO: 190
 Which of the following is solely designed to avoid detection by an antivirus program by using the
 underlying operating system to its advantage?
@@ -1931,7 +1919,7 @@ D. Worm
 Answer: A
 
 
-Reference: http://www.webopedia.com/TERM/R/rootkit.html
+Description: http://www.webopedia.com/TERM/R/rootkit.html
 QUESTION NO: 191
 Which of the following passwords is the MOST secure according to industry best practices?
 A. VeryStrongPassword
@@ -1939,8 +1927,7 @@ B. SimpleAnswer1234
 C. E@sy2Remember
 D. thisisthecorrectanswer1
 Answer: C
-Reference:
-http://netforbeginners.about.com/od/antivirusantispyware/a/example_strong_passwords.htm
+Description: http://netforbeginners.about.com/od/antivirusantispyware/a/example_strong_passwords.htm
 QUESTION NO: 192
 Which of the following security best practices would prevent a program on a CD from immediately
 launching when inserted into a computer?
@@ -1950,7 +1937,7 @@ C. Rename the Administrator account
 D. Disable autorun
 E. Restrict user permissions
 Answer: D
-Reference: http://lifehacker.com/5858703/disable-autorun-to-stop-50-of-windows-malware-threats
+Description: http://lifehacker.com/5858703/disable-autorun-to-stop-50-of-windows-malware-threats
 QUESTION NO: 193
 Which of the following security threats involve shoulder surfing and phone phishing?
 A. Man-in-the-Middle
@@ -1960,7 +1947,7 @@ B. Social engineering
 C. Trojan virus
 D. Spyware
 Answer: B
-Reference: http://www.webroot.com/us/en/home/resources/tips/online-shopping-banking/securewhat-
+Description: http://www.webroot.com/us/en/home/resources/tips/online-shopping-banking/securewhat-
 is-social-engineering
 QUESTION NO: 194
 Which of the following security threats does NOT use software to extract sensitive information or
@@ -1970,7 +1957,7 @@ B. Shoulder surfing
 C. Malware
 D. Man-in-the-Middle exploits
 Answer: B
-Reference: http://searchsecurity.techtarget.com/definition/shoulder-surfing
+Description: http://searchsecurity.techtarget.com/definition/shoulder-surfing
 QUESTION NO: 195
 Which of the following features helps to prevent shoulder surfing?
 A. Native resolution
@@ -1978,7 +1965,7 @@ B. Auto adjust
 C. Degaussing
 D. Privacy screen
 Answer: D
-Reference: http://www.secure-it.com/shop/index.php/cPath/38
+Description: http://www.secure-it.com/shop/index.php/cPath/38
 QUESTION NO: 196
 Which of the following security controls would be an example of the least privilege principle on a
 home PC?
@@ -1989,7 +1976,7 @@ B. Create a standard user account for kids.
 C. Store all financial data in a separate folder.
 D. Disable the firewall for online gaming.
 Answer: B
-Reference: http://en.wikipedia.org/wiki/Principle_of_least_privilege
+Description: http://en.wikipedia.org/wiki/Principle_of_least_privilege
 QUESTION NO: 197
 A user regularly has to walk away from their computer and is worried someone may access their
 workstation. Which of the following would BEST prevent this?
@@ -1998,7 +1985,7 @@ B. Shutdown the computer
 C. Logon using the unprivileged guest account
 D. Set the screensaver password
 Answer: A
-Reference: http://www.dummies.com/how-to/content/how-to-lock-your-pc.navId-323066.html
+Description: http://www.dummies.com/how-to/content/how-to-lock-your-pc.navId-323066.html
 QUESTION NO: 198
 For any given 802.11n wireless Internet signal, which of the following is needed to establish a
 connection?
@@ -2007,8 +1994,7 @@ B. Windows password
 C. Proper SSID
 D. SSL certificate
 Answer: C
-Reference:
-http://www.cisco.com/en/US/docs/wireless/access_point/12.4_21a_JA1/configuration/guide/scg12
+Description: http://www.cisco.com/en/US/docs/wireless/access_point/12.4_21a_JA1/configuration/guide/scg12
 421aJA1-chap7-mbssid.html
 
 
@@ -2020,7 +2006,7 @@ B. Mantraps
 C. Door locks
 D. Smart card badges
 Answer: B
-Reference: http://www.datacenterjournal.com/design/what-is-a-mantrap-and-do-you-need-one/
+Description: http://www.datacenterjournal.com/design/what-is-a-mantrap-and-do-you-need-one/
 QUESTION NO: 200
 Which of the following security concepts establishes the notion that a user should only be given
 sufficient access to the resources they need to perform their job function?
@@ -2029,7 +2015,7 @@ B. Allow all
 C. Most privilege
 D. Least privilege
 Answer: D
-Reference: http://www.cs.cornell.edu/fbs/publications/leastPrivNeedham.pdf
+Description: http://www.cs.cornell.edu/fbs/publications/leastPrivNeedham.pdf
 QUESTION NO: 201
 A user reports that every time they use a search engine and click on a link to go to a website, they
 instead are taken to a site blocked by their company’s content filter. The user is not trying to go to
@@ -2042,7 +2028,7 @@ D. Recovery console
 Answer: A
 
 
-Reference: http://wiki.answers.com/Q/How_does_anti-malware_scanners_work
+Description: http://wiki.answers.com/Q/How_does_anti-malware_scanners_work
 QUESTION NO: 202
 After being infected with a virus, a user’s computer does not recognize the user as having local
 administrator rights to the computer. After troubleshooting the issue, a technician determines the
@@ -2053,7 +2039,7 @@ B. Factory restore CD
 C. Anti-malware software
 D. System Restore
 Answer: B
-Reference: http://en.wikipedia.org/wiki/Recovery_disc
+Description: http://en.wikipedia.org/wiki/Recovery_disc
 QUESTION NO: 203
 Which of the following is BEST used to prevent other people from viewing a user’s computer
 screen?
@@ -2062,7 +2048,7 @@ B. Key fob
 C. Biometric device
 D. Privacy filter
 Answer: D
-Reference: http://www.privacyscreens.co.uk/howitworks.php
+Description: http://www.privacyscreens.co.uk/howitworks.php
 QUESTION NO: 204
 A pest exterminator tries to gain access to a company’s computer lab, but the receptionist does
 not see an extermination scheduled on the calendar and denies the exterminator access to the
@@ -2074,7 +2060,7 @@ B. Social engineering
 C. Shoulder surfing
 D. Phishing
 Answer: B
-Reference: http://www.veracode.com/blog/2013/03/hacking-the-mind-how-why-social-engineeringworks/
+Description: http://www.veracode.com/blog/2013/03/hacking-the-mind-how-why-social-engineeringworks/
 QUESTION NO: 205
 A computer program that functions normally while quietly installing malicious software on a
 machine is known as a:
@@ -2083,7 +2069,7 @@ B. Worm.
 C. Phishing attack.
 D. Trojan.
 Answer: D
-Reference: http://computer.howstuffworks.com/trojan-horse.htm
+Description: http://computer.howstuffworks.com/trojan-horse.htm
 QUESTION NO: 206
 Which of the following security threats is BEST mitigated through proper user training?
 A. A Worm
@@ -2091,7 +2077,7 @@ B. Rootkits
 C. Social Engineering
 D. Browser Adware
 Answer: C
-Reference: http://www.veracode.com/blog/2013/03/hacking-the-mind-how-why-social-engineeringworks/
+Description: http://www.veracode.com/blog/2013/03/hacking-the-mind-how-why-social-engineeringworks/
 
 
 QUESTION NO: 207
@@ -2102,7 +2088,7 @@ B. spamming
 C. shredding
 D. phishing
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Tailgating
+Description: http://en.wikipedia.org/wiki/Tailgating
 QUESTION NO: 208
 Turnstiles and other mantraps will prevent which of the following security threats?
 A. Shoulder surfing
@@ -2110,7 +2096,7 @@ B. Tailgating
 C. Rootkits
 D. Viruses
 Answer: B
-Reference: http://www.infosecpro.com/a_security_engineering/se13.htm
+Description: http://www.infosecpro.com/a_security_engineering/se13.htm
 QUESTION NO: 209
 Which of the following encryption standards is found on older wireless devices and provides
 minimal security?
@@ -2119,7 +2105,7 @@ B. WPA2
 C. WEP
 D. AES
 Answer: C
-Reference: http://searchsecurity.techtarget.com/definition/Wired-Equivalent-Privacy
+Description: http://searchsecurity.techtarget.com/definition/Wired-Equivalent-Privacy
 
 
 QUESTION NO: 210
@@ -2132,7 +2118,7 @@ browser windows.
 D. A technique used to obtain financial information from a user by compiling information from
 social networks and their friends.
 Answer: B
-Reference: http://www.victeach.com.au/Other-Services/Security/Threats-and-scams.html
+Description: http://www.victeach.com.au/Other-Services/Security/Threats-and-scams.html
 QUESTION NO: 211
 A technician is configuring a PC that will have confidential information stored on it. To ensure that
 only authorized users can access this PC, which of the following should the technician do? (Select
@@ -2157,7 +2143,7 @@ B. Enable screensaver required passwords
 C. Enable MAC filtering
 D. Enable wireless encryption
 Answer: B
-Reference: http://windows.microsoft.com/is-is/windows-vista/use-your-windows-password-foryour-
+Description: http://windows.microsoft.com/is-is/windows-vista/use-your-windows-password-foryour-
 screen-saver-password
 QUESTION NO: 213
 A user receives a phone call from a person claiming to be from technical support. This person
@@ -2171,8 +2157,7 @@ B. Phishing
 C. Malware
 D. Virus
 Answer: A
-Reference:
-http://www.pcworld.com/article/182180/top_5_social_engineering_exploit_techniques.html
+Description: http://www.pcworld.com/article/182180/top_5_social_engineering_exploit_techniques.html
 QUESTION NO: 214
 A user has just purchased a wireless router for their home. Which of the following should be done
 to BEST secure the router from unauthorized access? (Select TWO).
@@ -2206,7 +2191,7 @@ B. is not visible.
 C. uses static IP addresses.
 D. is more secure.
 Answer: D
-Reference: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
+Description: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
 
 
 QUESTION NO: 217
@@ -2216,7 +2201,7 @@ B. Radio power levels
 C. Default password
 D. DHCP settings
 Answer: C
-Reference: http://blog.laptopmag.com/change-your-routers-username-and-password-how-to
+Description: http://blog.laptopmag.com/change-your-routers-username-and-password-how-to
 QUESTION NO: 218
 A client has a computer that is infected with several viruses and spyware. Which of the following
 should the technician perform FIRST before spyware removal?
@@ -2225,7 +2210,7 @@ B. Disable system restore
 C. Run the chkdsk /r command
 D. Disable network cards
 Answer: B
-Reference: http://www.howtogeek.com/howto/windows-vista/disable-system-restore-in-windowsvista/
+Description: http://www.howtogeek.com/howto/windows-vista/disable-system-restore-in-windowsvista/
 QUESTION NO: 219
 A technician is trying to setup a non-domain user account on a workstation, but receives the
 following error message “Password does not meet the complexity requirements.” Which of the
@@ -2237,7 +2222,7 @@ D. MSCONFIG
 
 
 Answer: A
-Reference: http://www.tomshardware.com/forum/23713-63-password-meet-password-policyrequirements
+Description: http://www.tomshardware.com/forum/23713-63-password-meet-password-policyrequirements
 QUESTION NO: 220
 In a SOHO wireless network, which of the following prevents unauthorized users from accessing
 confidential data?
@@ -2246,7 +2231,7 @@ B. Change SSID name
 C. Set encryption
 D. Enable MAC filtering
 Answer: C
-Reference: http://www.dirksen.nl/assets/Uploads/Downloads/Top10ChecklistSOHOSecurity.pdf
+Description: http://www.dirksen.nl/assets/Uploads/Downloads/Top10ChecklistSOHOSecurity.pdf
 QUESTION NO: 221
 A technician recently setup a new wired network and wants to ensure only their computers can
 use it. Which of the following is the MOST secure way to accomplish this?
@@ -2255,7 +2240,7 @@ B. Enable an intrusion detection system.
 C. Assign the computers static IP addresses.
 D. Disable the extra ports on the router.
 Answer: D
-Reference: http://www.geekzone.co.nz/forums.asp?forumid=66&topicid=10968
+Description: http://www.geekzone.co.nz/forums.asp?forumid=66&topicid=10968
 QUESTION NO: 222
 Which of the following security measures is usually found in a laptop?
 A. Biometrics
@@ -2265,7 +2250,7 @@ B. Bollard
 C. Hypervisor
 D. Key fobs
 Answer: A
-Reference: http://searchsecurity.techtarget.com/definition/biometrics
+Description: http://searchsecurity.techtarget.com/definition/biometrics
 QUESTION NO: 223
 Which of the following can be achieved with Group Policy to help with workstation security
 measures?
@@ -2274,7 +2259,7 @@ B. Complexity requirements
 C. BIOS password
 D. Wake on LAN
 Answer: B
-Reference: http://technet.microsoft.com/en-us/library/cc875814.aspx
+Description: http://technet.microsoft.com/en-us/library/cc875814.aspx
 QUESTION NO: 224
 Which of the following can enable a technician to remove a virus that prevents users from
 updating their antivirus software?
@@ -2283,7 +2268,7 @@ B. REGEDIT
 C. Safe mode
 D. MSCONFIG
 Answer: C
-Reference: http://pcsupport.about.com/od/fixtheproblem/f/windows-safe-mode.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/f/windows-safe-mode.htm
 QUESTION NO: 225
 A technician has installed the hardware for a SOHO wired network. Which of the following is the
 
@@ -2294,7 +2279,7 @@ B. Change default usernames and passwords
 C. Disable unused ports
 D. Assign static IP addresses
 Answer: B
-Reference: http://www.dirksen.nl/assets/Uploads/Downloads/Top10ChecklistSOHOSecurity.pdf
+Description: http://www.dirksen.nl/assets/Uploads/Downloads/Top10ChecklistSOHOSecurity.pdf
 QUESTION NO: 226
 Which of the following is a security threat that uses email to trick users?
 A. Phishing
@@ -2302,7 +2287,7 @@ B. Virus
 C. Spyware
 D. Shoulder surfing
 Answer: A
-Reference: http://kb.iu.edu/data/arsf.html
+Description: http://kb.iu.edu/data/arsf.html
 QUESTION NO: 227
 Which of the following user accounts should be disabled to adhere to security best practices?
 A. Standard user
@@ -2310,7 +2295,7 @@ B. Guest
 C. Administrator
 D. Power user
 Answer: B
-Reference: http://windows.microsoft.com/is-is/windows-vista/what-is-a-guest-account
+Description: http://windows.microsoft.com/is-is/windows-vista/what-is-a-guest-account
 QUESTION NO: 228
 
 
@@ -2320,7 +2305,7 @@ B. Guest
 C. Standard user
 D. Administrator
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/jj852273.aspx
+Description: http://technet.microsoft.com/en-us/library/jj852273.aspx
 QUESTION NO: 229
 Which of the following security threats do shredders help prevent?
 A. Dumpster diving
@@ -2328,7 +2313,7 @@ B. Malware
 C. Phishing
 D. Worms
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Garbage_picking
+Description: http://en.wikipedia.org/wiki/Garbage_picking
 QUESTION NO: 230
 A user has setup a SOHO and needs to implement a network configuration that allows for sharing
 of devices and files across the network without the complexity of a centralized server. Which of the
@@ -2338,7 +2323,7 @@ B. WorkGroup
 C. Domain
 D. WAN
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/what-is-the-difference-between-adomain-
+Description: http://windows.microsoft.com/en-us/windows7/what-is-the-difference-between-adomain-
 a-workgroup-and-a-homegroup
 
 
@@ -2349,7 +2334,7 @@ B. Trojan
 C. Worm
 D. Keylogger
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Browser_hijacking
+Description: http://en.wikipedia.org/wiki/Browser_hijacking
 QUESTION NO: 232
 A user has a perimeter firewall and up-to-date antivirus software. The user is asking what else
 they can do to improve their security. Which of the following will have the MOST impact on
@@ -2373,7 +2358,7 @@ B. Phishing
 C. Malware
 D. Spyware
 Answer: D
-Reference: http://en.wikipedia.org/wiki/Spyware#Browser_cookies
+Description: http://en.wikipedia.org/wiki/Spyware#Browser_cookies
 QUESTION NO: 234
 A technician needs to change the minimum password length to 8 characters to make it more
 secure. Which of the following system settings should the technician configure?
@@ -2382,7 +2367,7 @@ B. Windows Security Center
 C. Local Security Policy
 D. System Configuration
 Answer: C
-Reference: http://technet.microsoft.com/en-us/library/dd277395.aspx
+Description: http://technet.microsoft.com/en-us/library/dd277395.aspx
 QUESTION NO: 235
 A technician would like to limit computer access to certain users. Which of the following should be
 configured?
@@ -2391,7 +2376,7 @@ B. Boot.ini file
 C. System configuration
 D. Local security policy
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/dd277395.aspx
+Description: http://technet.microsoft.com/en-us/library/dd277395.aspx
 QUESTION NO: 236
 Which of the following common security threats could be occurring when a user calls and requests
 
@@ -2402,8 +2387,7 @@ B. Spyware
 C. Phishing
 D. Social engineering
 Answer: D
-Reference:
-http://www.pcworld.com/article/182180/top_5_social_engineering_exploit_techniques.html
+Description: http://www.pcworld.com/article/182180/top_5_social_engineering_exploit_techniques.html
 QUESTION NO: 237
 When securing a small office home office (SOHO) that has empty cubicles with unused network
 ports, which of the following can be used to secure ONLY the unused ports?
@@ -2435,7 +2419,7 @@ B. Remote Desktop Users
 C. Administrator
 D. Power User
 Answer: A
-Reference: http://windows.microsoft.com/en-us/windows-vista/what-is-a-standard-user-account
+Description: http://windows.microsoft.com/en-us/windows-vista/what-is-a-standard-user-account
 QUESTION NO: 240
 Which of the following are examples of physical security? (Select TWO).
 A. Badges
@@ -2444,7 +2428,7 @@ C. Encryption
 D. Firewalls
 E. Locked doors
 Answer: A,E
-Reference: http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/physsafeguards.pdf
+Description: http://www.hhs.gov/ocr/privacy/hipaa/administrative/securityrule/physsafeguards.pdf
 QUESTION NO: 241
 Which of the following scenarios BEST defines phishing?
 A. A user receives an email from a friend to download a picture but the file format ends in .exe.
@@ -2457,8 +2441,7 @@ suspect file.
 D. A user receives an email from a person in another country with a story as to why they need
 help with a financial arrangement.
 Answer: D
-Reference:
-http://www.scamwatch.gov.au/content/index.phtml/tag/requestsforyouraccountinformation
+Description: http://www.scamwatch.gov.au/content/index.phtml/tag/requestsforyouraccountinformation
 QUESTION NO: 242
 Which of the following would be the BEST way to combat social engineering?
 A. User education
@@ -2466,7 +2449,7 @@ B. Deny social networks through the firewall
 C. Badges
 D. Strong password usage
 Answer: A
-Reference: http://searchsecurity.techtarget.com/magazineContent/Gaining-awareness-to-preventsocial-
+Description: http://searchsecurity.techtarget.com/magazineContent/Gaining-awareness-to-preventsocial-
 engineering-techniques-attacks
 QUESTION NO: 243
 Which of the following is considered a method of physical security?
@@ -2475,7 +2458,7 @@ B. Cipher locked doors
 C. NTFS
 D. Firewall
 Answer: B
-Reference: http://www.wisegeek.com/what-is-a-cipher-lock.htm
+Description: http://www.wisegeek.com/what-is-a-cipher-lock.htm
 
 
 QUESTION NO: 244
@@ -2486,8 +2469,7 @@ B. Advanced settings
 C. Automatic settings
 D. Express settings
 Answer: D
-Reference:
-http://wiki.answers.com/Q/What_will_the_windows_update_express_button_download_onto_your
+Description: http://wiki.answers.com/Q/What_will_the_windows_update_express_button_download_onto_your
 _computer
 QUESTION NO: 245
 Which of the following has the HIGHEST level rights?
@@ -2496,7 +2478,7 @@ B. Power User
 C. Guest User
 D. Remote Desktop User
 Answer: B
-Reference: http://en.wikipedia.org/wiki/Power_user#Windows_administration
+Description: http://en.wikipedia.org/wiki/Power_user#Windows_administration
 QUESTION NO: 246
 Which of the following allows a user to reset their password with a series of security questions that
 only the user should know?
@@ -2518,7 +2500,7 @@ B. Static IPs
 C. MAC filtering
 D. WEP password
 Answer: C
-Reference: http://www.wi-fiplanet.com/tutorials/article.php/3924486/MAC-Filtering-for-Your-
+Description: http://www.wi-fiplanet.com/tutorials/article.php/3924486/MAC-Filtering-for-Your-
 Wireless-Network.htm
 QUESTION NO: 248
 A technician is installing a webcam in a nursery for a user to monitor their baby. The user wants to
@@ -2529,7 +2511,7 @@ B. Enable static IPs
 C. Block the outbound port
 D. Change the default SSID
 Answer: C
-Reference: http://www.wilderssecurity.com/showthread.php?t=210105
+Description: http://www.wilderssecurity.com/showthread.php?t=210105
 QUESTION NO: 249
 A user installed a new SOHO router and new wireless NICs to increase their transmission speed
 from 802.11b to 802.11g with the manufacturer's default settings. The user lives in an apartment
@@ -2542,7 +2524,7 @@ B. Assign static IP addresses
 C. Enable MAC filtering
 D. Disable the WAN port
 Answer: C
-Reference: http://security.stackexchange.com/questions/755/how-does-basic-http-auth-work
+Description: http://security.stackexchange.com/questions/755/how-does-basic-http-auth-work
 QUESTION NO: 250
 A user wants to prevent access to specific websites to prevent their children from accidently
 accessing them. Which of the following can be implemented?
@@ -2551,7 +2533,7 @@ B. Antivirus software
 C. Antispyware software
 D. A firewall
 Answer: D
-Reference: http://en.wikipedia.org/wiki/MAC_filtering
+Description: http://en.wikipedia.org/wiki/MAC_filtering
 QUESTION NO: 251
 Which of the following is the MOST secure method, short of physical destruction, that would be
 used to ensure that data on a hard drive cannot be recovered?
@@ -2560,7 +2542,7 @@ B. Format the drive
 C. Use an overwrite program
 D. Repartition the drive
 Answer: C
-Reference: http://www.pcworld.com/article/261702/how_to_securely_erase_your_hard_drive.html
+Description: http://www.pcworld.com/article/261702/how_to_securely_erase_your_hard_drive.html
 
 
 QUESTION NO: 252
@@ -2572,7 +2554,7 @@ B. Password complexity
 C. Change the default username
 D. Disable the guest account
 Answer: A
-Reference: http://www.inf.aber.ac.uk/advisory/faq/156
+Description: http://www.inf.aber.ac.uk/advisory/faq/156
 QUESTION NO: 253
 A client has asked a technician about drive sanitation and wants to know what the difference is
 between overwriting a drive and formatting a drive. Which of the following would be the BEST
@@ -2585,7 +2567,7 @@ while formatting destroys the hard drive.”
 D. “Overwriting replaces all the data with a single file that fills the hard drive destroying the data,
 while formatting erases all the data.”
 Answer: A
-Reference: http://www.pcworld.com/article/261702/how_to_securely_erase_your_hard_drive.html
+Description: http://www.pcworld.com/article/261702/how_to_securely_erase_your_hard_drive.html
 QUESTION NO: 254
 Which of the following BEST describes the security term known as tailgating?
 A. Propping open a secure entrance to gain later access
@@ -2595,7 +2577,7 @@ B. Following behind someone when entering a secure area
 C. Removing files from a site using a hidden USB drive
 D. Using someone else’s logged in computer to access files
 Answer: B
-Reference: http://en.wikipedia.org/wiki/Tailgating
+Description: http://en.wikipedia.org/wiki/Tailgating
 QUESTION NO: 255
 A user is reporting that they are clicking on search results and being redirected to the wrong sites.
 Which of the following should a technician check FIRST?
@@ -2604,7 +2586,7 @@ B. Proxy Settings
 C. Cookies
 D. Windows Firewall
 Answer: B
-Reference: http://answers.oreilly.com/topic/675-how-to-configure-proxy-settings-in-windows-7/
+Description: http://answers.oreilly.com/topic/675-how-to-configure-proxy-settings-in-windows-7/
 QUESTION NO: 256
 When setting up a new wireless router, which of the following actions should the technician take
 FIRST in order to secure the network? (Select TWO).
@@ -2627,7 +2609,7 @@ B. Rootkits
 C. SQL injection
 D. Cross-side scripting
 Answer: B
-Reference: http://www.spamlaws.com/how-rootkits-work.html
+Description: http://www.spamlaws.com/how-rootkits-work.html
 QUESTION NO: 258
 Which of the following will allow a company to implement the MOST cost-efficient way to easily
 identify whether a user has secure access to particular areas of a building?
@@ -2903,7 +2885,7 @@ B. 110
 C. 443
 D. 3389
 Answer: B
-Reference: http://www.speedguide.net/port.php?port=110
+Description: http://www.speedguide.net/port.php?port=110
 QUESTION NO: 284
 A user just bought an Android tablet and wants to connect to their work email. The user’s
 employer has a Microsoft Exchange server for email. Which of the following would the technician
@@ -2915,7 +2897,7 @@ B. IMAP, SNTP
 C. POP3, SMTP
 D. Devices are incompatible
 Answer: C
-Reference: http://www.hmailserver.com/documentation/latest/?page=whatis_pop3imapsmtp
+Description: http://www.hmailserver.com/documentation/latest/?page=whatis_pop3imapsmtp
 QUESTION NO: 285
 Which of the following would a technician use to install applications onto an iPad? (Select TWO).
 A. App Store
@@ -2939,7 +2921,7 @@ D. Wired sync
 
 
 Answer: C
-Reference: http://www.pcworld.com/article/242242/how_to_use_wireless_sync_in_ios_5.html
+Description: http://www.pcworld.com/article/242242/how_to_use_wireless_sync_in_ios_5.html
 QUESTION NO: 287
 A user realizes they left their mobile phone in a taxi minutes after the car departs. Which of the
 following should be done to BEST ensure none of the private data on the phone is accessed?
@@ -2948,7 +2930,7 @@ B. GPS Tracking
 C. Remote Backup
 D. Remote Wipe
 Answer: D
-Reference: https://espace.cern.ch/mmmserviceshelp/
+Description: https://espace.cern.ch/mmmserviceshelp/
 ManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx
 QUESTION NO: 288
 A user is concerned about an issue with iOS. The user MOST likely has which of the following
@@ -2958,7 +2940,7 @@ B. Android Phone
 C. iPhone
 D. Windows Tablet
 Answer: C
-Reference: http://en.wikipedia.org/wiki/IOS
+Description: http://en.wikipedia.org/wiki/IOS
 QUESTION NO: 289
 Which of the following features allows for easier navigation of long lists on a tablet device?
 A. Pinch-zoom
@@ -2968,7 +2950,7 @@ B. Multitouch
 C. Scrollbars
 D. Touch flow
 Answer: D
-Reference: http://gigaom.com/2010/03/08/touchscreen-tablets/
+Description: http://gigaom.com/2010/03/08/touchscreen-tablets/
 QUESTION NO: 290
 A user calls the help desk to report about their smartphone not being able to make any phone
 calls. The user admits that the smartphone can still send/receive email, browse all websites, and
@@ -2990,8 +2972,7 @@ B. Contain an accelerometer
 C. No field serviceable parts
 D. Not upgradable
 Answer: A
-Reference:
-http://www.computerworld.com/s/article/9229514/SSDs_still_no_threat_to_notebook_hard_drives
+Description: http://www.computerworld.com/s/article/9229514/SSDs_still_no_threat_to_notebook_hard_drives
 
 
 QUESTION NO: 292
@@ -3014,7 +2995,7 @@ C. Contacts
 D. Credentials
 E. SMS
 Answer: B,C
-Reference: http://windows.microsoft.com/en-us/windows7/sync-music-pictures-contacts-andcalendars-
+Description: http://windows.microsoft.com/en-us/windows7/sync-music-pictures-contacts-andcalendars-
 with-a-mobile-device
 QUESTION NO: 294
 Which of the following mobile device features disables cellular and wireless communication?
@@ -3025,7 +3006,7 @@ B. Pairing Mode
 C. Settings Reset
 D. Airplane Mode
 Answer: D
-Reference: http://en.wikipedia.org/wiki/Airplane_mode
+Description: http://en.wikipedia.org/wiki/Airplane_mode
 QUESTION NO: 295
 Which of the following protocols could a technician use to connect a smartphone to an email
 server? (Select TWO).
@@ -3045,8 +3026,7 @@ B. Download updates
 C. Disable GPS
 D. Install antivirus
 Answer: A
-Reference:
-http://www.computerworld.com/s/article/9239655/Mobile_phone_security_no_brainer_Use_a_devi
+Description: http://www.computerworld.com/s/article/9239655/Mobile_phone_security_no_brainer_Use_a_devi
 ce_passcode
 
 
@@ -3060,7 +3040,7 @@ B. Power Options -> Power Schemes
 C. System -> Advanced -> Performance
 D. Power Options -> Hibernate
 Answer: B
-Reference: http://www.pcsnippets.com/tutorials/how-to-change-the-power-scheme-settings-inwindows-
+Description: http://www.pcsnippets.com/tutorials/how-to-change-the-power-scheme-settings-inwindows-
 xp/1
 QUESTION NO: 298
 A user has not received any new emails on their smartphone in the last two days. The user is able
@@ -3083,7 +3063,7 @@ B. Antivirus
 C. GPS locator
 D. Remote backup application
 Answer: A
-Reference: https://espace.cern.ch/mmmserviceshelp/
+Description: https://espace.cern.ch/mmmserviceshelp/
 ManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx
 QUESTION NO: 300
 A client reports that their VoIP phone screen displays duplicate IP address. Which of the following
@@ -3093,7 +3073,7 @@ B. Call the vendor
 C. Try another LAN connection
 D. Reboot the phone
 Answer: D
-Reference: http://community.spiceworks.com/topic/172610-avaya-voip-phones-randomlyrebooting
+Description: http://community.spiceworks.com/topic/172610-avaya-voip-phones-randomlyrebooting
 QUESTION NO: 301
 Which of the following is the correct path to determine the IP address on an iOS device?
 A. General> Settings> Wi-Fi> SSID Name> Network> IP address
@@ -3101,7 +3081,7 @@ B. Wi-Fi> SSID Name> Network> IP address
 C. Settings> General> Network> Wi-Fi> SSID Name> IP address
 D. Location Services> Settings> Wi-Fi> SSID Name> Network> IP address
 Answer: C
-Reference: http://www.iphone-to-ipad.com/blog/find-ip-address-ios-device.html
+Description: http://www.iphone-to-ipad.com/blog/find-ip-address-ios-device.html
 
 
 QUESTION NO: 302
@@ -3113,7 +3093,7 @@ C. FireWire
 D. Wi-Fi
 E. Parallel
 Answer: B,D
-Reference: http://appadvice.com/appnn/2013/02/how-to-sync-photo-albums-across-multiple-iosdevices-
+Description: http://appadvice.com/appnn/2013/02/how-to-sync-photo-albums-across-multiple-iosdevices-
 without-itunes
 QUESTION NO: 303
 A customer reports that their wireless laptop cannot connect after removing it from its carrying
@@ -3124,7 +3104,7 @@ B. Status in Device Manager
 C. Available hard drive space
 D. Laptop battery levels
 Answer: A
-Reference: http://www.tomshardware.co.uk/forum/30338-35-external-wifi-antenna-laptop
+Description: http://www.tomshardware.co.uk/forum/30338-35-external-wifi-antenna-laptop
 QUESTION NO: 304
 Which of the following BEST describes the Apple utility used with iOS devices to synchronize,
 upgrade, and restore to factory default if needed?
@@ -3135,7 +3115,7 @@ D. Bluetooth
 
 
 Answer: B
-Reference: http://en.wikipedia.org/wiki/App_Store_(iOS)
+Description: http://en.wikipedia.org/wiki/App_Store_(iOS)
 QUESTION NO: 305
 Which of the following is the BEST definition of what an accelerometer does?
 A. Prolongs battery life
@@ -3143,7 +3123,7 @@ B. Calculates the rotation of a device
 C. Measures velocity in a given direction
 D. Makes the device run with more speed
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Accelerometer
+Description: http://en.wikipedia.org/wiki/Accelerometer
 QUESTION NO: 306
 A technician needs to configure their neighbor’s iPad. The neighbor wants to access their work
 email. The technician requires some information from their neighbor’s work IT department. Which
@@ -3175,7 +3155,7 @@ B. Laptops typically have a longer battery life
 C. Laptops typically use touch screen displays
 D. Tablets typically use solid state drives
 Answer: D
-Reference: http://www.forbes.com/sites/tomcoughlin/2013/09/11/solid-state-drives-shingling-andfat-
+Description: http://www.forbes.com/sites/tomcoughlin/2013/09/11/solid-state-drives-shingling-andfat-
 tablets/
 QUESTION NO: 309
 A custom configured PC with a powerful processor, high-end video, upgraded audio, and
@@ -3185,7 +3165,7 @@ B. Gaming PC
 C. Virtualization workstation
 D. Thick client
 Answer: B
-Reference: http://howto.wired.com/wiki/Build_a_Gaming_PC
+Description: http://howto.wired.com/wiki/Build_a_Gaming_PC
 
 
 QUESTION NO: 310
@@ -3197,7 +3177,7 @@ C. Data encryption
 D. Cellular data
 E. Wireless
 Answer: D,E
-Reference: http://support.apple.com/kb/HT1355
+Description: http://support.apple.com/kb/HT1355
 QUESTION NO: 311
 Which of the following is a new feature of iOS 5?
 A. Ability to dual boot the Android OS
@@ -3205,7 +3185,7 @@ B. Ability to run native PC applications
 C. Ability to perform iTunes backups
 D. Ability to perform untethered updates
 Answer: D
-Reference: http://www.applebitch.com/2011/05/05/rumor-ios-5-could-bring-untethered-softwareupdates/
+Description: http://www.applebitch.com/2011/05/05/rumor-ios-5-could-bring-untethered-softwareupdates/
 QUESTION NO: 312
 When setting up a Microsoft Exchange mail account to synchronize with an iPhone, which of the
 following items can be configured to synchronize besides the mail? (Select TWO).
@@ -3217,7 +3197,7 @@ D. Calendar
 
 E. Address book
 Answer: D,E
-Reference: http://www.wikihow.com/Sync-Your-iPhone-with-Microsoft-Exchange
+Description: http://www.wikihow.com/Sync-Your-iPhone-with-Microsoft-Exchange
 QUESTION NO: 313
 Which of the following allows a user to pinch zoom on an Android device?
 A. Accelerometer
@@ -3225,7 +3205,7 @@ B. Micro USB port
 C. Multi-touch
 D. A trackball
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Multi-touch
+Description: http://en.wikipedia.org/wiki/Multi-touch
 QUESTION NO: 314
 An administrator has taken steps to secure a SOHO wired network, but as a result the users report
 that they can no longer access the Internet but can still see other computers on the network.
@@ -3235,7 +3215,7 @@ B. Port 3389 has been enabled
 C. MAC filtering has been enabled
 D. LDAP has been disabled
 Answer: A
-Reference: http://en.wikipedia.org/wiki/TCP_port
+Description: http://en.wikipedia.org/wiki/TCP_port
 QUESTION NO: 315
 Which of the following mobile phone features redirects the screen orientation as the user turns
 their phone?
@@ -3246,7 +3226,7 @@ B. Geotracking
 C. Locator application
 D. Gyroscope
 Answer: D
-Reference: http://android.stackexchange.com/tags/auto-rotation/info
+Description: http://android.stackexchange.com/tags/auto-rotation/info
 QUESTION NO: 316
 While using a mapping program, which of the following functions shows the user’s location on the
 map as well as movements on the map as they travel?
@@ -3255,7 +3235,7 @@ B. Geotracking
 C. Gyroscope
 D. GPS
 Answer: D
-Reference: http://en.wikipedia.org/wiki/Global_Positioning_System
+Description: http://en.wikipedia.org/wiki/Global_Positioning_System
 QUESTION NO: 317
 Which of the following BEST represents a security vulnerability of mobile devices? (Select TWO).
 A. Unauthorized downloads
@@ -3277,7 +3257,7 @@ B. Disconnects all devices and connects to the closest powered on device
 C. Allows a peripheral to be contacted by the mobile device
 D. Instructs the phone to seek out all nearby devices and connect to them
 Answer: C
-Reference: http://electronics.howstuffworks.com/bluetooth-surveillance1.htm
+Description: http://electronics.howstuffworks.com/bluetooth-surveillance1.htm
 QUESTION NO: 319
 Which of the following devices is MOST likely to come standard with a solid state hard drive?
 A. Tablet
@@ -3285,7 +3265,7 @@ B. Storage server
 C. Laptop
 D. Desktop PC
 Answer: A
-Reference: http://www.zdnet.com/slim-hard-drives-no-threat-to-ssds-for-tablets-2062302116/
+Description: http://www.zdnet.com/slim-hard-drives-no-threat-to-ssds-for-tablets-2062302116/
 QUESTION NO: 320
 A user launches a software application on their Android tablet device. Once the software has
 loaded, the user reports that when turning the tablet to work the application in landscape mode,
@@ -3298,7 +3278,7 @@ D. The user did not switch the tablet to landscape mode.
 
 
 Answer: C
-Reference: http://mobilegyros.blogspot.com/
+Description: http://mobilegyros.blogspot.com/
 QUESTION NO: 321
 A user wishes to access their contacts from their Android phone. Which of the following methods
 will provide the MOST up-to-date contact information on the user’s phone on a daily basis?
@@ -3308,7 +3288,7 @@ connection.
 C. Enable Bluetooth and transfer the contacts from their laptop to the cell phone.
 D. Enable email synchronization and email the contacts to the user account for download.
 Answer: A
-Reference: http://www.wikihow.com/Sync-Android-Contacts-With-Gmail
+Description: http://www.wikihow.com/Sync-Android-Contacts-With-Gmail
 QUESTION NO: 322
 Which of the following explains why a tablet OS loads quicker than a laptop OS?
 A. A tablet requires less power to operate than a laptop.
@@ -3340,7 +3320,7 @@ B. Never use a power tool to remove screws from the case
 C. Label the screws according to where they came from
 D. When working on the bottom of a laptop, always leave the screen open
 Answer: C
-Reference: http://www.fonerbooks.com/laptop13.htm
+Description: http://www.fonerbooks.com/laptop13.htm
 QUESTION NO: 325
 Which of the following display types may be practical for a laptop format, but has limited uses due
 to heat considerations?
@@ -3349,7 +3329,7 @@ B. Plasma
 C. LED
 D. CRT
 Answer: B
-Reference: http://www.buzzle.com/articles/plasma-tv-problems.html
+Description: http://www.buzzle.com/articles/plasma-tv-problems.html
 
 
 QUESTION NO: 326
@@ -3360,7 +3340,7 @@ B. Locator service
 C. Remote wipe
 D. Passcode lock
 Answer: C
-Reference: http://support.google.com/a/bin/answer.py?hl=en&answer=173390
+Description: http://support.google.com/a/bin/answer.py?hl=en&answer=173390
 QUESTION NO: 327
 Which of the following steps would allow display output from a laptop to an external display?
 (Select TWO).
@@ -3446,7 +3426,7 @@ B. RAID 1
 C. RAID 5
 D. RAID 10
 Answer: A
-Reference: http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/
+Description: http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/
 QUESTION NO: 335
 A user is trying to access an application on their home machine from work. The user sets up port
 forwarding on their router but is still unable to connect to the application. Which of the following
@@ -3456,7 +3436,7 @@ B. Configure a firewall exception on the Home PC.
 C. Switch the Work PC network from “Work” to “Home”.
 D. Disable the Windows firewall on the Home PC.
 Answer: B
-Reference: http://windows.microsoft.com/is-is/windows7/open-a-port-in-windows-firewall
+Description: http://windows.microsoft.com/is-is/windows7/open-a-port-in-windows-firewall
 QUESTION NO: 336
 The customer reports their PC freezes up every day around the same time. Which of the following
 utilities would be BEST to check for any error codes?
@@ -3465,7 +3445,7 @@ B. Task Scheduler
 C. Event Viewer
 D. Performance Monitor
 Answer: C
-Reference: http://support.microsoft.com/kb/308427
+Description: http://support.microsoft.com/kb/308427
 
 
 QUESTION NO: 337
@@ -3476,7 +3456,7 @@ B. Display
 C. User Accounts
 D. Folder Options
 Answer: D
-Reference: http://windows.microsoft.com/is-is/windows7/change-folder-options
+Description: http://windows.microsoft.com/is-is/windows7/change-folder-options
 QUESTION NO: 338
 A user has downloaded and installed a browser add-on that causes the browser to hang. The PC
 has very slow system response when rebooted. Which of the following should a technician do to
@@ -3503,7 +3483,7 @@ B. Flickering image
 C. No image on screen
 D. Distorted image
 Answer: D
-Reference: http://cdn.c.photoshelter.com/img-get/I0000ENbEdGRHUB4/s/860/860/Fphoto-
+Description: http://cdn.c.photoshelter.com/img-get/I0000ENbEdGRHUB4/s/860/860/Fphoto-
 64080805F-6RM.jpg
 QUESTION NO: 340
 After being relocated to an enclosed position under a desk, a computer experiences intermittent
@@ -3513,7 +3493,7 @@ B. Overheating
 C. APIPA addressing
 D. RF interference
 Answer: B
-Reference: http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-
+Description: http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-
 its-important
 QUESTION NO: 341
 A technician is fixing a very slow computer. Antivirus and Malware programs have been run, and
@@ -3525,7 +3505,7 @@ B. Manually erase all cookies
 C. Go back to the latest restore point
 D. Run defrag
 Answer: D
-Reference: http://windows.about.com/od/maintainandfix/ss/SBSdefragWin7.htm
+Description: http://windows.about.com/od/maintainandfix/ss/SBSdefragWin7.htm
 
 
 QUESTION NO: 342
@@ -3536,7 +3516,7 @@ B. REPLACE
 C. NTBACKUP
 D. COPY
 Answer: C
-Reference: http://searchservervirtualization.techtarget.com/definition/NTBackup-Microsoft-
+Description: http://searchservervirtualization.techtarget.com/definition/NTBackup-Microsoft-
 Windows-NT-backup
 QUESTION NO: 343
 A technician receives a report that the pages coming out of a laser printer are smearing when
@@ -3547,7 +3527,7 @@ B. Fuser
 C. Pickup roller
 D. Corona wire
 Answer: B
-Reference: http://www.howstuffworks.com/laser-printer3.htm
+Description: http://www.howstuffworks.com/laser-printer3.htm
 QUESTION NO: 344
 A technician is working on a user’s PC. After testing the theory of the cause, which of the following
 could the technician perform NEXT? (Select TWO).
@@ -3572,7 +3552,7 @@ B. Run CONVERT on the hard drive
 C. Reboot the server
 D. Swap hard drive and rebuild array
 Answer: D
-Reference: http://www.tomshardware.com/forum/254643-32-replace-failed-raid-configuration
+Description: http://www.tomshardware.com/forum/254643-32-replace-failed-raid-configuration
 QUESTION NO: 346
 When removing the top case from a laptop, which of the following, besides hand tools, should a
 technician have on hand to assure correct disassembly and reassembly? (Select TWO).
@@ -3582,7 +3562,7 @@ C. A writing pad for documentation and a marker to label cables.
 D. A manufacturer’s technical manual for the model of the laptop.
 E. A container with separated areas to store different size screws.
 Answer: D,E
-Reference: http://computertutorflorida.com/2012/09/laptop-best-practices/
+Description: http://computertutorflorida.com/2012/09/laptop-best-practices/
 
 
 QUESTION NO: 347
@@ -3593,7 +3573,7 @@ B. DHCP server needs to be rebooted
 C. Network adapter driver needs to be updated
 D. Bad network adapter
 Answer: A
-Reference: http://support.microsoft.com/kb/120599
+Description: http://support.microsoft.com/kb/120599
 QUESTION NO: 348
 A user has recently installed Windows 7 on a computer. They ran Windows updates, updated the
 firmware and installed a printer. The user accessed a P2P application and now they are getting a
@@ -3603,7 +3583,7 @@ B. Malware
 C. Proxy redirect
 D. Firmware
 Answer: B
-Reference: http://www.webroot.com/us/en/home/resources/articles/pc-security/malware-spam
+Description: http://www.webroot.com/us/en/home/resources/articles/pc-security/malware-spam
 QUESTION NO: 349
 Users are reporting that their laser printer is picking up multiple pages. The printer has very high
 utilization. Which of the following should be performed to resolve this issue?
@@ -3614,7 +3594,7 @@ D. Replace the fuser
 
 
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Laser_printing#Laser_printer_maintenance
+Description: http://en.wikipedia.org/wiki/Laser_printing#Laser_printer_maintenance
 QUESTION NO: 350
 A PC is powering on but the only activity a technician can see is spinning fans. Which of the
 following components would MOST likely be at fault for such a condition? (Select TWO).
@@ -3624,7 +3604,7 @@ C. Memory
 D. Hard drive
 E. Sound card
 Answer: B,C
-Reference: http://www.techrepublic.com/forums/questions/computer-booting-problem-fan-spin-nodisplay/
+Description: http://www.techrepublic.com/forums/questions/computer-booting-problem-fan-spin-nodisplay/
 QUESTION NO: 351
 A user’s PC has four hard drives in a RAID setup. After a single drive fails, the system will no
 longer boot and even rescue disks cannot see or access the volume. Which of the following RAID
@@ -3634,7 +3614,7 @@ B. 1
 C. 5
 D. 6
 Answer: A
-Reference: http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/
+Description: http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/
 QUESTION NO: 352
 A corporate end user reports that random keys on their laptop are sticking. After taking the laptop
 
@@ -3646,7 +3626,7 @@ B. Let the end user know that they are responsible for replacing the keyboard
 C. Replace the keyboard and clean the interior of the laptop if necessary
 D. Run the keyboard through a dishwasher cycle and dry thoroughly
 Answer: C
-Reference: http://www.maximumpc.com/article/howtos/howto_recover_sodaspill_disaster
+Description: http://www.maximumpc.com/article/howtos/howto_recover_sodaspill_disaster
 QUESTION NO: 353
 A user states they have to reset the date and time on their computer every day. Which of the
 following hardware needs to be replaced to resolve this issue?
@@ -3655,7 +3635,7 @@ B. Hard drive
 C. CMOS battery
 D. Memory
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Nonvolatile_BIOS_memory#CMOS_battery
+Description: http://en.wikipedia.org/wiki/Nonvolatile_BIOS_memory#CMOS_battery
 QUESTION NO: 354
 A user reports that they are receiving intermittent BSOD error messages. Which of the following
 tools should a technician use to determine which hardware is failing?
@@ -3664,7 +3644,7 @@ B. Memory diagnostics
 C. Performance monitor
 D. Loopback plug
 Answer: B
-Reference: http://pcsupport.about.com/od/findbyerrormessage/tp/stop_error_list.htm
+Description: http://pcsupport.about.com/od/findbyerrormessage/tp/stop_error_list.htm
 
 
 QUESTION NO: 355
@@ -3687,7 +3667,7 @@ B. DXDIAG
 C. MSCONFIG
 D. REGEDIT
 Answer: C
-Reference: http://support.microsoft.com/kb/310560
+Description: http://support.microsoft.com/kb/310560
 QUESTION NO: 357
 A user reports that they are getting frequent delayed write messages throughout the day and are
 experiencing sluggish performance. The technician suspects that the issue relates to the hard disk
@@ -3723,7 +3703,7 @@ D. Power supply tester
 Answer: D
 
 
-Reference: http://pcsupport.about.com/od/toolsofthetrade/f/powersupplytest.htm
+Description: http://pcsupport.about.com/od/toolsofthetrade/f/powersupplytest.htm
 QUESTION NO: 360
 A senior technician requests a diagnostic tool for checking external ports and connectors on
 computers and laptops. Which of the following tools would BEST accomplish this task?
@@ -3732,7 +3712,7 @@ B. Corona wire
 C. Toner probe
 D. Loopback plugs
 Answer: D
-Reference: http://www.webopedia.com/TERM/L/loopback_plug.html
+Description: http://www.webopedia.com/TERM/L/loopback_plug.html
 QUESTION NO: 361
 After installing a new printer the organization determines that there are problems printing images
 and very large files. Which of the following will MOST likely resolve the issue?
@@ -3741,7 +3721,7 @@ B. Install additional memory to each computer
 C. Install additional memory to the printer
 D. Apply the latest OS service pack
 Answer: C
-Reference: http://www.ehow.com/how_6875286_install-printer-memory.html
+Description: http://www.ehow.com/how_6875286_install-printer-memory.html
 QUESTION NO: 362
 After accidentally removing a hard drive from a server with three drives in a RAID 5 configuration,
 a technician notices the server locks up and shuts down. Which of the following can the technician
@@ -3767,7 +3747,7 @@ C. Clearing the Windows Update download cache entirely
 D. Uninstalling the Windows Update feature in Windows 7 and reinstalling it directly from the
 Microsoft website
 Answer: C
-Reference: http://larsjoergensen.net/windows/windows-7/how-to-clear-the-windows-updatedownload-
+Description: http://larsjoergensen.net/windows/windows-7/how-to-clear-the-windows-updatedownload-
 cache-in-windows-7
 QUESTION NO: 364
 A user reports that their wireless connectivity is being spotty. The issue seems to interrupt their
@@ -3782,7 +3762,7 @@ degree angle.
 
 D. The wireless signal cables are being crimped when the screen is opening/closing.
 Answer: D
-Reference: http://compnetworking.about.com/od/wirelessfaqs/f/wifilaptoprange.htm
+Description: http://compnetworking.about.com/od/wirelessfaqs/f/wifilaptoprange.htm
 QUESTION NO: 365
 A user states that they cannot connect to the network or the Internet. The technician determines
 the issue is that the computer has a static IP address and needs to use DHCP to work correctly.
@@ -3793,7 +3773,7 @@ B. Confirm the computer is back on the network and has Internet connectivity
 C. They need to annotate what the static IP address was and inform the employee’s manager
 D. They need to determine why the NIC was assigned a static IP address
 Answer: B
-Reference: http://technet.microsoft.com/en-us/library/dd183692(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/dd183692(v=ws.10).aspx
 QUESTION NO: 366
 A technician has finished replacing the network card in a laptop and has verified full system
 functionality. Which of the following troubleshooting steps should the technician take NEXT?
@@ -3802,8 +3782,7 @@ B. Escalate problem to a senior technician
 C. Re-establish new theory of probable cause
 D. Perform a full system backup
 Answer: A
-Reference:
-http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p
+Description: http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p
 df
 
 
@@ -3816,7 +3795,7 @@ B. Disable system restore
 C. Enable hard drive encryption
 D. Format the hard drive
 Answer: B
-Reference: http://antivirus.about.com/od/windowsbasics/a/systemrestore.htm
+Description: http://antivirus.about.com/od/windowsbasics/a/systemrestore.htm
 QUESTION NO: 368
 A user reports paper jams at the location of the paper trays. Which of the following components
 would need to be replaced to resolve this issue?
@@ -3825,8 +3804,7 @@ B. Duplexer
 C. Pickup roller
 D. Imaging drum
 Answer: C
-Reference:
-http://welcome.solutions.brother.com/BSC/public/as/as_ot/en/faq/faq/000000/002500/000041/faq0
+Description: http://welcome.solutions.brother.com/BSC/public/as/as_ot/en/faq/faq/000000/002500/000041/faq0
 02541_000.html?reg=as&c=as_ot&lang=en&prod=hl5340d_all
 QUESTION NO: 369
 A critical server was replaced by the IT staff the previous night. The following morning, some users
@@ -3847,7 +3825,7 @@ B. The DHCP server is unavailable.
 C. The default gateway router is misconfigured.
 D. The DHCP server is misconfigured.
 Answer: D
-Reference: http://knowurtech.netfirms.com/networking/how_dhcp_works.html
+Description: http://knowurtech.netfirms.com/networking/how_dhcp_works.html
 QUESTION NO: 370
 Joe, a technician, receives an error message on his tower PC just after POST which reads:
 “WARNING! Your drive is about to fail. Please back up your data and run full drive diagnostics.”
@@ -3857,7 +3835,7 @@ B. S.M.A.R.T.
 C. eSATA
 D. QoS
 Answer: B
-Reference: http://www.howtogeek.com/134735/how-to-see-if-your-hard-drive-is-dying/
+Description: http://www.howtogeek.com/134735/how-to-see-if-your-hard-drive-is-dying/
 QUESTION NO: 371
 Ann, a technician, is trying to recover some files for a user from a damaged laptop. Since the
 Windows installation has been corrupted and does not boot, Ann plugs the drive into a bench
@@ -3871,7 +3849,7 @@ B. The TPM security chip inside the bench system is not enabled
 C. The BIOS of the bench system is out of date
 D. BitLocker is being used
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/ee449438(v=ws.10).aspx
+Description: http://technet.microsoft.com/en-us/library/ee449438(v=ws.10).aspx
 QUESTION NO: 372
 A technician is tasked with repairing a Windows 7 system including the removal of recently
 installed files and software. Which of the following system restoration methods would be the
@@ -3881,7 +3859,7 @@ B. System Image Recovery
 C. CHKDSK
 D. Windows Memory Diagnostic
 Answer: A
-Reference: http://windows.microsoft.com/en-us/windows-vista/what-is-system-restore
+Description: http://windows.microsoft.com/en-us/windows-vista/what-is-system-restore
 QUESTION NO: 373
 A user, Ann, reports that her computer is able to connect to devices on her local network but not
 on the remote office network. Ann’s computer shows the following ipconfig information:
@@ -3898,7 +3876,7 @@ B. DNS server 1 is set incorrectly.
 C. IP address is set incorrectly.
 D. Gateway is set incorrectly.
 Answer: D
-Reference: https://www.netsetman.com/support/viewtopic.php?id=255
+Description: https://www.netsetman.com/support/viewtopic.php?id=255
 QUESTION NO: 374
 Ann reports that printouts from the department laser printer have become faded. She has already
 replaced the toner cartridge. Which of the following is the MOST likely component causing the
@@ -3908,8 +3886,7 @@ B. Fusing assembly
 C. Registration assembly
 D. Duplexing assembly
 Answer: A
-Reference:
-http://welcome.solutions.brother.com/BSC/public/us/us/en/faq/faq/000000/000100/000027/faq000
+Description: http://welcome.solutions.brother.com/BSC/public/us/us/en/faq/faq/000000/000100/000027/faq000
 127_000.html?reg=us&c=us&lang=en&prod=hl8050n_all
 QUESTION NO: 375
 A user, Ann, reports that her laptop will no longer connect to wireless. Joe, a technician, checks
@@ -3938,7 +3915,7 @@ B. Speakers are not properly connected
 C. Battery low on wireless mouse
 D. Memory is mismatched
 Answer: D
-Reference: http://www.techspot.com/community/topics/ram-question-mixing-memory-of-differentspeeds.
+Description: http://www.techspot.com/community/topics/ram-question-mixing-memory-of-differentspeeds.
 93687/
 QUESTION NO: 377
 A PC uses RAID 1. Ann, a technician, has read in the event log that the drive "SATA 1" is no
@@ -3963,7 +3940,7 @@ B. Phishing
 C. Spear phishing
 D. Hijacking
 Answer: A
-Reference: http://www.csoonline.com/article/663329/social-engineering-3-examples-of-humanhacking
+Description: http://www.csoonline.com/article/663329/social-engineering-3-examples-of-humanhacking
 QUESTION NO: 379
 Ann recently upgraded a computer from Windows XP to Windows 7, but one of her applications
 does not work now. Which of the following should be done FIRST?
@@ -3972,7 +3949,7 @@ B. Reinstall Windows XP
 C. Configure a dual boot with XP and 7
 D. Install the application in XP mode
 Answer: A
-Reference: http://arstechnica.com/information-technology/2010/01/windows-xp-mode/
+Description: http://arstechnica.com/information-technology/2010/01/windows-xp-mode/
 QUESTION NO: 380
 Ann, a home user, brings a Windows XP PC in for repair and reports that several disk read errors
 are occurring. She has run check disk and errors have been reported several times. Which of the
@@ -4048,7 +4025,7 @@ B. Contrast
 C. Brightness
 D. Degauss
 Answer: D
-Reference: http://www.wikihow.com/Degauss-a-Computer-Monitor
+Description: http://www.wikihow.com/Degauss-a-Computer-Monitor
 QUESTION NO: 387
 A user is installing Windows 7 on a PC with a RAID card. The user has verified all of the cables
 are connected correctly, but the installation media does not detect any hard drives. Which of the
@@ -4058,7 +4035,7 @@ B. Hit the refresh button to force a re-detect
 C. Enable PATA in the BIOS
 D. Select load driver
 Answer: D
-Reference: http://www.togaware.com/linux/survivor/Load_RAID.html
+Description: http://www.togaware.com/linux/survivor/Load_RAID.html
 
 
 QUESTION NO: 388
@@ -4071,7 +4048,7 @@ B. Install the application with compatibility mode
 C. Install the latest Windows service packs and updates
 D. Install Windows Security updates on the system
 Answer: B
-Reference: http://social.technet.microsoft.com/Forums/windows/en-US/cdd894f8-1ee2-43e5-952bd04c25779a7f/
+Description: http://social.technet.microsoft.com/Forums/windows/en-US/cdd894f8-1ee2-43e5-952bd04c25779a7f/
 how-to-install-a-software-application-using-compatibility-mode
 QUESTION NO: 389
 A user reports that a file they shared out on their computer for another network user is not
@@ -4082,7 +4059,7 @@ B. The parent folder has explicit Deny rights set for this user.
 C. The user forgot to share the parent folder and only shared the specific file.
 D. The parent folder likely has the “archive” attribute enabled.
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows-vista/troubleshoot-access-denied-whenopening-
+Description: http://windows.microsoft.com/en-us/windows-vista/troubleshoot-access-denied-whenopening-
 files-or-folders
 QUESTION NO: 390
 A technician is trying to diagnose a laptop that is experiencing heavy artifact corruption and
@@ -4096,7 +4073,7 @@ C. Incompatible or untested video drivers have been installed.
 D. The BIOS is not set for the proper operation temperature of the video chipset.
 E. The BIOS is underclocking the video card’s operating speed.
 Answer: A,C
-Reference: http://en.wikipedia.org/wiki/Compression_artifact
+Description: http://en.wikipedia.org/wiki/Compression_artifact
 QUESTION NO: 391
 A technician installed a second hard drive in a computer. Upon restart, a message appears stating
 “primary drive 0 not found. Press F1 to continue.” Which of the following should the technician
@@ -4106,7 +4083,7 @@ B. Proper drive installation (e.g. cables/jumpers)
 C. If computer can boot into safe mode
 D. If the BIOS boot settings are correct
 Answer: B
-Reference: http://www.geek.com/forums/topic/primary-drive-0-not-found-primary-drive-1-notfound/
+Description: http://www.geek.com/forums/topic/primary-drive-0-not-found-primary-drive-1-notfound/
 QUESTION NO: 392
 A user tries to connect to the Internet using a dial-up modem and receives a “No dial tone
 detected” message. Which of the following is the FIRST thing the technician should check to
@@ -4116,7 +4093,7 @@ B. Check if the cable is connected on the modem’s line RJ-11 port.
 C. Check if the cable is connected on the modem’s line RJ-45 port.
 D. Check if the cable is connected on the modem’s phone RJ-11 port.
 Answer: B
-Reference: http://support.microsoft.com/kb/326681
+Description: http://support.microsoft.com/kb/326681
 
 
 QUESTION NO: 393
@@ -4128,8 +4105,7 @@ B. Establish a plan of action to resolve the problem
 C. Test the theory to determine cause
 D. Document findings, actions, and outcomes
 Answer: D
-Reference:
-http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p
+Description: http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p
 df
 QUESTION NO: 394
 After an installation of a video adapter, the screen on a Windows 7 system cannot be seen.
@@ -4139,7 +4115,7 @@ B. Startup Repair
 C. Device Manager
 D. Task Manager
 Answer: B
-Reference: http://windows.microsoft.com/en-us/windows7/products/features/startup-repair
+Description: http://windows.microsoft.com/en-us/windows7/products/features/startup-repair
 QUESTION NO: 395
 A user gets an error message that the trust relationship to the domain has been broken. Which of
 the following can be done to resolve this from the client desktop?
@@ -4150,7 +4126,7 @@ C. Update the BIOS using the latest version
 
 D. Run CHKDSK
 Answer: A
-Reference: http://social.technet.microsoft.com/Forums/windowsserver/en-US/ca41e39a-49c1-
+Description: http://social.technet.microsoft.com/Forums/windowsserver/en-US/ca41e39a-49c1-
 4c7b-a415-6295099f7002/rejoin-a-domain
 QUESTION NO: 396
 A technician recently removed spyware from a computer and now the user is getting error
@@ -4161,7 +4137,7 @@ B. SFC
 C. FIXMBR
 D. ASR
 Answer: B
-Reference: http://pcsupport.about.com/od/toolsofthetrade/ht/sfc-scannow.htm
+Description: http://pcsupport.about.com/od/toolsofthetrade/ht/sfc-scannow.htm
 QUESTION NO: 397
 A technician gets a call from a customer stating that their computer will not boot. They are getting
 the following error “invalid system disk”. Which of the following should the technician check
@@ -4171,7 +4147,7 @@ B. Verify that all removable drives are empty.
 C. Verify Boot.ini is on the hard drive.
 D. Verify the computer will boot into safe mode.
 Answer: B
-Reference: http://support.microsoft.com/kb/128730
+Description: http://support.microsoft.com/kb/128730
 QUESTION NO: 398
 
 
@@ -4182,8 +4158,7 @@ B. Paper levels
 C. Physical obstructions
 D. Printer share name
 Answer: C
-Reference:
-https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CEEQFjAC&url=htt
+Description: https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CEEQFjAC&url=htt
 p%3A%2F%2Fwww.ics.uci.edu%2F~lopes%2Fteaching%2Finf241W07%2Fstudents%2520prese
 ntations%2Frex-chen.ppt&ei=FRVFUtPYF4bm4QSck4GoBA&usg=AFQjCNFFKyH4N_oU7gPBMftJki_
 tA-KmQ&sig2=cE2SZ--1xT22N6zLWAILFA
@@ -4195,7 +4170,7 @@ B. Incompatible RAM.
 C. A faulty hard drive.
 D. A bad internal USB hub.
 Answer: A
-Reference: http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-
+Description: http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-
 its-important
 QUESTION NO: 400
 When the computer is turned on it emits a series of beeps and does not POST. This can be
@@ -4207,7 +4182,7 @@ D. Floppy cable
 
 
 Answer: B
-Reference: http://www.technick.net/public/code/cp_dpage.php?aiocp_dp=guide_beep_codes
+Description: http://www.technick.net/public/code/cp_dpage.php?aiocp_dp=guide_beep_codes
 QUESTION NO: 401
 A technician recently installed a new video card in a PC. The PC already has integrated video on
 the motherboard. When the technician turns on the PC, there is no video. Which of the following is
@@ -4217,7 +4192,7 @@ B. The incorrect video card drivers are installed.
 C. The power connector for the video card is unplugged.
 D. The video card is unsupported by the motherboard.
 Answer: C
-Reference: http://www.tomshardware.com/forum/338600-33-unplugged-graphics-card-pluggedback-
+Description: http://www.tomshardware.com/forum/338600-33-unplugged-graphics-card-pluggedback-
 display-help
 QUESTION NO: 402
 A user’s CRT display is not displaying colors correctly. Turning the display to the right or left
@@ -4227,7 +4202,7 @@ B. The CRT power cable
 C. The video cable
 D. The CRT On Screen Display (OSD)
 Answer: C
-Reference: http://forums.arcade-museum.com/archive/index.php/t-168393.html
+Description: http://forums.arcade-museum.com/archive/index.php/t-168393.html
 QUESTION NO: 403
 A laser printer is producing completely blank sheets. Which of the following processes should the
 technician check FIRST?
@@ -4238,7 +4213,7 @@ B. Paper handling
 C. Transfer
 D. Development
 Answer: D
-Reference: http://www.fixyourownprinter.com/forums/laser/34861
+Description: http://www.fixyourownprinter.com/forums/laser/34861
 QUESTION NO: 404
 A Windows user states that every time they hit certain letter keys on their notebook, a number
 appears instead of the letter. Which of the following items is MOST likely the cause of this
@@ -4248,7 +4223,7 @@ B. The user changed the keyboard character set.
 C. The user enabled accessibility options.
 D. The user enabled num lock.
 Answer: D
-Reference: http://www.howtogeek.com/forum/topic/crazy-num-lock-problem
+Description: http://www.howtogeek.com/forum/topic/crazy-num-lock-problem
 QUESTION NO: 405
 A Windows 7 desktop PC has crashed (i.e. BSOD) several times indicating a possible RAM
 problem. Which of the following is an OS built-in tool that can be used to test this problem?
@@ -4257,7 +4232,7 @@ B. Windows System File Checker
 C. MSCONFIG
 D. Windows Memory Diagnostic
 Answer: D
-Reference: http://howto.cnet.com/8301-11310_39-57569731-285/test-your-ram-with-windowsmemory-
+Description: http://howto.cnet.com/8301-11310_39-57569731-285/test-your-ram-with-windowsmemory-
 diagnostic-tool/
 
 
@@ -4269,7 +4244,7 @@ B. The printer driver was installed incorrectly.
 C. The multifunction printer’s USB cable was plugged into the incorrect port.
 D. The scanner’s alignment and calibration was not performed.
 Answer: A
-Reference: http://www.justanswer.com/printers/6cceg-scanner-lock-switch-error-message.html
+Description: http://www.justanswer.com/printers/6cceg-scanner-lock-switch-error-message.html
 QUESTION NO: 407
 After replacing a motherboard on a customer’s laptop for a no sound issue, a technician realizes
 that there is intermittent wireless connectivity on the laptop. Which of the following should the
@@ -4279,7 +4254,7 @@ B. Check to see if there is a wireless switch on the laptop and its current posi
 C. Replace the wireless card because it is not fully compatible with the new motherboard.
 D. Check if the WiFi antenna is connected properly to the wireless card.
 Answer: D
-Reference: https://communities.intel.com/thread/38676
+Description: https://communities.intel.com/thread/38676
 QUESTION NO: 408
 After updating the device drivers for a video adapter, a user reports they are only able to view a
 portion of the screen and the text is very large. Which of the following is MOST likely the cause?
@@ -4301,7 +4276,7 @@ C. Reload the display adapter drivers
 D. Toggle the display using the keyboard shortcut
 E. Verify network connectivity
 Answer: A,D
-Reference: http://wikinorm.wikidot.com/monitor-resolution-is-too-low
+Description: http://wikinorm.wikidot.com/monitor-resolution-is-too-low
 QUESTION NO: 410
 A technician has been dispatched to a customer site to diagnose an issue where the computer
 turns off intermittently. Upon arriving at the site, the technician detects a smoke smell coming from
@@ -4311,7 +4286,7 @@ B. Power down the system and replace the power supply.
 C. Install an additional case fan for proper ventilation.
 D. Remove the side panel for proper ventilation.
 Answer: B
-Reference: http://forums.cnet.com/7723-19411_102-375948/external-monitor-goes-to-sleep/
+Description: http://forums.cnet.com/7723-19411_102-375948/external-monitor-goes-to-sleep/
 QUESTION NO: 411
 A technician notices that a computer is making a loud clicking noise but continues to run. System
 speed is barely affected, but they cannot access certain drives. These are the symptoms of which
@@ -4336,7 +4311,7 @@ B. Use a SCSI to USB adaptor
 C. USB hard drive enclosure
 D. Copy their data to a USB flash drive
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Disk_enclosure
+Description: http://en.wikipedia.org/wiki/Disk_enclosure
 QUESTION NO: 413
 Which of the following is the BEST way to get rid of dead pixels on a laptop screen?
 A. Replace the inverter
@@ -4344,7 +4319,7 @@ B. Replace the back bezel
 C. Replace back light
 D. Replace the LCD
 Answer: D
-Reference: http://www.notebookreview.com/default.asp?newsID=2211
+Description: http://www.notebookreview.com/default.asp?newsID=2211
 
 
 QUESTION NO: 414
@@ -4372,7 +4347,7 @@ C. ARP
 D. SSID
 E. MAC filtering
 Answer: B,E
-Reference: http://technet.microsoft.com/en-us/magazine/ff521761.aspx
+Description: http://technet.microsoft.com/en-us/magazine/ff521761.aspx
 QUESTION NO: 416
 
 
@@ -4387,7 +4362,7 @@ C. Ipconfig /all
 D. Ipconfig /flushdns
 E. Ipconfig /release
 Answer: A,E
-Reference: http://technet.microsoft.com/en-us/library/cc938688.aspx
+Description: http://technet.microsoft.com/en-us/library/cc938688.aspx
 QUESTION NO: 417
 A user calls the helpdesk and states that they suddenly cannot connect to the Internet or any other
 network resources. The user is on a company network that uses DHCP. The technician runs
@@ -4398,7 +4373,7 @@ B. Replace network card
 C. Assign a static IP address
 D. Reinstall the network drivers
 Answer: A
-Reference: http://bonzamobilecomputerrepairs.com/blog/?p=151
+Description: http://bonzamobilecomputerrepairs.com/blog/?p=151
 QUESTION NO: 418
 A user reports that the desktop PC shuts down 10 minutes after turning it on in the morning. When
 the technician moves the PC, it sounds like there are loose parts sliding around in the case. Which
@@ -4410,7 +4385,7 @@ B. A memory module has become unseated.
 C. The heat sink retaining clip has broken loose.
 D. The hard drive cable has become unseated.
 Answer: C
-Reference: http://www.bleepingcomputer.com/forums/t/96260/broken-heatsink-on-mother-board/
+Description: http://www.bleepingcomputer.com/forums/t/96260/broken-heatsink-on-mother-board/
 QUESTION NO: 419
 A technician is diagnosing a PC running Windows 7 which has been affected with an “NTLDR is
 missing” error message. Which of the following command line tools would BEST resolve the
@@ -4420,7 +4395,7 @@ B. CHKDSK
 C. Scandisk
 D. DEFRAG
 Answer: A
-Reference: http://pcsupport.about.com/od/findbyerrormessage/a/ntldrmissingxp.htm
+Description: http://pcsupport.about.com/od/findbyerrormessage/a/ntldrmissingxp.htm
 QUESTION NO: 420
 A user reports that people are receiving emails from their account that the user never sent. Which
 of the following security measures would BEST resolve the problem?
@@ -4443,7 +4418,7 @@ C. Check the video card integrity
 D. Check the memory integrity
 E. Check the optical drive integrity
 Answer: A,D
-Reference: http://www.tomshardware.com/forum/352927-31-computer-rebooting-frequently
+Description: http://www.tomshardware.com/forum/352927-31-computer-rebooting-frequently
 QUESTION NO: 422
 A technician is troubleshooting a PC that is not completing POST and merely provides an audible
 beep code. Which of the following should be the FIRST item checked?
@@ -4452,7 +4427,7 @@ B. The CMOS battery charge
 C. The amount of available power to the hard drive
 D. The memory configuration
 Answer: D
-Reference: http://arstechnica.com/civis/viewtopic.php?p=24576099
+Description: http://arstechnica.com/civis/viewtopic.php?p=24576099
 QUESTION NO: 423
 A user has an external hard drive which they forget to unplug before booting their machine. Each
 time this happens, an error shows on the screen which states “Boot sector missing – reboot to try
@@ -4464,7 +4439,7 @@ C. Change BIOS options to remove CD drive from the boot order
 
 D. Set the SATA setting in BIOS to AHCI from IDE
 Answer: B
-Reference: http://pcsupport.about.com/od/fixtheproblem/ss/bootorderchange_3.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/ss/bootorderchange_3.htm
 QUESTION NO: 424
 A user states that their old notebook loses connectivity to the Internet several times a day at work
 and at home. The issue started after the wireless card was replaced. Which of the following items
@@ -4485,7 +4460,7 @@ B. OS not found on boot
 C. Hard drive failure
 D. RAID array failure
 Answer: C
-Reference: http://datarecoveryhospital.com/qa-26/
+Description: http://datarecoveryhospital.com/qa-26/
 
 
 QUESTION NO: 426
@@ -4496,7 +4471,7 @@ B. Change broadcast channel
 C. Enable wireless encryption
 D. Disable SSID broadcasting
 Answer: B
-Reference: http://lifehacker.com/5580636/change-your-wi+fi-routers-broadcast-channel-for-astronger-
+Description: http://lifehacker.com/5580636/change-your-wi+fi-routers-broadcast-channel-for-astronger-
 connection
 QUESTION NO: 427
 A contractor needs to destroy several drives containing confidential information so that they can
@@ -4507,7 +4482,7 @@ B. Drill into the hard drives.
 C. Degauss the hard drives.
 D. Sanitize the hard drives.
 Answer: B
-Reference: https://groups.google.com/forum/#!topic/refurbishers/lwOPyBdrKi4
+Description: https://groups.google.com/forum/#!topic/refurbishers/lwOPyBdrKi4
 QUESTION NO: 428
 A customer purchases a new 802.11n router for their home. They connect it to their current
 801.11g devices, as well as their new laptop. Even though the laptop has a built-in 802.11n
@@ -4520,7 +4495,7 @@ D. The laptop needs a dedicated access point.
 
 
 Answer: C
-Reference: http://www.mahalo.com/answers/what-does-mixed-mode-on-a-wireless-router-mean-1
+Description: http://www.mahalo.com/answers/what-does-mixed-mode-on-a-wireless-router-mean-1
 QUESTION NO: 429
 A customer states their laptop screen is very dim. In order to avoid going to the client site, which of
 the following is the FIRST action the customer should perform?
@@ -4529,7 +4504,7 @@ B. Use function keys
 C. Reboot the laptop
 D. Go to the Power Options in Control Panel
 Answer: B
-Reference: http://www.tomshardware.com/forum/70976-35-laptop-screen-visible
+Description: http://www.tomshardware.com/forum/70976-35-laptop-screen-visible
 QUESTION NO: 430
 A customer says they cannot access the network printer. The technician cannot PING the printer
 from their location. Which of the following should be the NEXT step in troubleshooting this issue?
@@ -4538,8 +4513,7 @@ B. Reboot client PC
 C. Check the link lights on printer NIC
 D. Reboot the printer
 Answer: C
-Reference:
-http://welcome.solutions.brother.com/BSC/public/eu/gb/en/faq/faq/000000/000100/000005/faq000
+Description: http://welcome.solutions.brother.com/BSC/public/eu/gb/en/faq/faq/000000/000100/000005/faq000
 105_000.html?reg=eu&prod=hl5170dn_all&c=gb&lang=en
 QUESTION NO: 431
 A customer states that another technician just removed some viruses and now they are not able to
@@ -4552,7 +4526,7 @@ B. Not all viruses have been fixed
 C. Internet Explorer cache is full
 D. Host file has been manipulated
 Answer: D
-Reference: http://www.bleepingcomputer.com/tutorials/hosts-files-explained/
+Description: http://www.bleepingcomputer.com/tutorials/hosts-files-explained/
 QUESTION NO: 432
 Which of the following tools would be used to connect CAT5e cabling to a patch panel?
 A. Punch down
@@ -4560,7 +4534,7 @@ B. Wire strippers
 C. Loopback plugs
 D. Crimper
 Answer: A
-Reference: http://en.wikipedia.org/wiki/Punch_down_tool
+Description: http://en.wikipedia.org/wiki/Punch_down_tool
 QUESTION NO: 433
 A user states that when they power on their computer, they receive a “Non-bootable drive” error.
 The user works with external storage devices to transport data to their computer. The user stated
@@ -4571,7 +4545,7 @@ B. Device boot order
 C. PXE boot settings
 D. Hard drive cable
 Answer: B
-Reference: http://pcsupport.about.com/od/fixtheproblem/ss/bootorderchange.htm
+Description: http://pcsupport.about.com/od/fixtheproblem/ss/bootorderchange.htm
 
 
 QUESTION NO: 434
@@ -4583,7 +4557,7 @@ B. Device Manager
 C. System Configuration
 D. Data Sources
 Answer: A
-Reference: http://support.microsoft.com/kb/309000
+Description: http://support.microsoft.com/kb/309000
 QUESTION NO: 435
 A technician is trying to troubleshoot an issue on a Windows 7 computer remotely, but is unable to
 PING the computer. The technician verified that the computer is turned on, has network
@@ -4593,7 +4567,7 @@ B. Local security policy settings is incorrect
 C. Wake-on-LAN is disabled
 D. Windows firewall is enabled
 Answer: D
-Reference: http://pcrepairaugustaga.com/computer-dust-free/
+Description: http://pcrepairaugustaga.com/computer-dust-free/
 QUESTION NO: 436
 A technician notices a computer is overheating after 30 minutes of use. Which of the following is
 the MOST likely cause?
@@ -4604,7 +4578,7 @@ C. Incorrect input voltage setting
 
 D. ACPI is disabled
 Answer: B
-Reference: http://pcrepairaugustaga.com/computer-dust-free/
+Description: http://pcrepairaugustaga.com/computer-dust-free/
 QUESTION NO: 437
 A technician is having boot issues with a newly built PC, and notices the following jumper
 configurations for each PATA device:
@@ -4616,7 +4590,7 @@ B. HDD. Cable Select; Optical Drive. Cable Select
 C. HDD. Slave; Optical Drive. Slave
 D. HDD. Master; Optical Drive. Master
 Answer: B
-Reference: http://www.computerhope.com/jargon/c/cablsele.htm
+Description: http://www.computerhope.com/jargon/c/cablsele.htm
 QUESTION NO: 438
 A technician troubleshoots a broken PC only to find that a strong burning odor is coming from
 inside the case. Which of the following parts MOST likely experienced a level of electrical burn?
@@ -4625,7 +4599,7 @@ B. Processor
 C. CMOS battery
 D. Hard drive
 Answer: A
-Reference: http://forums.thinkbroadband.com/hardware/4194025-that-acrid-electrical-burningsmell.
+Description: http://forums.thinkbroadband.com/hardware/4194025-that-acrid-electrical-burningsmell.
 html?fpart=all&vc=1
 
 
@@ -4638,7 +4612,7 @@ B. The hard drive is disconnected.
 C. The hard drive has corrupted sectors and needs a CHKDSK scan.
 D. Both PATA devices are incorrectly set to the master jumper setting.
 Answer: D
-Reference: http://wdc.custhelp.com/app/answers/detail/a_id/981/~/how-to-physically-install,-setjumper-
+Description: http://wdc.custhelp.com/app/answers/detail/a_id/981/~/how-to-physically-install,-setjumper-
 settings,-and-set-up-a-serial-ata,-eide
 QUESTION NO: 440
 A technician is troubleshooting a RAID 6 array on a high end CAD/CAM workstation. Two disk
@@ -4649,8 +4623,7 @@ B. Reseat the drives, backup the data, and then replace them.
 C. Reseat the drives and monitor the RAID status over a few days.
 D. Replace the failed drives and restore the data from a known good backup.
 Answer: A
-Reference:
-http://download.intel.com/support/motherboards/server/sb/intel_raid_basic_troubleshooting_guide
+Description: http://download.intel.com/support/motherboards/server/sb/intel_raid_basic_troubleshooting_guide
 _v2_0.pdf
 QUESTION NO: 441
 A technician is called in to troubleshoot a four disk RAID 10 array on a high end Windows 7
@@ -4663,7 +4636,7 @@ B. Replace the failed drive and verify the RAID is healthy.
 C. Replace the failed drive and restore the data.
 D. Add a fifth drive and make it a spare.
 Answer: B
-Reference: https://wiki.archlinux.org/index.php/RAID
+Description: https://wiki.archlinux.org/index.php/RAID
 QUESTION NO: 442
 A user states their Windows XP desktop PC fails to boot to the Windows logo. Which of the
 following tools could a technician use to help diagnose if there is a pre-boot failure?
@@ -4672,7 +4645,7 @@ B. POST card
 C. Power supply tester
 D. BIOS flash
 Answer: B
-Reference: http://en.wikipedia.org/wiki/POST_card
+Description: http://en.wikipedia.org/wiki/POST_card
 QUESTION NO: 443
 A user’s computer will not boot. A technician notices four indicator lights on the backside of the
 computer. Two of the lights are green, and two are amber. Which of the following documentation
@@ -4696,7 +4669,7 @@ B. Identify the problem
 C. Establish a theory
 D. Establish a plan of action to resolve the problem
 Answer: B
-Reference: http://compcamp.blogspot.com/2011/10/comptia-six-step-troubleshooting.html
+Description: http://compcamp.blogspot.com/2011/10/comptia-six-step-troubleshooting.html
 QUESTION NO: 445
 An alert needs to be sent to the administrator when the CPU stays above 90% for a period of time.
 Which of the following tools would BEST be used to accomplish this?
@@ -4705,7 +4678,7 @@ B. Task Scheduler
 C. Task Manager
 D. System Configuration
 Answer: A
-Reference: http://technet.microsoft.com/en-us/library/cc749249.aspx
+Description: http://technet.microsoft.com/en-us/library/cc749249.aspx
 QUESTION NO: 446
 A customer calls and states the new plasma display they just received has yellow spots all over
 the screen. Which of the following is the MOST likely cause of this issue?
@@ -4716,7 +4689,7 @@ C. Dropped in shipping
 
 D. Incorrect installation
 Answer: B
-Reference: http://en.wikipedia.org/wiki/Defective_pixel
+Description: http://en.wikipedia.org/wiki/Defective_pixel
 QUESTION NO: 447
 A customer calls and reports that when they walk away from their laptop for an extended period of
 time they have to reconnect to wireless when they get back. Which of the following will MOST
@@ -4726,7 +4699,7 @@ B. Adjust power settings
 C. Replace the wireless card
 D. Install a higher capacity battery
 Answer: B
-Reference: http://www.wikihow.com/Adjust-Power-Settings-in-a-Windows-Vista-Laptop
+Description: http://www.wikihow.com/Adjust-Power-Settings-in-a-Windows-Vista-Laptop
 QUESTION NO: 448
 Which of the following tools and test equipment is routinely magnetized and should be used with
 caution around magnetic media?
@@ -4735,8 +4708,7 @@ B. Power supply testers
 C. Cable testers
 D. Pliers
 Answer: A
-Reference:
-http://www.chabotcollege.edu/faculty/netacad/prot/ITE/course/module2/2.2.4.3/2.2.4.3.html
+Description: http://www.chabotcollege.edu/faculty/netacad/prot/ITE/course/module2/2.2.4.3/2.2.4.3.html
 QUESTION NO: 449
 Which of the following utilities will display a listing of active IP ports on the computer being tested?
 
@@ -4746,7 +4718,7 @@ B. PING
 C. IPCONFIG
 D. TRACERT
 Answer: A
-Reference: http://pcsupport.about.com/od/commandlinereference/p/netstat-command.htm
+Description: http://pcsupport.about.com/od/commandlinereference/p/netstat-command.htm
 QUESTION NO: 450
 Which of the following commands may be used on a computer, running Windows 7, to stop a
 single process from the command line?
@@ -4755,7 +4727,7 @@ B. KILL
 C. SHUTDOWN
 D. DEL
 Answer: B
-Reference: http://www.tech-recipes.com/rx/446/xp_kill_windows_process_command_line_taskkill/
+Description: http://www.tech-recipes.com/rx/446/xp_kill_windows_process_command_line_taskkill/
 QUESTION NO: 451
 A technician is about to put a computer back into service that has not been turned on for many
 months. It was healthy when taken out of service and boots quickly without any problems. Which
@@ -4779,7 +4751,7 @@ B. Turn off the computer using the power switch.
 C. Unplug it from the network.
 D. Run an antivirus update and then a full scan.
 Answer: C
-Reference: http://en.wikipedia.org/wiki/Zero-day_virus
+Description: http://en.wikipedia.org/wiki/Zero-day_virus
 QUESTION NO: 453
 A user is reporting their web browser is not going to the site they are attempting to access. Which
 of the following would BEST resolve this?
@@ -4802,7 +4774,7 @@ B. Restart the system, booting from a system recovery disk.
 C. Restart the system to verify the proper boot sequence.
 D. Inform the customer the hard drive has crashed and replace the drive.
 Answer: C
-Reference: http://www.tomshardware.com/forum/55646-2-boot-device-available
+Description: http://www.tomshardware.com/forum/55646-2-boot-device-available
 QUESTION NO: 455
 The technician is dispatched to a user’s home to secure a wireless network. The SOHO user has
 only one system to connect wirelessly, yet wishes to protect their Wi-Fi from unauthorized use.
@@ -4812,7 +4784,7 @@ B. Configure the use of DHCP.
 C. Configure the use of static IP addresses.
 D. Configure the network to utilize a proxy.
 Answer: A
-Reference: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
+Description: http://compnetworking.about.com/cs/wirelessproducts/qt/macaddress.htm
 QUESTION NO: 456
 A user has installed a new wireless router and is unable to connect their game console to the
 manufacturer’s service. Which of the following should the technician look for FIRST?
@@ -4836,7 +4808,7 @@ B. Check the printer connection.
 C. Reboot the computer.
 D. Stop and start the printer.
 Answer: A
-Reference: http://www.howtogeek.com/100358/how-to-cancel-or-delete-a-stuck-print-job-in-thewindows-
+Description: http://www.howtogeek.com/100358/how-to-cancel-or-delete-a-stuck-print-job-in-thewindows-
 print-queue/
 QUESTION NO: 458
 A workstation is making a loud clicking noise that is originating from the hard drive and it is not
@@ -4846,7 +4818,7 @@ B. Put the hard drive in another system and back up all data from it.
 C. Run CHKDSK immediately and replace the drive if it is bad.
 D. Format the drive and restore from a previous image.
 Answer: B
-Reference: http://harddriveclicking.net/
+Description: http://harddriveclicking.net/
 QUESTION NO: 459
 A user is reporting that they cannot connect to the wireless network from their office but they were
 able to connect yesterday. Which of the following would be the MOST likely reason?
@@ -4857,7 +4829,7 @@ B. Radio switch on laptop is disabled
 C. Channel interference
 D. User is too far away from the access point
 Answer: B
-Reference: http://en.kioskea.net/forum/affich-130312-wifi-radio-disabled-of-my-laptop-how-turn-on
+Description: http://en.kioskea.net/forum/affich-130312-wifi-radio-disabled-of-my-laptop-how-turn-on
 QUESTION NO: 460
 A user reports that their PC does not work. Which of the following would be the BEST question for
 the technician to ask the user to get further information?
@@ -4890,7 +4862,7 @@ B. Inform the user
 C. Report to the supervisor
 D. Establish a plan of action
 Answer: D
-Reference: http://technet.microsoft.com/en-us/library/bb457121.aspx
+Description: http://technet.microsoft.com/en-us/library/bb457121.aspx
 QUESTION NO: 463
 A technician is dispatched to a location that has multiple laser printers. One of the network printers
 is printing what appears to be a shadow image. The technician could solve this issue by:
@@ -4899,8 +4871,7 @@ B. running calibrate
 C. replacing the network cable
 D. replacing the drum
 Answer: D
-Reference:
-http://sfsd.k12.pa.us/Teacher_Resources/UserGuides/Printing/Replacing%20Toner.htm
+Description: http://sfsd.k12.pa.us/Teacher_Resources/UserGuides/Printing/Replacing%20Toner.htm
 QUESTION NO: 464
 A user will be installing a switch in a public location and will allow the six users in the office to
 connect to it with CAT6 Ethernet. Which of the following actions would BEST ensure that there is
@@ -4912,7 +4883,7 @@ B. Disable new VLANS
 C. Disable unused ports
 D. Disable PoE
 Answer: C
-Reference: http://www.orbit-computer-solutions.com/How-To-Configure-Switch-Security.php
+Description: http://www.orbit-computer-solutions.com/How-To-Configure-Switch-Security.php
 QUESTION NO: 465
 The technician is dispatched to look at a user’s laptop. The user reports the system shuts down
 after 30 minutes of field use. The technician notices the battery is not fully charging. Which of the
@@ -4922,7 +4893,7 @@ B. Discharge the battery using a static mat.
 C. Change the power setting on the laptop to use less power.
 D. Replace the battery.
 Answer: D
-Reference: http://www.wikihow.com/Fix-a-Laptop-that-is-not-Charging
+Description: http://www.wikihow.com/Fix-a-Laptop-that-is-not-Charging
 QUESTION NO: 466
 A new application is installed which adds three new services to a customer’s PC. The customer
 asks for help, because the new application will not start. A technician investigates and finds that
@@ -4934,7 +4905,7 @@ C. Log files for the new application
 D. Event Viewer
 E. %SystemDir%\System32\Drivers
 Answer: C,D
-Reference: http://en.wikipedia.org/wiki/Event_Viewer
+Description: http://en.wikipedia.org/wiki/Event_Viewer
 
 
 QUESTION NO: 467
@@ -4946,7 +4917,7 @@ B. Manually set the IP address to 10.168.1.1, and then access the website at 192
 C. Use an Internet browser to access the router configuration at 192.168.1.1.
 D. Use Windows Explorer and search for a file called 192.168.1.1.
 Answer: C
-Reference: http://compnetworking.about.com/od/routers/g/192_168_1_1_def.htm
+Description: http://compnetworking.about.com/od/routers/g/192_168_1_1_def.htm
 QUESTION NO: 468
 A technician is changing out a toner cartridge in a high volume printer. As they are removing the
 empty cyan cartridge, a large amount of blue powder falls out onto rollers in the immediate area.
@@ -4956,7 +4927,7 @@ B. Use a toner vacuum to remove the spilled toner from the undesired surfaces.
 C. Use compressed air to remove the spilled toner from the undesired surfaces.
 D. Use the maintenance kit to remove and replace the affected parts.
 Answer: B
-Reference: http://smallbusiness.chron.com/clean-up-copier-toner-spills-64645.html
+Description: http://smallbusiness.chron.com/clean-up-copier-toner-spills-64645.html
 QUESTION NO: 469
 A user is running a RAID 0 array and has problems with one of the drives. Which of the following
 actions will the technician take NEXT?
@@ -4967,7 +4938,7 @@ D. Remap the RAID array to another drive letter to recover the data.
 Answer: C
 
 
-Reference: http://www.pcworld.com/article/2026358/multiple-hard-drives-working-together-allabout-
+Description: http://www.pcworld.com/article/2026358/multiple-hard-drives-working-together-allabout-
 raids.html
 QUESTION NO: 470
 A user with a CRT monitor notes that there is a discolored area in a portion of their screen. Which
@@ -4977,7 +4948,7 @@ B. The video card drivers need to be upgraded
 C. Bad monitor
 D. The screen needs to be degaussed
 Answer: D
-Reference: http://www.wikihow.com/Degauss-a-Computer-Monitor
+Description: http://www.wikihow.com/Degauss-a-Computer-Monitor
 QUESTION NO: 471
 A user reports an issue of intermittent Read / Write errors occurring on their PC. Which of the
 following actions would a technician MOST likely take?
@@ -4986,7 +4957,7 @@ B. Update definitions and run a virus scan
 C. Low level format the drive
 D. Run CHKDSK on the drive
 Answer: D
-Reference: http://askleo.com/checking-and-repairing-a-disk-with-chkdsk/
+Description: http://askleo.com/checking-and-repairing-a-disk-with-chkdsk/
 QUESTION NO: 472
 A user reports a loud clicking noise coming from their PC, but the PC operates normally.
 Which of the following actions should the technician perform FIRST when responding to this
@@ -4998,7 +4969,7 @@ B. Shutdown the PC and replace the hard drive
 C. Format the hard drive and reload the OS
 D. Run the disk cleanup utility
 Answer: A
-Reference: http://burgessforensics.com/article_what_to_do.php
+Description: http://burgessforensics.com/article_what_to_do.php
 QUESTION NO: 473
 A user states they have rebooted the printer and it is displaying “PC load letter”. Which of the
 following is the MOST likely cause?
@@ -5007,7 +4978,7 @@ B. The printer is out of paper.
 C. The fuser needs to be replaced.
 D. The toner cartridge is low.
 Answer: B
-Reference: http://www.tomshardware.com/forum/16050-3-load-letter-error
+Description: http://www.tomshardware.com/forum/16050-3-load-letter-error
 QUESTION NO: 474
 A technician needs to remove the ability of standard users to shut down or restart a shared
 computer. Which of the following commands can be used to accomplish this task?
@@ -5016,7 +4987,7 @@ B. shutdown.exe
 C. bootrec.exe
 D. gpedit.msc
 Answer: D
-Reference: http://support.microsoft.com/kb/307882
+Description: http://support.microsoft.com/kb/307882
 QUESTION NO: 475
 
 
@@ -5029,7 +5000,7 @@ B. The print queue is holding jobs from printing.
 C. The paper weight is too heavy for the printer.
 D. The paper size for the tray is incorrect in the printer setup.
 Answer: D
-Reference: http://support.microsoft.com/kb/284867
+Description: http://support.microsoft.com/kb/284867
 QUESTION NO: 476
 A technician recently installed Windows 7 on a PC. The technician is unable to connect to the PC
 remotely using RDP, but is able to ping the PC. Which of the following is the MOST likely cause?
@@ -8476,7 +8447,7 @@ network. What would be the EASIEST way to do this?
 A. MAC filtering
 B. Static IP address
 C. Pending
-D. Pending
+D. Dynamic IP Address
 Answer: A
 Explanation:
 QUESTION NO: 805

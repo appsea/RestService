@@ -17,7 +17,7 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
-        patternParsersForFile.put("CompTIA A+.txt", getFirstPatternParser());
+        patternParsersForFile.put("CompTIA A+.txt", getCompTIAParser());
         patternParsersForFile.put("Categories Base SAS.txt", getCategoryParser());
         patternParsersForFile.put("dvsa.txt", getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
@@ -66,6 +66,13 @@ public class PatternParserFactory {
         String descriptionRegex = "^Description:.*";
         String categoryRegex = "^Category:.*";
         return DynamicPatternParser.getParserWithCategory(newQuestionRegex, optionRegex, answerRegex, descriptionRegex, categoryRegex);
+    }
+
+    public static PatternParser getCompTIAParser() {
+        String newQuestionRegex = "^QUESTION NO:.*";
+        String optionRegex = "^[A-E][.]\\s.*";
+        String answerRegex = "^Answer. .*";
+        return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
     }
 
     public static void addPatternParser(String file, PatternParser patternParser) {
