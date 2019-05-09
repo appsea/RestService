@@ -106,6 +106,14 @@ public class Question {
         this.explanation.append(description).append("\n");
     }
 
+    public void setDescription(String description) {
+        this.description = new StringBuilder(description);
+    }
+
+    public void setExplanation(String explanation) {
+        this.explanation = new StringBuilder(explanation);
+    }
+
     @JsonIgnore
     public String getErrorMessage() {
         return errorMessage;

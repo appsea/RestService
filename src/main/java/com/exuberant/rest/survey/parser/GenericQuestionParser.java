@@ -11,10 +11,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -147,9 +144,9 @@ public class GenericQuestionParser implements QuestionParser {
 
     private void trimQuestions(List<Question> questions) {
         for (Question question : questions) {
-            // question.setDescri
+            question.setDescription(replaceAll(question.getDescription()));
+            question.setExplanation(replaceAll(question.getExplanation()));
         }
-
     }
 
     static String replaceAll(String string) {

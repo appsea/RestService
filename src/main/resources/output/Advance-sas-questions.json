@@ -2,7 +2,7 @@
   "questions" : [ {
     "number" : 1,
     "description" : "The following SAS program is submitted:\n\nData sasuser.history;\nSet sasuser.history(keep=state x y\nRename = (state=ST));\nTotal=sum(x, y);\nRun;\n\nThe SAS data set SASUSER.HISTORY has an index on the variable STATE.\nWhich describes the result of submitting the SAS program?",
-    "explanation" : "The index does not delete just because the variable associated with it has a change in name from State to ST. Because it's not deleted, it's not 're-created' either, simply updated.\n",
+    "explanation" : "The index does not delete just because the variable associated with it has a change in name from State to ST. Because it's not deleted, it's not 're-created' either, simply updated.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The index on STATE is deleted and an index on ST is created",
@@ -1304,7 +1304,7 @@
   }, {
     "number" : 63,
     "description" : "How many statements does the program below contain?\n\nproc sql;\nselect grapes,oranges,\ngrapes + oranges as sumsales\nfrom sales.produce\norder by sumsales;",
-    "explanation" : "There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.\n",
+    "explanation" : "There are two statements, the PROC SQL statement and the SELECT statement. The SELECT statement contains three clauses.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. two",
@@ -1535,7 +1535,7 @@
   }, {
     "number" : 74,
     "description" : "You are creating a PROC SQL query that lists all employees who have spent (or overspent) their allotted 120 hours of vacation for the current year. The hours that each employee used are stored in the existing column Spent. Your query defines a new column, Balance, to calculate each employee's balance of vacation hours.\nWhich query produces the report that you want?",
-    "explanation" : "When a WHERE clause references a new column that was defined in the SELECT clause, the WHERE clause must specify the keyword CALCULATED before the column name.\n",
+    "explanation" : "When a WHERE clause references a new column that was defined in the SELECT clause, the WHERE clause must specify the keyword CALCULATED before the column name.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\nselect name, spent,\n120-spent as calculated Balance\nfrom Company.Absences\nwhere balance <= 0;",
@@ -1577,7 +1577,7 @@
   }, {
     "number" : 76,
     "description" : "You are writing a PROC SQL query that displays the names of all library cardholders who work as volunteers for the library, and the number of books that each volunteer currently has checked out. You use one or both of the following tables:\nLibrary.Circulation lists the name and contact information for all library cardholders, and the number of books that each cardholder currently has checked out.\nLibrary.Volunteers lists the name and contact information for all library volunteers.Assume that the values of Name are unique in both tables.\nWhich of the following PROC SQL queries produces your report?",
-    "explanation" : "Your PROC SQL query needs to use data from both tables. The outer query reads the name and number of books checked out from Library.Circulation. The multiple-value noncorrelated subquery selects the names of volunteers from Library.Volunteers and passes these names back to the outer query. The outer query then selects data for only the volunteers whose names match names returned by the subquery. The subquery is indented under the outer query's WHERE clause, is enclosed in parentheses, and does not require a semicolon inside the closing parenthesis.\n",
+    "explanation" : "Your PROC SQL query needs to use data from both tables. The outer query reads the name and number of books checked out from Library.Circulation. The multiple-value noncorrelated subquery selects the names of volunteers from Library.Volunteers and passes these names back to the outer query. The outer query then selects data for only the volunteers whose names match names returned by the subquery. The subquery is indented under the outer query's WHERE clause, is enclosed in parentheses, and does not require a semicolon inside the closing parenthesis.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\nselect name, checkedout\nfrom library.circulation\nwhere * in\n(select *\nfrom library.volunteers);",
@@ -2081,7 +2081,7 @@
   }, {
     "number" : 100,
     "description" : "Which PROC SQL step returns the names of all the students who took both the PROG1 and PROG2 classes?\n\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\nPROG1 PROG2\nFNAME       LNAME\nDori        O'niel\nPete        Henry",
-    "explanation" : "The set operator INTERSECT returns all rows that are common to both tables. Specifying the keyword ALL suppresses PROC SQL's additional pass through the data to eliminate duplicate rows.\n",
+    "explanation" : "The set operator INTERSECT returns all rows that are common to both tables. Specifying the keyword ALL suppresses PROC SQL's additional pass through the data to eliminate duplicate rows.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\nselect fname, lname\nfrom prog1\nunion\nselect fname, lname\nfrom prog2;",
@@ -2102,7 +2102,7 @@
   }, {
     "number" : 101,
     "description" : "Which PROC SQL step generates the same results as the following DATA step?\n\nPROG1\nFNAME       LNAME\nPete        Henry\nMary        Johnson\nAlex        Kinsley\nDori        O'niel\n\nPROG2\nFNAME       LNAME\nClara       Adams\nPete        Henry\nDori        O'niel\nCindy       Philips\nMandy       Young\n\ndata allstudents;\nset prog1 prog2;\nby lname;\nrun;\nproc print noobs;\nrun;",
-    "explanation" : "The DATA step returns all rows from the first table along with all rows from the second table, maintaining the order specified in the BY statement. Same-named columns are overlaid by default. The set operator OUTER UNION returns all rows from both tables. The CORR keyword causes same-named columns to be overlaid. The ORDER BY clause causes the result rows to be ordered by values of the specified column (LName).\n",
+    "explanation" : "The DATA step returns all rows from the first table along with all rows from the second table, maintaining the order specified in the BY statement. Same-named columns are overlaid by default. The set operator OUTER UNION returns all rows from both tables. The CORR keyword causes same-named columns to be overlaid. The ORDER BY clause causes the result rows to be ordered by values of the specified column (LName).",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\nselect fname, lname\nfrom prog1\nouter union corr\nselect fname, lname\nfrom prog2\norder by lname;",
@@ -2165,7 +2165,7 @@
   }, {
     "number" : 104,
     "description" : "Which of the following statements is true regarding the UNDO_POLICY=REQUIRED option?",
-    "explanation" : "UNDO POLICY=REQUIRED is the default setting for PROC SQL. This setting undoes all inserts or updates if 1 or more rows violate the integrity constraint criteria, and restores the table to its original state before the inserts or updates.\n",
+    "explanation" : "UNDO POLICY=REQUIRED is the default setting for PROC SQL. This setting undoes all inserts or updates if 1 or more rows violate the integrity constraint criteria, and restores the table to its original state before the inserts or updates.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. It must be used with the REQUIRED integrity constraint.",
@@ -2207,7 +2207,7 @@
   }, {
     "number" : 106,
     "description" : "Which of the following PROC SQL steps deletes rows for all frequent-flyer program members who traveled less than 10,000 miles?",
-    "explanation" : "The DELETE statement deletes rows that are specified in the WHERE clause from the table. If no WHERE clause is specified, all rows are deleted. The DROP TABLE statement drops (deletes) an entire table; the syntax shown in option c is not valid.\n",
+    "explanation" : "The DELETE statement deletes rows that are specified in the WHERE clause from the table. If no WHERE clause is specified, all rows are deleted. The DROP TABLE statement drops (deletes) an entire table; the syntax shown in option c is not valid.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sql;\ndelete rows\nfrom work.frequentflyers\nwhere milestraveled < 10000;",
@@ -3888,7 +3888,7 @@
   }, {
     "number" : 186,
     "description" : "When you submit a call to a compiled macro, what happens?",
-    "explanation" : "An index can improve the efficiency with which SAS is able to access certain observations in a data set. However, an index is not always useful. SAS will not use an index to process subsetting IF statements, or other statements that SAS determines might be more efficiently processed without an index.\n",
+    "explanation" : "An index can improve the efficiency with which SAS is able to access certain observations in a data set. However, an index is not always useful. SAS will not use an index to process subsetting IF statements, or other statements that SAS determines might be more efficiently processed without an index.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. First, the macro processor checks all macro programming statements in the macro for syntax errors.\nThen the macro processor executes all statements in the macro.",
@@ -4035,7 +4035,7 @@
   }, {
     "number" : 193,
     "description" : "What happens when the following program is submitted?\n\nproc append base=staff.marketing\ndata=staff.sales force;\nrun;\nData Set Description for Staff.Marketing\nVariable        Type        Length\nLastName        char        12\nFirstName       char        10\nEmpID           char        5\nOffice          char        4\nPhone           char        12\n\nData Set Description for Staff.Sales\nVariable        Type        Length\nLastName        char        20\nFirstName       char        10\nEmpID           char        5\nOffice          char        4\nPhone           char        12",
-    "explanation" : "If a DATA= data set contains variables that are longer than the corresponding variables in the BASE= data set, the FORCE option must be used with PROC APPEND. Using the FORCE option enables you to append the data sets. However, some of the variable values may be truncated in the observations that are read in from the DATA= data set.\n",
+    "explanation" : "If a DATA= data set contains variables that are longer than the corresponding variables in the BASE= data set, the FORCE option must be used with PROC APPEND. Using the FORCE option enables you to append the data sets. However, some of the variable values may be truncated in the observations that are read in from the DATA= data set.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The length of LastName is converted to 20 in Staff.Marketing.",
@@ -4077,7 +4077,7 @@
   }, {
     "number" : 195,
     "description" : "What happens when the SAS data set Work.NewHires is appended to the SAS data set Work.Employees using PROC APPEND?\nData Set Description for Work.Employees\nVariable    Type    Length\nDivision    num     8\nEmpID       num     8\nName        char    20\nRoom        char    5\nExtension   num     8\n\nData Set Description for Work.NewHires\nVariable    Type    Length\nDivision    num     8\nEmpID       num     8\nName        char    20\nExtension   num     8",
-    "explanation" : "When the BASE= data set contains more variables than the DATA= data set, missing values for the additional variables are assigned to the observations that are read in from the DATA= data set.\n",
+    "explanation" : "When the BASE= data set contains more variables than the DATA= data set, missing values for the additional variables are assigned to the observations that are read in from the DATA= data set.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Missing values are assigned to Room for the observations that are read in from Work.NewHires.",
@@ -4098,7 +4098,7 @@
   }, {
     "number" : 196,
     "description" : "You do not need to use the FORCE option with PROC APPEND when the following is true:",
-    "explanation" : "The FORCE option does not need to be used if the BASE= data set contains variables that are not in the DATA= data set. The FORCE option must be used if\nthe DATA= data set contains variables that are not in the BASE= data set\nthe variables in the DATA= data set are longer than the corresponding variables in the BASE= data set\nthe variables in the DATA= data set have a different type than the corresponding variables in the BASE= data set.\n",
+    "explanation" : "The FORCE option does not need to be used if the BASE= data set contains variables that are not in the DATA= data set. The FORCE option must be used if\nthe DATA= data set contains variables that are not in the BASE= data set\nthe variables in the DATA= data set are longer than the corresponding variables in the BASE= data set\nthe variables in the DATA= data set have a different type than the corresponding variables in the BASE= data set.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. the DATA= data set contains variables that are not in the BASE= data set.",
@@ -4140,7 +4140,7 @@
   }, {
     "number" : 198,
     "description" : "Suppose you want to merge Dataset1, Dataset2, and Dataset3. Also suppose that Dataset1 and Dataset2 have the common variable Startdate, that Dataset2 and Dataset3 have the common variable Instructor, and that these data sets have no other common variables. How can you use a DATA step to merge these three data sets into one new data set?",
-    "explanation" : "In order to merge multiple data sets in a DATA step, the data sets must have a common variable. However, if there are variables that are common to at least two of the input data sets, and if each input data set contains at least one of these variables, then you can use subsequent DATA steps to merge the data sets. You can also use a PROC SQL step to merge data sets that do not have common variables.\n",
+    "explanation" : "In order to merge multiple data sets in a DATA step, the data sets must have a common variable. However, if there are variables that are common to at least two of the input data sets, and if each input data set contains at least one of these variables, then you can use subsequent DATA steps to merge the data sets. You can also use a PROC SQL step to merge data sets that do not have common variables.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. You use a MERGE statement in one DATA step to merge Dataset1, Dataset2, and Dataset3 by Startdate and Instructor.",
@@ -4434,7 +4434,7 @@
   }, {
     "number" : 212,
     "description" : "Given the following program, which statement is not true?\n\ndata work.lookup1;\narray Targets{1997:1999,12} _temporary_;\nif _n_=1 then do i= 1 to 3;\nset sasuser.ctargets;\narray Mnth{*} Jan--Dec;\ndo j=1 to dim(mnth);\ntargets{year,j}=mnth{j};\nend;\nend;\nset sasuser.monthsum(keep=salemon revcargo monthno);\nyear=input(substr(salemon,4),4.);\nCtarget=targets{year,monthno};\nrun;",
-    "explanation" : "The IF-THEN statement specifies that the Targets array is loaded only once, during the first iteration of the DATA step. During the first iteration of the DATA step, the condition _N_=1 is true, so the outer DO loop executes three times; once for each observation in Sasuser.Ctargets. After the third iteration of the DO loop, the pointer drops down to the second SET statement and the values from the first observation in Sasuser.Monthum are read into the program data vector. During the second iteration of the DATA step, the condition _N_=1 is false. So, the DO loop doesn't execute again.\n",
+    "explanation" : "The IF-THEN statement specifies that the Targets array is loaded only once, during the first iteration of the DATA step. During the first iteration of the DATA step, the condition _N_=1 is true, so the outer DO loop executes three times; once for each observation in Sasuser.Ctargets. After the third iteration of the DO loop, the pointer drops down to the second SET statement and the values from the first observation in Sasuser.Monthum are read into the program data vector. During the second iteration of the DATA step, the condition _N_=1 is false. So, the DO loop doesn't execute again.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The IF-THEN statement specifies that the Targets array is loaded once.",
@@ -4854,7 +4854,7 @@
   }, {
     "number" : 232,
     "description" : "Which code deletes all generations of the data set Sasuser.Amounts including the base data set?",
-    "explanation" : "The keyword ALL is used to indicate that you want to delete all generations of the specified data set, including the base version. The keyword HIST deletes the generation data sets, but saves the base version.\n",
+    "explanation" : "The keyword ALL is used to indicate that you want to delete all generations of the specified data set, including the base version. The keyword HIST deletes the generation data sets, but saves the base version.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc datasets lib=sasuser nolist;\ndelete amounts (gennum=ALL);\nquit;",

@@ -169,7 +169,7 @@
     } ]
   }, {
     "number" : 9,
-    "description" : "\n\nA technician notices multiple disk errors in the Event Viewer. Which of the following tools would\nBEST diagnose this issue?",
+    "description" : "A technician notices multiple disk errors in the Event Viewer. Which of the following tools would\nBEST diagnose this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -341,7 +341,7 @@
     } ]
   }, {
     "number" : 17,
-    "description" : "\n\nWhich of the following is true about a file when it is copied from an NTFS to a FAT32 partitions?",
+    "description" : "Which of the following is true about a file when it is copied from an NTFS to a FAT32 partitions?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -635,7 +635,7 @@
     } ]
   }, {
     "number" : 31,
-    "description" : "\n\nA user’s PC breaks and a technician needs to configure a new machine with a copy of their\ncomputer image stored on a remote server. Which of the following technologies would help RIS\ninstall this image?",
+    "description" : "A user’s PC breaks and a technician needs to configure a new machine with a copy of their\ncomputer image stored on a remote server. Which of the following technologies would help RIS\ninstall this image?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1504,7 +1504,7 @@
     } ]
   }, {
     "number" : 72,
-    "description" : "\n\nA technician needs to decrease the time it takes to install an operating system on 100 computers.\nWhich of the following installations would the technician use to reduce hands-on time spent on\neach computer?",
+    "description" : "A technician needs to decrease the time it takes to install an operating system on 100 computers.\nWhich of the following installations would the technician use to reduce hands-on time spent on\neach computer?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -2201,7 +2201,7 @@
     } ]
   }, {
     "number" : 105,
-    "description" : "\n\nA technician is creating an image that will be used to deploy Windows 7 to 100 PCs. Which of the\nfollowing tools should be used to accomplish this?",
+    "description" : "A technician is creating an image that will be used to deploy Windows 7 to 100 PCs. Which of the\nfollowing tools should be used to accomplish this?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -3162,7 +3162,7 @@
     } ]
   }, {
     "number" : 150,
-    "description" : "\n\nA Windows XP computer is displaying an error that states \"virtual memory is running low\". Which\nof the following tabs in the system Control Panel is used to reconfigure virtual memory settings?",
+    "description" : "A Windows XP computer is displaying an error that states \"virtual memory is running low\". Which\nof the following tabs in the system Control Panel is used to reconfigure virtual memory settings?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -3397,7 +3397,7 @@
     } ]
   }, {
     "number" : 161,
-    "description" : "\n\nWhich of the following is MOST effective in preventing security breaches on a network? (Select\nTHREE).",
+    "description" : "Which of the following is MOST effective in preventing security breaches on a network? (Select\nTHREE).",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -8472,7 +8472,7 @@
     } ]
   }, {
     "number" : 396,
-    "description" : "\n\nAn IR printer stops working for half of an office while the other half is able to print. Which of the\nfollowing should be checked FIRST?",
+    "description" : "An IR printer stops working for half of an office while the other half is able to print. Which of the\nfollowing should be checked FIRST?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -8862,7 +8862,7 @@
     } ]
   }, {
     "number" : 414,
-    "description" : "\n\nA user calls the helpdesk and states that they are receiving an IP conflict error on their computer.\nThe user is on a company network that uses DHCP. The technician verified the PC is using DHCP\nto obtain TCP/IP settings.\nWhich of the following commands should the helpdesk technician use to resolve this issue?\n(Select TWO).",
+    "description" : "A user calls the helpdesk and states that they are receiving an IP conflict error on their computer.\nThe user is on a company network that uses DHCP. The technician verified the PC is using DHCP\nto obtain TCP/IP settings.\nWhich of the following commands should the helpdesk technician use to resolve this issue?\n(Select TWO).",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -10117,7 +10117,7 @@
     } ]
   }, {
     "number" : 473,
-    "description" : "\n\nA user reports that all print jobs sent to a certain printer that require legal sized paper are not\nprinting. However, standard size paper jobs are printing correctly. A technician checks the paper\ntray and verifies that it is loaded with legal size paper. Which of the following is the MOST likely\ncause of the problem?",
+    "description" : "A user reports that all print jobs sent to a certain printer that require legal sized paper are not\nprinting. However, standard size paper jobs are printing correctly. A technician checks the paper\ntray and verifies that it is loaded with legal size paper. Which of the following is the MOST likely\ncause of the problem?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -11250,7 +11250,7 @@
     } ]
   }, {
     "number" : 526,
-    "description" : "\n\nA user reports that their computer restarts at 3:00 PM every day. Which of the following tools\nwould BEST help a technician troubleshoot this issue?",
+    "description" : "A user reports that their computer restarts at 3:00 PM every day. Which of the following tools\nwould BEST help a technician troubleshoot this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -11313,7 +11313,7 @@
     } ]
   }, {
     "number" : 529,
-    "description" : "\n\nA technician is having connectivity issues with a client’s machine. The client’s wall jack passed\ntesting and the technician also uses a loopback to test the NIC on the PC and it also passed\ntesting. Which of the following tools would a technician use to test between the wall jack and the\nPC?",
+    "description" : "A technician is having connectivity issues with a client’s machine. The client’s wall jack passed\ntesting and the technician also uses a loopback to test the NIC on the PC and it also passed\ntesting. Which of the following tools would a technician use to test between the wall jack and the\nPC?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -11989,7 +11989,7 @@
     } ]
   }, {
     "number" : 561,
-    "description" : "\n\nA user states that their old Windows XP notebook loses time when they power it off. Which of the\nfollowing items would address this problem?",
+    "description" : "A user states that their old Windows XP notebook loses time when they power it off. Which of the\nfollowing items would address this problem?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -12052,7 +12052,7 @@
     } ]
   }, {
     "number" : 564,
-    "description" : "\n\nA user states that they have noticed longer wait times when opening applications. Which of the\nfollowing should the technician perform in order to BEST resolve this issue?",
+    "description" : "A user states that they have noticed longer wait times when opening applications. Which of the\nfollowing should the technician perform in order to BEST resolve this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14374,7 +14374,7 @@
     } ]
   }, {
     "number" : 673,
-    "description" : "\n\nWhich of the following is the BEST way to secure a workstation which is shared by multiple users\nusing the same guest account?",
+    "description" : "Which of the following is the BEST way to secure a workstation which is shared by multiple users\nusing the same guest account?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14437,7 +14437,7 @@
     } ]
   }, {
     "number" : 676,
-    "description" : "\n\nA technician has received a laptop that is having problems with the screen. The user is reporting\nthat the display is too dim and difficult to see. Which of the following steps should the technician\ntake FIRST?",
+    "description" : "A technician has received a laptop that is having problems with the screen. The user is reporting\nthat the display is too dim and difficult to see. Which of the following steps should the technician\ntake FIRST?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16406,7 +16406,7 @@
     } ]
   }, {
     "number" : 769,
-    "description" : "\n\nA technician, Anne, observes that a laser printer prints pages with toner scattered on the page that\neasily rubs off of the paper. Which of the following components has failed in the printer?",
+    "description" : "A technician, Anne, observes that a laser printer prints pages with toner scattered on the page that\neasily rubs off of the paper. Which of the following components has failed in the printer?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16469,7 +16469,7 @@
     } ]
   }, {
     "number" : 772,
-    "description" : "\n\nWhich of the following describes when a child folder has the same permissions as its parent\nfolder?",
+    "description" : "Which of the following describes when a child folder has the same permissions as its parent\nfolder?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16532,7 +16532,7 @@
     } ]
   }, {
     "number" : 775,
-    "description" : "\n\nWhich of the following is a difference between Android and iOS operating systems?",
+    "description" : "Which of the following is a difference between Android and iOS operating systems?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16599,7 +16599,7 @@
     } ]
   }, {
     "number" : 778,
-    "description" : "\n\nJoe, a user, brings a PC in for repair, reporting that his Windows PC is no longer booting and\nreturning an error that says the OS was not found. Which of the following should the technician do\nFIRST?",
+    "description" : "Joe, a user, brings a PC in for repair, reporting that his Windows PC is no longer booting and\nreturning an error that says the OS was not found. Which of the following should the technician do\nFIRST?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -17090,7 +17090,7 @@
     } ]
   }, {
     "number" : 801,
-    "description" : "\n\nWhich operating system feature will show a hard drive's status?",
+    "description" : "Which operating system feature will show a hard drive's status?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -17161,7 +17161,7 @@
     } ]
   }, {
     "number" : 804,
-    "description" : "\n\nWhich of the following are examples of physical security? (Select the two best answers.)",
+    "description" : "Which of the following are examples of physical security? (Select the two best answers.)",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -17236,7 +17236,7 @@
     } ]
   }, {
     "number" : 807,
-    "description" : "\n\nWhat type of technology is used when pairing devices such as headsets to a smartphone?",
+    "description" : "What type of technology is used when pairing devices such as headsets to a smartphone?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -18066,7 +18066,7 @@
     } ]
   }, {
     "number" : 845,
-    "description" : "\n\nA technician is replacing a processor in a workstation. After installation, the workstation starts up\nand immediately shuts down; the technician tries to start the workstation several more times and\ngets the same result. Which of the following is the cause of this issue?",
+    "description" : "A technician is replacing a processor in a workstation. After installation, the workstation starts up\nand immediately shuts down; the technician tries to start the workstation several more times and\ngets the same result. Which of the following is the cause of this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -18129,7 +18129,7 @@
     } ]
   }, {
     "number" : 848,
-    "description" : "\n\nWhich of the following resources is MOST important for a network server running a virtual machine\nand guest operating systems?",
+    "description" : "Which of the following resources is MOST important for a network server running a virtual machine\nand guest operating systems?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -19518,7 +19518,7 @@
     } ]
   }, {
     "number" : 913,
-    "description" : "\n\nWhich of the following will help limit unauthorized access to a mobile device?",
+    "description" : "Which of the following will help limit unauthorized access to a mobile device?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -19581,7 +19581,7 @@
     } ]
   }, {
     "number" : 916,
-    "description" : "\n\nWhich of the following drive destruction methods is considered the MOST secure when dealing\nwith highly sensitive data?",
+    "description" : "Which of the following drive destruction methods is considered the MOST secure when dealing\nwith highly sensitive data?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -19644,7 +19644,7 @@
     } ]
   }, {
     "number" : 919,
-    "description" : "\n\nA user needs to find the MAC address for a Windows computer. Which of the following is the\ncorrect command?",
+    "description" : "A user needs to find the MAC address for a Windows computer. Which of the following is the\ncorrect command?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20009,7 +20009,7 @@
     } ]
   }, {
     "number" : 936,
-    "description" : "\n\nA technician, Joe, is running a diagnostic program on a laptop when it shuts down after running for\n10 minutes. Which of the following should he do before disassembling the laptop?",
+    "description" : "A technician, Joe, is running a diagnostic program on a laptop when it shuts down after running for\n10 minutes. Which of the following should he do before disassembling the laptop?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20160,7 +20160,7 @@
     } ]
   }, {
     "number" : 943,
-    "description" : "\n\nA customer reports that their new Bluetooth device has a flashing blue light. Which of the following\nis MOST likely the cause?",
+    "description" : "A customer reports that their new Bluetooth device has a flashing blue light. Which of the following\nis MOST likely the cause?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",

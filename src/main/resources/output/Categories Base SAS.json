@@ -397,7 +397,7 @@
     } ]
   }, {
     "number" : 19,
-    "description" : "\n1----5----10----15----\n(file ‘abc’)\n\nRAM,,20\nRAJU,SHARMA,24\nDATA temp;\nInfile ‘abc’ dsd;\nInput FNAME $ LNAME $ AGE;\nRUN;\n\nWhat will be the value of LNAME for 1st observation?",
+    "description" : "1----5----10----15----\n(file ‘abc’)\n\nRAM,,20\nRAJU,SHARMA,24\nDATA temp;\nInfile ‘abc’ dsd;\nInput FNAME $ LNAME $ AGE;\nRUN;\n\nWhat will be the value of LNAME for 1st observation?",
     "explanation" : "DSD option in infile statement consider consecutive delimiter as a blank value.",
     "category" : "First",
     "options" : [ {
@@ -3236,7 +3236,7 @@
   }, {
     "number" : 148,
     "description" : "The following SAS program is submitted:\n\ndata work.one;\nx = 3;\ny = 2;\nz = x ** y;\nrun;\n\nWhich one of the following is the value of the variable Z in the output data set?",
-    "explanation" : "\n** = exponentiation\nX**Y raise X to the power of Y i.e. 3 to the power of 2 = 9",
+    "explanation" : "** = exponentiation\nX**Y raise X to the power of Y i.e. 3 to the power of 2 = 9",
     "category" : "Third",
     "options" : [ {
       "tag" : "A",
@@ -3962,7 +3962,7 @@
   }, {
     "number" : 181,
     "description" : "The following SAS program is submitted:\n\ndata work.totalsales;\nset work.monthlysales(keep = year product sales);\nretain monthsales {12} ;\narray monthsales {12} ;\ndo i = 1 to 12;\nmonthsales{i} = sales;\nend;\ncnt + 1;\nmonthsales{cnt} = sales;\nrun;\n\nThe data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.\nWhich one of the following is the result of the above program?",
-    "explanation" : "\nThe syntax issue lies in this line of code - retain monthsales {12} ;. You can not use array name in retain statement.\nTo correct the syntax issue, replace retain monthsales{12} with retain msales1-msales12",
+    "explanation" : "The syntax issue lies in this line of code - retain monthsales {12} ;. You can not use array name in retain statement.\nTo correct the syntax issue, replace retain monthsales{12} with retain msales1-msales12",
     "category" : "Second",
     "options" : [ {
       "tag" : "A",
@@ -4930,7 +4930,7 @@
     } ]
   }, {
     "number" : 225,
-    "description" : "\nThe following SAS program is submitted:\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
+    "description" : "The following SAS program is submitted:\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
     "explanation" : "SAS reads the first amount 4 and we get the fist obs\n4 four\nas the sas reads amount = 7 then output, then it replaces the amount 4 to 7.\nwe get a output like this.\n7 four",
     "category" : "First",
     "options" : [ {
@@ -5239,7 +5239,7 @@
   }, {
     "number" : 239,
     "description" : "A raw data file is listed below:\nRANCH,1250,2,1,Sheppard Avenue,\"$64,000\"\nSPLIT,1190,1,1,Rand Street,\"$65,850\"\nCONDO,1400,2,1.5,Market Street,\"80,050\"\nTWOSTORY,1810,4,3,Garris Street,\"$107,250\"\nRANCH,1500,3,3,Kemble Avenue,\"$86,650\"\nSPLIT,1615,4,3,West Drive,\"94,450\"\nSPLIT,1305,3,1.5,Graham Avenue,\"$73,650\"\nThe following SAS program is submitted using the raw data file as input:\ndata work.condo_ranch;\ninfile 'file-specification' dsd;\ninput style $ @;\nif style = 'CONDO' or style = 'RANCH' then\ninput sqfeet bedrooms baths street $ price : dollar10.;\nrun;\n\nHow many observations does the WORK.CONDO_RANCH data set contain?",
-    "explanation" : "\nReason being statement \"input style $ @;\" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.",
+    "explanation" : "Reason being statement \"input style $ @;\" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.",
     "category" : "First",
     "options" : [ {
       "tag" : "A",
@@ -7174,7 +7174,7 @@
     } ]
   }, {
     "number" : 327,
-    "description" : "\nThe following SAS program is submitted:\n\ndata WORK.AUTHORS;\narray Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');\nrun;\n\nWhat is the value of the second variable in the dataset WORK.AUTHORS?",
+    "description" : "The following SAS program is submitted:\n\ndata WORK.AUTHORS;\narray Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');\nrun;\n\nWhat is the value of the second variable in the dataset WORK.AUTHORS?",
     "explanation" : "In array statement specified length of array names is 8.",
     "category" : "Third",
     "options" : [ {
@@ -8209,7 +8209,7 @@
   }, {
     "number" : 374,
     "description" : "The following SAS program is submitted:\n\ndta work.il_corn;\nset corn.state_data;\nif state = 'Illinois';\nrun;\nThe keyword \"data\" is misspelled above. What happens to this program during the compilation phase assuming \"corn\" is a valid libref?",
-    "explanation" : "It compiles and executes as SAS assumed that the 'dta' was data. But it leaves a warning in log window.\nThe log shows the following warning :\nWARNING 1-322: Assuming the symbol DATA was misspelled as dta.\n141 run;\n",
+    "explanation" : "It compiles and executes as SAS assumed that the 'dta' was data. But it leaves a warning in log window.\nThe log shows the following warning :\nWARNING 1-322: Assuming the symbol DATA was misspelled as dta.\n141 run;",
     "category" : "Third",
     "options" : [ {
       "tag" : "A",

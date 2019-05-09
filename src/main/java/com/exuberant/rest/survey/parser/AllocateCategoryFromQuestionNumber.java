@@ -16,9 +16,7 @@ public class AllocateCategoryFromQuestionNumber {
     }
 
     public String findCategoryForQuestion(int questionNumber) {
-        String category = null;
-
-        return category;
+        return map.get(questionNumber);
     }
 
     private class MinMax {

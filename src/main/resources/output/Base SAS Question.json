@@ -379,7 +379,7 @@
     } ]
   }, {
     "number" : 19,
-    "description" : "\n1----5----10----15----\n(file ‘abc’)\n\nRAM,,20\nRAJU,SHARMA,24\nDATA temp;\nInfile ‘abc’ dsd;\nInput FNAME $ LNAME $ AGE;\nRUN;\n\nWhat will be the value of LNAME for 1st observation?",
+    "description" : "1----5----10----15----\n(file ‘abc’)\n\nRAM,,20\nRAJU,SHARMA,24\nDATA temp;\nInfile ‘abc’ dsd;\nInput FNAME $ LNAME $ AGE;\nRUN;\n\nWhat will be the value of LNAME for 1st observation?",
     "explanation" : "DSD option in infile statement consider consecutive delimiter as a blank value.",
     "options" : [ {
       "tag" : "A",
@@ -653,7 +653,7 @@
   }, {
     "number" : 32,
     "description" : "The following code is submitted:\ndata temp;\nlength y $5;\nx=4;\nif x=4 then y='four';\nelse if x=7 then y='seven';\nx=7;\nrun;\n\nWhat would be the value of X and Y in the dataset temp?",
-    "explanation" : "When SAS reads in the iterations in sequence, it first writes 4 to the variable 'x' in PDV. Then it reads through the condition and writes 'four' for variable 'y' in PDV. Then it again encounters the value 7 and writes to 'x' in PDV.\n",
+    "explanation" : "When SAS reads in the iterations in sequence, it first writes 4 to the variable 'x' in PDV. Then it reads through the condition and writes 'four' for variable 'y' in PDV. Then it again encounters the value 7 and writes to 'x' in PDV.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. X=4 and Y= ‘seven’",
@@ -737,7 +737,7 @@
   }, {
     "number" : 36,
     "description" : "The following code is submitted:\ndata temp;\nsalary=.;\nif salary=. then salary=100;\nbonus=10;\nsalary=.;\ntotal=sum(salary,bonus);\nrun;\n\nWhat would be the value of TOTAL variable in the dataset TEMP?",
-    "explanation" : "In the first iteration SAS has assign value of salary ‘.’ By the given condition value of salary will be ‘100’. But in second iteration value of salary will overwrite as ‘.’. Hence final value of total will be 10.\n",
+    "explanation" : "In the first iteration SAS has assign value of salary ‘.’ By the given condition value of salary will be ‘100’. But in second iteration value of salary will overwrite as ‘.’. Hence final value of total will be 10.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 100",
@@ -779,7 +779,7 @@
   }, {
     "number" : 38,
     "description" : "the dataset XYZ is as below\nJOBCODE\nChem3\n\ndata xyz;\nset temp;\nif jobcode='CHEM3' then description='senior chemist';\nelse description='unknown';\nrun;\n\nWhat is the value of DESCRIPTION variable in the TEMP dataset?",
-    "explanation" : "We need to use UPCASE (jobcode) in if statement as the character comparison is case sensitive.\n",
+    "explanation" : "We need to use UPCASE (jobcode) in if statement as the character comparison is case sensitive.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. senior chemist",
@@ -2186,7 +2186,7 @@
   }, {
     "number" : 105,
     "description" : "What does the following statement do if firstdate and lastdate are stored as date values?\n\nnumdays = lastdate - firstdate",
-    "explanation" : "numdays will contain difference between lastate and firstdate. But lastdate, firstdate should not have any missing value else it will returns a missing value. When you use a missing value with an arithmetic operator (+, - etc), it returns a missing value.\n",
+    "explanation" : "numdays will contain difference between lastate and firstdate. But lastdate, firstdate should not have any missing value else it will returns a missing value. When you use a missing value with an arithmetic operator (+, - etc), it returns a missing value.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Causes a syntax error",
@@ -2333,7 +2333,7 @@
   }, {
     "number" : 112,
     "description" : "Which informat could be use to read the date value 01MAR91?",
-    "explanation" : "DATE7. reads dates in the form ddMMMyy.\n",
+    "explanation" : "DATE7. reads dates in the form ddMMMyy.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. mmddyy6.",
@@ -2480,7 +2480,7 @@
   }, {
     "number" : 119,
     "description" : "Which of the following correctly creates four variables which give the total quarterly sales for each quarter given that the dataset SALES contains twelve variables, month1 through month12?",
-    "explanation" : "Defining the array Qtr{4} creates the numeric variables Qtr1, Qtr2, Qtr3, Qtr4, which will be used to sum the sales for each quarter. Defining the array m{4,3} puts the variables Month1 through Month12 into four groups of three months (yearly quarters). A nested DO loop is used to reference the values of the variables Month1 through Month12 and to calculate the values of Qtr1 through Qtr4. the variables i and j are used only for loop processing. Each element in the Qtr array represents the sum of one row in the m array. The number of elements in the Qtr array should match the first dimension of the m array (that is, the number of rows in the m array). The first DO loop executes once for each of the four elements of the Qtr array.The assignment statement, qtr{i}=0, sets the value of qtr{i} to zero after each iteration of the first DO loop. Without the assignment statement, the values of Qtr1, Qtr2, Qtr3, and Qtr4 would accumulate across iterations of the data step due to the qtr{i}+m{i,j} sum statement within the DO loop. The second DO loop executes the same number of times as the second dimension of the m array (that is, the number of columns in each row of the m array).\n",
+    "explanation" : "Defining the array Qtr{4} creates the numeric variables Qtr1, Qtr2, Qtr3, Qtr4, which will be used to sum the sales for each quarter. Defining the array m{4,3} puts the variables Month1 through Month12 into four groups of three months (yearly quarters). A nested DO loop is used to reference the values of the variables Month1 through Month12 and to calculate the values of Qtr1 through Qtr4. the variables i and j are used only for loop processing. Each element in the Qtr array represents the sum of one row in the m array. The number of elements in the Qtr array should match the first dimension of the m array (that is, the number of rows in the m array). The first DO loop executes once for each of the four elements of the Qtr array.The assignment statement, qtr{i}=0, sets the value of qtr{i} to zero after each iteration of the first DO loop. Without the assignment statement, the values of Qtr1, Qtr2, Qtr3, and Qtr4 would accumulate across iterations of the data step due to the qtr{i}+m{i,j} sum statement within the DO loop. The second DO loop executes the same number of times as the second dimension of the m array (that is, the number of columns in each row of the m array).",
     "options" : [ {
       "tag" : "A",
       "description" : "A. data Quarterly;\nset Sales;\narray quarter{4};\narray month{4,3};\ndo i=1 to 4;\nquarter{i}=0;\ndo j=1 to 4;\nquarter{i}+month{i,j};\noutput;\nend;\nend;\nrun;",
@@ -2921,7 +2921,7 @@
   }, {
     "number" : 140,
     "description" : "Consider the following code which generates a data set and creates a third variable utilizing the first two:\n\ndata Bonds;\ninput CouponRate $ ParValue $;\ndatalines;\n8% $1000\n9% $1200\n8% $1500\n5% $900\n6% $750\n;\n\ndata BondCoupons;\nset Bonds;\nCoupon= CouponRate/100 * ParValue;\nrun;\nproc print data=bondcoupons;\nrun;\n\nYou may assume the first code chunk runs properly. When printing after running the second code chunk, which of the following will be the value of the first observation of the variable Coupon and why?",
-    "explanation" : "Mathematical operations can be done with numeric variables only. Both are character variables. Hence COUPON will have missing numeric values. Applying input function changes character value to numeric values which makes code to calculate coupon value. Percent4. And dollar5. Functions will read values without an error.\n",
+    "explanation" : "Mathematical operations can be done with numeric variables only. Both are character variables. Hence COUPON will have missing numeric values. Applying input function changes character value to numeric values which makes code to calculate coupon value. Percent4. And dollar5. Functions will read values without an error.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The variable coupon value will have missing values because SAS was not able to correctly interpret the character values as numeric values and an error resulted when creating the Coupon variable.",
@@ -3047,7 +3047,7 @@
   }, {
     "number" : 146,
     "description" : "Which one of the following SAS statements renames two variables?",
-    "explanation" : "RENAME=(old-name-1=new-name-1 old-name-2=new-name-2. . . old-name-n=new-name-n)\n",
+    "explanation" : "RENAME=(old-name-1=new-name-1 old-name-2=new-name-2. . . old-name-n=new-name-n)",
     "options" : [ {
       "tag" : "A",
       "description" : "A. set work.dept1 work.dept2(rename = (jcode = jobcode) (sal = salary));",
@@ -3089,7 +3089,7 @@
   }, {
     "number" : 148,
     "description" : "The following SAS program is submitted:\n\ndata work.one;\nx = 3;\ny = 2;\nz = x ** y;\nrun;\n\nWhich one of the following is the value of the variable Z in the output data set?",
-    "explanation" : "\n** = exponentiation\nX**Y raise X to the power of Y i.e. 3 to the power of 2 = 9\n",
+    "explanation" : "** = exponentiation\nX**Y raise X to the power of Y i.e. 3 to the power of 2 = 9",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 6",
@@ -3215,7 +3215,7 @@
   }, {
     "number" : 154,
     "description" : "The following SAS program is submitted:\n\ndata work.test;\narray agents{4} $ 12 sales1 - sales4;\nrun;\n\nWhich one of the following represents the variables that are contained in the output data set?",
-    "explanation" : "Array statement creates 4 new variables SALES1, SALES2, SALES3, SALES4 which will present in  output dataset.\n",
+    "explanation" : "Array statement creates 4 new variables SALES1, SALES2, SALES3, SALES4 which will present in  output dataset.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. SALES1, SALES2, SALES3, SALES4",
@@ -3425,7 +3425,7 @@
   }, {
     "number" : 164,
     "description" : "The following SAS program is submitted:\n\ndata _null_;\nset old (keep = prod sales1 sales2);\nfile 'file-specification';\nput sales1 sales2;\nrun;\n\nWhich one of the following default delimiters separates the fields in the raw data file created?",
-    "explanation" : "Since no delimiter is specified at the end of the file statement, the default delimiter (space) will be used.\n",
+    "explanation" : "Since no delimiter is specified at the end of the file statement, the default delimiter (space) will be used.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. : (colon)",
@@ -3572,7 +3572,7 @@
   }, {
     "number" : 171,
     "description" : "The following SAS program is submitted:\n\ndata work.new;\nmon = 3;\nday = 23;\nyear = 2000;\ndate = mdy(mon,day,year);\nrun;\n\nWhich one of the following is the value of the DATE variable?",
-    "explanation" : "Mdy() function returns a date numeric date value.\n",
+    "explanation" : "Mdy() function returns a date numeric date value.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. a character string with the value '23mar2000'",
@@ -3593,7 +3593,7 @@
   }, {
     "number" : 172,
     "description" : "The following SAS DATA step executes on Monday, April 25, 2000:\n\ndata newstaff;\nset staff;\nstart_date = today();\nrun;\n\nWhich one of the following is the value of the variable START_DATE in the output data set?",
-    "explanation" : "the numeric value 14725, representing the SAS date for April 25, 2000. today() function gives numeric date value representing sas date.\n",
+    "explanation" : "the numeric value 14725, representing the SAS date for April 25, 2000. today() function gives numeric date value representing sas date.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. a character string with the value '04/25/2000'",
@@ -3782,7 +3782,7 @@
   }, {
     "number" : 181,
     "description" : "The following SAS program is submitted:\n\ndata work.totalsales;\nset work.monthlysales(keep = year product sales);\nretain monthsales {12} ;\narray monthsales {12} ;\ndo i = 1 to 12;\nmonthsales{i} = sales;\nend;\ncnt + 1;\nmonthsales{cnt} = sales;\nrun;\n\nThe data set named WORK.MONTHLYSALES has one observation per month for each of five years for a total of 60 observations.\nWhich one of the following is the result of the above program?",
-    "explanation" : "\nThe syntax issue lies in this line of code - retain monthsales {12} ;. You can not use array name in retain statement.\nTo correct the syntax issue, replace retain monthsales{12} with retain msales1-msales12",
+    "explanation" : "The syntax issue lies in this line of code - retain monthsales {12} ;. You can not use array name in retain statement.\nTo correct the syntax issue, replace retain monthsales{12} with retain msales1-msales12",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The program fails execution due to data errors.",
@@ -3824,7 +3824,7 @@
   }, {
     "number" : 183,
     "description" : "The contents of the raw data file CALENDAR are listed below:\n--------10-------20-------30\n01012000\nThe following SAS program is submitted:\n\ndata test;\ninfile 'calendar';\ninput @1 date mmddyy10.;\nif date = '01012000'd then event = 'January 1st';\nrun;\n\nWhich one of the following is the value of the EVENT variable?",
-    "explanation" : "The syntax issue lies in this line of code - if date = '01012000'd ;. You can not use date time constant in IF statement.\nTo correct the syntax issue, remove 'd' ie date time constant from IF statement and correct statement would be,\nif date = '01012000' then event = 'January 1st';\n",
+    "explanation" : "The syntax issue lies in this line of code - if date = '01012000'd ;. You can not use date time constant in IF statement.\nTo correct the syntax issue, remove 'd' ie date time constant from IF statement and correct statement would be,\nif date = '01012000' then event = 'January 1st';",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 01012000",
@@ -3866,7 +3866,7 @@
   }, {
     "number" : 185,
     "description" : "The contents of the raw data file SIZE are listed below:\n--------10-------20-------30\n72 95\nThe following SAS program is submitted:\n\ndata test;\ninfile 'size';\ninput @1 height 2. @4 weight 2;\nrun;\n\nWhich one of the following is the value of the variable WEIGHT in the output data set?",
-    "explanation" : "format for weight in input statement does not have . after 2, SAS will consider it as value for weight. to remove this error statement should be like, input @1 height 2. @4 weight 2.;\n",
+    "explanation" : "format for weight in input statement does not have . after 2, SAS will consider it as value for weight. to remove this error statement should be like, input @1 height 2. @4 weight 2.;",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 2",
@@ -4097,7 +4097,7 @@
   }, {
     "number" : 196,
     "description" : "The following SAS program is submitted:\n\nproc sort data = sasuser.houses out = houses;\nby style;\nrun;\nproc print data = houses;\nrun;\n\nstyle\tbedrooms\tbaths\tprice\nCONDO\t2\t\t    1.5     80050\n3\t2.5\t        79350\n4\t2.5\t        127150\n2\t2.0\t        110700\nRANCH\t2\t\t    1.0     64000\n3\t\t        3.0     86650\n3\t\t        1.0     89100\n1\t\t        1.0     34550\nSPLIT\t1           1.0 \t65850\n4 \t\t        3.0 \t94450\n3\t\t        1.5 \t73650\nTWOSTORY 4\t\t    3.0\t    107250\n2\t\t        1.0 \t55850\n2\t\t        1.0 \t69250\n4\t\t        2.5\t    102950\nWhich of the following SAS statement(s) create(s) the report?",
-    "explanation" : "C and D options are same only diff is that there is style variable in var... But, if the style variable is present in id statement, you don't have to mention it in var statement, else you will get 2 style variable in the output, but since there is just 1 style column present ans is C and not D\n",
+    "explanation" : "C and D options are same only diff is that there is style variable in var... But, if the style variable is present in id statement, you don't have to mention it in var statement, else you will get 2 style variable in the output, but since there is just 1 style column present ans is C and not D",
     "options" : [ {
       "tag" : "A",
       "description" : "A. id style;",
@@ -4287,7 +4287,7 @@
   }, {
     "number" : 205,
     "description" : "A raw data record is listed below:\n--------10-------20-------30\nPrinting   750\nThe following SAS program is submitted:\n\ndata bonus;\ninfile 'file-specification';\ninput dept $ 1 - 11 number 13 - 15;\nrun;\n\nWhich one of the following SAS statements completes the program and results in a value of 'Printing750' for the DEPARTMENT\nvariable?",
-    "explanation" : "The input statement reads the variable dept using 11 bytes. The value of dept (Department) consists of 8 bytes therefore 3 trailing blanks are present in the value of dept which need to be trimmed out using the trim function. This is concatenated to the put function which converts numeric variables to character variables using the supplied format (3.).\n",
+    "explanation" : "The input statement reads the variable dept using 11 bytes. The value of dept (Department) consists of 8 bytes therefore 3 trailing blanks are present in the value of dept which need to be trimmed out using the trim function. This is concatenated to the put function which converts numeric variables to character variables using the supplied format (3.).",
     "options" : [ {
       "tag" : "A",
       "description" : "A. department = trim(dept) number;",
@@ -4413,7 +4413,7 @@
   }, {
     "number" : 211,
     "description" : "The following SAS program is submitted:\n\ndata work.test;\nAuthor = 'Christie, Agatha';\nFirst = substr(scan(author,2,' ,'),1,1);\nrun;\n\nWhich one of the following is the value of the variable FIRST in the output data set?",
-    "explanation" : "scan function executed first,it will give result as agatha.now substr function looks for first position character ie,1-1 ,results A so answer is A.\n",
+    "explanation" : "scan function executed first,it will give result as agatha.now substr function looks for first position character ie,1-1 ,results A so answer is A.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. A",
@@ -4560,7 +4560,7 @@
   }, {
     "number" : 218,
     "description" : "The following SAS program is submitted:\n\ndata work.total;\nset work.salary(keep = department wagerate);\nby department;\nif first.department then payroll = 0;\npayroll + wagerate;\nif last.department;\nrun;\n\nThe SAS data set WORK.SALARY, currently ordered by DEPARTMENT, contains 100 observations for each of 5 departments.\nWhich one of the following represents how many observations the WORK.TOTAL data set contains?",
-    "explanation" : "The data is sorted by department, thus we can think there are five subgroup in the dataset: dep1-dep5. Within each group, sas computes the payroll+wagerate value, and sas outputs observations when it reaches the last observation in each subgroup. Thus there will be five observations.\n",
+    "explanation" : "The data is sorted by department, thus we can think there are five subgroup in the dataset: dep1-dep5. Within each group, sas computes the payroll+wagerate value, and sas outputs observations when it reaches the last observation in each subgroup. Thus there will be five observations.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 5",
@@ -4706,7 +4706,7 @@
     } ]
   }, {
     "number" : 225,
-    "description" : "\nThe following SAS program is submitted:\n\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
+    "description" : "The following SAS program is submitted:\n\ndata work.new;\nlength word $7;\namount = 4;\nif amount = 4 then word = 'FOUR';\nelse if amount = 7 then word = 'SEVEN';\nelse word = 'NONE!!!';\namount = 7;\nrun;\n\nWhich one of the following represents the values of the AMOUNT and WORD variables?",
     "explanation" : "SAS reads the first amount 4 and we get the fist obs\n4 four\nas the sas reads amount = 7 then output, then it replaces the amount 4 to 7.\nwe get a output like this.\n7 four",
     "options" : [ {
       "tag" : "A",
@@ -4959,7 +4959,7 @@
   }, {
     "number" : 237,
     "description" : "The following SAS program is submitted:\n\ndata numrecords;\ninfile 'file-specification';\ninput @1 patient $15.\nrelative $ 16-26 @;\nif relative = 'children' then\ninput @54 diagnosis $15. @;\nelse if relative = 'parents' then\ninput @28 doctor $15.\nclinic $ 44-53\n@54 diagnosis $15. @;\ninput age;\nrun;\n\nHow many raw data records are read during each iteration of the DATA step during execution?",
-    "explanation" : "As each input statement other than last (input age) ends with @, SAS will not advance to next raw data record. Only after age is read, SAS will finish the datastep iteration and read next record. So answer is A.\n",
+    "explanation" : "As each input statement other than last (input age) ends with @, SAS will not advance to next raw data record. Only after age is read, SAS will finish the datastep iteration and read next record. So answer is A.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 1",
@@ -5001,7 +5001,7 @@
   }, {
     "number" : 239,
     "description" : "A raw data file is listed below:\nRANCH,1250,2,1,Sheppard Avenue,\"$64,000\"\nSPLIT,1190,1,1,Rand Street,\"$65,850\"\nCONDO,1400,2,1.5,Market Street,\"80,050\"\nTWOSTORY,1810,4,3,Garris Street,\"$107,250\"\nRANCH,1500,3,3,Kemble Avenue,\"$86,650\"\nSPLIT,1615,4,3,West Drive,\"94,450\"\nSPLIT,1305,3,1.5,Graham Avenue,\"$73,650\"\n\nThe following SAS program is submitted using the raw data file as input:\n\ndata work.condo_ranch;\ninfile 'file-specification' dsd;\ninput style $ @;\nif style = 'CONDO' or style = 'RANCH' then\ninput sqfeet bedrooms baths street $ price : dollar10.;\nrun;\n\nHow many observations does the WORK.CONDO_RANCH data set contain?",
-    "explanation" : "\nReason being statement \"input style $ @;\" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.",
+    "explanation" : "Reason being statement \"input style $ @;\" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 0",
@@ -5358,7 +5358,7 @@
   }, {
     "number" : 256,
     "description" : "The general form of SUM statement is",
-    "explanation" : "The variable is automatically set to 0 before SAS reads the first observation. The variable's value is retained from one iteration to the next, as if it had appeared in a RETAIN statement. To initialize a sum variable to a value other than 0, include it in a RETAIN statement with an initial value. The expression is evaluated and the result added to the accumulator variable.\nSAS treats an expression that produces a missing value as zero.\n",
+    "explanation" : "The variable is automatically set to 0 before SAS reads the first observation. The variable's value is retained from one iteration to the next, as if it had appeared in a RETAIN statement. To initialize a sum variable to a value other than 0, include it in a RETAIN statement with an initial value. The expression is evaluated and the result added to the accumulator variable.\nSAS treats an expression that produces a missing value as zero.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. variable = variable+expression;",
@@ -5379,7 +5379,7 @@
   }, {
     "number" : 257,
     "description" : "The following SAS program is submitted:\n\ndata work.products;\nProduct_Number = 5461;\nItem = '1001';\nItem_Reference = Item||'/'||Product_Number;\nrun;\n\nWhich one of the following is the value of the variable ITEM_REFERENCE in the output data set?",
-    "explanation" : "Concatenation of two creates leading blanks before Product_Number. You can eliminate these blanks using strip function.\n",
+    "explanation" : "Concatenation of two creates leading blanks before Product_Number. You can eliminate these blanks using strip function.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 1001/5461",
@@ -5484,7 +5484,7 @@
   }, {
     "number" : 262,
     "description" : "Output we are getting\nRegin Asia\tSubsidiary\tTotal Sales\nBangkok\t\t$1,996\nBangkok\t\t$3,033\nBangkok\t\t$3,230\nBangkok\t\t$3,019\nBangkok\t\t$5,389\nSeoul\t\t$60,712\nSeoul\t\t$11,754\nSeoul\t\t$116,333\nSeoul\t\t$4,978\nSeoul\t\t$149,013\nSeoul\t\t$937\nSeoul\t\t$20,448\nSeoul\t\t$78,234\nTokyo\t\t$1,155\n——————————————————————————————————————————————-\nOutput we want!\nRegin Asia\tSubsidiary\tTotal Sales\nBangkok\t\t$16,667\nSeoul\t\t$442,409\nTokyo\t\t$1,155\nThe following SAS program is submitted and produces the first report:\n\nproc report data = sasuser.shoes nowd;\ncolumn region subsidiary sales;\ndefine subsidiary / display;\ndefine region / group;\ndefine sales / sum;\nrun;\n\nWhich one of the following corrects the program above to produce the second report shown in the exhibit?",
-    "explanation" : "GROUP define type in SUBSIDIARY variable groups all values and gives only 3 observation ie desired output.\n",
+    "explanation" : "GROUP define type in SUBSIDIARY variable groups all values and gives only 3 observation ie desired output.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Define the variable SUBSIDIARY with a SUM usage.",
@@ -5946,7 +5946,7 @@
   }, {
     "number" : 284,
     "description" : "A user-defined format has been created using the FORMAT procedure. Where is it stored?",
-    "explanation" : "User defined format always stored in the form of catalog in user defined library or in work library.\n",
+    "explanation" : "User defined format always stored in the form of catalog in user defined library or in work library.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. in a SAS catalog",
@@ -6051,7 +6051,7 @@
   }, {
     "number" : 289,
     "description" : "Given the SAS data set PERM.STUDENTS:\nPERM.STUDENTS\nNAME\tAGE\n------\t-------\nAlfred\t14\nAlice\t13\nBarbara\t13\nCarol\t14\nThe following SAS program is submitted:\n\nlibname perm 'SAS data library';\ndata students;\nset perm.students;\nfile 'file specification';\nput name $ age;\n<insert statement here>\nrun;\n\nThe following double-spaced file is desired as output\nAlfred 14\nAlice 13\nBarbara 13\nCarol 14\nWhich statement completes the program and creates the desired file?",
-    "explanation" : "the program writes the desired report, writing each line of data to a separate line.  The requirements were actually a little bit different, however, to get a double-spaced report.  So you need to make a change that will write out a blank line as well. null put statement add a blank line to output file or log.\n",
+    "explanation" : "the program writes the desired report, writing each line of data to a separate line.  The requirements were actually a little bit different, however, to get a double-spaced report.  So you need to make a change that will write out a blank line as well. null put statement add a blank line to output file or log.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. put",
@@ -6282,7 +6282,7 @@
   }, {
     "number" : 300,
     "description" : "The following SAS program is submitted:\n\ndata WORK.TEST;\nset WORK.MEASLES(keep=Janpt Febpt Marpt);\narray Diff{3} Difcount1-Difcount3;\narray Patients{3} Janpt Febpt Marpt;\nrun;\n\nWhat new variables are created?",
-    "explanation" : "As given in set statement Janpt, Febpt, Marpt variables already exist. array diff{3} creates 3 new variables Difcount1, Difcount2 and Difcount3.\n",
+    "explanation" : "As given in set statement Janpt, Febpt, Marpt variables already exist. array diff{3} creates 3 new variables Difcount1, Difcount2 and Difcount3.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Difcount1, Difcount2 and Difcount3",
@@ -6366,7 +6366,7 @@
   }, {
     "number" : 304,
     "description" : "Given the following raw data records in DATAFILE.TXT:\n----|----10---|----20---|----30\nKim,Basketball,Golf,Tennis\nBill,Football\nTracy,Soccer,Track\nThe following program is submitted:\n\ndata WORK.SPORTS_INFO;\nlength Fname Sport1-Sport3 $ 10;\ninfile'DATAFILE.TXT' dlm=',';\ninput Fname $ Sport1 $ Sport2 $ Sport3 $;\nrun;\nproc print data=WORK.SPORTS_INFO;\nrun;\n\nWhich output is correct based on the submitted program?",
-    "explanation" : "The INPUT statement reads line by line. when the first line is finished reading then it goes to second line to look for data until the INPUT statement finish reading all variable values. If the line has a missing values you have to use MISSOVER in the INFILE.\n",
+    "explanation" : "The INPUT statement reads line by line. when the first line is finished reading then it goes to second line to look for data until the INPUT statement finish reading all variable values. If the line has a missing values you have to use MISSOVER in the INFILE.",
     "options" : [ {
       "tag" : "A",
       "description" : "A.\tObs\tFname\tSport1\t\tSport2\tSport3\n\t1\tKim\tBasketball\tGolf\tTennis\n\t2\tBill\tFootball\t \t \n\t3\tTracy\tSoccer\t\tTrack\t ",
@@ -6555,7 +6555,7 @@
   }, {
     "number" : 313,
     "description" : "The following program is submitted:\nproc sort data=SASUSER.PROJECTS out=PSORT;\nby Code descending Date Cost;\nrun;\n\nWhich of the following is true concerning the submitted program?",
-    "explanation" : "Descending option applies to variable which is exact next to it, hence only DATE variable is in descending order while variable CODE and COST are in asending order.\n",
+    "explanation" : "Descending option applies to variable which is exact next to it, hence only DATE variable is in descending order while variable CODE and COST are in asending order.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The descending option applies to the variable Code.",
@@ -6660,7 +6660,7 @@
   }, {
     "number" : 318,
     "description" : "Given the SAS data set WORK.TEMPS:\nDay Month   Temp\n--- ------  -------\n1   May     75\n15  May     70\n15  June    80\n3   June    76\n2   July    85\n14  July    89\nThe following program is submitted:\nproc sort data=WORK.TEMPS;\nby descending Month Day;\nrun;\nproc print data=WORK.TEMPS;\nrun;\n\nWhich output is correct?",
-    "explanation" : "The months are character, so alphabetical order (corresponding to ascending MONTH) would be: July June May.\nDescending month would give you: May June July\nWithin each month, the observations are sorted by ascending DAY (descending only applies to one variable).\n",
+    "explanation" : "The months are character, so alphabetical order (corresponding to ascending MONTH) would be: July June May.\nDescending month would give you: May June July\nWithin each month, the observations are sorted by ascending DAY (descending only applies to one variable).",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Obs  Day Month   Temp\n---  --- -----   ----\n1   2   July    85\n2   14  July    89\n3   3   June    76\n4   15  June    80\n5   1   May     75\n6   15  May     7",
@@ -6744,7 +6744,7 @@
   }, {
     "number" : 322,
     "description" : "The following SAS program is submitted:\n\nods csvall file='c:\\test.cvs';\nproc print data=WORK.ONE;\nvar Name Score Grade;\nby IdNumber;\nrun;\nods csvall close;\n\nWhat is produced as output?",
-    "explanation" : "CSV files can be opened with many programs, like text editors, the data they contain is best viewed using a spreadsheet program, such as Microsoft Excel, OpenOffice Calc, or Google Sheets.\n",
+    "explanation" : "CSV files can be opened with many programs, like text editors, the data they contain is best viewed using a spreadsheet program, such as Microsoft Excel, OpenOffice Calc, or Google Sheets.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. A file named test.cvs that can only be opened in Excel.",
@@ -6848,7 +6848,7 @@
     } ]
   }, {
     "number" : 327,
-    "description" : "\nThe following SAS program is submitted:\n\ndata WORK.AUTHORS;\narray Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');\nrun;\n\nWhat is the value of the second variable in the dataset WORK.AUTHORS?",
+    "description" : "The following SAS program is submitted:\n\ndata WORK.AUTHORS;\narray Favorites{3} $ 8 ('Shakespeare','Hemingway','McCaffrey');\nrun;\n\nWhat is the value of the second variable in the dataset WORK.AUTHORS?",
     "explanation" : "In array statement specified length of array names is 8.",
     "options" : [ {
       "tag" : "A",
@@ -6933,7 +6933,7 @@
   }, {
     "number" : 331,
     "description" : "Given the following raw data records in TEXTFILE.TXT:\n----|----10---|----20---|----30\nJohn,FEB,13,25,14,27,Final\nJohn,MAR,26,17,29,11,23,Current\nTina,FEB,15,18,12,13,Final\nTina,MAR,29,14,19,27,20,Current\n\nThe following output is desired:\nObs Name Month Status Week1 Week2 Week3 Week4 Week5\n1 John FEB Final $13 $25 $14 $27 .\n2 John MAR Current $26 $17 $29 $11 $23\n3 Tina FEB Final $15 $18 $12 $13 .\n4 Tina MAR Current $29 $14 $19 $27 $20\n\nWhich SAS program correctly produces the desired output?",
-    "explanation" : "@ sign in INPUT statement holds an input record for the execution of the next INPUT statement within the same iteration of the DATA step. As length of Status variable is define in LENGTH statement, hence SAS will first write variables in the order they are present in length statement.\n",
+    "explanation" : "@ sign in INPUT statement holds an input record for the execution of the next INPUT statement within the same iteration of the DATA step. As length of Status variable is define in LENGTH statement, hence SAS will first write variables in the order they are present in length statement.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. data WORK.NUMBERS;\nlength Name $ 4 Month $ 3 Status $ 7;\ninfile'TEXTFILE.TXT' dsd;\ninput Name $ Month $;\nif Month='FEB' then input Week1 Week2 Week3 Week4 Status $;\nelse if Month='MAR' then input Week1 Week2 Week3 Week4 Week5 Status $;\nformat Week1-Week5 dollar6.;\nrun;\nproc print data=WORK.NUMBERS;\nrun;",
@@ -6996,7 +6996,7 @@
   }, {
     "number" : 334,
     "description" : "Consider the following data step:\n\ndata WORK.NEW;\nset WORK.OLD;\nCount+1;\nrun;\n\nThe variable Count is created using a sum statement. Which statement regarding this variable is true?",
-    "explanation" : "During compile time count variable is created and value is set to 0. To confirm that put _all_ statement, before an input statement, reflects in LOG what has occurred during the compilation phase.\n",
+    "explanation" : "During compile time count variable is created and value is set to 0. To confirm that put _all_ statement, before an input statement, reflects in LOG what has occurred during the compilation phase.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. It is assigned a value 0 when the data step begins execution.",
@@ -7059,7 +7059,7 @@
   }, {
     "number" : 337,
     "description" : "Which step sorts the observations of a permanent SAS data set by two variables and stores the sorted observations in a temporary SAS data set?",
-    "explanation" : "BY statement does not contain AND or OR operator. OUT= gives new dataset in sorted manner.\n",
+    "explanation" : "BY statement does not contain AND or OR operator. OUT= gives new dataset in sorted manner.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sort out=EMPLOYEES data=EMPSORT;\nby Lname and Fname;\nrun;",
@@ -7101,7 +7101,7 @@
   }, {
     "number" : 339,
     "description" : "The following SAS program is submitted:\n\ndata WORK.ACCOUNTING;\nset WORK.DEPARTMENT;\nlength EmpId $6;\nCharEmpid=EmpId;\nrun;\n\nIf data set WORK.DEPARTMENT has a numeric variable EmpId. Which statement is true about the output dataset?",
-    "explanation" : "Type of 'CharEmpid' variable should be numeric, but length statement define 'EmpId' as character which creates error.\n",
+    "explanation" : "Type of 'CharEmpid' variable should be numeric, but length statement define 'EmpId' as character which creates error.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The type of the variable CharEmpid is numeric.",
@@ -7227,7 +7227,7 @@
   }, {
     "number" : 345,
     "description" : "Given the SAS data set WORK.ONE:\nObs\tRevenue2008\tRevenue2009\tRevenue2010\n--- ---------------- ---------------- ----------------\n1\t1.2\t\t1.6\t\t2.0\nThe following SAS program is submitted:\n\ndata WORK.TWO;\nset WORK.ONE;\nTotal=mean(of Rev:);\nrun;\n\nWhat value will SAS assign to Total?",
-    "explanation" : "mean(of Rev:) gives mean of all variables whose name start with 'Rev'.\n",
+    "explanation" : "mean(of Rev:) gives mean of all variables whose name start with 'Rev'.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 3",
@@ -7752,7 +7752,7 @@
   }, {
     "number" : 370,
     "description" : "The following SAS program is submitted and reads 100 records from a raw data file:\n\nData work.total;\nInfile ‘file specification’ end=eof;\nInput name $ salary;\nTotsal + salary;\nRun;\n\nWhich IF statement writes the final observation to the final data set?",
-    "explanation" : "end is sas keyword which will become true when SAS reads last record of a dataset. This value you cannot use directly in your program, so we create a alias name eof (end of file), but you can name it anything. EOF will carry the same value as internal variable END. So as we know 1=true and 0= false. if EOF = 1; will output only the last observation.\n",
+    "explanation" : "end is sas keyword which will become true when SAS reads last record of a dataset. This value you cannot use directly in your program, so we create a alias name eof (end of file), but you can name it anything. EOF will carry the same value as internal variable END. So as we know 1=true and 0= false. if EOF = 1; will output only the last observation.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. if end =1",
@@ -7794,7 +7794,7 @@
   }, {
     "number" : 372,
     "description" : "How many of the following variable names will not produce errors in an assignment statement?\n\nvariable\nvar\n1variable\nvar1\n#var\n_variable#",
-    "explanation" : "variable var var1. A variable cannot start with numeric or special characters except _. You also cannot use special characters anywhere in the name either though numeric values are allowed.\n",
+    "explanation" : "variable var var1. A variable cannot start with numeric or special characters except _. You also cannot use special characters anywhere in the name either though numeric values are allowed.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 0",
@@ -7836,7 +7836,7 @@
   }, {
     "number" : 374,
     "description" : "The following SAS program is submitted:\n\ndta work.il_corn;\nset corn.state_data;\nif state = 'Illinois';\nrun;\n\nThe keyword \"data\" is misspelled above. What happens to this program during the compilation phase assuming \"corn\" is a valid libref?",
-    "explanation" : "It compiles and executes as SAS assumed that the 'dta' was data. But it leaves a warning in log window.\nThe log shows the following warning :\nWARNING 1-322: Assuming the symbol DATA was misspelled as dta.\n141 run;\n\n",
+    "explanation" : "It compiles and executes as SAS assumed that the 'dta' was data. But it leaves a warning in log window.\nThe log shows the following warning :\nWARNING 1-322: Assuming the symbol DATA was misspelled as dta.\n141 run;",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The program fails due to syntax errors",
@@ -7962,7 +7962,7 @@
   }, {
     "number" : 380,
     "description" : "If you submit the following program, how does the output look?\noptions pagesize=55 nonumber;\nproc tabulate data=clinic.admit;\nclass actlevel;\nvar age height weight;\ntable actlevel,(age height weight)*mean;\nrun;\noptions linesize=80;\nproc means data=clinic.heart min max maxdec=1;\nvar arterial heart cardiac urinary;\nclass survive sex;\nrun;",
-    "explanation" : "When you specify a system option, it remains in effect until you change the option or end your SAS session, so both PROC steps generate output that is printed 55 lines per page with\nno page numbers. If you don't specify a system option, SAS uses the default value for that system option.\n",
+    "explanation" : "When you specify a system option, it remains in effect until you change the option or end your SAS session, so both PROC steps generate output that is printed 55 lines per page with\nno page numbers. If you don't specify a system option, SAS uses the default value for that system option.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The PROC MEANS output has a print line width of 80 characters, but the\nPROC TABULATE output has no print line width.",
@@ -8004,7 +8004,7 @@
   }, {
     "number" : 382,
     "description" : "When you specify an engine for a library, you are always specifying",
-    "explanation" : "A SAS engine is a set of internal instructions that SAS uses for writing to and reading from files in a SAS library. Each engine specifies the file format for files that are stored in the\nlibrary, which in turn enables SAS to access files with a particular format. Some engines access SAS files, and other engines support access to other vendors' files.\n",
+    "explanation" : "A SAS engine is a set of internal instructions that SAS uses for writing to and reading from files in a SAS library. Each engine specifies the file format for files that are stored in the\nlibrary, which in turn enables SAS to access files with a particular format. Some engines access SAS files, and other engines support access to other vendors' files.",
     "options" : [ {
       "tag" : "A",
       "description" : "A.  The file format for files that are stored in the library.",
@@ -8088,7 +8088,7 @@
   }, {
     "number" : 386,
     "description" : "Which time span is used to interpret two-digit year values if the YEARCUTOFF= option is set to 1950?",
-    "explanation" : "The YEARCUTOFF= option specifies which 100-year span is used to interpret two-digit year values. The default value of YEARCUTOFF= is 1920. However, you can override the default and change the value of YEARCUTOFF= to the first year of another 100-year span. If you specify YEARCUTOFF=1950, then the 100-year span will be from 1950 to 2049.\n",
+    "explanation" : "The YEARCUTOFF= option specifies which 100-year span is used to interpret two-digit year values. The default value of YEARCUTOFF= is 1920. However, you can override the default and change the value of YEARCUTOFF= to the first year of another 100-year span. If you specify YEARCUTOFF=1950, then the 100-year span will be from 1950 to 2049.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 1950-2049",
@@ -8130,7 +8130,7 @@
   }, {
     "number" : 388,
     "description" : "What does the following statement do?\nlibname osiris spss 'c:\\myfiles\\sasdata\\data';",
-    "explanation" : "In the LIBNAME statement, you specify the library name before the engine name. Both are followed by the path.\n",
+    "explanation" : "In the LIBNAME statement, you specify the library name before the engine name. Both are followed by the path.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. defines a library called Spss using the OSIRIS engine",
@@ -8151,7 +8151,7 @@
   }, {
     "number" : 389,
     "description" : "What does the following OPTIONS statement do?\noptions pagesize=15 nodate;",
-    "explanation" : "These options affect the format of listing output only. NODATE suppresses the date and PAGESIZE= determines the number of rows to print on the page.\n",
+    "explanation" : "These options affect the format of listing output only. NODATE suppresses the date and PAGESIZE= determines the number of rows to print on the page.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. suppresses the date and limits the page size of the log",
@@ -8256,7 +8256,7 @@
   }, {
     "number" : 394,
     "description" : "What does the following log indicate about your program?\nproc print data=sasuser.cargo99\nvar origin dest cargorev;\nERROR 22-322: Syntax error, expecting one of the\nfollowing:\n;, (, DATA, DOUBLE, HEADING, LABEL,\nN, NOOBS, OBS, ROUND, ROWS, SPLIT, STYLE,\nUNIFORM, WIDTH.\nERROR 76-322: Syntax error, statement will be ignored.\n11 run;",
-    "explanation" : "Because there is a missing semicolon at the end of the PROC PRINT statement, SAS interprets VAR as an option in PROC PRINT and finds a syntax error at that location. SAS stops processing programs when it encounters a syntax error.\n",
+    "explanation" : "Because there is a missing semicolon at the end of the PROC PRINT statement, SAS interprets VAR as an option in PROC PRINT and finds a syntax error at that location. SAS stops processing programs when it encounters a syntax error.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. SAS identifies a syntax error at the position of the VAR statement.",
@@ -8298,7 +8298,7 @@
   }, {
     "number" : 396,
     "description" : "Which of the following PROC PRINT steps is correct if labels are not stored with the data set?",
-    "explanation" : "You use the DATA= option to specify the data set to be printed. The LABEL option specifies that variable labels appear in output instead of variable names.\n",
+    "explanation" : "You use the DATA= option to specify the data set to be printed. The LABEL option specifies that variable labels appear in output instead of variable names.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc print data=allsales.totals label;\nlabel region8='Region 8 Yearly Totals';\nrun;",
@@ -8340,7 +8340,7 @@
   }, {
     "number" : 398,
     "description" : "If you want to sort your data and create a temporary data set named Calc to store the\nsorted data, which of the following steps should you submit?",
-    "explanation" : "In a PROC SORT step, you specify the DATA= option to specify the data set to sort. The OUT= option specifies an output data set. The required BY statement specifies the variable(s) to use in sorting the data.\n",
+    "explanation" : "In a PROC SORT step, you specify the DATA= option to specify the data set to sort. The OUT= option specifies an output data set. The required BY statement specifies the variable(s) to use in sorting the data.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. proc sort data=work.calc out=finance.dividend;\nrun;",
@@ -8403,7 +8403,7 @@
   }, {
     "number" : 401,
     "description" : "What happens if you submit the following program?\nproc sort data=clinic.diabetes;\nrun;\nproc print data=clinic.diabetes;\nvar age height weight pulse;\nwhere sex='F';\nrun;",
-    "explanation" : "The BY statement is required in PROC SORT. Without it, the PROC SORT step fails. However, the PROC PRINT step prints the original data set as requested.\n",
+    "explanation" : "The BY statement is required in PROC SORT. Without it, the PROC SORT step fails. However, the PROC PRINT step prints the original data set as requested.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The PROC PRINT step runs successfully, printing observations in their sorted order.",
@@ -8445,7 +8445,7 @@
   }, {
     "number" : 403,
     "description" : "Choose the statement below that selects rows in which\n_ the amount is less than or equal to $5000\n_ the account is 101–1092, or the rate equals 0.095.",
-    "explanation" : "To ensure that the compound expression is evaluated correctly, you can use parentheses to group\nOBS Account Amount Rate MonthsPayment\n1 101-1092 $22,000 10.00%60 $467.43\n2 101-1731 $114,0009.50%360 $958.57\n3 101-1289 $10,000 10.50%36 $325.02\n4 101-3144 $3,500 10.50%12 $308.52\n5 103-1135 $8,700 10.50%24 $403.47\n6 103-1994 $18,500 10.00%60 $393.07\n7 103-2335 $5,000 10.50%48 $128.02\n8 103-3864 $87,500 9.50%360 $735.75\n9 103-3891 $30,000 9.75%360 $257.75\nFor example, from the data set above, a and b above select observations 2 and 8 (those that\nhave a rate of 0.095); c selects no observations; and d selects observations 4 and 7 (those\nthat have an amount less than or equal to 5000).\n",
+    "explanation" : "To ensure that the compound expression is evaluated correctly, you can use parentheses to group\nOBS Account Amount Rate MonthsPayment\n1 101-1092 $22,000 10.00%60 $467.43\n2 101-1731 $114,0009.50%360 $958.57\n3 101-1289 $10,000 10.50%36 $325.02\n4 101-3144 $3,500 10.50%12 $308.52\n5 103-1135 $8,700 10.50%24 $403.47\n6 103-1994 $18,500 10.00%60 $393.07\n7 103-2335 $5,000 10.50%48 $128.02\n8 103-3864 $87,500 9.50%360 $735.75\n9 103-3891 $30,000 9.75%360 $257.75\nFor example, from the data set above, a and b above select observations 2 and 8 (those that\nhave a rate of 0.095); c selects no observations; and d selects observations 4 and 7 (those\nthat have an amount less than or equal to 5000).",
     "options" : [ {
       "tag" : "A",
       "description" : "A. where amount <= 5000 and\naccount='101-1092' or rate = 0.095;",
