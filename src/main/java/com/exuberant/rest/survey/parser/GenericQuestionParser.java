@@ -140,8 +140,29 @@ public class GenericQuestionParser implements QuestionParser {
         } else {
             System.err.println("Last Question Not Added....");
         }
+        trimQuestions(questions);
         validateQuestions(questions, questionBank.getTotalQuestions());
         return questions;
+    }
+
+    private void trimQuestions(List<Question> questions) {
+        for (Question question : questions) {
+            // question.setDescri
+        }
+
+    }
+
+    static String replaceAll(String string) {
+        String newString = string;
+        while (newString.startsWith("\n")) {
+            newString = newString.replaceFirst("\n", "");
+        }
+        newString = new StringBuffer(newString).reverse().toString();
+        while (newString.startsWith("\n")) {
+            newString = newString.replaceFirst("\n", "");
+        }
+        newString = new StringBuffer(newString).reverse().toString();
+        return newString;
     }
 
     public void setResourceLoader(ResourceLoader resourceLoader) {

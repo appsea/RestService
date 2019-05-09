@@ -70,7 +70,7 @@ public class PatternParserFactory {
 
     public static PatternParser getCompTIAParser() {
         String newQuestionRegex = "^QUESTION NO:.*";
-        String optionRegex = "^[A-E][.]\\s.*";
+        String optionRegex = "^[A-G][.]\\s.*";
         String answerRegex = "^Answer. .*";
         return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
     }
