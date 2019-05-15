@@ -477,8 +477,7 @@ B. Windows 7 Home Premium x64
 C. Windows XP Professional
 D. Windows Vista Home Premium x86
 Answer: B
-Description: http://www.tomshardware.com/answers/id-1677684/12gb-ram-installed-8gb-showingwindows-
-ultimate-x64.html
+Description: http://www.tomshardware.com/answers/id-1677684/12gb-ram-installed-8gb-showingwindows-ultimate-x64.html
 QUESTION NO: 52
 Which of the following commands, in Windows 7, could a technician use to schedule a disk
 integrity scan upon next boot?
@@ -841,9 +840,7 @@ Description: http://windows.microsoft.com/en-us/windows7/products/features/aero
 
 
 QUESTION NO: 88
-An audio visual company has decided that they want to migrate from Windows XP Professional
-SP2. The company has a domain network. A technician is tasked with selecting an operating
-system. Which of the following should the technician select?
+An audio visual company has decided that they want to migrate from Windows XP Professional SP2. The company has a domain network. A technician is tasked with selecting an operating system. Which of the following should the technician select?
 A. Windows 7 Home Premium
 B. Windows Vista Home Premium
 C. Windows 7 Professional
@@ -860,8 +857,7 @@ D. Quick format
 Answer: A
 Description: http://en.wikipedia.org/wiki/Degaussing
 QUESTION NO: 90
-Which of the following commands may need to be run after a virus removal if the computer will not
-boot?
+Which of the following commands may need to be run after a virus removal if the computer will not boot?
 A. SCANDSK
 B. DXDIAG
 C. FIXMBR
@@ -869,10 +865,8 @@ D. MSCONFIG
 Answer: C
 Description: http://pcsupport.about.com/od/termsf/p/fixmbr.htm
 
-
 QUESTION NO: 91
-A technician would like to map a network drive. Which of the following indicates the correct path
-for mapping a network drive?
+A technician would like to map a network drive. Which of the following indicates the correct path for mapping a network drive?
 A. \\share\servername
 B. \\username\servername
 C. \\password\share
@@ -880,36 +874,29 @@ D. \\servername\share
 Answer: D
 Description: http://compnetworking.about.com/od/windowsxpnetworking/ht/mapnetworkdrive.htm
 QUESTION NO: 92
-Which of the following is the MINIMUM account required to install most programs on Windows
-XP?stand
+Which of the following is the MINIMUM account required to install most programs on Windows XP?
 A. Power user
 B. Administrator
 C. Standard user
 D. Guest
 Answer: A
-Description: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/
-windows_security_default_settings.mspx?mfr=true
+Description: https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/windows_security_default_settings.mspx?mfr=true
 QUESTION NO: 93
 When configuring user accounts, which of the following should a technician perform?
 A. Make all users local administrators
 B. Assign the minimum required access to the users
 C. Make all users standard users
 D. Assign the maximum required access to the users
-
-
 Answer: B
 Description: http://www.pcworld.com/article/171933/manage_users_in_windows_7.html
 QUESTION NO: 94
-A technician needs to rebuild a computer that had a virus. Which of the following data destruction
-methods should be used to ensure the virus has been successfully erased before reinstalling the
-operating system, programs, and all user data?
+A technician needs to rebuild a computer that had a virus. Which of the following data destruction methods should be used to ensure the virus has been successfully erased before reinstalling the operating system, programs, and all user data?
 A. Standard format
 B. Low level format
 C. Shredder
 D. Degaussing tool
 Answer: A
-Description: http://pcsupport.about.com/od/windows7/ss/format-hard-drive-windows-7-
-tutorial_7.htm
+Description: http://pcsupport.about.com/od/windows7/ss/format-hard-drive-windows-7-tutorial_7.htm
 QUESTION NO: 95
 A user states when they press certain letters on their laptop’s keyboard, a number is displayed on
 the screen. Which of the following can the technician perform to resolve this issue?
@@ -920,11 +907,7 @@ D. Update the keyboard drivers
 Answer: B
 Description: http://www.computerhope.com/issues/ch000792.htm
 QUESTION NO: 96
-A user has too many applications starting when they log into windows. From the command line,
-which of the following tools is the FASTEST option to prevent these applications from running on
-
-
-startup?
+A user has too many applications starting when they log into windows. From the command line, which of the following tools is the FASTEST option to prevent these applications from running on startup?
 A. MSCONFIG
 B. SERVICES.MSC
 C. REGEDIT
@@ -1002,8 +985,6 @@ QUESTION NO: 104
 A technician receives an error every time a workstation boots up. The technician needs to find out
 what process is responsible for the error. Which of the following utilities would be used FIRST?
 A. System Control Panel
-
-
 B. Task Manager
 C. Event Viewer
 D. MSCONFIG
@@ -1056,8 +1037,7 @@ B. Active Directory
 C. WorkGroup
 D. Domain Setup
 Answer: A
-Description: http://windows.microsoft.com/en-us/windows7/help/home-sweet-homegroupnetworking-
-the-easy-way
+Description: http://windows.microsoft.com/en-us/windows7/help/home-sweet-homegroupnetworking-the-easy-way
 
 
 QUESTION NO: 110
@@ -1141,10 +1121,7 @@ B. \\servername\usershare
 C. \\servername/usershare
 D. //servername/usershare
 Answer: B
-Description: http://www.dummies.com/how-to/content/how-to-map-a-network-folder-in-windows-
-
-
-7.html
+Description: http://www.dummies.com/how-to/content/how-to-map-a-network-folder-in-windows-7.html
 QUESTION NO: 118
 A user is operating a virtual machine (VM) and discovers it has been infected with malware. Which
 of the following applies?
@@ -1174,11 +1151,9 @@ B. Reduces the amount of physical hardware required.
 C. Reduces the amount of CPU required on the host PC.
 D. Reduces the amount of RAM required on the host PC.
 Answer: B
-Description: http://searchservervirtualization.techtarget.com/tip/Understanding-the-benefits-of-avirtual-
-machine
+Description: http://searchservervirtualization.techtarget.com/tip/Understanding-the-benefits-of-avirtual-machine
 QUESTION NO: 121
-When scheduling a backup for preventative maintenance, which of the following would ensure all
-data was captured?
+When scheduling a backup for preventative maintenance, which of the following would ensure all data was captured?
 A. Differential
 B. Full
 C. Incremental
@@ -1221,8 +1196,7 @@ B. Windows 7 Professional
 C. Windows 7 Home Premium
 D. Windows Vista Ultimate
 Answer: B
-Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-
-7
+Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
 
 
 QUESTION NO: 126
@@ -1602,8 +1576,7 @@ D. Antivirus software
 E. User education
 F. Enforced login/logoff hours
 Answer: D,E,F
-Description: http://www.esecurityplanet.com/network-security/how-to-prevent-security-breachesfrom-
-known-vulnerabilities.html
+Description: http://www.esecurityplanet.com/network-security/how-to-prevent-security-breachesfrom-known-vulnerabilities.html
 QUESTION NO: 164
 Which of the following areas of a file system should a standard user have restricted permissions to
 in order to promote a security best practice? (Select TWO).
@@ -1929,8 +1902,6 @@ QUESTION NO: 193
 Which of the following security threats involve shoulder surfing and phone phishing?
 A. Man-in-the-Middle
 B. Social engineering
-
-
 C. Trojan virus
 D. Spyware
 Answer: B
@@ -1956,8 +1927,6 @@ Description: http://www.secure-it.com/shop/index.php/cPath/38
 QUESTION NO: 196
 Which of the following security controls would be an example of the least privilege principle on a
 home PC?
-
-
 A. Install antispyware on the PC.
 B. Create a standard user account for kids.
 C. Store all financial data in a separate folder.
@@ -1981,10 +1950,7 @@ B. Windows password
 C. Proper SSID
 D. SSL certificate
 Answer: C
-Description: http://www.cisco.com/en/US/docs/wireless/access_point/12.4_21a_JA1/configuration/guide/scg12
-421aJA1-chap7-mbssid.html
-
-
+Description: http://www.cisco.com/en/US/docs/wireless/access_point/12.4_21a_JA1/configuration/guide/scg12421aJA1-chap7-mbssid.html
 QUESTION NO: 199
 A company is experiencing issues with third parties tailgating authorized users during entry to
 secure server rooms. Which of the following would BEST alleviate this problem?
@@ -2013,8 +1979,6 @@ B. Factory pre-installation
 C. System restore
 D. Recovery console
 Answer: A
-
-
 Description: http://wiki.answers.com/Q/How_does_anti-malware_scanners_work
 QUESTION NO: 202
 After being infected with a virus, a user’s computer does not recognize the user as having local
@@ -2040,8 +2004,6 @@ QUESTION NO: 204
 A pest exterminator tries to gain access to a company’s computer lab, but the receptionist does
 not see an extermination scheduled on the calendar and denies the exterminator access to the
 lab. Which of the following security threats almost occurred?
-
-
 A. War driving
 B. Social engineering
 C. Shoulder surfing
@@ -2065,8 +2027,6 @@ C. Social Engineering
 D. Browser Adware
 Answer: C
 Description: http://www.veracode.com/blog/2013/03/hacking-the-mind-how-why-social-engineeringworks/
-
-
 QUESTION NO: 207
 The practice of following an authorized person through an entrance without using a badge to
 defeat security is called:
@@ -2094,7 +2054,6 @@ D. AES
 Answer: C
 Description: http://searchsecurity.techtarget.com/definition/Wired-Equivalent-Privacy
 
-
 QUESTION NO: 210
 Phishing is:
 A. An infection that causes a web browser to go to a different site than the one intended from a
@@ -2120,10 +2079,7 @@ Description:
 To prevent unauthorized access to the PC, disable guest accounts and change default usernames
 for maximum security.
 QUESTION NO: 212
-A company recently had a security breach and is now required to increase the security on their
-
-
-workstations. A technician has been tasked to harden all the workstations on the network. Which
+A company recently had a security breach and is now required to increase the security on their workstations. A technician has been tasked to harden all the workstations on the network. Which
 of the following should the technician do?
 A. Enable Windows automatic updates
 B. Enable screensaver required passwords
@@ -2151,8 +2107,6 @@ to BEST secure the router from unauthorized access? (Select TWO).
 A. Change router default logins
 B. Change the security settings on their computer
 C. Set encryption on the router
-
-
 D. Update router firmware
 E. Change the encryption on the computer’s wireless adapter
 Answer: A,C
@@ -2206,8 +2160,6 @@ A. Local Security Policy
 B. Users and Groups
 C. Performance Monitor
 D. MSCONFIG
-
-
 Answer: A
 Description: http://www.tomshardware.com/forum/23713-63-password-meet-password-policyrequirements
 QUESTION NO: 220
@@ -2255,10 +2207,7 @@ D. MSCONFIG
 Answer: C
 Description: http://pcsupport.about.com/od/fixtheproblem/f/windows-safe-mode.htm
 QUESTION NO: 225
-A technician has installed the hardware for a SOHO wired network. Which of the following is the
-
-
-FIRST step to securing the network?
+A technician has installed the hardware for a SOHO wired network. Which of the following is the FIRST step to securing the network?
 A. Enable MAC filtering
 B. Change default usernames and passwords
 C. Disable unused ports
@@ -2306,10 +2255,7 @@ B. WorkGroup
 C. Domain
 D. WAN
 Answer: B
-Description: http://windows.microsoft.com/en-us/windows7/what-is-the-difference-between-adomain-
-a-workgroup-and-a-homegroup
-
-
+Description: http://windows.microsoft.com/en-us/windows7/what-is-the-difference-between-adomain-a-workgroup-and-a-homegroup
 QUESTION NO: 231
 Browser redirection is caused by which of the following types of viruses?
 A. Hijack
@@ -2893,8 +2839,6 @@ A. Dock sync
 B. Encrypted wired sync
 C. Wireless sync
 D. Wired sync
-
-
 Answer: C
 Description: http://www.pcworld.com/article/242242/how_to_use_wireless_sync_in_ios_5.html
 QUESTION NO: 287
@@ -3779,8 +3723,7 @@ B. Duplexer
 C. Pickup roller
 D. Imaging drum
 Answer: C
-Description: http://welcome.solutions.brother.com/BSC/public/as/as_ot/en/faq/faq/000000/002500/000041/faq0
-02541_000.html?reg=as&c=as_ot&lang=en&prod=hl5340d_all
+Description: http://welcome.solutions.brother.com/BSC/public/as/as_ot/en/faq/faq/000000/002500/000041/faq002541_000.html?reg=as&c=as_ot&lang=en&prod=hl5340d_all
 QUESTION NO: 369
 A critical server was replaced by the IT staff the previous night. The following morning, some users
 are reporting that they are unable to browse to the Internet upon booting their workstations. Users
@@ -3861,8 +3804,7 @@ B. Fusing assembly
 C. Registration assembly
 D. Duplexing assembly
 Answer: A
-Description: http://welcome.solutions.brother.com/BSC/public/us/us/en/faq/faq/000000/000100/000027/faq000
-127_000.html?reg=us&c=us&lang=en&prod=hl8050n_all
+Description: http://welcome.solutions.brother.com/BSC/public/us/us/en/faq/faq/000000/000100/000027/faq000127_000.html?reg=us&c=us&lang=en&prod=hl8050n_all
 QUESTION NO: 375
 A user, Ann, reports that her laptop will no longer connect to wireless. Joe, a technician, checks
 the device manager and does not see a wireless networking card or any unknown devices. Which
@@ -4488,8 +4430,7 @@ B. Reboot client PC
 C. Check the link lights on printer NIC
 D. Reboot the printer
 Answer: C
-Description: http://welcome.solutions.brother.com/BSC/public/eu/gb/en/faq/faq/000000/000100/000005/faq000
-105_000.html?reg=eu&prod=hl5170dn_all&c=gb&lang=en
+Description: http://welcome.solutions.brother.com/BSC/public/eu/gb/en/faq/faq/000000/000100/000005/faq000105_000.html?reg=eu&prod=hl5170dn_all&c=gb&lang=en
 QUESTION NO: 431
 A customer states that another technician just removed some viruses and now they are not able to
 connect to websites such as Windows Update, but are able to connect to others. Which of the
@@ -4913,8 +4854,7 @@ D. Remap the RAID array to another drive letter to recover the data.
 Answer: C
 
 
-Description: http://www.pcworld.com/article/2026358/multiple-hard-drives-working-together-allabout-
-raids.html
+Description: http://www.pcworld.com/article/2026358/multiple-hard-drives-working-together-allabout-raids.html
 QUESTION NO: 470
 A user with a CRT monitor notes that there is a discolored area in a portion of their screen. Which
 of the following is the MOST likely cause of the issue?
@@ -7101,8 +7041,7 @@ Answer: C
 
 Description:
 QUESTION NO: 684
-Which of the following features is a characteristic associated to that of Android-based
-smartphones?
+Which of the following features is a characteristic associated to that of Android-based smartphones?
 A. Apple App Store
 B. Closed source SDK
 C. Proprietary data cable connector
@@ -7126,8 +7065,6 @@ removes it from the computer, expecting the computer’s POST process to provide
 with the card removed. Instead the computer boots properly. Which of the following is MOST likely
 the cause?
 A. Onboard video is present
-
-
 B. The onboard speaker is defective
 C. The monitor is defective
 D. The RAM should be reseated

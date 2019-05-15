@@ -1802,7 +1802,7 @@
     } ]
   }, {
     "number" : 86,
-    "description" : "An audio visual company has decided that they want to migrate from Windows XP Professional\nSP2. The company has a domain network. A technician is tasked with selecting an operating\nsystem. Which of the following should the technician select?",
+    "description" : "An audio visual company has decided that they want to migrate from Windows XP Professional SP2. The company has a domain network. A technician is tasked with selecting an operating system. Which of the following should the technician select?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1844,7 +1844,7 @@
     } ]
   }, {
     "number" : 88,
-    "description" : "Which of the following commands may need to be run after a virus removal if the computer will not\nboot?",
+    "description" : "Which of the following commands may need to be run after a virus removal if the computer will not boot?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1865,7 +1865,7 @@
     } ]
   }, {
     "number" : 89,
-    "description" : "A technician would like to map a network drive. Which of the following indicates the correct path\nfor mapping a network drive?",
+    "description" : "A technician would like to map a network drive. Which of the following indicates the correct path for mapping a network drive?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1886,7 +1886,7 @@
     } ]
   }, {
     "number" : 90,
-    "description" : "Which of the following is the MINIMUM account required to install most programs on Windows\nXP?stand",
+    "description" : "Which of the following is the MINIMUM account required to install most programs on Windows XP?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1928,7 +1928,7 @@
     } ]
   }, {
     "number" : 92,
-    "description" : "A technician needs to rebuild a computer that had a virus. Which of the following data destruction\nmethods should be used to ensure the virus has been successfully erased before reinstalling the\noperating system, programs, and all user data?",
+    "description" : "A technician needs to rebuild a computer that had a virus. Which of the following data destruction methods should be used to ensure the virus has been successfully erased before reinstalling the operating system, programs, and all user data?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -1970,7 +1970,7 @@
     } ]
   }, {
     "number" : 94,
-    "description" : "A user has too many applications starting when they log into windows. From the command line,\nwhich of the following tools is the FASTEST option to prevent these applications from running on\n\n\nstartup?",
+    "description" : "A user has too many applications starting when they log into windows. From the command line, which of the following tools is the FASTEST option to prevent these applications from running on startup?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -2503,7 +2503,7 @@
     } ]
   }, {
     "number" : 119,
-    "description" : "When scheduling a backup for preventative maintenance, which of the following would ensure all\ndata was captured?",
+    "description" : "When scheduling a backup for preventative maintenance, which of the following would ensure all data was captured?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -4462,7 +4462,7 @@
     } ]
   }, {
     "number" : 210,
-    "description" : "A company recently had a security breach and is now required to increase the security on their\n\n\nworkstations. A technician has been tasked to harden all the workstations on the network. Which\nof the following should the technician do?",
+    "description" : "A company recently had a security breach and is now required to increase the security on their workstations. A technician has been tasked to harden all the workstations on the network. Which\nof the following should the technician do?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -4739,7 +4739,7 @@
     } ]
   }, {
     "number" : 223,
-    "description" : "A technician has installed the hardware for a SOHO wired network. Which of the following is the\n\n\nFIRST step to securing the network?",
+    "description" : "A technician has installed the hardware for a SOHO wired network. Which of the following is the FIRST step to securing the network?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14563,7 +14563,7 @@
     } ]
   }, {
     "number" : 682,
-    "description" : "Which of the following features is a characteristic associated to that of Android-based\nsmartphones?",
+    "description" : "Which of the following features is a characteristic associated to that of Android-based smartphones?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
