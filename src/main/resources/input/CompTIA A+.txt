@@ -133,8 +133,7 @@ D. Windows Server 2008 R2
 Answer: B
 Description: http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7
 QUESTION NO: 15
-Which of the following are true regarding Windows 32-bit versus Windows 64-bit Operating
-Systems? (Select TWO).
+Which of the following are true regarding Windows 32-bit versus Windows 64-bit Operating Systems? (Select TWO).
 A. CPUs that can run Windows 32-bit can also run Windows 64-bit.
 B. Device drivers for Windows 32-bit and Windows 64-bit are the same.
 C. Not all CPUs are capable of running Windows 64-bit.
@@ -402,8 +401,7 @@ and-for-active-directory-entries-for wi
 
 
 QUESTION NO: 42
-A technician recently replaced a user’s monitor and now the user is reporting that the screen is
-filled with static and appears distorted. Which of the following will resolve the issue?
+A technician recently replaced a user’s monitor and now the user is reporting that the screen is filled with static and appears distorted. Which of the following will resolve the issue?
 A. Lower refresh rate
 B. Lower the resolution
 C. Raise the resolution
@@ -786,8 +784,6 @@ Description: http://www.ictc.com/my-computer-is-running-slow-what-can-i-do/
 QUESTION NO: 82
 Which of the following switches should a technician use with the PING command to resolve an IP
 address to a hostname?
-
-
 A. -a
 B. -f
 C. -n
@@ -1556,8 +1552,7 @@ D. Six character password
 Answer: C
 Description: http://www.mobiledevicemanager.com/mobile-device-security/remote-wipe/
 QUESTION NO: 162
-Which of the following would be the QUICKEST means of removing data from a hard drive, when
-there is no consideration regarding the total destruction of the data?
+Which of the following would be the QUICKEST means of removing data from a hard drive, when there is no consideration regarding the total destruction of the data?
 A. Standard format
 B. Low level format
 C. Overwrite program
@@ -3535,11 +3530,7 @@ D. 6
 Answer: A
 Description: http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/
 QUESTION NO: 352
-A corporate end user reports that random keys on their laptop are sticking. After taking the laptop
-
-
-in for repair a technician discovers that soda has been spilled inside the keyboard, possibly
-reaching other components inside the laptop. Which of the following should the technician do?
+A corporate end user reports that random keys on their laptop are sticking. After taking the laptop in for repair a technician discovers that soda has been spilled inside the keyboard, possibly reaching other components inside the laptop. Which of the following should the technician do?
 A. Spray the sticky spots with compressed air and then scrape them off
 B. Let the end user know that they are responsible for replacing the keyboard
 C. Replace the keyboard and clean the interior of the laptop if necessary
@@ -3567,20 +3558,16 @@ Description: http://pcsupport.about.com/od/findbyerrormessage/tp/stop_error_list
 
 
 QUESTION NO: 355
-A technician is called to assist a customer. The customer reports when they powered on the
-system, they heard a loud noise, saw a spark, and smelled a burning smell. Which of the following
-should the technician advise the customer to do FIRST?
+A technician is called to assist a customer. The customer reports when they powered on the system, they heard a loud noise, saw a spark, and smelled a burning smell. Which of the following should the technician advise the customer to do FIRST?
 A. Power on the system, to see if it happens again.
 B. Immediately notify the fire department.
 C. Unplug the system from the power source.
 D. Turn off the circuit breaker to the building.
 Answer: C
 Description:
-When you hear a loud noise and see a spark with a burning smell, unplug the system immediately
-from power source. This might be the case of high voltage frying the innards of the system.
+When you hear a loud noise and see a spark with a burning smell, unplug the system immediately from power source. This might be the case of high voltage frying the innards of the system.
 QUESTION NO: 356
-A user states that their machine is taking much longer to boot than usual. Which of the following
-utilities would BEST allow a technician to limit what is launched at startup?
+A user states that their machine is taking much longer to boot than usual. Which of the following utilities would BEST allow a technician to limit what is launched at startup?
 A. APPWIZ.CPL
 B. DXDIAG
 C. MSCONFIG
@@ -3588,11 +3575,7 @@ D. REGEDIT
 Answer: C
 Description: http://support.microsoft.com/kb/310560
 QUESTION NO: 357
-A user reports that they are getting frequent delayed write messages throughout the day and are
-experiencing sluggish performance. The technician suspects that the issue relates to the hard disk
-drive. Which of the following would BEST help validate the diagnosis?
-
-
+A user reports that they are getting frequent delayed write messages throughout the day and are experiencing sluggish performance. The technician suspects that the issue relates to the hard disk drive. Which of the following would BEST help validate the diagnosis?
 A. System information
 B. Event viewer
 C. POST card
@@ -3600,9 +3583,7 @@ D. SMART status
 Answer: D
 Description: http://www.howtogeek.com/134735/how-to-see-if-your-hard-drive-is-dying/
 QUESTION NO: 358
-A user states that they are having a problem with their word processor on their laptop.
-Whenever they attempt to type letters with their right hand, numbers and symbols show up
-instead.
+A user states that they are having a problem with their word processor on their laptop. Whenever they attempt to type letters with their right hand, numbers and symbols show up instead.
 Which of the following would address this issue?
 A. Switch to a standardized font
 B. Restore regional settings to default
@@ -4255,9 +4236,7 @@ Description:
 The best way to solve this issue is to remove network drivers and restart the computer. Boot up in
 safe mode and reinstall the drivers.
 QUESTION NO: 415
-A technician is installing and configuring a SOHO wireless network for a client. The client only
-wants five authorized computers to connect to the network with a defined IP range. Which of the
-following should the technician configure on the router? (Select TWO).
+A technician is installing and configuring a SOHO wireless network for a client. The client only wants five authorized computers to connect to the network with a defined IP range. Which of the following should the technician configure on the router? (Select TWO).
 A. DMZ
 B. DHCP
 C. ARP
@@ -4352,8 +4331,6 @@ again.” Which of the following would be the BEST way to resolve this?
 A. Change BIOS options to remove floppy drive from the boot order
 B. Change BIOS options to remove USB device from the boot order
 C. Change BIOS options to remove CD drive from the boot order
-
-
 D. Set the SATA setting in BIOS to AHCI from IDE
 Answer: B
 Description: http://pcsupport.about.com/od/fixtheproblem/ss/bootorderchange_3.htm

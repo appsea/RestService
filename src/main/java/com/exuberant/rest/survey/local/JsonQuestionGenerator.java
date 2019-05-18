@@ -23,6 +23,7 @@ import static com.exuberant.rest.util.Constants.BASE_SAS_QUESTION_FILE_NAME;
 public class JsonQuestionGenerator {
 
     private static Map<String, QuestionParser> questionParsersForFile = new HashMap<>();
+    private static Map<String, Finisher> finisher = new HashMap<>();
 
     static {
         /*patternParsersForFile.put("Q1-A00-211qa204-20170130-17520396.txt", getFirstPatternParser());
@@ -39,11 +40,17 @@ public class JsonQuestionGenerator {
         questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put("dvsa.txt", genericQuestionParser);
+
+        finisher.put("CompTIA A+.txt", new CompTiaAPlusFinisher());
     }
 
     public void generateQuestions(QuestionBank questionBank) throws Exception {
         QuestionParser parser = questionParsersForFile.get(questionBank.getInputFile());
         List<Question> questions = parser.parse(questionBank);
+        if(finisher.containsKey(questionBank.getInputFile())){
+            Finisher fileFinisher = finisher.get(questionBank.getInputFile());
+            questions = fileFinisher.finish(questions);
+        }
         ObjectMapper objectMapper = new ObjectMapper();
         Path jsonPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".json"));
         Path wordPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".docx"));
@@ -55,8 +62,9 @@ public class JsonQuestionGenerator {
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         new WordFileWriter().write(jsonQuestions, wordPath);
         Files.write(jsonPath, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQuestions).getBytes());
-        if (questionBank.getInputFile().contains("dvsa"))
+        if (questionBank.getInputFile().contains("dvsa")){
             validateDvsaQuestions(jsonQuestions);
+        }
     }
 
     private void validateDvsaQuestions(JsonQuestions jsonQuestions) {
