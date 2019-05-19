@@ -2572,8 +2572,6 @@ A. FORMAT /Q
 B. Overwrite program
 C. Degaussing tool
 D. Low level format
-
-
 Answer: C
 Description:
 QUESTION NO: 263
@@ -2601,8 +2599,6 @@ A technician sends an email to an employee in the finance office telling them th
 their password right away. The technician then walks into the employee's office to observe as the
 password is being changed. Later, the employee in the finance office reports that their password
 was compromised. Which of the following is the MOST likely cause?
-
-
 A. Shoulder surfing
 B. Malware
 C. Phishing
@@ -2630,8 +2626,6 @@ B. Cannot be reversed.
 C. Uses dictionary words.
 D. Uses special characters.
 E. Can be encrypted.
-
-
 Answer: A,D
 Description:
 QUESTION NO: 268
@@ -2659,8 +2653,6 @@ An administrator is asked to review a file on a local drive. The file contains w
 multiple conversations from emails, chat sessions, and various word processing files that were
 accessed during the past several days. Ann, the user, advises the administrator this was not a file
 she had created. The file is MOST likely created by which of the following?
-
-
 A. Malware
 B. Phishing
 C. Social engineering
@@ -2689,8 +2681,6 @@ Answer: A
 Description:
 QUESTION NO: 273
 A customer wants to setup a SOHO wired network. The customer needs assistance in setting up a
-
-
 static IP address on three computers on the network. Which of the following is the BEST solution
 for the technician to implement?
 A. Internet Options >Connection > Network > LAN settings > choose Proxy server, type in the IP
@@ -2720,8 +2710,6 @@ D. Privacy filters
 E. MAC filtering
 Answer: A,B
 Description:
-
-
 QUESTION NO: 276
 A technician is hardening the security on a wired SOHO router and needs the router to still be able
 to connect to the Internet. Which of the following methods would the technician do to achieve this?
@@ -2748,8 +2736,6 @@ C. Spyware
 D. Rootkit
 Answer: D
 Description:
-
-
 QUESTION NO: 279
 A website that attempts to mimic a bank website with malicious intent is known as which of the
 following?
@@ -2778,8 +2764,6 @@ A. Disabling the administrator account
 B. Requiring personal information be entered before use
 C. Changing the default usernames for all kiosk accounts
 D. Restricting user permissions for the kiosk account
-
-
 E. Setting a strong password for all kiosk accounts
 Answer: D
 Description:
@@ -2805,8 +2789,6 @@ Description: http://www.speedguide.net/port.php?port=110
 QUESTION NO: 284
 A user just bought an Android tablet and wants to connect to their work email. The user’s
 employer has a Microsoft Exchange server for email. Which of the following would the technician
-
-
 configure to allow the user to access email on the Android tablet?
 A. DNS, DHCP
 B. IMAP, SNTP
@@ -2858,8 +2840,6 @@ Description: http://en.wikipedia.org/wiki/IOS
 QUESTION NO: 289
 Which of the following features allows for easier navigation of long lists on a tablet device?
 A. Pinch-zoom
-
-
 B. Multitouch
 C. Scrollbars
 D. Touch flow
@@ -2914,8 +2894,6 @@ with-a-mobile-device
 QUESTION NO: 294
 Which of the following mobile device features disables cellular and wireless communication?
 A. Hotspot Mode
-
-
 B. Pairing Mode
 C. Settings Reset
 D. Airplane Mode
@@ -2940,10 +2918,7 @@ B. Download updates
 C. Disable GPS
 D. Install antivirus
 Answer: A
-Description: http://www.computerworld.com/s/article/9239655/Mobile_phone_security_no_brainer_Use_a_devi
-ce_passcode
-
-
+Description: http://www.computerworld.com/s/article/9239655/Mobile_phone_security_no_brainer_Use_a_device_passcode
 QUESTION NO: 297
 A user has a laptop that they need to get ready for an outdoor presentation. The user is concerned
 that the laptop will turn off the screen or go into standby before their presentation is complete.
@@ -2970,8 +2945,6 @@ the primary functions.
 QUESTION NO: 299
 Which of the following software types would need to be installed on a mobile device to help
 prevent data from being viewed if the device is lost?
-
-
 A. Remote wipe
 B. Antivirus
 C. GPS locator
@@ -2996,8 +2969,6 @@ C. Settings> General> Network> Wi-Fi> SSID Name> IP address
 D. Location Services> Settings> Wi-Fi> SSID Name> Network> IP address
 Answer: C
 Description: http://www.iphone-to-ipad.com/blog/find-ip-address-ios-device.html
-
-
 QUESTION NO: 302
 Which of the following home computer synchronization methods are possible with an iOS device?
 (Select TWO).
@@ -3026,8 +2997,6 @@ A. iMac
 B. iTunes
 C. Safari
 D. Bluetooth
-
-
 Answer: B
 Description: http://en.wikipedia.org/wiki/App_Store_(iOS)
 QUESTION NO: 305
@@ -3851,8 +3820,6 @@ Description: http://arstechnica.com/information-technology/2010/01/windows-xp-mo
 QUESTION NO: 380
 Ann, a home user, brings a Windows XP PC in for repair and reports that several disk read errors
 are occurring. She has run check disk and errors have been reported several times. Which of the
-
-
 following should a technician recommend? (Select TWO).
 A. Increase the amount of RAM to improve disk checks
 B. Backup all data on the drive
@@ -4077,8 +4044,6 @@ A. CMOS battery
 B. Video card
 C. IDE cable
 D. Floppy cable
-
-
 Answer: B
 Description: http://www.technick.net/public/code/cp_dpage.php?aiocp_dp=guide_beep_codes
 QUESTION NO: 401

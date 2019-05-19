@@ -5779,7 +5779,7 @@
     } ]
   }, {
     "number" : 271,
-    "description" : "A customer wants to setup a SOHO wired network. The customer needs assistance in setting up a   static IP address on three computers on the network. Which of the following is the BEST solution for the technician to implement?",
+    "description" : "A customer wants to setup a SOHO wired network. The customer needs assistance in setting up a static IP address on three computers on the network. Which of the following is the BEST solution for the technician to implement?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -6018,7 +6018,7 @@
     } ]
   }, {
     "number" : 282,
-    "description" : "A user just bought an Android tablet and wants to connect to their work email. The user’s employer has a Microsoft Exchange server for email. Which of the following would the technician   configure to allow the user to access email on the Android tablet?",
+    "description" : "A user just bought an Android tablet and wants to connect to their work email. The user’s employer has a Microsoft Exchange server for email. Which of the following would the technician configure to allow the user to access email on the Android tablet?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -8082,7 +8082,7 @@
     } ]
   }, {
     "number" : 378,
-    "description" : "Ann, a home user, brings a Windows XP PC in for repair and reports that several disk read errors are occurring. She has run check disk and errors have been reported several times. Which of the   following should a technician recommend? (Select TWO).",
+    "description" : "Ann, a home user, brings a Windows XP PC in for repair and reports that several disk read errors are occurring. She has run check disk and errors have been reported several times. Which of the following should a technician recommend? (Select TWO).",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20932,7 +20932,7 @@
     } ]
   } ],
   "questionVersion" : 1,
-  "playStoreVersion" : 10004,
+  "playStoreVersion" : 10005,
   "totalQuestions" : 978,
   "ads" : true
 }
