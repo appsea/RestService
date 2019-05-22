@@ -72,7 +72,8 @@ public class PatternParserFactory {
         String newQuestionRegex = "^QUESTION NO:.*";
         String optionRegex = "^[A-G][.]\\s.*";
         String answerRegex = "^Answer. .*";
-        return new DynamicPatternParser(newQuestionRegex, optionRegex, answerRegex);
+        String descriptionRegex = "^Description:.*";
+        return DynamicPatternParser.getParserWithDescription(newQuestionRegex, optionRegex, answerRegex, descriptionRegex);
     }
 
     public static void addPatternParser(String file, PatternParser patternParser) {
