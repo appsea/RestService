@@ -12110,8 +12110,7 @@
       "description" : "D. 10 metres (32 feet)",
       "correct" : true
     } ]
-  } ],
-  "premium" : [ {
+  }, {
     "number" : 501,
     "explanation" : "It may be tempting to park where you shouldn’t while you run a quick errand. Careless parking is a selfish act and could endanger other road users. It’s important not to park at or near a bus stop, as this could inconvenience passengers and may put them at risk as they get on or off the bus.",
     "category" : "Rules of the road",
@@ -18773,7 +18772,7 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 1,
+  "questionVersion" : 2,
   "playStoreVersion" : 10011,
   "totalQuestions" : 773,
   "ads" : true,
