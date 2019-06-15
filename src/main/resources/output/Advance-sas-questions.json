@@ -127,8 +127,8 @@
     } ]
   }, {
     "number" : 7,
-    "description" : "The following SAS program is submitted:\n\n%macro check(num=4);\n%let result=%eval(&nm gt 5);\n%put result is &result;\n%mend;\n%check (num=10)\n\nWhat is written to the SAS log?",
-    "explanation" : "%eval returns 0 or 1 for a Boolean expression being calculated inside it. As '1'=true for 10>5, but 1st macro line should be &num, not &nm.",
+    "description" : "The following SAS program is submitted:\n\n%macro check(num=4);\n%let result=%eval(&num gt 5);\n%put result is &result;\n%mend;\n%check (num=10)\n\nWhat is written to the SAS log?",
+    "explanation" : "%eval returns 0 or 1 for a Boolean expression being calculated inside it. As '1'=true for 10>5.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. result is true",
@@ -5479,8 +5479,8 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 6,
-  "playStoreVersion" : 10064,
+  "questionVersion" : 7,
+  "playStoreVersion" : 10072,
   "totalQuestions" : 262,
   "ads" : true
 }

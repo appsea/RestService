@@ -100,7 +100,7 @@ Question:
 The following SAS program is submitted:
 
 %macro check(num=4);
-%let result=%eval(&nm gt 5);
+%let result=%eval(&num gt 5);
 %put result is &result;
 %mend;
 %check (num=10)
@@ -111,7 +111,7 @@ B. result is 10 gt 5
 C. result is 1
 D. result is 0
 Answer: C
-Description: %eval returns 0 or 1 for a Boolean expression being calculated inside it. As '1'=true for 10>5, but 1st macro line should be &num, not &nm.
+Description: %eval returns 0 or 1 for a Boolean expression being calculated inside it. As '1'=true for 10>5.
 
 Question:
 The following SAS program is submitted:
