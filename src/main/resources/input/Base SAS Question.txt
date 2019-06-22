@@ -376,8 +376,26 @@ C. LA = name||’ ,’||TRIM(put(Age,2.));
 D. LA = put(name)||’,’||put(Age,3.);
 
 Answer: A
-Description: TRIM function removes leading and trailing blacks from name and concatenate it with age value.
+Description: TRIM function removes trailing blanks from name and concatenate it with age value.
 
+Question:
+Given the following code:
+data temp;
+length USUBJID $12.;
+set lib1.x
+	lib2.y;
+run;
+what would be the length of USUBJID in temp?
+
+A. 5
+B. 8
+C. 12
+D. Syntax error
+
+Answer: C
+
+
+ 
 Question:
 data temp;
 merge test1(keep = ID)
@@ -975,7 +993,7 @@ C. 2
 D. 3
 
 Answer: B
-Description:
+Description: Trailing @ sign in first input statement hold the records in PDV hence read read on;y ne record in dataset compilation.
 
 Question:
 data temp;
@@ -1694,6 +1712,7 @@ C. 1960
 D. 1961
 
 Answer: B
+Description: The YEARCUTOFF= value is the default that is used by various date and datetime informats and functions. If the default value of nnnn (1920) is in effect, the 100-year span begins with 1920 and ends with 2019.
 
 Question:
 SAS does not adjust for daylight savings time, but it will adjust for
@@ -1709,11 +1728,10 @@ Description: SAS automatically adjust for leap year value.
 Question:
 The following are the first lines of an input file.
 
-123456789|123456789|123456789|
-Smith Joe 27 1892 81059
-Franks Carl 24 2343 84060
-Well Sam 32 4569 76182
-Max Cori 21 1052 87231
+Smith  Joe     27   1892 81059
+Franks Carl    24   2343 84060
+Well   Sam     32   4569 76182
+Max    Cori    21   1052 87231
 
 Which piece of code reads the data without errors?
 
@@ -1746,6 +1764,7 @@ informat dob julian.;
 run;
 
 Answer: B
+Description: dues has 4 digit value only option B has informat for 4 digit value.
 
 Question:
 Consider the following data.
@@ -1761,14 +1780,17 @@ A. Smith Joe 27 1892
 Franks Carl 24 2343 84060
 Well Sam 32 4569 76182
 Max Cori 21 1052 87231
+
 B. Smith Joe 27 1892 81059
 Franks Carl 24 2343 84060
 Well Sam 32 4569 76182
 Max Cori 21 87231
+
 C. Smith Joe 27 1892 81059
 Franks Carl 2343 84060
 Well Sam 32 4569 76182
 Max Cori 21 1052 87231
+
 D. Smith Joe 27 1892 81059
 Franks Carl 24 2343 84060
 Well 32 4569 76182
@@ -1785,7 +1807,7 @@ C. 6
 D. 5
 
 Answer: D
-Description: specifies the width of the input field. Range is from 5-32.
+Description: specifies the width of the input field. Range is from 5-32. Default value is 8.
 
 Question:
 SAS date values are the number of days since which date?
@@ -1890,7 +1912,7 @@ title2;
 A. Stat 124 Final Exam Spring 2009 Dr. Scott
 B. Stat 124 Final Exam Fall 2010 Dr. Scott
 C. Dr. Scott Stat 124 Final Exam
-D. Stat 124 Final Exam
+D. Stat 124 Final Exam Fall 2010
 
 Answer: D
 Description: The TITLE or FOOTNOTE statement of any number completely replaces any other TITLE or FOOTNOTE statement of that number. In addition, it cancels all TITLE or FOOTNOTE statements of a higher number. For example, if you define TITLE1, TITLE2, and TITLE3, resubmitting the TITLE2 statement cancels TITLE3. 
@@ -2067,14 +2089,14 @@ Answer: D
 Description: Value in {4} creates 4 arrays. Arrays having consecutive names can be named as NAME1-NAMEn. Numeric arrays do not need $ sign with them. Values exact next to array name are initial value of created arrays respectively. Array arraname(no of elements) char|numeric element_names (intial values)
 
 Question:
-The variable sales in the data set employees has a format of 8.3. The variable sales in the data set daily has a format of dollar6.2. The following program is submitted: Assume one of the values for name is 'John'.
+The variable sales in the dataset employees has a format of 8.3. The variable sales in the dataset daily has a format of dollar6.2. The following program is submitted: Assume one of the values for name is 'John'.
 
 data merged;
 merge employees daily;
 by name; /* format sales comma5.2; */
 run;
 
-What is the format of the variable name in the merged data set?
+What is the format of the variable name in the merged dataset?
 
 A. None of the these.
 B. 6.2
@@ -2733,14 +2755,14 @@ The SAS data set named COMPANY.PRICES is listed below:
 
 COMPANY.PRICES
 
-prodid	price	producttype	sales	returns
+prodid	price   producttype     sales	returns
 
-K12S		5.10		NETWORK		15		2
-B132S	2.34		HARDWARE		300		10
-R18KY2	1.29		SOFTWARE		25		5
-3KL8BY	6.37		HARDWARE		125		15
-DY65DW	5.60		HARDWARE		45		5
-DGTY23	4.55		HARDWARE		67		2
+K12S	5.10    NETWORK     	15		2
+B132S	2.34    HARDWARE		300		10
+R18KY2	1.29    SOFTWARE		25		5
+3KL8BY	6.37    HARDWARE		125		15
+DY65DW	5.60	HARDWARE		45		5
+DGTY23	4.55    HARDWARE		67		2
 
 The following SAS program is submitted:
 
@@ -2803,8 +2825,7 @@ B. 425
 C. 499
 D. 1000
 Answer: B
-DESCRIPTION: Firstobs option tells SAS from which observation to starts reads while obs option tells SAS on which observation to stop on.
-Here data Obs count = 499-75 which is 425. hence answer is 425.
+DESCRIPTION: Firstobs option tells SAS from which observation to start read while obs tells SAS on which observation to stop on. Obs starts on 75 and ends on 499 so total observation will be 499-75 = 424 but since we need to include 75, total observation will be 424+1.
 
 Question:
 The following SAS program is submitted:
@@ -2966,7 +2987,7 @@ C. 1151960
 D. '1/15/1960'
 
 Answer: A
-Description: 1Jan1960 is 0 in SAS
+Description: The MDY function converts MONTH, DAY, and YEAR values to a SAS date value. 1Jan1960 is 0 in SAS while
 15Jan1960 is 14 in SAS
 
 Question:
@@ -2986,7 +3007,7 @@ C. a numeric value of 14692, which represents the SAS date value for March 23, 2
 D. a numeric value of 3232000, which represents the SAS date value for March 23, 2000
 
 Answer: C
-Description: Mdy() function returns a date numeric date value.
+Description: The MDY function converts MONTH, DAY, and YEAR values to a SAS date value.
 
 
 Question:
@@ -3370,7 +3391,7 @@ B. Pass
 C. 50.5
 D. . (missing numeric value)
 
-Answer: D
+Answer: C
 Description: Whenever SAS does not find a mapping for some value in the format it print the value as it is.
 
 Question:
@@ -3476,20 +3497,20 @@ run;
 
 style	bedrooms	baths	price
 CONDO	2		    1.5     80050
-	3	2.5	        79350
-	4	2.5	        127150
-	2	2.0	        110700
+		3			2.5	    79350
+		4			2.5	    127150
+		2			2.0	    110700
 RANCH	2		    1.0     64000
-	3		        3.0     86650
-	3		        1.0     89100
-	1		        1.0     34550
+		3		    3.0     86650
+		3		    1.0 	89100
+		1		    1.0     34550
 SPLIT	1           1.0 	65850
-	4 		        3.0 	94450
-	3		        1.5 	73650
+		4 		    3.0 	94450
+		3		    1.5 	73650
 TWOSTORY 4		    3.0	    107250
-	2		        1.0 	55850
-	2		        1.0 	69250
-	4		        2.5	    102950
+		2		    1.0 	55850
+		2		    1.0 	69250
+		4		    2.5	    102950
 Which of the following SAS statement(s) create(s) the report?
 A. id style;
 B. id style;
@@ -3856,8 +3877,7 @@ infile 'file-specification';
 input year quantity;
 run;
 
-Which one of the following completes the program and produces a non-missing value for the variable TOTQUANTITY in the last
-observation of the output data set?
+Which one of the following completes the program and produces a non-missing value for the variable TOTQUANTITY in the last observation of the output data set?
 A. totquantity + quantity;
 B. totquantity = sum(totquantity + quantity);
 C. totquantity 0;
@@ -4109,8 +4129,7 @@ The following SAS program is submitted:
 proc sort data = employee_info;
 run;
 
-Which one of the following BY statements completes the program and sorts the data sequentially by descending expense values within
-each descending IDNUMBER value?
+Which one of the following BY statements completes the program and sorts the data sequentially by descending expense values within each descending IDNUMBER value?
 A. by descending IDNumber Expenses;
 B. by (IDNumber Expenses) descending;
 C. by IDNumber descending Expenses descending;
@@ -4240,11 +4259,12 @@ The following SAS program is submitted:
 
 proc sort data=work.employee;
 by descending fname;
+
 proc sort data=work.salary;
 by descending fname;
+
 data work.empdata;
-merge work.employee
-work.salary;
+merge work.employee work.salary;
 by fname;
 run;
 
@@ -4262,8 +4282,8 @@ The SAS data sets WORK.EMPLOYEE and WORK.SALARY are shown below:
 WORK.EMPLOYEE WORK.SALARY
 fname	age	name	salary
 Bruce	30	Bruce	25000
-Dan	40	Bruce	35000
-		Dan	25000
+Dan		40	Bruce	35000
+			Dan	    25000
 
 The following SAS program is submitted:
 
@@ -4317,9 +4337,9 @@ The contents of two SAS data sets named EMPLOYEE and SALARY are listed below:
 EMPLOYEE	SALARY
 NAME	AGE	NAME	SALARY
 Bruce	30	Bruce	40000
-Dan	35	Bruce	35000
-		Dan	37000
-		Dan	.
+Dan		35	Bruce	35000
+			Dan	    37000
+			Dan	    .
 How many observation are in EMPLSAL dataset
 
 data emplsal;
@@ -4360,14 +4380,11 @@ The following SAS program is submitted:
 
 data numrecords;
 infile 'file-specification';
-input @1 patient $15.
-relative $ 16-26 @;
+input @1 patient $15. relative $ 16-26 @;
 if relative = 'children' then
 input @54 diagnosis $15. @;
 else if relative = 'parents' then
-input @28 doctor $15.
-clinic $ 44-53
-@54 diagnosis $15. @;
+input @28 doctor $15. clinic $ 44-53 @54 diagnosis $15. @;
 input age;
 run;
 
@@ -4437,8 +4454,7 @@ C. 5
 D. 7
 
 Answer: D
-Description:
- Reason being statement "input style $ @;" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.
+Description: Reason being statement "input style $ @;" will hold input stream until next input statement. Program will read next input statement only if style is condo or ranch. But even when style is not condo or ranch when run statement is executed output will be written with just style variable having value and all others will be missing.
 
 Question:
 The contents of the raw data file FURNITURE are listed below:
@@ -4663,8 +4679,7 @@ Question:
 In the following SAS program, the input data files are sorted by the NAMES variable:
 libname temp 'SAS-data-library';
 data temp.sales;
-merge temp.sales;
-work.receipt;
+merge temp.sales work.receipt;
 by names;
 run;
 
@@ -5184,10 +5199,10 @@ Question:
 The following SAS program is submitted:
 
 data work.passengers;
-if OrigPassengers = then
+if OrigPassengers = . then
 OrigPassengers= 100;
 TransPassengers= 100;
-OrigPassengers=
+OrigPassengers= .
 TotalPassengers= sum (OrigPassengers, TransPassengers) +0;
 run;
 
@@ -5226,7 +5241,7 @@ B. 2
 C. 3
 D. 4
 Answer: D
-Description: This syntax will give you 4 observation for HWARE which has price less than equal to 5.00.
+Description: Since 'if price le 5.00;' is after output statement, SAS has already compiled and executed desired output.  This syntax will give you 4 observation for HWARE regardless of the price.
 
 Question:
 Given the SAS data set EMPLOYEES:
@@ -5266,9 +5281,9 @@ run;
 
 The data set TWO is created:
 TWO
-Obs	Dte		Day
+Obs Dte			Day
 1	09JAN2005	1
-12	JAN2005		4
+2	12JAN2005	4
 
 Which expression successfully completed the program and created the variable DAY?
 A. day(dte)
@@ -5473,7 +5488,7 @@ run;
 
 What is the result?
 A. The value of the variable TOTAL in the output data set is 2000. No messages are written to the SAS log.
-B. The value of the variable TOTAL in the output data set is2000. A note that conversion has taken place is written to the SAS log.
+B. The value of the variable TOTAL in the output data set is 2000. A note that conversion has taken place is written to the SAS log.
 C. The value of the variable TOTAL in the output data set is missing. An error message is written to the SAS log.
 D. The variable TOTAL in the output data set has no value. The program fails to execute due to a syntax error.
 Answer: C
@@ -5871,7 +5886,7 @@ Description: The INPUT statement reads line by line. when the first line is fini
 
 
 Question:
-The SAS data set WORK.ONE contains a numeric variable named Num ana character variable
+The SAS data set WORK.ONE contains a numeric variable named Num and character variable
 named Char:
 WORK.ONE
 Num	Char
@@ -5958,21 +5973,21 @@ run;
 
 After data step execution, what will data set WORK.GEO contain?
 A. Obs	City		State	Region
-1	Tulsa		OK	Western
-2	Los Angeles	CA	Western
-3	Bangor			Western
+	1	Tulsa		OK		Western
+	2	Los Angeles	CA		Western
+	3	Bangor				Western
 B. Obs	City		State	Region
-1	Tulsa		OK	Western
-2	Los Angeles	CA	Western
-3	Bangor		
+	1	Tulsa		OK		Western
+	2	Los Angeles	CA		Western
+	3	Bangor		
 C. Obs	City		State	Region
-1	Tulsa		OK	Central
-2	Los Angeles	CA	Western
-3	Bangor			Western
+	1	Tulsa		OK		Central
+	2	Los Angeles	CA		Western
+	3	Bangor				Western
 D. Obs	City		State	Region
-1	Tulsa		OK	Central
-2	Los Angeles	CA	Western
-3	Bangor		
+	1	Tulsa		OK		Central
+	2	Los Angeles	CA		Western
+	3	Bangor		
 
 Answer: A
 Description: In the first assignment statement value of REGION is assign as Central. On the iteration of second assignment statement value of REGION overwrite as Western which then is assign to the all observation.
@@ -6085,7 +6100,7 @@ B. The variable Code is sorted by ascending order.
 C. The PSORT data set is stored in the SASUSER library.
 D. The descending option applies to the Date and Cost variables.
 Answer: B
-Description: Descending option applies to variable which is exact next to it, hence only DATE variable is in descending order while variable CODE and COST are in asending order. 
+Description: Descending option applies to variable which is exact next to it, hence only DATE variable is in descending order while variable CODE and COST are in ascending order. 
 
 
 Question:
@@ -6135,8 +6150,8 @@ B. DayOfMonth, Year, and MonthOfYear are numeric.
 C. DayOfMonth and Year are numeric. MonthOfYear is character.
 D. DayOfMonth, Year, and MonthOfYear are date values.
 Answer: B
-Description: The MONTH function produces an integer that represents the month, where 1=January, 2=february, . . . , 12=December. DAY and YEAR functions give integer values.
- 
+Description: The MONTH function produces an integer that represents the month, where 1=January, 2=february, . . . , 12=December. SAS represents DAY as where Sunday=1, Monday=2, . . . ., Saturday=7. YEAR functions give integer values.
+
 Question:
 The following SAS program is submitted:
 
@@ -6317,21 +6332,21 @@ Eureka
 CA ;
 
 What will the data set WORK.TEST contain?
-A. Name		Address		State
--------------- ---------------- ------
-Joe Conley	123 Main St.
-Jane Ngyuen	555 Alpha Ave.	NY
+A. Name			Address				State
+-------------- 	---------------- 	------
+Joe Conley		123 Main St.
+Jane Ngyuen		555 Alpha Ave.		NY
 Jennifer Jason	666 Mt. Diablo
 
-B. Name		Address		City		State
--------------- ---------------- -----------     ------
-Joe Conley	123 Main St.	Janesville
-Jane Ngyuen	555 Alpha Ave.	New York	 NY
+B. Name         Address			City        State
+-------------- 	--------------  --------- ------
+Joe Conley		123 Main St.	Janesville
+Jane Ngyuen		555 Alpha Ave.	New York		 NY
 Jennifer Jason	666 Mt. Diablo	Eureka
 
-C. Name		Address		State
--------------- ---------------- ------
-Jane Ngyuen	555 Alpha Ave.	NY
+C. Name			Address			State
+--------------  -------------   ------
+Jane Ngyuen     555 Alpha Ave.	NY
 
 D. O observations,
 there is a syntax error in the data step.
@@ -6456,14 +6471,14 @@ VALUE <$>name <value-range-set(s)>; .
 
 Question:
 Given the SAS data set WORK.PRODUCTS:
-ProdId	Price	ProductType	Sales	Returns
+ProdId	Price	ProductType		Sales	Returns
 ------  ------- -------------   -----   ----------
-K12S	95.50	OUTDOOR		15	2
-B132S	2.99	CLOTHING	300	10
-R18KY2	51.99	EQUIPMENT	25	5
-3KL8BY	6.39	OUTDOOR		125	15
-DY65DW	5.60	OUTDOOR		45	5
-DGTY23	34.55	EQUIPMENT	67	2
+K12S	95.50	OUTDOOR			15		2
+B132S	2.99	CLOTHING		300		10
+R18KY2	51.99	EQUIPMENT		25		5
+3KL8BY	6.39	OUTDOOR			125		15
+DY65DW	5.60	OUTDOOR			45		5
+DGTY23	34.55	EQUIPMENT		67		2
 The following SAS program is submitted:
 
 data WORK.OUTDOOR WORK.CLOTH WORK.EQUIP;
@@ -6491,11 +6506,11 @@ Tina,FEB,15,18,12,13,Final
 Tina,MAR,29,14,19,27,20,Current
 
 The following output is desired:
-Obs Name Month Status Week1 Week2 Week3 Week4 Week5
-1 John FEB Final $13 $25 $14 $27 .
-2 John MAR Current $26 $17 $29 $11 $23
-3 Tina FEB Final $15 $18 $12 $13 .
-4 Tina MAR Current $29 $14 $19 $27 $20
+Obs Name Month Status 	Week1   Week2   Week3 	Week4   Week5
+1 	John FEB 	Final 	$13 	$25     $14     $27     .
+2 	John MAR 	Current $26 	$17     $29     $11     $23
+3 	Tina FEB 	Final 	$15 	$18     $12     $13     .
+4 	Tina MAR 	Current $29 	$14     $19     $27	    $20
 
 Which SAS program correctly produces the desired output?
 
@@ -6690,8 +6705,10 @@ infile'c:\class1.csv' dsd;
 input Name $ Sex $ Age Height Weight;
 if Age NE 16 and Age NE 15 then Group=1;
 else Group=2;
+
 Which of the following assignment statements for variable group are functionally equivalent to the
 original statement used in the above data step?
+
 A. if Age not in(15,16) then Group=1; else Group=2;
 B. if (Age NE 16) or (Age NE 15) then Group=1; else Group=2;
 C. where Age not between 15 and 16 then Group=1; else Group=2;
@@ -6752,11 +6769,12 @@ Description: PROC CONTENTS prints descriptions of the contents of one or more SA
 Question:
 Given the SAS data set WORK.ORDERS:
 WORK.ORDERS
-order_id	customer	shipped
+order_id	customer		shipped
 ----------	------------	----------
-9341		Josh Martin	02FEB2009
+9341		Josh Martin		02FEB2009
 9874		Rachel Lords	14MAR2009
 10233		Takashi Sato	07JUL2009
+
 The variable order_id is numeric; customer is character; and shipped is numeric, contains a SAS date value, and is shown with the DATE9. format. A programmer would like to create a new variable, ship_note, that shows a character value with the order_id, shipped date, and customer name. For example, given the first observation ship_note would have the value "Order 9341 shipped on 02FEB2009 to Josh Martin".
 Which of the following statement will correctly create the value and assign it to ship_note?
 
@@ -6802,6 +6820,7 @@ State='California';
 run;
 
 The computed variables City and State have their values assigned using two different methods, a RETAIN statement and an Assignment statement. Which statement regarding this program is true?
+
 A. The RETAIN statement is fine, but the value of City will be truncated to 8 bytes as the LENGTH statement has been omitted.
 B. Both the RETAIN and assignment statement are being used to initialize new variables and are equally efficient. Method used is a matter of programmer preference.
 C. The assignment statement is fine, but the value of City will be truncated to 8 bytes as the LENGTH statement has been omitted.
