@@ -149,7 +149,7 @@
   }, {
     "number" : 8,
     "description" : "What is true about _ERROR_ variable?",
-    "explanation" : "_ERROR_ does not have value YES,NO,TRUE,FALSE and it does not appear in output dataset. _ERROR_ variables are dropped because automatic variables created by the DATA step are not written to a SAS data set.",
+    "explanation" : "_ERROR_ does not have value YES,NO,TRUE,FALSE and it does not appear in output dataset. _ERROR_ variables are dropped because automatic variables created by the DATA step are not written to a SAS dataset.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Can be used in assignments/calculation in datastep.",
@@ -527,7 +527,7 @@
   }, {
     "number" : 26,
     "description" : "Given the following code:\ndata temp;\nlength USUBJID $12.;\nset lib1.x\nlib2.y;\nrun;\nwhat would be the length of USUBJID in temp?",
-    "explanation" : "",
+    "explanation" : "Since Length statement is assign before set statement length of USUBJID is assign to 12.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. 5",
@@ -5903,7 +5903,7 @@
     } ]
   }, {
     "number" : 282,
-    "description" : "The data set REALESTATE has the variable LOCALFEE with a format or 9. and a variable COUNTRYFEE with a format or 7.;\nThe following SAS program is submitted:\n\ndata history;\nformat local fee country fee percent6.;\nset realestate;\nlocal fee = local fee / 100;\ncountry fee = country fee / 100;\nrun;\n\nWhat are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?",
+    "description" : "The data set REALESTATE has the variable LOCALFEE with a format or 9. and a variable COUNTRYFEE with a format or 7.;\nThe following SAS program is submitted:\n\ndata history;\nformat localfee countryfee percent6.;\nset realestate;\nlocalfee = localfee / 100;\ncountryfee = countryfee / 100;\nrun;\n\nWhat are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?",
     "explanation" : "You can apply single format to multiple variables. Since format is at end of statement it has applied to all variables before it. Here format PERCENT6. has applied to both variable.",
     "options" : [ {
       "tag" : "A",
@@ -7500,7 +7500,7 @@
   }, {
     "number" : 358,
     "description" : "Which of the following statements is false about BY-group processing?\nWhen you use the BY statement with the SET statement,",
-    "explanation" : "SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set. If u want get into datset must assign any variable like var=first.by_variable",
+    "explanation" : "SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set. If u want get into dataset must assign any variable like var=first.by_variable",
     "options" : [ {
       "tag" : "A",
       "description" : "A. FIRST. and LAST. identify the first and last observation in each BY group, in that order.",
@@ -7625,7 +7625,7 @@
     } ]
   }, {
     "number" : 364,
-    "description" : "What is wrong with this program?\n\ndata perm.update;\ninfile invent\ninput Item $ 1-13 IDnum $ 15-19 Instock 21-22\nBackOrd 24-25;\ntotal=instock+backord;\nrun;",
+    "description" : "What is wrong with this program?\n\ndata perm.update;\ninfile invent\ninput Item $ 1-13 IDnum $ 15-19 Instock 21-22;\nBackOrd 24-25;\ntotal=instock+backord;\nrun;",
     "explanation" : "missing semicolon on second line will consider input as part of infile statement.",
     "options" : [ {
       "tag" : "A",
@@ -7836,7 +7836,7 @@
   }, {
     "number" : 374,
     "description" : "Suppose the variable 'Unit_Cost_Price' (numeric) contains both missing and non missing values. What would the following code return?\n\nproc sort data=ecsql1.price_list;\nby Unit_Cost_Price;\nrun;",
-    "explanation" : "It is because missing values are considered as lowest values (ascending order; they will be top of the data set)",
+    "explanation" : "It is because missing values are considered as lowest possible values (ascending order; they will be top of the data set)",
     "options" : [ {
       "tag" : "A",
       "description" : "A. A new dataset work.price_list is created with Unit_Cost_Price sorted in ascending order with missing values at the bottom of the dataset",
@@ -8381,7 +8381,7 @@
     } ]
   }, {
     "number" : 400,
-    "description" : "Which options are used to create the following PROC PRINT output?\n13:27 Monday, March 22, 1999\nPatient\tArterial\tHeart\tCardiac\tUrinary\n203 \t88\t\t95\t66\t110\n54\t83\t\t183\t95\t0\n664\t72\t\t111\t332\t12\n210\t74\t\t97\t369\t0\n101\t80\t\t130\t291\t0",
+    "description" : "Which options are used to create the following PROC PRINT output?\n13:27 Monday, March 22, 1999\nPatient\tArterial\tHeart\tCardiac\tUrinary\n203 \t88\t\t\t95\t\t66\t\t110\n54\t\t83\t\t\t183\t\t95\t\t0\n664\t\t72\t\t\t111\t\t332\t\t12\n210\t\t74\t\t\t97\t\t369\t\t0\n101\t\t80\t\t\t130\t\t291\t\t0",
     "explanation" : "The DATE and NONUMBER system options cause the output to appear with the date but without page numbers. In the PROC PRINT step, the DOUBLE option specifies double spacing, and the NOOBS option removes the default Obs column.",
     "options" : [ {
       "tag" : "A",
@@ -8402,7 +8402,7 @@
     } ]
   }, {
     "number" : 401,
-    "description" : "Which of the following statements can you use in a PROC PRINT step to create this output?\nMonth   Instructors AerClass    WalkJogRun  Swim\n01  1   37  91  83\n02  2   41  102 27\n03  1   52  98  19\n04  1   61  118 22\n05  3   49  88  29\n8   240 497 180",
+    "description" : "Which of the following statements can you use in a PROC PRINT step to create this output?\nMonth\tInstructors\tAerClass\tWalkJogRun\tSwim\n01\t\t1\t\t\t37\t\t\t91\t\t\t83\n02\t\t2\t\t\t41\t\t\t102\t\t\t27\n03\t\t1\t\t\t52\t\t\t98\t\t\t19\n04\t\t1\t\t\t61\t\t\t118\t\t\t22\n05\t\t3\t\t\t49\t\t\t88\t\t\t29\n8\t\t\t240\t\t\t497\t\t\t180",
     "explanation" : "You do not need to name the variables in a VAR statement if you specify them in the SUM statement, but you can. If you choose not to name the variables in the VAR statement as well, then the SUM statement determines the order of the variables in the output.",
     "options" : [ {
       "tag" : "A",
@@ -8466,7 +8466,7 @@
   }, {
     "number" : 404,
     "description" : "Choose the statement below that selects rows in which\n_ the amount is less than or equal to $5000\n_ the account is 101–1092, or the rate equals 0.095.",
-    "explanation" : "To ensure that the compound expression is evaluated correctly, you can use parentheses to group\nOBS Account Amount Rate MonthsPayment\n1 101-1092 $22,000 10.00%60 $467.43\n2 101-1731 $114,0009.50%360 $958.57\n3 101-1289 $10,000 10.50%36 $325.02\n4 101-3144 $3,500 10.50%12 $308.52\n5 103-1135 $8,700 10.50%24 $403.47\n6 103-1994 $18,500 10.00%60 $393.07\n7 103-2335 $5,000 10.50%48 $128.02\n8 103-3864 $87,500 9.50%360 $735.75\n9 103-3891 $30,000 9.75%360 $257.75\nFor example, from the data set above, a and b above select observations 2 and 8 (those that\nhave a rate of 0.095); c selects no observations; and d selects observations 4 and 7 (those\nthat have an amount less than or equal to 5000).",
+    "explanation" : "To ensure that the compound expression is evaluated correctly, you can use parentheses to group. Second condition is complex condition working differently with first condition thats why we need to put parentheses for a second condition.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. where amount <= 5000 and\naccount='101-1092' or rate = 0.095;",
@@ -8843,7 +8843,7 @@
     } ]
   }, {
     "number" : 422,
-    "description" : "What is wrong with this program?\n\ndata perm.update;\ninfile invent\ninput Item $ 1-13 IDnum $ 15-19 Instock 21-22\nBackOrd 24-25;\ntotal=instock+backord;\nrun;",
+    "description" : "What is wrong with this program?\n\ndata perm.update;\ninfile invent\ninput Item $ 1-13 IDnum $ 15-19 Instock 21-22;\nBackOrd 24-25;\ntotal=instock+backord;\nrun;",
     "explanation" : "A semicolon is missing from the second line. It will cause an error because the INPUT statement will be interpreted as invalid INFILE statement options.",
     "options" : [ {
       "tag" : "A",

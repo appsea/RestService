@@ -113,7 +113,7 @@ C. Will have values “YES” or “NO”
 D. Will have values “TRUE” or “FALSE”
 
 Answer: A
-Description: _ERROR_ does not have value YES,NO,TRUE,FALSE and it does not appear in output dataset. _ERROR_ variables are dropped because automatic variables created by the DATA step are not written to a SAS data set.
+Description: _ERROR_ does not have value YES,NO,TRUE,FALSE and it does not appear in output dataset. _ERROR_ variables are dropped because automatic variables created by the DATA step are not written to a SAS dataset.
 
 Question:
 What is true about array variables?
@@ -376,7 +376,7 @@ C. LA = name||’ ,’||TRIM(put(Age,2.));
 D. LA = put(name)||’,’||put(Age,3.);
 
 Answer: A
-Description: TRIM function removes trailing blanks from name and concatenate it with age value.
+Description: TRIM function removes trailing blanks from name and concatenate it with age value. 
 
 Question:
 Given the following code:
@@ -393,7 +393,7 @@ C. 12
 D. Syntax error
 
 Answer: C
-
+Description: Since Length statement is assign before set statement length of USUBJID is assign to 12.
 
  
 Question:
@@ -3351,6 +3351,7 @@ C. 32
 D. . (missing numeric value)
 
 Answer: B
+Change Following:
 Description: After reading following statement
 input employee_name $ 1-4;
 SAS advances to next line of raw data file and next input statement 
@@ -5377,10 +5378,10 @@ The data set REALESTATE has the variable LOCALFEE with a format or 9. and a vari
 The following SAS program is submitted:
 
 data history;
-format local fee country fee percent6.;
+format localfee countryfee percent6.;
 set realestate;
-local fee = local fee / 100;
-country fee = country fee / 100;
+localfee = localfee / 100;
+countryfee = countryfee / 100;
 run;
 
 What are the formats of the variables LOCALFEE and COUNTRYFEE in the output dataset?
@@ -7096,7 +7097,7 @@ B. the DATA step automatically creates two variables, FIRST. and LAST., for each
 C. the data sets that are listed in the SET statement must be indexed or sorted by the values of the BY variable(s).
 D. FIRST. and LAST. are stored in the data set.
 Answer: D
-Description: SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set. If u want get into datset must assign any variable like var=first.by_variable
+Description: SAS creates two temporary variables FIRST. and LAST. automatically When you use the BY statement with the SET statement. Since they are temporary variables SAS does not add them to the output data set. If u want get into dataset must assign any variable like var=first.by_variable
 
 Question:
 A typical value for the character variable Target is 123,456. Which statement correctly converts the values of Target to numeric values when creating the variable TargetNo?
@@ -7160,7 +7161,7 @@ What is wrong with this program?
 
 data perm.update;
 infile invent
-input Item $ 1-13 IDnum $ 15-19 Instock 21-22
+input Item $ 1-13 IDnum $ 15-19 Instock 21-22;
 BackOrd 24-25;
 total=instock+backord;
 run;
@@ -7174,7 +7175,6 @@ Description: missing semicolon on second line will consider input as part of inf
 
 Question:
 Which of the following programs contain a syntax error?
-
 
 A.  proc sort data=sasuser.mysales;
 by region;
@@ -7406,7 +7406,7 @@ C. A new dataset work.price_list is created with Unit_Cost_Price sorted in desce
 D. The dataset ecsql1.price_list is sorted with Unit_Cost_Price sorted in ascending order with missing values at the top of the dataset
 
 Answer: D
-Description: It is because missing values are considered as lowest values (ascending order; they will be top of the data set)
+Description: It is because missing values are considered as lowest possible values (ascending order; they will be top of the data set)
 
 Question: 
 The following SAS program is submitted:
@@ -7810,11 +7810,11 @@ Question:
 Which options are used to create the following PROC PRINT output?
 13:27 Monday, March 22, 1999
 Patient	Arterial	Heart	Cardiac	Urinary
-203 	88		95	66	110
-54	83		183	95	0
-664	72		111	332	12
-210	74		97	369	0
-101	80		130	291	0
+203 	88			95		66		110
+54		83			183		95		0
+664		72			111		332		12
+210		74			97		369		0
+101		80			130		291		0
 A. the DATE system option and the LABEL option in PROC PRINT
 B. the DATE and NONUMBER system options and the DOUBLE and NOOBS options in PROC PRINT
 C. the DATE and NONUMBER system options and the DOUBLE option in PROC PRINT
@@ -7824,13 +7824,13 @@ Description: The DATE and NONUMBER system options cause the output to appear wit
 
 Question:
 Which of the following statements can you use in a PROC PRINT step to create this output?
-Month   Instructors AerClass    WalkJogRun  Swim
-01  1   37  91  83
-02  2   41  102 27
-03  1   52  98  19
-04  1   61  118 22
-05  3   49  88  29
-    8   240 497 180
+Month	Instructors	AerClass	WalkJogRun	Swim
+01		1			37			91			83
+02		2			41			102			27
+03		1			52			98			19
+04		1			61			118			22
+05		3			49			88			29
+		8			240			497			180
 A. var month instructors;
 sum instructors aerclass walkjogrun swim;
 B. var month;
@@ -7910,20 +7910,7 @@ C. where amount <= 5000 and
 D. where amount <= 5000 or account='101-1092'
 and rate = 0.095;
 Answer: C
-Description: To ensure that the compound expression is evaluated correctly, you can use parentheses to group
-OBS Account Amount Rate MonthsPayment
-1 101-1092 $22,000 10.00%60 $467.43
-2 101-1731 $114,0009.50%360 $958.57
-3 101-1289 $10,000 10.50%36 $325.02
-4 101-3144 $3,500 10.50%12 $308.52
-5 103-1135 $8,700 10.50%24 $403.47
-6 103-1994 $18,500 10.00%60 $393.07
-7 103-2335 $5,000 10.50%48 $128.02
-8 103-3864 $87,500 9.50%360 $735.75
-9 103-3891 $30,000 9.75%360 $257.75
-For example, from the data set above, a and b above select observations 2 and 8 (those that
-have a rate of 0.095); c selects no observations; and d selects observations 4 and 7 (those
-that have an amount less than or equal to 5000).
+Description: To ensure that the compound expression is evaluated correctly, you can use parentheses to group. Second condition is complex condition working differently with first condition thats why we need to put parentheses for a second condition.
 
 
 Question:
@@ -8211,7 +8198,7 @@ What is wrong with this program?
 
 data perm.update;
 infile invent
-input Item $ 1-13 IDnum $ 15-19 Instock 21-22
+input Item $ 1-13 IDnum $ 15-19 Instock 21-22;
 BackOrd 24-25;
 total=instock+backord;
 run;
