@@ -3357,10 +3357,7 @@ Temporary Internet Files folder. Now turn off system restore because you don’t
 previous state on the computer with the virus still lingering the digital wild. Run an antivirus
 program to clean infected files.
 QUESTION NO: 339
-A large magnet is placed too close to a CRT monitor. Which of the following will MOST likely
-
-
-occur?
+A large magnet is placed too close to a CRT monitor. Which of the following will MOST likely occur?
 A. Dead pixels
 B. Flickering image
 C. No image on screen
@@ -3681,8 +3678,6 @@ who did not shut down their workstations the previous day are able to connect to
 technician looks at the following report from a workstation with no Internet connectivity:
 IP Address: 192.168.1.101
 Netmask: 255.255.255.0
-
-
 DHCP Server:192.168.1.1
 DNS Server:192.168.1.2
 Default Gateway:192.168.1.1
@@ -3883,8 +3878,7 @@ D. Display -> Appearance -> Effects -> Transition
 Answer: C
 Description: http://www.intel.com/support/graphics/sb/CS-003835.htm
 QUESTION NO: 386
-A user has an LCD and a CRT monitor attached to their workstation. The colors are slightly off on
-the CRT but not the LCD. Which of the following controls should be used in troubleshooting?
+A user has an LCD and a CRT monitor attached to their workstation. The colors are slightly off on the CRT but not the LCD. Which of the following controls should be used in troubleshooting?
 A. Geometry
 B. Contrast
 C. Brightness
@@ -4798,8 +4792,7 @@ Answer: C
 
 Description: http://www.pcworld.com/article/2026358/multiple-hard-drives-working-together-allabout-raids.html
 QUESTION NO: 470
-A user with a CRT monitor notes that there is a discolored area in a portion of their screen. Which
-of the following is the MOST likely cause of the issue?
+A user with a CRT monitor notes that there is a discolored area in a portion of their screen. Which of the following is the MOST likely cause of the issue?
 A. Bad video card
 B. The video card drivers need to be upgraded
 C. Bad monitor
@@ -4846,12 +4839,7 @@ D. gpedit.msc
 Answer: D
 Description: http://support.microsoft.com/kb/307882
 QUESTION NO: 475
-
-
-A user reports that all print jobs sent to a certain printer that require legal sized paper are not
-printing. However, standard size paper jobs are printing correctly. A technician checks the paper
-tray and verifies that it is loaded with legal size paper. Which of the following is the MOST likely
-cause of the problem?
+A user reports that all print jobs sent to a certain printer that require legal sized paper are not printing. However, standard size paper jobs are printing correctly. A technician checks the paper tray and verifies that it is loaded with legal size paper. Which of the following is the MOST likely cause of the problem?
 A. The printer is not designed to print legal sized pages.
 B. The print queue is holding jobs from printing.
 C. The paper weight is too heavy for the printer.
@@ -5080,11 +5068,7 @@ E. Mark the partition as clean in diskpart
 Answer: D
 Description:
 QUESTION NO: 497
-Joe reports that the network inkjet printer is not printing any documents. Joe is able to print a test
-page from the front panel of the printer and the printer has an IP. Which of the following is the
-
-
-cause of the problem?
+Joe reports that the network inkjet printer is not printing any documents. Joe is able to print a test page from the front panel of the printer and the printer has an IP. Which of the following is the cause of the problem?
 A. Spooler service has stopped
 B. The USB cable is unplugged
 C. The printer has no ink
@@ -5111,11 +5095,8 @@ C. Changed home page
 D. Undeliverable email returns
 Answer: D
 Description:
-
-
 QUESTION NO: 500
-A computer regularly shuts down and often will not turn on again for an hour or so. Which of the
-following tools should a technician use FIRST to troubleshoot this?
+A computer regularly shuts down and often will not turn on again for an hour or so. Which of the following tools should a technician use FIRST to troubleshoot this?
 A. Power supply tester
 B. Loopback plug
 C. POST card
@@ -5199,11 +5180,7 @@ D. High speed laser printers
 Answer: A
 Description:
 QUESTION NO: 508
-A laser printer has just had its toner cartridge removed and toner has leaked inside and out. The
-BEST method to remove spilled toner, both inside and outside of the printer, is which of the
-
-
-following?
+A laser printer has just had its toner cartridge removed and toner has leaked inside and out. The BEST method to remove spilled toner, both inside and outside of the printer, is which of the following?
 A. ESD vacuum
 B. Maintenance kit
 C. Damp towel
@@ -5244,9 +5221,7 @@ Answer: A
 Description:
 Topic 5, Mix Questions
 QUESTION NO: 512
-A technician is setting up a wired SOHO network for a client. The client would like to ensure that
-unauthorized PCs are not easily able to communicate on the network. Which of the following can
-the technician do?
+A technician is setting up a wired SOHO network for a client. The client would like to ensure that unauthorized PCs are not easily able to communicate on the network. Which of the following can the technician do?
 A. Enable MAC filtering
 B. Encrypt passwords
 C. Disable SSID
@@ -5899,10 +5874,7 @@ D. Retain their original permissions.
 Answer: B
 Description:
 QUESTION NO: 577
-A user’s CRT monitor was damaged by a large magnet, resulting in a distorted image. Which of
-the following can a technician do to BEST safely fix the monitor?
-
-
+A user’s CRT monitor was damaged by a large magnet, resulting in a distorted image. Which of the following can a technician do to BEST safely fix the monitor?
 A. Replace cathode ray tube
 B. Power cycle the monitor
 C. Run degaussing tools
@@ -6329,9 +6301,7 @@ E. Bad Power Supply
 Answer: B,E
 Description:
 QUESTION NO: 619
-A user has just installed an old CRT monitor on their home PC, and is connected to the onboard
-VGA port. The user notes that the display has a green tint at all times. Which of the following is the
-MOST likely cause of the issue?
+A user has just installed an old CRT monitor on their home PC, and is connected to the onboard VGA port. The user notes that the display has a green tint at all times. Which of the following is the MOST likely cause of the issue?
 A. Old video card drivers
 B. Loose video cable
 C. Monitor
@@ -7867,8 +7837,7 @@ D. TRACERT
 Answer: B
 Description:
 QUESTION NO: 766
-A user brings in an older CRT monitor and reports there are issues with the colors and bands of
-discoloration.
+A user brings in an older CRT monitor and reports there are issues with the colors and bands of discoloration.
 Which of the following should be done to correct the issue?
 A. Replace the power cord
 B. Reformat

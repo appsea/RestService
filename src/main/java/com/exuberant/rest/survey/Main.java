@@ -42,7 +42,7 @@ public class Main {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank("CompTIA A+.txt", 600, 978, 1, 10009, true, true));
+        bank.add(new QuestionBank("CompTIA A+.txt", 600, 978, 2, 10019, true, true));
         bank.add(new QuestionBank("dvsa.txt", 773, 773, 2, 10011, true, true, false));
         // bank.add(new QuestionBank("CompTIA A+.txt", 500, 977, 1, 10001, true, true));
         bank.add(new QuestionBank("Categories Base SAS.txt", 200, 434, 13, 10001, true, true));

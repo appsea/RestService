@@ -7209,7 +7209,7 @@
     } ]
   }, {
     "number" : 337,
-    "description" : "A large magnet is placed too close to a CRT monitor. Which of the following will MOST likely   occur?",
+    "description" : "A large magnet is placed too close to a CRT monitor. Which of the following will MOST likely occur?",
     "explanation" : "http://cdn.c.photoshelter.com/img-get/I0000ENbEdGRHUB4/s/860/860/Fphoto-\n64080805F-6RM.jpg",
     "options" : [ {
       "tag" : "A",
@@ -7851,7 +7851,7 @@
     } ]
   }, {
     "number" : 367,
-    "description" : "A critical server was replaced by the IT staff the previous night. The following morning, some users are reporting that they are unable to browse to the Internet upon booting their workstations. Users who did not shut down their workstations the previous day are able to connect to the Internet. A technician looks at the following report from a workstation with no Internet connectivity: IP Address: 192.168.1.101 Netmask: 255.255.255.0   DHCP Server:192.168.1.1 DNS Server:192.168.1.2 Default Gateway:192.168.1.1 Given the above report, which of the following is the cause of why some workstations are unable to browse the Internet?",
+    "description" : "A critical server was replaced by the IT staff the previous night. The following morning, some users are reporting that they are unable to browse to the Internet upon booting their workstations. Users who did not shut down their workstations the previous day are able to connect to the Internet. A technician looks at the following report from a workstation with no Internet connectivity: IP Address: 192.168.1.101 Netmask: 255.255.255.0 DHCP Server:192.168.1.1 DNS Server:192.168.1.2 Default Gateway:192.168.1.1 Given the above report, which of the following is the cause of why some workstations are unable to browse the Internet?",
     "explanation" : "http://knowurtech.netfirms.com/networking/how_dhcp_works.html",
     "options" : [ {
       "tag" : "A",
@@ -10587,7 +10587,7 @@
     } ]
   }, {
     "number" : 495,
-    "description" : "Joe reports that the network inkjet printer is not printing any documents. Joe is able to print a test page from the front panel of the printer and the printer has an IP. Which of the following is the   cause of the problem?",
+    "description" : "Joe reports that the network inkjet printer is not printing any documents. Joe is able to print a test page from the front panel of the printer and the printer has an IP. Which of the following is the cause of the problem?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -10818,7 +10818,7 @@
     } ]
   }, {
     "number" : 506,
-    "description" : "A laser printer has just had its toner cartridge removed and toner has leaked inside and out. The BEST method to remove spilled toner, both inside and outside of the printer, is which of the   following?",
+    "description" : "A laser printer has just had its toner cartridge removed and toner has leaked inside and out. The BEST method to remove spilled toner, both inside and outside of the printer, is which of the following?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20931,8 +20931,8 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 1,
-  "playStoreVersion" : 10009,
+  "questionVersion" : 2,
+  "playStoreVersion" : 10019,
   "totalQuestions" : 978,
   "ads" : true
 }
