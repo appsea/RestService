@@ -16,14 +16,19 @@ import java.util.List;
 
 public class DvsaQuestionHandler {
 
+    public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/ukmotorcycletopics.json";
+    public static final String QUESTION_FILE = "rawinput/dvsa/ukmotorcycle.json";
+    public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources";
+    public static final String OUT_FILE_NAME = "dvsa_motor_renamed.txt";
+    public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\motorcycle";
     private static int fileNameCount = 2000;
 
     public static void main(String[] args) {
         /*String renamed = copyAndRenameFile("ab2003.jpg");
         System.err.println("Renamed to " + renamed);*/
         ObjectMapper objectMapper  = new ObjectMapper();
-        ClassPathResource questionsFile = new ClassPathResource("rawinput/dvsa/dvsaquestions.json");
-        ClassPathResource topicsFile = new ClassPathResource("rawinput/dvsa/dvsatopics.json");
+        ClassPathResource questionsFile = new ClassPathResource(QUESTION_FILE);
+        ClassPathResource topicsFile = new ClassPathResource(RAWINPUT_DVSA_DVSATOPICS_JSON);
         try {
             DvsaQuestions questions = objectMapper.readValue(questionsFile.getFile(), DvsaQuestions.class);
             System.err.println("Questions: " + questions.getSize());
@@ -36,7 +41,7 @@ public class DvsaQuestionHandler {
     }
 
     private static void writeQuestionsWithCategory(DvsaQuestions questions, DvsaTopics topics) throws IOException {
-        Path path = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources", "dvsa_renamed.txt");
+        Path path = Paths.get(OUTPUT_FOLDER, OUT_FILE_NAME);
         List<String> lines = new ArrayList<>();
         for (DvsaQuestion question : questions.getQuestions()) {
             lines.add("Question:");
@@ -78,7 +83,7 @@ public class DvsaQuestionHandler {
     private static String copyAndRenameFile(String picture) {
         String extension = ".jpg";
         String actualName = picture.replaceAll(".gif", extension);
-        String root = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\dvsa";
+        String root = IMAGES_OUT_FOLDER;
         Path source = Paths.get(root, actualName);
         if(!source.toFile().exists()){
             extension = ".png";
