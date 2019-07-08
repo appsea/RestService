@@ -3,8 +3,7 @@ package com.exuberant.rest.survey.parser;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.exuberant.rest.util.Constants.ADVANCE_SAS_QUESTIONS_FILE_NAME;
-import static com.exuberant.rest.util.Constants.BASE_SAS_QUESTION_FILE_NAME;
+import static com.exuberant.rest.util.Constants.*;
 
 public class PatternParserFactory {
 
@@ -17,9 +16,10 @@ public class PatternParserFactory {
         patternParsersForFile.put("Q4-A00-211-20170130-1752144.txt", getThirdPatternParser());
         patternParsersForFile.put("Q5-A00-211-Q&A-Demo-CertMagic-20170130-17521941.txt", getThirdPatternParser());
         patternParsersForFile.put("Q6-A00-211qa70-20170130-175156234.txt", getThirdPatternParser());*/
-        patternParsersForFile.put("CompTIA A+.txt", getCompTIAParser());
-        patternParsersForFile.put("Categories Base SAS.txt", getCategoryParser());
-        patternParsersForFile.put("dvsa.txt", getCategoryParser());
+        patternParsersForFile.put(COMP_TIA_A_FILE_NAME, getCompTIAParser());
+        patternParsersForFile.put(CATEGORIES_BASE_SAS_FILE_NAME, getCategoryParser());
+        patternParsersForFile.put(DVSA_FILE_NAME, getCategoryParser());
+        patternParsersForFile.put(DVSA_MOTOR_FILE_NAME, getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
         patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
     }

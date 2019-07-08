@@ -4309,7 +4309,7 @@
             "hint": "Try to anticipate slippery road surfaces. Watch out for oil patches at places where vehicles stop for some time, such as bus stops, lay-bys and busy junctions.",
             "identifier": "AA4557",
             "numberOfCorrectAnswers": 1,
-            "picture": "AA4557.gif",
+            "picture": "aa4268.gif",
             "text": "Why should you try to avoid riding over this marked area?",
             "topicId": 3
         },
@@ -5350,7 +5350,7 @@
             "hint": "The highest point of the bridge is in the centre, so a large vehicle might have to move to the centre of the road to have enough room to pass under the bridge. ",
             "identifier": "AB2103",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2103.gif",
+            "picture": "ab2102.gif",
             "text": "What type of vehicle could you expect to meet in the middle of the road?",
             "topicId": 11
         },
@@ -5656,7 +5656,7 @@
             "hint": "This sign is found on slow-moving or stationary works vehicles. If you wish to overtake, do so on the left, as indicated. Be aware that there might be workmen in the area.",
             "identifier": "AB2701",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2701.gif",
+            "picture": "aa4580.gif",
             "text": "A slow-moving lorry showing this sign is travelling in the middle lane of a three-lane motorway. How should you pass it?",
             "topicId": 11
         },
@@ -6413,7 +6413,7 @@
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2117d.gif",
+                    "picture": "ab2347a.gif",
                     "text": ""
                 }
             ],
@@ -7025,7 +7025,7 @@
             "hint": "Watch out for children crossing the road from the other side of the bus.",
             "identifier": "AB2559",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2559.gif",
+            "picture": "ab2129.gif",
             "text": "Where would you see this sign?",
             "topicId": 4
         },
@@ -7781,7 +7781,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2176d.gif",
+                    "picture": "ab2429c.gif",
                     "text": ""
                 }
             ],
@@ -10792,7 +10792,7 @@
             "hint": "You must obey mandatory speed-limit signs above motorway lanes, including the hard shoulder. In this case, you can use the hard shoulder as a running lane but you should look for any vehicles that may have broken down and may be blocking the hard shoulder.",
             "identifier": "AB2857",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2857.gif",
+            "picture": "ab2856.gif",
             "text": "On a three-lane motorway, what does this sign mean?",
             "topicId": 13
         },
@@ -11170,7 +11170,7 @@
             "hint": "This sign doesn’t tell you the speed limit in figures. You should know the speed limit for the type of road that you’re on and the type of vehicle that you're driving. Study your copy of The Highway Code.",
             "identifier": "AB2246",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2246.gif",
+            "picture": "ab2429d.gif",
             "text": "What's the meaning of this sign?",
             "topicId": 7
         },
@@ -11575,7 +11575,7 @@
             "hint": "The purpose of yellow box markings is to keep junctions clear of queuing traffic. You may only wait in the marked area when you’re turning right and your exit lane is clear but you can’t complete the turn because of oncoming traffic or other traffic waiting to turning right.",
             "identifier": "AB2282",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2282.gif",
+            "picture": "ab2281.gif",
             "text": "When may you stop and wait in a box junction?",
             "topicId": 7
         },
@@ -12222,7 +12222,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AA4243b.gif",
+                    "picture": "ab2297b.gif",
                     "text": ""
                 },
                 {
@@ -12460,7 +12460,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2297a.gif",
+                    "picture": "ab2429c.gif",
                     "text": ""
                 },
                 {
@@ -12470,7 +12470,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2297c.gif",
+                    "picture": "ab2429d.gif",
                     "text": ""
                 },
                 {
@@ -12533,7 +12533,7 @@
             "hint": "A sign will indicate which types of vehicles are prohibited from certain roads. Make sure that you know which signs apply to the vehicle you’re using.",
             "identifier": "AB2301",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2301.gif",
+            "picture": "ab2297b.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -12593,7 +12593,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2304a.gif",
+                    "picture": "ab2314b.gif",
                     "text": ""
                 },
                 {
@@ -12603,7 +12603,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2304c.gif",
+                    "picture": "ab2429d.gif",
                     "text": ""
                 },
                 {
@@ -12679,7 +12679,7 @@
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2307b.gif",
+                    "picture": "ab2297b.gif",
                     "text": ""
                 },
                 {
@@ -12781,7 +12781,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2314a.gif",
+                    "picture": "ab2297d.gif",
                     "text": ""
                 },
                 {
@@ -12791,7 +12791,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2314c.gif",
+                    "picture": "ab2429d.gif",
                     "text": ""
                 },
                 {
@@ -12828,7 +12828,7 @@
             "hint": "Clearways are stretches of road where you aren’t allowed to stop unless it’s an emergency. Stopping where these restrictions apply may be dangerous and is likely to cause an obstruction. Restrictions might apply for several miles and this may be indicated on the sign. ",
             "identifier": "AB2316",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2316.gif",
+            "picture": "ab2314b.gif",
             "text": "You see this sign ahead. What does it mean?",
             "topicId": 8
         },
@@ -13065,7 +13065,7 @@
             "hint": "Take extra care when you encounter trams. Look out for road markings and signs that alert you to them. Modern trams are very quiet and you may not hear them approaching.",
             "identifier": "AB2332",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2332.gif",
+            "picture": "ab2305.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -13350,7 +13350,7 @@
             "hint": "Warning signs are there to make you aware of potential hazards on the road ahead. Take note of the signs so you're prepared and can take whatever action is necessary.",
             "identifier": "AB2345",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2345.gif",
+            "picture": "ab2340.gif",
             "text": "What information would be shown in a triangular road sign?",
             "topicId": 8
         },
@@ -13788,7 +13788,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2371b.gif",
+                    "picture": "ab2324a.gif",
                     "text": ""
                 },
                 {
@@ -13798,7 +13798,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2371d.gif",
+                    "picture": "ab2885d.gif",
                     "text": ""
                 }
             ],
@@ -13827,7 +13827,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2375d.gif",
+                    "picture": "ab2314b.gif",
                     "text": ""
                 }
             ],
@@ -14212,7 +14212,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2401b.gif",
+                    "picture": "ab2401a.gif",
                     "text": ""
                 },
                 {
@@ -14331,7 +14331,7 @@
             "hint": "When a police officer or traffic warden is directing traffic, you must obey them. They'll use the arm signals shown in The Highway Code. Learn what these signals mean and obey them.",
             "identifier": "AB2407",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2407.gif",
+            "picture": "ab2847.gif",
             "text": "You're approaching a junction where the traffic lights aren't working. What should you do when a police officer gives this signal?",
             "topicId": 8
         },
@@ -14409,7 +14409,7 @@
             "hint": "On the motorway, signs sometimes show temporary warnings due to traffic or weather conditions. They may be used to indicate\n• lane closures\n• temporary speed limits\n• weather warnings.",
             "identifier": "AB2418",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2418.gif",
+            "picture": "ab2760.gif",
             "text": "What does this motorway sign mean?",
             "topicId": 8
         },
@@ -14622,12 +14622,12 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2429a.gif",
+                    "picture": "ab2304d.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2429b.gif",
+                    "picture": "ab2324a.gif",
                     "text": ""
                 },
                 {
@@ -14875,7 +14875,7 @@
             "hint": "Sometimes work is carried out on the motorway without closing the lanes. When this happens, signs are mounted on the back of lorries to warn other road users of the roadworks ahead. ",
             "identifier": "AB2592",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2592.gif",
+            "picture": "aa4580.gif",
             "text": "You're on a motorway. A lorry has stopped in the right-hand lane. What should you do when you see this sign on the lorry?",
             "topicId": 8
         },
@@ -15015,7 +15015,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2674b.gif",
+                    "picture": "ab2766.gif",
                     "text": ""
                 },
                 {
@@ -15327,7 +15327,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2763b.gif",
+                    "picture": "ab2324a.gif",
                     "text": ""
                 },
                 {
@@ -15395,7 +15395,7 @@
             "hint": "Be prepared for traffic approaching from junctions on either side of you. Try to avoid unnecessary changing of lanes just before the junction.",
             "identifier": "AB2765",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2765.gif",
+            "picture": "ab2357c.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -15465,7 +15465,7 @@
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2768c.gif",
+                    "picture": "ab2371c.gif",
                     "text": ""
                 },
                 {
@@ -15623,7 +15623,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2885c.gif",
+                    "picture": "ab2371a.gif",
                     "text": ""
                 },
                 {
@@ -15673,7 +15673,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2887b.gif",
+                    "picture": "ab2347a.gif",
                     "text": ""
                 },
                 {
@@ -15723,12 +15723,12 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2890a.gif",
+                    "picture": "ab2371a.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2890b.gif",
+                    "picture": "ab2357c.gif",
                     "text": ""
                 },
                 {
@@ -15781,7 +15781,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2897a.gif",
+                    "picture": "ab2375a.gif",
                     "text": ""
                 },
                 {

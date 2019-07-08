@@ -90,7 +90,7 @@ public class DvsaQuestionHandler {
             actualName = picture.replaceAll(".gif", extension);
             source = Paths.get(root, actualName);
         }
-        String newFileName = "cttk" + fileNameCount + extension;
+        String newFileName = "mttk" + fileNameCount + extension;
         fileNameCount = fileNameCount + 1;
         Path destination = Paths.get(root, File.separator, "renamed", newFileName);
         try {

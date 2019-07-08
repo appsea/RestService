@@ -44,20 +44,24 @@ public class JsonQuestions {
     }
 
     private void initialiseMap() {
-        categoryIconMap.put("Alertness", "0xf06e");
-        categoryIconMap.put("Attitude", "0xf118");
-        categoryIconMap.put("Safety and your vehicle", "0xf3ed");
-        categoryIconMap.put("Safety margins", "0xf560");
-        categoryIconMap.put("Hazard awareness", "0xf071");
-        categoryIconMap.put("Vulnerable road users", "0xf29d");
-        categoryIconMap.put("Other types of vehicle", "0xf4df");
-        categoryIconMap.put("Vehicle handling", "0xf1B9");
-        categoryIconMap.put("Motorway rules", "0xf018");
-        categoryIconMap.put("Rules of the road", "0xf534");
-        categoryIconMap.put("Road and traffic signs", "0xf637");
-        categoryIconMap.put("Documents", "0xf02d");
-        categoryIconMap.put("Incidents, accidents and emergencies", "0xf5e1");
-        categoryIconMap.put("Vehicle loading", "0xf59d");
+        categoryIconMap.put("ALERTNESS", "0xf06e");
+        categoryIconMap.put("ATTITUDE", "0xf118");
+        categoryIconMap.put("SAFETY AND YOUR VEHICLE", "0xf3ed");
+        categoryIconMap.put("SAFETY AND YOUR MOTORCYCLE", "0xf3ed");
+        categoryIconMap.put("SAFETY MARGINS", "0xf560");
+        categoryIconMap.put("HAZARD AWARENESS", "0xf071");
+        categoryIconMap.put("VULNERABLE ROAD USERS", "0xf29d");
+        categoryIconMap.put("OTHER TYPES OF VEHICLE", "0xf4df");
+        categoryIconMap.put("VEHICLE HANDLING", "0xf1B9");
+        categoryIconMap.put("MOTORCYCLE HANDLING", "0xf21c");
+        categoryIconMap.put("MOTORWAY RULES", "0xf018");
+        categoryIconMap.put("RULES OF THE ROAD", "0xf534");
+        categoryIconMap.put("ROAD AND TRAFFIC SIGNS", "0xf637");
+        categoryIconMap.put("DOCUMENTS", "0xf02d");
+        categoryIconMap.put("INCIDENTS, ACCIDENTS AND EMERGENCIES", "0xf5e1");
+        categoryIconMap.put("INCIDENTS ACCIDENTS AND EMERGENCIES", "0xf87b");
+        categoryIconMap.put("VEHICLE LOADING", "0xf59d");
+        categoryIconMap.put("MOTORCYCLE LOADING", "0xf59d");
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
@@ -137,7 +141,7 @@ public class JsonQuestions {
         this.initialiseMap();
         List<Category> categories = new ArrayList<>();
         for (Map.Entry<String, Set<Integer>> stringSetEntry : multiValueMap.entries()) {
-            categories.add(new Category(categoryIconMap.get(stringSetEntry.getKey()), stringSetEntry.getKey(), stringSetEntry.getValue()));
+            categories.add(new Category(categoryIconMap.get(stringSetEntry.getKey().toUpperCase()), stringSetEntry.getKey(), stringSetEntry.getValue()));
         }
         return categories;
     }

@@ -103,13 +103,13 @@ public class WordFileWriter {
 
     public void addImage(XWPFDocument document, String imageName) throws Exception {
         if (imageName != null) {
-            if (ClassLoader.getSystemResource("images/dvsa/renamed/" + imageName) != null) {
+            if (ClassLoader.getSystemResource("images/motorcycle/renamed/" + imageName) != null) {
                 XWPFParagraph image = document.createParagraph();
                 image.setAlignment(ParagraphAlignment.CENTER);
                 XWPFRun imageRun = image.createRun();
                 imageRun.setTextPosition(20);
 
-                Path imagePath = Paths.get(ClassLoader.getSystemResource("images/dvsa/renamed/" + imageName).toURI());
+                Path imagePath = Paths.get(ClassLoader.getSystemResource("images/motorcycle/renamed/" + imageName).toURI());
                 imageRun.addPicture(Files.newInputStream(imagePath),
                         XWPFDocument.PICTURE_TYPE_PNG, imagePath.getFileName().toString(),
                         Units.toEMU(300), Units.toEMU(150));

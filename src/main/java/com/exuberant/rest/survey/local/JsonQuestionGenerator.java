@@ -17,8 +17,7 @@ import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
-import static com.exuberant.rest.util.Constants.ADVANCE_SAS_QUESTIONS_FILE_NAME;
-import static com.exuberant.rest.util.Constants.BASE_SAS_QUESTION_FILE_NAME;
+import static com.exuberant.rest.util.Constants.*;
 
 public class JsonQuestionGenerator {
 
@@ -35,11 +34,12 @@ public class JsonQuestionGenerator {
         LocalResourceLoader localResourceLoader = new LocalResourceLoader();
         QuestionValidator generalQuestionValidator = new GeneralQuestionValidator();
         GenericQuestionParser genericQuestionParser = new GenericQuestionParser(localResourceLoader, generalQuestionValidator);
-        questionParsersForFile.put("CompTIA A+.txt", genericQuestionParser);
-        questionParsersForFile.put("Categories Base SAS.txt", genericQuestionParser);
+        questionParsersForFile.put(COMP_TIA_A_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put(CATEGORIES_BASE_SAS_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
-        questionParsersForFile.put("dvsa.txt", genericQuestionParser);
+        questionParsersForFile.put(DVSA_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put(DVSA_MOTOR_FILE_NAME, genericQuestionParser);
 
         finisher.put("CompTIA A+.txt", new CompTiaAPlusFinisher());
     }
@@ -88,6 +88,11 @@ public class JsonQuestionGenerator {
             String path = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\Dvsa\\app\\images" + File.separator + image;
             File file = new File(path);
             valid = file.exists();
+            if(!valid){
+                path = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaMotorcycle\\app\\images" + File.separator + image;
+                file = new File(path);
+                valid = file.exists();
+            }
         }
         return valid;
     }
