@@ -4410,7 +4410,7 @@
             "hint": "Doing this will give you an earlier view around the bend and enable you to see any hazards sooner. It also reduces the risk of collision with an oncoming vehicle that may have drifted over the centre line while taking the bend.",
             "identifier": "AB2624",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2624.gif",
+            "picture": "ab2351c.gif",
             "text": "When approaching a right-hand bend, you should keep well to the left. Why is this?",
             "topicId": 3
         },
@@ -6408,7 +6408,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2117c.gif",
+                    "picture": "ab2347c.gif",
                     "text": ""
                 },
                 {
@@ -6571,7 +6571,7 @@
             "hint": "Vehicles that are used to carry children to and from school will be travelling at busy times of the day. If you’re following a vehicle with this sign, be prepared for it to make frequent stops. It might pick up or set down passengers in places other than normal bus stops.",
             "identifier": "AB2129",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2129.gif",
+            "picture": "ab2718.gif",
             "text": "Where would you see this sign?",
             "topicId": 4
         },
@@ -6648,7 +6648,7 @@
             "hint": "Be aware that older people might take a long time to cross the road. They might also be hard of hearing and not hear you approaching. Don’t hurry older people across the road by getting too close to them or revving your engine. ",
             "identifier": "AB2138",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2138.gif",
+            "picture": "ab2347b.gif",
             "text": "What action would you take when elderly people are crossing the road?",
             "topicId": 4
         },
@@ -7025,7 +7025,7 @@
             "hint": "Watch out for children crossing the road from the other side of the bus.",
             "identifier": "AB2559",
             "numberOfCorrectAnswers": 1,
-            "picture": "ab2129.gif",
+            "picture": "ab2718.gif",
             "text": "Where would you see this sign?",
             "topicId": 4
         },
@@ -9201,7 +9201,7 @@
             "hint": "Road humps are used to slow down traffic. They're found in places where there are often pedestrians, such as\n• shopping areas\n• near schools\n• residential areas. \nWatch out for people close to the kerb or crossing the road.",
             "identifier": "AB2212",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2212.gif",
+            "picture": "ab2353.gif",
             "text": "Which of these plates normally appears with this road sign?",
             "topicId": 6
         },
@@ -9252,7 +9252,7 @@
             "hint": "Be especially careful if you’re on a motorway in fog. Reflective studs are there to help you in poor visibility. Different colours are used so that you’ll know which lane you're in. These are\n• red on the left-hand edge of the carriageway\n• white between lanes \n• amber on the right-hand edge of the carriageway\n• green between the carriageway and slip roads.",
             "identifier": "AB2570",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2570.gif",
+            "picture": "ab2747.gif",
             "text": "You're on a motorway in fog. The left-hand edge of the motorway can be identified by reflective studs. What colour are they?",
             "topicId": 6
         },
@@ -9480,7 +9480,7 @@
             "hint": "A ford is a crossing over a stream that’s shallow enough to drive or ride through. After you’ve gone through a ford or deep puddle, your brakes will be wet and they won't work as well as usual. To dry them out, apply a light brake pressure while moving slowly. Don’t travel at normal speeds until you're sure your brakes are working properly again.",
             "identifier": "AB2821",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2821.gif",
+            "picture": "ab2367.gif",
             "text": "After this hazard you should test your brakes. Why is this?",
             "topicId": 6
         },
@@ -11372,7 +11372,7 @@
             "hint": "This sign indicates that there are waiting restrictions. It's normally accompanied by details of when the restrictions are in force.\nDetails of most signs in common use are shown in The Highway Code. For more comprehensive coverage, see Know Your Traffic Signs.",
             "identifier": "AB2264",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2264.gif",
+            "picture": "ab2304b.gif",
             "text": "What's the meaning of this sign?",
             "topicId": 7
         },
@@ -12209,7 +12209,7 @@
             "hint": "Strong side winds can suddenly blow you off course. Keep your speed down when it’s very windy, especially on exposed roads. ",
             "identifier": "AA4242",
             "numberOfCorrectAnswers": 1,
-            "picture": "AA4242.gif",
+            "picture": "ab2360.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -12227,12 +12227,12 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AA4243c.gif",
+                    "picture": "ab2591.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AA4243d.gif",
+                    "picture": "ab2314d.gif",
                     "text": ""
                 }
             ],
@@ -12386,7 +12386,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2294c.gif",
+                    "picture": "ab2340.gif",
                     "text": ""
                 },
                 {
@@ -12405,7 +12405,7 @@
             "answers": [
                 {
                     "isCorrect": true,
-                    "picture": "AB2295a.gif",
+                    "picture": "ab2294d.gif",
                     "text": ""
                 },
                 {
@@ -12475,7 +12475,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2297d.gif",
+                    "picture": "ab2307a.gif",
                     "text": ""
                 }
             ],
@@ -12559,7 +12559,7 @@
             "hint": "‘No entry’ signs are used in places such as one-way streets to prevent vehicles driving against the traffic. To ignore one would be dangerous, both for yourself and for other road users, as well as being against the law.",
             "identifier": "AB2302",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2302.gif",
+            "picture": "aa4243a.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -12593,7 +12593,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "ab2314b.gif",
+                    "picture": "ab2429c.gif",
                     "text": ""
                 },
                 {
@@ -12608,7 +12608,7 @@
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2304d.gif",
+                    "picture": "aa4243a.gif",
                     "text": ""
                 }
             ],
@@ -12684,12 +12684,12 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2307c.gif",
+                    "picture": "ab2314d.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2307d.gif",
+                    "picture": "ab2117a.gif",
                     "text": ""
                 }
             ],
@@ -12721,7 +12721,7 @@
             "hint": "Road signs that prohibit overtaking are placed in locations where passing the vehicle in front is dangerous. If you see this sign, don’t attempt to overtake. The sign is there for a reason; you must obey it.",
             "identifier": "AB2308",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2308.gif",
+            "picture": "ab2307a.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -12747,7 +12747,7 @@
             "hint": "There'll be a plate or additional sign to tell you when the restrictions apply.",
             "identifier": "AB2311",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2311.gif",
+            "picture": "ab2304b.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -12781,12 +12781,12 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "ab2297d.gif",
+                    "picture": "ab2307a.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2314b.gif",
+                    "picture": "ab2429c.gif",
                     "text": ""
                 },
                 {
@@ -12828,7 +12828,7 @@
             "hint": "Clearways are stretches of road where you aren’t allowed to stop unless it’s an emergency. Stopping where these restrictions apply may be dangerous and is likely to cause an obstruction. Restrictions might apply for several miles and this may be indicated on the sign. ",
             "identifier": "AB2316",
             "numberOfCorrectAnswers": 1,
-            "picture": "ab2314b.gif",
+            "picture": "ab2429c.gif",
             "text": "You see this sign ahead. What does it mean?",
             "topicId": 8
         },
@@ -12955,7 +12955,7 @@
                 },
                 {
                     "isCorrect": true,
-                    "picture": "AB2324d.gif",
+                    "picture": "ab2763c.gif",
                     "text": ""
                 }
             ],
@@ -13783,7 +13783,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "AB2371a.gif",
+                    "picture": "cd6548.gif",
                     "text": ""
                 },
                 {
@@ -13827,7 +13827,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "ab2314b.gif",
+                    "picture": "ab2429c.gif",
                     "text": ""
                 }
             ],
@@ -14622,7 +14622,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "ab2304d.gif",
+                    "picture": "aa4243a.gif",
                     "text": ""
                 },
                 {
@@ -14849,7 +14849,7 @@
             "hint": "You must comply with all traffic signs and be especially aware of those signs that apply specifically to the type of vehicle you're using. ",
             "identifier": "AB2591",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2591.gif",
+            "picture": "AB2591.png",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -15015,7 +15015,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "ab2766.gif",
+                    "picture": "ab2890c.gif",
                     "text": ""
                 },
                 {
@@ -15262,7 +15262,7 @@
             "hint": "At junctions controlled by traffic lights, you must stop behind the white line until the lights change to green. A red light, an amber light, and red and amber lights showing together all mean stop.\nYou may proceed when the light is green unless your exit road is blocked or pedestrians are crossing in front of you.\nIf you’re approaching traffic lights that are visible from a distance and the light has been green for some time, be ready to slow down and stop, because the lights are likely to change.",
             "identifier": "AB2758",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2758.gif",
+            "picture": "ab2385.gif",
             "text": "You see this amber traffic light ahead. Which light, or lights, will come on next?",
             "topicId": 8
         },
@@ -15369,7 +15369,7 @@
             "hint": "When you see this sign, look out for any direction signs and judge whether you need to signal your intentions. Do this in good time so that other road users approaching the roundabout know what you’re planning to do.",
             "identifier": "AB2764",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2764.gif",
+            "picture": "ab2375a.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -15421,7 +15421,7 @@
             "hint": "This sign may be at the end of a dual carriageway or a one-way street. It's there to warn you of oncoming traffic.",
             "identifier": "AB2766",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2766.gif",
+            "picture": "ab2890c.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -15623,7 +15623,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "ab2371a.gif",
+                    "picture": "cd6548.gif",
                     "text": ""
                 },
                 {
@@ -15668,7 +15668,7 @@
             "answers": [
                 {
                     "isCorrect": true,
-                    "picture": "AB2887a.gif",
+                    "picture": "ab2347c.gif",
                     "text": ""
                 },
                 {
@@ -15678,12 +15678,12 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2887c.gif",
+                    "picture": "ab2347b.gif",
                     "text": ""
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2887d.gif",
+                    "picture": "AB2347d.gif",
                     "text": ""
                 }
             ],
@@ -15715,7 +15715,7 @@
             "hint": "Look well ahead and be ready to stop for any pedestrians crossing, or about to cross, the road. Also check the pavements for anyone who looks like they might step or run into the road.",
             "identifier": "AB2889",
             "numberOfCorrectAnswers": 1,
-            "picture": "AB2889.gif",
+            "picture": "ab2347c.gif",
             "text": "What does this sign mean?",
             "topicId": 8
         },
@@ -15723,7 +15723,7 @@
             "answers": [
                 {
                     "isCorrect": false,
-                    "picture": "ab2371a.gif",
+                    "picture": "cd6548.gif",
                     "text": ""
                 },
                 {
@@ -15796,7 +15796,7 @@
                 },
                 {
                     "isCorrect": false,
-                    "picture": "AB2897d.gif",
+                    "picture": "ab2890d.gif",
                     "text": ""
                 }
             ],

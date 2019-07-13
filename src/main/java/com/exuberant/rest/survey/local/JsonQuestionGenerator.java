@@ -8,6 +8,7 @@ import com.exuberant.rest.survey.parser.QuestionParser;
 import com.exuberant.rest.survey.parser.validator.GeneralQuestionValidator;
 import com.exuberant.rest.survey.parser.validator.QuestionValidator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -40,6 +41,7 @@ public class JsonQuestionGenerator {
         questionParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(DVSA_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(DVSA_MOTOR_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put(DVSA_LGV_FILE_NAME, genericQuestionParser);
 
         finisher.put("CompTIA A+.txt", new CompTiaAPlusFinisher());
     }
@@ -47,7 +49,7 @@ public class JsonQuestionGenerator {
     public void generateQuestions(QuestionBank questionBank) throws Exception {
         QuestionParser parser = questionParsersForFile.get(questionBank.getInputFile());
         List<Question> questions = parser.parse(questionBank);
-        if(finisher.containsKey(questionBank.getInputFile())){
+        if (finisher.containsKey(questionBank.getInputFile())) {
             Finisher fileFinisher = finisher.get(questionBank.getInputFile());
             questions = fileFinisher.finish(questions);
         }
@@ -62,21 +64,28 @@ public class JsonQuestionGenerator {
         //jsonQuestions.getQuestions().stream().filter(que-> StringUtils.isEmpty(que.getExplanation())).forEach(System.out::println);
         new WordFileWriter().write(jsonQuestions, wordPath);
         Files.write(jsonPath, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQuestions).getBytes());
-        if (questionBank.getInputFile().contains("dvsa")){
-            validateDvsaQuestions(jsonQuestions);
-        }
+        validateImages(jsonQuestions, questionBank);
     }
 
-    private void validateDvsaQuestions(JsonQuestions jsonQuestions) {
-        for (JsonQuestion jsonQuestion : jsonQuestions.getAllQuestions()) {
-            String image = jsonQuestion.getPrashna().getImage();
-            if(!isValidImage(image)){
-                System.err.println("Missing image " + image);
-            }
-            for (JsonOption jsonOption : jsonQuestion.getOptions()) {
-                image = jsonOption.getImage();
-                if(!isValidImage(image)){
-                    System.err.println("Missing image " + image);
+    private void validateImages(JsonQuestions jsonQuestions, QuestionBank questionBank) {
+        String folder = questionBank.getImageLocation();
+        if (folder != null) {
+            for (JsonQuestion jsonQuestion : jsonQuestions.getAllQuestions()) {
+                String image = jsonQuestion.getPrashna().getImage();
+                if (!StringUtils.isEmpty(image)) {
+                    File file = new File(folder + File.separator + image);
+                    if (!file.exists()) {
+                        System.err.println("Missing image " + file.getPath());
+                    }
+                }
+                for (JsonOption jsonOption : jsonQuestion.getOptions()) {
+                    image = jsonOption.getImage();
+                    if (!StringUtils.isEmpty(image)) {
+                        File file = new File(folder + File.separator + image);
+                        if (!file.exists()) {
+                            System.err.println("Missing image " + file.getPath());
+                        }
+                    }
                 }
             }
         }
@@ -88,7 +97,7 @@ public class JsonQuestionGenerator {
             String path = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\Dvsa\\app\\images" + File.separator + image;
             File file = new File(path);
             valid = file.exists();
-            if(!valid){
+            if (!valid) {
                 path = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaMotorcycle\\app\\images" + File.separator + image;
                 file = new File(path);
                 valid = file.exists();

@@ -12,12 +12,13 @@ public class QuestionBank {
     private final boolean showAd;
     private final boolean enablePrashna;
     private final boolean enablePremium;
+    private String imageLocation;
 
     public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePremium) {
-        this(inputFile, freeQuestions, totalQuestions, questionVersion, playStoreVersion, showAd, false, enablePremium);
+        this(inputFile, freeQuestions, totalQuestions, questionVersion, playStoreVersion, showAd, false, enablePremium, null);
     }
 
-    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna, boolean enablePremium) {
+    public QuestionBank(String inputFile, int freeQuestions, int totalQuestions, int questionVersion, int playStoreVersion, boolean showAd, boolean enablePrashna, boolean enablePremium, String imageLocation) {
         this.inputFile = inputFile;
         this.totalQuestions = totalQuestions;
         this.freeQuestions = freeQuestions;
@@ -26,6 +27,8 @@ public class QuestionBank {
         this.showAd = showAd;
         this.enablePrashna = enablePrashna;
         this.enablePremium = enablePremium;
+        this.imageLocation = imageLocation;
+        this.imageLocation = imageLocation;
     }
 
     public String getInputFile() {
@@ -70,5 +73,13 @@ public class QuestionBank {
 
     public boolean enablePremium() {
         return enablePremium;
+    }
+
+    public String getImageLocation() {
+        return imageLocation;
+    }
+
+    public void setImageLocation(String imageLocation) {
+        this.imageLocation = imageLocation;
     }
 }

@@ -1,0 +1,74 @@
+{
+    "topics": [
+        {
+            "id": 0,
+            "name": "Vehicle weights and dimensions",
+            "picture": "vehicle-weight-and-dimensions"
+        },
+        {
+            "id": 1,
+            "name": "Driver's hours and rest periods",
+            "picture": "driver-hours"
+        },
+        {
+            "id": 2,
+            "name": "Vehicle condition",
+            "picture": "vehicle-condition"
+        },
+        {
+            "id": 3,
+            "name": "Leaving the vehicle",
+            "picture": "leaving-the-vehicle"
+        },
+        {
+            "id": 4,
+            "name": "Vehicle loading",
+            "picture": "vehicle-loading"
+        },
+        {
+            "id": 5,
+            "name": "Restricted view",
+            "picture": "restricted-view"
+        },
+        {
+            "id": 6,
+            "name": "Environmental issues",
+            "picture": "envirnmental-issues"
+        },
+        {
+            "id": 7,
+            "name": "Incidents, accidents and emergencies",
+            "picture": "accident"
+        },
+        {
+            "id": 8,
+            "name": "Road and traffic signs",
+            "picture": "traffic-signs"
+        },
+        {
+            "id": 9,
+            "name": "The driver",
+            "picture": "the-driver"
+        },
+        {
+            "id": 10,
+            "name": "The road",
+            "picture": "the-road"
+        },
+        {
+            "id": 11,
+            "name": "Braking systems",
+            "picture": "braking-systems"
+        },
+        {
+            "id": 12,
+            "name": "Essential documents",
+            "picture": "documents"
+        },
+        {
+            "id": 13,
+            "name": "Other road users",
+            "picture": "other-vehicles-for-lorries"
+        }
+    ]
+}

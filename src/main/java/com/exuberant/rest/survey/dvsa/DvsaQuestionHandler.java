@@ -9,27 +9,35 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class DvsaQuestionHandler {
 
+    /*public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/uklgvtopics.json";
+    public static final String QUESTION_FILE = "rawinput/dvsa/uklgv.json";
+    public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\input";
+    public static final String OUT_FILE_NAME = "dvsa_lgv.txt";
+    public static final String IMAGES_SOURCE_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\lgv";
+    public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaLgvTheory\\app\\images";
+    public static final String IMAGE_PREFIX = "lttk";*/
     public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/ukmotorcycletopics.json";
     public static final String QUESTION_FILE = "rawinput/dvsa/ukmotorcycle.json";
-    public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources";
-    public static final String OUT_FILE_NAME = "dvsa_motor_renamed.txt";
-    public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\motorcycle";
+    public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\input";
+    public static final String OUT_FILE_NAME = "dvsa_motor.txt";
+    public static final String IMAGES_SOURCE_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\motorcycle";
+    public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaMotorcycle\\app\\images";
+    public static final String IMAGE_PREFIX = "mttk";
+
     private static int fileNameCount = 2000;
+    private static Map<String, String> renamedMap = new HashMap<>();
 
     public static void main(String[] args) {
-        /*String renamed = copyAndRenameFile("ab2003.jpg");
-        System.err.println("Renamed to " + renamed);*/
         ObjectMapper objectMapper  = new ObjectMapper();
         ClassPathResource questionsFile = new ClassPathResource(QUESTION_FILE);
         ClassPathResource topicsFile = new ClassPathResource(RAWINPUT_DVSA_DVSATOPICS_JSON);
         try {
+
+            deleteFiles();
             DvsaQuestions questions = objectMapper.readValue(questionsFile.getFile(), DvsaQuestions.class);
             System.err.println("Questions: " + questions.getSize());
             DvsaTopics topics = objectMapper.readValue(topicsFile.getFile(), DvsaTopics.class);
@@ -40,17 +48,26 @@ public class DvsaQuestionHandler {
         }
     }
 
+    private static void deleteFiles() {
+        File imageFolder = new File(IMAGES_OUT_FOLDER);
+        for (File s : imageFolder.listFiles()) {
+            if(s.getName().startsWith(IMAGE_PREFIX)){
+                s.delete();
+            }
+        }
+    }
+
     private static void writeQuestionsWithCategory(DvsaQuestions questions, DvsaTopics topics) throws IOException {
         Path path = Paths.get(OUTPUT_FOLDER, OUT_FILE_NAME);
         List<String> lines = new ArrayList<>();
         for (DvsaQuestion question : questions.getQuestions()) {
             lines.add("Question:");
             lines.add(question.getText());
-            if(question.getPicture()!=null){
-                String renamedFileName = copyAndRenameFile(question.getPicture());
-                System.err.println("Renamed " + question.getPicture() + " to " + renamedFileName);
-                question.setPicture(renamedFileName);
-                lines.add("image: " + question.getPicture());
+            String picture = question.getPicture();
+            if(picture !=null){
+                String renamedPicture = copyIfRequired(picture);
+                question.setPicture(renamedPicture);
+                lines.add("image: " + renamedPicture);
             }
             lines.add("");
             List<String> tags = Arrays.asList("A. ", "B. ", "C. ", "D. ");
@@ -62,8 +79,7 @@ public class DvsaQuestionHandler {
                 String tag = tags.get(count++);
                 lines.add(tag + option.getText());
                 if(option.getPicture()!=null){
-                    String renamedFileName = copyAndRenameFile(option.getPicture());
-                    System.err.println("Renamed " + option.getPicture() + " to " + renamedFileName);
+                    String renamedFileName = copyIfRequired(option.getPicture());
                     option.setPicture(renamedFileName);
                     lines.add("image: " + option.getPicture());
                 }
@@ -77,22 +93,36 @@ public class DvsaQuestionHandler {
             lines.add("Category: " + topics.getTopics().stream().filter(topic -> topic.getId() == question.getTopicId()).findFirst().get().getName());
             lines.add("");
         }
+        System.err.println("Created file:" + path.toString());
         Files.write(path, lines);
+    }
+
+    private static String copyIfRequired(String picture) {
+        String renamedFileName;
+        if(!renamedMap.containsKey(picture.toUpperCase())){
+            renamedFileName = copyAndRenameFile(picture);
+            renamedMap.put(picture.toUpperCase(), renamedFileName);
+            System.err.println("Renamed " + picture + " to " + renamedFileName);
+        } else {
+            renamedFileName = renamedMap.get(picture.toUpperCase());
+            System.err.println("Reusing " + picture + " with " + renamedFileName);
+        }
+        return renamedFileName;
     }
 
     private static String copyAndRenameFile(String picture) {
         String extension = ".jpg";
         String actualName = picture.replaceAll(".gif", extension);
-        String root = IMAGES_OUT_FOLDER;
+        String root = IMAGES_SOURCE_FOLDER;
         Path source = Paths.get(root, actualName);
         if(!source.toFile().exists()){
             extension = ".png";
             actualName = picture.replaceAll(".gif", extension);
             source = Paths.get(root, actualName);
         }
-        String newFileName = "mttk" + fileNameCount + extension;
+        String newFileName = IMAGE_PREFIX + fileNameCount + extension;
         fileNameCount = fileNameCount + 1;
-        Path destination = Paths.get(root, File.separator, "renamed", newFileName);
+        Path destination = Paths.get(IMAGES_OUT_FOLDER, File.separator, newFileName);
         try {
             Files.copy(source, destination, StandardCopyOption.REPLACE_EXISTING);
         } catch (IOException e) {

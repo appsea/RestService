@@ -114,7 +114,7 @@ public class WordFileWriter {
                         XWPFDocument.PICTURE_TYPE_PNG, imagePath.getFileName().toString(),
                         Units.toEMU(300), Units.toEMU(150));
             } else {
-                System.err.println("Couldnt find the image " + imageName);
+                // System.err.println("Ignore this Couldnt find the image " + imageName);
             }
 
         }

@@ -20,6 +20,7 @@ public class PatternParserFactory {
         patternParsersForFile.put(CATEGORIES_BASE_SAS_FILE_NAME, getCategoryParser());
         patternParsersForFile.put(DVSA_FILE_NAME, getCategoryParser());
         patternParsersForFile.put(DVSA_MOTOR_FILE_NAME, getCategoryParser());
+        patternParsersForFile.put(DVSA_LGV_FILE_NAME, getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
         patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
     }

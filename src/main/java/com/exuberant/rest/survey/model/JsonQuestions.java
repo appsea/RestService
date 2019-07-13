@@ -62,6 +62,19 @@ public class JsonQuestions {
         categoryIconMap.put("INCIDENTS ACCIDENTS AND EMERGENCIES", "0xf87b");
         categoryIconMap.put("VEHICLE LOADING", "0xf59d");
         categoryIconMap.put("MOTORCYCLE LOADING", "0xf59d");
+        //LGV
+        categoryIconMap.put("VEHICLE WEIGHTS AND DIMENSIONS", "0xf496");
+        categoryIconMap.put("DRIVER'S HOURS AND REST PERIODS", "0xf236");
+        categoryIconMap.put("VEHICLE CONDITION", "0xf4df");
+        categoryIconMap.put("LEAVING THE VEHICLE", "0xf554");
+        categoryIconMap.put("RESTRICTED VIEW", "0xf070");
+        categoryIconMap.put("ENVIRONMENTAL ISSUES", "0xf743");
+        categoryIconMap.put("THE DRIVER", "0xf0c0");
+        categoryIconMap.put("THE ROAD", "0xf018");
+        categoryIconMap.put("BRAKING SYSTEMS", "0xf28d");
+        categoryIconMap.put("ESSENTIAL DOCUMENTS", "0xf0c6");
+        categoryIconMap.put("OTHER ROAD USERS", "0xf5e4");
+
     }
 
     public JsonQuestions(List<Question> allQuestions, QuestionBank questionBank) {
