@@ -22060,7 +22060,6 @@
   "questionVersion" : 1,
   "playStoreVersion" : 10001,
   "totalQuestions" : 914,
-  "codes" : [{"code": "Glasgow", "startDate": "2019-08-15", "endDate": "2019-08-16", "count": 0}, {"code": "Mumbai", "startDate": "2019-08-20", "endDate": "2019-08-21", "count": 0}],
   "ads" : true,
   "categories" : [ {
     "icon" : "0xf496",

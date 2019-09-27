@@ -2096,7 +2096,7 @@
     } ]
   }, {
     "number" : 100,
-    "description" : "A customer reports that after a technician cleaned up a rogue antivirus program, the customer cannot browse the web. Which of the following should the technician check to resolve the situation?",
+    "description" : "A customer reports that after a technician cleaned up a rogue anti-virus program, the customer cannot browse the web. Which of the following should the technician check to resolve the situation?",
     "explanation" : "http://windows.microsoft.com/en-us/windows-vista/change-proxy-settings-in-internetexplorer",
     "options" : [ {
       "tag" : "A",
@@ -2160,7 +2160,7 @@
   }, {
     "number" : 103,
     "description" : "A technician is working on a workstation that is receiving read/write failures when trying to access a particular file. Which of the following commands should the technician use to resolve this issue?",
-    "explanation" : "http://www.pegasusafs.\ncom/support/webhelp/common_errors_and_problems/the_benefits_of_using_chkdsk.htm",
+    "explanation" : "http://www.pegasusafs.com/support/webhelp/common_errors_and_problems/the_benefits_of_using_chkdsk.htm",
     "options" : [ {
       "tag" : "A",
       "description" : "A. DISKPART",
@@ -3727,7 +3727,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Viruses disable the antivirus update service while worms kill the antivirus process.",
+      "description" : "D. Viruses disable the anti-virus update service while worms kill the anti-virus process.",
       "correct" : false
     } ]
   }, {
@@ -3811,7 +3811,7 @@
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Update antivirus signatures more often",
+      "description" : "B. Update anti-virus signatures more often",
       "correct" : false
     }, {
       "tag" : "C",
@@ -3992,7 +3992,7 @@
     } ]
   }, {
     "number" : 188,
-    "description" : "Which of the following is solely designed to avoid detection by an antivirus program by using the underlying operating system to its advantage?",
+    "description" : "Which of the following is solely designed to avoid detection by an anti-virus program by using the underlying operating system to its advantage?",
     "explanation" : "http://www.webopedia.com/TERM/R/rootkit.html",
     "options" : [ {
       "tag" : "A",
@@ -4014,7 +4014,7 @@
   }, {
     "number" : 189,
     "description" : "Which of the following passwords is the MOST secure according to industry best practices?",
-    "explanation" : "http://netforbeginners.about.com/od/antivirusantispyware/a/example_strong_passwords.htm",
+    "explanation" : "http://netforbeginners.about.com/od/anti-virusantispyware/a/example_strong_passwords.htm",
     "options" : [ {
       "tag" : "A",
       "description" : "A. VeryStrongPassword",
@@ -4060,7 +4060,7 @@
   }, {
     "number" : 191,
     "description" : "Which of the following security threats involve shoulder surfing and phone phishing?",
-    "explanation" : "http://www.webroot.com/us/en/home/resources/tips/online-shopping-banking/securewhat-\nis-social-engineering",
+    "explanation" : "http://www.webroot.com/us/en/home/resources/tips/online-shopping-banking/securewhat-is-social-engineering",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Man-in-the-Middle",
@@ -4445,7 +4445,7 @@
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Install antivirus applications",
+      "description" : "B. Install anti-virus applications",
       "correct" : false
     }, {
       "tag" : "C",
@@ -4529,7 +4529,7 @@
     } ]
   }, {
     "number" : 213,
-    "description" : "A user is experiencing slow performance with their computer. A technician suspects the computer has a virus and runs antivirus software. A virus is found and removed, but the performance issue is not resolved. Which of the following should the technician perform NEXT?",
+    "description" : "A user is experiencing slow performance with their computer. A technician suspects the computer has a virus and runs anti-virus software. A virus is found and removed, but the performance issue is not resolved. Which of the following should the technician perform NEXT?",
     "explanation" : "Go back to the finding the real problem. See what is slowing down the performance and then\nresolve the problem using related troubleshooting techniques.",
     "options" : [ {
       "tag" : "A",
@@ -4718,7 +4718,7 @@
     } ]
   }, {
     "number" : 222,
-    "description" : "Which of the following can enable a technician to remove a virus that prevents users from updating their antivirus software?",
+    "description" : "Which of the following can enable a technician to remove a virus that prevents users from updating their anti-virus software?",
     "explanation" : "http://pcsupport.about.com/od/fixtheproblem/f/windows-safe-mode.htm",
     "options" : [ {
       "tag" : "A",
@@ -4886,11 +4886,11 @@
     } ]
   }, {
     "number" : 230,
-    "description" : "A user has a perimeter firewall and up-to-date antivirus software. The user is asking what else they can do to improve their security. Which of the following will have the MOST impact on network security? (Select TWO).",
+    "description" : "A user has a perimeter firewall and up-to-date anti-virus software. The user is asking what else they can do to improve their security. Which of the following will have the MOST impact on network security? (Select TWO).",
     "explanation" : "To improve security, assign security rights based on job roles. You need to give least amount of\nprivilege to users so that they can do their jobs without having access to resources that have\nnothing to do with their job roles.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Install additional antivirus software",
+      "description" : "A. Install additional anti-virus software",
       "correct" : false
     }, {
       "tag" : "B",
@@ -5024,7 +5024,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Update antivirus software",
+      "description" : "B. Update anti-virus software",
       "correct" : false
     }, {
       "tag" : "C",
@@ -5095,7 +5095,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. A user receives a message about unwanted activity from their antivirus asking to remove the\nsuspect file.",
+      "description" : "C. A user receives a message about unwanted activity from their anti-virus asking to remove the\nsuspect file.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -5210,7 +5210,7 @@
   }, {
     "number" : 245,
     "description" : "A user gets a warning from their ISP about illegally downloading copyrighted movies. The user insists that they did not download any movies and calls a technician to implement stronger small office home office (SOHO) security. Which of the following will allow only known workstations to connect to the SOHO router?",
-    "explanation" : "http://www.wi-fiplanet.com/tutorials/article.php/3924486/MAC-Filtering-for-Your-\nWireless-Network.htm",
+    "explanation" : "http://www.wi-fiplanet.com/tutorials/article.php/3924486/MAC-Filtering-for-Your-Wireless-Network.htm",
     "options" : [ {
       "tag" : "A",
       "description" : "A. WPA password",
@@ -5251,7 +5251,7 @@
     } ]
   }, {
     "number" : 247,
-    "description" : "A user installed a new SOHO router and new wireless NICs to increase their transmission speed from 802.11b to 802.11g with the manufacturer's default settings. The user lives in an apartment   building and is still experiencing slowness to the Internet after the installations. Which of the following is the MOST secure option that a technician could implement to resolve this issue?",
+    "description" : "A user installed a new SOHO router and new wireless NICs to increase their transmission speed from 802.11b to 802.11g with the manufacturer's default settings. The user lives in an apartment building and is still experiencing slowness to the Internet after the installations. Which of the following is the MOST secure option that a technician could implement to resolve this issue?",
     "explanation" : "http://security.stackexchange.com/questions/755/how-does-basic-http-auth-work",
     "options" : [ {
       "tag" : "A",
@@ -6298,7 +6298,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Install antivirus",
+      "description" : "D. Install anti-virus",
       "correct" : false
     } ]
   }, {
@@ -6539,7 +6539,7 @@
   }, {
     "number" : 306,
     "description" : "When comparing laptops and tablet PCs which of the following is true?",
-    "explanation" : "http://www.forbes.com/sites/tomcoughlin/2013/09/11/solid-state-drives-shingling-andfat-\ntablets/",
+    "explanation" : "http://www.forbes.com/sites/tomcoughlin/2013/09/11/solid-state-drives-shingling-andfat-tablets/",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Tablets typically have higher resolution displays",
@@ -7189,22 +7189,22 @@
   }, {
     "number" : 336,
     "description" : "A user has downloaded and installed a browser add-on that causes the browser to hang. The PC has very slow system response when rebooted. Which of the following should a technician do to troubleshoot this problem?",
-    "explanation" : "This might be the sign of a virus infecting the system. First, remove all temporary Internet files on\nyour computer. Viruses are downloaded through software or a webpage. And normally it resides in\nTemporary Internet Files folder. Now turn off system restore because you don’t want to load a\nprevious state on the computer with the virus still lingering the digital wild. Run an antivirus\nprogram to clean infected files.",
+    "explanation" : "This might be the sign of a virus infecting the system. First, remove all temporary Internet files on\nyour computer. Viruses are downloaded through software or a webpage. And normally it resides in\nTemporary Internet Files folder. Now turn off system restore because you don’t want to load a\nprevious state on the computer with the virus still lingering the digital wild. Run an anti-virus\nprogram to clean infected files.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Run System Restore, update antivirus program, and run an antivirus scan.",
+      "description" : "A. Run System Restore, update anti-virus program, and run an anti-virus scan.",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Remove all Internet temporary files, run an antivirus scan, and reboot using Last Known Good\nConfiguration.",
+      "description" : "B. Remove all Internet temporary files, run an anti-virus scan, and reboot using Last Known Good\nConfiguration.",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Remove all temporary files, turn off System Restore, update and run an antivirus scan.",
+      "description" : "C. Remove all temporary files, turn off System Restore, update and run an anti-virus scan.",
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Run an antivirus scan, Run Disk Cleanup, and reboot into Safe Mode.",
+      "description" : "D. Run an anti-virus scan, Run Disk Cleanup, and reboot into Safe Mode.",
       "correct" : false
     } ]
   }, {
@@ -7810,10 +7810,10 @@
   }, {
     "number" : 365,
     "description" : "A user, Ann, reports that she suspects her workstation has malware. Joe, the technician, confirms malware exists and starts the process of removing the malware. Which of the following is the FIRST step he should take in removing the malware?",
-    "explanation" : "http://antivirus.about.com/od/windowsbasics/a/systemrestore.htm",
+    "explanation" : "http://anti-virus.about.com/od/windowsbasics/a/systemrestore.htm",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Disable antivirus",
+      "description" : "A. Disable anti-virus",
       "correct" : false
     }, {
       "tag" : "B",
@@ -7999,7 +7999,7 @@
   }, {
     "number" : 374,
     "description" : "A user, Joe, has just finished upgrading his computer with a wireless keyboard/mouse combination, additional memory, installed new speakers, and replaced his 15 inch flat screen with a 24 inch flat screen. When he boots the computer it immediately starts making a loud beeping noise and will go no further in the boot process. Which of Joe’s system upgrades is the cause of the problem?",
-    "explanation" : "http://www.techspot.com/community/topics/ram-question-mixing-memory-of-differentspeeds.\n93687/",
+    "explanation" : "http://www.techspot.com/community/topics/ram-question-mixing-memory-of-differentspeeds.93687/",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The DVI cable is not properly seated",
@@ -8473,7 +8473,7 @@
   }, {
     "number" : 396,
     "description" : "An IR printer stops working for half of an office while the other half is able to print. Which of the following should be checked FIRST?",
-    "explanation" : "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&ved=0CEEQFjAC&url=htt\np%3A%2F%2Fwww.ics.uci.edu%2F~lopes%2Fteaching%2Finf241W07%2Fstudents%2520prese\nntations%2Frex-chen.ppt&ei=FRVFUtPYF4bm4QSck4GoBA&usg=AFQjCNFFKyH4N_oU7gPBMftJki_\ntA-KmQ&sig2=cE2SZ--1xT22N6zLWAILFA",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Proper lighting",
@@ -8494,7 +8494,7 @@
   }, {
     "number" : 397,
     "description" : "The computer starts up and runs for less than a minute before shutting down or locking up. This is a symptom of:",
-    "explanation" : "http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-\nits-important",
+    "explanation" : "http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-its-important",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Overheating.",
@@ -8536,7 +8536,7 @@
   }, {
     "number" : 399,
     "description" : "A technician recently installed a new video card in a PC. The PC already has integrated video on the motherboard. When the technician turns on the PC, there is no video. Which of the following is MOST likely the cause?",
-    "explanation" : "http://www.tomshardware.com/forum/338600-33-unplugged-graphics-card-pluggedback-\ndisplay-help",
+    "explanation" : "http://www.tomshardware.com/forum/338600-33-unplugged-graphics-card-pluggedback-display-help",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The motherboard BIOS version is out of date.",
@@ -8620,7 +8620,7 @@
   }, {
     "number" : 403,
     "description" : "A Windows 7 desktop PC has crashed (i.e. BSOD) several times indicating a possible RAM problem. Which of the following is an OS built-in tool that can be used to test this problem?",
-    "explanation" : "http://howto.cnet.com/8301-11310_39-57569731-285/test-your-ram-with-windowsmemory-\ndiagnostic-tool/",
+    "explanation" : "http://howto.cnet.com/8301-11310_39-57569731-285/test-your-ram-with-windowsmemory-diagnostic-tool/",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Windows System Restore",
@@ -9333,7 +9333,7 @@
   }, {
     "number" : 436,
     "description" : "A technician troubleshoots a broken PC only to find that a strong burning odor is coming from inside the case. Which of the following parts MOST likely experienced a level of electrical burn?",
-    "explanation" : "http://forums.thinkbroadband.com/hardware/4194025-that-acrid-electrical-burningsmell.\nhtml?fpart=all&vc=1",
+    "explanation" : "http://forums.thinkbroadband.com/hardware/4194025-that-acrid-electrical-burningsmell.html?fpart=all&vc=1",
     "options" : [ {
       "tag" : "A",
       "description" : "A. PSU",
@@ -9354,7 +9354,7 @@
   }, {
     "number" : 437,
     "description" : "A computer is showing the “No boot device found” message even though a technician has verified that the hard drive is set as Device 1 in the BIOS boot order. Which of the following causes is MOST likely at play?",
-    "explanation" : "http://wdc.custhelp.com/app/answers/detail/a_id/981/~/how-to-physically-install,-setjumper-\nsettings,-and-set-up-a-serial-ata,-eide",
+    "explanation" : "http://wdc.custhelp.com/app/answers/detail/a_id/981/~/how-to-physically-install,-setjumper-settings,-and-set-up-a-serial-ata,-eide",
     "options" : [ {
       "tag" : "A",
       "description" : "A. A 40-pin cable was used instead of an 80-pin cable to connect the HDD.",
@@ -9606,10 +9606,10 @@
   }, {
     "number" : 449,
     "description" : "A technician is about to put a computer back into service that has not been turned on for many months. It was healthy when taken out of service and boots quickly without any problems. Which of the following actions would be a best practice to begin computer maintenance? (Select TWO).",
-    "explanation" : "You have to update the system. Run antivirus updates because antivirus changes frequently as\nnew viruses are discovered. Run Windows updates to keep the system updated and ready to use.",
+    "explanation" : "You have to update the system. Run anti-virus updates because anti-virus changes frequently as\nnew viruses are discovered. Run Windows updates to keep the system updated and ready to use.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Run a full antivirus scan.",
+      "description" : "A. Run a full anti-virus scan.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -9617,7 +9617,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Run antivirus updates.",
+      "description" : "C. Run anti-virus updates.",
       "correct" : true
     }, {
       "tag" : "D",
@@ -9646,7 +9646,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Run an antivirus update and then a full scan.",
+      "description" : "D. Run an anti-virus update and then a full scan.",
       "correct" : false
     } ]
   }, {
@@ -9736,7 +9736,7 @@
   }, {
     "number" : 455,
     "description" : "A user reports that they cleared a paper jam and now cannot print. The technician reseats the paper and then prints a test page from the printer. A test page sent from the workstation does not print. Which of the following actions should the technician take FIRST?",
-    "explanation" : "http://www.howtogeek.com/100358/how-to-cancel-or-delete-a-stuck-print-job-in-thewindows-\nprint-queue/",
+    "explanation" : "http://www.howtogeek.com/100358/how-to-cancel-or-delete-a-stuck-print-job-in-thewindows-print-queue/",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Clear the print queue.",
@@ -10461,19 +10461,19 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Remove the battery and A/C adapter and depress the power button for ten seconds. Reconnect\npower and attempt to power on.",
+      "description" : "A. Remove the battery and A/C adapter and depress the power button for ten seconds. Reconnect power and attempt to power on.",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Remove the battery and test it in a known good laptop of the same model to ensure it is in a\nfully-functional and charged condition.",
+      "description" : "B. Remove the battery and test it in a known good laptop of the same model to ensure it is in a fully-functional and charged condition.",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Ask the user if the laptop is plugged into a power strip that also powers a high-draw device,\nsuch as a laser printer.",
+      "description" : "C. Ask the user if the laptop is plugged into a power strip that also powers a high-draw device, such as a laser printer.",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Ask the user what USB devices they normally have plugged in and ensure they are plugged in\nto maintain the same power draw as previous boots.",
+      "description" : "D. Ask the user what USB devices they normally have plugged in and ensure they are plugged in to maintain the same power draw as previous boots.",
       "correct" : false
     } ]
   }, {
@@ -10545,19 +10545,19 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Create a system restore check point, run antivirus software, and create another check point\nwhen the PC is clean.",
+      "description" : "A. Create a system restore check point, run anti-virus software, and create another check point when the PC is clean.",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Disable system restore, run antivirus software, and re-enable system restore when the PC is\nclean.",
+      "description" : "B. Disable system restore, run anti-virus software, and re-enable system restore when the PC is clean.",
       "correct" : true
     }, {
       "tag" : "C",
-      "description" : "C. Create a system image, run antivirus software, reboot the PC, and restore the system image\nwhen the PC is clean.",
+      "description" : "C. Create a system image, run anti-virus software, reboot the PC, and restore the system image when the PC is clean.",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Run antivirus software, reboot the PC, and create a system restore checkpoint when the PC is\nclean.",
+      "description" : "D. Run anti-virus software, reboot the PC, and create a system restore checkpoint when the PC is clean.",
       "correct" : false
     } ]
   }, {
@@ -10721,7 +10721,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. The system will hang and the \"Non-bootable device found\" error message will appear on the\nscreen.",
+      "description" : "B. The system will hang and the \"Non-bootable device found\" error message will appear on the screen.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -10729,12 +10729,12 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. The system will hang and the \"Operating System missing\" error message will appear on the\nscreen.",
+      "description" : "D. The system will hang and the \"Operating System missing\" error message will appear on the screen.",
       "correct" : false
     } ]
   }, {
     "number" : 502,
-    "description" : "A user has called in a helpdesk ticket about their monitor not powering on but their PC does. Which of the following would be the FIRST thing the technician would check?",
+    "description" : "A user has called in a help desk ticket about their monitor not powering on but their PC does. Which of the following would be the FIRST thing the technician would check?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -10755,7 +10755,7 @@
     } ]
   }, {
     "number" : 503,
-    "description" : "A printer has been repurposed to another part of the building. When configured to work with the new department, it intermittently prints and at times prints unrequested jobs. The cable tester reveals the Ethernet cable is properly configured. Which of the following is MOST likely the cause of this issue?",
+    "description" : "A printer has been re-purposed to another part of the building. When configured to work with the new department, it intermittently prints and at times prints unrequested jobs. The cable tester reveals the Ethernet cable is properly configured. Which of the following is MOST likely the cause of this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -10776,7 +10776,7 @@
     } ]
   }, {
     "number" : 504,
-    "description" : "A technician is attempting to upgrade a customer's PC from Windows XP Professional to Windows 7 Professional x64. The system contains a late generation Pentium 4 Processor with hyperthreading. The technician is having difficulty installing the operating system as it consistently errors out during setup. Which of the following is MOST likely happening?",
+    "description" : "A technician is attempting to upgrade a customer's PC from Windows XP Professional to Windows 7 Professional x64. The system contains a late generation Pentium 4 Processor with hyper-threading. The technician is having difficulty installing the operating system as it consistently errors out during setup. Which of the following is MOST likely happening?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -10788,7 +10788,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Windows XP can only be directly upgraded to Windows 7 Home Basic and Home Premium\neditions.",
+      "description" : "C. Windows XP can only be directly upgraded to Windows 7 Home Basic and Home Premium editions.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -11011,7 +11011,7 @@
     } ]
   }, {
     "number" : 515,
-    "description" : "A user is reporting that their computer is running slow and is having trouble connecting to the Internet. After further inspection, the technician notices that the antivirus definitions are up-to-date and the system is scheduled for regular scans. Which of the following solutions will MOST likely help resolve the issues reported?",
+    "description" : "A user is reporting that their computer is running slow and is having trouble connecting to the Internet. After further inspection, the technician notices that the anti-virus definitions are up-to-date and the system is scheduled for regular scans. Which of the following solutions will MOST likely help resolve the issues reported?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -11275,7 +11275,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Update antivirus definitions",
+      "description" : "A. Update anti-virus definitions",
       "correct" : false
     }, {
       "tag" : "B",
@@ -11501,7 +11501,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Run antivirus application",
+      "description" : "D. Run anti-virus application",
       "correct" : false
     } ]
   }, {
@@ -11564,7 +11564,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Antivirus software",
+      "description" : "D. Anti-virus software",
       "correct" : false
     } ]
   }, {
@@ -11926,7 +11926,7 @@
     } ]
   }, {
     "number" : 558,
-    "description" : "A user reports that they accidentally unplugged their CMOS battery. The unit was reinstalled, but all subsequent boot attempts have resulted in a BSOD. Which of the following should be the   FIRST item checked by the technician?",
+    "description" : "A user reports that they accidentally unplugged their CMOS battery. The unit was reinstalled, but all subsequent boot attempts have resulted in a BSOD. Which of the following should be the FIRST item checked by the technician?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -12350,7 +12350,7 @@
     } ]
   }, {
     "number" : 578,
-    "description" : "A customer calls and states their display is very dark even with the brightness settings at maximum.   Which of the following is the MOST likely cause of this issue?",
+    "description" : "A customer calls and states their display is very dark even with the brightness settings at maximum. Which of the following is the MOST likely cause of this issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -12413,7 +12413,7 @@
     } ]
   }, {
     "number" : 581,
-    "description" : "A user states that their wireless connection drops when the phone rings. Which of the following   solutions BEST shows what the technician should do to prevent this from happening?",
+    "description" : "A user states that their wireless connection drops when the phone rings. Which of the following solutions BEST shows what the technician should do to prevent this from happening?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -12438,7 +12438,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Both users can log in but only one can access company shares; both PCs need their network\nnames changed.",
+      "description" : "A. Both users can log in but only one can access company shares; both PCs need their network names changed.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -12446,7 +12446,7 @@
       "correct" : true
     }, {
       "tag" : "C",
-      "description" : "C. Both users can log in and access company shares; one PC needs to have its network name\nchanged.",
+      "description" : "C. Both users can log in and access company shares; one PC needs to have its network name changed.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -12770,7 +12770,7 @@
     } ]
   }, {
     "number" : 598,
-    "description" : "A user states that they see flickering on their external display. The technician asks if anything has   changed since they noticed the problem. Next the technician replaces the external display with a new one which corrected the issue. According to the troubleshooting theory, which of the following would the technician do NEXT?",
+    "description" : "A user states that they see flickering on their external display. The technician asks if anything has changed since they noticed the problem. Next the technician replaces the external display with a new one which corrected the issue. According to the troubleshooting theory, which of the following would the technician do NEXT?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -12838,7 +12838,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Defragmentation",
+      "description" : "A. De-fragmentation",
       "correct" : true
     }, {
       "tag" : "B",
@@ -12955,7 +12955,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Use the screwdriver provided by the customer, being careful not to further strip any of the\n\n\nscrews.",
+      "description" : "D. Use the screwdriver provided by the customer, being careful not to further strip any of the screws.",
       "correct" : false
     } ]
   }, {
@@ -12989,11 +12989,11 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Plug an external monitor into the laptop, press the appropriate function keys, and look for an\noutput display.",
+      "description" : "B. Plug an external monitor into the laptop, press the appropriate function keys, and look for an output display.",
       "correct" : true
     }, {
       "tag" : "C",
-      "description" : "C. If the power indicator lights are lit assume the motherboard is good and order a replacement\ndisplay.",
+      "description" : "C. If the power indicator lights are lit assume the motherboard is good and order a replacement display.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -13064,7 +13064,7 @@
       "correct" : true
     }, {
       "tag" : "C",
-      "description" : "C. The LCD needs to be recalibrated.",
+      "description" : "C. The LCD needs to be re-calibrated.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -13505,7 +13505,7 @@
     } ]
   }, {
     "number" : 632,
-    "description" : "A user reports that their laptop's keyboard has areas where the keys always get stuck together. After disassembling the keyboard to clean it, which of the following processes would be the FIRST   step to properly reassemble the keyboard?",
+    "description" : "A user reports that their laptop's keyboard has areas where the keys always get stuck together. After disassembling the keyboard to clean it, which of the following processes would be the FIRST step to properly reassemble the keyboard?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -13559,7 +13559,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Full format erases all partitions on the disk at once while quick format only erases one partition\nat a time.",
+      "description" : "C. Full format erases all partitions on the disk at once while quick format only erases one partition at a time.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -13757,7 +13757,7 @@
     } ]
   }, {
     "number" : 644,
-    "description" : "A company decides to implement two-factor authentication on all of the company computers. In addition to a user password, which of the following is a commonly used item to implement twofactor authentication?",
+    "description" : "A company decides to implement two-factor authentication on all of the company computers. In addition to a user password, which of the following is a commonly used item to implement two-factor authentication?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14164,11 +14164,11 @@
     } ]
   }, {
     "number" : 663,
-    "description" : "A customer calls and states that they are getting a lot of pop-ups and the new antivirus they just downloaded is not helping. Which of the following is the MOST likely cause of the issue?",
+    "description" : "A customer calls and states that they are getting a lot of pop-ups and the new anti-virus they just downloaded is not helping. Which of the following is the MOST likely cause of the issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Rouge antivirus",
+      "description" : "A. Rouge anti-virus",
       "correct" : true
     }, {
       "tag" : "B",
@@ -14311,7 +14311,7 @@
     } ]
   }, {
     "number" : 670,
-    "description" : "A user states they are hearing a clicking noise coming from the computer. There is a message on the screen saying no operating system found, and the computer then attempts to boot from PXE.   Which of the following should the technician perform?",
+    "description" : "A user states they are hearing a clicking noise coming from the computer. There is a message on the screen saying no operating system found, and the computer then attempts to boot from PXE. Which of the following should the technician perform?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14558,7 +14558,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. The previous technician did not setup DHCP reservations properly and therefore the router is\ngiving multiple users the same IP.",
+      "description" : "D. The previous technician did not setup DHCP reservations properly and therefore the router is giving multiple users the same IP.",
       "correct" : false
     } ]
   }, {
@@ -14584,7 +14584,7 @@
     } ]
   }, {
     "number" : 683,
-    "description" : "Which of the following wireless standards used on modern smartphones depends on direct clientto- client handshake pin code authorization for establishing transmission connection?",
+    "description" : "Which of the following wireless standards used on modern smartphones depends on direct client to client handshake pin code authorization for establishing transmission connection?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14609,11 +14609,11 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Onboard video is present",
+      "description" : "A. On-board video is present",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. The onboard speaker is defective",
+      "description" : "B. The on-board speaker is defective",
       "correct" : false
     }, {
       "tag" : "C",
@@ -14697,7 +14697,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Defragment the system.",
+      "description" : "B. De-fragment the system.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -14705,7 +14705,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Update the antivirus definition.",
+      "description" : "D. Update the anti-virus definition.",
       "correct" : false
     } ]
   }, {
@@ -14731,7 +14731,7 @@
     } ]
   }, {
     "number" : 690,
-    "description" : "A technician wants to run a full diagnostic of the file system on a user’s hard drive and fix any index errors encountered, but the group policy on the computer prevents this from being executed   while in Windows. Which of the following can the technician do to accomplish this?",
+    "description" : "A technician wants to run a full diagnostic of the file system on a user’s hard drive and fix any index errors encountered, but the group policy on the computer prevents this from being executed while in Windows. Which of the following can the technician do to accomplish this?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -14785,7 +14785,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. The user has DENY permissions setup for the POWER USERS group which needs to be\nremoved",
+      "description" : "C. The user has DENY permissions setup for the POWER USERS group which needs to be removed",
       "correct" : false
     }, {
       "tag" : "D",
@@ -14823,7 +14823,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. All antivirus updates have been performed",
+      "description" : "B. All anti-virus updates have been performed",
       "correct" : false
     }, {
       "tag" : "C",
@@ -15134,7 +15134,7 @@
     } ]
   }, {
     "number" : 709,
-    "description" : "Joe, a user, should be aware of his surroundings when Windows boots. Which of the following tools would BEST be used to disable some programs from automatically starting when the computer is booted?   - - - - -",
+    "description" : "Joe, a user, should be aware of his surroundings when Windows boots. Which of the following tools would BEST be used to disable some programs from automatically starting when the computer is booted?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -15365,7 +15365,7 @@
     } ]
   }, {
     "number" : 720,
-    "description" : "Anne, an employee, stepped away from her workstation to deliver a report to her boss. When she   came back, confidential material was displayed on the screen that was not opened prior to her leaving. Which of the following could have mitigated this from occurring?",
+    "description" : "Anne, an employee, stepped away from her workstation to deliver a report to her boss. When she came back, confidential material was displayed on the screen that was not opened prior to her leaving. Which of the following could have mitigated this from occurring?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -15474,7 +15474,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Enable Windows User Access Control to ensure the user has proper rights to remove the\ninfected files.",
+      "description" : "A. Enable Windows User Access Control to ensure the user has proper rights to remove the infected files.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -15680,7 +15680,7 @@
     } ]
   }, {
     "number" : 735,
-    "description" : "Ann, a small business owner, would like to implement wireless networking for her business but wants to be sure the wireless is ONLY accessible from within her business’ premises. Which of the following would BEST accomplish this?",
+    "description" : "Ann, a small business owner, would like to implement wireless networking for her business but wants to be sure the wireless is ONLY accessible from within her business premises. Which of the following would BEST accomplish this?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -15743,7 +15743,7 @@
     } ]
   }, {
     "number" : 738,
-    "description" : "A computer user, Joe, was surfing for information on a news site when he reported a screen flicker and then a pop-up appeared on his screen stating the computer was infected with a virus. Joe noticed the title of the pop-up was not from his installed antivirus. Which of the following BEST describes this infection?",
+    "description" : "A computer user, Joe, was surfing for information on a news site when he reported a screen flicker and then a pop-up appeared on his screen stating the computer was infected with a virus. Joe noticed the title of the pop-up was not from his installed anti-virus. Which of the following BEST describes this infection?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -15953,7 +15953,7 @@
     } ]
   }, {
     "number" : 748,
-    "description" : "A user recently installed a new video driver on a PC but upon boot Windows will not start. Which   of the following is the BEST option to correct the issue?",
+    "description" : "A user recently installed a new video driver on a PC but upon boot Windows will not start. Which of the following is the BEST option to correct the issue?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16016,7 +16016,7 @@
     } ]
   }, {
     "number" : 751,
-    "description" : "Joe, a technician, is sent out to investigate a PC which refuses to turn on for a customer after a recent thunderstorm. Upon arrival, Joe notices a heavy scent of what seems to have been an   electrical burn. Which of the following PC components would be MOST likely at fault for the failure?",
+    "description" : "Joe, a technician, is sent out to investigate a PC which refuses to turn on for a customer after a recent thunderstorm. Upon arrival, Joe notices a heavy scent of what seems to have been an electrical burn. Which of the following PC components would be MOST likely at fault for the failure?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16121,7 +16121,7 @@
     } ]
   }, {
     "number" : 756,
-    "description" : "Ann, a user who works with many patients during the day, has a privacy screen attached to her monitor.   Which of the following does this help prevent?",
+    "description" : "Ann, a user who works with many patients during the day, has a privacy screen attached to her monitor. Which of the following does this help prevent?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16238,7 +16238,7 @@
     } ]
   }, {
     "number" : 761,
-    "description" : "A user is attempting to use Remote Desktop to connect to a server but is getting an error message.   Which of the following tools should be used to verify that the server is powered on and connected to the network?",
+    "description" : "A user is attempting to use Remote Desktop to connect to a server but is getting an error message. Which of the following tools should be used to verify that the server is powered on and connected to the network?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16263,7 +16263,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Upgrade the antivirus signatures and disable system restore",
+      "description" : "A. Upgrade the anti-virus signatures and disable system restore",
       "correct" : false
     }, {
       "tag" : "B",
@@ -16343,7 +16343,7 @@
     } ]
   }, {
     "number" : 766,
-    "description" : "Joe, the Chief Executive Officer (CEO), has a habit of forgetting his mobile device and asks for assistance in locating it in the future.   Which of the following would help finding his lost device?",
+    "description" : "Joe, the Chief Executive Officer (CEO), has a habit of forgetting his mobile device and asks for assistance in locating it in the future. Which of the following would help finding his lost device?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -16642,7 +16642,7 @@
   }, {
     "number" : 780,
     "description" : "Joe, a technician, is tasked with installing Windows Vista on a new PC that came with Windows XP. He would like to preserve the data on the machine in case it is needed later. Which of the following installation methods would be MOST effective for him to use?",
-    "explanation" : "-\n-\n-\n-\n-\n-\n-\n-\n-",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Image creation",
@@ -17023,7 +17023,7 @@
     } ]
   }, {
     "number" : 798,
-    "description" : "You are working on a Windows 7 Ultimate computer. An application called DLP 2.0 is failing to start properly.   You are required to disable two of its components in MSconfig. Which two tabs should you access? (Select the two best answers.)",
+    "description" : "You are working on a Windows 7 Ultimate computer. An application called DLP 2.0 is failing to start properly. You are required to disable two of its components in MSconfig. Which two tabs should you access? (Select the two best answers.)",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -17369,7 +17369,7 @@
       "correct" : true
     }, {
       "tag" : "E",
-      "description" : "E. Rogue antivirus",
+      "description" : "E. Rogue anti-virus",
       "correct" : false
     }, {
       "tag" : "F",
@@ -17378,7 +17378,7 @@
     } ]
   }, {
     "number" : 813,
-    "description" : "You are troubleshooting a printer. What are common symptoms of printer failure or other printer   issues? (Select the two best answers.)",
+    "description" : "You are troubleshooting a printer. What are common symptoms of printer failure or other printer issues? (Select the two best answers.)",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -17684,19 +17684,19 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Click on the Start button> Right click on Computer> Select Manage> Expand Local Users and\nGroups> Right click on Users> Select New User",
+      "description" : "A. Click on the Start button> Right click on Computer> Select Manage> Expand Local Users and Groups> Right click on Users> Select New User",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Click on the Start button> Right click on My Computer> Select Manage> Right click on Local\nUsers and Groups> Select Add Users from the menu",
+      "description" : "B. Click on the Start button> Right click on My Computer> Select Manage> Right click on Local Users and Groups> Select Add Users from the menu",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Click on the Start button> Right click on Computer> Select Manage> Right click on Local Users\nand Computers> Select New User",
+      "description" : "C. Click on the Start button> Right click on Computer> Select Manage> Right click on Local Users and Computers> Select New User",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Click on the Start button> Right click on Network Neighborhood> Select Manage> Right click\non Users> Select New User",
+      "description" : "D. Click on the Start button> Right click on Network Neighborhood> Select Manage> Right click on Users> Select New User",
       "correct" : false
     } ]
   }, {
@@ -18456,7 +18456,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Hardware or software designed to analyze data packets to determine the origin or destination of\nthe packet",
+      "description" : "A. Hardware or software designed to analyze data packets to determine the origin or destination of the packet",
       "correct" : false
     }, {
       "tag" : "B",
@@ -18695,11 +18695,11 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Determining appropriateness, platform destination, and scheduling of operating system and\napplication updates.",
+      "description" : "A. Determining appropriateness, platform destination, and scheduling of operating system and application updates.",
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Determining appropriateness, platform destination, and scheduling of incremental system\nbackups.",
+      "description" : "B. Determining appropriateness, platform destination, and scheduling of incremental system backups.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -18838,23 +18838,23 @@
     } ]
   }, {
     "number" : 881,
-    "description" : "A technician needs to create a private shared folder for each employee at a small business to store their files. The technician wants the main folder to be called “Employee Documents” and the subfolders to be named after each employee (e.g. “John Smith”). The technician wants to map the “Employee Documents” folder on all computers as the M:\\ drive for all users. Each employee should only have access to their own folder without the ability to change permissions. Which of the following permissions should the technician set?",
+    "description" : "A technician needs to create a private shared folder for each employee at a small business to store their files. The technician wants the main folder to be called “Employee Documents” and the sub-folders to be named after each employee (e.g. “John Smith”). The technician wants to map the “Employee Documents” folder on all computers as the M:\\ drive for all users. Each employee should only have access to their own folder without the ability to change permissions. Which of the following permissions should the technician set?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Set share permissions for “Employee Documents” to Everyone = Read, and set NTFS\npermissions for all subfolders to Creator Owner = Read & Execute",
+      "description" : "A. Set share permissions for “Employee Documents” to Everyone = Read, and set NTFS permissions for all sub-folders to Creator Owner = Read & Execute",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Set share permissions for “Employee Documents” to Everyone = Full Control, and set NTFS\npermissions for all subfolders to Creator Owner = Full Control",
+      "description" : "B. Set share permissions for “Employee Documents” to Everyone = Full Control, and set NTFS permissions for all sub-folders to Creator Owner = Full Control",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Set share permissions for “Employee Documents” to Everyone = Change, and set NTFS\npermissions for all subfolders to Creator Owner = List Folder Contents",
+      "description" : "C. Set share permissions for “Employee Documents” to Everyone = Change, and set NTFS permissions for all sub-folders to Creator Owner = List Folder Contents",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Set share permissions for “Employee Documents” to Everyone = Full Control, and set NTFS\npermissions for all subfolders to Creator Owner = Modify",
+      "description" : "D. Set share permissions for “Employee Documents” to Everyone = Full Control, and set NTFS permissions for all sub-folders to Creator Owner = Modify",
       "correct" : true
     } ]
   }, {
@@ -19010,7 +19010,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. RFID tags must be attached to all laptops and receivers to all doors to alert when a laptop\nleaves the designated area.",
+      "description" : "A. RFID tags must be attached to all laptops and receivers to all doors to alert when a laptop leaves the designated area.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -19022,7 +19022,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Employees must remember to lock their office doors when leaving even for a short period of\ntime.",
+      "description" : "D. Employees must remember to lock their office doors when leaving even for a short period of time.",
       "correct" : true
     } ]
   }, {
@@ -19048,7 +19048,7 @@
     } ]
   }, {
     "number" : 891,
-    "description" : "An administrator has advised against providing any information over the phone as a way to   prevent against which of the following threats?",
+    "description" : "An administrator has advised against providing any information over the phone as a way to prevent against which of the following threats?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -19287,11 +19287,11 @@
     } ]
   }, {
     "number" : 902,
-    "description" : "A customer is reporting that since switching from an XP to a Windows 7 computer, the main application they use no longer starts. The vendor of the application no longer exists and the customer does not want to find an alternative replacement at the moment. Which of the following   can a technician do to try to get the application running?",
+    "description" : "A customer is reporting that since switching from an XP to a Windows 7 computer, the main application they use no longer starts. The vendor of the application no longer exists and the customer does not want to find an alternative replacement at the moment. Which of the following can a technician do to try to get the application running?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Uninstall the application and re-install it as user so that it would have the standard rights and\nprivileges.",
+      "description" : "A. Uninstall the application and re-install it as user so that it would have the standard rights and privileges.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -19303,7 +19303,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Right-click on the application, select Properties and make sure that the Hidden attribute\ncheckbox is unchecked.",
+      "description" : "D. Right-click on the application, select Properties and make sure that the Hidden attribute checkbox is unchecked.",
       "correct" : false
     } ]
   }, {
@@ -19455,7 +19455,7 @@
     } ]
   }, {
     "number" : 910,
-    "description" : "A technician is trying to remove a resilient computer virus. The virus keeps coming back after rebooting the system because some program or service has locked some of the virus’ files and is preventing the AV from cleaning the system. Which of the following is the BEST approach to try and remove the virus while minimizing negative impact to the system?",
+    "description" : "A technician is trying to remove a resilient computer virus. The virus keeps coming back after rebooting the system because some program or service has locked some of the virus files and is preventing the AV from cleaning the system. Which of the following is the BEST approach to try and remove the virus while minimizing negative impact to the system?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -19463,7 +19463,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Run the antivirus after rebooting in safe mode.",
+      "description" : "B. Run the anti-virus after rebooting in safe mode.",
       "correct" : true
     }, {
       "tag" : "C",
@@ -20097,7 +20097,7 @@
     } ]
   }, {
     "number" : 940,
-    "description" : "A user called the helpdesk and states they are getting pop-ups on their screen. Which of the   following should the technician do?",
+    "description" : "A user called the helpdesk and states they are getting pop-ups on their screen. Which of the following should the technician do?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20244,7 +20244,7 @@
     } ]
   }, {
     "number" : 947,
-    "description" : "A user reports that after uninstalling software the computer is displaying 'cannot find a file on startup'. According to the troubleshooting theory, which of the following should the technician do NEXT?",
+    "description" : "A user reports that after uninstalling software the computer is displaying 'cannot find a file on startup'. According to the troubleshooting theory, which of the following should the technician doNEXT?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20495,7 +20495,7 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. When a technician is going to be on vacation, but wants to configure a system at a certain time\nwhile gone.",
+      "description" : "B. When a technician is going to be on vacation, but wants to configure a system at a certain time while gone.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -20659,7 +20659,7 @@
     } ]
   }, {
     "number" : 966,
-    "description" : "A user calls the helpdesk to report that print jobs coming from a laser printer in the office are losing most of their toner due to being touched by hand smudge. The printer was recently serviced with a   new fuser unit. Which of the following problems is MOST likely affecting the printer?",
+    "description" : "A user calls the helpdesk to report that print jobs coming from a laser printer in the office are losing most of their toner due to being touched by hand smudge. The printer was recently serviced with a new fuser unit. Which of the following problems is MOST likely affecting the printer?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -20827,7 +20827,7 @@
     } ]
   }, {
     "number" : 974,
-    "description" : "An administrator, Ann, wants to be able to access a customer's router interface from a remote location. Ann always has to have the customer print out the current router settings before she can   remotely manage the router. Which of the following should Ann do to eliminate this extra step before connecting to the router remotely?",
+    "description" : "An administrator, Ann, wants to be able to access a customer's router interface from a remote location. Ann always has to have the customer print out the current router settings before she can remotely manage the router. Which of the following should Ann do to eliminate this extra step before connecting to the router remotely?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",

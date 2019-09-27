@@ -12,11 +12,14 @@ import org.springframework.util.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static com.exuberant.rest.util.Constants.*;
 
@@ -54,6 +57,10 @@ public class JsonQuestionGenerator {
             Finisher fileFinisher = finisher.get(questionBank.getInputFile());
             questions = fileFinisher.finish(questions);
         }
+        /*if (questionBank.getInputFile().toLowerCase().contains("comp")) {
+            validateUrls(questions);
+        }*/
+
         ObjectMapper objectMapper = new ObjectMapper();
         Path jsonPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".json"));
         Path wordPath = Paths.get("C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\output", questionBank.getInputFile().replaceAll(".txt", ".docx"));
@@ -66,6 +73,78 @@ public class JsonQuestionGenerator {
         new WordFileWriter().write(jsonQuestions, wordPath);
         Files.write(jsonPath, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonQuestions).getBytes());
         validateImages(jsonQuestions, questionBank);
+    }
+
+    private void validateUrls(List<Question> questions) {
+        for (Question question : questions) {
+            List<String> urls = extractUrls(question.getExplanation());
+            for (String url : urls) {
+                if(validateHttpUrl(url)){
+                    System.err.println("URL is valid " + url);
+                } else {
+                    System.err.println("URL is invalid: " + url);
+                }
+            }
+        }
+    }
+
+    public boolean validateHttpUrl(String string) {
+        boolean valid = false;
+        if (!string.toLowerCase().startsWith("http")) {
+            string = "http://" + string;
+        }
+        URL u;
+        try {
+            u = new URL(string);
+            HttpURLConnection huc = (HttpURLConnection) u.openConnection();
+            huc.setRequestMethod("GET");  //OR  huc.setRequestMethod ("HEAD");
+            huc.connect();
+            int code = huc.getResponseCode();
+            System.out.println(code);
+            if (code == 200) {
+                valid = true;
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (ProtocolException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return valid;
+
+    }
+
+    public boolean isValidUrl(String string) {
+        boolean isValid = false;
+        try {
+            URL url = new URL(string);
+            URLConnection conn = url.openConnection();
+            conn.connect();
+            isValid = true;
+        } catch (MalformedURLException e) {
+            // the URL is not in a valid form
+        } catch (IOException e) {
+            // the connection couldn't be established
+        }
+        return isValid;
+    }
+
+    public static List<String> extractUrls(String text) {
+        List<String> containedUrls = new ArrayList<String>();
+        String urlRegex = "\\(?\\b(http://|www[.]|https://)[-A-Za-z0-9+&amp;@#/%?=~_()|!:,.;]*[-A-Za-z0-9+&amp;@#/%=~_()|]";
+        Pattern pattern = Pattern.compile(urlRegex, Pattern.CASE_INSENSITIVE);
+        Matcher urlMatcher = pattern.matcher(text);
+
+        while (urlMatcher.find()) {
+            String urlString = urlMatcher.group();
+            if (urlString.startsWith("(") && urlString.endsWith(")")) {
+                urlString = urlString.substring(1, urlString.length() - 1);
+            }
+            containedUrls.add(urlString);
+        }
+
+        return containedUrls;
     }
 
     private void validateImages(JsonQuestions jsonQuestions, QuestionBank questionBank) {
