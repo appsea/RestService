@@ -14,4 +14,5 @@ public class Constants {
     public static final String DVSA_LGV_FILE_NAME = "dvsa_lgv.txt";
     public static final String BASE_SAS_QUESTION_FILE_NAME = "Base SAS Question.txt";
     public static final String ADVANCE_SAS_QUESTIONS_FILE_NAME = "Advance-sas-questions.txt";
+    public static final String ISTQB = "istqb.txt";
 }

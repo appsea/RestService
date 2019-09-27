@@ -13,20 +13,20 @@ import java.util.*;
 
 public class DvsaQuestionHandler {
 
-    /*public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/uklgvtopics.json";
+    public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/uklgvtopics.json";
     public static final String QUESTION_FILE = "rawinput/dvsa/uklgv.json";
     public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\input";
     public static final String OUT_FILE_NAME = "dvsa_lgv.txt";
     public static final String IMAGES_SOURCE_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\lgv";
     public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaLgvTheory\\app\\images";
-    public static final String IMAGE_PREFIX = "lttk";*/
-    public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/ukmotorcycletopics.json";
+    public static final String IMAGE_PREFIX = "lttk";
+    /*public static final String RAWINPUT_DVSA_DVSATOPICS_JSON = "rawinput/dvsa/ukmotorcycletopics.json";
     public static final String QUESTION_FILE = "rawinput/dvsa/ukmotorcycle.json";
     public static final String OUTPUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\input";
     public static final String OUT_FILE_NAME = "dvsa_motor.txt";
     public static final String IMAGES_SOURCE_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Java\\SasExam\\src\\main\\resources\\images\\motorcycle";
     public static final String IMAGES_OUT_FOLDER = "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaMotorcycle\\app\\images";
-    public static final String IMAGE_PREFIX = "mttk";
+    public static final String IMAGE_PREFIX = "mttk";*/
 
     private static int fileNameCount = 2000;
     private static Map<String, String> renamedMap = new HashMap<>();

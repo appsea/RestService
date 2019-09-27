@@ -23,6 +23,7 @@ public class PatternParserFactory {
         patternParsersForFile.put(DVSA_LGV_FILE_NAME, getCategoryParser());
         patternParsersForFile.put(BASE_SAS_QUESTION_FILE_NAME, getMainPatternParser());
         patternParsersForFile.put(ADVANCE_SAS_QUESTIONS_FILE_NAME, getMainPatternParser());
+        patternParsersForFile.put(ISTQB, getCategoryParser());
     }
 
     public static PatternParser getPatternParser(String fileName) {

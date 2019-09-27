@@ -53,6 +53,7 @@ public class Main {
         bank.add(new QuestionBank(CATEGORIES_BASE_SAS_FILE_NAME, 200, 434, 13, 10001, true, true));
         bank.add(new QuestionBank(BASE_SAS_QUESTION_FILE_NAME,200, 436, 10, 10108, true, true));
         bank.add(new QuestionBank(ADVANCE_SAS_QUESTIONS_FILE_NAME, 150, 262, 7, 10072, true, true));
+        bank.add(new QuestionBank(ISTQB, 80, 80, 7, 10072, true, false));
         return bank;
     }
 

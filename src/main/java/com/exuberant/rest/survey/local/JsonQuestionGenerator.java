@@ -42,6 +42,7 @@ public class JsonQuestionGenerator {
         questionParsersForFile.put(DVSA_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(DVSA_MOTOR_FILE_NAME, genericQuestionParser);
         questionParsersForFile.put(DVSA_LGV_FILE_NAME, genericQuestionParser);
+        questionParsersForFile.put(ISTQB, genericQuestionParser);
 
         finisher.put("CompTIA A+.txt", new CompTiaAPlusFinisher());
     }

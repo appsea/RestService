@@ -59,7 +59,7 @@ public class JsonQuestions {
         categoryIconMap.put("ROAD AND TRAFFIC SIGNS", "0xf637");
         categoryIconMap.put("DOCUMENTS", "0xf02d");
         categoryIconMap.put("INCIDENTS, ACCIDENTS AND EMERGENCIES", "0xf5e1");
-        categoryIconMap.put("INCIDENTS ACCIDENTS AND EMERGENCIES", "0xf87b");
+        categoryIconMap.put("INCIDENTS ACCIDENTS AND EMERGENCIES", "0xf098");
         categoryIconMap.put("VEHICLE LOADING", "0xf59d");
         categoryIconMap.put("MOTORCYCLE LOADING", "0xf59d");
         //LGV
