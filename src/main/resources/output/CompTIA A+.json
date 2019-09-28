@@ -254,7 +254,7 @@
   }, {
     "number" : 13,
     "description" : "A technician needs to build a PC to act as a home virtual server. Which of the following would be the BEST choice?",
-    "explanation" : "Virtual server hosts a lot of virtual machines that host various operating systems and applications.\nTherefore, you need maximum cores and memory to keep all the virtual machines humming\nproperly. More cores and more memory means you can have more physical resources to create\nvirtual resources that will be used to host virtual machines.",
+    "explanation" : "Virtual server hosts a lot of virtual machines that host various operating systems and applications. Therefore, you need maximum cores and memory to keep all the virtual machines humming properly. More cores and more memory means you can have more physical resources to create virtual resources that will be used to host virtual machines.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Dual Core CPU, 6GB DDR3 RAM, 320GB of hard drive space",
@@ -749,7 +749,7 @@
   }, {
     "number" : 36,
     "description" : "Which of the following is an example of client-side virtualization?",
-    "explanation" : "http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-",
+    "explanation" : "http://windows.microsoft.com/en-us/windows7/install-and-use-windows-xp-mode-inwindows-7",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Compatibility mode on a program icon properties menu",
@@ -811,7 +811,7 @@
     } ]
   }, {
     "number" : 39,
-    "description" : "A user has plugged in a mobile phone to a PC and received a message that the driver was not successfully installed. Which of the following system tools should be used to troubleshoot this   error?",
+    "description" : "A user has plugged in a mobile phone to a PC and received a message that the driver was not successfully installed. Which of the following system tools should be used to troubleshoot this error?",
     "explanation" : "http://www.howtogeek.com/167094/how-to-use-the-windows-device-manager-fortroubleshooting/",
     "options" : [ {
       "tag" : "A",
@@ -833,7 +833,7 @@
   }, {
     "number" : 40,
     "description" : "On a corporate network, which of the following features would be used to redirect network traffic for filtering or monitoring?",
-    "explanation" : "http://superuser.com/questions/498412/how-can-windows-application-specificnetwork-\ntraffic-be-redirected-to-a-proxy-se",
+    "explanation" : "http://superuser.com/questions/498412/how-can-windows-application-specificnetwork-traffic-be-redirected-to-a-proxy-se",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Content Advisor",
@@ -854,7 +854,7 @@
   }, {
     "number" : 41,
     "description" : "Which of the following describes when an application is able to reuse Windows login credentials?",
-    "explanation" : "http://stackoverflow.com/questions/545667/how-to-use-windows-login-for-single-signon-\nand-for-active-directory-entries-for wi",
+    "explanation" : "http://stackoverflow.com/questions/545667/how-to-use-windows-login-for-single-signon-and-for-active-directory-entries-for",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Access control list",
@@ -917,7 +917,7 @@
   }, {
     "number" : 44,
     "description" : "A user is having trouble connecting to the Internet. Which of the following commands should a technician use, from the user’s workstation, to ensure that the workstation has a valid IP address?",
-    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/\nipconfig.mspx?mfr=true",
+    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/ipconfig.mspx?mfr=true",
     "options" : [ {
       "tag" : "A",
       "description" : "A. NETSTAT",
@@ -1001,7 +1001,7 @@
   }, {
     "number" : 48,
     "description" : "A virtual machine running locally would be BEST utilized in which of the following situations?",
-    "explanation" : "The best way to utilize a virtual machine is to test patches before deploying it on the live machine.\nPatches tend to corrupt operating systems. So it is better to check them first on a virtual machine\nbefore deploying it on a live machine.",
+    "explanation" : "The best way to utilize a virtual machine is to test patches before deploying it on the live machine. Patches tend to corrupt operating systems. So it is better to check them first on a virtual machine before deploying it on a live machine.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. On a PC with minimal RAM",
@@ -1127,7 +1127,7 @@
   }, {
     "number" : 54,
     "description" : "Which of the following data transfers will retain the current NTFS permissions of a file?",
-    "explanation" : "Moving a file to a different location on the same NTFS volume will retain current NTFS\npermissions. However, if the file is moved to another volume with different file system like FAT32,\npermissions will be invalided and you have to reassign permissions to the file.",
+    "explanation" : "Moving a file to a different location on the same NTFS volume will retain current NTFS permissions. However, if the file is moved to another volume with different file system like FAT32, permissions will be invalided and you have to reassign permissions to the file.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Copying the file to a different location on the same volume",
@@ -1211,7 +1211,7 @@
   }, {
     "number" : 58,
     "description" : "Which of the following Control Panel items will allow for easy streaming of pictures, music, and videos to other Windows 7 PCs?",
-    "explanation" : "http://lifehacker.com/5883517/how-to-set-up-windows-7-homegroups-for-seamlessinstant-\nsharing-between-pcs-in-your-home",
+    "explanation" : "http://lifehacker.com/5883517/how-to-set-up-windows-7-homegroups-for-seamlessinstant-sharing-between-pcs-in-your-home",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Ease of Access Center",
@@ -1232,7 +1232,7 @@
   }, {
     "number" : 59,
     "description" : "The folder \"Documents\" is shared. The user can create and delete documents when on the local PC, but can only read documents when accessing them remotely. Which of the following should be adjusted?",
-    "explanation" : "http://www.howtogeek.com/72718/how-to-understand-those-confusing-windows-7-\nfileshare-permissions/",
+    "explanation" : "http://www.howtogeek.com/72718/how-to-understand-those-confusing-windows-7-fileshare-permissions/",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Read Only Attribute",
@@ -1253,7 +1253,7 @@
   }, {
     "number" : 60,
     "description" : "Which of the following accounts is MOST restrictive?",
-    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/\nua_c_account_types.mspx?mfr=true",
+    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/ua_c_account_types.mspx?mfr=true",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Administrator",
@@ -1273,7 +1273,7 @@
     } ]
   }, {
     "number" : 61,
-    "description" : "A technician needs to format a file system to be compatible with the WIDEST range of operating   systems. Which of the following file systems should be used?",
+    "description" : "A technician needs to format a file system to be compatible with the WIDEST range of operating systems. Which of the following file systems should be used?",
     "explanation" : "http://www.pcmag.com/article2/0,2817,2421454,00.asp",
     "options" : [ {
       "tag" : "A",
@@ -1295,7 +1295,7 @@
   }, {
     "number" : 62,
     "description" : "A consultant is looking to consolidate six company servers onto one physical system. Which of the following requirements is MOST important on the new setup to ensure stable functionality of the virtual environment?",
-    "explanation" : "http://searchdatacenter.techtarget.com/guides/Using-hardware-resources-tomaximize-\nvirtualization-performance",
+    "explanation" : "http://searchdatacenter.techtarget.com/guides/Using-hardware-resources-tomaximize-virtualization-performance",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Client hardware requirements",
@@ -1421,7 +1421,7 @@
   }, {
     "number" : 68,
     "description" : "Which of the following resources is MOST important for accessing remote virtual environments on a client machine?",
-    "explanation" : "http://compnetworking.about.com/od/internetaccessbestuses/f/what-is-networkremote-\naccess.htm",
+    "explanation" : "http://compnetworking.about.com/od/internetaccessbestuses/f/what-is-networkremote-access.htm",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Network speed",
@@ -1568,7 +1568,7 @@
   }, {
     "number" : 75,
     "description" : "A customer is not able to connect to any websites. Which of the following commands should a technician run FIRST to identify the issue?",
-    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/\nipconfig.mspx?mfr=true",
+    "explanation" : "http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/enus/ipconfig.mspx?mfr=true",
     "options" : [ {
       "tag" : "A",
       "description" : "A. NETSTAT",
@@ -2265,7 +2265,7 @@
   }, {
     "number" : 108,
     "description" : "A technician is reconfiguring an email account for off-line mode. Which of the following will describe the expected time of account synchronization with the email server?",
-    "explanation" : "When you configure email account for offline mode, the software uses synchronization at a point in\ntime to download all email messages to the computer. There is time between synchronizations\nand it depends on the time of the last synchronization.",
+    "explanation" : "When you configure email account for offline mode, the software uses synchronization at a point in time to download all email messages to the computer. There is time between synchronizations and it depends on the time of the last synchronization.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. It will depend on the SMTP settings of the email server.",
@@ -2441,7 +2441,7 @@
   }, {
     "number" : 116,
     "description" : "A user is operating a virtual machine (VM) and discovers it has been infected with malware. Which of the following applies?",
-    "explanation" : "One of the benefits of virtual machine is that it can be shut down without harming the host PC. It\nuses virtual resources that are mapped to the hardware resources. When the virtual machines\nshuts down, it might corrupt virtual resource, not the physical ones.",
+    "explanation" : "One of the benefits of virtual machine is that it can be shut down without harming the host PC. It uses virtual resources that are mapped to the hardware resources. When the virtual machines shuts down, it might corrupt virtual resource, not the physical ones.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The host computer will automatically delete the VM.",
@@ -3145,7 +3145,7 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Add the PC to the workgroup and reboot. Rename the PC and reboot. Rejoin the PC to the\ndomain.",
+      "description" : "A. Add the PC to the workgroup and reboot. Rename the PC and reboot. Rejoin the PC to the domain.",
       "correct" : true
     }, {
       "tag" : "B",
@@ -3153,7 +3153,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Add the PC to the workgroup and reboot. Rejoin the PC to the domain. Rename the PC and\nreboot.",
+      "description" : "C. Add the PC to the workgroup and reboot. Rejoin the PC to the domain. Rename the PC and reboot.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -3427,7 +3427,7 @@
   }, {
     "number" : 162,
     "description" : "Which of the following areas of a file system should a standard user have restricted permissions to in order to promote a security best practice? (Select TWO).",
-    "explanation" : "Windows program files are important for Windows operating system. If these files are deleted,\nWindows will corrupt. Similarly program files are related to applications and programs installed on\na computer. These are highly sensitive files because they are related to the functioning of the\noperating system and the applications installed on it.",
+    "explanation" : "Windows program files are important for Windows operating system. If these files are deleted, Windows will corrupt. Similarly program files are related to applications and programs installed on a computer. These are highly sensitive files because they are related to the functioning of the operating system and the applications installed on it.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Temporary Internet Files",
@@ -3536,14 +3536,14 @@
   }, {
     "number" : 167,
     "description" : "Which of the following should a technician implement to prevent external contractors from physically plugging devices into the company’s network jacks unless such jacks are designated for guest use?",
-    "explanation" : "The best way is to disable all switch ports when they are not utilized. Switch them on when you\nneed them. This way, you can prevent external contractors from physically plugging devices in to\ncompany’s network jacks.",
+    "explanation" : "The best way is to disable all switch ports when they are not utilized. Switch them on when you need them. This way, you can prevent external contractors from physically plugging devices in to company’s network jacks.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Disable DHCP and assign a static IP address to each network device physically connected to\nthe network.",
+      "description" : "A. Disable DHCP and assign a static IP address to each network device physically connected to the network.",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Enable MAC address filtering across all network jacks and record the MAC address of guest\ndevices.",
+      "description" : "B. Enable MAC address filtering across all network jacks and record the MAC address of guest devices.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -3560,11 +3560,11 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Disable DHCP and assign a static IP address to each network device physically connected to\nthe network.",
+      "description" : "A. Disable DHCP and assign a static IP address to each network device physically connected to the network.",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Enable MAC address filtering across all network jacks and record the MAC address of guest\ndevices.",
+      "description" : "B. Enable MAC address filtering across all network jacks and record the MAC address of guest devices.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -3578,7 +3578,7 @@
   }, {
     "number" : 169,
     "description" : "A small business owner is setting up their wireless network in their office, which is in a building shared with several other businesses. The owner does not want to disable the SSID broadcasting due to visiting customers needing to use the network, but does not want other businesses to notice the network, let alone access it. Which of the following would BEST accomplish this?",
-    "explanation" : "Best way to do this is to adjust radio power to restrict the coverage to the business. When the\nradio power is restricted to an office, the persons in the other office space cannot detect the\nsignals at all.",
+    "explanation" : "Best way to do this is to adjust radio power to restrict the coverage to the business. When the radio power is restricted to an office, the persons in the other office space cannot detect the signals at all.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Configure the access point encryption from unsecured access to WEP.",
@@ -3620,7 +3620,7 @@
   }, {
     "number" : 171,
     "description" : "A company is looking to donate a collection of old PCs that are no longer needed. Which of the following data destruction methods would be MOST secure for highly sensitive information?",
-    "explanation" : "http://superuser.com/questions/215852/is-using-multiple-passes-for-wiping-a-diskreally-\nnecessary",
+    "explanation" : "http://superuser.com/questions/215852/is-using-multiple-passes-for-wiping-a-diskreally-necessary",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Simple 1-pass zero overwrite",
@@ -3733,7 +3733,7 @@
   }, {
     "number" : 176,
     "description" : "A technician is tasked with improving the security of a SOHO network. The office is comprised of a single wireless router located under the front desk where the office manager sits. All desktop computers are wired into the router which is configured with strong device credentials. Additionally, wireless is disabled on the router. Which of the following should the technician perform NEXT to improve the security of the SOHO network?",
-    "explanation" : "http://network.cmu.ac.th/wp-content/uploads/2011/05/CCNA-Security-Ch2-Securing-\nNetwork-Devices.pdf",
+    "explanation" : "http://network.cmu.ac.th/wp-content/uploads/2011/05/CCNA-Security-Ch2-Securing-Network-Devices.pdf",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Disable the router’s remote management feature.",
@@ -3775,7 +3775,7 @@
   }, {
     "number" : 178,
     "description" : "A technician is trying to prevent a local application from reaching the web due to security concerns. Which of the following solutions could BEST prevent the application from reaching the web? (Select TWO).",
-    "explanation" : "Use Windows firewall to restrict an application from reaching the web. Alternatively you can also\nreroute the web address in the HOST file.",
+    "explanation" : "Use Windows firewall to restrict an application from reaching the web. Alternatively you can also reroute the web address in the HOST file.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Configure the workstation for a static IP",
@@ -3825,7 +3825,7 @@
   }, {
     "number" : 180,
     "description" : "A company wants to ensure that the latest cyber security threats are known to the employees across the enterprise to minimize occurrences. Which of the following should be implemented?",
-    "explanation" : "Educating user is the best way to combat security threats. After all security threats occur when a\nhuman carries it across unknowingly.",
+    "explanation" : "Educating user is the best way to combat security threats. After all security threats occur when a human carries it across unknowingly.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Message of the Day",
@@ -3887,7 +3887,7 @@
     } ]
   }, {
     "number" : 183,
-    "description" : "A technician has configured the ability to connect to a small office server using remote desktop   from a workstation within the office. The technician has reviewed logs that show constant brute force attacks to that server from outside the network. Which of the following would prevent this from occurring?",
+    "description" : "A technician has configured the ability to connect to a small office server using remote desktop from a workstation within the office. The technician has reviewed logs that show constant brute force attacks to that server from outside the network. Which of the following would prevent this from occurring?",
     "explanation" : "http://technet.microsoft.com/en-us/library/cc759006(v=ws.10).aspx",
     "options" : [ {
       "tag" : "A",
@@ -4420,7 +4420,7 @@
     "explanation" : "http://www.victeach.com.au/Other-Services/Security/Threats-and-scams.html",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. An infection that causes a web browser to go to a different site than the one intended from a\nsearch result page.",
+      "description" : "A. An infection that causes a web browser to go to a different site than the one intended from a search result page.",
       "correct" : false
     }, {
       "tag" : "B",
@@ -4428,17 +4428,17 @@
       "correct" : true
     }, {
       "tag" : "C",
-      "description" : "C. An infection that causes a computer to behave erratically by playing music and launching\nbrowser windows.",
+      "description" : "C. An infection that causes a computer to behave erratically by playing music and launching browser windows.",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. A technique used to obtain financial information from a user by compiling information from\nsocial networks and their friends.",
+      "description" : "D. A technique used to obtain financial information from a user by compiling information from social networks and their friends.",
       "correct" : false
     } ]
   }, {
     "number" : 209,
     "description" : "A technician is configuring a PC that will have confidential information stored on it. To ensure that only authorized users can access this PC, which of the following should the technician do? (Select TWO).",
-    "explanation" : "To prevent unauthorized access to the PC, disable guest accounts and change default usernames\nfor maximum security.",
+    "explanation" : "To prevent unauthorized access to the PC, disable guest accounts and change default usernames for maximum security.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Disable the guest account",
@@ -4463,7 +4463,7 @@
   }, {
     "number" : 210,
     "description" : "A company recently had a security breach and is now required to increase the security on their workstations. A technician has been tasked to harden all the workstations on the network. Which of the following should the technician do?",
-    "explanation" : "http://windows.microsoft.com/is-is/windows-vista/use-your-windows-password-foryour-\nscreen-saver-password",
+    "explanation" : "http://windows.microsoft.com/is-is/windows-vista/use-your-windows-password-foryour-screen-saver-password",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Enable Windows automatic updates",
@@ -4505,7 +4505,7 @@
   }, {
     "number" : 212,
     "description" : "A user has just purchased a wireless router for their home. Which of the following should be done to BEST secure the router from unauthorized access? (Select TWO).",
-    "explanation" : "First change default router logins to avoid guesswork by hackers. Set encryption on the router\nusing WPA and/or WPA2.",
+    "explanation" : "First change default router logins to avoid guesswork by hackers. Set encryption on the router using WPA and/or WPA2.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Change router default logins",
@@ -4530,7 +4530,7 @@
   }, {
     "number" : 213,
     "description" : "A user is experiencing slow performance with their computer. A technician suspects the computer has a virus and runs anti-virus software. A virus is found and removed, but the performance issue is not resolved. Which of the following should the technician perform NEXT?",
-    "explanation" : "Go back to the finding the real problem. See what is slowing down the performance and then\nresolve the problem using related troubleshooting techniques.",
+    "explanation" : "Go back to the finding the real problem. See what is slowing down the performance and then resolve the problem using related troubleshooting techniques.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Document findings, actions, and outcomes",
@@ -4887,7 +4887,7 @@
   }, {
     "number" : 230,
     "description" : "A user has a perimeter firewall and up-to-date anti-virus software. The user is asking what else they can do to improve their security. Which of the following will have the MOST impact on network security? (Select TWO).",
-    "explanation" : "To improve security, assign security rights based on job roles. You need to give least amount of\nprivilege to users so that they can do their jobs without having access to resources that have\nnothing to do with their job roles.",
+    "explanation" : "To improve security, assign security rights based on job roles. You need to give least amount of privilege to users so that they can do their jobs without having access to resources that have nothing to do with their job roles.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Install additional anti-virus software",
@@ -5017,7 +5017,7 @@
   }, {
     "number" : 236,
     "description" : "Which of the following should a technician do LAST after cleaning up a virus infection?",
-    "explanation" : "Most of the time users install virus, Trojans and other malicious codes on their computers\nunknowingly. The best to prevent this loophole is to educate the user about viruses and where to\nlook and what to do to prevent installing malicious codes.",
+    "explanation" : "Most of the time users install virus, Trojans and other malicious codes on their computers unknowingly. The best to prevent this loophole is to educate the user about viruses and where to look and what to do to prevent installing malicious codes.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Enable system restore and create restore point",
@@ -5091,21 +5091,21 @@
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. A user receives a pop-up message about a virus from a company that states that if they buy\nthis product it will remove the virus.",
+      "description" : "B. A user receives a pop-up message about a virus from a company that states that if they buy this product it will remove the virus.",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. A user receives a message about unwanted activity from their anti-virus asking to remove the\nsuspect file.",
+      "description" : "C. A user receives a message about unwanted activity from their anti-virus asking to remove the suspect file.",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. A user receives an email from a person in another country with a story as to why they need\nhelp with a financial arrangement.",
+      "description" : "D. A user receives an email from a person in another country with a story as to why they need help with a financial arrangement.",
       "correct" : true
     } ]
   }, {
     "number" : 240,
     "description" : "Which of the following would be the BEST way to combat social engineering?",
-    "explanation" : "http://searchsecurity.techtarget.com/magazineContent/Gaining-awareness-to-preventsocial-\nengineering-techniques-attacks",
+    "explanation" : "http://searchsecurity.techtarget.com/magazineContent/Gaining-awareness-to-preventsocial-engineering-techniques-attacks",
     "options" : [ {
       "tag" : "A",
       "description" : "A. User education",
@@ -5147,7 +5147,7 @@
   }, {
     "number" : 242,
     "description" : "A user wants to quickly install the most recent security patch released. Which of the following options can be selected from the Windows Update website?",
-    "explanation" : "http://wiki.answers.com/Q/What_will_the_windows_update_express_button_download_onto_your\n_computer",
+    "explanation" : "http://wiki.answers.com/Q/What_will_the_windows_update_express_button_download_onto_your_computer",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Custom settings",
@@ -5272,7 +5272,7 @@
     } ]
   }, {
     "number" : 248,
-    "description" : "A user wants to prevent access to specific websites to prevent their children from accidently accessing them. Which of the following can be implemented?",
+    "description" : "A user wants to prevent access to specific websites to prevent their children from accidentally accessing them. Which of the following can be implemented?",
     "explanation" : "http://en.wikipedia.org/wiki/MAC_filtering",
     "options" : [ {
       "tag" : "A",
@@ -5339,7 +5339,7 @@
     "explanation" : "http://www.pcworld.com/article/261702/how_to_securely_erase_your_hard_drive.html",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. “Overwriting writes 1s and 0s to a hard drive replacing the data, while formatting only clears the\nreference to the data and only overwrites as space is used.”",
+      "description" : "A. “Overwriting writes 1s and 0s to a hard drive replacing the data, while formatting only clears the reference to the data and only overwrites as space is used.”",
       "correct" : true
     }, {
       "tag" : "B",
@@ -5347,11 +5347,11 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. “Overwriting writes 1s and 0s to the drive replacing only the user’s data but not the OS data,\nwhile formatting destroys the hard drive.”",
+      "description" : "C. “Overwriting writes 1s and 0s to the drive replacing only the user’s data but not the OS data, while formatting destroys the hard drive.”",
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. “Overwriting replaces all the data with a single file that fills the hard drive destroying the data,\nwhile formatting erases all the data.”",
+      "description" : "D. “Overwriting replaces all the data with a single file that fills the hard drive destroying the data, while formatting erases all the data.”",
       "correct" : false
     } ]
   }, {
@@ -5399,7 +5399,7 @@
   }, {
     "number" : 254,
     "description" : "When setting up a new wireless router, which of the following actions should the technician take FIRST in order to secure the network? (Select TWO).",
-    "explanation" : "The basic tasks to secure a network are to change SSID and the default user name. This is the\nbasic security a user can employ to secure the network immediately.",
+    "explanation" : "The basic tasks to secure a network are to change SSID and the default user name. This is the basic security a user can employ to secure the network immediately.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Disable unused ports",
@@ -5620,7 +5620,7 @@
     } ]
   }, {
     "number" : 264,
-    "description" : "After performing a wireless survey, a technician reports the following data: WAP Name Channel WAP1 6 WAP2 8 WAP3 9 Which of the following channels should the technician use for the SOHO WAP to be installed next?",
+    "description" : "After performing a wireless survey, a technician reports the following data: WAP Name Channel WAP1 6 WAP2 8 WAP3 9  Which of the following channels should the technician use for the SOHO WAP to be installed next?",
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
@@ -5745,11 +5745,11 @@
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Create a shared folder and grant full administrative rights only to the users who need to modify\ncompany documents.",
+      "description" : "B. Create a shared folder and grant full administrative rights only to the users who need to modify company documents.",
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. Create a folder tree hierarchy, enable inheritance and assign user's permissions to specific\nfolders.",
+      "description" : "C. Create a folder tree hierarchy, enable inheritance and assign user's permissions to specific folders.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -5783,11 +5783,11 @@
     "explanation" : "",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Internet Options >Connection > Network > LAN settings > choose Proxy server, type in the IP\naddress",
+      "description" : "A. Internet Options >Connection > Network > LAN settings > choose Proxy server, type in the IP address",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Windows Firewall > the Connections tab > Add Exception > Change Scope, type in the IP\naddress",
+      "description" : "B. Windows Firewall > the Connections tab > Add Exception > Change Scope, type in the IP address",
       "correct" : false
     }, {
       "tag" : "C",
@@ -5795,7 +5795,7 @@
       "correct" : false
     }, {
       "tag" : "D",
-      "description" : "D. Local Area Connections >Properties > TCP/IP > Properties > General > Specify, type in the IP\naddress",
+      "description" : "D. Local Area Connections >Properties > TCP/IP > Properties > General > Specify, type in the IP address",
       "correct" : true
     } ]
   }, {
@@ -6040,7 +6040,7 @@
   }, {
     "number" : 283,
     "description" : "Which of the following would a technician use to install applications onto an iPad? (Select TWO).",
-    "explanation" : "App Store is an online service where iPad users can download applications and games for iPad. It\nis a specific software for iOS – Apple mobile operating system. iTunes is a flagship Apple software\nthat allows you to play music, watch videos and keep a repository of Apps that are installed on\niPad.",
+    "explanation" : "App Store is an online service where iPad users can download applications and games for iPad. It is a specific software for iOS – Apple mobile operating system. iTunes is a flagship Apple software that allows you to play music, watch videos and keep a repository of Apps that are installed on iPad.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. App Store",
@@ -6086,7 +6086,7 @@
   }, {
     "number" : 285,
     "description" : "A user realizes they left their mobile phone in a taxi minutes after the car departs. Which of the following should be done to BEST ensure none of the private data on the phone is accessed?",
-    "explanation" : "https://espace.cern.ch/mmmserviceshelp/\nManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx",
+    "explanation" : "https://espace.cern.ch/mmmserviceshelp/ManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Passcode Lock",
@@ -6149,7 +6149,7 @@
   }, {
     "number" : 288,
     "description" : "A user calls the help desk to report about their smartphone not being able to make any phone calls. The user admits that the smartphone can still send/receive email, browse all websites, and utilize all Internet-capable applications. Which of the following issues is MOST likely affecting the smartphone?",
-    "explanation" : "Cellular antenna catches and transmits cellular signals and data. Wi-Fi is another technology that\nis used to access internet using a wireless router. So if the cellular antenna is turned off, you can\nstill use Wi-Fi to browse internet and use host of applications.",
+    "explanation" : "Cellular antenna catches and transmits cellular signals and data. Wi-Fi is another technology that is used to access internet using a wireless router. So if the cellular antenna is turned off, you can still use Wi-Fi to browse internet and use host of applications.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Wi-Fi is turned off; the cellular antenna is turned on.",
@@ -6191,7 +6191,7 @@
   }, {
     "number" : 290,
     "description" : "Which of the following is one of the major differences between a new tablet and a new laptop computer?",
-    "explanation" : "Tablet PC has very delicate parts. Due to the nature of these parts, it cannot be serviced on field.\nYou need special tools to pry open a tablet and working with the parts needs attention.",
+    "explanation" : "Tablet PC has very delicate parts. Due to the nature of these parts, it cannot be serviced on field. You need special tools to pry open a tablet and working with the parts needs attention.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Tablet has no field serviceable parts.",
@@ -6212,7 +6212,7 @@
   }, {
     "number" : 291,
     "description" : "Which of the following data types can be synchronized to a mobile device by default? (Select TWO).",
-    "explanation" : "http://windows.microsoft.com/en-us/windows7/sync-music-pictures-contacts-andcalendars-\nwith-a-mobile-device",
+    "explanation" : "http://windows.microsoft.com/en-us/windows7/sync-music-pictures-contacts-andcalendars-with-a-mobile-device",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Biometric information",
@@ -6258,7 +6258,7 @@
   }, {
     "number" : 293,
     "description" : "Which of the following protocols could a technician use to connect a smartphone to an email server? (Select TWO).",
-    "explanation" : "SMTP and POP3 are standard email protocols. This is true on a smartphone as well. To connect\nto an email server, all you need is POP3 and SMTP information along with specific ports.",
+    "explanation" : "SMTP and POP3 are standard email protocols. This is true on a smartphone as well. To connect to an email server, all you need is POP3 and SMTP information along with specific ports.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. SMTP",
@@ -6304,7 +6304,7 @@
   }, {
     "number" : 295,
     "description" : "A user has a laptop that they need to get ready for an outdoor presentation. The user is concerned that the laptop will turn off the screen or go into standby before their presentation is complete. Which of the following Control Panel paths should the technician use in order to prevent this from occurring?",
-    "explanation" : "http://www.pcsnippets.com/tutorials/how-to-change-the-power-scheme-settings-inwindows-\nxp/1",
+    "explanation" : "http://www.pcsnippets.com/tutorials/how-to-change-the-power-scheme-settings-inwindows-xp/1",
     "options" : [ {
       "tag" : "A",
       "description" : "A. System -> Hardware",
@@ -6325,7 +6325,7 @@
   }, {
     "number" : 296,
     "description" : "A user has not received any new emails on their smartphone in the last two days. The user is able to access the Internet without any problems. Which of the following should the user do FIRST?",
-    "explanation" : "The first step in troubleshooting a smartphone is to restart it so that the hardware can restart all\nthe primary functions.",
+    "explanation" : "The first step in troubleshooting a smartphone is to restart it so that the hardware can restart all the primary functions.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Restart the smartphone",
@@ -6346,7 +6346,7 @@
   }, {
     "number" : 297,
     "description" : "Which of the following software types would need to be installed on a mobile device to help prevent data from being viewed if the device is lost?",
-    "explanation" : "https://espace.cern.ch/mmmserviceshelp/\nManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx",
+    "explanation" : "https://espace.cern.ch/mmmserviceshelp/ManagingYourMailbox/QuotaArchivingAndRecovery/Pages/WipingMobilePhones.aspx",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Remote wipe",
@@ -6409,7 +6409,7 @@
   }, {
     "number" : 300,
     "description" : "Which of the following home computer synchronization methods are possible with an iOS device? (Select TWO).",
-    "explanation" : "http://appadvice.com/appnn/2013/02/how-to-sync-photo-albums-across-multiple-iosdevices-\nwithout-itunes",
+    "explanation" : "http://appadvice.com/appnn/2013/02/how-to-sync-photo-albums-across-multiple-iosdevices-without-itunes",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Infrared",
@@ -6497,7 +6497,7 @@
   }, {
     "number" : 304,
     "description" : "A technician needs to configure their neighbor’s iPad. The neighbor wants to access their work email. The technician requires some information from their neighbor’s work IT department. Which of the following information does the technician need?",
-    "explanation" : "To setup email on any device, you need server address and the domain of the email server. POP3\nand SMTP url are actually server addresses.",
+    "explanation" : "To setup email on any device, you need server address and the domain of the email server. POP3 and SMTP url are actually server addresses.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. IP address and domain",
@@ -6517,7 +6517,7 @@
     } ]
   }, {
     "number" : 305,
-    "description" : "A technician has upgraded an internal Wi-Fi card on a laptop and now the signal power to connect   to a WAP is low. Which of the following is the MOST likely cause of the issue?",
+    "description" : "A technician has upgraded an internal Wi-Fi card on a laptop and now the signal power to connect to a WAP is low. Which of the following is the MOST likely cause of the issue?",
     "explanation" : "Check to see if the WIFI antenna wire is plugged. If it is not plugged, the signal power will be low.",
     "options" : [ {
       "tag" : "A",
@@ -6831,7 +6831,7 @@
       "correct" : true
     }, {
       "tag" : "B",
-      "description" : "B. Download all their contacts in a .csv file and import them into the phone via a USB laptop\nconnection.",
+      "description" : "B. Download all their contacts in a .csv file and import them into the phone via a USB laptop connection.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -6866,7 +6866,7 @@
   }, {
     "number" : 321,
     "description" : "A user recently purchased a new high-end graphics card, and would like to run their existing games through an LCD TV at 1080p. However, when the installation is complete, none of the games appear correctly on the LCD TV. Which of the following is the MOST likely cause?",
-    "explanation" : "One of the possible reasons is that the game does not support high resolutions. Try to set a lower\nresolution and start the game. If this doesn’t solve the problem, the game installer media might be\ncorrupt.",
+    "explanation" : "One of the possible reasons is that the game does not support high resolutions. Try to set a lower resolution and start the game. If this doesn’t solve the problem, the game installer media might be corrupt.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The LCD TV response rate is not fast enough for gaming.",
@@ -6950,7 +6950,7 @@
   }, {
     "number" : 325,
     "description" : "Which of the following steps would allow display output from a laptop to an external display? (Select TWO).",
-    "explanation" : "First enable second monitor in Windows Display settings.\nAfter that press the function key along with the assigned key to display the output on an external\nmonitor",
+    "explanation" : "First enable second monitor in Windows Display settings. After that press the function key along with the assigned key to display the output on an external monitor",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Press the appropriate Function Key combination",
@@ -7104,7 +7104,7 @@
     } ]
   }, {
     "number" : 332,
-    "description" : "A technician is working on a PC that utilizes a RAID array for operation. The user of the system   has reported that random files are becoming corrupted on creation with no pattern to the activity. One drive in the array is likely failing and causing the read/write failures. Which of the following types of RAID is MOST likely in use?",
+    "description" : "A technician is working on a PC that utilizes a RAID array for operation. The user of the system has reported that random files are becoming corrupted on creation with no pattern to the activity. One drive in the array is likely failing and causing the read/write failures. Which of the following types of RAID is MOST likely in use?",
     "explanation" : "http://www.thegeekstuff.com/2010/08/raid-levels-tutorial/",
     "options" : [ {
       "tag" : "A",
@@ -7189,14 +7189,14 @@
   }, {
     "number" : 336,
     "description" : "A user has downloaded and installed a browser add-on that causes the browser to hang. The PC has very slow system response when rebooted. Which of the following should a technician do to troubleshoot this problem?",
-    "explanation" : "This might be the sign of a virus infecting the system. First, remove all temporary Internet files on\nyour computer. Viruses are downloaded through software or a webpage. And normally it resides in\nTemporary Internet Files folder. Now turn off system restore because you don’t want to load a\nprevious state on the computer with the virus still lingering the digital wild. Run an anti-virus\nprogram to clean infected files.",
+    "explanation" : "This might be the sign of a virus infecting the system. First, remove all temporary Internet files on your computer. Viruses are downloaded through software or a webpage. And normally it resides in Temporary Internet Files folder. Now turn off system restore because you don’t want to load a previous state on the computer with the virus still lingering the digital wild. Run an anti-virus program to clean infected files.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Run System Restore, update anti-virus program, and run an anti-virus scan.",
       "correct" : false
     }, {
       "tag" : "B",
-      "description" : "B. Remove all Internet temporary files, run an anti-virus scan, and reboot using Last Known Good\nConfiguration.",
+      "description" : "B. Remove all Internet temporary files, run an anti-virus scan, and reboot using Last Known Good Configuration.",
       "correct" : false
     }, {
       "tag" : "C",
@@ -7210,7 +7210,7 @@
   }, {
     "number" : 337,
     "description" : "A large magnet is placed too close to a CRT monitor. Which of the following will MOST likely occur?",
-    "explanation" : "http://cdn.c.photoshelter.com/img-get/I0000ENbEdGRHUB4/s/860/860/Fphoto-\n64080805F-6RM.jpg",
+    "explanation" : "http://cdn.c.photoshelter.com/img-get/I0000ENbEdGRHUB4/s/860/860/Fphoto-64080805F-6RM.jpg",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Dead pixels",
@@ -7231,7 +7231,7 @@
   }, {
     "number" : 338,
     "description" : "After being relocated to an enclosed position under a desk, a computer experiences intermittent shutdowns. Which of the following conditions is MOST likely the cause?",
-    "explanation" : "http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-\nits-important",
+    "explanation" : "http://lifehacker.com/5570909/how-to-prevent-your-computer-from-overheating-andwhy-its-important",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Power surges",
@@ -7273,7 +7273,7 @@
   }, {
     "number" : 340,
     "description" : "Which of the following is the command line entry to start an archive or restore a process on a Windows XP computer?",
-    "explanation" : "http://searchservervirtualization.techtarget.com/definition/NTBackup-Microsoft-\nWindows-NT-backup",
+    "explanation" : "http://searchservervirtualization.techtarget.com/definition/NTBackup-Microsoft-Windows-NT-backup",
     "options" : [ {
       "tag" : "A",
       "description" : "A. RECOVER",
@@ -7315,7 +7315,7 @@
   }, {
     "number" : 342,
     "description" : "A technician is working on a user’s PC. After testing the theory of the cause, which of the following could the technician perform NEXT? (Select TWO).",
-    "explanation" : "When you have tested the theory of cause, resolve the issue using troubleshooting techniques\nand if the issue is not resolved after the troubleshooting measure, reestablish the theory and\nescalate the issue to higher authorities.",
+    "explanation" : "When you have tested the theory of cause, resolve the issue using troubleshooting techniques and if the issue is not resolved after the troubleshooting measure, reestablish the theory and escalate the issue to higher authorities.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Resolve issue",
@@ -7621,7 +7621,7 @@
   }, {
     "number" : 356,
     "description" : "A user states that they are having a problem with their word processor on their laptop. Whenever they attempt to type letters with their right hand, numbers and symbols show up instead. Which of the following would address this issue?",
-    "explanation" : "http://forum.notebookreview.com/windows-os-software/43702-holding-fn-key-togglenumlock.\nhtml",
+    "explanation" : "http://forum.notebookreview.com/windows-os-software/43702-holding-fn-key-togglenumlock.html",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Switch to a standardized font",
@@ -7705,7 +7705,7 @@
   }, {
     "number" : 360,
     "description" : "After accidentally removing a hard drive from a server with three drives in a RAID 5 configuration, a technician notices the server locks up and shuts down. Which of the following can the technician do to quickly fix the problem?",
-    "explanation" : "Just reinsert the drive and boot the computer. The computer will start since it is a RAID 5\nconfiguration.",
+    "explanation" : "Just reinsert the drive and boot the computer. The computer will start since it is a RAID 5 configuration.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Replace the RAID controller and boot.",
@@ -7726,7 +7726,7 @@
   }, {
     "number" : 361,
     "description" : "A customer calls an IT consultant to explain an issue they are having with their Windows 7 Professional PC. Windows Update attempts to install patches upon each startup but fails on the same single update. The customer has attempted to re-run Windows Update from Control Panel but the issue remains. Which of the following courses of action would BEST resolve the problem?",
-    "explanation" : "http://larsjoergensen.net/windows/windows-7/how-to-clear-the-windows-updatedownload-\ncache-in-windows-7",
+    "explanation" : "http://larsjoergensen.net/windows/windows-7/how-to-clear-the-windows-updatedownload-cache-in-windows-7",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Running a full DEFRAG on the system",
@@ -7741,7 +7741,7 @@
       "correct" : true
     }, {
       "tag" : "D",
-      "description" : "D. Uninstalling the Windows Update feature in Windows 7 and reinstalling it directly from the\nMicrosoft website",
+      "description" : "D. Uninstalling the Windows Update feature in Windows 7 and reinstalling it directly from the Microsoft website",
       "correct" : false
     } ]
   }, {
@@ -7758,7 +7758,7 @@
       "correct" : false
     }, {
       "tag" : "C",
-      "description" : "C. The laptop is designed to work optimally with wireless when the screen is at a perfect 90\ndegree angle.",
+      "description" : "C. The laptop is designed to work optimally with wireless when the screen is at a perfect 90 degree angle.",
       "correct" : false
     }, {
       "tag" : "D",
@@ -7789,7 +7789,7 @@
   }, {
     "number" : 364,
     "description" : "A technician has finished replacing the network card in a laptop and has verified full system functionality. Which of the following troubleshooting steps should the technician take NEXT?",
-    "explanation" : "http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p\ndf",
+    "explanation" : "http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.pdf",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Document findings, actions, and outcomes",
@@ -7893,7 +7893,7 @@
     } ]
   }, {
     "number" : 369,
-    "description" : "Ann, a technician, is trying to recover some files for a user from a damaged laptop. Since the Windows installation has been corrupted and does not boot, Ann plugs the drive into a bench system to attempt a recovery. After trying to access the drive on the bench computer, the following message is displayed. “Access Denied. Please Enter Encryption Password.” Which of the   following is the reason that this error is displayed?",
+    "description" : "Ann, a technician, is trying to recover some files for a user from a damaged laptop. Since the Windows installation has been corrupted and does not boot, Ann plugs the drive into a bench system to attempt a recovery. After trying to access the drive on the bench computer, the following message is displayed. “Access Denied. Please Enter Encryption Password.” Which of the following is the reason that this error is displayed?",
     "explanation" : "http://technet.microsoft.com/en-us/library/ee449438(v=ws.10).aspx",
     "options" : [ {
       "tag" : "A",
@@ -7978,10 +7978,10 @@
   }, {
     "number" : 373,
     "description" : "A user, Ann, reports that her laptop will no longer connect to wireless. Joe, a technician, checks the device manager and does not see a wireless networking card or any unknown devices. Which of the following should Joe do FIRST?",
-    "explanation" : "If the wireless networking card is functioning properly, check the wireless switch on the laptop and\nsee if the wireless is enabled within the operating system.",
+    "explanation" : "If the wireless networking card is functioning properly, check the wireless switch on the laptop and see if the wireless is enabled within the operating system.",
     "options" : [ {
       "tag" : "A",
-      "description" : "A. Check to make sure the wireless card was not turned off via the hardware switch or keyboard\nshortcut.",
+      "description" : "A. Check to make sure the wireless card was not turned off via the hardware switch or keyboard shortcut.",
       "correct" : true
     }, {
       "tag" : "B",
@@ -8083,7 +8083,7 @@
   }, {
     "number" : 378,
     "description" : "Ann, a home user, brings a Windows XP PC in for repair and reports that several disk read errors are occurring. She has run check disk and errors have been reported several times. Which of the following should a technician recommend? (Select TWO).",
-    "explanation" : "First backup all the data from the drive to prevent data loss. Get a new hard drive and restore the\ndata on the new drive.",
+    "explanation" : "First backup all the data from the drive to prevent data loss. Get a new hard drive and restore the data on the new drive.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Increase the amount of RAM to improve disk checks",
@@ -8259,7 +8259,7 @@
   }, {
     "number" : 386,
     "description" : "A technician is tasked with installing a legacy application on a Windows 7 computer. When the technician tries to install the legacy application, an error is received that the application cannot be installed because the OS is not supported. Which of the following should the technician do FIRST to try to get the application installed in Windows 7?",
-    "explanation" : "http://social.technet.microsoft.com/Forums/windows/en-US/cdd894f8-1ee2-43e5-952bd04c25779a7f/\nhow-to-install-a-software-application-using-compatibility-mode",
+    "explanation" : "http://social.technet.microsoft.com/Forums/windows/en-US/cdd894f8-1ee2-43e5-952bd04c25779a7f/how-to-install-a-software-application-using-compatibility-mode",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Install the application in safe mode",
@@ -8280,7 +8280,7 @@
   }, {
     "number" : 387,
     "description" : "A user reports that a file they shared out on their computer for another network user is not accessible to the third party. The user insists they specifically gave this third party Allow rights for Read and Write access. Which of the following could explain the problem at hand?",
-    "explanation" : "http://windows.microsoft.com/en-us/windows-vista/troubleshoot-access-denied-whenopening-\nfiles-or-folders",
+    "explanation" : "http://windows.microsoft.com/en-us/windows-vista/troubleshoot-access-denied-whenopening-files-or-folders",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The parent folder has explicit Allow rights set for this user.",
@@ -8368,7 +8368,7 @@
   }, {
     "number" : 391,
     "description" : "A technician is using the troubleshooting theory to help resolve a problem that is occurring with a client’s machine. The technician has verified system functionally. Which of the following is the NEXT step in the troubleshooting theory?",
-    "explanation" : "http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.p\ndf",
+    "explanation" : "http://ptgmedia.pearsoncmg.com/images/9781587132636/samplechapter/9781587132636_ch04.pdf",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Identify the problem",
@@ -8410,7 +8410,7 @@
   }, {
     "number" : 393,
     "description" : "A user gets an error message that the trust relationship to the domain has been broken. Which of the following can be done to resolve this from the client desktop?",
-    "explanation" : "http://social.technet.microsoft.com/Forums/windowsserver/en-US/ca41e39a-49c1-\n4c7b-a415-6295099f7002/rejoin-a-domain",
+    "explanation" : "http://social.technet.microsoft.com/Forums/windowsserver/en-US/ca41e39a-49c1-4c7b-a415-6295099f7002/rejoin-a-domain",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Re-join the computer to the domain",
@@ -8750,7 +8750,7 @@
   }, {
     "number" : 409,
     "description" : "A technician notices that a computer is making a loud clicking noise but continues to run. System speed is barely affected, but they cannot access certain drives. These are the symptoms of which of the following?",
-    "explanation" : "There must be a second hard drive that is failing. When you hear clicking noises and the speed of\nthe system is not affected, the second hard drive is failing since the primary hard drive is running\nthe OS and other applications and it is working fine, it means the second hard drive has a\nproblem.",
+    "explanation" : "There must be a second hard drive that is failing. When you hear clicking noises and the speed of the system is not affected, the second hard drive is failing since the primary hard drive is running the OS and other applications and it is working fine, it means the second hard drive has a problem.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Failing second hard drive",
@@ -8813,7 +8813,7 @@
   }, {
     "number" : 412,
     "description" : "A technician is tasked with upgrading a network card on a Windows 7 Professional PC. The technician installs the network card, loads Windows XP drivers that came with the network card, and reboots the PC. Upon rebooting, the computer blue screens and the technician cannot get the computer to boot up properly. Which of the following should the technician perform to resolve this issue without any data loss? (Select TWO).",
-    "explanation" : "The best way to solve this issue is to remove network drivers and restart the computer. Boot up in\nsafe mode and reinstall the drivers.",
+    "explanation" : "The best way to solve this issue is to remove network drivers and restart the computer. Boot up in safe mode and reinstall the drivers.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Remove network drivers",
@@ -8951,7 +8951,7 @@
   }, {
     "number" : 418,
     "description" : "A user reports that people are receiving emails from their account that the user never sent. Which of the following security measures would BEST resolve the problem?",
-    "explanation" : "The best security measure is to rename or change the account password. Hackers sometimes\nbreak into email accounts to send malicious emails to various people.",
+    "explanation" : "The best security measure is to rename or change the account password. Hackers sometimes break into email accounts to send malicious emails to various people.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Check the boot.ini on the PC for malicious entries.",
@@ -9039,7 +9039,7 @@
   }, {
     "number" : 422,
     "description" : "A user states that their old notebook loses connectivity to the Internet several times a day at work and at home. The issue started after the wireless card was replaced. Which of the following items is MOST likely causing the issue?",
-    "explanation" : "Update the drivers for the network interface card. Sometimes updating drivers solve major\nproblems.",
+    "explanation" : "Update the drivers for the network interface card. Sometimes updating drivers solve major problems.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. The motherboard drivers are not current.",
@@ -9081,7 +9081,7 @@
   }, {
     "number" : 424,
     "description" : "A wireless network is experiencing intermittent connectivity. Which of the following would BEST resolve this issue?",
-    "explanation" : "http://lifehacker.com/5580636/change-your-wi+fi-routers-broadcast-channel-for-astronger-\nconnection",
+    "explanation" : "http://lifehacker.com/5580636/change-your-wi+fi-routers-broadcast-channel-for-astronger-connection",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Enable MAC filtering",
@@ -9185,7 +9185,7 @@
     } ]
   }, {
     "number" : 429,
-    "description" : "A customer states that another technician just removed some viruses and now they are not able to connect to websites such as Windows Update, but are able to connect to others. Which of the   following is the MOST likely cause of the issue?",
+    "description" : "A customer states that another technician just removed some viruses and now they are not able to connect to websites such as Windows Update, but are able to connect to others. Which of the following is the MOST likely cause of the issue?",
     "explanation" : "http://www.bleepingcomputer.com/tutorials/hosts-files-explained/",
     "options" : [ {
       "tag" : "A",
@@ -9375,7 +9375,7 @@
   }, {
     "number" : 438,
     "description" : "A technician is troubleshooting a RAID 6 array on a high end CAD/CAM workstation. Two disk drives have their fault lights on. Which of the following is the BEST action for the technician to perform when fixing this problem?",
-    "explanation" : "http://download.intel.com/support/motherboards/server/sb/intel_raid_basic_troubleshooting_guide\n_v2_0.pdf",
+    "explanation" : "http://download.intel.com/support/motherboards/server/sb/intel_raid_basic_troubleshooting_guide_v2_0.pdf",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Replace the failed drives and verify the RAID rebuilds completely.",
@@ -9438,7 +9438,7 @@
   }, {
     "number" : 441,
     "description" : "A user’s computer will not boot. A technician notices four indicator lights on the backside of the computer. Two of the lights are green, and two are amber. Which of the following documentation should the technician read to determine what the lights are indicating?",
-    "explanation" : "The best resource for troubleshooting computer problems is the manual that came along with it.\nSimilar to any electronic device, the manual lists common problems and their solutions.",
+    "explanation" : "The best resource for troubleshooting computer problems is the manual that came along with it. Similar to any electronic device, the manual lists common problems and their solutions.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Network diagram",
@@ -9606,7 +9606,7 @@
   }, {
     "number" : 449,
     "description" : "A technician is about to put a computer back into service that has not been turned on for many months. It was healthy when taken out of service and boots quickly without any problems. Which of the following actions would be a best practice to begin computer maintenance? (Select TWO).",
-    "explanation" : "You have to update the system. Run anti-virus updates because anti-virus changes frequently as\nnew viruses are discovered. Run Windows updates to keep the system updated and ready to use.",
+    "explanation" : "You have to update the system. Run anti-virus updates because anti-virus changes frequently as new viruses are discovered. Run Windows updates to keep the system updated and ready to use.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Run a full anti-virus scan.",
@@ -9652,7 +9652,7 @@
   }, {
     "number" : 451,
     "description" : "A user is reporting their web browser is not going to the site they are attempting to access. Which of the following would BEST resolve this?",
-    "explanation" : "One solution to this problem might be related to proxy server. If the web browser is not accessing\na site, try to disable proxy server from the browser proxy settings.",
+    "explanation" : "One solution to this problem might be related to proxy server. If the web browser is not accessing a site, try to disable proxy server from the browser proxy settings.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Delete all Internet cookies.",
@@ -9715,7 +9715,7 @@
   }, {
     "number" : 454,
     "description" : "A user has installed a new wireless router and is unable to connect their game console to the manufacturer’s service. Which of the following should the technician look for FIRST?",
-    "explanation" : "When you connect a game console to the wireless router, you need to see which ports the console\nuses to connect to Internet. Open those ports and then connect again. This process solves 80% of\ngame console connectivity problems.",
+    "explanation" : "When you connect a game console to the wireless router, you need to see which ports the console uses to connect to Internet. Open those ports and then connect again. This process solves 80% of game console connectivity problems.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Ensure the game system has a static IP address.",
@@ -9799,7 +9799,7 @@
   }, {
     "number" : 458,
     "description" : "A user reports that their PC does not work. Which of the following would be the BEST question for the technician to ask the user to get further information?",
-    "explanation" : "Clarify what is not working. The line of questioning is an effective strategy to discover and solve a\nproblem especially on phone.",
+    "explanation" : "Clarify what is not working. The line of questioning is an effective strategy to discover and solve a problem especially on phone.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. “Can you get to the Internet?”",
@@ -9820,7 +9820,7 @@
   }, {
     "number" : 459,
     "description" : "A user reports that their PC boots up to a screen that reads “OS not found”. Which of the following would be the MOST likely cause of this problem?",
-    "explanation" : "Sometimes the computer mixes up the boot order. If the USB key is attached to the computer, try\nremoving the USB key and rebooting the system.",
+    "explanation" : "Sometimes the computer mixes up the boot order. If the USB key is attached to the computer, try removing the USB key and rebooting the system.",
     "options" : [ {
       "tag" : "A",
       "description" : "A. There are conflicting operating systems.",
@@ -20931,7 +20931,7 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 2,
+  "questionVersion" : 3,
   "playStoreVersion" : 10019,
   "totalQuestions" : 978,
   "ads" : true
