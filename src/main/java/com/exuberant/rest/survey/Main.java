@@ -45,7 +45,7 @@ public class Main {
 
     private Collection<QuestionBank> buildQuestionBank() {
         Collection<QuestionBank> bank = new ArrayList<>();
-        bank.add(new QuestionBank(COMP_TIA_A_FILE_NAME, 600, 978, 3, 10019, true, true));
+        bank.add(new QuestionBank(COMP_TIA_A_FILE_NAME, 600, 978, 4, 10019, true, true));
         bank.add(new QuestionBank(DVSA_FILE_NAME, 673, 773, 2, 10011, true, true, false, "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\Dvsa\\app\\images"));
         bank.add(new QuestionBank(DVSA_MOTOR_FILE_NAME, 600, 734, 1, 10001, true, true, true, "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaMotorcycle\\app\\images"));
         bank.add(new QuestionBank(DVSA_LGV_FILE_NAME, 800, 914, 1, 10001, true, true, true, "C:\\Data\\Rakesh\\Workspace\\Projects\\Nativescript\\DvsaLgvTheory\\app\\images"));

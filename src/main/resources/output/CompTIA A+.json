@@ -3205,7 +3205,7 @@
   }, {
     "number" : 152,
     "description" : "Which of the following computers would be MOST suitable to host virtual workstations?",
-    "explanation" : "Topic 2, Security",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. A computer with a 6-core processor, 512 MB RAM, 1 TB SSD hard drive, and a Gigabit NIC",
@@ -5977,7 +5977,7 @@
   }, {
     "number" : 280,
     "description" : "Which of the following provides protection against DDoS attacks?",
-    "explanation" : "Topic 3, Mobile Devices",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. RFID badge",
@@ -7084,7 +7084,7 @@
   }, {
     "number" : 331,
     "description" : "Which of the following describes the main difference between a laptop and a tablet?",
-    "explanation" : "Topic 4, Troubleshooting",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. There are no field serviceable parts",
@@ -10882,7 +10882,7 @@
   }, {
     "number" : 509,
     "description" : "A laser printer is printing images tilted on the page. Which of the following components is the cause of the problem?",
-    "explanation" : "Topic 5, Mix Questions",
+    "explanation" : "",
     "options" : [ {
       "tag" : "A",
       "description" : "A. Paper registration assembly",
@@ -20931,7 +20931,7 @@
       "correct" : false
     } ]
   } ],
-  "questionVersion" : 3,
+  "questionVersion" : 4,
   "playStoreVersion" : 10019,
   "totalQuestions" : 978,
   "ads" : true

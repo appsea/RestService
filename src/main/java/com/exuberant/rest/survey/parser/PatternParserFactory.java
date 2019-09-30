@@ -75,7 +75,9 @@ public class PatternParserFactory {
         String optionRegex = "^[A-G][.]\\s.*";
         String answerRegex = "^Answer. .*";
         String descriptionRegex = "^Description:.*";
-        return DynamicPatternParser.getParserWithDescription(newQuestionRegex, optionRegex, answerRegex, descriptionRegex);
+        DynamicPatternParser dynamicPatternParser = DynamicPatternParser.getParserWithDescription(newQuestionRegex, optionRegex, answerRegex, descriptionRegex);
+        dynamicPatternParser.setIgnorePattern("^Topic\\s[0-9].*$|^\\s*Exam Name:.*|^\\s*Exam Type:.*|^\\s*Exam Code:.*|^\\s*Page\\s[0-9]+ of []0-9]+|[0-9]|[1-9][0-9]+|A00-211|A00-201|Question: [0-9]+|QUESTION NO: [0-9]+|^.*\\b(http://www.certmagic.com)\\b.*$");
+        return dynamicPatternParser;
     }
 
     public static void addPatternParser(String file, PatternParser patternParser) {
