@@ -9,14 +9,15 @@ import java.util.Arrays;
  */
 public class PacketSupply {
 
+    private static final char NOT_RECEIVED = '0';
+    private static final char RECEIVED = 'X';
+
     public static void main(String[] args) {
-        //0 - Packet absent
-        //X - Packet Reached
         char[][] matrix = new char[5][8];
         for (char[] row : matrix) {
-            Arrays.fill(row, '0');
+            Arrays.fill(row, NOT_RECEIVED);
         }
-        matrix[2][4] = 'X';
+        matrix[2][4] = RECEIVED;
         printMatrix(matrix);
         char[][] copy = copyMatrix(matrix);
         int cycles = 0;
@@ -32,7 +33,7 @@ public class PacketSupply {
     private static boolean packetReached(char[][] matrix) {
         for (char[] chars : matrix) {
             for (char aChar : chars) {
-                if (aChar == '0') {
+                if (aChar == NOT_RECEIVED) {
                     return false;
                 }
             }
@@ -60,7 +61,7 @@ public class PacketSupply {
     private static void passPacket(char[][] matrix, char[][] copy) {
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix[row].length; column++) {
-                if (matrix[row][column] == 'X') {
+                if (matrix[row][column] == RECEIVED) {
                     updateLeftServer(copy, row, column);
                     updateRightServer(copy, row, column);
                     updateTopServer(copy, row, column);
@@ -73,28 +74,28 @@ public class PacketSupply {
     private static void updateBottomServer(char[][] matrix, int row, int column) {
         int bottomRow = row + 1;
         if (bottomRow < matrix.length) {
-            matrix[bottomRow][column] = 'X';
+            matrix[bottomRow][column] = RECEIVED;
         }
     }
 
     private static void updateTopServer(char[][] matrix, int row, int column) {
         int topRow = row - 1;
         if (topRow > -1) {
-            matrix[topRow][column] = 'X';
+            matrix[topRow][column] = RECEIVED;
         }
     }
 
     private static void updateRightServer(char[][] matrix, int row, int column) {
         int rightColumn = column + 1;
         if (rightColumn < matrix[0].length) {
-            matrix[row][rightColumn] = 'X';
+            matrix[row][rightColumn] = RECEIVED;
         }
     }
 
     private static void updateLeftServer(char[][] matrix, int row, int column) {
         int leftColumn = column - 1;
         if (leftColumn > -1) {
-            matrix[row][leftColumn] = 'X';
+            matrix[row][leftColumn] = RECEIVED;
         }
     }
 }
